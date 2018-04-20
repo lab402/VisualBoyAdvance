@@ -83,7 +83,7 @@ colorA3   equ 4
 %ifdef __DJGPP__
 __2xSaISuper2xSaILine:
 %else
-NEWSYM _2xSaISuper2xSaILine
+_2xSaISuper2xSaILine
 %endif
 ; Store some stuff
 	 push ebp
@@ -791,7 +791,7 @@ NEWSYM _2xSaISuper2xSaILine
 %ifdef __DJGPP__
 __2xSaISuperEagleLine:
 %else
-NEWSYM _2xSaISuperEagleLine
+_2xSaISuperEagleLine
 %endif
 ; Store some stuff
 	 push ebp
@@ -1371,7 +1371,7 @@ colorP   equ 4
 %ifdef __DJGPP__
 __2xSaILine:
 %else
-NEWSYM _2xSaILine
+_2xSaILine
 %endif
 ; Store some stuff
 	 push ebp
@@ -1961,7 +1961,7 @@ NEWSYM _2xSaILine
 %ifdef __DJGPP__
 _Init_2xSaIMMX:
 %else
-NEWSYM Init_2xSaIMMX
+Init_2xSaIMMX
 %endif
 ; Store some stuff
 	 push ebp
