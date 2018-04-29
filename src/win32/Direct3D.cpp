@@ -33,8 +33,8 @@
 // Direct3D
 #define DIRECT3D_VERSION 0x0900
 #include <d3d9.h>      // main include file
-#include <D3dx9core.h> // required for font rednering
-#include <Dxerr.h>     // contains debug functions
+#include <d3dx9core.h> // required for font rednering
+#include <dxerr.h>     // contains debug functions
 
 extern int Init_2xSaI(u32); // initializes all pixel filters
 extern int systemSpeed;

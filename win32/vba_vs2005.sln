@@ -1,21 +1,15 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 9.00
-# Visual Studio 2005
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vba_vs2005", "vba_vs2005.vcproj", "{EAD25A86-E6DB-4258-8875-197930F28F6A}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B938FBD9-C7F9-4BF7-8C27-68865D1FA092} = {B938FBD9-C7F9-4BF7-8C27-68865D1FA092}
-		{DB5C12E9-BCD3-4517-8708-475C0D1D88CE} = {DB5C12E9-BCD3-4517-8708-475C0D1D88CE}
-		{96E945F7-0377-48DA-A5F8-1C192DE9F25F} = {96E945F7-0377-48DA-A5F8-1C192DE9F25F}
-	EndProjectSection
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "vba_vs2005", "vba_vs2005.vcxproj", "{EAD25A86-E6DB-4258-8875-197930F28F6A}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "dependencies\zlib\zlib.vcproj", "{B938FBD9-C7F9-4BF7-8C27-68865D1FA092}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "dependencies\zlib\zlib.vcxproj", "{B938FBD9-C7F9-4BF7-8C27-68865D1FA092}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpng", "dependencies\libpng\libpng.vcproj", "{96E945F7-0377-48DA-A5F8-1C192DE9F25F}"
-	ProjectSection(ProjectDependencies) = postProject
-		{B938FBD9-C7F9-4BF7-8C27-68865D1FA092} = {B938FBD9-C7F9-4BF7-8C27-68865D1FA092}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libpng", "dependencies\libpng\libpng.vcxproj", "{96E945F7-0377-48DA-A5F8-1C192DE9F25F}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cximage", "dependencies\cximage\cximage.vcproj", "{DB5C12E9-BCD3-4517-8708-475C0D1D88CE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cximage", "dependencies\cximage\cximage.vcxproj", "{DB5C12E9-BCD3-4517-8708-475C0D1D88CE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,5 +57,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		AMDCaProjectFile = 
+		SolutionGuid = {B4BF2922-8598-4E7F-AD1D-DC5A720BC35C}
 	EndGlobalSection
 EndGlobal

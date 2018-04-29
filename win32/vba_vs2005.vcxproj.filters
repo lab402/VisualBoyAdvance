@@ -1,0 +1,924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="include\gtk">
+      <UniqueIdentifier>{7627bcfd-1fa6-4c2c-87c0-00c8e1c20f5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\sdl">
+      <UniqueIdentifier>{b57fb35f-9e63-4772-ae8e-613ff7bb6fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\unzip">
+      <UniqueIdentifier>{f68eac3f-7dd5-4e01-ad7b-cd2364b7eb63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\gnu">
+      <UniqueIdentifier>{cc89e0ed-1dd2-4297-9682-519ac9b51a32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\gb">
+      <UniqueIdentifier>{9308d968-2cf9-4d25-8052-f39e4d29c8fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\win32">
+      <UniqueIdentifier>{36ab8f78-02e8-4ba9-bf92-9fb3203352a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\win32\controls">
+      <UniqueIdentifier>{4ca59e87-27e4-416b-ba72-9c7c453b61e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\win32\dialogs">
+      <UniqueIdentifier>{59e1637d-9e6d-4b70-a60b-f80eca4ac813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\win32\graphics">
+      <UniqueIdentifier>{f04cb535-f567-4aa2-b51d-8d7cac47b7ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\win32\input">
+      <UniqueIdentifier>{f5ff3b3f-2c48-4138-9dc8-84e172c1d04e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\win32\main">
+      <UniqueIdentifier>{71adabab-5961-4462-bc97-90cf7349818d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\win32\functions">
+      <UniqueIdentifier>{3bc87714-ed30-458e-9c86-67424682cba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\win32\sound">
+      <UniqueIdentifier>{b324f755-9232-4de2-99dc-045bc3985e29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\filter">
+      <UniqueIdentifier>{1d7ff837-f2fc-4ec9-9b29-6120727d4e53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\main">
+      <UniqueIdentifier>{132fc43d-3c7a-4836-96d8-46d5219a4002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\mmx">
+      <UniqueIdentifier>{f517c2da-e2b0-4e9c-9e64-1c462ec80328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gb">
+      <UniqueIdentifier>{170623a1-c89a-4c53-b36a-dd33dc165bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\win32">
+      <UniqueIdentifier>{cb42f3fc-5f5f-49f8-9018-026c6d50b4bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\win32\controls">
+      <UniqueIdentifier>{b15626dc-72fd-4be7-b6e7-2448711d459d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\win32\dialogs">
+      <UniqueIdentifier>{2fd1c3e9-672e-43fa-b169-12414addb392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\win32\graphics">
+      <UniqueIdentifier>{6d5da69d-583a-4e77-a8d5-554954b9ff7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\win32\input">
+      <UniqueIdentifier>{387a0276-c292-4ac6-a1c3-229874524301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\win32\sound">
+      <UniqueIdentifier>{6597459a-f3a3-476e-a486-39f718217a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\win32\main">
+      <UniqueIdentifier>{7cac1777-5650-4423-ae04-c3f5544c456c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\win32\functions">
+      <UniqueIdentifier>{301094da-548c-4683-a294-1c37d20eb479}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\sdl">
+      <UniqueIdentifier>{c900cbfe-abf7-47aa-80c8-aee010504b87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\main">
+      <UniqueIdentifier>{644eb2fd-d1d8-41ec-8ea1-668e20c819c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\filter">
+      <UniqueIdentifier>{e4e932cb-abbf-4b61-b065-5b187e03b803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gtk">
+      <UniqueIdentifier>{e3f4cc83-3cb6-46fc-8198-705a5656a15d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\TestEmu">
+      <UniqueIdentifier>{81397318-1100-4c69-a5a2-612865310882}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\unzip">
+      <UniqueIdentifier>{1b02846e-5dfe-46a2-af20-1ec2360c3630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gnu">
+      <UniqueIdentifier>{eb53343e-b4de-4d75-b8e8-2790aca5ded2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{4b5f8243-7548-4ae7-a0b1-c9ad01ff591d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\unzip.h">
+      <Filter>include\unzip</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\GB.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\gbCheats.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\gbCodes.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\gbCodesCB.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\gbGlobals.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\gbMemory.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\gbPrinter.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\gbSGB.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\gb\gbSound.h">
+      <Filter>include\gb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\hq2x.h">
+      <Filter>include\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\interp.h">
+      <Filter>include\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\lq2x.h">
+      <Filter>include\filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\agbprint.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\arm-new.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\armdis.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\AutoBuild.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bios.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Cheats.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\CheatSearch.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\EEprom.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\elf.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Flash.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GBA.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\GBAinline.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Gfx.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Globals.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\memgzio.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\NLS.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Port.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\RTC.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Sound.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Sram.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\System.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Text.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\thumb.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Util.h">
+      <Filter>include\main</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\win32\resource2.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\win32\vba.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\AUTHORS">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="..\COPYING">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="..\INSTALL">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="..\NEWS">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="..\README">
+      <Filter>doc</Filter>
+    </None>
+    <None Include="..\VERSION">
+      <Filter>doc</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="..\src\win32\VisualBoyAdvance.exe.manifest">
+      <Filter>resource</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <YASM Include="..\src\i386\2xSaImmx.asm">
+      <Filter>source\mmx</Filter>
+    </YASM>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\gb\GB.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gb\gbCheats.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gb\gbDis.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gb\gbGfx.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gb\gbGlobals.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gb\gbMemory.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gb\gbPrinter.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gb\gbSGB.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gb\gbSound.cpp">
+      <Filter>source\gb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\BitmapControl.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\ColorButton.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\ColorControl.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Hyperlink.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\KeyboardEdit.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MemoryViewer.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\PaletteViewControl.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\skinButton.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\ZoomControl.cpp">
+      <Filter>source\win32\controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\AboutDialog.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\AccelEditor.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Associate.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\BugReport.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Directories.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Disassemble.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\ExportGSASnapshot.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\FileDlg.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GameOverrides.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBACheats.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBCheatsDlg.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBColorDlg.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBDisassemble.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBMapView.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBMemoryViewerDlg.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBOamView.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBPaletteView.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBPrinterDlg.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GBTileView.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GDBConnection.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GSACodeSelect.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\IOViewer.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Joypad.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\LangSelect.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Logging.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MapView.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MaxScale.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MemoryViewerAddressSize.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MemoryViewerDlg.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\ModeConfirm.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\OamView.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\PaletteView.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\RewindInterval.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\RomInfo.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Throttle.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\TileView.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\VideoMode.cpp">
+      <Filter>source\win32\dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Direct3D.cpp">
+      <Filter>source\win32\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\DirectDraw.cpp">
+      <Filter>source\win32\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\display.cpp">
+      <Filter>source\win32\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\GDIDisplay.cpp">
+      <Filter>source\win32\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\OpenGL.cpp">
+      <Filter>source\win32\graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\DirectInput.cpp">
+      <Filter>source\win32\input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\DirectSound.cpp">
+      <Filter>source\win32\sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MainWnd.cpp">
+      <Filter>source\win32\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MainWndCheats.cpp">
+      <Filter>source\win32\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MainWndFile.cpp">
+      <Filter>source\win32\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MainWndHelp.cpp">
+      <Filter>source\win32\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MainWndOptions.cpp">
+      <Filter>source\win32\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\MainWndTools.cpp">
+      <Filter>source\win32\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\stdafx.cpp">
+      <Filter>source\win32\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\VBA.cpp">
+      <Filter>source\win32\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\AcceleratorManager.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\AVIWrite.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\CmdAccelOb.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Commands.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\Reg.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\ResizeDlg.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\skin.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\StringTokenizer.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\WavWriter.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\WinResUtil.cpp">
+      <Filter>source\win32\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sdl\debugger.cpp">
+      <Filter>source\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sdl\SDL.cpp">
+      <Filter>source\sdl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\agbprint.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\armdis.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bios.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Cheats.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\CheatSearch.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\EEprom.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\elf.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Flash.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\GBA.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Gfx.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Globals.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\memgzio.c">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mode0.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mode1.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mode2.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mode3.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mode4.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Mode5.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\remote.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RTC.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Sound.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Sram.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Text.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Util.cpp">
+      <Filter>source\main</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\2xSaI.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\admame.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bilinear.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hq2x.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\interframe.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\motionblur.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\pixel.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\scanline.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\simple2x.cpp">
+      <Filter>source\filter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\configfile.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\filters.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\input.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\joypadconfig.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\main.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\screenarea.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\system.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\tools.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\window.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\gtk\windowcallbacks.cpp">
+      <Filter>source\gtk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sdl\TestEmu.cpp">
+      <Filter>source\TestEmu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\unzip.cpp">
+      <Filter>source\unzip</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\expr-lex.cpp">
+      <Filter>source\gnu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\expr.cpp">
+      <Filter>source\gnu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\exprNode.cpp">
+      <Filter>source\gnu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\getopt.c">
+      <Filter>source\gnu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\getopt1.c">
+      <Filter>source\gnu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\prof\prof.cpp">
+      <Filter>source\gnu</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\README-win.txt">
+      <Filter>doc</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\src\gtk\configfile.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\filters.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\input.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\intl.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\joypadconfig.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\menuitem.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\screenarea.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\sigccompat.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\tools.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\gtk\window.h">
+      <Filter>include\gtk</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\sdl\debugger.h">
+      <Filter>include\sdl</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\expr.cpp.h">
+      <Filter>include\gnu</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\exprNode.h">
+      <Filter>include\gnu</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\getopt.h">
+      <Filter>include\gnu</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\prof\gmon.h">
+      <Filter>include\gnu</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\prof\gmon_out.h">
+      <Filter>include\gnu</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\prof\prof.h">
+      <Filter>include\gnu</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\BitmapControl.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\ColorButton.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\ColorControl.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Hyperlink.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\KeyboardEdit.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\MemoryViewer.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\PaletteViewControl.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\skinButton.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\ZoomControl.h">
+      <Filter>include\win32\controls</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\AboutDialog.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Associate.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\BugReport.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Directories.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Disassemble.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\ExportGSASnapshot.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\FileDlg.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GameOverrides.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBACheats.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBCheatsDlg.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBColorDlg.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBDisassemble.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBMapView.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBMemoryViewerDlg.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBOamView.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBPaletteView.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBPrinterDlg.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GBTileView.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GDBConnection.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\GSACodeSelect.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\IOViewer.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\IOViewerRegs.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Joypad.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\LangSelect.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Logging.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\MapView.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\MaxScale.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\MemoryViewerAddressSize.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\MemoryViewerDlg.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\ModeConfirm.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\OamView.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\PaletteView.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\RewindInterval.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\RomInfo.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Throttle.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\TileView.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\VideoMode.h">
+      <Filter>include\win32\dialogs</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Display.h">
+      <Filter>include\win32\graphics</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Input.h">
+      <Filter>include\win32\input</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\MainWnd.h">
+      <Filter>include\win32\main</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\stdafx.h">
+      <Filter>include\win32\main</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\VBA.h">
+      <Filter>include\win32\main</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\AccelEditor.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\AcceleratorManager.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\AVIWrite.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\CmdAccelOb.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\IUpdate.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Reg.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\ResizeDlg.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\skin.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\StringTokenizer.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\WavWriter.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\WinHelper.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\WinResUtil.h">
+      <Filter>include\win32\functions</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\Sound.h">
+      <Filter>include\win32\sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\resource.h">
+      <Filter>resource</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\src\win32\vba.rc2">
+      <Filter>resource</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
