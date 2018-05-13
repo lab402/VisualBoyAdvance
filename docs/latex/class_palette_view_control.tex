@@ -1,0 +1,68 @@
+\hypertarget{class_palette_view_control}{}\section{Palette\+View\+Control 클래스 참조}
+\label{class_palette_view_control}\index{Palette\+View\+Control@{Palette\+View\+Control}}
+Palette\+View\+Control에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_palette_view_control}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_palette_view_control_a12772d59f8e890a920cb200d2f6a4b7a}\label{class_palette_view_control_a12772d59f8e890a920cb200d2f6a4b7a}} 
+virtual void {\bfseries update\+Palette} ()=0
+\item 
+\mbox{\Hypertarget{class_palette_view_control_add54d86e21f3acfcdc129dd656109c83}\label{class_palette_view_control_add54d86e21f3acfcdc129dd656109c83}} 
+void {\bfseries register\+Class} ()
+\item 
+\mbox{\Hypertarget{class_palette_view_control_aace3ab97afe8216b3873159ee852779f}\label{class_palette_view_control_aace3ab97afe8216b3873159ee852779f}} 
+void {\bfseries refresh} ()
+\item 
+\mbox{\Hypertarget{class_palette_view_control_adbcdd372f28027690355099e14b669d1}\label{class_palette_view_control_adbcdd372f28027690355099e14b669d1}} 
+void {\bfseries render} (u16 color, int x, int y)
+\item 
+\mbox{\Hypertarget{class_palette_view_control_afe3570f3d0bf905f25977346a50dec7f}\label{class_palette_view_control_afe3570f3d0bf905f25977346a50dec7f}} 
+void {\bfseries set\+Selected} (int s)
+\item 
+\mbox{\Hypertarget{class_palette_view_control_af552330a1e761f659936d3dd628f9a81}\label{class_palette_view_control_af552330a1e761f659936d3dd628f9a81}} 
+void {\bfseries set\+Palette\+Address} (int address)
+\item 
+\mbox{\Hypertarget{class_palette_view_control_a9efcff77eaf476013ac5f3ebd2d53779}\label{class_palette_view_control_a9efcff77eaf476013ac5f3ebd2d53779}} 
+bool {\bfseries save\+J\+A\+S\+C\+P\+AL} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_palette_view_control_a0e2249bb157bf7fb36b128a83bf108b5}\label{class_palette_view_control_a0e2249bb157bf7fb36b128a83bf108b5}} 
+bool {\bfseries save\+M\+S\+P\+AL} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_palette_view_control_a14d553a87d89463719adcaa63f42a72b}\label{class_palette_view_control_a14d553a87d89463719adcaa63f42a72b}} 
+bool {\bfseries save\+Adobe} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_palette_view_control_abc7a9dd832f6b5fc8ca81c8b08bd2ee8}\label{class_palette_view_control_abc7a9dd832f6b5fc8ca81c8b08bd2ee8}} 
+void {\bfseries init} (int c, int w, int h)
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_palette_view_control_a766a44e9b018fc6c87f81f3c0fdd6c6e}\label{class_palette_view_control_a766a44e9b018fc6c87f81f3c0fdd6c6e}} 
+afx\+\_\+msg void {\bfseries On\+L\+Button\+Down} (U\+I\+NT n\+Flags, C\+Point point)
+\item 
+\mbox{\Hypertarget{class_palette_view_control_ac2086b2ba7161f3adb5ac76484f77cc9}\label{class_palette_view_control_ac2086b2ba7161f3adb5ac76484f77cc9}} 
+afx\+\_\+msg B\+O\+OL {\bfseries On\+Erase\+Bkgnd} (C\+DC $\ast$p\+DC)
+\item 
+\mbox{\Hypertarget{class_palette_view_control_ab68c1927e30e1b35b207d6884ef9822d}\label{class_palette_view_control_ab68c1927e30e1b35b207d6884ef9822d}} 
+afx\+\_\+msg void {\bfseries On\+Paint} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_palette_view_control_a1a5ce1812cf6c8d26889f4eb03d1d4ec}\label{class_palette_view_control_a1a5ce1812cf6c8d26889f4eb03d1d4ec}} 
+u16 {\bfseries palette} \mbox{[}256\mbox{]}
+\item 
+\mbox{\Hypertarget{class_palette_view_control_a53b2efd4174e06a68e545608e458947b}\label{class_palette_view_control_a53b2efd4174e06a68e545608e458947b}} 
+int {\bfseries palette\+Address}
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/win32/Palette\+View\+Control.\+h\item 
+src/win32/Palette\+View\+Control.\+cpp\end{DoxyCompactItemize}

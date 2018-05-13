@@ -1,0 +1,75 @@
+\hypertarget{class_accel_editor}{}\section{Accel\+Editor 클래스 참조}
+\label{class_accel_editor}\index{Accel\+Editor@{Accel\+Editor}}
+Accel\+Editor에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_accel_editor}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_accel_editor_a2c120196c6edcc4e45a1eb6321060cf7}\label{class_accel_editor_a2c120196c6edcc4e45a1eb6321060cf7}} 
+enum \{ {\bfseries I\+DD} = I\+D\+D\+\_\+\+A\+C\+C\+E\+L\+\_\+\+E\+D\+I\+T\+OR
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_accel_editor_a3c882fb85c72711e26cfe800fb11ccfa}\label{class_accel_editor_a3c882fb85c72711e26cfe800fb11ccfa}} 
+void {\bfseries Init\+Commands} ()
+\item 
+\mbox{\Hypertarget{class_accel_editor_a4f3eb3bfb01a597da630a3144687f1ec}\label{class_accel_editor_a4f3eb3bfb01a597da630a3144687f1ec}} 
+{\bfseries Accel\+Editor} (C\+Wnd $\ast$p\+Parent=N\+U\+LL)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_accel_editor_acb731e2193cb5022a95e83122651f96d}\label{class_accel_editor_acb731e2193cb5022a95e83122651f96d}} 
+\mbox{\hyperlink{class_c_accelerator_manager}{C\+Accelerator\+Manager}} {\bfseries mgr}
+\item 
+\mbox{\Hypertarget{class_accel_editor_a31909da8a929ef7b5e22ffbf64f1c68c}\label{class_accel_editor_a31909da8a929ef7b5e22ffbf64f1c68c}} 
+C\+List\+Box {\bfseries m\+\_\+currents}
+\item 
+\mbox{\Hypertarget{class_accel_editor_ac3d2378be850611ee51689bd34475275}\label{class_accel_editor_ac3d2378be850611ee51689bd34475275}} 
+C\+Static {\bfseries m\+\_\+already\+Affected}
+\item 
+\mbox{\Hypertarget{class_accel_editor_aba4ea3d3eced08de9fe39e307b5f40fc}\label{class_accel_editor_aba4ea3d3eced08de9fe39e307b5f40fc}} 
+C\+List\+Box {\bfseries m\+\_\+commands}
+\item 
+\mbox{\Hypertarget{class_accel_editor_af0875f914fdddf5233a951cabd499a4d}\label{class_accel_editor_af0875f914fdddf5233a951cabd499a4d}} 
+\mbox{\hyperlink{class_c_keyboard_edit}{C\+Keyboard\+Edit}} {\bfseries m\+\_\+key}
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_accel_editor_a3212b434e8c489ba308fa6a474dd32e7}\label{class_accel_editor_a3212b434e8c489ba308fa6a474dd32e7}} 
+virtual void {\bfseries Do\+Data\+Exchange} (C\+Data\+Exchange $\ast$p\+DX)
+\item 
+\mbox{\Hypertarget{class_accel_editor_a131b32f139220aadd5e36b4ddeb8cd58}\label{class_accel_editor_a131b32f139220aadd5e36b4ddeb8cd58}} 
+virtual B\+O\+OL {\bfseries On\+Init\+Dialog} ()
+\item 
+\mbox{\Hypertarget{class_accel_editor_a50b1043d4af01df3925f193b7755c05e}\label{class_accel_editor_a50b1043d4af01df3925f193b7755c05e}} 
+afx\+\_\+msg void {\bfseries On\+Cancel} ()
+\item 
+\mbox{\Hypertarget{class_accel_editor_a3afd18b4482500a4ea29ee5d0d43cffc}\label{class_accel_editor_a3afd18b4482500a4ea29ee5d0d43cffc}} 
+afx\+\_\+msg void {\bfseries On\+Ok} ()
+\item 
+\mbox{\Hypertarget{class_accel_editor_a16cb5c73f55199115c5a4f35268ff3fa}\label{class_accel_editor_a16cb5c73f55199115c5a4f35268ff3fa}} 
+afx\+\_\+msg void {\bfseries On\+Selchange\+Commands} ()
+\item 
+\mbox{\Hypertarget{class_accel_editor_a1afed0a04125915ae1517e1b08879b8b}\label{class_accel_editor_a1afed0a04125915ae1517e1b08879b8b}} 
+afx\+\_\+msg void {\bfseries On\+Reset} ()
+\item 
+\mbox{\Hypertarget{class_accel_editor_ad33ae69dcc262dd73595cb33d82c209e}\label{class_accel_editor_ad33ae69dcc262dd73595cb33d82c209e}} 
+afx\+\_\+msg void {\bfseries On\+Assign} ()
+\item 
+\mbox{\Hypertarget{class_accel_editor_a40b74b67b95694245502b15ceedd278c}\label{class_accel_editor_a40b74b67b95694245502b15ceedd278c}} 
+afx\+\_\+msg void {\bfseries On\+Remove} ()
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/win32/Accel\+Editor.\+h\item 
+src/win32/Accel\+Editor.\+cpp\end{DoxyCompactItemize}

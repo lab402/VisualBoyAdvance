@@ -1,0 +1,95 @@
+\hypertarget{class_memory_viewer}{}\section{Memory\+Viewer 클래스 참조}
+\label{class_memory_viewer}\index{Memory\+Viewer@{Memory\+Viewer}}
+Memory\+Viewer에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_memory_viewer}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a2e1b969cce8f4d60912f6b640febc54a}\label{class_memory_viewer_a2e1b969cce8f4d60912f6b640febc54a}} 
+virtual void {\bfseries read\+Data} (u32, int, u8 $\ast$)=0
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a07778cf336e9f145a6403849407fb72d}\label{class_memory_viewer_a07778cf336e9f145a6403849407fb72d}} 
+virtual void {\bfseries edit\+Data} (u32, int, int, u32)=0
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a288ec6d61ae8687974786bf8d04a4e77}\label{class_memory_viewer_a288ec6d61ae8687974786bf8d04a4e77}} 
+int {\bfseries get\+Size} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a7c3931c2a0b1247e4a093a1688d443bf}\label{class_memory_viewer_a7c3931c2a0b1247e4a093a1688d443bf}} 
+u32 {\bfseries get\+Current\+Address} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a64938573e15f4d5b31eea26dc6788d0e}\label{class_memory_viewer_a64938573e15f4d5b31eea26dc6788d0e}} 
+void {\bfseries set\+Address\+Size} (int s)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_af3d30272c691967ea6a4cc37ceb87595}\label{class_memory_viewer_af3d30272c691967ea6a4cc37ceb87595}} 
+void {\bfseries register\+Class} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a32096a7542505dd4c2b94b9a1f715ae9}\label{class_memory_viewer_a32096a7542505dd4c2b94b9a1f715ae9}} 
+void {\bfseries beep} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_ab3cf8e1e2318a15b1e7c783b9a7bad80}\label{class_memory_viewer_ab3cf8e1e2318a15b1e7c783b9a7bad80}} 
+bool {\bfseries On\+Edit\+Input} (U\+I\+NT c)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a0a371c925fc00dd78fedd8d21ebc8cdc}\label{class_memory_viewer_a0a371c925fc00dd78fedd8d21ebc8cdc}} 
+void {\bfseries move\+Address} (s32 offset, int nibble\+Off)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_abfed49727a6de1b52e5495ed96816759}\label{class_memory_viewer_abfed49727a6de1b52e5495ed96816759}} 
+void {\bfseries set\+Caret\+Pos} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_ab658d89232d31d190ac4e323d61c4b8f}\label{class_memory_viewer_ab658d89232d31d190ac4e323d61c4b8f}} 
+void {\bfseries destroy\+Edit\+Caret} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a73ddaf427846eedb7073ad6fc69001ac}\label{class_memory_viewer_a73ddaf427846eedb7073ad6fc69001ac}} 
+void {\bfseries create\+Edit\+Caret} (int w, int h)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_aa133e5db4bf989efa18892de371c0f43}\label{class_memory_viewer_aa133e5db4bf989efa18892de371c0f43}} 
+void {\bfseries update\+Scroll\+Info} (int lines)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a185cb06e604ff1e0016b9be859c21387}\label{class_memory_viewer_a185cb06e604ff1e0016b9be859c21387}} 
+void {\bfseries set\+Size} (int s)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_abe391051455e116889da0613c19888a2}\label{class_memory_viewer_abe391051455e116889da0613c19888a2}} 
+void {\bfseries set\+Address} (u32 a)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a546b937c21dfa976c99dc1891569e503}\label{class_memory_viewer_a546b937c21dfa976c99dc1891569e503}} 
+void {\bfseries set\+Dialog} (\mbox{\hyperlink{class_i_memory_viewer_dlg}{I\+Memory\+Viewer\+Dlg}} $\ast$d)
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a4526960fde4490046ce584462eb26dcb}\label{class_memory_viewer_a4526960fde4490046ce584462eb26dcb}} 
+afx\+\_\+msg B\+O\+OL {\bfseries On\+Erase\+Bkgnd} (C\+DC $\ast$p\+DC)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a83e2e0a597c7c25d7fc496411ec1d46f}\label{class_memory_viewer_a83e2e0a597c7c25d7fc496411ec1d46f}} 
+afx\+\_\+msg void {\bfseries On\+Paint} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_ab371c01b5cc7069561f448e46e7d44a4}\label{class_memory_viewer_ab371c01b5cc7069561f448e46e7d44a4}} 
+afx\+\_\+msg void {\bfseries On\+V\+Scroll} (U\+I\+NT n\+S\+B\+Code, U\+I\+NT n\+Pos, C\+Scroll\+Bar $\ast$p\+Scroll\+Bar)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_ab33125683b4ca8997d8dda88835512ff}\label{class_memory_viewer_ab33125683b4ca8997d8dda88835512ff}} 
+afx\+\_\+msg U\+I\+NT {\bfseries On\+Get\+Dlg\+Code} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_aa17edb0fbc507fe79493ec235cd124f2}\label{class_memory_viewer_aa17edb0fbc507fe79493ec235cd124f2}} 
+afx\+\_\+msg void {\bfseries On\+L\+Button\+Down} (U\+I\+NT n\+Flags, C\+Point point)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a8a245f3c99b525dded9e776a4a5976de}\label{class_memory_viewer_a8a245f3c99b525dded9e776a4a5976de}} 
+afx\+\_\+msg void {\bfseries On\+Set\+Focus} (C\+Wnd $\ast$p\+Old\+Wnd)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_af513c221df2a84b02c4172213cdbeec1}\label{class_memory_viewer_af513c221df2a84b02c4172213cdbeec1}} 
+afx\+\_\+msg void {\bfseries On\+Kill\+Focus} (C\+Wnd $\ast$p\+New\+Wnd)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_afc4781b16d21212f67e5dd299c537718}\label{class_memory_viewer_afc4781b16d21212f67e5dd299c537718}} 
+afx\+\_\+msg void {\bfseries On\+Key\+Down} (U\+I\+NT n\+Char, U\+I\+NT n\+Rep\+Cnt, U\+I\+NT n\+Flags)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_a47fb6730b742faedeafbb622e008317e}\label{class_memory_viewer_a47fb6730b742faedeafbb622e008317e}} 
+afx\+\_\+msg L\+R\+E\+S\+U\+LT {\bfseries On\+W\+M\+Char} (W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/win32/Memory\+Viewer.\+h\item 
+src/win32/Memory\+Viewer.\+cpp\end{DoxyCompactItemize}

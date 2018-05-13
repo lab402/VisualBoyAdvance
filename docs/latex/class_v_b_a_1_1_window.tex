@@ -1,0 +1,324 @@
+\hypertarget{class_v_b_a_1_1_window}{}\section{V\+BA\+:\+:Window 클래스 참조}
+\label{class_v_b_a_1_1_window}\index{V\+B\+A\+::\+Window@{V\+B\+A\+::\+Window}}
+V\+BA\+:\+:Window에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_v_b_a_1_1_window}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_af580451d3ee7a738a73434858a08fa65}\label{class_v_b_a_1_1_window_af580451d3ee7a738a73434858a08fa65}} 
+enum {\bfseries E\+Cartridge} \{ {\bfseries Cartridge\+None}, 
+{\bfseries Cartridge\+GB}, 
+{\bfseries Cartridge\+G\+BA}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a69ddb41bd29d9f0db04175671ff2e2f4}\label{class_v_b_a_1_1_window_a69ddb41bd29d9f0db04175671ff2e2f4}} 
+bool {\bfseries b\+Load\+R\+OM} (const std\+::string \&\+\_\+rs\+File)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_afde18894816458e195f561b03ee2898c}\label{class_v_b_a_1_1_window_afde18894816458e195f561b03ee2898c}} 
+void {\bfseries v\+Popup\+Error} (const char $\ast$\+\_\+cs\+Format,...)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a1f89a108839ea022393c56782dde0f60}\label{class_v_b_a_1_1_window_a1f89a108839ea022393c56782dde0f60}} 
+void {\bfseries v\+Popup\+ErrorV} (const char $\ast$\+\_\+cs\+Format, va\+\_\+list \+\_\+args)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_af82e47600303a15b2aa4fdffb90df394}\label{class_v_b_a_1_1_window_af82e47600303a15b2aa4fdffb90df394}} 
+void {\bfseries v\+Draw\+Screen} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_abcfa3555126b7804609a8438ece3266e}\label{class_v_b_a_1_1_window_abcfa3555126b7804609a8438ece3266e}} 
+void {\bfseries v\+Compute\+Frameskip} (int \+\_\+i\+Rate)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_acf7f6aac9ae790353c5c61e7afa3515e}\label{class_v_b_a_1_1_window_acf7f6aac9ae790353c5c61e7afa3515e}} 
+void {\bfseries v\+Show\+Speed} (int \+\_\+i\+Speed)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a68341ae65a5ec41c6e6269d6f579aa08}\label{class_v_b_a_1_1_window_a68341ae65a5ec41c6e6269d6f579aa08}} 
+void {\bfseries v\+Capture\+Screen} (int \+\_\+i\+Num)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ad5768e6fccecbcc761de003ae915684b}\label{class_v_b_a_1_1_window_ad5768e6fccecbcc761de003ae915684b}} 
+u32 {\bfseries ui\+Read\+Joypad} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aed86700e3c983d6858c24e48eea48710}\label{class_v_b_a_1_1_window_aed86700e3c983d6858c24e48eea48710}} 
+E\+Cartridge {\bfseries e\+Get\+Cartridge} () const
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a1f6599f43eda534897aa9aea53a840a0}\label{class_v_b_a_1_1_window_a1f6599f43eda534897aa9aea53a840a0}} 
+int {\bfseries i\+Get\+Throttle} () const
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a8e084a0514c78b2c93013c3fb9e2e6e9}\label{class_v_b_a_1_1_window_a8e084a0514c78b2c93013c3fb9e2e6e9}} 
+static \mbox{\hyperlink{class_v_b_a_1_1_window}{Window}} $\ast$ {\bfseries po\+Get\+Instance} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ab87ef83b1c563956f2ccb79f465e60a5}\label{class_v_b_a_1_1_window_ab87ef83b1c563956f2ccb79f465e60a5}} 
+const int {\bfseries m\+\_\+i\+G\+B\+Screen\+Width}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ad87b6a11eafd636e92c7a24af249af36}\label{class_v_b_a_1_1_window_ad87b6a11eafd636e92c7a24af249af36}} 
+const int {\bfseries m\+\_\+i\+G\+B\+Screen\+Height}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_af01e947f6f9a8fce2de3df5f0420d066}\label{class_v_b_a_1_1_window_af01e947f6f9a8fce2de3df5f0420d066}} 
+const int {\bfseries m\+\_\+i\+S\+G\+B\+Screen\+Width}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_adc64e75d94960c2a9d0680465a838b5d}\label{class_v_b_a_1_1_window_adc64e75d94960c2a9d0680465a838b5d}} 
+const int {\bfseries m\+\_\+i\+S\+G\+B\+Screen\+Height}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a9a7257c8edba5383674c7a7eea250679}\label{class_v_b_a_1_1_window_a9a7257c8edba5383674c7a7eea250679}} 
+const int {\bfseries m\+\_\+i\+G\+B\+A\+Screen\+Width}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a5029d02ff8ee7d81fa7e9ad210d537d6}\label{class_v_b_a_1_1_window_a5029d02ff8ee7d81fa7e9ad210d537d6}} 
+const int {\bfseries m\+\_\+i\+G\+B\+A\+Screen\+Height}
+\end{DoxyCompactItemize}
+\subsection*{Protected 타입}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a9dfcf6d1a23c7576d357221d4bedda45}\label{class_v_b_a_1_1_window_a9dfcf6d1a23c7576d357221d4bedda45}} 
+enum {\bfseries E\+Show\+Speed} \{ {\bfseries Show\+None}, 
+{\bfseries Show\+Percentage}, 
+{\bfseries Show\+Detailed}
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a299f71905bca4f89a8df627dd25dafa5}\label{class_v_b_a_1_1_window_a299f71905bca4f89a8df627dd25dafa5}} 
+enum {\bfseries E\+Save\+Type} \{ \newline
+{\bfseries Save\+Auto}, 
+{\bfseries Save\+E\+E\+P\+R\+OM}, 
+{\bfseries Save\+S\+R\+AM}, 
+{\bfseries Save\+Flash}, 
+\newline
+{\bfseries Save\+E\+E\+P\+R\+O\+M\+Sensor}, 
+{\bfseries Save\+None}
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a0d5c8ea46df2e5d53537db8aa5ecc175}\label{class_v_b_a_1_1_window_a0d5c8ea46df2e5d53537db8aa5ecc175}} 
+enum {\bfseries E\+Sound\+Status} \{ {\bfseries Sound\+Off}, 
+{\bfseries Sound\+Mute}, 
+{\bfseries Sound\+On}
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a320f2aa064d602888b12cdd2ebfbb3c8}\label{class_v_b_a_1_1_window_a320f2aa064d602888b12cdd2ebfbb3c8}} 
+enum {\bfseries E\+Sound\+Quality} \{ {\bfseries Sound44K} = 1, 
+{\bfseries Sound22K} = 2, 
+{\bfseries Sound11K} = 4
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a50ce3c1e3f6a9ce3ed41b5c2a5535115}\label{class_v_b_a_1_1_window_a50ce3c1e3f6a9ce3ed41b5c2a5535115}} 
+enum {\bfseries E\+Sound\+Volume} \{ \newline
+{\bfseries Sound100}, 
+{\bfseries Sound200}, 
+{\bfseries Sound300}, 
+{\bfseries Sound400}, 
+\newline
+{\bfseries Sound25}, 
+{\bfseries Sound50}
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ac8b20507b5006b2ce37db6a76ea69b55}\label{class_v_b_a_1_1_window_ac8b20507b5006b2ce37db6a76ea69b55}} 
+enum {\bfseries E\+Emulator\+Type} \{ \newline
+{\bfseries Emulator\+Auto}, 
+{\bfseries Emulator\+C\+GB}, 
+{\bfseries Emulator\+S\+GB}, 
+{\bfseries Emulator\+GB}, 
+\newline
+{\bfseries Emulator\+G\+BA}, 
+{\bfseries Emulator\+S\+G\+B2}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a747763400ba237d06f6e01577998f6ab}\label{class_v_b_a_1_1_window_a747763400ba237d06f6e01577998f6ab}} 
+{\bfseries Window} (Gtk\+Window $\ast$\+\_\+pst\+Window, const Glib\+::\+Ref\+Ptr$<$ Gnome\+::\+Glade\+::\+Xml $>$ \&\+\_\+po\+Xml)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a8495a133642f2f0428d9487c86c8a231}\label{class_v_b_a_1_1_window_a8495a133642f2f0428d9487c86c8a231}} 
+virtual void {\bfseries v\+On\+File\+Open} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a74bd51bc1e0e699d5523ad7828031394}\label{class_v_b_a_1_1_window_a74bd51bc1e0e699d5523ad7828031394}} 
+virtual void {\bfseries v\+On\+File\+Load} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a27bb0ed15cc90758c95eb11fddd14a86}\label{class_v_b_a_1_1_window_a27bb0ed15cc90758c95eb11fddd14a86}} 
+virtual void {\bfseries v\+On\+File\+Save} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ac73a836767434700186832ae1ea49cc5}\label{class_v_b_a_1_1_window_ac73a836767434700186832ae1ea49cc5}} 
+virtual void {\bfseries v\+On\+Load\+Game\+Most\+Recent} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a9457e3b8fe1022c96a548e1169002f0c}\label{class_v_b_a_1_1_window_a9457e3b8fe1022c96a548e1169002f0c}} 
+virtual void {\bfseries v\+On\+Load\+Game\+Auto\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a18461a94955930d3e10fdb093322d7a9}\label{class_v_b_a_1_1_window_a18461a94955930d3e10fdb093322d7a9}} 
+virtual void {\bfseries v\+On\+Load\+Game} (int \+\_\+i\+Slot)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ac582c9416136eaaf39469fc9eff83fee}\label{class_v_b_a_1_1_window_ac582c9416136eaaf39469fc9eff83fee}} 
+virtual void {\bfseries v\+On\+Save\+Game\+Oldest} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aa614f13101a25febb6f3c3805c947e3e}\label{class_v_b_a_1_1_window_aa614f13101a25febb6f3c3805c947e3e}} 
+virtual void {\bfseries v\+On\+Save\+Game} (int \+\_\+i\+Slot)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a8cfc0cc364908602c3881304be30dfe4}\label{class_v_b_a_1_1_window_a8cfc0cc364908602c3881304be30dfe4}} 
+virtual void {\bfseries v\+On\+File\+Pause\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_acd364daa2b85fc1c6b34d096305d8b48}\label{class_v_b_a_1_1_window_acd364daa2b85fc1c6b34d096305d8b48}} 
+virtual void {\bfseries v\+On\+File\+Reset} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a8f8de1653cccaa5c61312c68f4a037fe}\label{class_v_b_a_1_1_window_a8f8de1653cccaa5c61312c68f4a037fe}} 
+virtual void {\bfseries v\+On\+Recent\+Reset} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aed773f053d4ab731d5a555dc940c0195}\label{class_v_b_a_1_1_window_aed773f053d4ab731d5a555dc940c0195}} 
+virtual void {\bfseries v\+On\+Recent\+Freeze\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ab96850739fb7f53a370e6b6f059b87a9}\label{class_v_b_a_1_1_window_ab96850739fb7f53a370e6b6f059b87a9}} 
+virtual void {\bfseries v\+On\+Recent\+File} (std\+::string \+\_\+s\+File)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aa376015acdd7b7fe83a67bc1306d3553}\label{class_v_b_a_1_1_window_aa376015acdd7b7fe83a67bc1306d3553}} 
+virtual void {\bfseries v\+On\+Import\+Battery\+File} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a26d233092dd624a0bd3734ec0cdc0d7c}\label{class_v_b_a_1_1_window_a26d233092dd624a0bd3734ec0cdc0d7c}} 
+virtual void {\bfseries v\+On\+Export\+Battery\+File} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ae96308c56cf84f9c56dc97c196adc49c}\label{class_v_b_a_1_1_window_ae96308c56cf84f9c56dc97c196adc49c}} 
+virtual void {\bfseries v\+On\+File\+Screen\+Capture} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a9bb969481b9cfea3b5b5bc157ccc0ff6}\label{class_v_b_a_1_1_window_a9bb969481b9cfea3b5b5bc157ccc0ff6}} 
+virtual void {\bfseries v\+On\+File\+Close} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_acf22a1b1a9e46ac71e466f160d4e672e}\label{class_v_b_a_1_1_window_acf22a1b1a9e46ac71e466f160d4e672e}} 
+virtual void {\bfseries v\+On\+File\+Exit} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a1d969d55fcb1a69d13d3a29c9365e699}\label{class_v_b_a_1_1_window_a1d969d55fcb1a69d13d3a29c9365e699}} 
+virtual void {\bfseries v\+On\+Frameskip\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Value)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a86f6a68bfbf9928605aa80a543d49038}\label{class_v_b_a_1_1_window_a86f6a68bfbf9928605aa80a543d49038}} 
+virtual void {\bfseries v\+On\+Throttle\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Percent)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a3d2033ebb1a3ef25bada10bef93e856a}\label{class_v_b_a_1_1_window_a3d2033ebb1a3ef25bada10bef93e856a}} 
+virtual void {\bfseries v\+On\+Throttle\+Other} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_af0072d4a223c1a543dd5ce0933a72804}\label{class_v_b_a_1_1_window_af0072d4a223c1a543dd5ce0933a72804}} 
+virtual void {\bfseries v\+On\+Video\+Scale\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Scale)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aabcf3fafc945b040ac1f775cb32a7245}\label{class_v_b_a_1_1_window_aabcf3fafc945b040ac1f775cb32a7245}} 
+virtual void {\bfseries v\+On\+Layer\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Layer)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ab0ff6c3b3ac5df7ab482be673ac02732}\label{class_v_b_a_1_1_window_ab0ff6c3b3ac5df7ab482be673ac02732}} 
+virtual void {\bfseries v\+On\+Directories} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aedc6f08a9c1f1a54ec41347f96dfd213}\label{class_v_b_a_1_1_window_aedc6f08a9c1f1a54ec41347f96dfd213}} 
+virtual void {\bfseries v\+On\+Directory\+Reset} (Gtk\+::\+Entry $\ast$\+\_\+po\+Entry)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ab2aa067d967ea52a685574fc09c11f33}\label{class_v_b_a_1_1_window_ab2aa067d967ea52a685574fc09c11f33}} 
+virtual void {\bfseries v\+On\+Directory\+Select} (Gtk\+::\+Entry $\ast$\+\_\+po\+Entry)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aec8ba72231d668912f3b71353925f2f2}\label{class_v_b_a_1_1_window_aec8ba72231d668912f3b71353925f2f2}} 
+virtual void {\bfseries v\+On\+Pause\+When\+Inactive\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a5d20c67c2118e4a18e97cab4ba111c65}\label{class_v_b_a_1_1_window_a5d20c67c2118e4a18e97cab4ba111c65}} 
+virtual void {\bfseries v\+On\+Select\+Bios} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a4c3cba9990c0f7315b49d2c8d338280b}\label{class_v_b_a_1_1_window_a4c3cba9990c0f7315b49d2c8d338280b}} 
+virtual void {\bfseries v\+On\+Use\+Bios\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a81a46aa6f68c512ed86aa04ca13dbd71}\label{class_v_b_a_1_1_window_a81a46aa6f68c512ed86aa04ca13dbd71}} 
+virtual void {\bfseries v\+On\+Show\+Speed\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Show\+Speed)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ac28bedaab2e51b684869e85b4b20b7be}\label{class_v_b_a_1_1_window_ac28bedaab2e51b684869e85b4b20b7be}} 
+virtual void {\bfseries v\+On\+Save\+Type\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Save\+Type)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a592d046d6e85921562d26285387cc45a}\label{class_v_b_a_1_1_window_a592d046d6e85921562d26285387cc45a}} 
+virtual void {\bfseries v\+On\+Flash\+Size\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Flash\+Size)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a8536700b1c3ab6cd07b8fd14bf3d3d82}\label{class_v_b_a_1_1_window_a8536700b1c3ab6cd07b8fd14bf3d3d82}} 
+virtual void {\bfseries v\+On\+Screenshot\+Format\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, std\+::string \+\_\+s\+Format)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_af883be4dc5fbd611a2b5610aa26cfff7}\label{class_v_b_a_1_1_window_af883be4dc5fbd611a2b5610aa26cfff7}} 
+virtual void {\bfseries v\+On\+Sound\+Status\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Sound\+Status)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_acf58efc519acc8f3fd42b0e3481eff23}\label{class_v_b_a_1_1_window_acf58efc519acc8f3fd42b0e3481eff23}} 
+virtual void {\bfseries v\+On\+Sound\+Echo\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a424a694cc0b0e3cb750ed07457b2b11e}\label{class_v_b_a_1_1_window_a424a694cc0b0e3cb750ed07457b2b11e}} 
+virtual void {\bfseries v\+On\+Sound\+Low\+Pass\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a1b7f801dd8f6c48c9161314e4ed266ed}\label{class_v_b_a_1_1_window_a1b7f801dd8f6c48c9161314e4ed266ed}} 
+virtual void {\bfseries v\+On\+Sound\+Reverse\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aa64899ec70d7a82ab4eee24567585f3b}\label{class_v_b_a_1_1_window_aa64899ec70d7a82ab4eee24567585f3b}} 
+virtual void {\bfseries v\+On\+Sound\+Channel\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Sound\+Channel)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ae0ea496e382a463114dab0895698fed7}\label{class_v_b_a_1_1_window_ae0ea496e382a463114dab0895698fed7}} 
+virtual void {\bfseries v\+On\+Sound\+Quality\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Sound\+Quality)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a6e1456ec5b5efc3a5e24d91ed918d503}\label{class_v_b_a_1_1_window_a6e1456ec5b5efc3a5e24d91ed918d503}} 
+virtual void {\bfseries v\+On\+Sound\+Volume\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Sound\+Volume)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_aa7cf1b717713eb050de751b12ddfe72a}\label{class_v_b_a_1_1_window_aa7cf1b717713eb050de751b12ddfe72a}} 
+virtual void {\bfseries v\+On\+G\+B\+Border\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a2d6e4c0bd7467305b02bd6f5b0343f26}\label{class_v_b_a_1_1_window_a2d6e4c0bd7467305b02bd6f5b0343f26}} 
+virtual void {\bfseries v\+On\+G\+B\+Printer\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a223cab540dae446895699f2ca1494f8e}\label{class_v_b_a_1_1_window_a223cab540dae446895699f2ca1494f8e}} 
+virtual void {\bfseries v\+On\+Emulator\+Type\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Emulator\+Type)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ad73fe13a9e4c8b40fbe6f0726210cc5c}\label{class_v_b_a_1_1_window_ad73fe13a9e4c8b40fbe6f0726210cc5c}} 
+virtual void {\bfseries v\+On\+Filter2x\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Filter2x)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_afddc93921e9561601104184bb16941e5}\label{class_v_b_a_1_1_window_afddc93921e9561601104184bb16941e5}} 
+virtual void {\bfseries v\+On\+Filter\+I\+B\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Filter\+IB)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a9a72206ce2e6c13d5bd66863292f9515}\label{class_v_b_a_1_1_window_a9a72206ce2e6c13d5bd66863292f9515}} 
+virtual void {\bfseries v\+On\+Joypad\+Configure} (int \+\_\+i\+Joypad)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a38491fe3a0daf6be7ab610fd282d2e47}\label{class_v_b_a_1_1_window_a38491fe3a0daf6be7ab610fd282d2e47}} 
+virtual void {\bfseries v\+On\+Joypad\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, int \+\_\+i\+Joypad)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a7267bdc270816ef841f3fe1bcfd03f27}\label{class_v_b_a_1_1_window_a7267bdc270816ef841f3fe1bcfd03f27}} 
+virtual void {\bfseries v\+On\+Autofire\+Toggled} (Gtk\+::\+Check\+Menu\+Item $\ast$\+\_\+po\+C\+MI, u32 \+\_\+ui\+Key\+Flag)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a35c038f07a5ea91103c5e05b82b8bd0b}\label{class_v_b_a_1_1_window_a35c038f07a5ea91103c5e05b82b8bd0b}} 
+virtual void {\bfseries v\+On\+G\+D\+B\+Wait} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a266811d22fbeb400a01d1c2330fb9877}\label{class_v_b_a_1_1_window_a266811d22fbeb400a01d1c2330fb9877}} 
+virtual void {\bfseries v\+On\+G\+D\+B\+Load\+And\+Wait} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_add1f8eb55cc9523cfdb6dbc3b9fbf4cf}\label{class_v_b_a_1_1_window_add1f8eb55cc9523cfdb6dbc3b9fbf4cf}} 
+virtual void {\bfseries v\+On\+G\+D\+B\+Break} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_ad6f454f394ed7265f374e78b2a255cbb}\label{class_v_b_a_1_1_window_ad6f454f394ed7265f374e78b2a255cbb}} 
+virtual void {\bfseries v\+On\+G\+D\+B\+Disconnect} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a032219499a0266249033431bc86c559f}\label{class_v_b_a_1_1_window_a032219499a0266249033431bc86c559f}} 
+virtual void {\bfseries v\+On\+Help\+About} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a2ac2bae273728c175c38770da8a9ad8a}\label{class_v_b_a_1_1_window_a2ac2bae273728c175c38770da8a9ad8a}} 
+virtual bool {\bfseries b\+On\+Emu\+Idle} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a12b2428d319af7010bbc689193f1b801}\label{class_v_b_a_1_1_window_a12b2428d319af7010bbc689193f1b801}} 
+virtual bool {\bfseries on\+\_\+focus\+\_\+in\+\_\+event} (Gdk\+Event\+Focus $\ast$\+\_\+pst\+Event)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a1153e9927db5e913c4364d507adbfc4b}\label{class_v_b_a_1_1_window_a1153e9927db5e913c4364d507adbfc4b}} 
+virtual bool {\bfseries on\+\_\+focus\+\_\+out\+\_\+event} (Gdk\+Event\+Focus $\ast$\+\_\+pst\+Event)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_a3fc2f454d5b9bbb8a74d44c3ac10655d}\label{class_v_b_a_1_1_window_a3fc2f454d5b9bbb8a74d44c3ac10655d}} 
+virtual bool {\bfseries on\+\_\+key\+\_\+press\+\_\+event} (Gdk\+Event\+Key $\ast$\+\_\+pst\+Event)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_af7c7628164d393dd278503b1d95298fa}\label{class_v_b_a_1_1_window_af7c7628164d393dd278503b1d95298fa}} 
+virtual bool {\bfseries on\+\_\+key\+\_\+release\+\_\+event} (Gdk\+Event\+Key $\ast$\+\_\+pst\+Event)
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_window_af61c9d83735058c67bfeb2f2bbc43c47}\label{class_v_b_a_1_1_window_af61c9d83735058c67bfeb2f2bbc43c47}} 
+class {\bfseries Gnome\+::\+Glade\+::\+Xml}
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/gtk/window.\+h\item 
+src/gtk/window.\+cpp\item 
+src/gtk/windowcallbacks.\+cpp\end{DoxyCompactItemize}

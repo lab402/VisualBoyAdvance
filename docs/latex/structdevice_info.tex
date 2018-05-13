@@ -1,0 +1,51 @@
+\hypertarget{structdevice_info}{}\section{device\+Info 구조체 참조}
+\label{structdevice_info}\index{device\+Info@{device\+Info}}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structdevice_info_a4e2b017b67b850eb267097f95776273f}\label{structdevice_info_a4e2b017b67b850eb267097f95776273f}} 
+L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T\+D\+E\+V\+I\+C\+E8 {\bfseries device}
+\item 
+\mbox{\Hypertarget{structdevice_info_a405fccb036e90884fb822c59433c2490}\label{structdevice_info_a405fccb036e90884fb822c59433c2490}} 
+B\+O\+OL {\bfseries is\+Polled}
+\item 
+\mbox{\Hypertarget{structdevice_info_ad88fd10c7065c35ea68687b9871ebed0}\label{structdevice_info_ad88fd10c7065c35ea68687b9871ebed0}} 
+int {\bfseries n\+Buttons}
+\item 
+\mbox{\Hypertarget{structdevice_info_a5ceef6ccdfa5c12661b77e036ba91682}\label{structdevice_info_a5ceef6ccdfa5c12661b77e036ba91682}} 
+int {\bfseries n\+Axes}
+\item 
+\mbox{\Hypertarget{structdevice_info_a5554d019728b7dace75256a64411417c}\label{structdevice_info_a5554d019728b7dace75256a64411417c}} 
+int {\bfseries n\+Povs}
+\item 
+\mbox{\Hypertarget{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}\label{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}} 
+B\+O\+OL {\bfseries first}
+\item 
+\mbox{\Hypertarget{structdevice_info_aa3139c27b267c0ec8b6f4d96629ee0e2}\label{structdevice_info_aa3139c27b267c0ec8b6f4d96629ee0e2}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>DWORD {\bfseries offset}\\
+\>LONG {\bfseries center}\\
+\>LONG {\bfseries negative}\\
+\>LONG {\bfseries positive}\\
+\} {\bfseries axis} \mbox{[}8\mbox{]}\\
+
+\end{tabbing}\item 
+\mbox{\Hypertarget{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}\label{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}} 
+int {\bfseries needed}
+\item 
+\mbox{\Hypertarget{structdevice_info_a44f2f54c2a9ac5917b0bb1dce46b15aa}\label{structdevice_info_a44f2f54c2a9ac5917b0bb1dce46b15aa}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>UCHAR {\bfseries data} \mbox{[}256\mbox{]}\\
+\>DIJOYSTATE {\bfseries state}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/win32/Direct\+Input.\+cpp\end{DoxyCompactItemize}

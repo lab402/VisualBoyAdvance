@@ -1,0 +1,340 @@
+\documentclass[twoside]{book}
+
+% Packages required by doxygen
+\usepackage{fixltx2e}
+\usepackage{calc}
+\usepackage{doxygen}
+\usepackage[export]{adjustbox} % also loads graphicx
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{makeidx}
+\usepackage{multicol}
+\usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
+\usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
+\usepackage[table]{xcolor}
+
+% NLS support packages
+\usepackage{hfont}
+
+% Font selection
+\usepackage[T1]{fontenc}
+\usepackage[scaled=.90]{helvet}
+\usepackage{courier}
+\usepackage{amssymb}
+\usepackage{sectsty}
+\renewcommand{\familydefault}{\sfdefault}
+\allsectionsfont{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\renewcommand{\DoxyLabelFont}{%
+  \fontseries{bc}\selectfont%
+  \color{darkgray}%
+}
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
+
+% Page & text layout
+\usepackage{geometry}
+\geometry{%
+  a4paper,%
+  top=2.5cm,%
+  bottom=2.5cm,%
+  left=2.5cm,%
+  right=2.5cm%
+}
+\tolerance=750
+\hfuzz=15pt
+\hbadness=750
+\setlength{\emergencystretch}{15pt}
+\setlength{\parindent}{0cm}
+\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\makeatletter
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@parafont%
+  }%
+}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{0ex}{-1.0ex}{1.0ex}{%
+    \normalfont\normalsize\bfseries\SS@subparafont%
+  }%
+}
+\makeatother
+
+% Headers & footers
+\usepackage{fancyhdr}
+\pagestyle{fancyplain}
+\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
+\fancyhead[CE]{\fancyplain{}{}}
+\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
+\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
+\fancyhead[CO]{\fancyplain{}{}}
+\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
+\fancyfoot[LE]{\fancyplain{}{}}
+\fancyfoot[CE]{\fancyplain{}{}}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize 다음에 의해 생성됨 \+:  Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize 다음에 의해 생성됨 \+:  Doxygen }}
+\fancyfoot[CO]{\fancyplain{}{}}
+\fancyfoot[RO]{\fancyplain{}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{%
+  \markboth{#1}{}%
+}
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}%
+}
+
+% Indices & bibliography
+\usepackage{natbib}
+\usepackage[titles]{tocloft}
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{5}
+\makeindex
+
+% Hyperlinks (required, but should be loaded last)
+\usepackage{ifpdf}
+\ifpdf
+  \usepackage[pdftex,pagebackref=true]{hyperref}
+\else
+  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+\fi
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=blue,%
+  citecolor=blue,%
+  unicode%
+}
+
+% Custom commands
+\newcommand{\clearemptydoublepage}{%
+  \newpage{\pagestyle{empty}\cleardoublepage}%
+}
+
+\usepackage{caption}
+\captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
+
+%===== C O N T E N T S =====
+
+\begin{document}
+
+% Titlepage & ToC
+\hypersetup{pageanchor=false,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
+\pagenumbering{alph}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}%
+{\Large Modern\+V\+BA }\\
+\vspace*{1cm}
+{\large 다음에 의해 생성됨 \+:  Doxygen 1.8.14}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\hypersetup{pageanchor=true}
+
+%--- Begin generated contents ---
+\chapter{계통도 색인}
+\input{hierarchy}
+\chapter{클래스 색인}
+\input{annotated}
+\chapter{클래스 문서화}
+\input{struct___mem_file}
+\input{class_about_dialog}
+\input{class_accel_editor}
+\input{class_add_c_b_a_code}
+\input{class_add_cheat}
+\input{class_add_cheat_code}
+\input{class_add_g_b_cheat}
+\input{class_add_g_b_code}
+\input{class_add_g_s_a_code}
+\input{struct_a_range}
+\input{struct_a_ranges}
+\input{struct_array}
+\input{class_associate}
+\input{class_a_v_i_write}
+\input{class_bitmap_control}
+\input{structbreakpoint_info}
+\input{class_bug_report}
+\input{class_c_accelerator_manager}
+\input{class_c_accels_ob}
+\input{class_c_cmd_accel_ob}
+\input{class_win_helper_1_1_c_critical_section}
+\input{class_win_helper_1_1_c_defer_window_pos}
+\input{struct_cheats_data}
+\input{struct_cheat_search_block}
+\input{struct_cheat_search_data}
+\input{class_c_keyboard_edit}
+\input{class_win_helper_1_1_c_critical_section_1_1_c_lock}
+\input{class_color_button}
+\input{class_color_control}
+\input{struct_compile_unit}
+\input{class_win_helper_1_1_c_point}
+\input{class_win_helper_1_1_c_rect}
+\input{class_win_helper_1_1_c_scroll_info}
+\input{class_win_helper_1_1_c_size}
+\input{class_c_skin}
+\input{struct_debugger_command}
+\input{struct_debug_info}
+\input{structdevice_info}
+\input{struct_dialog_data}
+\input{struct_dialog_sizer_sizing_item}
+\input{class_direct3_d_display}
+\input{class_direct_draw_display}
+\input{class_direct_input}
+\input{class_directories}
+\input{class_direct_sound}
+\input{class_disassemble}
+\input{struct_e_l_f_abbrev}
+\input{struct_e_l_f_attr}
+\input{struct_e_l_f_block}
+\input{struct_e_l_fcie}
+\input{struct_e_l_ffde}
+\input{struct_e_l_f_frame_state}
+\input{struct_e_l_f_frame_state_register}
+\input{struct_e_l_f_frame_state_registers}
+\input{struct_e_l_f_header}
+\input{struct_e_l_f_program_header}
+\input{struct_e_l_f_section_header}
+\input{struct_e_l_f_symbol}
+\input{struct_emulated_system}
+\input{struct_enum}
+\input{struct_enum_member}
+\input{class_export_g_s_a_snapshot}
+\input{class_v_b_a_1_1_config_1_1_file}
+\input{structfile__in__zip__read__info__s}
+\input{class_file_dlg}
+\input{struct_function}
+\input{struct_function_type}
+\input{class_game_overrides}
+\input{class_g_b_a_cheat_list}
+\input{class_g_b_a_cheat_search}
+\input{class_g_b_a_memory_viewer}
+\input{class_g_b_a_palette_view_control}
+\input{structgb_cheat}
+\input{class_g_b_cheat_list}
+\input{class_g_b_cheat_search}
+\input{class_g_b_color_dlg}
+\input{class_g_b_disassemble}
+\input{class_g_b_map_view}
+\input{class_g_b_memory_viewer}
+\input{class_g_b_memory_viewer_dlg}
+\input{class_g_b_oam_view}
+\input{struct_g_b_o_p_c_o_d_e}
+\input{class_g_b_palette_view}
+\input{class_g_b_palette_view_control}
+\input{class_g_b_printer_dlg}
+\input{uniongb_register}
+\input{class_g_b_tile_view}
+\input{structgb_xx_cheat}
+\input{class_g_d_b_port_dlg}
+\input{class_g_d_b_waiting_dlg}
+\input{class_g_d_i_display}
+\input{structgmon__hdr}
+\input{class_g_s_a_code_select}
+\input{class_hyperlink}
+\input{class_i_display}
+\input{class_v_b_a_1_1_image_menu_item}
+\input{class_i_memory_viewer_dlg}
+\input{class_input}
+\input{struct_i_o_data}
+\input{class_i_o_viewer}
+\input{class_i_sound}
+\input{class_i_update_listener}
+\input{class_v_b_a_1_1_joypad_config}
+\input{class_joypad_config}
+\input{class_v_b_a_1_1_joypad_config_dialog}
+\input{class_joypad_edit_control}
+\input{class_v_b_a_1_1_keymap}
+\input{class_v_b_a_1_1_config_1_1_key_not_found}
+\input{class_lang_select}
+\input{class_v_b_a_1_1_config_1_1_line}
+\input{struct_line_info}
+\input{struct_line_info_item}
+\input{class_logging}
+\input{class_main_wnd}
+\input{structmapper_g_s3}
+\input{structmapper_hu_c1}
+\input{structmapper_hu_c3}
+\input{structmapper_m_b_c1}
+\input{structmapper_m_b_c2}
+\input{structmapper_m_b_c3}
+\input{structmapper_m_b_c5}
+\input{structmapper_m_b_c7}
+\input{structmapper_m_m_m01}
+\input{structmapper_t_a_m_a5}
+\input{class_map_view}
+\input{class_max_scale}
+\input{structmem__stream}
+\input{struct_member}
+\input{structmemory_map}
+\input{class_memory_viewer}
+\input{class_memory_viewer_address_size}
+\input{class_memory_viewer_dlg}
+\input{class_v_b_a_1_1_menu_item}
+\input{class_mode_confirm}
+\input{class_motion_config}
+\input{struct_node}
+\input{class_v_b_a_1_1_config_1_1_not_found}
+\input{class_oam_view}
+\input{struct_object}
+\input{struct_opcodes}
+\input{struct_o_p_e_n_f_i_l_e_n_a_m_e_e_x}
+\input{class_open_g_l_display}
+\input{structoption}
+\input{class_palette_view}
+\input{class_palette_view_control}
+\input{structprofile__segment}
+\input{unionreg__pair}
+\input{struct_registry_data}
+\input{class_resize_dlg}
+\input{class_rewind_interval}
+\input{class_rom_info_g_b}
+\input{class_rom_info_g_b_a}
+\input{struct_r_t_c_c_l_o_c_k_d_a_t_a}
+\input{class_v_b_a_1_1_screen_area}
+\input{class_v_b_a_1_1_config_1_1_section}
+\input{class_v_b_a_1_1_config_1_1_section_not_found}
+\input{class_skin_button}
+\input{class_string_tokenizer}
+\input{struct_struct}
+\input{struct_symbol}
+\input{structtag_m_a_p_v_i_r_t_k_e_y_s}
+\input{class_throttle}
+\input{class_tile_view}
+\input{structtm__unz__s}
+\input{structtostruct}
+\input{struct_type}
+\input{structunz__file__info__internal__s}
+\input{structunz__file__info__s}
+\input{structunz__global__info__s}
+\input{structunz__s}
+\input{structvariable__desc}
+\input{class_v_b_a}
+\input{class_video_driver_select}
+\input{class_video_mode}
+\input{class_wav_writer}
+\input{struct_win_cheats_data}
+\input{class_v_b_a_1_1_window}
+\input{struct_win_g_b_a_company_name}
+\input{struct_win_gb_cheats_data}
+\input{structyy__buffer__state}
+\input{class_zoom_control}
+%--- End generated contents ---
+
+% Index
+\backmatter
+\newpage
+\phantomsection
+\clearemptydoublepage
+\addcontentsline{toc}{chapter}{색인}
+\printindex
+
+\end{document}

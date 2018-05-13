@@ -1,0 +1,56 @@
+\hypertarget{class_v_b_a_1_1_screen_area}{}\section{V\+BA\+:\+:Screen\+Area 클래스 참조}
+\label{class_v_b_a_1_1_screen_area}\index{V\+B\+A\+::\+Screen\+Area@{V\+B\+A\+::\+Screen\+Area}}
+V\+BA\+:\+:Screen\+Area에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_v_b_a_1_1_screen_area}
+\end{center}
+\end{figure}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_a5bc7bd5f6077d82a7affa8527d3112c9}\label{class_v_b_a_1_1_screen_area_a5bc7bd5f6077d82a7affa8527d3112c9}} 
+{\bfseries Screen\+Area} (int \+\_\+i\+Width, int \+\_\+i\+Height, int \+\_\+i\+Scale=1)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_a67e85578c2affd30bfe40b8768900d83}\label{class_v_b_a_1_1_screen_area_a67e85578c2affd30bfe40b8768900d83}} 
+void {\bfseries v\+Set\+Size} (int \+\_\+i\+Width, int \+\_\+i\+Height)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_a39182c21dfcc5c1f58171986f9c6305f}\label{class_v_b_a_1_1_screen_area_a39182c21dfcc5c1f58171986f9c6305f}} 
+void {\bfseries v\+Set\+Scale} (int \+\_\+i\+Scale)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9}\label{class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9}} 
+void {\bfseries v\+Set\+Filter2x} (E\+Filter2x \+\_\+e\+Filter2x)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce}\label{class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce}} 
+void {\bfseries v\+Set\+Filter\+IB} (E\+Filter\+IB \+\_\+e\+Filter\+IB)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_ad7b6579afb665abf3b6a5004f03b63f8}\label{class_v_b_a_1_1_screen_area_ad7b6579afb665abf3b6a5004f03b63f8}} 
+void {\bfseries v\+Draw\+Pixels} (u8 $\ast$\+\_\+pui\+Data)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_aaefba8f2cfd6d3c759df0b38f9edd1bd}\label{class_v_b_a_1_1_screen_area_aaefba8f2cfd6d3c759df0b38f9edd1bd}} 
+void {\bfseries v\+Draw\+Color} (u32 \+\_\+ui\+Color)
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_ab800ac1ff230ac9cf33ac144e614160e}\label{class_v_b_a_1_1_screen_area_ab800ac1ff230ac9cf33ac144e614160e}} 
+virtual bool {\bfseries on\+\_\+expose\+\_\+event} (Gdk\+Event\+Expose $\ast$\+\_\+pst\+Event)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_a3a341c2aa9a29f33e16923073b43e3e6}\label{class_v_b_a_1_1_screen_area_a3a341c2aa9a29f33e16923073b43e3e6}} 
+virtual bool {\bfseries on\+\_\+motion\+\_\+notify\+\_\+event} (Gdk\+Event\+Motion $\ast$\+\_\+pst\+Event)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_aa0bb4110528b060c4fb9a01ad868e4b5}\label{class_v_b_a_1_1_screen_area_aa0bb4110528b060c4fb9a01ad868e4b5}} 
+virtual bool {\bfseries on\+\_\+enter\+\_\+notify\+\_\+event} (Gdk\+Event\+Crossing $\ast$\+\_\+pst\+Event)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_a15325a7cba813d00e8b2638a6abf651f}\label{class_v_b_a_1_1_screen_area_a15325a7cba813d00e8b2638a6abf651f}} 
+virtual bool {\bfseries on\+\_\+leave\+\_\+notify\+\_\+event} (Gdk\+Event\+Crossing $\ast$\+\_\+pst\+Event)
+\item 
+\mbox{\Hypertarget{class_v_b_a_1_1_screen_area_a27266c7186e0d854759430c400d3e48a}\label{class_v_b_a_1_1_screen_area_a27266c7186e0d854759430c400d3e48a}} 
+virtual bool {\bfseries b\+On\+Cursor\+Timeout} ()
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/gtk/screenarea.\+h\item 
+src/gtk/screenarea.\+cpp\end{DoxyCompactItemize}

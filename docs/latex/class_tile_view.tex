@@ -1,0 +1,117 @@
+\hypertarget{class_tile_view}{}\section{Tile\+View 클래스 참조}
+\label{class_tile_view}\index{Tile\+View@{Tile\+View}}
+Tile\+View에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tile_view}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_view_a845736b4060c250e1714163c078d1bc3}\label{class_tile_view_a845736b4060c250e1714163c078d1bc3}} 
+enum \{ {\bfseries I\+DD} = I\+D\+D\+\_\+\+T\+I\+L\+E\+\_\+\+V\+I\+E\+W\+ER
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_view_a4341071a0cab0d5a8b6dfa7318230636}\label{class_tile_view_a4341071a0cab0d5a8b6dfa7318230636}} 
+void {\bfseries paint} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_a4b8f6e14f8ee7d4abea3a751cb5f7d74}\label{class_tile_view_a4b8f6e14f8ee7d4abea3a751cb5f7d74}} 
+void {\bfseries render} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_abc4f9051fc3c2bfad76a6b11787460f8}\label{class_tile_view_abc4f9051fc3c2bfad76a6b11787460f8}} 
+void {\bfseries render\+Tile16} (int tile, int x, int y, u8 $\ast$char\+Base, u16 $\ast$palette)
+\item 
+\mbox{\Hypertarget{class_tile_view_a1232e131b9ef993edea4390809c41814}\label{class_tile_view_a1232e131b9ef993edea4390809c41814}} 
+void {\bfseries render\+Tile256} (int tile, int x, int y, u8 $\ast$char\+Base, u16 $\ast$palette)
+\item 
+\mbox{\Hypertarget{class_tile_view_a43f168cd426f0e9215f55c742b6826e7}\label{class_tile_view_a43f168cd426f0e9215f55c742b6826e7}} 
+void {\bfseries save\+P\+NG} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_tile_view_aaea86e952981c5622d400ffb57b30480}\label{class_tile_view_aaea86e952981c5622d400ffb57b30480}} 
+void {\bfseries save\+B\+MP} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_tile_view_a870ab4767d06b82a3537dd5aaf7697c1}\label{class_tile_view_a870ab4767d06b82a3537dd5aaf7697c1}} 
+{\bfseries Tile\+View} (C\+Wnd $\ast$p\+Parent=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{class_tile_view_a09b04d6b0135ef2b6da3c08796c1d354}\label{class_tile_view_a09b04d6b0135ef2b6da3c08796c1d354}} 
+virtual void {\bfseries update} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_view_a3423f8bf0fe4b1bd0273d9ffbd3fb390}\label{class_tile_view_a3423f8bf0fe4b1bd0273d9ffbd3fb390}} 
+C\+Slider\+Ctrl {\bfseries m\+\_\+slider}
+\item 
+\mbox{\Hypertarget{class_tile_view_ad61048a17d2a93f3b8cb413d17a1533a}\label{class_tile_view_ad61048a17d2a93f3b8cb413d17a1533a}} 
+int {\bfseries m\+\_\+colors}
+\item 
+\mbox{\Hypertarget{class_tile_view_a1fd549925ae533d9ce7215b8d5de4c63}\label{class_tile_view_a1fd549925ae533d9ce7215b8d5de4c63}} 
+int {\bfseries m\+\_\+char\+Base}
+\item 
+\mbox{\Hypertarget{class_tile_view_a21a8f1dc56ad2e1107719d64fb206d2e}\label{class_tile_view_a21a8f1dc56ad2e1107719d64fb206d2e}} 
+B\+O\+OL {\bfseries m\+\_\+stretch}
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tile_view_a6c10f973f1ebbb7169bd6440572a9328}\label{class_tile_view_a6c10f973f1ebbb7169bd6440572a9328}} 
+virtual void {\bfseries Do\+Data\+Exchange} (C\+Data\+Exchange $\ast$p\+DX)
+\item 
+\mbox{\Hypertarget{class_tile_view_a83fee9256658f418f7562c0ff098eb22}\label{class_tile_view_a83fee9256658f418f7562c0ff098eb22}} 
+virtual void {\bfseries Post\+Nc\+Destroy} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_ae4ba4c47c672fb6e856fbe3921e3667e}\label{class_tile_view_ae4ba4c47c672fb6e856fbe3921e3667e}} 
+virtual afx\+\_\+msg L\+R\+E\+S\+U\+LT {\bfseries On\+Map\+Info} (W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+\item 
+\mbox{\Hypertarget{class_tile_view_ad01d09783bbe107d9837d6847938e564}\label{class_tile_view_ad01d09783bbe107d9837d6847938e564}} 
+virtual afx\+\_\+msg L\+R\+E\+S\+U\+LT {\bfseries On\+Col\+Info} (W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+\item 
+\mbox{\Hypertarget{class_tile_view_ae318b9ed3c7567dcbc897c77d063a0eb}\label{class_tile_view_ae318b9ed3c7567dcbc897c77d063a0eb}} 
+afx\+\_\+msg void {\bfseries On\+Save} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_a597e32fa09187fe6ea909cca947bfbc1}\label{class_tile_view_a597e32fa09187fe6ea909cca947bfbc1}} 
+virtual B\+O\+OL {\bfseries On\+Init\+Dialog} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_a88e865b649c2a32c403670cca70ed55c}\label{class_tile_view_a88e865b649c2a32c403670cca70ed55c}} 
+afx\+\_\+msg void {\bfseries On\+Close} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_ab51dcedc72c43cf57133d4adcd264c10}\label{class_tile_view_ab51dcedc72c43cf57133d4adcd264c10}} 
+afx\+\_\+msg void {\bfseries On\+Auto\+Update} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_a482139c5bc655015ba0700db5c04ec91}\label{class_tile_view_a482139c5bc655015ba0700db5c04ec91}} 
+afx\+\_\+msg void {\bfseries On16\+Colors} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_a021f1139dccc2ec023a315ed1f4619e1}\label{class_tile_view_a021f1139dccc2ec023a315ed1f4619e1}} 
+afx\+\_\+msg void {\bfseries On256\+Colors} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_a5b1b1e61396178f21ee28c6c7a779142}\label{class_tile_view_a5b1b1e61396178f21ee28c6c7a779142}} 
+afx\+\_\+msg void {\bfseries On\+Charbase0} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_a4c2151cc553eabc4d08f8a8b6954aa72}\label{class_tile_view_a4c2151cc553eabc4d08f8a8b6954aa72}} 
+afx\+\_\+msg void {\bfseries On\+Charbase1} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_ab50f2c2c7575222ee7e4bb72161bbda7}\label{class_tile_view_ab50f2c2c7575222ee7e4bb72161bbda7}} 
+afx\+\_\+msg void {\bfseries On\+Charbase2} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_af0ec3a1a2c7e142612fe13d85c4faa63}\label{class_tile_view_af0ec3a1a2c7e142612fe13d85c4faa63}} 
+afx\+\_\+msg void {\bfseries On\+Charbase3} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_abfd5f9562f84ae4903db87425788d410}\label{class_tile_view_abfd5f9562f84ae4903db87425788d410}} 
+afx\+\_\+msg void {\bfseries On\+Charbase4} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_afe0a1c444008b7e76d4669ffdda2e0bd}\label{class_tile_view_afe0a1c444008b7e76d4669ffdda2e0bd}} 
+afx\+\_\+msg void {\bfseries On\+Stretch} ()
+\item 
+\mbox{\Hypertarget{class_tile_view_a8ca2f73ad6c372183494c0870905b9ac}\label{class_tile_view_a8ca2f73ad6c372183494c0870905b9ac}} 
+afx\+\_\+msg void {\bfseries On\+H\+Scroll} (U\+I\+NT n\+S\+B\+Code, U\+I\+NT n\+Pos, C\+Scroll\+Bar $\ast$p\+Scroll\+Bar)
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/win32/Tile\+View.\+h\item 
+src/win32/Tile\+View.\+cpp\end{DoxyCompactItemize}

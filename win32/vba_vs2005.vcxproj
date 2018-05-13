@@ -76,7 +76,7 @@
     <LinkIncremental>true</LinkIncremental>
     <GenerateManifest>false</GenerateManifest>
     <PostBuildEventUseInBuild>false</PostBuildEventUseInBuild>
-    <LibraryPath>C:\Users\hyunbo0205\sources\VisualBoyAdvance\win32\Debug;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.16299.0\ucrt\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath>.\Debug;C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Lib\x86;C:\Program Files (x86)\Windows Kits\10\Lib\10.0.16299.0\ucrt\x86;$(LibraryPath)</LibraryPath>
     <ExecutablePath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Utilities\bin\x86;$(ExecutablePath)</ExecutablePath>
     <IncludePath>C:\Program Files (x86)\Microsoft DirectX SDK (June 2010)\Include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt;$(IncludePath)</IncludePath>
   </PropertyGroup>
@@ -110,7 +110,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MFC_Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>.\dependencies\zlib;.\dependencies\libpng;.\dependencies\cximage;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\dependencies\zlib;.\dependencies\libpng;.\dependencies\cximage;C:\Users\sjh13\sources\VisualBoyAdvance\win32\Debug;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;WINVER=0x0500;_DEBUG;_WINDOWS;OEMRESOURCE;MMX;ASM;DEV_VERSION;BKPT_SUPPORT;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>

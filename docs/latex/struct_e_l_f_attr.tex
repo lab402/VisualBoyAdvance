@@ -1,0 +1,28 @@
+\hypertarget{struct_e_l_f_attr}{}\section{E\+L\+F\+Attr 구조체 참조}
+\label{struct_e_l_f_attr}\index{E\+L\+F\+Attr@{E\+L\+F\+Attr}}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_e_l_f_attr_aae677b759e5864de3ec3948837a65700}\label{struct_e_l_f_attr_aae677b759e5864de3ec3948837a65700}} 
+u32 {\bfseries name}
+\item 
+\mbox{\Hypertarget{struct_e_l_f_attr_a21299233079c1bb24e10eea813f6f1b6}\label{struct_e_l_f_attr_a21299233079c1bb24e10eea813f6f1b6}} 
+u32 {\bfseries form}
+\item 
+\mbox{\Hypertarget{struct_e_l_f_attr_a1aa1501a9a9ab1d25817c77736aeba90}\label{struct_e_l_f_attr_a1aa1501a9a9ab1d25817c77736aeba90}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>u32 {\bfseries value}\\
+\>char $\ast$ {\bfseries string}\\
+\>u8 $\ast$ {\bfseries data}\\
+\>bool {\bfseries flag}\\
+\>\mbox{\hyperlink{struct_e_l_f_block}{ELFBlock}} $\ast$ {\bfseries block}\\
+\}; \\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/elf.\+h\end{DoxyCompactItemize}

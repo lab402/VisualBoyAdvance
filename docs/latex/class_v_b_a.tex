@@ -1,0 +1,651 @@
+\hypertarget{class_v_b_a}{}\section{V\+BA 클래스 참조}
+\label{class_v_b_a}\index{V\+BA@{V\+BA}}
+V\+B\+A에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_v_b_a}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1683020d7324daf3bda627d0d3658e3e}\label{class_v_b_a_a1683020d7324daf3bda627d0d3658e3e}} 
+enum {\bfseries E\+Filter2x} \{ \newline
+{\bfseries First\+Filter}, 
+{\bfseries Filter\+None} = First\+Filter, 
+{\bfseries Filter2x\+SaI}, 
+{\bfseries Filter\+Super2x\+SaI}, 
+\newline
+{\bfseries Filter\+Super\+Eagle}, 
+{\bfseries Filter\+Pixelate}, 
+{\bfseries Filter\+Motion\+Blur}, 
+{\bfseries Filter\+Ad\+Mame2x}, 
+\newline
+{\bfseries Filter\+Simple2x}, 
+{\bfseries Filter\+Bilinear}, 
+{\bfseries Filter\+Bilinear\+Plus}, 
+{\bfseries Filter\+Scanlines}, 
+\newline
+{\bfseries Filter\+Scanlines\+TV}, 
+{\bfseries Filter\+Hq2x}, 
+{\bfseries Filter\+Lq2x}, 
+{\bfseries Last\+Filter} = Filter\+Lq2x
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a304ffeb9f4a8b26e7fa4e2eb620d780f}\label{class_v_b_a_a304ffeb9f4a8b26e7fa4e2eb620d780f}} 
+enum {\bfseries E\+Filter\+IB} \{ \newline
+{\bfseries First\+Filter\+IB}, 
+{\bfseries Filter\+I\+B\+None} = First\+Filter\+IB, 
+{\bfseries Filter\+I\+B\+Smart}, 
+{\bfseries Filter\+I\+B\+Motion\+Blur}, 
+\newline
+{\bfseries Last\+Filter\+IB} = Filter\+I\+B\+Motion\+Blur
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a6ec41ea038b4ea42eb8d9ea59d3eb4c5}\label{class_v_b_a_a6ec41ea038b4ea42eb8d9ea59d3eb4c5}} 
+enum {\bfseries E\+Filter\+Depth} \{ {\bfseries Filter\+Depth16}, 
+{\bfseries Filter\+Depth32}
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a5839ea5408735bd8ce070c4c245750cc}\label{class_v_b_a_a5839ea5408735bd8ce070c4c245750cc}} 
+enum {\bfseries E\+Key} \{ \newline
+{\bfseries Key\+None}, 
+{\bfseries KeyA}, 
+{\bfseries KeyB}, 
+{\bfseries Key\+Select}, 
+\newline
+{\bfseries Key\+Start}, 
+{\bfseries Key\+Right}, 
+{\bfseries Key\+Left}, 
+{\bfseries Key\+Up}, 
+\newline
+{\bfseries Key\+Down}, 
+{\bfseries KeyR}, 
+{\bfseries KeyL}, 
+{\bfseries Key\+Speed}, 
+\newline
+{\bfseries Key\+Capture}
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a20a8479ee93dc52b1fbd911a13cb30a5}\label{class_v_b_a_a20a8479ee93dc52b1fbd911a13cb30a5}} 
+enum {\bfseries E\+Key\+Flag} \{ \newline
+{\bfseries Key\+FlagA} = 1 $<$$<$ 0, 
+{\bfseries Key\+FlagB} = 1 $<$$<$ 1, 
+{\bfseries Key\+Flag\+Select} = 1 $<$$<$ 2, 
+{\bfseries Key\+Flag\+Start} = 1 $<$$<$ 3, 
+\newline
+{\bfseries Key\+Flag\+Right} = 1 $<$$<$ 4, 
+{\bfseries Key\+Flag\+Left} = 1 $<$$<$ 5, 
+{\bfseries Key\+Flag\+Up} = 1 $<$$<$ 6, 
+{\bfseries Key\+Flag\+Down} = 1 $<$$<$ 7, 
+\newline
+{\bfseries Key\+FlagR} = 1 $<$$<$ 8, 
+{\bfseries Key\+FlagL} = 1 $<$$<$ 9, 
+{\bfseries Key\+Flag\+Speed} = 1 $<$$<$ 10, 
+{\bfseries Key\+Flag\+Capture} = 1 $<$$<$ 11
+ \}
+\item 
+\mbox{\Hypertarget{class_v_b_a_accd36b6c101a516c50cf8288976739c4}\label{class_v_b_a_accd36b6c101a516c50cf8288976739c4}} 
+typedef void($\ast$ {\bfseries Filter2x}) (u8 $\ast$, u32, u8 $\ast$, u8 $\ast$, u32, int, int)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a3269ee707f37ad255f2b7b0f20921158}\label{class_v_b_a_a3269ee707f37ad255f2b7b0f20921158}} 
+typedef void($\ast$ {\bfseries Filter\+IB}) (u8 $\ast$, u32, int, int)
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_acb822065cba8b15810c5a61fd05ca831}\label{class_v_b_a_acb822065cba8b15810c5a61fd05ca831}} 
+void {\bfseries adjust\+Dest\+Rect} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_ab1caa25635cd40fc3b49b5d325cc65ef}\label{class_v_b_a_ab1caa25635cd40fc3b49b5d325cc65ef}} 
+void {\bfseries update\+I\+FB} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_afbe0e6f9458f25adb848516537a91747}\label{class_v_b_a_afbe0e6f9458f25adb848516537a91747}} 
+void {\bfseries update\+Filter} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_accf3451bad473b90400193636cd27c96}\label{class_v_b_a_accf3451bad473b90400193636cd27c96}} 
+void {\bfseries update\+Menu\+Bar} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_af0712f70a90d023ab8327a366be08174}\label{class_v_b_a_af0712f70a90d023ab8327a366be08174}} 
+void {\bfseries win\+Add\+Update\+Listener} (\mbox{\hyperlink{class_i_update_listener}{I\+Update\+Listener}} $\ast$l)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a2d31a0656df2230310aa8dc9e3a735d3}\label{class_v_b_a_a2d31a0656df2230310aa8dc9e3a735d3}} 
+void {\bfseries win\+Remove\+Update\+Listener} (\mbox{\hyperlink{class_i_update_listener}{I\+Update\+Listener}} $\ast$l)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a228edf26b0dc4129658c174ee5a3c27c}\label{class_v_b_a_a228edf26b0dc4129658c174ee5a3c27c}} 
+C\+String {\bfseries win\+Load\+Filter} (U\+I\+NT id)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a35c73ff552824e3eba6e90393a4692d4}\label{class_v_b_a_a35c73ff552824e3eba6e90393a4692d4}} 
+virtual B\+O\+OL {\bfseries Init\+Instance} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_a0296d1fa6a340dffd47dbe623b64475c}\label{class_v_b_a_a0296d1fa6a340dffd47dbe623b64475c}} 
+virtual B\+O\+OL {\bfseries On\+Idle} (L\+O\+NG l\+Count)
+\item 
+\mbox{\Hypertarget{class_v_b_a_aa09989acc3edb3991dc98a88655dabdb}\label{class_v_b_a_aa09989acc3edb3991dc98a88655dabdb}} 
+void {\bfseries save\+Settings} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_a0f0d982604ac77d23e7fd474c4ebbe2c}\label{class_v_b_a_a0f0d982604ac77d23e7fd474c4ebbe2c}} 
+void {\bfseries movie\+Read\+Next} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac19c75e259950ddd9bb5e97d73203ebb}\label{class_v_b_a_ac19c75e259950ddd9bb5e97d73203ebb}} 
+bool {\bfseries init\+Input} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_abbf1f3cbda50fca40ddf50a6fafe8e05}\label{class_v_b_a_abbf1f3cbda50fca40ddf50a6fafe8e05}} 
+H\+M\+O\+D\+U\+LE {\bfseries win\+Load\+Language} (const char $\ast$name)
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae872998a3ecf3ec0d504378744f441e6}\label{class_v_b_a_ae872998a3ecf3ec0d504378744f441e6}} 
+void {\bfseries win\+Set\+Language\+Option} (int \mbox{\hyperlink{structoption}{option}}, bool force)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a82623f5ce8199b90e3a68fe8c8fee853}\label{class_v_b_a_a82623f5ce8199b90e3a68fe8c8fee853}} 
+void {\bfseries update\+Priority} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_a4648998e25679df69b15afdccb428b8f}\label{class_v_b_a_a4648998e25679df69b15afdccb428b8f}} 
+void {\bfseries win\+Update\+Skin} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_acb1288f72a2122817f05df2da91a67d2}\label{class_v_b_a_acb1288f72a2122817f05df2da91a67d2}} 
+void {\bfseries direct\+X\+Message} (const char $\ast$msg)
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac71d70eba3bf4229255b6aeeea9573e5}\label{class_v_b_a_ac71d70eba3bf4229255b6aeeea9573e5}} 
+void {\bfseries shutdown\+Display} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_a340eaeeb7fcfc242f08ac3442d991a96}\label{class_v_b_a_a340eaeeb7fcfc242f08ac3442d991a96}} 
+void {\bfseries win\+Check\+Fullscreen} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_a0db47ba257f450e098e7079199385b70}\label{class_v_b_a_a0db47ba257f450e098e7079199385b70}} 
+bool {\bfseries update\+Render\+Method0} (bool force)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1d5b9c4597d5c565ce4d8ba1e594a89f}\label{class_v_b_a_a1d5b9c4597d5c565ce4d8ba1e594a89f}} 
+bool {\bfseries update\+Render\+Method} (bool force)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a641fd39cdf7ab5f8eff2f85f3ecf3260}\label{class_v_b_a_a641fd39cdf7ab5f8eff2f85f3ecf3260}} 
+bool {\bfseries init\+Display} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac278ece4958310ce2ef8751afbad08f3}\label{class_v_b_a_ac278ece4958310ce2ef8751afbad08f3}} 
+void {\bfseries update\+Window\+Size} (int value)
+\item 
+\mbox{\Hypertarget{class_v_b_a_afe121e9ee080eca73146eb339408a148}\label{class_v_b_a_afe121e9ee080eca73146eb339408a148}} 
+void {\bfseries update\+Video\+Size} (U\+I\+NT id)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a2b3524193d398b041e90907430361ed8}\label{class_v_b_a_a2b3524193d398b041e90907430361ed8}} 
+void {\bfseries update\+Frame\+Skip} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_aed48a7db8cc5b65a1e495661f6040915}\label{class_v_b_a_aed48a7db8cc5b65a1e495661f6040915}} 
+void {\bfseries load\+Settings} ()
+\item 
+\mbox{\Hypertarget{class_v_b_a_a6b68e58bd0ae7a246ca3c1cd66a1c9db}\label{class_v_b_a_a6b68e58bd0ae7a246ca3c1cd66a1c9db}} 
+void {\bfseries add\+Recent\+File} (C\+String file)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a0b2f996850d439b4c61c5f8ab7f5afb1}\label{class_v_b_a_a0b2f996850d439b4c61c5f8ab7f5afb1}} 
+afx\+\_\+msg void {\bfseries On\+App\+About} ()
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7f2defb31b3597bac8b7e372b2b12fba}\label{class_v_b_a_a7f2defb31b3597bac8b7e372b2b12fba}} 
+C\+Menu {\bfseries m\+\_\+menu}
+\item 
+\mbox{\Hypertarget{class_v_b_a_acf9d855b5b959a2df9c6cb21b888366e}\label{class_v_b_a_acf9d855b5b959a2df9c6cb21b888366e}} 
+H\+M\+E\+NU {\bfseries menu}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae9de0b5d432ad2e8a21faf040182fe03}\label{class_v_b_a_ae9de0b5d432ad2e8a21faf040182fe03}} 
+H\+M\+E\+NU {\bfseries popup}
+\item 
+\mbox{\Hypertarget{class_v_b_a_adcefc742bdb15ddb902bcb2df896d298}\label{class_v_b_a_adcefc742bdb15ddb902bcb2df896d298}} 
+bool {\bfseries mode320\+Available}
+\item 
+\mbox{\Hypertarget{class_v_b_a_adc44d61208b927bde7ea49c25a2e30bc}\label{class_v_b_a_adc44d61208b927bde7ea49c25a2e30bc}} 
+bool {\bfseries mode640\+Available}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a3e2e940c6531daba73473c51a9916574}\label{class_v_b_a_a3e2e940c6531daba73473c51a9916574}} 
+bool {\bfseries mode800\+Available}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a5f9fb2744603deedbe9f8a77a7a2cf91}\label{class_v_b_a_a5f9fb2744603deedbe9f8a77a7a2cf91}} 
+int {\bfseries window\+PositionX}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a79b40ebb7ccfd4390eb0747168d07cad}\label{class_v_b_a_a79b40ebb7ccfd4390eb0747168d07cad}} 
+int {\bfseries window\+PositionY}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a8267ca41247e8d752776b57a3f8af011}\label{class_v_b_a_a8267ca41247e8d752776b57a3f8af011}} 
+void($\ast$ {\bfseries filter\+Function} )(u8 $\ast$, u32, u8 $\ast$, u8 $\ast$, u32, int, int)
+\item 
+\mbox{\Hypertarget{class_v_b_a_af044c0f19b7118a5cc01cf25e059145e}\label{class_v_b_a_af044c0f19b7118a5cc01cf25e059145e}} 
+void($\ast$ {\bfseries ifb\+Function} )(u8 $\ast$, u32, int, int)
+\item 
+\mbox{\Hypertarget{class_v_b_a_a4349741c5cec8852f8914093484418e8}\label{class_v_b_a_a4349741c5cec8852f8914093484418e8}} 
+int {\bfseries ifb\+Type}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a835f54f74420b21459e0f3ce0eacc20d}\label{class_v_b_a_a835f54f74420b21459e0f3ce0eacc20d}} 
+int {\bfseries filter\+Type}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}\label{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}} 
+int {\bfseries filter\+Width}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}\label{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}} 
+int {\bfseries filter\+Height}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7d5755450adf7917d1275965ed2620ce}\label{class_v_b_a_a7d5755450adf7917d1275965ed2620ce}} 
+int {\bfseries fs\+Adapter}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a92ef1c149914189da4d110d6dada54bb}\label{class_v_b_a_a92ef1c149914189da4d110d6dada54bb}} 
+int {\bfseries fs\+Width}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1e59d9254f1cb6420502c537c35dd5ec}\label{class_v_b_a_a1e59d9254f1cb6420502c537c35dd5ec}} 
+int {\bfseries fs\+Height}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1baf02b3f4ad129bfd713f1a132e96b9}\label{class_v_b_a_a1baf02b3f4ad129bfd713f1a132e96b9}} 
+int {\bfseries fs\+Color\+Depth}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a5953d6683aed93e49e71bc7617845d9e}\label{class_v_b_a_a5953d6683aed93e49e71bc7617845d9e}} 
+int {\bfseries fs\+Frequency}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a9374990edcde0964629b3c1c2e868878}\label{class_v_b_a_a9374990edcde0964629b3c1c2e868878}} 
+bool {\bfseries fs\+Force\+Change}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}\label{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}} 
+int {\bfseries sizeX}
+\item 
+\mbox{\Hypertarget{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}\label{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}} 
+int {\bfseries sizeY}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}\label{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}} 
+int {\bfseries surface\+SizeX}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}\label{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}} 
+int {\bfseries surface\+SizeY}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a17dac073149c897f770c00ed7098ad32}\label{class_v_b_a_a17dac073149c897f770c00ed7098ad32}} 
+int {\bfseries video\+Option}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a00bd5b85110bd763ad39eb4a9fb403a1}\label{class_v_b_a_a00bd5b85110bd763ad39eb4a9fb403a1}} 
+bool {\bfseries full\+Screen\+Stretch}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7bfea5ab60b19d26053b22ce070e2248}\label{class_v_b_a_a7bfea5ab60b19d26053b22ce070e2248}} 
+bool {\bfseries disable\+Status\+Message}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ad86589d0d03fceef36d35c0b2e928e9e}\label{class_v_b_a_ad86589d0d03fceef36d35c0b2e928e9e}} 
+int {\bfseries show\+Speed}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a0a2ca5a7091f9c79b39ea0916dd88a05}\label{class_v_b_a_a0a2ca5a7091f9c79b39ea0916dd88a05}} 
+B\+O\+OL {\bfseries show\+Speed\+Transparent}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a2d041dae40bdb47cd6bd28463cc484d9}\label{class_v_b_a_a2d041dae40bdb47cd6bd28463cc484d9}} 
+int {\bfseries show\+Rendered\+Frames}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a204d14d33aebd442db9affee1cc4f3a8}\label{class_v_b_a_a204d14d33aebd442db9affee1cc4f3a8}} 
+bool {\bfseries screen\+Message}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ab9551bfe042a30531aeb47a7b2ac2038}\label{class_v_b_a_ab9551bfe042a30531aeb47a7b2ac2038}} 
+C\+String {\bfseries screen\+Message\+Buffer}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a27f8c0f4add5a8242470289874dd601c}\label{class_v_b_a_a27f8c0f4add5a8242470289874dd601c}} 
+D\+W\+O\+RD {\bfseries screen\+Message\+Time}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae53d4a6574bd47657fa6bd76eabd8543}\label{class_v_b_a_ae53d4a6574bd47657fa6bd76eabd8543}} 
+u8 $\ast$ {\bfseries delta} \mbox{[}257 $\ast$244 $\ast$4\mbox{]}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a0bacc38e144832326c5d4d6df6ababa3}\label{class_v_b_a_a0bacc38e144832326c5d4d6df6ababa3}} 
+bool {\bfseries menu\+Toggle}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a940e5bad8b3ed2436888dbcd03bfd563}\label{class_v_b_a_a940e5bad8b3ed2436888dbcd03bfd563}} 
+\mbox{\hyperlink{class_i_display}{I\+Display}} $\ast$ {\bfseries display}
+\item 
+\mbox{\Hypertarget{class_v_b_a_af300759fcbc7eeb00ce73f956fc5ddb7}\label{class_v_b_a_af300759fcbc7eeb00ce73f956fc5ddb7}} 
+I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE {\bfseries cartridge\+Type}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ab183a69bf3da1ebd78a3dc115071e592}\label{class_v_b_a_ab183a69bf3da1ebd78a3dc115071e592}} 
+bool {\bfseries sound\+Initialized}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a0ad579388cd52cc4df5fadc560f27a37}\label{class_v_b_a_a0ad579388cd52cc4df5fadc560f27a37}} 
+bool {\bfseries use\+Bios\+File}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a5cb340a521f9f53bf082a63b26fbda25}\label{class_v_b_a_a5cb340a521f9f53bf082a63b26fbda25}} 
+bool {\bfseries skip\+Bios\+File}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7bc70f5f75c0e2e3e2b1b63411af4559}\label{class_v_b_a_a7bc70f5f75c0e2e3e2b1b63411af4559}} 
+C\+String {\bfseries bios\+File\+Name}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ad3d55365d59a78eb24711c594eeb3b2b}\label{class_v_b_a_ad3d55365d59a78eb24711c594eeb3b2b}} 
+bool {\bfseries active}
+\item 
+\mbox{\Hypertarget{class_v_b_a_af7447bf3bf3f93948d2757e4cb223cfc}\label{class_v_b_a_af7447bf3bf3f93948d2757e4cb223cfc}} 
+bool {\bfseries paused}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ab5efdeee24caf6cec163a3f51b50bf64}\label{class_v_b_a_ab5efdeee24caf6cec163a3f51b50bf64}} 
+C\+String {\bfseries recent\+Files} \mbox{[}10\mbox{]}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a673f86057f7d022a426a1c1c3d6de36f}\label{class_v_b_a_a673f86057f7d022a426a1c1c3d6de36f}} 
+bool {\bfseries recent\+Freeze}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a234d3693fb47b5ca956545eb7f9671fb}\label{class_v_b_a_a234d3693fb47b5ca956545eb7f9671fb}} 
+bool {\bfseries auto\+Save\+Load\+Cheat\+List}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a62dbeb6d37279fa4d58f644af8b12d88}\label{class_v_b_a_a62dbeb6d37279fa4d58f644af8b12d88}} 
+F\+I\+LE $\ast$ {\bfseries winout}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a6554de6c629baaf1567d4c3ed9f99e95}\label{class_v_b_a_a6554de6c629baaf1567d4c3ed9f99e95}} 
+bool {\bfseries remove\+Intros}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7655aea2f21bde8159a666f977c30975}\label{class_v_b_a_a7655aea2f21bde8159a666f977c30975}} 
+bool {\bfseries auto\+I\+PS}
+\item 
+\mbox{\Hypertarget{class_v_b_a_afacb46f54fb546d8d97055dc535b074e}\label{class_v_b_a_afacb46f54fb546d8d97055dc535b074e}} 
+int {\bfseries win\+Gb\+Border\+On}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a5c99844bc4d1e5556434afaa75ae91e5}\label{class_v_b_a_a5c99844bc4d1e5556434afaa75ae91e5}} 
+int {\bfseries win\+Flash\+Size}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae289fc4c9e951e0844900c522c151170}\label{class_v_b_a_ae289fc4c9e951e0844900c522c151170}} 
+bool {\bfseries win\+Rtc\+Enable}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac51ec97cd7b489be24edc77f346e5de7}\label{class_v_b_a_ac51ec97cd7b489be24edc77f346e5de7}} 
+bool {\bfseries win\+Genericflashcard\+Enable}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a70060f88010280739406c87ef66d036a}\label{class_v_b_a_a70060f88010280739406c87ef66d036a}} 
+int {\bfseries win\+Save\+Type}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ad2f4e21586cc185a1e6525080532471a}\label{class_v_b_a_ad2f4e21586cc185a1e6525080532471a}} 
+char $\ast$ {\bfseries rewind\+Memory}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a5d8ea18c98b5188813210a84819da5e8}\label{class_v_b_a_a5d8ea18c98b5188813210a84819da5e8}} 
+int {\bfseries rewind\+Pos}
+\item 
+\mbox{\Hypertarget{class_v_b_a_aa83e33c3d4bb203a5d223a0906a977d8}\label{class_v_b_a_aa83e33c3d4bb203a5d223a0906a977d8}} 
+int {\bfseries rewind\+Top\+Pos}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a63a3cf03d4213b2596b59226134b0d5b}\label{class_v_b_a_a63a3cf03d4213b2596b59226134b0d5b}} 
+int {\bfseries rewind\+Counter}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a39430ba84d3e7205846e24f0484d7880}\label{class_v_b_a_a39430ba84d3e7205846e24f0484d7880}} 
+int {\bfseries rewind\+Count}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a3f8cd6f6705f0306f57818e885a50aa3}\label{class_v_b_a_a3f8cd6f6705f0306f57818e885a50aa3}} 
+bool {\bfseries rewind\+Save\+Needed}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a682a6a9633f41038b23a2bdcdbde844e}\label{class_v_b_a_a682a6a9633f41038b23a2bdcdbde844e}} 
+int {\bfseries rewind\+Timer}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a103f0b25433c57c4458a208a06799cf8}\label{class_v_b_a_a103f0b25433c57c4458a208a06799cf8}} 
+int {\bfseries capture\+Format}
+\item 
+\mbox{\Hypertarget{class_v_b_a_af597e2c2466efdc6365a5d725651b855}\label{class_v_b_a_af597e2c2466efdc6365a5d725651b855}} 
+bool {\bfseries triple\+Buffering}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a19362d5508f73c0f93f307eef61d6915}\label{class_v_b_a_a19362d5508f73c0f93f307eef61d6915}} 
+bool {\bfseries auto\+Hide\+Menu}
+\item 
+\mbox{\Hypertarget{class_v_b_a_af21b98509a2589b38e4787f065b40a2b}\label{class_v_b_a_af21b98509a2589b38e4787f065b40a2b}} 
+int {\bfseries throttle}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae66aa4e61c40718518c617dcc21516bf}\label{class_v_b_a_ae66aa4e61c40718518c617dcc21516bf}} 
+u32 {\bfseries throttle\+Last\+Time}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ad50caab57b4ddb20bf511fe1a8c46024}\label{class_v_b_a_ad50caab57b4ddb20bf511fe1a8c46024}} 
+u32 {\bfseries auto\+Frame\+Skip\+Last\+Time}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a9ecbee7d82db73b24aee3afb66128388}\label{class_v_b_a_a9ecbee7d82db73b24aee3afb66128388}} 
+bool {\bfseries auto\+Frame\+Skip}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a84075b77df64f3dc2100159064b79fba}\label{class_v_b_a_a84075b77df64f3dc2100159064b79fba}} 
+bool {\bfseries vsync}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ace8fe4b9a73291e292f0d4879cf2c852}\label{class_v_b_a_ace8fe4b9a73291e292f0d4879cf2c852}} 
+bool {\bfseries changing\+Video\+Size}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a797f633003e17035a87922e9f76f8a6d}\label{class_v_b_a_a797f633003e17035a87922e9f76f8a6d}} 
+G\+U\+ID {\bfseries video\+Driver\+G\+U\+ID}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a457e9b79d010d5ece39a37a2e73bde90}\label{class_v_b_a_a457e9b79d010d5ece39a37a2e73bde90}} 
+G\+U\+ID $\ast$ {\bfseries p\+Video\+Driver\+G\+U\+ID}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae31026d8986a7658f3aaa46fba9de663}\label{class_v_b_a_ae31026d8986a7658f3aaa46fba9de663}} 
+D\+I\+S\+P\+L\+A\+Y\+\_\+\+T\+Y\+PE {\bfseries render\+Method}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a8507ddf862a4e87df9491b5de3b121c1}\label{class_v_b_a_a8507ddf862a4e87df9491b5de3b121c1}} 
+bool {\bfseries iconic}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a18c0ee1eaa744d8061ce94ce6ed870fd}\label{class_v_b_a_a18c0ee1eaa744d8061ce94ce6ed870fd}} 
+bool {\bfseries ddraw\+Emulation\+Only}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a88c703304afd9e17cd80cf3e3a825f7f}\label{class_v_b_a_a88c703304afd9e17cd80cf3e3a825f7f}} 
+bool {\bfseries ddraw\+Using\+Emulation\+Only}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a28d611a2c3dfc21191a27e8d8239de35}\label{class_v_b_a_a28d611a2c3dfc21191a27e8d8239de35}} 
+bool {\bfseries ddraw\+Debug}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a875d3208513412753e2e946b8d6e6ce3}\label{class_v_b_a_a875d3208513412753e2e946b8d6e6ce3}} 
+bool {\bfseries ddraw\+Use\+Video\+Memory}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a8563e53b73a28a011e656f6fc8a4e5ff}\label{class_v_b_a_a8563e53b73a28a011e656f6fc8a4e5ff}} 
+int {\bfseries d3d\+Filter}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7861cd60864163f310ae87f746eba9e6}\label{class_v_b_a_a7861cd60864163f310ae87f746eba9e6}} 
+int {\bfseries gl\+Filter}
+\item 
+\mbox{\Hypertarget{class_v_b_a_afb5faab6c2ddf2661b2fe19f118fd882}\label{class_v_b_a_afb5faab6c2ddf2661b2fe19f118fd882}} 
+int {\bfseries gl\+Type}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a2d80d3f19afa58047c05277aa0c18402}\label{class_v_b_a_a2d80d3f19afa58047c05277aa0c18402}} 
+\mbox{\hyperlink{class_c_skin}{C\+Skin}} $\ast$ {\bfseries skin}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a61c4b5378e8a3a36cf65bf095cca7f47}\label{class_v_b_a_a61c4b5378e8a3a36cf65bf095cca7f47}} 
+C\+String {\bfseries skin\+Name}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a5cc7dbf58210b127d9e807e8a3262829}\label{class_v_b_a_a5cc7dbf58210b127d9e807e8a3262829}} 
+bool {\bfseries skin\+Enabled}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a18dd81b37aa33a8f580a2dabe358a280}\label{class_v_b_a_a18dd81b37aa33a8f580a2dabe358a280}} 
+int {\bfseries skin\+Buttons}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a77e9763291376839d4c1e5eff00604b5}\label{class_v_b_a_a77e9763291376839d4c1e5eff00604b5}} 
+bool {\bfseries pause\+When\+Inactive}
+\item 
+\mbox{\Hypertarget{class_v_b_a_aab299545104f6df869bf8f7abee6ef0a}\label{class_v_b_a_aab299545104f6df869bf8f7abee6ef0a}} 
+bool {\bfseries speedup\+Toggle}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a8a4b36a4e6259df18baf03360aacad4b}\label{class_v_b_a_a8a4b36a4e6259df18baf03360aacad4b}} 
+bool {\bfseries use\+Old\+Sync}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ad02c13c4fea97781a17ca6c9f9cdaa49}\label{class_v_b_a_ad02c13c4fea97781a17ca6c9f9cdaa49}} 
+bool {\bfseries win\+Gb\+Printer\+Enabled}
+\item 
+\mbox{\Hypertarget{class_v_b_a_acde3a2cf1f42d8222850f9e8b5b28316}\label{class_v_b_a_acde3a2cf1f42d8222850f9e8b5b28316}} 
+int {\bfseries thread\+Priority}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac417f46c467d0fcf095731620ca7de71}\label{class_v_b_a_ac417f46c467d0fcf095731620ca7de71}} 
+bool {\bfseries disable\+M\+MX}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac747a07ec2db4bcddea1b4581ebe5c6b}\label{class_v_b_a_ac747a07ec2db4bcddea1b4581ebe5c6b}} 
+int {\bfseries language\+Option}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a9763c257edcdac0bff2b0ecab70ffc80}\label{class_v_b_a_a9763c257edcdac0bff2b0ecab70ffc80}} 
+C\+String {\bfseries language\+Name}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae4c01c2d55e31b9b29a850d22e691df8}\label{class_v_b_a_ae4c01c2d55e31b9b29a850d22e691df8}} 
+H\+M\+O\+D\+U\+LE {\bfseries language\+Module}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a05df4a540441a0a8862376af6a2fc57b}\label{class_v_b_a_a05df4a540441a0a8862376af6a2fc57b}} 
+int {\bfseries rendered\+Frames}
+\item 
+\mbox{\Hypertarget{class_v_b_a_aaab971cb5d67a69e1a26502d15a4dc60}\label{class_v_b_a_aaab971cb5d67a69e1a26502d15a4dc60}} 
+\mbox{\hyperlink{class_input}{Input}} $\ast$ {\bfseries input}
+\item 
+\mbox{\Hypertarget{class_v_b_a_af42f79cc8ea9f0f95bf4634c0b9224dd}\label{class_v_b_a_af42f79cc8ea9f0f95bf4634c0b9224dd}} 
+int {\bfseries joypad\+Default}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1a3c37d6609939c821133cf4a2cd9d0d}\label{class_v_b_a_a1a3c37d6609939c821133cf4a2cd9d0d}} 
+int {\bfseries auto\+Fire}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a846626fa8ac7d18c7622e4ec49c526ff}\label{class_v_b_a_a846626fa8ac7d18c7622e4ec49c526ff}} 
+bool {\bfseries auto\+Fire\+Toggle}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a76ae27aad714b508806d1799afe97a50}\label{class_v_b_a_a76ae27aad714b508806d1799afe97a50}} 
+bool {\bfseries win\+Pause\+Next\+Frame}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae4be99a1a898dc5a3fceed0edeb0c1b0}\label{class_v_b_a_ae4be99a1a898dc5a3fceed0edeb0c1b0}} 
+bool {\bfseries sound\+Recording}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae263135c638f224f26d2f2bfbd069840}\label{class_v_b_a_ae263135c638f224f26d2f2bfbd069840}} 
+\mbox{\hyperlink{class_wav_writer}{Wav\+Writer}} $\ast$ {\bfseries sound\+Recorder}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a11f02b69eef7e9b876a2f93d6c2f015e}\label{class_v_b_a_a11f02b69eef7e9b876a2f93d6c2f015e}} 
+C\+String {\bfseries sound\+Record\+Name}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a58f89c52283d10a0fcaac8abb7eca524}\label{class_v_b_a_a58f89c52283d10a0fcaac8abb7eca524}} 
+bool {\bfseries dsound\+Disable\+Hardware\+Acceleration}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac6befecbeb59eb76556d3d7490e0452c}\label{class_v_b_a_ac6befecbeb59eb76556d3d7490e0452c}} 
+\mbox{\hyperlink{class_i_sound}{I\+Sound}} $\ast$ {\bfseries sound}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a96743b6c6ee2d9b45c52b981136e3738}\label{class_v_b_a_a96743b6c6ee2d9b45c52b981136e3738}} 
+bool {\bfseries avi\+Recording}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a761be1e36182d12710a199a50c0df020}\label{class_v_b_a_a761be1e36182d12710a199a50c0df020}} 
+\mbox{\hyperlink{class_a_v_i_write}{A\+V\+I\+Write}} $\ast$ {\bfseries avi\+Recorder}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a62ff0f88b2380de18a1412783c8d9959}\label{class_v_b_a_a62ff0f88b2380de18a1412783c8d9959}} 
+C\+String {\bfseries avi\+Record\+Name}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a3b3857d94f1df7cf3b722ad494547324}\label{class_v_b_a_a3b3857d94f1df7cf3b722ad494547324}} 
+int {\bfseries avi\+Frame\+Number}
+\item 
+\mbox{\Hypertarget{class_v_b_a_acf5db3724f3961d0c7b7a48b1682ab09}\label{class_v_b_a_acf5db3724f3961d0c7b7a48b1682ab09}} 
+bool {\bfseries painting}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7fbf39fb4604c00c8ad139b2e27f3756}\label{class_v_b_a_a7fbf39fb4604c00c8ad139b2e27f3756}} 
+bool {\bfseries movie\+Recording}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac490c27ebc24ea8fbccf42e2909d04ed}\label{class_v_b_a_ac490c27ebc24ea8fbccf42e2909d04ed}} 
+bool {\bfseries movie\+Playing}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae1d2d002a3d425b509b93171e8ade926}\label{class_v_b_a_ae1d2d002a3d425b509b93171e8ade926}} 
+int {\bfseries movie\+Frame}
+\item 
+\mbox{\Hypertarget{class_v_b_a_afcffae74eebd4424790f8c48faede1c8}\label{class_v_b_a_afcffae74eebd4424790f8c48faede1c8}} 
+int {\bfseries movie\+Play\+Frame}
+\item 
+\mbox{\Hypertarget{class_v_b_a_abf9ac3c15536552d322f20a2dad1f519}\label{class_v_b_a_abf9ac3c15536552d322f20a2dad1f519}} 
+F\+I\+LE $\ast$ {\bfseries movie\+File}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a911d9dbab0a3565480a29b8149099ed1}\label{class_v_b_a_a911d9dbab0a3565480a29b8149099ed1}} 
+u32 {\bfseries movie\+Last\+Joypad}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ae528fc1f675add097200192deecb4236}\label{class_v_b_a_ae528fc1f675add097200192deecb4236}} 
+u32 {\bfseries movie\+Next\+Joypad}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}\label{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}} 
+int {\bfseries sensorX}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}\label{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}} 
+int {\bfseries sensorY}
+\item 
+\mbox{\Hypertarget{class_v_b_a_af042fea29b45069293e90bef70c7839a}\label{class_v_b_a_af042fea29b45069293e90bef70c7839a}} 
+int {\bfseries mouse\+Counter}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a3c2e2ea8cb921007fcf2764da22c06e0}\label{class_v_b_a_a3c2e2ea8cb921007fcf2764da22c06e0}} 
+bool {\bfseries was\+Paused}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a68ed258ae51274c7dcf72cf866d43733}\label{class_v_b_a_a68ed258ae51274c7dcf72cf866d43733}} 
+int {\bfseries frameskipadjust}
+\item 
+\mbox{\Hypertarget{class_v_b_a_aa523f068e8e2939fa2907a95f0881bde}\label{class_v_b_a_aa523f068e8e2939fa2907a95f0881bde}} 
+bool {\bfseries auto\+Load\+Most\+Recent}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1a4cfe79496ea8a029bc591f33c489d6}\label{class_v_b_a_a1a4cfe79496ea8a029bc591f33c489d6}} 
+int {\bfseries fs\+Max\+Scale}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ab7d47241ad4bc8c0e6717770797e6d57}\label{class_v_b_a_ab7d47241ad4bc8c0e6717770797e6d57}} 
+int {\bfseries rom\+Size}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ad1bea05b3d5cd2fe5c3ea3c98db33ddc}\label{class_v_b_a_ad1bea05b3d5cd2fe5c3ea3c98db33ddc}} 
+C\+List$<$ \mbox{\hyperlink{class_i_update_listener}{I\+Update\+Listener}} $\ast$, \mbox{\hyperlink{class_i_update_listener}{I\+Update\+Listener}} $\ast$\& $>$ {\bfseries update\+List}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a61d96a23607a428ad97f74f4b750fcc2}\label{class_v_b_a_a61d96a23607a428ad97f74f4b750fcc2}} 
+int {\bfseries update\+Count}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ad7ebce057dbde0ca88cee75e84721a89}\label{class_v_b_a_ad7ebce057dbde0ca88cee75e84721a89}} 
+\mbox{\hyperlink{class_c_accelerator_manager}{C\+Accelerator\+Manager}} {\bfseries win\+Accel\+Mgr}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a6ca8052bfc1574a9ef8ca4482563e1e3}\label{class_v_b_a_a6ca8052bfc1574a9ef8ca4482563e1e3}} 
+H\+A\+C\+C\+EL {\bfseries h\+Accel}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a1303c6cf4f955c31d828de3fe77355f1}\label{class_v_b_a_a1303c6cf4f955c31d828de3fe77355f1}} 
+R\+E\+CT {\bfseries rect}
+\item 
+\mbox{\Hypertarget{class_v_b_a_aed77fc82f818810cc87c470768c75e05}\label{class_v_b_a_aed77fc82f818810cc87c470768c75e05}} 
+R\+E\+CT {\bfseries dest}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ab40fc008c6714c3c8670eb8a9085a4a1}\label{class_v_b_a_ab40fc008c6714c3c8670eb8a9085a4a1}} 
+struct \mbox{\hyperlink{struct_emulated_system}{Emulated\+System}} {\bfseries emulator}
+\item 
+\mbox{\Hypertarget{class_v_b_a_ac85720ef4e00c5455be15266b7119045}\label{class_v_b_a_ac85720ef4e00c5455be15266b7119045}} 
+C\+String {\bfseries sz\+File}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a66eee6b61ec8bee20f21164cb0c37d2d}\label{class_v_b_a_a66eee6b61ec8bee20f21164cb0c37d2d}} 
+C\+String {\bfseries filename}
+\item 
+\mbox{\Hypertarget{class_v_b_a_a7177c0b51e84b91c6027ea73461c457e}\label{class_v_b_a_a7177c0b51e84b91c6027ea73461c457e}} 
+C\+String {\bfseries dir}
+\item 
+\mbox{\Hypertarget{class_v_b_a_acd3b584c09c85ec31168b1f7d1d8505e}\label{class_v_b_a_acd3b584c09c85ec31168b1f7d1d8505e}} 
+C\+String {\bfseries wnd\+Class}
+\end{DoxyCompactItemize}
+\subsection*{정적 Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+static const Filter2x {\bfseries apv\+Filters2x} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\item 
+static const Filter\+IB {\bfseries apv\+Filters\+IB} \mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_v_b_a_a99a7ccca7fb310a0a3d836f999a4b738}\label{class_v_b_a_a99a7ccca7fb310a0a3d836f999a4b738}} 
+\index{V\+BA@{V\+BA}!apv\+Filters2x@{apv\+Filters2x}}
+\index{apv\+Filters2x@{apv\+Filters2x}!V\+BA@{V\+BA}}
+\subsubsection{\texorpdfstring{apv\+Filters2x}{apvFilters2x}}
+{\footnotesize\ttfamily const Filter2x V\+B\+A\+::apv\+Filters2x\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+=
+\{
+  \{ NULL,         NULL           \},
+  \{ \_2xSaI,       \_2xSaI32       \},
+  \{ Super2xSaI,   Super2xSaI32   \},
+  \{ SuperEagle,   SuperEagle32   \},
+  \{ Pixelate,     Pixelate32     \},
+  \{ MotionBlur,   MotionBlur32   \},
+  \{ AdMame2x,     AdMame2x32     \},
+  \{ Simple2x,     Simple2x32     \},
+  \{ Bilinear,     Bilinear32     \},
+  \{ BilinearPlus, BilinearPlus32 \},
+  \{ Scanlines,    Scanlines32    \},
+  \{ ScanlinesTV,  ScanlinesTV32  \},
+  \{ hq2x,         hq2x32         \},
+  \{ lq2x,         lq2x32         \}
+\}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_v_b_a_a146f20875aaa489ae1b57d31918f25f8}\label{class_v_b_a_a146f20875aaa489ae1b57d31918f25f8}} 
+\index{V\+BA@{V\+BA}!apv\+Filters\+IB@{apv\+Filters\+IB}}
+\index{apv\+Filters\+IB@{apv\+Filters\+IB}!V\+BA@{V\+BA}}
+\subsubsection{\texorpdfstring{apv\+Filters\+IB}{apvFiltersIB}}
+{\footnotesize\ttfamily const Filter\+IB V\+B\+A\+::apv\+Filters\+IB\mbox{[}$\,$\mbox{]}\mbox{[}2\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+=
+\{
+  \{ NULL,         NULL           \},
+  \{ SmartIB,      SmartIB32      \},
+  \{ MotionBlurIB, MotionBlurIB32 \}
+\}
+\end{DoxyCode}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/win32/V\+B\+A.\+h\item 
+src/gtk/filters.\+h\item 
+src/gtk/filters.\+cpp\item 
+src/gtk/input.\+h\item 
+src/win32/V\+B\+A.\+cpp\end{DoxyCompactItemize}

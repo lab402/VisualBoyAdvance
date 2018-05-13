@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModernVBA: ELFHeader 구조체 참조</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModernVBA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Public 속성</a> &#124;
+<a href="struct_e_l_f_header-members.html">모든 멤버 목록</a>  </div>
+  <div class="headertitle">
+<div class="title">ELFHeader 구조체 참조</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public 속성</h2></td></tr>
+<tr class="memitem:a5b65dfa66d5f45063e099e1bd8f7d39a"><td class="memItemLeft" align="right" valign="top"><a id="a5b65dfa66d5f45063e099e1bd8f7d39a"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>magic</b></td></tr>
+<tr class="separator:a5b65dfa66d5f45063e099e1bd8f7d39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fc22a0f7de5c991bf26ed09f4090b0a"><td class="memItemLeft" align="right" valign="top"><a id="a0fc22a0f7de5c991bf26ed09f4090b0a"></a>
+u8&#160;</td><td class="memItemRight" valign="bottom"><b>clazz</b></td></tr>
+<tr class="separator:a0fc22a0f7de5c991bf26ed09f4090b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ebb6f21956e220cfc13e3d709fb29e7"><td class="memItemLeft" align="right" valign="top"><a id="a0ebb6f21956e220cfc13e3d709fb29e7"></a>
+u8&#160;</td><td class="memItemRight" valign="bottom"><b>data</b></td></tr>
+<tr class="separator:a0ebb6f21956e220cfc13e3d709fb29e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadac9bc05322252d95cff920e133ca15"><td class="memItemLeft" align="right" valign="top"><a id="aadac9bc05322252d95cff920e133ca15"></a>
+u8&#160;</td><td class="memItemRight" valign="bottom"><b>version</b></td></tr>
+<tr class="separator:aadac9bc05322252d95cff920e133ca15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a031107283881d74df8f63a4bccd7cce1"><td class="memItemLeft" align="right" valign="top"><a id="a031107283881d74df8f63a4bccd7cce1"></a>
+u8&#160;</td><td class="memItemRight" valign="bottom"><b>pad</b> [9]</td></tr>
+<tr class="separator:a031107283881d74df8f63a4bccd7cce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe37d30bff98bf36cb852b938fbc7c40"><td class="memItemLeft" align="right" valign="top"><a id="afe37d30bff98bf36cb852b938fbc7c40"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>e_type</b></td></tr>
+<tr class="separator:afe37d30bff98bf36cb852b938fbc7c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15a148d4a49f9e5993698c2096e8c9bd"><td class="memItemLeft" align="right" valign="top"><a id="a15a148d4a49f9e5993698c2096e8c9bd"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>e_machine</b></td></tr>
+<tr class="separator:a15a148d4a49f9e5993698c2096e8c9bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60e61e8eaa05924bef446c706d47b492"><td class="memItemLeft" align="right" valign="top"><a id="a60e61e8eaa05924bef446c706d47b492"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>e_version</b></td></tr>
+<tr class="separator:a60e61e8eaa05924bef446c706d47b492"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1970539a110b9474ca7e802385e63eff"><td class="memItemLeft" align="right" valign="top"><a id="a1970539a110b9474ca7e802385e63eff"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>e_entry</b></td></tr>
+<tr class="separator:a1970539a110b9474ca7e802385e63eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca3de0226873cd41864a32e600bef156"><td class="memItemLeft" align="right" valign="top"><a id="aca3de0226873cd41864a32e600bef156"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>e_phoff</b></td></tr>
+<tr class="separator:aca3de0226873cd41864a32e600bef156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac70240758bf6424ca5c806c65d39a63d"><td class="memItemLeft" align="right" valign="top"><a id="ac70240758bf6424ca5c806c65d39a63d"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>e_shoff</b></td></tr>
+<tr class="separator:ac70240758bf6424ca5c806c65d39a63d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8410fa68218cd420022ee70222e242"><td class="memItemLeft" align="right" valign="top"><a id="abf8410fa68218cd420022ee70222e242"></a>
+u32&#160;</td><td class="memItemRight" valign="bottom"><b>e_flags</b></td></tr>
+<tr class="separator:abf8410fa68218cd420022ee70222e242"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b0c2118b948227b82c61477348f5ce6"><td class="memItemLeft" align="right" valign="top"><a id="a5b0c2118b948227b82c61477348f5ce6"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>e_ehsize</b></td></tr>
+<tr class="separator:a5b0c2118b948227b82c61477348f5ce6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54f6348c72b743df1298f14d9727ee63"><td class="memItemLeft" align="right" valign="top"><a id="a54f6348c72b743df1298f14d9727ee63"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>e_phentsize</b></td></tr>
+<tr class="separator:a54f6348c72b743df1298f14d9727ee63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ea098754df174746d084dd4ac1322d"><td class="memItemLeft" align="right" valign="top"><a id="a40ea098754df174746d084dd4ac1322d"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>e_phnum</b></td></tr>
+<tr class="separator:a40ea098754df174746d084dd4ac1322d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fea1910b959192096e6391950e55e12"><td class="memItemLeft" align="right" valign="top"><a id="a6fea1910b959192096e6391950e55e12"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>e_shentsize</b></td></tr>
+<tr class="separator:a6fea1910b959192096e6391950e55e12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a269f1c30e9f4a79074b4914243f83497"><td class="memItemLeft" align="right" valign="top"><a id="a269f1c30e9f4a79074b4914243f83497"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>e_shnum</b></td></tr>
+<tr class="separator:a269f1c30e9f4a79074b4914243f83497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06d7be4a0c5eb3ffcf9e6adade39949c"><td class="memItemLeft" align="right" valign="top"><a id="a06d7be4a0c5eb3ffcf9e6adade39949c"></a>
+u16&#160;</td><td class="memItemRight" valign="bottom"><b>e_shstrndx</b></td></tr>
+<tr class="separator:a06d7be4a0c5eb3ffcf9e6adade39949c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
+<li>src/<a class="el" href="elf_8h_source.html">elf.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

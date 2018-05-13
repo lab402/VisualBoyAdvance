@@ -1,0 +1,93 @@
+\hypertarget{class_memory_viewer_dlg}{}\section{Memory\+Viewer\+Dlg 클래스 참조}
+\label{class_memory_viewer_dlg}\index{Memory\+Viewer\+Dlg@{Memory\+Viewer\+Dlg}}
+Memory\+Viewer\+Dlg에 대한 상속 다이어그램 \+: \begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_memory_viewer_dlg}
+\end{center}
+\end{figure}
+\subsection*{Public 타입}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_aca9567bd4cf2ec1aa5ac0473ce2d1fa2}\label{class_memory_viewer_dlg_aca9567bd4cf2ec1aa5ac0473ce2d1fa2}} 
+enum \{ {\bfseries I\+DD} = I\+D\+D\+\_\+\+M\+E\+M\+\_\+\+V\+I\+E\+W\+ER
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Public 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_ac027e2a8dc226a7053068680050abd1f}\label{class_memory_viewer_dlg_ac027e2a8dc226a7053068680050abd1f}} 
+void {\bfseries set\+Current\+Address} (u32 address)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_a0222a6beddfef071bc19b8849dc4ee15}\label{class_memory_viewer_dlg_a0222a6beddfef071bc19b8849dc4ee15}} 
+void {\bfseries update} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_aed16c2ef99beec1b0ffa2c9b22cd0e5c}\label{class_memory_viewer_dlg_aed16c2ef99beec1b0ffa2c9b22cd0e5c}} 
+{\bfseries Memory\+Viewer\+Dlg} (C\+Wnd $\ast$p\+Parent=N\+U\+LL)
+\end{DoxyCompactItemize}
+\subsection*{Public 속성}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_a3ec3d36d4676977f8f37f55ec7f7fb39}\label{class_memory_viewer_dlg_a3ec3d36d4676977f8f37f55ec7f7fb39}} 
+bool {\bfseries auto\+Update}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_a857486db87e66ac05d46733b0794aec7}\label{class_memory_viewer_dlg_a857486db87e66ac05d46733b0794aec7}} 
+C\+Edit {\bfseries m\+\_\+current}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_aef3a67a90aa1b49c204d9d6a3910f13c}\label{class_memory_viewer_dlg_aef3a67a90aa1b49c204d9d6a3910f13c}} 
+C\+Edit {\bfseries m\+\_\+address}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_ac61656d575927b23941090002e5ce996}\label{class_memory_viewer_dlg_ac61656d575927b23941090002e5ce996}} 
+C\+Combo\+Box {\bfseries m\+\_\+addresses}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_aa24e55d166ddeecb94fea8ab7ad4d836}\label{class_memory_viewer_dlg_aa24e55d166ddeecb94fea8ab7ad4d836}} 
+int {\bfseries m\+\_\+size}
+\end{DoxyCompactItemize}
+\subsection*{Protected 멤버 함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_aeee7f9087554df8563689ab22facbbd6}\label{class_memory_viewer_dlg_aeee7f9087554df8563689ab22facbbd6}} 
+virtual void {\bfseries Do\+Data\+Exchange} (C\+Data\+Exchange $\ast$p\+DX)
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_a3dd16d8770e7b5d3e174c9630ca4ecb8}\label{class_memory_viewer_dlg_a3dd16d8770e7b5d3e174c9630ca4ecb8}} 
+virtual void {\bfseries Post\+Nc\+Destroy} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_a2061415e67d04b0c157ba2bd50a8c56c}\label{class_memory_viewer_dlg_a2061415e67d04b0c157ba2bd50a8c56c}} 
+virtual B\+O\+OL {\bfseries On\+Init\+Dialog} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_a49522f159a0ccbca8c511e5c248b9b93}\label{class_memory_viewer_dlg_a49522f159a0ccbca8c511e5c248b9b93}} 
+afx\+\_\+msg void {\bfseries On\+Close} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_a2c10fa49648424e4994c8c5a71f4effc}\label{class_memory_viewer_dlg_a2c10fa49648424e4994c8c5a71f4effc}} 
+afx\+\_\+msg void {\bfseries On\+Refresh} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_ad408c6c194db416a0cf23480184ef610}\label{class_memory_viewer_dlg_ad408c6c194db416a0cf23480184ef610}} 
+afx\+\_\+msg void {\bfseries On8\+Bit} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_a61f6aec84a4bcf908dc32f9e85c871d0}\label{class_memory_viewer_dlg_a61f6aec84a4bcf908dc32f9e85c871d0}} 
+afx\+\_\+msg void {\bfseries On16\+Bit} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_afb8178dcad55d86c9217f89e0ed4814f}\label{class_memory_viewer_dlg_afb8178dcad55d86c9217f89e0ed4814f}} 
+afx\+\_\+msg void {\bfseries On32\+Bit} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_abd1a90d5974c83a3b388043d6162f118}\label{class_memory_viewer_dlg_abd1a90d5974c83a3b388043d6162f118}} 
+afx\+\_\+msg void {\bfseries On\+Auto\+Update} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_aa21f28b3490b179e79e3a3687fef0c45}\label{class_memory_viewer_dlg_aa21f28b3490b179e79e3a3687fef0c45}} 
+afx\+\_\+msg void {\bfseries On\+Go} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_ab7624247967998f1973da99a035a28e3}\label{class_memory_viewer_dlg_ab7624247967998f1973da99a035a28e3}} 
+afx\+\_\+msg void {\bfseries On\+Selchange\+Addresses} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_aaa3651f618355f6d1d3bf3158cb9c812}\label{class_memory_viewer_dlg_aaa3651f618355f6d1d3bf3158cb9c812}} 
+afx\+\_\+msg void {\bfseries On\+Save} ()
+\item 
+\mbox{\Hypertarget{class_memory_viewer_dlg_adfc256215ade1d48a24a3eb72b3ecfed}\label{class_memory_viewer_dlg_adfc256215ade1d48a24a3eb72b3ecfed}} 
+afx\+\_\+msg void {\bfseries On\+Load} ()
+\end{DoxyCompactItemize}
+
+
+이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
+\item 
+src/win32/Memory\+Viewer\+Dlg.\+h\item 
+src/win32/Memory\+Viewer\+Dlg.\+cpp\end{DoxyCompactItemize}
