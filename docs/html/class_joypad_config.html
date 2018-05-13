@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_joypad_config.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -72,118 +96,852 @@ $(function() {
 <div class="title">JoypadConfig 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_joypad_8h_source.html">Joypad.h</a>&gt;</code></p>
 <div class="dynheader">
 JoypadConfig에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_joypad_config.png" usemap="#JoypadConfig_map" alt=""/>
-  <map id="JoypadConfig_map" name="JoypadConfig_map">
+<div class="center"><img src="class_joypad_config__inherit__graph.png" border="0" usemap="#_joypad_config_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+JoypadConfig에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_joypad_config__coll__graph.png" border="0" usemap="#_joypad_config_coll__map" alt="Collaboration graph"/></div>
+<map name="_joypad_config_coll__map" id="_joypad_config_coll__map">
+<area shape="rect" id="node3" href="class_joypad_edit_control.html" title="{JoypadEditControl\n||+ JoypadEditControl()\l+ PreTranslateMessage()\l+ OnJoyConfig()\l+ ~JoypadEditControl()\l}" alt="" coords="96,132,264,253"/>
 </map>
- </div></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:a3de60b70a9e5b5a104211e300d388bea"><td class="memItemLeft" align="right" valign="top"><a id="a3de60b70a9e5b5a104211e300d388bea"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_CONFIG
+<tr class="memitem:a3de60b70a9e5b5a104211e300d388bea"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_joypad_config.html#a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf">IDD</a> = IDD_CONFIG
  }</td></tr>
 <tr class="separator:a3de60b70a9e5b5a104211e300d388bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a37ced249f71ab247733787e07085e295"><td class="memItemLeft" align="right" valign="top"><a id="a37ced249f71ab247733787e07085e295"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>assignKeys</b> ()</td></tr>
+<tr class="memitem:a37ced249f71ab247733787e07085e295"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a37ced249f71ab247733787e07085e295">assignKeys</a> ()</td></tr>
 <tr class="separator:a37ced249f71ab247733787e07085e295"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fe836465dc6d861d96691c03ad0a636"><td class="memItemLeft" align="right" valign="top"><a id="a6fe836465dc6d861d96691c03ad0a636"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>assignKey</b> (int id, LONG_PTR key)</td></tr>
+<tr class="memitem:a6fe836465dc6d861d96691c03ad0a636"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> <a class="el" href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a>, LONG_PTR key)</td></tr>
 <tr class="separator:a6fe836465dc6d861d96691c03ad0a636"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade281c386d18c3e9ab2d806cd89ab7ce"><td class="memItemLeft" align="right" valign="top"><a id="ade281c386d18c3e9ab2d806cd89ab7ce"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>JoypadConfig</b> (int w, CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:ade281c386d18c3e9ab2d806cd89ab7ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#ade281c386d18c3e9ab2d806cd89ab7ce">JoypadConfig</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> w, CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:ade281c386d18c3e9ab2d806cd89ab7ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a65379815cbe3f6b1d63d6d6655be22dd"><td class="memItemLeft" align="right" valign="top"><a id="a65379815cbe3f6b1d63d6d6655be22dd"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>up</b></td></tr>
+<tr class="memitem:a65379815cbe3f6b1d63d6d6655be22dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">up</a></td></tr>
 <tr class="separator:a65379815cbe3f6b1d63d6d6655be22dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57365c2b56d24e6cf20d3586d692583d"><td class="memItemLeft" align="right" valign="top"><a id="a57365c2b56d24e6cf20d3586d692583d"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>speed</b></td></tr>
+<tr class="memitem:a57365c2b56d24e6cf20d3586d692583d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">speed</a></td></tr>
 <tr class="separator:a57365c2b56d24e6cf20d3586d692583d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae941e8b6868e423b3c2bf4313c3c340f"><td class="memItemLeft" align="right" valign="top"><a id="ae941e8b6868e423b3c2bf4313c3c340f"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>right</b></td></tr>
+<tr class="memitem:ae941e8b6868e423b3c2bf4313c3c340f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">right</a></td></tr>
 <tr class="separator:ae941e8b6868e423b3c2bf4313c3c340f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99c36e2559ce17f64aa004c37c5f8771"><td class="memItemLeft" align="right" valign="top"><a id="a99c36e2559ce17f64aa004c37c5f8771"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>left</b></td></tr>
+<tr class="memitem:a99c36e2559ce17f64aa004c37c5f8771"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">left</a></td></tr>
 <tr class="separator:a99c36e2559ce17f64aa004c37c5f8771"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad42ffdfc61bb990382b0a35d15909644"><td class="memItemLeft" align="right" valign="top"><a id="ad42ffdfc61bb990382b0a35d15909644"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>down</b></td></tr>
+<tr class="memitem:ad42ffdfc61bb990382b0a35d15909644"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">down</a></td></tr>
 <tr class="separator:ad42ffdfc61bb990382b0a35d15909644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82881a0174178e60d0a60a2b574fd385"><td class="memItemLeft" align="right" valign="top"><a id="a82881a0174178e60d0a60a2b574fd385"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>capture</b></td></tr>
+<tr class="memitem:a82881a0174178e60d0a60a2b574fd385"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">capture</a></td></tr>
 <tr class="separator:a82881a0174178e60d0a60a2b574fd385"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9083bf057d36c0fd78fe1976bee9fb74"><td class="memItemLeft" align="right" valign="top"><a id="a9083bf057d36c0fd78fe1976bee9fb74"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>buttonStart</b></td></tr>
+<tr class="memitem:a9083bf057d36c0fd78fe1976bee9fb74"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">buttonStart</a></td></tr>
 <tr class="separator:a9083bf057d36c0fd78fe1976bee9fb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79baa8f4d47b02dde3f032961e239556"><td class="memItemLeft" align="right" valign="top"><a id="a79baa8f4d47b02dde3f032961e239556"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>buttonSelect</b></td></tr>
+<tr class="memitem:a79baa8f4d47b02dde3f032961e239556"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">buttonSelect</a></td></tr>
 <tr class="separator:a79baa8f4d47b02dde3f032961e239556"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8492d5da1c116da58dbaecc7572576b"><td class="memItemLeft" align="right" valign="top"><a id="ae8492d5da1c116da58dbaecc7572576b"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>buttonR</b></td></tr>
+<tr class="memitem:ae8492d5da1c116da58dbaecc7572576b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">buttonR</a></td></tr>
 <tr class="separator:ae8492d5da1c116da58dbaecc7572576b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a03e1bd6ea571aeeadfbaee7362830f"><td class="memItemLeft" align="right" valign="top"><a id="a5a03e1bd6ea571aeeadfbaee7362830f"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>buttonL</b></td></tr>
+<tr class="memitem:a5a03e1bd6ea571aeeadfbaee7362830f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">buttonL</a></td></tr>
 <tr class="separator:a5a03e1bd6ea571aeeadfbaee7362830f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4aa48681f17e03adced442271f29211f"><td class="memItemLeft" align="right" valign="top"><a id="a4aa48681f17e03adced442271f29211f"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>buttonGS</b></td></tr>
+<tr class="memitem:a4aa48681f17e03adced442271f29211f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">buttonGS</a></td></tr>
 <tr class="separator:a4aa48681f17e03adced442271f29211f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8600f90f1074cda2ff14b73e6fc8e3d6"><td class="memItemLeft" align="right" valign="top"><a id="a8600f90f1074cda2ff14b73e6fc8e3d6"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>buttonB</b></td></tr>
+<tr class="memitem:a8600f90f1074cda2ff14b73e6fc8e3d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">buttonB</a></td></tr>
 <tr class="separator:a8600f90f1074cda2ff14b73e6fc8e3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b18405a6d92fbdca34cb1d1a6fcee2c"><td class="memItemLeft" align="right" valign="top"><a id="a8b18405a6d92fbdca34cb1d1a6fcee2c"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>buttonA</b></td></tr>
+<tr class="memitem:a8b18405a6d92fbdca34cb1d1a6fcee2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">buttonA</a></td></tr>
 <tr class="separator:a8b18405a6d92fbdca34cb1d1a6fcee2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a9b0e5a934f13fb9009211c082933eb50"><td class="memItemLeft" align="right" valign="top"><a id="a9b0e5a934f13fb9009211c082933eb50"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a9b0e5a934f13fb9009211c082933eb50"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a9b0e5a934f13fb9009211c082933eb50">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a9b0e5a934f13fb9009211c082933eb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ff1e82beb3c0cb4363165277fabc796"><td class="memItemLeft" align="right" valign="top"><a id="a1ff1e82beb3c0cb4363165277fabc796"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCancel</b> ()</td></tr>
+<tr class="memitem:a1ff1e82beb3c0cb4363165277fabc796"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a1ff1e82beb3c0cb4363165277fabc796">OnCancel</a> ()</td></tr>
 <tr class="separator:a1ff1e82beb3c0cb4363165277fabc796"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80b628b0368a606e47d6ecd2d1e76624"><td class="memItemLeft" align="right" valign="top"><a id="a80b628b0368a606e47d6ecd2d1e76624"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOk</b> ()</td></tr>
+<tr class="memitem:a80b628b0368a606e47d6ecd2d1e76624"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a80b628b0368a606e47d6ecd2d1e76624">OnOk</a> ()</td></tr>
 <tr class="separator:a80b628b0368a606e47d6ecd2d1e76624"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a466cce6bccb02ce7a31dd5697668c904"><td class="memItemLeft" align="right" valign="top"><a id="a466cce6bccb02ce7a31dd5697668c904"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
+<tr class="memitem:a466cce6bccb02ce7a31dd5697668c904"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a466cce6bccb02ce7a31dd5697668c904">OnDestroy</a> ()</td></tr>
 <tr class="separator:a466cce6bccb02ce7a31dd5697668c904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af55cd03e7ed293d17d338858285a8087"><td class="memItemLeft" align="right" valign="top"><a id="af55cd03e7ed293d17d338858285a8087"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnTimer</b> (UINT_PTR nIDEvent)</td></tr>
+<tr class="memitem:af55cd03e7ed293d17d338858285a8087"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#af55cd03e7ed293d17d338858285a8087">OnTimer</a> (UINT_PTR nIDEvent)</td></tr>
 <tr class="separator:af55cd03e7ed293d17d338858285a8087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17d863f586b81ee50fa579ec637d834c"><td class="memItemLeft" align="right" valign="top"><a id="a17d863f586b81ee50fa579ec637d834c"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnKeyDown</b> (UINT nChar, UINT nRepCnt, UINT nFlags)</td></tr>
+<tr class="memitem:a17d863f586b81ee50fa579ec637d834c"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#a17d863f586b81ee50fa579ec637d834c">OnKeyDown</a> (UINT nChar, UINT nRepCnt, UINT nFlags)</td></tr>
 <tr class="separator:a17d863f586b81ee50fa579ec637d834c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc8d09942cc5d7ff9e69e27a98ff2430"><td class="memItemLeft" align="right" valign="top"><a id="afc8d09942cc5d7ff9e69e27a98ff2430"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:afc8d09942cc5d7ff9e69e27a98ff2430"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#afc8d09942cc5d7ff9e69e27a98ff2430">OnInitDialog</a> ()</td></tr>
 <tr class="separator:afc8d09942cc5d7ff9e69e27a98ff2430"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected 속성</h2></td></tr>
-<tr class="memitem:ae2eb21b8f63e8cf86a5461e78901c3f5"><td class="memItemLeft" align="right" valign="top"><a id="ae2eb21b8f63e8cf86a5461e78901c3f5"></a>
-UINT_PTR&#160;</td><td class="memItemRight" valign="bottom"><b>timerId</b></td></tr>
+<tr class="memitem:ae2eb21b8f63e8cf86a5461e78901c3f5"><td class="memItemLeft" align="right" valign="top">UINT_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#ae2eb21b8f63e8cf86a5461e78901c3f5">timerId</a></td></tr>
 <tr class="separator:ae2eb21b8f63e8cf86a5461e78901c3f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad71f1ad36754d788de00eb4bb5630dda"><td class="memItemLeft" align="right" valign="top"><a id="ad71f1ad36754d788de00eb4bb5630dda"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>which</b></td></tr>
+<tr class="memitem:ad71f1ad36754d788de00eb4bb5630dda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a></td></tr>
 <tr class="separator:ad71f1ad36754d788de00eb4bb5630dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00058">58</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a3de60b70a9e5b5a104211e300d388bea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3de60b70a9e5b5a104211e300d388bea">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{ <a class="code" href="class_joypad_config.html#a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf">IDD</a> = <a class="code" href="resource_8h.html#ad23d26de7f6c160c194ef374e8e5472e">IDD_CONFIG</a> };</div><div class="ttc" id="class_joypad_config_html_a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf"><div class="ttname"><a href="class_joypad_config.html#a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf">JoypadConfig::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00068">Joypad.h:68</a></div></div>
+<div class="ttc" id="resource_8h_html_ad23d26de7f6c160c194ef374e8e5472e"><div class="ttname"><a href="resource_8h.html#ad23d26de7f6c160c194ef374e8e5472e">IDD_CONFIG</a></div><div class="ttdeci">#define IDD_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00057">resource.h:57</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="ade281c386d18c3e9ab2d806cd89ab7ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade281c386d18c3e9ab2d806cd89ab7ce">&#9670;&nbsp;</a></span>JoypadConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">JoypadConfig::JoypadConfig </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  : CDialog(<a class="code" href="class_joypad_config.html#a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf">JoypadConfig::IDD</a>, pParent)</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(JoypadConfig)</span></div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="class_joypad_config.html#ae2eb21b8f63e8cf86a5461e78901c3f5">timerId</a> = 0;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a> = w;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">if</span>(which &lt; 0 || which &gt; 3)</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a> = 0;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div><div class="ttc" id="class_joypad_config_html_ad71f1ad36754d788de00eb4bb5630dda"><div class="ttname"><a href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">JoypadConfig::which</a></div><div class="ttdeci">int which</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00095">Joypad.h:95</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf"><div class="ttname"><a href="class_joypad_config.html#a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf">JoypadConfig::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00068">Joypad.h:68</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ae2eb21b8f63e8cf86a5461e78901c3f5"><div class="ttname"><a href="class_joypad_config.html#ae2eb21b8f63e8cf86a5461e78901c3f5">JoypadConfig::timerId</a></div><div class="ttdeci">UINT_PTR timerId</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00094">Joypad.h:94</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a6fe836465dc6d861d96691c03ad0a636"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fe836465dc6d861d96691c03ad0a636">&#9670;&nbsp;</a></span>assignKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JoypadConfig::assignKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LONG_PTR&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00200">200</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;{</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;  <span class="keywordflow">switch</span>(<span class="keywordtype">id</span>) {</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a>:</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a>] = key;</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a>:</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a>] = key;</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a>:</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a>] = key;</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a59a53c2540f84ff9094d9bfa68d22697">IDC_EDIT_SPEED</a>:</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da9cff5f87f377ca825fcdd98865480f13">KEY_BUTTON_SPEED</a>] = key;</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a9537127d26017dca3680b51458b4963b">IDC_EDIT_CAPTURE</a>:</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da67e58823e71e69a28c0cf30a8923a256">KEY_BUTTON_CAPTURE</a>] = key;</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">break</span>;    </div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a>:</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a>] = key;</div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a743fd9ba2aa7e000f0d66a9deee5ff92">IDC_EDIT_BUTTON_A</a>:</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da1ae295c6714da69909086c747faa54e5">KEY_BUTTON_A</a>] = key;</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a4074668854c3737574e80ab8111d8207">IDC_EDIT_BUTTON_B</a>:</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da50189f77022f070b3e706a6085b9fa29">KEY_BUTTON_B</a>] = key;</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#af9887922000187e6cd392e1efd18a6ed">IDC_EDIT_BUTTON_L</a>:</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daaefd8022dd13c4e773eb50fcb01a3a9a">KEY_BUTTON_L</a>] = key;</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#aca900b079421856c84c22696e0054cf1">IDC_EDIT_BUTTON_R</a>:</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da730cf8664b0f2ed33259cfdbc005ad0b">KEY_BUTTON_R</a>] = key;</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a5db9e5ab3107d96db0fce4a54498232f">IDC_EDIT_BUTTON_START</a>:</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daec224303ac98eea7226ce2996c1e27ce">KEY_BUTTON_START</a>] = key;</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#ac8953535a0ab3293fa3ae6aa107a6420">IDC_EDIT_BUTTON_SELECT</a>:</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035dade90864e26145a4d8f2b8ceadc102725">KEY_BUTTON_SELECT</a>] = key;</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a622904a3fc8c117ae7e4c735a0506738">IDC_EDIT_BUTTON_GS</a>:</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="win32_2input_8h.html#a1fb9092bcdeada2d206bdc74afbbe122a5d7e2f02449f4c01111bf549d2595c03">KEY_BUTTON_GS</a>] = key;</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  }</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div><div class="ttc" id="resource_8h_html_ae29438ab510968afa9068e0c6b80ed57"><div class="ttname"><a href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a></div><div class="ttdeci">#define IDC_EDIT_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00106">resource.h:106</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00272">SDL.cpp:272</a></div></div>
+<div class="ttc" id="resource_8h_html_aca900b079421856c84c22696e0054cf1"><div class="ttname"><a href="resource_8h.html#aca900b079421856c84c22696e0054cf1">IDC_EDIT_BUTTON_R</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_R</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00129">resource.h:129</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00271">SDL.cpp:271</a></div></div>
+<div class="ttc" id="resource_8h_html_a622904a3fc8c117ae7e4c735a0506738"><div class="ttname"><a href="resource_8h.html#a622904a3fc8c117ae7e4c735a0506738">IDC_EDIT_BUTTON_GS</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_GS</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00127">resource.h:127</a></div></div>
+<div class="ttc" id="resource_8h_html_ae8bd1d3525011019fb5ff9406e0d2404"><div class="ttname"><a href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a></div><div class="ttdeci">#define IDC_EDIT_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00104">resource.h:104</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035dade90864e26145a4d8f2b8ceadc102725"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035dade90864e26145a4d8f2b8ceadc102725">KEY_BUTTON_SELECT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00274">SDL.cpp:274</a></div></div>
+<div class="ttc" id="resource_8h_html_a3c298d6303318c2193f262cfae3e413c"><div class="ttname"><a href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a></div><div class="ttdeci">#define IDC_EDIT_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00102">resource.h:102</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00272">SDL.cpp:272</a></div></div>
+<div class="ttc" id="resource_8h_html_a9537127d26017dca3680b51458b4963b"><div class="ttname"><a href="resource_8h.html#a9537127d26017dca3680b51458b4963b">IDC_EDIT_CAPTURE</a></div><div class="ttdeci">#define IDC_EDIT_CAPTURE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00123">resource.h:123</a></div></div>
+<div class="ttc" id="resource_8h_html_a4074668854c3737574e80ab8111d8207"><div class="ttname"><a href="resource_8h.html#a4074668854c3737574e80ab8111d8207">IDC_EDIT_BUTTON_B</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_B</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00110">resource.h:110</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ad71f1ad36754d788de00eb4bb5630dda"><div class="ttname"><a href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">JoypadConfig::which</a></div><div class="ttdeci">int which</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00095">Joypad.h:95</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da67e58823e71e69a28c0cf30a8923a256"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da67e58823e71e69a28c0cf30a8923a256">KEY_BUTTON_CAPTURE</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00276">SDL.cpp:276</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00271">SDL.cpp:271</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da730cf8664b0f2ed33259cfdbc005ad0b"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da730cf8664b0f2ed33259cfdbc005ad0b">KEY_BUTTON_R</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00275">SDL.cpp:275</a></div></div>
+<div class="ttc" id="resource_8h_html_a59a53c2540f84ff9094d9bfa68d22697"><div class="ttname"><a href="resource_8h.html#a59a53c2540f84ff9094d9bfa68d22697">IDC_EDIT_SPEED</a></div><div class="ttdeci">#define IDC_EDIT_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00121">resource.h:121</a></div></div>
+<div class="ttc" id="resource_8h_html_af9887922000187e6cd392e1efd18a6ed"><div class="ttname"><a href="resource_8h.html#af9887922000187e6cd392e1efd18a6ed">IDC_EDIT_BUTTON_L</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_L</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00125">resource.h:125</a></div></div>
+<div class="ttc" id="resource_8h_html_ae0645e746a25d4d061e3fae80babcc78"><div class="ttname"><a href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a></div><div class="ttdeci">#define IDC_EDIT_UP</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00100">resource.h:100</a></div></div>
+<div class="ttc" id="resource_8h_html_a743fd9ba2aa7e000f0d66a9deee5ff92"><div class="ttname"><a href="resource_8h.html#a743fd9ba2aa7e000f0d66a9deee5ff92">IDC_EDIT_BUTTON_A</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_A</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00108">resource.h:108</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035daec224303ac98eea7226ce2996c1e27ce"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daec224303ac98eea7226ce2996c1e27ce">KEY_BUTTON_START</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00274">SDL.cpp:274</a></div></div>
+<div class="ttc" id="win32_2input_8h_html_a1fb9092bcdeada2d206bdc74afbbe122a5d7e2f02449f4c01111bf549d2595c03"><div class="ttname"><a href="win32_2input_8h.html#a1fb9092bcdeada2d206bdc74afbbe122a5d7e2f02449f4c01111bf549d2595c03">KEY_BUTTON_GS</a></div><div class="ttdef"><b>Definition:</b> <a href="win32_2input_8h_source.html#l00033">Input.h:33</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da1ae295c6714da69909086c747faa54e5"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da1ae295c6714da69909086c747faa54e5">KEY_BUTTON_A</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00273">SDL.cpp:273</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da50189f77022f070b3e706a6085b9fa29"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da50189f77022f070b3e706a6085b9fa29">KEY_BUTTON_B</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00273">SDL.cpp:273</a></div></div>
+<div class="ttc" id="resource_8h_html_a5db9e5ab3107d96db0fce4a54498232f"><div class="ttname"><a href="resource_8h.html#a5db9e5ab3107d96db0fce4a54498232f">IDC_EDIT_BUTTON_START</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_START</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00114">resource.h:114</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035daaefd8022dd13c4e773eb50fcb01a3a9a"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daaefd8022dd13c4e773eb50fcb01a3a9a">KEY_BUTTON_L</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00275">SDL.cpp:275</a></div></div>
+<div class="ttc" id="resource_8h_html_ac8953535a0ab3293fa3ae6aa107a6420"><div class="ttname"><a href="resource_8h.html#ac8953535a0ab3293fa3ae6aa107a6420">IDC_EDIT_BUTTON_SELECT</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_SELECT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00112">resource.h:112</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da9cff5f87f377ca825fcdd98865480f13"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da9cff5f87f377ca825fcdd98865480f13">KEY_BUTTON_SPEED</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00276">SDL.cpp:276</a></div></div>
+<div class="ttc" id="_joypad_8cpp_html_a2407686323030ec0e04e588c07092342"><div class="ttname"><a href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a></div><div class="ttdeci">LONG_PTR joypad[4][13]</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00279">SDL.cpp:279</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_joypad_config_a6fe836465dc6d861d96691c03ad0a636_icgraph.png" border="0" usemap="#class_joypad_config_a6fe836465dc6d861d96691c03ad0a636_icgraph" alt=""/></div>
+<map name="class_joypad_config_a6fe836465dc6d861d96691c03ad0a636_icgraph" id="class_joypad_config_a6fe836465dc6d861d96691c03ad0a636_icgraph">
+<area shape="rect" id="node2" href="class_joypad_config.html#a37ced249f71ab247733787e07085e295" title="JoypadConfig::assignKeys" alt="" coords="221,5,396,32"/>
+<area shape="rect" id="node3" href="class_joypad_config.html#a80b628b0368a606e47d6ecd2d1e76624" title="JoypadConfig::OnOk" alt="" coords="444,5,585,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a37ced249f71ab247733787e07085e295"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37ced249f71ab247733787e07085e295">&#9670;&nbsp;</a></span>assignKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JoypadConfig::assignKeys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00245">245</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;{</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a>;</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a>;</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">up</a>, GWLP_USERDATA));</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a>;</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">down</a>, GWLP_USERDATA));</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a>;</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">left</a>, GWLP_USERDATA));</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a>;</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">right</a>, GWLP_USERDATA));</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#a743fd9ba2aa7e000f0d66a9deee5ff92">IDC_EDIT_BUTTON_A</a>;</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">buttonA</a>, GWLP_USERDATA));</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#a4074668854c3737574e80ab8111d8207">IDC_EDIT_BUTTON_B</a>;</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">buttonB</a>, GWLP_USERDATA));</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#af9887922000187e6cd392e1efd18a6ed">IDC_EDIT_BUTTON_L</a>;</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">buttonL</a>, GWLP_USERDATA));</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#aca900b079421856c84c22696e0054cf1">IDC_EDIT_BUTTON_R</a>;</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">buttonR</a>, GWLP_USERDATA));</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  </div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#ac8953535a0ab3293fa3ae6aa107a6420">IDC_EDIT_BUTTON_SELECT</a>;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">buttonSelect</a>, GWLP_USERDATA));</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#a5db9e5ab3107d96db0fce4a54498232f">IDC_EDIT_BUTTON_START</a>;</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">buttonStart</a>, GWLP_USERDATA));</div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#a59a53c2540f84ff9094d9bfa68d22697">IDC_EDIT_SPEED</a>;</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">speed</a>, GWLP_USERDATA));</div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#a9537127d26017dca3680b51458b4963b">IDC_EDIT_CAPTURE</a>;</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">capture</a>, GWLP_USERDATA));</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#a622904a3fc8c117ae7e4c735a0506738">IDC_EDIT_BUTTON_GS</a>;</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <a class="code" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">buttonGS</a>, GWLP_USERDATA));</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;</div><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="comment">//  winSaveKeys();</span></div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}</div><div class="ttc" id="resource_8h_html_ae29438ab510968afa9068e0c6b80ed57"><div class="ttname"><a href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a></div><div class="ttdeci">#define IDC_EDIT_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00106">resource.h:106</a></div></div>
+<div class="ttc" id="resource_8h_html_aca900b079421856c84c22696e0054cf1"><div class="ttname"><a href="resource_8h.html#aca900b079421856c84c22696e0054cf1">IDC_EDIT_BUTTON_R</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_R</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00129">resource.h:129</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ad42ffdfc61bb990382b0a35d15909644"><div class="ttname"><a href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">JoypadConfig::down</a></div><div class="ttdeci">JoypadEditControl down</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00073">Joypad.h:73</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ae8492d5da1c116da58dbaecc7572576b"><div class="ttname"><a href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">JoypadConfig::buttonR</a></div><div class="ttdeci">JoypadEditControl buttonR</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00077">Joypad.h:77</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a8b18405a6d92fbdca34cb1d1a6fcee2c"><div class="ttname"><a href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">JoypadConfig::buttonA</a></div><div class="ttdeci">JoypadEditControl buttonA</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00081">Joypad.h:81</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a9083bf057d36c0fd78fe1976bee9fb74"><div class="ttname"><a href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">JoypadConfig::buttonStart</a></div><div class="ttdeci">JoypadEditControl buttonStart</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00075">Joypad.h:75</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a65379815cbe3f6b1d63d6d6655be22dd"><div class="ttname"><a href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">JoypadConfig::up</a></div><div class="ttdeci">JoypadEditControl up</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00069">Joypad.h:69</a></div></div>
+<div class="ttc" id="resource_8h_html_a622904a3fc8c117ae7e4c735a0506738"><div class="ttname"><a href="resource_8h.html#a622904a3fc8c117ae7e4c735a0506738">IDC_EDIT_BUTTON_GS</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_GS</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00127">resource.h:127</a></div></div>
+<div class="ttc" id="resource_8h_html_ae8bd1d3525011019fb5ff9406e0d2404"><div class="ttname"><a href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a></div><div class="ttdeci">#define IDC_EDIT_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00104">resource.h:104</a></div></div>
+<div class="ttc" id="resource_8h_html_a3c298d6303318c2193f262cfae3e413c"><div class="ttname"><a href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a></div><div class="ttdeci">#define IDC_EDIT_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00102">resource.h:102</a></div></div>
+<div class="ttc" id="_commands_8cpp_html_a7b7a6396b2c82ad46c6d8b2bf141a8dd"><div class="ttname"><a href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a></div><div class="ttdeci">WORD id</div><div class="ttdef"><b>Definition:</b> <a href="_commands_8cpp_source.html#l00034">Commands.cpp:34</a></div></div>
+<div class="ttc" id="resource_8h_html_a9537127d26017dca3680b51458b4963b"><div class="ttname"><a href="resource_8h.html#a9537127d26017dca3680b51458b4963b">IDC_EDIT_CAPTURE</a></div><div class="ttdeci">#define IDC_EDIT_CAPTURE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00123">resource.h:123</a></div></div>
+<div class="ttc" id="resource_8h_html_a4074668854c3737574e80ab8111d8207"><div class="ttname"><a href="resource_8h.html#a4074668854c3737574e80ab8111d8207">IDC_EDIT_BUTTON_B</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_B</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00110">resource.h:110</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a4aa48681f17e03adced442271f29211f"><div class="ttname"><a href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">JoypadConfig::buttonGS</a></div><div class="ttdeci">JoypadEditControl buttonGS</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00079">Joypad.h:79</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a8600f90f1074cda2ff14b73e6fc8e3d6"><div class="ttname"><a href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">JoypadConfig::buttonB</a></div><div class="ttdeci">JoypadEditControl buttonB</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00080">Joypad.h:80</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a79baa8f4d47b02dde3f032961e239556"><div class="ttname"><a href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">JoypadConfig::buttonSelect</a></div><div class="ttdeci">JoypadEditControl buttonSelect</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00076">Joypad.h:76</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a57365c2b56d24e6cf20d3586d692583d"><div class="ttname"><a href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">JoypadConfig::speed</a></div><div class="ttdeci">JoypadEditControl speed</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00070">Joypad.h:70</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ae941e8b6868e423b3c2bf4313c3c340f"><div class="ttname"><a href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">JoypadConfig::right</a></div><div class="ttdeci">JoypadEditControl right</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00071">Joypad.h:71</a></div></div>
+<div class="ttc" id="resource_8h_html_a59a53c2540f84ff9094d9bfa68d22697"><div class="ttname"><a href="resource_8h.html#a59a53c2540f84ff9094d9bfa68d22697">IDC_EDIT_SPEED</a></div><div class="ttdeci">#define IDC_EDIT_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00121">resource.h:121</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a99c36e2559ce17f64aa004c37c5f8771"><div class="ttname"><a href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">JoypadConfig::left</a></div><div class="ttdeci">JoypadEditControl left</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00072">Joypad.h:72</a></div></div>
+<div class="ttc" id="resource_8h_html_af9887922000187e6cd392e1efd18a6ed"><div class="ttname"><a href="resource_8h.html#af9887922000187e6cd392e1efd18a6ed">IDC_EDIT_BUTTON_L</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_L</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00125">resource.h:125</a></div></div>
+<div class="ttc" id="resource_8h_html_ae0645e746a25d4d061e3fae80babcc78"><div class="ttname"><a href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a></div><div class="ttdeci">#define IDC_EDIT_UP</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00100">resource.h:100</a></div></div>
+<div class="ttc" id="resource_8h_html_a743fd9ba2aa7e000f0d66a9deee5ff92"><div class="ttname"><a href="resource_8h.html#a743fd9ba2aa7e000f0d66a9deee5ff92">IDC_EDIT_BUTTON_A</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_A</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00108">resource.h:108</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a82881a0174178e60d0a60a2b574fd385"><div class="ttname"><a href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">JoypadConfig::capture</a></div><div class="ttdeci">JoypadEditControl capture</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00074">Joypad.h:74</a></div></div>
+<div class="ttc" id="resource_8h_html_a5db9e5ab3107d96db0fce4a54498232f"><div class="ttname"><a href="resource_8h.html#a5db9e5ab3107d96db0fce4a54498232f">IDC_EDIT_BUTTON_START</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_START</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00114">resource.h:114</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a6fe836465dc6d861d96691c03ad0a636"><div class="ttname"><a href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">JoypadConfig::assignKey</a></div><div class="ttdeci">void assignKey(int id, LONG_PTR key)</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8cpp_source.html#l00200">Joypad.cpp:200</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a5a03e1bd6ea571aeeadfbaee7362830f"><div class="ttname"><a href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">JoypadConfig::buttonL</a></div><div class="ttdeci">JoypadEditControl buttonL</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00078">Joypad.h:78</a></div></div>
+<div class="ttc" id="resource_8h_html_ac8953535a0ab3293fa3ae6aa107a6420"><div class="ttname"><a href="resource_8h.html#ac8953535a0ab3293fa3ae6aa107a6420">IDC_EDIT_BUTTON_SELECT</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_SELECT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00112">resource.h:112</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_joypad_config_a37ced249f71ab247733787e07085e295_cgraph.png" border="0" usemap="#class_joypad_config_a37ced249f71ab247733787e07085e295_cgraph" alt=""/></div>
+<map name="class_joypad_config_a37ced249f71ab247733787e07085e295_cgraph" id="class_joypad_config_a37ced249f71ab247733787e07085e295_cgraph">
+<area shape="rect" id="node2" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636" title="JoypadConfig::assignKey" alt="" coords="228,5,396,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_joypad_config_a37ced249f71ab247733787e07085e295_icgraph.png" border="0" usemap="#class_joypad_config_a37ced249f71ab247733787e07085e295_icgraph" alt=""/></div>
+<map name="class_joypad_config_a37ced249f71ab247733787e07085e295_icgraph" id="class_joypad_config_a37ced249f71ab247733787e07085e295_icgraph">
+<area shape="rect" id="node2" href="class_joypad_config.html#a80b628b0368a606e47d6ecd2d1e76624" title="JoypadConfig::OnOk" alt="" coords="228,5,369,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9b0e5a934f13fb9009211c082933eb50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b0e5a934f13fb9009211c082933eb50">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JoypadConfig::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(JoypadConfig)</span></div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a>, <a class="code" href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">up</a>);</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a59a53c2540f84ff9094d9bfa68d22697">IDC_EDIT_SPEED</a>, <a class="code" href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">speed</a>);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a>, <a class="code" href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">right</a>);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a>, <a class="code" href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">left</a>);</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a>, <a class="code" href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">down</a>);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a9537127d26017dca3680b51458b4963b">IDC_EDIT_CAPTURE</a>, <a class="code" href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">capture</a>);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a5db9e5ab3107d96db0fce4a54498232f">IDC_EDIT_BUTTON_START</a>, <a class="code" href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">buttonStart</a>);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#ac8953535a0ab3293fa3ae6aa107a6420">IDC_EDIT_BUTTON_SELECT</a>, <a class="code" href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">buttonSelect</a>);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#aca900b079421856c84c22696e0054cf1">IDC_EDIT_BUTTON_R</a>, <a class="code" href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">buttonR</a>);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#af9887922000187e6cd392e1efd18a6ed">IDC_EDIT_BUTTON_L</a>, <a class="code" href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">buttonL</a>);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a622904a3fc8c117ae7e4c735a0506738">IDC_EDIT_BUTTON_GS</a>, <a class="code" href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">buttonGS</a>);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a4074668854c3737574e80ab8111d8207">IDC_EDIT_BUTTON_B</a>, <a class="code" href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">buttonB</a>);</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a743fd9ba2aa7e000f0d66a9deee5ff92">IDC_EDIT_BUTTON_A</a>, <a class="code" href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">buttonA</a>);</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div><div class="ttc" id="resource_8h_html_ae29438ab510968afa9068e0c6b80ed57"><div class="ttname"><a href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a></div><div class="ttdeci">#define IDC_EDIT_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00106">resource.h:106</a></div></div>
+<div class="ttc" id="resource_8h_html_aca900b079421856c84c22696e0054cf1"><div class="ttname"><a href="resource_8h.html#aca900b079421856c84c22696e0054cf1">IDC_EDIT_BUTTON_R</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_R</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00129">resource.h:129</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ad42ffdfc61bb990382b0a35d15909644"><div class="ttname"><a href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">JoypadConfig::down</a></div><div class="ttdeci">JoypadEditControl down</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00073">Joypad.h:73</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ae8492d5da1c116da58dbaecc7572576b"><div class="ttname"><a href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">JoypadConfig::buttonR</a></div><div class="ttdeci">JoypadEditControl buttonR</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00077">Joypad.h:77</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a8b18405a6d92fbdca34cb1d1a6fcee2c"><div class="ttname"><a href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">JoypadConfig::buttonA</a></div><div class="ttdeci">JoypadEditControl buttonA</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00081">Joypad.h:81</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a9083bf057d36c0fd78fe1976bee9fb74"><div class="ttname"><a href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">JoypadConfig::buttonStart</a></div><div class="ttdeci">JoypadEditControl buttonStart</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00075">Joypad.h:75</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a65379815cbe3f6b1d63d6d6655be22dd"><div class="ttname"><a href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">JoypadConfig::up</a></div><div class="ttdeci">JoypadEditControl up</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00069">Joypad.h:69</a></div></div>
+<div class="ttc" id="resource_8h_html_a622904a3fc8c117ae7e4c735a0506738"><div class="ttname"><a href="resource_8h.html#a622904a3fc8c117ae7e4c735a0506738">IDC_EDIT_BUTTON_GS</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_GS</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00127">resource.h:127</a></div></div>
+<div class="ttc" id="resource_8h_html_ae8bd1d3525011019fb5ff9406e0d2404"><div class="ttname"><a href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a></div><div class="ttdeci">#define IDC_EDIT_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00104">resource.h:104</a></div></div>
+<div class="ttc" id="resource_8h_html_a3c298d6303318c2193f262cfae3e413c"><div class="ttname"><a href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a></div><div class="ttdeci">#define IDC_EDIT_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00102">resource.h:102</a></div></div>
+<div class="ttc" id="resource_8h_html_a9537127d26017dca3680b51458b4963b"><div class="ttname"><a href="resource_8h.html#a9537127d26017dca3680b51458b4963b">IDC_EDIT_CAPTURE</a></div><div class="ttdeci">#define IDC_EDIT_CAPTURE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00123">resource.h:123</a></div></div>
+<div class="ttc" id="resource_8h_html_a4074668854c3737574e80ab8111d8207"><div class="ttname"><a href="resource_8h.html#a4074668854c3737574e80ab8111d8207">IDC_EDIT_BUTTON_B</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_B</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00110">resource.h:110</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a4aa48681f17e03adced442271f29211f"><div class="ttname"><a href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">JoypadConfig::buttonGS</a></div><div class="ttdeci">JoypadEditControl buttonGS</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00079">Joypad.h:79</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a8600f90f1074cda2ff14b73e6fc8e3d6"><div class="ttname"><a href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">JoypadConfig::buttonB</a></div><div class="ttdeci">JoypadEditControl buttonB</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00080">Joypad.h:80</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a79baa8f4d47b02dde3f032961e239556"><div class="ttname"><a href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">JoypadConfig::buttonSelect</a></div><div class="ttdeci">JoypadEditControl buttonSelect</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00076">Joypad.h:76</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a57365c2b56d24e6cf20d3586d692583d"><div class="ttname"><a href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">JoypadConfig::speed</a></div><div class="ttdeci">JoypadEditControl speed</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00070">Joypad.h:70</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ae941e8b6868e423b3c2bf4313c3c340f"><div class="ttname"><a href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">JoypadConfig::right</a></div><div class="ttdeci">JoypadEditControl right</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00071">Joypad.h:71</a></div></div>
+<div class="ttc" id="resource_8h_html_a59a53c2540f84ff9094d9bfa68d22697"><div class="ttname"><a href="resource_8h.html#a59a53c2540f84ff9094d9bfa68d22697">IDC_EDIT_SPEED</a></div><div class="ttdeci">#define IDC_EDIT_SPEED</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00121">resource.h:121</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a99c36e2559ce17f64aa004c37c5f8771"><div class="ttname"><a href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">JoypadConfig::left</a></div><div class="ttdeci">JoypadEditControl left</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00072">Joypad.h:72</a></div></div>
+<div class="ttc" id="resource_8h_html_af9887922000187e6cd392e1efd18a6ed"><div class="ttname"><a href="resource_8h.html#af9887922000187e6cd392e1efd18a6ed">IDC_EDIT_BUTTON_L</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_L</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00125">resource.h:125</a></div></div>
+<div class="ttc" id="resource_8h_html_ae0645e746a25d4d061e3fae80babcc78"><div class="ttname"><a href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a></div><div class="ttdeci">#define IDC_EDIT_UP</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00100">resource.h:100</a></div></div>
+<div class="ttc" id="resource_8h_html_a743fd9ba2aa7e000f0d66a9deee5ff92"><div class="ttname"><a href="resource_8h.html#a743fd9ba2aa7e000f0d66a9deee5ff92">IDC_EDIT_BUTTON_A</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_A</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00108">resource.h:108</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a82881a0174178e60d0a60a2b574fd385"><div class="ttname"><a href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">JoypadConfig::capture</a></div><div class="ttdeci">JoypadEditControl capture</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00074">Joypad.h:74</a></div></div>
+<div class="ttc" id="resource_8h_html_a5db9e5ab3107d96db0fce4a54498232f"><div class="ttname"><a href="resource_8h.html#a5db9e5ab3107d96db0fce4a54498232f">IDC_EDIT_BUTTON_START</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_START</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00114">resource.h:114</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a5a03e1bd6ea571aeeadfbaee7362830f"><div class="ttname"><a href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">JoypadConfig::buttonL</a></div><div class="ttdeci">JoypadEditControl buttonL</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00078">Joypad.h:78</a></div></div>
+<div class="ttc" id="resource_8h_html_ac8953535a0ab3293fa3ae6aa107a6420"><div class="ttname"><a href="resource_8h.html#ac8953535a0ab3293fa3ae6aa107a6420">IDC_EDIT_BUTTON_SELECT</a></div><div class="ttdeci">#define IDC_EDIT_BUTTON_SELECT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00112">resource.h:112</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1ff1e82beb3c0cb4363165277fabc796"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ff1e82beb3c0cb4363165277fabc796">&#9670;&nbsp;</a></span>OnCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JoypadConfig::OnCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00119">119</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  EndDialog(FALSE);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a466cce6bccb02ce7a31dd5697668c904"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a466cce6bccb02ce7a31dd5697668c904">&#9670;&nbsp;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JoypadConfig::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00131">131</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  CDialog::OnDestroy();</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  </div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  KillTimer(<a class="code" href="class_joypad_config.html#ae2eb21b8f63e8cf86a5461e78901c3f5">timerId</a>);</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;}</div><div class="ttc" id="class_joypad_config_html_ae2eb21b8f63e8cf86a5461e78901c3f5"><div class="ttname"><a href="class_joypad_config.html#ae2eb21b8f63e8cf86a5461e78901c3f5">JoypadConfig::timerId</a></div><div class="ttdeci">UINT_PTR timerId</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00094">Joypad.h:94</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="afc8d09942cc5d7ff9e69e27a98ff2430"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc8d09942cc5d7ff9e69e27a98ff2430">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL JoypadConfig::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00149">149</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  </div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <a class="code" href="class_joypad_config.html#ae2eb21b8f63e8cf86a5461e78901c3f5">timerId</a> = SetTimer(0,50,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  </div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">up</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a>]);</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">up</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a>]));</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  </div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">down</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a>]);</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <a class="code" href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">down</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a>]));</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">left</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a>]);</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <a class="code" href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">left</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a>]));</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">right</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a>]);</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <a class="code" href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">right</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a>]));</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">buttonA</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da1ae295c6714da69909086c747faa54e5">KEY_BUTTON_A</a>]);</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <a class="code" href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">buttonA</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da1ae295c6714da69909086c747faa54e5">KEY_BUTTON_A</a>]));</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">buttonB</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da50189f77022f070b3e706a6085b9fa29">KEY_BUTTON_B</a>]);</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">buttonB</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da50189f77022f070b3e706a6085b9fa29">KEY_BUTTON_B</a>]));</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  </div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">buttonL</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daaefd8022dd13c4e773eb50fcb01a3a9a">KEY_BUTTON_L</a>]);</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <a class="code" href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">buttonL</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daaefd8022dd13c4e773eb50fcb01a3a9a">KEY_BUTTON_L</a>]));</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">buttonR</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da730cf8664b0f2ed33259cfdbc005ad0b">KEY_BUTTON_R</a>]);</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;  <a class="code" href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">buttonR</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da730cf8664b0f2ed33259cfdbc005ad0b">KEY_BUTTON_R</a>]));</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  </div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">buttonSelect</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035dade90864e26145a4d8f2b8ceadc102725">KEY_BUTTON_SELECT</a>]);</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  <a class="code" href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">buttonSelect</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035dade90864e26145a4d8f2b8ceadc102725">KEY_BUTTON_SELECT</a>]));</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">buttonStart</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daec224303ac98eea7226ce2996c1e27ce">KEY_BUTTON_START</a>]);</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  <a class="code" href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">buttonStart</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daec224303ac98eea7226ce2996c1e27ce">KEY_BUTTON_START</a>]));</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">speed</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da9cff5f87f377ca825fcdd98865480f13">KEY_BUTTON_SPEED</a>]);</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <a class="code" href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">speed</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da9cff5f87f377ca825fcdd98865480f13">KEY_BUTTON_SPEED</a>]));</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  </div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">capture</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da67e58823e71e69a28c0cf30a8923a256">KEY_BUTTON_CAPTURE</a>]);</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <a class="code" href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">capture</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da67e58823e71e69a28c0cf30a8923a256">KEY_BUTTON_CAPTURE</a>]));</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  SetWindowLongPtr(<a class="code" href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">buttonGS</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="win32_2input_8h.html#a1fb9092bcdeada2d206bdc74afbbe122a5d7e2f02449f4c01111bf549d2595c03">KEY_BUTTON_GS</a>]);</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  <a class="code" href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">buttonGS</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a>[<a class="code" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a>][<a class="code" href="win32_2input_8h.html#a1fb9092bcdeada2d206bdc74afbbe122a5d7e2f02449f4c01111bf549d2595c03">KEY_BUTTON_GS</a>]));</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  </div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  CenterWindow();</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div><div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00272">SDL.cpp:272</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ad42ffdfc61bb990382b0a35d15909644"><div class="ttname"><a href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">JoypadConfig::down</a></div><div class="ttdeci">JoypadEditControl down</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00073">Joypad.h:73</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00271">SDL.cpp:271</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ae8492d5da1c116da58dbaecc7572576b"><div class="ttname"><a href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">JoypadConfig::buttonR</a></div><div class="ttdeci">JoypadEditControl buttonR</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00077">Joypad.h:77</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a8b18405a6d92fbdca34cb1d1a6fcee2c"><div class="ttname"><a href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">JoypadConfig::buttonA</a></div><div class="ttdeci">JoypadEditControl buttonA</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00081">Joypad.h:81</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a9083bf057d36c0fd78fe1976bee9fb74"><div class="ttname"><a href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">JoypadConfig::buttonStart</a></div><div class="ttdeci">JoypadEditControl buttonStart</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00075">Joypad.h:75</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a65379815cbe3f6b1d63d6d6655be22dd"><div class="ttname"><a href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">JoypadConfig::up</a></div><div class="ttdeci">JoypadEditControl up</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00069">Joypad.h:69</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035dade90864e26145a4d8f2b8ceadc102725"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035dade90864e26145a4d8f2b8ceadc102725">KEY_BUTTON_SELECT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00274">SDL.cpp:274</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00272">SDL.cpp:272</a></div></div>
+<div class="ttc" id="class_v_b_a_html_aaab971cb5d67a69e1a26502d15a4dc60"><div class="ttname"><a href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">VBA::input</a></div><div class="ttdeci">Input * input</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00161">VBA.h:161</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a4aa48681f17e03adced442271f29211f"><div class="ttname"><a href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">JoypadConfig::buttonGS</a></div><div class="ttdeci">JoypadEditControl buttonGS</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00079">Joypad.h:79</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a8600f90f1074cda2ff14b73e6fc8e3d6"><div class="ttname"><a href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">JoypadConfig::buttonB</a></div><div class="ttdeci">JoypadEditControl buttonB</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00080">Joypad.h:80</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a79baa8f4d47b02dde3f032961e239556"><div class="ttname"><a href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">JoypadConfig::buttonSelect</a></div><div class="ttdeci">JoypadEditControl buttonSelect</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00076">Joypad.h:76</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ad71f1ad36754d788de00eb4bb5630dda"><div class="ttname"><a href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">JoypadConfig::which</a></div><div class="ttdeci">int which</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00095">Joypad.h:95</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da67e58823e71e69a28c0cf30a8923a256"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da67e58823e71e69a28c0cf30a8923a256">KEY_BUTTON_CAPTURE</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00276">SDL.cpp:276</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00271">SDL.cpp:271</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da730cf8664b0f2ed33259cfdbc005ad0b"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da730cf8664b0f2ed33259cfdbc005ad0b">KEY_BUTTON_R</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00275">SDL.cpp:275</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a57365c2b56d24e6cf20d3586d692583d"><div class="ttname"><a href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">JoypadConfig::speed</a></div><div class="ttdeci">JoypadEditControl speed</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00070">Joypad.h:70</a></div></div>
+<div class="ttc" id="class_input_html_a2c4ec8a744b040657e220480987cd8bf"><div class="ttname"><a href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">Input::getKeyName</a></div><div class="ttdeci">virtual CString getKeyName(LONG_PTR key)=0</div></div>
+<div class="ttc" id="class_joypad_config_html_ae941e8b6868e423b3c2bf4313c3c340f"><div class="ttname"><a href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">JoypadConfig::right</a></div><div class="ttdeci">JoypadEditControl right</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00071">Joypad.h:71</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a99c36e2559ce17f64aa004c37c5f8771"><div class="ttname"><a href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">JoypadConfig::left</a></div><div class="ttdeci">JoypadEditControl left</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00072">Joypad.h:72</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a82881a0174178e60d0a60a2b574fd385"><div class="ttname"><a href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">JoypadConfig::capture</a></div><div class="ttdeci">JoypadEditControl capture</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00074">Joypad.h:74</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035daec224303ac98eea7226ce2996c1e27ce"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daec224303ac98eea7226ce2996c1e27ce">KEY_BUTTON_START</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00274">SDL.cpp:274</a></div></div>
+<div class="ttc" id="win32_2input_8h_html_a1fb9092bcdeada2d206bdc74afbbe122a5d7e2f02449f4c01111bf549d2595c03"><div class="ttname"><a href="win32_2input_8h.html#a1fb9092bcdeada2d206bdc74afbbe122a5d7e2f02449f4c01111bf549d2595c03">KEY_BUTTON_GS</a></div><div class="ttdef"><b>Definition:</b> <a href="win32_2input_8h_source.html#l00033">Input.h:33</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da1ae295c6714da69909086c747faa54e5"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da1ae295c6714da69909086c747faa54e5">KEY_BUTTON_A</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00273">SDL.cpp:273</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da50189f77022f070b3e706a6085b9fa29"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da50189f77022f070b3e706a6085b9fa29">KEY_BUTTON_B</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00273">SDL.cpp:273</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035daaefd8022dd13c4e773eb50fcb01a3a9a"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daaefd8022dd13c4e773eb50fcb01a3a9a">KEY_BUTTON_L</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00275">SDL.cpp:275</a></div></div>
+<div class="ttc" id="class_joypad_config_html_a5a03e1bd6ea571aeeadfbaee7362830f"><div class="ttname"><a href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">JoypadConfig::buttonL</a></div><div class="ttdeci">JoypadEditControl buttonL</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00078">Joypad.h:78</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+<div class="ttc" id="class_joypad_config_html_ae2eb21b8f63e8cf86a5461e78901c3f5"><div class="ttname"><a href="class_joypad_config.html#ae2eb21b8f63e8cf86a5461e78901c3f5">JoypadConfig::timerId</a></div><div class="ttdeci">UINT_PTR timerId</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00094">Joypad.h:94</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da9cff5f87f377ca825fcdd98865480f13"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da9cff5f87f377ca825fcdd98865480f13">KEY_BUTTON_SPEED</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00276">SDL.cpp:276</a></div></div>
+<div class="ttc" id="_joypad_8cpp_html_a2407686323030ec0e04e588c07092342"><div class="ttname"><a href="_joypad_8cpp.html#a2407686323030ec0e04e588c07092342">joypad</a></div><div class="ttdeci">LONG_PTR joypad[4][13]</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00279">SDL.cpp:279</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_joypad_config_afc8d09942cc5d7ff9e69e27a98ff2430_cgraph.png" border="0" usemap="#class_joypad_config_afc8d09942cc5d7ff9e69e27a98ff2430_cgraph" alt=""/></div>
+<map name="class_joypad_config_afc8d09942cc5d7ff9e69e27a98ff2430_cgraph" id="class_joypad_config_afc8d09942cc5d7ff9e69e27a98ff2430_cgraph">
+<area shape="rect" id="node2" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf" title="Input::getKeyName" alt="" coords="231,5,364,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a17d863f586b81ee50fa579ec637d834c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d863f586b81ee50fa579ec637d834c">&#9670;&nbsp;</a></span>OnKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JoypadConfig::OnKeyDown </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nRepCnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nFlags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00145">145</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a80b628b0368a606e47d6ecd2d1e76624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80b628b0368a606e47d6ecd2d1e76624">&#9670;&nbsp;</a></span>OnOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JoypadConfig::OnOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00124">124</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="class_joypad_config.html#a37ced249f71ab247733787e07085e295">assignKeys</a>();</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa">checkKeys</a>();</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  EndDialog(TRUE);</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_aaab971cb5d67a69e1a26502d15a4dc60"><div class="ttname"><a href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">VBA::input</a></div><div class="ttdeci">Input * input</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00161">VBA.h:161</a></div></div>
+<div class="ttc" id="class_input_html_a91418a5762e6e50aa4f59e4ce92d2dfa"><div class="ttname"><a href="class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa">Input::checkKeys</a></div><div class="ttdeci">virtual void checkKeys()=0</div></div>
+<div class="ttc" id="class_joypad_config_html_a37ced249f71ab247733787e07085e295"><div class="ttname"><a href="class_joypad_config.html#a37ced249f71ab247733787e07085e295">JoypadConfig::assignKeys</a></div><div class="ttdeci">void assignKeys()</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8cpp_source.html#l00245">Joypad.cpp:245</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_joypad_config_a80b628b0368a606e47d6ecd2d1e76624_cgraph.png" border="0" usemap="#class_joypad_config_a80b628b0368a606e47d6ecd2d1e76624_cgraph" alt=""/></div>
+<map name="class_joypad_config_a80b628b0368a606e47d6ecd2d1e76624_cgraph" id="class_joypad_config_a80b628b0368a606e47d6ecd2d1e76624_cgraph">
+<area shape="rect" id="node2" href="class_joypad_config.html#a37ced249f71ab247733787e07085e295" title="JoypadConfig::assignKeys" alt="" coords="195,5,369,32"/>
+<area shape="rect" id="node4" href="class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa" title="Input::checkKeys" alt="" coords="221,56,343,83"/>
+<area shape="rect" id="node3" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636" title="JoypadConfig::assignKey" alt="" coords="417,5,585,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af55cd03e7ed293d17d338858285a8087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af55cd03e7ed293d17d338858285a8087">&#9670;&nbsp;</a></span>OnTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void JoypadConfig::OnTimer </td>
+          <td>(</td>
+          <td class="paramtype">UINT_PTR&#160;</td>
+          <td class="paramname"><em>nIDEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00138">138</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a7a6ef57ff2638f545380618b2d3fdf9d">checkDevices</a>();</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  </div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  CDialog::OnTimer(nIDEvent);</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;}</div><div class="ttc" id="class_input_html_a7a6ef57ff2638f545380618b2d3fdf9d"><div class="ttname"><a href="class_input.html#a7a6ef57ff2638f545380618b2d3fdf9d">Input::checkDevices</a></div><div class="ttdeci">virtual void checkDevices()=0</div></div>
+<div class="ttc" id="class_v_b_a_html_aaab971cb5d67a69e1a26502d15a4dc60"><div class="ttname"><a href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">VBA::input</a></div><div class="ttdeci">Input * input</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00161">VBA.h:161</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_joypad_config_af55cd03e7ed293d17d338858285a8087_cgraph.png" border="0" usemap="#class_joypad_config_af55cd03e7ed293d17d338858285a8087_cgraph" alt=""/></div>
+<map name="class_joypad_config_af55cd03e7ed293d17d338858285a8087_cgraph" id="class_joypad_config_af55cd03e7ed293d17d338858285a8087_cgraph">
+<area shape="rect" id="node2" href="class_input.html#a7a6ef57ff2638f545380618b2d3fdf9d" title="Input::checkDevices" alt="" coords="209,5,348,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a8b18405a6d92fbdca34cb1d1a6fcee2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b18405a6d92fbdca34cb1d1a6fcee2c">&#9670;&nbsp;</a></span>buttonA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::buttonA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00081">81</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8600f90f1074cda2ff14b73e6fc8e3d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8600f90f1074cda2ff14b73e6fc8e3d6">&#9670;&nbsp;</a></span>buttonB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::buttonB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00080">80</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a4aa48681f17e03adced442271f29211f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4aa48681f17e03adced442271f29211f">&#9670;&nbsp;</a></span>buttonGS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::buttonGS</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5a03e1bd6ea571aeeadfbaee7362830f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a03e1bd6ea571aeeadfbaee7362830f">&#9670;&nbsp;</a></span>buttonL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::buttonL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00078">78</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae8492d5da1c116da58dbaecc7572576b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8492d5da1c116da58dbaecc7572576b">&#9670;&nbsp;</a></span>buttonR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::buttonR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00077">77</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a79baa8f4d47b02dde3f032961e239556"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79baa8f4d47b02dde3f032961e239556">&#9670;&nbsp;</a></span>buttonSelect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::buttonSelect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9083bf057d36c0fd78fe1976bee9fb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9083bf057d36c0fd78fe1976bee9fb74">&#9670;&nbsp;</a></span>buttonStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::buttonStart</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a82881a0174178e60d0a60a2b574fd385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82881a0174178e60d0a60a2b574fd385">&#9670;&nbsp;</a></span>capture</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::capture</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad42ffdfc61bb990382b0a35d15909644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42ffdfc61bb990382b0a35d15909644">&#9670;&nbsp;</a></span>down</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::down</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a99c36e2559ce17f64aa004c37c5f8771"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99c36e2559ce17f64aa004c37c5f8771">&#9670;&nbsp;</a></span>left</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00072">72</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae941e8b6868e423b3c2bf4313c3c340f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae941e8b6868e423b3c2bf4313c3c340f">&#9670;&nbsp;</a></span>right</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a57365c2b56d24e6cf20d3586d692583d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57365c2b56d24e6cf20d3586d692583d">&#9670;&nbsp;</a></span>speed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::speed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae2eb21b8f63e8cf86a5461e78901c3f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2eb21b8f63e8cf86a5461e78901c3f5">&#9670;&nbsp;</a></span>timerId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">UINT_PTR JoypadConfig::timerId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00094">94</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a65379815cbe3f6b1d63d6d6655be22dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65379815cbe3f6b1d63d6d6655be22dd">&#9670;&nbsp;</a></span>up</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> JoypadConfig::up</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad71f1ad36754d788de00eb4bb5630dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad71f1ad36754d788de00eb4bb5630dda">&#9670;&nbsp;</a></span>which</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> JoypadConfig::which</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00095">95</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_joypad_8h_source.html">Joypad.h</a></li>
-<li>src/win32/Joypad.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_joypad_8h_source.html">Joypad.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_joypad_config.html">JoypadConfig</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,8 @@
+<map id="gbVerifyGsCode" name="gbVerifyGsCode">
+<area shape="rect" id="node2" href="$gb_cheats_8h.html#a7d130abb9caa685fcc400464c0ff8fdc" title="gbAddGsCheat" alt="" coords="169,56,280,83"/>
+<area shape="rect" id="node3" href="$gb_cheats_8h.html#aaf0e545768836b242130504ed454236f" title="gbCheatsReadGame" alt="" coords="342,5,485,32"/>
+<area shape="rect" id="node4" href="$gb_cheats_8h.html#a5fe6a356ce452b784ba838d3ae32bce2" title="gbCheatReadGSCodeFile" alt="" coords="328,56,499,83"/>
+<area shape="rect" id="node6" href="$class_add_g_b_cheat.html#a054ba5040a40f7ef4b3a0ddb5a458592" title="AddGBCheat::addCheat" alt="" coords="333,107,494,133"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a3e7abf73687cb0dbf61c3707de5e10f4" title="MainWnd::OnFileImportGamesharkcodefile" alt="" coords="547,56,817,83"/>
+<area shape="rect" id="node7" href="$class_add_g_b_cheat.html#aef6d73f3cdf51e28bbba9f7e14b21941" title="AddGBCheat::OnOk" alt="" coords="612,107,752,133"/>
+</map>

@@ -1,0 +1,1012 @@
+\hypertarget{gb_cheats_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gb/gb\+Cheats.cpp 파일 참조}
+\label{gb_cheats_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gb/gb\+Cheats.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gb/gb\+Cheats.\+cpp}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+System.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+N\+L\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gb\+Cheats.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gb\+Globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+B.\+h\char`\"{}}\newline
+gb\+Cheats.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{G\+B\+C\+H\+E\+A\+T\+\_\+\+I\+S\+\_\+\+H\+EX}}(a)~( ((a)$>$=\textquotesingle{}A\textquotesingle{} \&\& (a) $<$=\textquotesingle{}F\textquotesingle{}) $\vert$$\vert$ ((a) $>$=\textquotesingle{}0\textquotesingle{} \&\& (a) $<$= \textquotesingle{}9\textquotesingle{}))
+\item 
+\#define \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{G\+B\+C\+H\+E\+A\+T\+\_\+\+H\+E\+X\+\_\+\+V\+A\+L\+UE}}(a)~( (a) $>$= \textquotesingle{}A\textquotesingle{} ? (a) -\/ \textquotesingle{}A\textquotesingle{} + 10 \+: (a) -\/ \textquotesingle{}0\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}{gb\+Cheat\+Update\+Map}} ()
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_a3c94212426ac073dda049015b64810fb}{gb\+Cheats\+Save\+Game}} (gz\+File gz\+File)
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_a607990146f7d1febd1cf4eb15a95ea04}{gb\+Cheats\+Read\+Game}} (gz\+File gz\+File, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} version)
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_ab5f68ce87fbfb28074c6681a50637c0e}{gb\+Cheats\+Save\+Cheat\+List}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+bool \mbox{\hyperlink{gb_cheats_8cpp_aa08d2a2e0e2149ffa048dd38c317da3f}{gb\+Cheats\+Load\+Cheat\+List}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+bool \mbox{\hyperlink{gb_cheats_8cpp_a4af07b1b8e7409c8fc47174c046a56e9}{gb\+Verify\+Gs\+Code}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$code)
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_ad058dd136247699557fcd98824d1d941}{gb\+Add\+Gs\+Cheat}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$code, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$desc)
+\item 
+bool \mbox{\hyperlink{gb_cheats_8cpp_a2421599580e8039d6cb4ebb5bdff2d37}{gb\+Verify\+Gg\+Code}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$code)
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_a785cbe24aeae0cc2ab57d9fefd21acea}{gb\+Add\+Gg\+Cheat}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$code, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$desc)
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_af25734b3d027db822c230358cacedf10}{gb\+Cheat\+Remove}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}})
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_aac0eadde26bcba9cbe5ff2f0fa71ee23}{gb\+Cheat\+Remove\+All}} ()
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_aed1bdafc2cfd18d6345102077dcdca76}{gb\+Cheat\+Enable}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}})
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_a5860b5a75e2297e4d2f2f69dde0ad689}{gb\+Cheat\+Disable}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}})
+\item 
+bool \mbox{\hyperlink{gb_cheats_8cpp_a38377cd690473f3f0ec0dca22adec1ff}{gb\+Cheat\+Read\+G\+S\+Code\+File}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$file\+Name)
+\item 
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{gb_cheats_8cpp_af71e5f30b865a1635f43ff827ac633b8}{gb\+Cheat\+Read}} (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} address)
+\item 
+void \mbox{\hyperlink{gb_cheats_8cpp_a62e7f47b3eac98eb01dfcf8cb95fa743}{gb\+Cheat\+Write}} (bool reboot)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structgb_cheat}{gb\+Cheat}} \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gb\+Cheat\+List}} \mbox{[}100\mbox{]}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gb\+Cheat\+Number}} = 0
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}{gb\+Next\+Cheat}} = 0
+\item 
+bool \mbox{\hyperlink{gb_cheats_8cpp_a1de5cb765bb55c7eb16964a3acdab814}{gb\+Cheat\+Map}} \mbox{[}0x10000\mbox{]}
+\item 
+bool \mbox{\hyperlink{gb_cheats_8cpp_a77d9fae8175282841c0cdda4dd1dc24a}{cheats\+Enabled}}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}\label{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!G\+B\+C\+H\+E\+A\+T\+\_\+\+H\+E\+X\+\_\+\+V\+A\+L\+UE@{G\+B\+C\+H\+E\+A\+T\+\_\+\+H\+E\+X\+\_\+\+V\+A\+L\+UE}}
+\index{G\+B\+C\+H\+E\+A\+T\+\_\+\+H\+E\+X\+\_\+\+V\+A\+L\+UE@{G\+B\+C\+H\+E\+A\+T\+\_\+\+H\+E\+X\+\_\+\+V\+A\+L\+UE}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{G\+B\+C\+H\+E\+A\+T\+\_\+\+H\+E\+X\+\_\+\+V\+A\+L\+UE}{GBCHEAT\_HEX\_VALUE}}
+{\footnotesize\ttfamily \#define G\+B\+C\+H\+E\+A\+T\+\_\+\+H\+E\+X\+\_\+\+V\+A\+L\+UE(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~( (a) $>$= \textquotesingle{}A\textquotesingle{} ? (a) -\/ \textquotesingle{}A\textquotesingle{} + 10 \+: (a) -\/ \textquotesingle{}0\textquotesingle{})}
+
+
+
+gb\+Cheats.\+cpp 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}\label{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!G\+B\+C\+H\+E\+A\+T\+\_\+\+I\+S\+\_\+\+H\+EX@{G\+B\+C\+H\+E\+A\+T\+\_\+\+I\+S\+\_\+\+H\+EX}}
+\index{G\+B\+C\+H\+E\+A\+T\+\_\+\+I\+S\+\_\+\+H\+EX@{G\+B\+C\+H\+E\+A\+T\+\_\+\+I\+S\+\_\+\+H\+EX}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{G\+B\+C\+H\+E\+A\+T\+\_\+\+I\+S\+\_\+\+H\+EX}{GBCHEAT\_IS\_HEX}}
+{\footnotesize\ttfamily \#define G\+B\+C\+H\+E\+A\+T\+\_\+\+I\+S\+\_\+\+H\+EX(\begin{DoxyParamCaption}\item[{}]{a }\end{DoxyParamCaption})~( ((a)$>$=\textquotesingle{}A\textquotesingle{} \&\& (a) $<$=\textquotesingle{}F\textquotesingle{}) $\vert$$\vert$ ((a) $>$=\textquotesingle{}0\textquotesingle{} \&\& (a) $<$= \textquotesingle{}9\textquotesingle{}))}
+
+
+
+gb\+Cheats.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{gb_cheats_8cpp_a785cbe24aeae0cc2ab57d9fefd21acea}\label{gb_cheats_8cpp_a785cbe24aeae0cc2ab57d9fefd21acea}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Add\+Gg\+Cheat@{gb\+Add\+Gg\+Cheat}}
+\index{gb\+Add\+Gg\+Cheat@{gb\+Add\+Gg\+Cheat}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Add\+Gg\+Cheat()}{gbAddGgCheat()}}
+{\footnotesize\ttfamily void gb\+Add\+Gg\+Cheat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{code,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{desc }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 306 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+307 \{
+308   \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}} > 99) \{
+309     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a3d90404cb228be8cad6f9c259afa3fad}{MSG\_MAXIMUM\_NUMBER\_OF\_CHEATS}},
+310                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Maximum number of cheats reached."}));
+311     \textcolor{keywordflow}{return};
+312   \}
+313 
+314   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a2421599580e8039d6cb4ebb5bdff2d37}{gbVerifyGgCode}}(code)) \{
+315     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_ae26a1702ab5002f51a49e5f40e3b1aed}{MSG\_INVALID\_GAMEGENIE\_CODE}},
+316                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Invalid GameGenie code: %s"}), code);
+317     \textcolor{keywordflow}{return};
+318   \}
+319   
+320   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}};
+321 
+322   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = strlen(code);
+323   
+324   strcpy(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].cheatCode, code);
+325   strcpy(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].cheatDesc, desc);
+326 
+327   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_ab501c0fb95ea8338237734ec8e2fc981}{code}} = 0x101;
+328   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_acabb64808f69357b955b5c9f464c9cc1}{value}} = (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[0]) << 4) +
+329     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[1]);
+330   
+331   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_a9cd0d16b2f8cfad6408130d037181559}{address}} = (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[2]) << 8) +
+332     (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[4]) << 4) +
+333     (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[5])) +
+334     ((\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[6]) ^ 0x0f) << 12);
+335 
+336   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_aae5ac2290ab371e369b8c11789b5d7f9}{compare}} = 0;
+337   
+338   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 7 && \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 8) \{
+339     
+340     \textcolor{keywordtype}{int} compare = (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[8]) << 4) +
+341       (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[10]));
+342     compare = compare ^ 0xff;
+343     compare = (compare >> 2) | ( (compare << 6) & 0xc0);
+344     compare ^= 0x45;
+345 
+346     \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_aae5ac2290ab371e369b8c11789b5d7f9}{compare}} = compare;
+347     \textcolor{comment}{//gbCheatList[i].code = 0;}
+348     \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_ab501c0fb95ea8338237734ec8e2fc981}{code}} = 0x100; \textcolor{comment}{// fix for compare value}
+349 
+350   \}
+351 
+352 
+353   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_af45ed85e44d6d20c3f0f9be2e2fd8c3b}{enabled}} = \textcolor{keyword}{true};
+354   
+355   \mbox{\hyperlink{gb_cheats_8cpp_a1de5cb765bb55c7eb16964a3acdab814}{gbCheatMap}}[\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_a9cd0d16b2f8cfad6408130d037181559}{address}}] = \textcolor{keyword}{true};
+356   
+357   \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}++;
+358 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{gb_cheats_8cpp_a785cbe24aeae0cc2ab57d9fefd21acea_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{gb_cheats_8cpp_a785cbe24aeae0cc2ab57d9fefd21acea_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_ad058dd136247699557fcd98824d1d941}\label{gb_cheats_8cpp_ad058dd136247699557fcd98824d1d941}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Add\+Gs\+Cheat@{gb\+Add\+Gs\+Cheat}}
+\index{gb\+Add\+Gs\+Cheat@{gb\+Add\+Gs\+Cheat}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Add\+Gs\+Cheat()}{gbAddGsCheat()}}
+{\footnotesize\ttfamily void gb\+Add\+Gs\+Cheat (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{code,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{desc }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 188 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+189 \{
+190   \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}} > 99) \{
+191     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a3d90404cb228be8cad6f9c259afa3fad}{MSG\_MAXIMUM\_NUMBER\_OF\_CHEATS}},
+192                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Maximum number of cheats reached."}));
+193     \textcolor{keywordflow}{return};
+194   \}
+195 
+196   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a4af07b1b8e7409c8fc47174c046a56e9}{gbVerifyGsCode}}(code)) \{
+197     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_ac59e0c7db5ae9f605a10a3ac8e3af71c}{MSG\_INVALID\_GAMESHARK\_CODE}},
+198                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Invalid GameShark code: %s"}), code);
+199     \textcolor{keywordflow}{return};
+200   \}
+201   
+202   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}};
+203 
+204   strcpy(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].cheatCode, code);
+205   strcpy(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].cheatDesc, desc);
+206   
+207   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_ab501c0fb95ea8338237734ec8e2fc981}{code}} = \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[0]) << 4 |
+208     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[1]);
+209 
+210   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_acabb64808f69357b955b5c9f464c9cc1}{value}} = \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[2]) << 4 |
+211     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[3]);
+212 
+213   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_a9cd0d16b2f8cfad6408130d037181559}{address}} = \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[6]) << 12 |
+214     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[7]) << 8 |
+215     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[4]) << 4 |
+216     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[5]);
+217 
+218   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_aae5ac2290ab371e369b8c11789b5d7f9}{compare}} = 0;
+219 
+220   \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_af45ed85e44d6d20c3f0f9be2e2fd8c3b}{enabled}} = \textcolor{keyword}{true};
+221 
+222   \textcolor{keywordtype}{int} gsCode = \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_ab501c0fb95ea8338237734ec8e2fc981}{code}};
+223 
+224   \textcolor{keywordflow}{if} ((gsCode !=1) && ((gsCode & 0xF0) !=0x80) && ((gsCode & 0xF0) !=0x90) &&
+225       ((gsCode & 0xF0) !=0xA0) && ((gsCode) !=0xF0) && ((gsCode) !=0xF1))
+226     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a2ae578b412429d4bc26a2012a4654eff}{MSG\_WRONG\_GAMESHARK\_CODE}},
+227                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Wrong GameShark code type : %s"}), code);
+228   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (((gsCode & 0xF0) ==0xA0) || ((gsCode) ==0xF0) || ((gsCode) ==0xF1))
+229     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a23c37ce6d950b9f8d3979e18c30dcaa5}{MSG\_UNSUPPORTED\_GAMESHARK\_CODE}},
+230                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Unsupported GameShark code type : %s"}), code);
+231 
+232   \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}++;
+233 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{gb_cheats_8cpp_ad058dd136247699557fcd98824d1d941_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_ad058dd136247699557fcd98824d1d941_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_a5860b5a75e2297e4d2f2f69dde0ad689}\label{gb_cheats_8cpp_a5860b5a75e2297e4d2f2f69dde0ad689}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Disable@{gb\+Cheat\+Disable}}
+\index{gb\+Cheat\+Disable@{gb\+Cheat\+Disable}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Disable()}{gbCheatDisable()}}
+{\footnotesize\ttfamily void gb\+Cheat\+Disable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{i }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 394 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+395 \{
+396   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} >=0 && \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}) \{
+397     \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].enabled) \{
+398       \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_af45ed85e44d6d20c3f0f9be2e2fd8c3b}{enabled}} = \textcolor{keyword}{false};
+399       \mbox{\hyperlink{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}{gbCheatUpdateMap}}();
+400     \}
+401   \}
+402 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{gb_cheats_8cpp_a5860b5a75e2297e4d2f2f69dde0ad689_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a5860b5a75e2297e4d2f2f69dde0ad689_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_aed1bdafc2cfd18d6345102077dcdca76}\label{gb_cheats_8cpp_aed1bdafc2cfd18d6345102077dcdca76}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Enable@{gb\+Cheat\+Enable}}
+\index{gb\+Cheat\+Enable@{gb\+Cheat\+Enable}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Enable()}{gbCheatEnable()}}
+{\footnotesize\ttfamily void gb\+Cheat\+Enable (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{i }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 384 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+385 \{
+386   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} >=0 && \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}) \{
+387     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].enabled) \{
+388       \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_af45ed85e44d6d20c3f0f9be2e2fd8c3b}{enabled}} = \textcolor{keyword}{true};
+389       \mbox{\hyperlink{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}{gbCheatUpdateMap}}();
+390     \}
+391   \}
+392 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{gb_cheats_8cpp_aed1bdafc2cfd18d6345102077dcdca76_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{gb_cheats_8cpp_aed1bdafc2cfd18d6345102077dcdca76_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_af71e5f30b865a1635f43ff827ac633b8}\label{gb_cheats_8cpp_af71e5f30b865a1635f43ff827ac633b8}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Read@{gb\+Cheat\+Read}}
+\index{gb\+Cheat\+Read@{gb\+Cheat\+Read}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Read()}{gbCheatRead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} gb\+Cheat\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{address }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 438 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+439 \{
+440   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a77d9fae8175282841c0cdda4dd1dc24a}{cheatsEnabled}})
+441     \textcolor{keywordflow}{return} \mbox{\hyperlink{gb_globals_8cpp_a71edbb615a1ec7c5b134e660531dd7dd}{gbMemoryMap}}[address>>12][address & 0xFFF];
+442 
+443   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+444     \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].enabled && \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].address == address) \{
+445       \textcolor{keywordflow}{switch}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].code) \{
+446       \textcolor{keywordflow}{case} 0x100: \textcolor{comment}{// GameGenie support}
+447         \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_globals_8cpp_a71edbb615a1ec7c5b134e660531dd7dd}{gbMemoryMap}}[address>>12][address&0xFFF] == \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[
+      \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].compare)
+448           \textcolor{keywordflow}{return} \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_acabb64808f69357b955b5c9f464c9cc1}{value}};
+449         \textcolor{keywordflow}{break};
+450       \textcolor{keywordflow}{case} 0x101: \textcolor{comment}{// GameGenie 6 digits code support}
+451           \textcolor{keywordflow}{return} \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_acabb64808f69357b955b5c9f464c9cc1}{value}};
+452         \textcolor{keywordflow}{break};
+453       \}
+454     \}
+455   \}
+456   \textcolor{keywordflow}{return} \mbox{\hyperlink{gb_globals_8cpp_a71edbb615a1ec7c5b134e660531dd7dd}{gbMemoryMap}}[address>>12][address&0xFFF];
+457 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_af71e5f30b865a1635f43ff827ac633b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_a38377cd690473f3f0ec0dca22adec1ff}\label{gb_cheats_8cpp_a38377cd690473f3f0ec0dca22adec1ff}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Read\+G\+S\+Code\+File@{gb\+Cheat\+Read\+G\+S\+Code\+File}}
+\index{gb\+Cheat\+Read\+G\+S\+Code\+File@{gb\+Cheat\+Read\+G\+S\+Code\+File}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Read\+G\+S\+Code\+File()}{gbCheatReadGSCodeFile()}}
+{\footnotesize\ttfamily bool gb\+Cheat\+Read\+G\+S\+Code\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{file\+Name }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 404 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+405 \{
+406   FILE *\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}} = fopen(fileName, \textcolor{stringliteral}{"rb"});
+407     
+408   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}) \{
+409     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a92eb477b404441aeb32e495e32f34ee5}{MSG\_CANNOT\_OPEN\_FILE}}, \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Cannot open file %s"}), 
+      fileName);
+410     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+411   \}
+412   
+413   fseek(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, 0x18, \mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}});
+414   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = 0;
+415   fread(&\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}, 1, 2, \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+416   \textcolor{keywordtype}{int} dummy = 0;
+417   \mbox{\hyperlink{gb_cheats_8cpp_aac0eadde26bcba9cbe5ff2f0fa71ee23}{gbCheatRemoveAll}}();
+418   \textcolor{keywordtype}{char} desc[13];
+419   \textcolor{keywordtype}{char} code[9];
+420   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+421   \textcolor{keywordflow}{for}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+422     fread(&dummy, 1, 2, \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});    
+423     fread(desc, 1, 12, \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+424     desc[12] = 0;
+425     fread(code, 1, 8, \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+426     code[8] = 0;
+427     \mbox{\hyperlink{gb_cheats_8cpp_ad058dd136247699557fcd98824d1d941}{gbAddGsCheat}}(code, desc);
+428   \}
+429 
+430   \textcolor{keywordflow}{for}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++)
+431     \mbox{\hyperlink{gb_cheats_8cpp_a5860b5a75e2297e4d2f2f69dde0ad689}{gbCheatDisable}}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+432 
+433   fclose(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+434   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+435 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a38377cd690473f3f0ec0dca22adec1ff_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a38377cd690473f3f0ec0dca22adec1ff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_af25734b3d027db822c230358cacedf10}\label{gb_cheats_8cpp_af25734b3d027db822c230358cacedf10}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Remove@{gb\+Cheat\+Remove}}
+\index{gb\+Cheat\+Remove@{gb\+Cheat\+Remove}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Remove()}{gbCheatRemove()}}
+{\footnotesize\ttfamily void gb\+Cheat\+Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{i }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 360 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+361 \{
+362   \textcolor{keywordflow}{if}(i < 0 || i >= \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}) \{
+363     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_ad3f2e081c2e60b720736153246215b46}{MSG\_INVALID\_CHEAT\_TO\_REMOVE}},
+364                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Invalid cheat to remove %d"}), \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+365     \textcolor{keywordflow}{return};
+366   \}
+367   
+368   \textcolor{keywordflow}{if}((\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+1) <  \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}) \{
+369     memcpy(&\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}], &\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+1], \textcolor{keyword}{sizeof}(
+      \mbox{\hyperlink{structgb_cheat}{gbCheat}})*
+370            (\mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}-\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}-1));
+371   \}
+372   
+373   \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}--;
+374 
+375   \mbox{\hyperlink{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}{gbCheatUpdateMap}}();
+376 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{gb_cheats_8cpp_af25734b3d027db822c230358cacedf10_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{gb_cheats_8cpp_af25734b3d027db822c230358cacedf10_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_aac0eadde26bcba9cbe5ff2f0fa71ee23}\label{gb_cheats_8cpp_aac0eadde26bcba9cbe5ff2f0fa71ee23}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Remove\+All@{gb\+Cheat\+Remove\+All}}
+\index{gb\+Cheat\+Remove\+All@{gb\+Cheat\+Remove\+All}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Remove\+All()}{gbCheatRemoveAll()}}
+{\footnotesize\ttfamily void gb\+Cheat\+Remove\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 378 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+379 \{
+380   \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}} = 0;
+381   \mbox{\hyperlink{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}{gbCheatUpdateMap}}();
+382 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{gb_cheats_8cpp_aac0eadde26bcba9cbe5ff2f0fa71ee23_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_aac0eadde26bcba9cbe5ff2f0fa71ee23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_aa08d2a2e0e2149ffa048dd38c317da3f}\label{gb_cheats_8cpp_aa08d2a2e0e2149ffa048dd38c317da3f}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheats\+Load\+Cheat\+List@{gb\+Cheats\+Load\+Cheat\+List}}
+\index{gb\+Cheats\+Load\+Cheat\+List@{gb\+Cheats\+Load\+Cheat\+List}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheats\+Load\+Cheat\+List()}{gbCheatsLoadCheatList()}}
+{\footnotesize\ttfamily bool gb\+Cheats\+Load\+Cheat\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 110 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+111 \{
+112   \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}} = 0;
+113 
+114   \mbox{\hyperlink{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}{gbCheatUpdateMap}}();
+115   
+116   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = 0;
+117 
+118   FILE *f = fopen(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \textcolor{stringliteral}{"rb"});
+119 
+120   \textcolor{keywordflow}{if}(f == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+121     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+122 
+123   \textcolor{keywordtype}{int} version = 0;
+124 
+125   \textcolor{keywordflow}{if}(fread(&version, 1, \textcolor{keyword}{sizeof}(version), f) != \textcolor{keyword}{sizeof}(version)) \{
+126     fclose(f);
+127     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+128   \}
+129      
+130   \textcolor{keywordflow}{if}(version != 1) \{
+131     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_aabee294d5364eaef4f657a6e7a184150}{MSG\_UNSUPPORTED\_CHEAT\_LIST\_VERSION}},
+132                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Unsupported cheat list version %d"}), version);
+133     fclose(f);
+134     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+135   \}
+136 
+137   \textcolor{keywordtype}{int} type = 0;
+138   \textcolor{keywordflow}{if}(fread(&type, 1, \textcolor{keyword}{sizeof}(type), f) != \textcolor{keyword}{sizeof}(type)) \{
+139     fclose(f);
+140     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+141   \}
+142 
+143   \textcolor{keywordflow}{if}(type != 1) \{
+144     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a0465b84b7597f58a75891eb10ba778ef}{MSG\_UNSUPPORTED\_CHEAT\_LIST\_TYPE}},
+145                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Unsupported cheat list type %d"}), type);
+146     fclose(f);
+147     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+148   \}
+149   
+150   \textcolor{keywordflow}{if}(fread(&\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}, 1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}), f) != \textcolor{keyword}{sizeof}(\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}})) \{
+151     fclose(f);
+152     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+153   \}
+154   
+155   \textcolor{keywordflow}{if}(fread(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}, 1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}), f) != \textcolor{keyword}{sizeof}(
+      \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}})) \{
+156     fclose(f);
+157     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+158   \}
+159 
+160   \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}} = \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+161   \mbox{\hyperlink{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}{gbCheatUpdateMap}}();
+162   
+163   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+164 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{gb_cheats_8cpp_aa08d2a2e0e2149ffa048dd38c317da3f_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_aa08d2a2e0e2149ffa048dd38c317da3f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_a607990146f7d1febd1cf4eb15a95ea04}\label{gb_cheats_8cpp_a607990146f7d1febd1cf4eb15a95ea04}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheats\+Read\+Game@{gb\+Cheats\+Read\+Game}}
+\index{gb\+Cheats\+Read\+Game@{gb\+Cheats\+Read\+Game}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheats\+Read\+Game()}{gbCheatsReadGame()}}
+{\footnotesize\ttfamily void gb\+Cheats\+Read\+Game (\begin{DoxyParamCaption}\item[{gz\+File}]{gz\+File,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{version }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 59 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+60 \{
+61   \textcolor{keywordflow}{if}(version <= 8) \{
+62     \textcolor{keywordtype}{int} gbGgOn = \mbox{\hyperlink{_util_8cpp_a91f3a5d5ee73824d2d64f329b7a7e6a2}{utilReadInt}}(gzFile);
+63 
+64     \textcolor{keywordflow}{if}(gbGgOn) \{
+65       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = \mbox{\hyperlink{_util_8cpp_a91f3a5d5ee73824d2d64f329b7a7e6a2}{utilReadInt}}(gzFile);
+66       \mbox{\hyperlink{structgb_xx_cheat}{gbXxCheat}} tmpCheat;
+67       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+68         \mbox{\hyperlink{_util_8cpp_a7c3497694953dfa7b0170b41e4b6ce93}{utilGzRead}}(gzFile,&tmpCheat, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structgb_xx_cheat}{gbXxCheat}}));
+69         \mbox{\hyperlink{gb_cheats_8cpp_a785cbe24aeae0cc2ab57d9fefd21acea}{gbAddGgCheat}}(tmpCheat.\mbox{\hyperlink{structgb_xx_cheat_a913e5f0e9db40d08fb4c6133cd313e1f}{cheatCode}}, tmpCheat.\mbox{\hyperlink{structgb_xx_cheat_a44a4fb7ecbad404cba31ef24bbf9fa72}{cheatDesc}});
+70       \}
+71     \}
+72   
+73     \textcolor{keywordtype}{int} gbGsOn = \mbox{\hyperlink{_util_8cpp_a91f3a5d5ee73824d2d64f329b7a7e6a2}{utilReadInt}}(gzFile);
+74     
+75     \textcolor{keywordflow}{if}(gbGsOn) \{
+76       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = \mbox{\hyperlink{_util_8cpp_a91f3a5d5ee73824d2d64f329b7a7e6a2}{utilReadInt}}(gzFile);
+77       \mbox{\hyperlink{structgb_xx_cheat}{gbXxCheat}} tmpCheat;
+78       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+79         \mbox{\hyperlink{_util_8cpp_a7c3497694953dfa7b0170b41e4b6ce93}{utilGzRead}}(gzFile,&tmpCheat, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structgb_xx_cheat}{gbXxCheat}}));
+80         \mbox{\hyperlink{gb_cheats_8cpp_ad058dd136247699557fcd98824d1d941}{gbAddGsCheat}}(tmpCheat.\mbox{\hyperlink{structgb_xx_cheat_a913e5f0e9db40d08fb4c6133cd313e1f}{cheatCode}}, tmpCheat.\mbox{\hyperlink{structgb_xx_cheat_a44a4fb7ecbad404cba31ef24bbf9fa72}{cheatDesc}});
+81       \}
+82     \}
+83   \} \textcolor{keywordflow}{else} \{
+84     \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}} = \mbox{\hyperlink{_util_8cpp_a91f3a5d5ee73824d2d64f329b7a7e6a2}{utilReadInt}}(gzFile);
+85 
+86     \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}>0) \{
+87       \mbox{\hyperlink{_util_8cpp_a7c3497694953dfa7b0170b41e4b6ce93}{utilGzRead}}(gzFile, &\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[0], \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structgb_cheat}{gbCheat}})*
+      \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}});
+88     \}
+89   \}
+90 
+91   \mbox{\hyperlink{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}{gbCheatUpdateMap}}();
+92 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a607990146f7d1febd1cf4eb15a95ea04_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_ab5f68ce87fbfb28074c6681a50637c0e}\label{gb_cheats_8cpp_ab5f68ce87fbfb28074c6681a50637c0e}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheats\+Save\+Cheat\+List@{gb\+Cheats\+Save\+Cheat\+List}}
+\index{gb\+Cheats\+Save\+Cheat\+List@{gb\+Cheats\+Save\+Cheat\+List}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheats\+Save\+Cheat\+List()}{gbCheatsSaveCheatList()}}
+{\footnotesize\ttfamily void gb\+Cheats\+Save\+Cheat\+List (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 94 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+95 \{
+96   \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}} == 0)
+97     \textcolor{keywordflow}{return};
+98   FILE *f = fopen(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \textcolor{stringliteral}{"wb"});
+99   \textcolor{keywordflow}{if}(f == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+100     \textcolor{keywordflow}{return};
+101   \textcolor{keywordtype}{int} version = 1;
+102   fwrite(&version, 1, \textcolor{keyword}{sizeof}(version), f);
+103   \textcolor{keywordtype}{int} type = 1;
+104   fwrite(&type, 1, \textcolor{keyword}{sizeof}(type), f);
+105   fwrite(&\mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}, 1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}), f);
+106   fwrite(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}, 1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}), f);
+107   fclose(f);
+108 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_ab5f68ce87fbfb28074c6681a50637c0e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_a3c94212426ac073dda049015b64810fb}\label{gb_cheats_8cpp_a3c94212426ac073dda049015b64810fb}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheats\+Save\+Game@{gb\+Cheats\+Save\+Game}}
+\index{gb\+Cheats\+Save\+Game@{gb\+Cheats\+Save\+Game}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheats\+Save\+Game()}{gbCheatsSaveGame()}}
+{\footnotesize\ttfamily void gb\+Cheats\+Save\+Game (\begin{DoxyParamCaption}\item[{gz\+File}]{gz\+File }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+53 \{
+54   \mbox{\hyperlink{_util_8cpp_aec53c916edfced4af7302919f3efb92b}{utilWriteInt}}(gzFile, \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}});
+55   \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}>0)
+56     \mbox{\hyperlink{_util_8cpp_a0c984fb94b8626c6a105fa293fa73d0e}{utilGzWrite}}(gzFile, &\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[0], \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structgb_cheat}{gbCheat}})*
+      \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}});
+57 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a3c94212426ac073dda049015b64810fb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}\label{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Update\+Map@{gb\+Cheat\+Update\+Map}}
+\index{gb\+Cheat\+Update\+Map@{gb\+Cheat\+Update\+Map}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Update\+Map()}{gbCheatUpdateMap()}}
+{\footnotesize\ttfamily void gb\+Cheat\+Update\+Map (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 42 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+43 \{
+44   memset(\mbox{\hyperlink{gb_cheats_8cpp_a1de5cb765bb55c7eb16964a3acdab814}{gbCheatMap}}, 0, 0x10000);
+45 
+46   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+47     \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].enabled)
+48       \mbox{\hyperlink{gb_cheats_8cpp_a1de5cb765bb55c7eb16964a3acdab814}{gbCheatMap}}[\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_a9cd0d16b2f8cfad6408130d037181559}{address}}] = \textcolor{keyword}{true};
+49   \}
+50 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_afec891780bf3cddf17a88b21b8b2587b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_a62e7f47b3eac98eb01dfcf8cb95fa743}\label{gb_cheats_8cpp_a62e7f47b3eac98eb01dfcf8cb95fa743}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Write@{gb\+Cheat\+Write}}
+\index{gb\+Cheat\+Write@{gb\+Cheat\+Write}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Write()}{gbCheatWrite()}}
+{\footnotesize\ttfamily void gb\+Cheat\+Write (\begin{DoxyParamCaption}\item[{bool}]{reboot }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 461 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+462 \{
+463   \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_a77d9fae8175282841c0cdda4dd1dc24a}{cheatsEnabled}})
+464   \{
+465     \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} address = 0;
+466 
+467     \textcolor{keywordflow}{if} (\mbox{\hyperlink{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}{gbNextCheat}} >= \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}})
+468       \mbox{\hyperlink{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}{gbNextCheat}} = 0;
+469 
+470     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = \mbox{\hyperlink{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}{gbNextCheat}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}{gbCheatNumber}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+471       \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].enabled) \{
+472         address = \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structgb_cheat_a9cd0d16b2f8cfad6408130d037181559}{address}};
+473         \textcolor{keywordflow}{if} ((!reboot) && (address >= 0x8000) && !((address>=0xA000) && (address<0xC000)))
+474         \{ \textcolor{comment}{// These codes are executed one per one, at each Vblank}
+475           \textcolor{keywordflow}{switch}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].code) \{
+476             \textcolor{keywordflow}{case} 0x01:
+477               \mbox{\hyperlink{_g_b_8cpp_aff32fbe8c7f3bb4a0f6b8b87b8285e0e}{gbWriteMemory}}(address, \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].value);
+478               \mbox{\hyperlink{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}{gbNextCheat}} = \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+1;
+479               \textcolor{keywordflow}{return};
+480             \textcolor{keywordflow}{case} 0x90:
+481             \textcolor{keywordflow}{case} 0x91:
+482             \textcolor{keywordflow}{case} 0x92:
+483             \textcolor{keywordflow}{case} 0x93:
+484             \textcolor{keywordflow}{case} 0x94:
+485             \textcolor{keywordflow}{case} 0x95:
+486             \textcolor{keywordflow}{case} 0x96:
+487             \textcolor{keywordflow}{case} 0x97:
+488             \textcolor{keywordflow}{case} 0x98:
+489             \textcolor{keywordflow}{case} 0x99:
+490             \textcolor{keywordflow}{case} 0x9A:
+491             \textcolor{keywordflow}{case} 0x9B:
+492             \textcolor{keywordflow}{case} 0x9C:
+493             \textcolor{keywordflow}{case} 0x9D:
+494             \textcolor{keywordflow}{case} 0x9E:
+495             \textcolor{keywordflow}{case} 0x9F:
+496               \textcolor{keywordtype}{int} oldbank = \mbox{\hyperlink{gb_globals_8cpp_a43f07d3a5fcb2301e2662188e888c5a1}{gbMemory}}[0xff70];
+497               \mbox{\hyperlink{_g_b_8cpp_aff32fbe8c7f3bb4a0f6b8b87b8285e0e}{gbWriteMemory}}(0xff70, \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].code & 0xf);
+498               \mbox{\hyperlink{_g_b_8cpp_aff32fbe8c7f3bb4a0f6b8b87b8285e0e}{gbWriteMemory}}(address, \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].value);
+499               \mbox{\hyperlink{_g_b_8cpp_aff32fbe8c7f3bb4a0f6b8b87b8285e0e}{gbWriteMemory}}(0xff70, oldbank);
+500               \mbox{\hyperlink{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}{gbNextCheat}} = \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+1;
+501               \textcolor{keywordflow}{return};
+502           \}
+503         \}
+504         \textcolor{keywordflow}{else} \textcolor{comment}{// These codes are only executed when the game is booted}
+505         \{
+506           \textcolor{keywordflow}{switch}(\mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].code & 0xF0) \{
+507             \textcolor{keywordflow}{case} 0x80:
+508               \mbox{\hyperlink{_g_b_8cpp_aff32fbe8c7f3bb4a0f6b8b87b8285e0e}{gbWriteMemory}}(0x0000, 0x0A);
+509               \mbox{\hyperlink{_g_b_8cpp_aff32fbe8c7f3bb4a0f6b8b87b8285e0e}{gbWriteMemory}}(0x4000, \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].value & 0xF);
+510               \mbox{\hyperlink{_g_b_8cpp_aff32fbe8c7f3bb4a0f6b8b87b8285e0e}{gbWriteMemory}}(address, \mbox{\hyperlink{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}{gbCheatList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].value);
+511               \mbox{\hyperlink{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}{gbNextCheat}} = \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+1;
+512               \textcolor{keywordflow}{return};
+513           \}
+514         \}
+515       \}
+516     \}
+517   \}
+518 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a62e7f47b3eac98eb01dfcf8cb95fa743_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a62e7f47b3eac98eb01dfcf8cb95fa743_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_a2421599580e8039d6cb4ebb5bdff2d37}\label{gb_cheats_8cpp_a2421599580e8039d6cb4ebb5bdff2d37}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Verify\+Gg\+Code@{gb\+Verify\+Gg\+Code}}
+\index{gb\+Verify\+Gg\+Code@{gb\+Verify\+Gg\+Code}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Verify\+Gg\+Code()}{gbVerifyGgCode()}}
+{\footnotesize\ttfamily bool gb\+Verify\+Gg\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{code }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 235 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+236 \{
+237   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = strlen(code);
+238 
+239   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 11 &&
+240      \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 7 &&
+241      \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 6 &&
+242      \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 0)
+243     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+244 
+245   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} == 0)
+246     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+247   
+248   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[0]))
+249     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+250   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[1]))
+251     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+252   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[2]))
+253     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+254   \textcolor{keywordflow}{if}(code[3] != \textcolor{charliteral}{'-'})
+255     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+256   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[4]))
+257     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+258   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[5]))
+259     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+260   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[6]))
+261     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+262   \textcolor{keywordflow}{if}(code[7] != 0) \{
+263     \textcolor{keywordflow}{if}(code[7] != \textcolor{charliteral}{'-'})
+264       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+265     \textcolor{keywordflow}{if}(code[8] != 0) \{
+266       \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[8]))
+267         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+268       \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[9]))
+269         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+270       \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[10]))
+271         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+272     \}
+273   \}
+274 
+275   \textcolor{comment}{//  int replace = (GBCHEAT\_HEX\_VALUE(code[0]) << 4) +}
+276   \textcolor{comment}{//    GBCHEAT\_HEX\_VALUE(code[1]);}
+277 
+278   \textcolor{keywordtype}{int} address = (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[2]) << 8) +
+279     (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[4]) << 4) +
+280     (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[5])) +
+281     ((\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[6]) ^ 0x0f) << 12);
+282 
+283   \textcolor{keywordflow}{if}(address >= 0x8000 && address <= 0x9fff)
+284     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+285 
+286   \textcolor{keywordflow}{if}(address >= 0xc000)
+287     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+288 
+289   \textcolor{keywordflow}{if}(code[7] == 0 || code[8] == \textcolor{charliteral}{'0'})
+290     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+291 
+292   \textcolor{keywordtype}{int} compare = (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[8]) << 4) +
+293     (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[10]));
+294   compare = compare ^ 0xff;
+295   compare = (compare >> 2) | ( (compare << 6) & 0xc0);
+296   compare ^= 0x45;
+297 
+298   \textcolor{keywordtype}{int} cloak = (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[8])) ^ (\mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[9]))
+      ;
+299   
+300   \textcolor{keywordflow}{if}(cloak >=1 && cloak <= 7)
+301     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+302 
+303   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+304 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a2421599580e8039d6cb4ebb5bdff2d37_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_cheats_8cpp_a4af07b1b8e7409c8fc47174c046a56e9}\label{gb_cheats_8cpp_a4af07b1b8e7409c8fc47174c046a56e9}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Verify\+Gs\+Code@{gb\+Verify\+Gs\+Code}}
+\index{gb\+Verify\+Gs\+Code@{gb\+Verify\+Gs\+Code}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Verify\+Gs\+Code()}{gbVerifyGsCode()}}
+{\footnotesize\ttfamily bool gb\+Verify\+Gs\+Code (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{code }\end{DoxyParamCaption})}
+
+
+
+gb\+Cheats.\+cpp 파일의 166 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+167 \{
+168   \textcolor{keywordtype}{size\_t} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = strlen(code);
+169 
+170   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} == 0)
+171     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+172   
+173   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 8)
+174     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+175 
+176   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < 8; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++)
+177     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{gb_cheats_8cpp_a663b29a01225c4d990cc4164832deaa6}{GBCHEAT\_IS\_HEX}}(code[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}]))
+178       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+179 
+180   \textcolor{keywordtype}{int} address = \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[6]) << 12 |
+181     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[7]) << 8 |
+182     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[4]) << 4 |
+183     \mbox{\hyperlink{gb_cheats_8cpp_aed89ba7b3ab915dec1e728214747513b}{GBCHEAT\_HEX\_VALUE}}(code[5]);
+184 
+185   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+186 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_cheats_8cpp_a4af07b1b8e7409c8fc47174c046a56e9_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{gb_cheats_8cpp_a77d9fae8175282841c0cdda4dd1dc24a}\label{gb_cheats_8cpp_a77d9fae8175282841c0cdda4dd1dc24a}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!cheats\+Enabled@{cheats\+Enabled}}
+\index{cheats\+Enabled@{cheats\+Enabled}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{cheats\+Enabled}{cheatsEnabled}}
+{\footnotesize\ttfamily bool cheats\+Enabled}
+
+
+
+Globals.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}\label{gb_cheats_8cpp_a0f6d5312f673bc2e546aed28ea2e20cf}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+List@{gb\+Cheat\+List}}
+\index{gb\+Cheat\+List@{gb\+Cheat\+List}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+List}{gbCheatList}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgb_cheat}{gb\+Cheat}} gb\+Cheat\+List\mbox{[}100\mbox{]}}
+
+
+
+gb\+Cheats.\+cpp 파일의 32 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_cheats_8cpp_a1de5cb765bb55c7eb16964a3acdab814}\label{gb_cheats_8cpp_a1de5cb765bb55c7eb16964a3acdab814}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Map@{gb\+Cheat\+Map}}
+\index{gb\+Cheat\+Map@{gb\+Cheat\+Map}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Map}{gbCheatMap}}
+{\footnotesize\ttfamily bool gb\+Cheat\+Map\mbox{[}0x10000\mbox{]}}
+
+
+
+gb\+Cheats.\+cpp 파일의 35 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}\label{gb_cheats_8cpp_ad4eaf570112fe7a400edc3c9eeae5d4c}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Cheat\+Number@{gb\+Cheat\+Number}}
+\index{gb\+Cheat\+Number@{gb\+Cheat\+Number}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Cheat\+Number}{gbCheatNumber}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} gb\+Cheat\+Number = 0}
+
+
+
+gb\+Cheats.\+cpp 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}\label{gb_cheats_8cpp_acc8f9c63776af2c759296a33502f40a8}} 
+\index{gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}!gb\+Next\+Cheat@{gb\+Next\+Cheat}}
+\index{gb\+Next\+Cheat@{gb\+Next\+Cheat}!gb\+Cheats.\+cpp@{gb\+Cheats.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Next\+Cheat}{gbNextCheat}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} gb\+Next\+Cheat = 0}
+
+
+
+gb\+Cheats.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+

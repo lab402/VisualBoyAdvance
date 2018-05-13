@@ -1,0 +1,1924 @@
+\hypertarget{expr-lex_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr-\/lex.cpp 파일 참조}
+\label{expr-lex_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr-\/lex.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr-\/lex.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}expr.\+cpp.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$io.\+h$>$}\newline
+expr-\/lex.cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{expr-lex_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+ER}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a243ca1d30872935faf05ea5118ed6fdc}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~2
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a90f9d458829400869e47efb68a865677}{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}~5
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ad1c3fde80f461fe055f996f4ec6d4830}{Y\+Y\+\_\+\+P\+R\+O\+TO}}(proto)~()
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+LL}}~0
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+UI}}(c)~((unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) (unsigned char) c)
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ab766bbbee08d04b67e3fe599d6900873}{B\+E\+G\+IN}}~yy\+\_\+start = 1 + 2 $\ast$
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+RT}}~((yy\+\_\+start -\/ 1) / 2)
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a32b5b960944f946b192d54f672569cd9}{Y\+Y\+S\+T\+A\+TE}}~\mbox{\hyperlink{expr-lex_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+RT}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+OF}}(state)~(\mbox{\hyperlink{expr-lex_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER}} + state + 1)
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+LE}}~\mbox{\hyperlink{expr-lex_8cpp_a3528c58cdd338886f23357f42e2061b8}{yyrestart}}( \mbox{\hyperlink{expr_8cpp_a46af646807e0797e72b6e8945e7ea88b}{yyin}} )
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR}}~0
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}~16384
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+AN}}~0
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE}}~1
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+CH}}~2
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a448a4e9041a09588332733c6846c770c}{unput}}(c)~yyunput( c, \mbox{\hyperlink{expr-lex_8cpp_ad6fabaea416e87b0f79fc34741e70818}{yytext\+\_\+ptr}} )
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a53579db42834b88199458993912c646d}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW}}~0
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+AL}}~1
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ad689d97c15e807a6116ace7a420cea57}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+NG}}~2
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_aa093d500a6330d06d8e4760c494fac33}{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+ER}}~yy\+\_\+current\+\_\+buffer
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+ER}}~\mbox{\hyperlink{expr-lex_8cpp_aaad521488306a55a775adfe38ce4cf49}{yy\+\_\+flush\+\_\+buffer}}( yy\+\_\+current\+\_\+buffer )
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}{yy\+\_\+new\+\_\+buffer}}~\mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\+\_\+create\+\_\+buffer}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}{yy\+\_\+set\+\_\+interactive}}(is\+\_\+interactive)
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a12e30d13a76a94e78010db9996d39c50}{yy\+\_\+set\+\_\+bol}}(at\+\_\+bol)
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a71ca89b3656acd0552f14949a571560b}{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+OL}}()~(yy\+\_\+current\+\_\+buffer-\/$>$\mbox{\hyperlink{expr-lex_8cpp_adef6ed71d4cd59407dc44578f94e5fec}{yy\+\_\+at\+\_\+bol}})
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ade1e2db9970733fbc3d9fecd09ce9771}{yywrap}}()~1
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ae1ef5933028cbc587d31328e53d11a99}{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+AP}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\+\_\+ptr}}~\mbox{\hyperlink{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}{yytext}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_acc3486d769af4e4b2820346a0093cc79}{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+ON}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ae558785bb896e090901c2b905f6790c6}{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+ES}}~10
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER}}~11
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}{R\+E\+J\+E\+CT}}~reject\+\_\+used\+\_\+but\+\_\+not\+\_\+detected
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}{yymore}}()~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a68792d73820bc46a71d3d4e613f0b977}{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+DJ}}~0
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a56858d18c7eda4f53664496ef566f651}{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+ET}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{I\+N\+I\+T\+I\+AL}}~0
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_aef88e7abfad3a0a8812ec4a04ea1de6b}{isatty}}~\+\_\+isatty
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a2c12e4b6615ac6838a99d5b6fa619683}{fileno}}~\+\_\+fileno
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_aacfdca45fa4beb8b06172525a53c424a}{Y\+Y\+\_\+\+I\+N\+P\+UT}}(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}},  \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}},  max\+\_\+size)
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a4c49735b8f960c5801812993b6f787b7}{Y\+Y\+\_\+\+M\+A\+IN}}~0
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a38e3a1cf6bfd339e7cfe0370e245730f}{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+U\+S\+H\+\_\+\+S\+T\+A\+TE}}~1
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ab99a7dbce52206f2cee91121f70f3f98}{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+O\+P\+\_\+\+S\+T\+A\+TE}}~1
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ac3eedc6d2e3e4c9b2bacd0f1ebeab98a}{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+TE}}~1
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_aab1491ceccb1c95c14320b2903773a1c}{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}~8192
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{E\+C\+HO}}~(void) fwrite( \mbox{\hyperlink{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}{yytext}}, \mbox{\hyperlink{expr-lex_8cpp_a1b5865350b5ca5c1d69f429c2a652953}{yyleng}}, 1, \mbox{\hyperlink{expr-lex_8cpp_a296847b42b0baa62e2af36cb79f3c0eb}{yyout}} )
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ac3286b18a2e91b4571b97df96a118e84}{yyterminate}}()~\mbox{\hyperlink{gb_codes_c_b_8h_a9717e7bbecb906637e86cef6da3d83c2}{return}} \mbox{\hyperlink{expr-lex_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+LL}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a227e75c43b9e0cd41529974230be7e75}{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+CR}}~25
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}}(msg)~yy\+\_\+fatal\+\_\+error( msg )
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}{Y\+Y\+\_\+\+D\+E\+CL}}~\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_aa40b27ae32d6d1ae7160bd6256e08eb8}{yylex}} \mbox{\hyperlink{expr-lex_8cpp_a0a2ce3902c765bc21ae783522d579223}{Y\+Y\+\_\+\+P\+R\+O\+TO}}(( void ))
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{Y\+Y\+\_\+\+B\+R\+E\+AK}}~\mbox{\hyperlink{lq2x_8h_a91cf6fbebedd86150a36e5ac3d5d3bfc}{break}};
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+UP}}~\mbox{\hyperlink{expr-lex_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON}}
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}}~2
+\item 
+\#define \mbox{\hyperlink{expr-lex_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}{yyless}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}} $\ast$ \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}}
+\item 
+typedef unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_aa14cc3d400000eef0cd40225fd790cfe}{yy\+\_\+size\+\_\+t}}
+\item 
+typedef unsigned char \mbox{\hyperlink{expr-lex_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+AR}}
+\item 
+typedef \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a3528c58cdd338886f23357f42e2061b8}{yyrestart}} \mbox{\hyperlink{expr-lex_8cpp_ad0030daf8055c0afc233a0c34bc12fd6}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((F\+I\+LE $\ast$input\+\_\+file))
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a01ffaab94c1633ad975eb2e5d5ca360c}{yy\+\_\+switch\+\_\+to\+\_\+buffer}} \mbox{\hyperlink{expr-lex_8cpp_aa4d8fcf388290ca0a2849fb6120b8bdb}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} new\+\_\+buffer))
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a30fc8e518fa4e332a8657f6f8afa8fd9}{yy\+\_\+load\+\_\+buffer\+\_\+state}} \mbox{\hyperlink{expr-lex_8cpp_ad0c2268922fe79170ffa21498ef4f02d}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((void))
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\+\_\+create\+\_\+buffer}} \mbox{\hyperlink{expr-lex_8cpp_aa2feac785a778f388f5789c00eccf8c3}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((F\+I\+LE $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}))
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a05a39a25571bbcfcf45a1e04a8c24f9b}{yy\+\_\+delete\+\_\+buffer}} \mbox{\hyperlink{expr-lex_8cpp_af3396691b9b779b13d6cc623715bb1dd}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}))
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a1ae002281d6d54c4ca55d32b423662f9}{yy\+\_\+init\+\_\+buffer}} \mbox{\hyperlink{expr-lex_8cpp_adb439e9a28fc4c4ad50eff59cb513eba}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}, F\+I\+LE $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}))
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_af9ed770023a73cfa0b6cfd90b5a76fc9}{yy\+\_\+scan\+\_\+buffer}} \mbox{\hyperlink{expr-lex_8cpp_abe2bec50f45200479e22b18dc62fee11}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((char $\ast$base, \mbox{\hyperlink{expr-lex_8cpp_aa14cc3d400000eef0cd40225fd790cfe}{yy\+\_\+size\+\_\+t}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}))
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_ac0d3a22f8bc4cc5e7af2783fe375d5b0}{yy\+\_\+scan\+\_\+string}} \mbox{\hyperlink{expr-lex_8cpp_a689b8676764ac30cbf27edfb45c74391}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((\mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}} char $\ast$yy\+\_\+str))
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a1171cd5559de417237e028ebb21b8e54}{yy\+\_\+scan\+\_\+bytes}} \mbox{\hyperlink{expr-lex_8cpp_a0a2ce3902c765bc21ae783522d579223}{Y\+Y\+\_\+\+P\+R\+O\+TO}} ((\mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}} char $\ast$bytes, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}))
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a709183e322e370a05cfdd3bb79f9ae79}{if}} (yy\+\_\+init)
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}} (1)
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_addae29e78f788fccdc862bf7ab200706}{if}} (yy\+\_\+accept\mbox{[}\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\+\_\+current\+\_\+state}}\mbox{]})
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a0e48c1f64b558d03d870367324920354}{while}} (yy\+\_\+chk\mbox{[}yy\+\_\+base\mbox{[}\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\+\_\+current\+\_\+state}}\mbox{]}+\mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\+\_\+c}}\mbox{]} !=\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\+\_\+current\+\_\+state}})
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_af866e536ece63dc9a073311488ba32d5}{if}} (\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\+\_\+cp}}$<$ yy\+\_\+current\+\_\+buffer-\/$>$\mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\+\_\+ch\+\_\+buf}}+2)
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a3528c58cdd338886f23357f42e2061b8}{yyrestart}} (input\+\_\+file) F\+I\+LE $\ast$input\+\_\+file
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_aa8fb2edba7d58cb3cd859f2b7831efac}{yy\+\_\+init\+\_\+buffer}} (yy\+\_\+current\+\_\+buffer, input\+\_\+file)
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a30fc8e518fa4e332a8657f6f8afa8fd9}{yy\+\_\+load\+\_\+buffer\+\_\+state}} ()
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a4f7f20d812f72fd97d855e769ad39cc5}{yy\+\_\+switch\+\_\+to\+\_\+buffer}} (new\+\_\+buffer) \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} new \+\_\+buffer
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a287b9b5ee695381a7c406c22383cba19}{if}} (yy\+\_\+current\+\_\+buffer)
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a9bf79ca516efbf960603adf3563802dc}{if}} (! \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}) \mbox{\hyperlink{expr-lex_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}}(\char`\"{}out of dynamic memory in \mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\+\_\+create\+\_\+buffer}}()\char`\"{})
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a3d50472f9bfe9159e10300a257ce89e5}{if}} (! \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}-\/$>$\mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\+\_\+ch\+\_\+buf}}) \mbox{\hyperlink{expr-lex_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}}(\char`\"{}out of dynamic memory in \mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\+\_\+create\+\_\+buffer}}()\char`\"{})
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a1ae002281d6d54c4ca55d32b423662f9}{yy\+\_\+init\+\_\+buffer}} (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}, \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a05a39a25571bbcfcf45a1e04a8c24f9b}{yy\+\_\+delete\+\_\+buffer}} (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}) \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a9778f369b0dee28e4fc554e8fb5ca277}{if}} (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}==yy\+\_\+current\+\_\+buffer) yy\+\_\+current\+\_\+buffer
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a19617a8b9d14dc2f89ec78655a642df4}{if}} (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}-\/$>$\mbox{\hyperlink{expr-lex_8cpp_a725031cce2e48e1e5c7f713146ed73bc}{yy\+\_\+is\+\_\+our\+\_\+buffer}}) \mbox{\hyperlink{expr-lex_8cpp_a8eaf742e61b43d25af0aa73d14d6a4ae}{yy\+\_\+flex\+\_\+free}}((void $\ast$) \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} -\/$>$ \mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\+\_\+ch\+\_\+buf}})
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a8eaf742e61b43d25af0aa73d14d6a4ae}{yy\+\_\+flex\+\_\+free}} ((void $\ast$) \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_aaad521488306a55a775adfe38ce4cf49}{yy\+\_\+flush\+\_\+buffer}} (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}) \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_ac92e5ca38477fe229935a42d4c3959db}{if}} (\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}$<$ 2$\vert$$\vert$base\mbox{[}\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}-\/2\mbox{]} !=\mbox{\hyperlink{expr-lex_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR}}$\vert$$\vert$base\mbox{[}\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}-\/1\mbox{]} !=\mbox{\hyperlink{expr-lex_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR}}) \mbox{\hyperlink{gb_codes_c_b_8h_a9717e7bbecb906637e86cef6da3d83c2}{return}} 0
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a01ffaab94c1633ad975eb2e5d5ca360c}{yy\+\_\+switch\+\_\+to\+\_\+buffer}} (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_aa656b692c972ef767f6fe691b696c978}{for}} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}=0;yy\+\_\+str\mbox{[}\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}\mbox{]};++\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+\item 
+\mbox{\hyperlink{gb_codes_c_b_8h_a9717e7bbecb906637e86cef6da3d83c2}{return}} \mbox{\hyperlink{expr-lex_8cpp_a1171cd5559de417237e028ebb21b8e54}{yy\+\_\+scan\+\_\+bytes}} (yy\+\_\+str, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a2732ab74fa0237854c2ba0f75f88a624}{for}} (\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}=0;\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}$<$ \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};++\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}) \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}\mbox{[}\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}\mbox{]}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a6d2c3c030982c7aa276480da4522ae0f}{exit}} (\mbox{\hyperlink{expr-lex_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}})
+\item 
+void \mbox{\hyperlink{expr-lex_8cpp_a656fdf035cf4adb57d73e9cc5377d1b5}{expr\+Clean\+Buffer}} ()
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_a1b5865350b5ca5c1d69f429c2a652953}{yyleng}}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}{yyin}} = (F\+I\+LE $\ast$) 0
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{expr-lex_8cpp_a296847b42b0baa62e2af36cb79f3c0eb}{yyout}} = (F\+I\+LE $\ast$) 0
+\item 
+char $\ast$ \mbox{\hyperlink{expr-lex_8cpp_a35b96d819f6a8f8638894c429e68b02a}{yytext}}
+\item 
+char $\ast$ \mbox{\hyperlink{expr-lex_8cpp_aa1f704d92ffa441305e3434381d676f7}{expr\+String}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_a5aaef62994ad4e49e786f5228b548541}{expr\+Col}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_abcefb20c54ce0f92452cfbb9cf657670}{Y\+Y\+\_\+\+D\+E\+CL}}
+\item 
+register char $\ast$ \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\+\_\+cp}} = \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+register char $\ast$ \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\+\_\+bp}} = \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+register \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\+\_\+act}}
+\item 
+register \mbox{\hyperlink{expr-lex_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+AR}} \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\+\_\+c}} = 1
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\+\_\+current\+\_\+state}} = yy\+\_\+nxt\mbox{[}yy\+\_\+base\mbox{[}yy\+\_\+current\+\_\+state\mbox{]} + (unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\+\_\+c}}\mbox{]}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a7494532160b510aa4e49743e9be97259}{yy\+\_\+is\+\_\+jam}} = (\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\+\_\+current\+\_\+state}} == 23)
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_ad6fabaea416e87b0f79fc34741e70818}{yytext\+\_\+ptr}} = \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\+\_\+bp}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\+\_\+create\+\_\+buffer}} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}) F\+I\+LE $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = (\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}}) yy\+\_\+flex\+\_\+alloc( sizeof( struct \mbox{\hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}} ) )
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_a969f40813585d053e9cceaec3fe16f58}{yy\+\_\+buf\+\_\+size}} = \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\+\_\+ch\+\_\+buf}} = (char $\ast$) yy\+\_\+flex\+\_\+alloc( \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}-\/$>$\mbox{\hyperlink{expr-lex_8cpp_a969f40813585d053e9cceaec3fe16f58}{yy\+\_\+buf\+\_\+size}} + 2 )
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_a725031cce2e48e1e5c7f713146ed73bc}{yy\+\_\+is\+\_\+our\+\_\+buffer}} = 1
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_af6c25e1253452c8f667697b573db784f}{yy\+\_\+input\+\_\+file}} = \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_a0a1dd9ce87a49536adf8f6362b071057}{yy\+\_\+fill\+\_\+buffer}} = 1
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_ad05318f0f8d19c7e46d72303ae11820e}{yy\+\_\+is\+\_\+interactive}} = \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}} ? (\mbox{\hyperlink{expr-lex_8cpp_aef88e7abfad3a0a8812ec4a04ea1de6b}{isatty}}( \mbox{\hyperlink{expr-lex_8cpp_a2c12e4b6615ac6838a99d5b6fa619683}{fileno}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}) ) $>$ 0) \+: 0
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_a4eab751080565d2d6e83560583d15d1c}{yy\+\_\+buf\+\_\+pos}} = \&\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}-\/$>$\mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\+\_\+ch\+\_\+buf}}\mbox{[}0\mbox{]}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_adef6ed71d4cd59407dc44578f94e5fec}{yy\+\_\+at\+\_\+bol}} = 1
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} \mbox{\hyperlink{expr-lex_8cpp_a44b78dddb082281d797f84223687c7e1}{yy\+\_\+buffer\+\_\+status}} = \mbox{\hyperlink{expr-lex_8cpp_a53579db42834b88199458993912c646d}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_af9ed770023a73cfa0b6cfd90b5a76fc9}{yy\+\_\+scan\+\_\+buffer}} (base, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}) char $\ast$base
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_ac0d3a22f8bc4cc5e7af2783fe375d5b0}{yy\+\_\+scan\+\_\+string}} (yy\+\_\+str) \mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}} char $\ast$yy\+\_\+str
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_afe1a1d0d2103208153f7037bef67be96}{yy\+\_\+scan\+\_\+bytes}} (bytes, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}) \mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}} char $\ast$bytes
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}
+\item 
+char $\ast$ \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}
+\item 
+\mbox{\hyperlink{expr-lex_8cpp_aa14cc3d400000eef0cd40225fd790cfe}{yy\+\_\+size\+\_\+t}} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} + 2
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{expr-lex_8cpp_ab766bbbee08d04b67e3fe599d6900873}\label{expr-lex_8cpp_ab766bbbee08d04b67e3fe599d6900873}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!B\+E\+G\+IN@{B\+E\+G\+IN}}
+\index{B\+E\+G\+IN@{B\+E\+G\+IN}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{B\+E\+G\+IN}{BEGIN}}
+{\footnotesize\ttfamily \#define B\+E\+G\+IN~yy\+\_\+start = 1 + 2 $\ast$}
+
+
+
+expr-\/lex.\+cpp 파일의 82 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}\label{expr-lex_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!E\+C\+HO@{E\+C\+HO}}
+\index{E\+C\+HO@{E\+C\+HO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{E\+C\+HO}{ECHO}}
+{\footnotesize\ttfamily \#define E\+C\+HO~(void) fwrite( \mbox{\hyperlink{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}{yytext}}, \mbox{\hyperlink{expr-lex_8cpp_a1b5865350b5ca5c1d69f429c2a652953}{yyleng}}, 1, \mbox{\hyperlink{expr-lex_8cpp_a296847b42b0baa62e2af36cb79f3c0eb}{yyout}} )}
+
+
+
+expr-\/lex.\+cpp 파일의 482 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_adf4b0db227e07782e28ade353a7ba7a1}\label{expr-lex_8cpp_adf4b0db227e07782e28ade353a7ba7a1}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+AN@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+AN}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+AN@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+AN}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+AN}{EOB\_ACT\_CONTINUE\_SCAN}}
+{\footnotesize\ttfamily \#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+C\+O\+N\+T\+I\+N\+U\+E\+\_\+\+S\+C\+AN~0}
+
+
+
+expr-\/lex.\+cpp 파일의 107 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}\label{expr-lex_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE}{EOB\_ACT\_END\_OF\_FILE}}
+{\footnotesize\ttfamily \#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+F\+I\+LE~1}
+
+
+
+expr-\/lex.\+cpp 파일의 108 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}\label{expr-lex_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+CH@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+CH}}
+\index{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+CH@{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+CH}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+CH}{EOB\_ACT\_LAST\_MATCH}}
+{\footnotesize\ttfamily \#define E\+O\+B\+\_\+\+A\+C\+T\+\_\+\+L\+A\+S\+T\+\_\+\+M\+A\+T\+CH~2}
+
+
+
+expr-\/lex.\+cpp 파일의 109 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a2c12e4b6615ac6838a99d5b6fa619683}\label{expr-lex_8cpp_a2c12e4b6615ac6838a99d5b6fa619683}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!fileno@{fileno}}
+\index{fileno@{fileno}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{fileno}{fileno}}
+{\footnotesize\ttfamily \#define fileno~\+\_\+fileno}
+
+
+
+expr-\/lex.\+cpp 파일의 389 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}\label{expr-lex_8cpp_a3c3d1ef92e93b0bc81d7760a73d5c3b6}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+ER@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+ER}}
+\index{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+ER@{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+ER}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+ER}{FLEX\_SCANNER}}
+{\footnotesize\ttfamily \#define F\+L\+E\+X\+\_\+\+S\+C\+A\+N\+N\+ER}
+
+
+
+expr-\/lex.\+cpp 파일의 8 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}\label{expr-lex_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!I\+N\+I\+T\+I\+AL@{I\+N\+I\+T\+I\+AL}}
+\index{I\+N\+I\+T\+I\+AL@{I\+N\+I\+T\+I\+AL}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{I\+N\+I\+T\+I\+AL}{INITIAL}}
+{\footnotesize\ttfamily \#define I\+N\+I\+T\+I\+AL~0}
+
+
+
+expr-\/lex.\+cpp 파일의 382 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aef88e7abfad3a0a8812ec4a04ea1de6b}\label{expr-lex_8cpp_aef88e7abfad3a0a8812ec4a04ea1de6b}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!isatty@{isatty}}
+\index{isatty@{isatty}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{isatty}{isatty}}
+{\footnotesize\ttfamily \#define isatty~\+\_\+isatty}
+
+
+
+expr-\/lex.\+cpp 파일의 388 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}\label{expr-lex_8cpp_a835f10dd1ab4bf9a80c4cd80ee6e3058}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!R\+E\+J\+E\+CT@{R\+E\+J\+E\+CT}}
+\index{R\+E\+J\+E\+CT@{R\+E\+J\+E\+CT}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{R\+E\+J\+E\+CT}{REJECT}}
+{\footnotesize\ttfamily \#define R\+E\+J\+E\+CT~reject\+\_\+used\+\_\+but\+\_\+not\+\_\+detected}
+
+
+
+expr-\/lex.\+cpp 파일의 376 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a448a4e9041a09588332733c6846c770c}\label{expr-lex_8cpp_a448a4e9041a09588332733c6846c770c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!unput@{unput}}
+\index{unput@{unput}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{unput}{unput}}
+{\footnotesize\ttfamily \#define unput(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~yyunput( c, \mbox{\hyperlink{expr-lex_8cpp_ad6fabaea416e87b0f79fc34741e70818}{yytext\+\_\+ptr}} )}
+
+
+
+expr-\/lex.\+cpp 파일의 138 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a71ca89b3656acd0552f14949a571560b}\label{expr-lex_8cpp_a71ca89b3656acd0552f14949a571560b}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+A\+T\+\_\+\+B\+OL@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+OL}}
+\index{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+OL@{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+OL}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+A\+T\+\_\+\+B\+OL}{YY\_AT\_BOL}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+A\+T\+\_\+\+B\+OL(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(yy\+\_\+current\+\_\+buffer-\/$>$\mbox{\hyperlink{expr-lex_8cpp_adef6ed71d4cd59407dc44578f94e5fec}{yy\+\_\+at\+\_\+bol}})}
+
+
+
+expr-\/lex.\+cpp 파일의 265 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}\label{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+B\+R\+E\+AK@{Y\+Y\+\_\+\+B\+R\+E\+AK}}
+\index{Y\+Y\+\_\+\+B\+R\+E\+AK@{Y\+Y\+\_\+\+B\+R\+E\+AK}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+B\+R\+E\+AK}{YY\_BREAK}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+B\+R\+E\+AK~\mbox{\hyperlink{lq2x_8h_a91cf6fbebedd86150a36e5ac3d5d3bfc}{break}};}
+
+
+
+expr-\/lex.\+cpp 파일의 541 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ae7e51116e747d3390e7a6cfc6532834c}\label{expr-lex_8cpp_ae7e51116e747d3390e7a6cfc6532834c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{YY\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~16384}
+
+
+
+expr-\/lex.\+cpp 파일의 100 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ad689d97c15e807a6116ace7a420cea57}\label{expr-lex_8cpp_ad689d97c15e807a6116ace7a420cea57}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+NG@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+NG}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+NG@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+NG}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+NG}{YY\_BUFFER\_EOF\_PENDING}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+E\+O\+F\+\_\+\+P\+E\+N\+D\+I\+NG~2}
+
+
+
+expr-\/lex.\+cpp 파일의 201 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a53579db42834b88199458993912c646d}\label{expr-lex_8cpp_a53579db42834b88199458993912c646d}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW}{YY\_BUFFER\_NEW}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW~0}
+
+
+
+expr-\/lex.\+cpp 파일의 189 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a609d19f40900ecc2a5f812d9388c21fb}\label{expr-lex_8cpp_a609d19f40900ecc2a5f812d9388c21fb}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+AL@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+AL}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+AL@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+AL}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+AL}{YY\_BUFFER\_NORMAL}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+O\+R\+M\+AL~1}
+
+
+
+expr-\/lex.\+cpp 파일의 190 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aa093d500a6330d06d8e4760c494fac33}\label{expr-lex_8cpp_aa093d500a6330d06d8e4760c494fac33}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+ER@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+ER}}
+\index{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+ER@{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+ER}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+ER}{YY\_CURRENT\_BUFFER}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T\+\_\+\+B\+U\+F\+F\+ER~yy\+\_\+current\+\_\+buffer}
+
+
+
+expr-\/lex.\+cpp 파일의 210 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}\label{expr-lex_8cpp_ae5b01ac2fa5a6ad5fb97559638abe686}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+D\+E\+CL@{Y\+Y\+\_\+\+D\+E\+CL}}
+\index{Y\+Y\+\_\+\+D\+E\+CL@{Y\+Y\+\_\+\+D\+E\+CL}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+D\+E\+CL}{YY\_DECL}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+D\+E\+CL~\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_aa40b27ae32d6d1ae7160bd6256e08eb8}{yylex}} \mbox{\hyperlink{expr-lex_8cpp_a0a2ce3902c765bc21ae783522d579223}{Y\+Y\+\_\+\+P\+R\+O\+TO}}(( void ))}
+
+
+
+expr-\/lex.\+cpp 파일의 529 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_acc3486d769af4e4b2820346a0093cc79}\label{expr-lex_8cpp_acc3486d769af4e4b2820346a0093cc79}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+ON@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+ON}}
+\index{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+ON@{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+ON}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+ON}{YY\_DO\_BEFORE\_ACTION}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+D\+O\+\_\+\+B\+E\+F\+O\+R\+E\+\_\+\+A\+C\+T\+I\+ON}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}
+\mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}} = \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}}; \(\backslash\)
+        yyleng = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) (\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} - \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}}); \(\backslash\)
+        yy\_hold\_char = *\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}}; \(\backslash\)
+        *\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)
+        yy\_c\_buf\_p = \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}};
+\end{DoxyCode}
+
+
+expr-\/lex.\+cpp 파일의 284 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}\label{expr-lex_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER}{YY\_END\_OF\_BUFFER}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER~11}
+
+
+
+expr-\/lex.\+cpp 파일의 292 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}\label{expr-lex_8cpp_ab866a64da164ed2d4d444df1ef1fc9b3}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR}}
+\index{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR@{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR}{YY\_END\_OF\_BUFFER\_CHAR}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+C\+H\+AR~0}
+
+
+
+expr-\/lex.\+cpp 파일의 97 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}\label{expr-lex_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}}
+\index{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE@{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}{YY\_EXIT\_FAILURE}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE~2}
+
+
+
+expr-\/lex.\+cpp 파일의 1472 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}\label{expr-lex_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}}
+\index{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR@{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR}{YY\_FATAL\_ERROR}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+F\+A\+T\+A\+L\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})~yy\+\_\+fatal\+\_\+error( msg )}
+
+
+
+expr-\/lex.\+cpp 파일의 522 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a243ca1d30872935faf05ea5118ed6fdc}\label{expr-lex_8cpp_a243ca1d30872935faf05ea5118ed6fdc}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}{YY\_FLEX\_MAJOR\_VERSION}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+A\+J\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON~2}
+
+
+
+expr-\/lex.\+cpp 파일의 9 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a90f9d458829400869e47efb68a865677}\label{expr-lex_8cpp_a90f9d458829400869e47efb68a865677}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON@{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON}{YY\_FLEX\_MINOR\_VERSION}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+F\+L\+E\+X\+\_\+\+M\+I\+N\+O\+R\+\_\+\+V\+E\+R\+S\+I\+ON~5}
+
+
+
+expr-\/lex.\+cpp 파일의 10 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}\label{expr-lex_8cpp_ac5d478d90ea9a2ecd43d579067a2e89d}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+ER@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+ER}}
+\index{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+ER@{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+ER}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+ER}{YY\_FLUSH\_BUFFER}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+F\+L\+U\+S\+H\+\_\+\+B\+U\+F\+F\+ER~\mbox{\hyperlink{expr-lex_8cpp_aaad521488306a55a775adfe38ce4cf49}{yy\+\_\+flush\+\_\+buffer}}( yy\+\_\+current\+\_\+buffer )}
+
+
+
+expr-\/lex.\+cpp 파일의 239 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aacfdca45fa4beb8b06172525a53c424a}\label{expr-lex_8cpp_aacfdca45fa4beb8b06172525a53c424a}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+I\+N\+P\+UT@{Y\+Y\+\_\+\+I\+N\+P\+UT}}
+\index{Y\+Y\+\_\+\+I\+N\+P\+UT@{Y\+Y\+\_\+\+I\+N\+P\+UT}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+I\+N\+P\+UT}{YY\_INPUT}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+I\+N\+P\+UT(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}},  }\item[{}]{\mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}},  }\item[{}]{max\+\_\+size }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+    int c = *\mbox{\hyperlink{expr-lex_8cpp_aa1f704d92ffa441305e3434381d676f7}{exprString}}++; \(\backslash\)
+    exprCol++;\(\backslash\)
+    result = (c == 0) ? \mbox{\hyperlink{expr-lex_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{YY\_NULL}} : (\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}[0] = c, 1); \(\backslash\)
+    \}
+\end{DoxyCode}
+
+
+expr-\/lex.\+cpp 파일의 395 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a4c49735b8f960c5801812993b6f787b7}\label{expr-lex_8cpp_a4c49735b8f960c5801812993b6f787b7}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+M\+A\+IN@{Y\+Y\+\_\+\+M\+A\+IN}}
+\index{Y\+Y\+\_\+\+M\+A\+IN@{Y\+Y\+\_\+\+M\+A\+IN}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+M\+A\+IN}{YY\_MAIN}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+M\+A\+IN~0}
+
+
+
+expr-\/lex.\+cpp 파일의 401 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a68792d73820bc46a71d3d4e613f0b977}\label{expr-lex_8cpp_a68792d73820bc46a71d3d4e613f0b977}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+DJ@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+DJ}}
+\index{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+DJ@{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+DJ}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+DJ}{YY\_MORE\_ADJ}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+A\+DJ~0}
+
+
+
+expr-\/lex.\+cpp 파일의 378 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}\label{expr-lex_8cpp_ab7eb911e18655f2f78e63afe5a8a4a12}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}}
+\index{yy\+\_\+new\+\_\+buffer@{yy\+\_\+new\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+new\+\_\+buffer}{yy\_new\_buffer}}
+{\footnotesize\ttfamily \#define yy\+\_\+new\+\_\+buffer~\mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\+\_\+create\+\_\+buffer}}}
+
+
+
+expr-\/lex.\+cpp 파일의 249 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a0406739e64fb5750cf995d2ae68ce69d}\label{expr-lex_8cpp_a0406739e64fb5750cf995d2ae68ce69d}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+LE@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+LE}}
+\index{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+LE@{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+LE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+LE}{YY\_NEW\_FILE}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+N\+E\+W\+\_\+\+F\+I\+LE~\mbox{\hyperlink{expr-lex_8cpp_a3528c58cdd338886f23357f42e2061b8}{yyrestart}}( \mbox{\hyperlink{expr_8cpp_a46af646807e0797e72b6e8945e7ea88b}{yyin}} )}
+
+
+
+expr-\/lex.\+cpp 파일의 95 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ab99a7dbce52206f2cee91121f70f3f98}\label{expr-lex_8cpp_ab99a7dbce52206f2cee91121f70f3f98}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+P\+O\+P\+\_\+\+S\+T\+A\+TE@{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+O\+P\+\_\+\+S\+T\+A\+TE}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+O\+P\+\_\+\+S\+T\+A\+TE@{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+O\+P\+\_\+\+S\+T\+A\+TE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+O\+P\+\_\+\+S\+T\+A\+TE}{YY\_NO\_POP\_STATE}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+N\+O\+\_\+\+P\+O\+P\+\_\+\+S\+T\+A\+TE~1}
+
+
+
+expr-\/lex.\+cpp 파일의 452 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a38e3a1cf6bfd339e7cfe0370e245730f}\label{expr-lex_8cpp_a38e3a1cf6bfd339e7cfe0370e245730f}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+P\+U\+S\+H\+\_\+\+S\+T\+A\+TE@{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+U\+S\+H\+\_\+\+S\+T\+A\+TE}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+U\+S\+H\+\_\+\+S\+T\+A\+TE@{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+U\+S\+H\+\_\+\+S\+T\+A\+TE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+N\+O\+\_\+\+P\+U\+S\+H\+\_\+\+S\+T\+A\+TE}{YY\_NO\_PUSH\_STATE}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+N\+O\+\_\+\+P\+U\+S\+H\+\_\+\+S\+T\+A\+TE~1}
+
+
+
+expr-\/lex.\+cpp 파일의 451 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ac3eedc6d2e3e4c9b2bacd0f1ebeab98a}\label{expr-lex_8cpp_ac3eedc6d2e3e4c9b2bacd0f1ebeab98a}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+TE@{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+TE}}
+\index{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+TE@{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+TE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+TE}{YY\_NO\_TOP\_STATE}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+N\+O\+\_\+\+T\+O\+P\+\_\+\+S\+T\+A\+TE~1}
+
+
+
+expr-\/lex.\+cpp 파일의 453 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}\label{expr-lex_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+N\+U\+LL@{Y\+Y\+\_\+\+N\+U\+LL}}
+\index{Y\+Y\+\_\+\+N\+U\+LL@{Y\+Y\+\_\+\+N\+U\+LL}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+N\+U\+LL}{YY\_NULL}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+N\+U\+LL~0}
+
+
+
+expr-\/lex.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ae558785bb896e090901c2b905f6790c6}\label{expr-lex_8cpp_ae558785bb896e090901c2b905f6790c6}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+ES@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+ES}}
+\index{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+ES@{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+ES}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+ES}{YY\_NUM\_RULES}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+N\+U\+M\+\_\+\+R\+U\+L\+ES~10}
+
+
+
+expr-\/lex.\+cpp 파일의 291 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ad1c3fde80f461fe055f996f4ec6d4830}\label{expr-lex_8cpp_ad1c3fde80f461fe055f996f4ec6d4830}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+TO}{YY\_PROTO}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+P\+R\+O\+TO(\begin{DoxyParamCaption}\item[{}]{proto }\end{DoxyParamCaption})~()}
+
+
+
+expr-\/lex.\+cpp 파일의 65 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aab1491ceccb1c95c14320b2903773a1c}\label{expr-lex_8cpp_aab1491ceccb1c95c14320b2903773a1c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}}
+\index{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE@{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE}{YY\_READ\_BUF\_SIZE}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+R\+E\+A\+D\+\_\+\+B\+U\+F\+\_\+\+S\+I\+ZE~8192}
+
+
+
+expr-\/lex.\+cpp 파일의 473 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a56858d18c7eda4f53664496ef566f651}\label{expr-lex_8cpp_a56858d18c7eda4f53664496ef566f651}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+ET@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+ET}}
+\index{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+ET@{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+ET}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+ET}{YY\_RESTORE\_YY\_MORE\_OFFSET}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+R\+E\+S\+T\+O\+R\+E\+\_\+\+Y\+Y\+\_\+\+M\+O\+R\+E\+\_\+\+O\+F\+F\+S\+ET}
+
+
+
+expr-\/lex.\+cpp 파일의 379 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}\label{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+UP@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+UP}}
+\index{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+UP@{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+UP}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+UP}{YY\_RULE\_SETUP}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+R\+U\+L\+E\+\_\+\+S\+E\+T\+UP~\mbox{\hyperlink{expr-lex_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON}}}
+
+
+
+expr-\/lex.\+cpp 파일의 544 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_af1185350b7a92cf8aa5324c68850c8a6}\label{expr-lex_8cpp_af1185350b7a92cf8aa5324c68850c8a6}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+UI@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+UI}}
+\index{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+UI@{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+UI}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+UI}{YY\_SC\_TO\_UI}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+S\+C\+\_\+\+T\+O\+\_\+\+UI(\begin{DoxyParamCaption}\item[{}]{c }\end{DoxyParamCaption})~((unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) (unsigned char) c)}
+
+
+
+expr-\/lex.\+cpp 파일의 76 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a12e30d13a76a94e78010db9996d39c50}\label{expr-lex_8cpp_a12e30d13a76a94e78010db9996d39c50}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}}
+\index{yy\+\_\+set\+\_\+bol@{yy\+\_\+set\+\_\+bol}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+set\+\_\+bol}{yy\_set\_bol}}
+{\footnotesize\ttfamily \#define yy\+\_\+set\+\_\+bol(\begin{DoxyParamCaption}\item[{}]{at\+\_\+bol }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+        if ( ! yy\_current\_buffer ) \(\backslash\)
+                yy\_current\_buffer = \mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\_create\_buffer}}( \mbox{\hyperlink{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}{yyin}}, 
+      \mbox{\hyperlink{expr-lex_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE}} ); \(\backslash\)
+        yy\_current\_buffer->yy\_at\_bol = at\_bol; \(\backslash\)
+        \}
+\end{DoxyCode}
+
+
+expr-\/lex.\+cpp 파일의 258 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}\label{expr-lex_8cpp_ac56eb96366c08862bf0efe5d83d1fc4c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}}
+\index{yy\+\_\+set\+\_\+interactive@{yy\+\_\+set\+\_\+interactive}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+set\+\_\+interactive}{yy\_set\_interactive}}
+{\footnotesize\ttfamily \#define yy\+\_\+set\+\_\+interactive(\begin{DoxyParamCaption}\item[{}]{is\+\_\+interactive }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}
+\{ \(\backslash\)
+        if ( ! yy\_current\_buffer ) \(\backslash\)
+                yy\_current\_buffer = \mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\_create\_buffer}}( \mbox{\hyperlink{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}{yyin}}, 
+      \mbox{\hyperlink{expr-lex_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE}} ); \(\backslash\)
+        yy\_current\_buffer->yy\_is\_interactive = is\_interactive; \(\backslash\)
+        \}
+\end{DoxyCode}
+
+
+expr-\/lex.\+cpp 파일의 251 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ae1ef5933028cbc587d31328e53d11a99}\label{expr-lex_8cpp_ae1ef5933028cbc587d31328e53d11a99}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+AP@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+AP}}
+\index{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+AP@{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+AP}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+AP}{YY\_SKIP\_YYWRAP}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+S\+K\+I\+P\+\_\+\+Y\+Y\+W\+R\+AP}
+
+
+
+expr-\/lex.\+cpp 파일의 269 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a8e14785f9eab7a997d659b25af9584c5}\label{expr-lex_8cpp_a8e14785f9eab7a997d659b25af9584c5}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+RT@{Y\+Y\+\_\+\+S\+T\+A\+RT}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+RT@{Y\+Y\+\_\+\+S\+T\+A\+RT}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+S\+T\+A\+RT}{YY\_START}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+S\+T\+A\+RT~((yy\+\_\+start -\/ 1) / 2)}
+
+
+
+expr-\/lex.\+cpp 파일의 88 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a227e75c43b9e0cd41529974230be7e75}\label{expr-lex_8cpp_a227e75c43b9e0cd41529974230be7e75}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+CR@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+CR}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+CR@{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+CR}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+CR}{YY\_START\_STACK\_INCR}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+S\+T\+A\+R\+T\+\_\+\+S\+T\+A\+C\+K\+\_\+\+I\+N\+CR~25}
+
+
+
+expr-\/lex.\+cpp 파일의 517 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}\label{expr-lex_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+OF@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+OF}}
+\index{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+OF@{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+OF}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+OF}{YY\_STATE\_EOF}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+S\+T\+A\+T\+E\+\_\+\+E\+OF(\begin{DoxyParamCaption}\item[{}]{state }\end{DoxyParamCaption})~(\mbox{\hyperlink{expr-lex_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{Y\+Y\+\_\+\+E\+N\+D\+\_\+\+O\+F\+\_\+\+B\+U\+F\+F\+ER}} + state + 1)}
+
+
+
+expr-\/lex.\+cpp 파일의 92 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}\label{expr-lex_8cpp_a6198b2fcf96178b24ad4efff2a3debb0}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON}}
+\index{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON@{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON}{YY\_USER\_ACTION}}
+{\footnotesize\ttfamily \#define Y\+Y\+\_\+\+U\+S\+E\+R\+\_\+\+A\+C\+T\+I\+ON}
+
+
+
+expr-\/lex.\+cpp 파일의 536 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}\label{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yyconst@{yyconst}}
+\index{yyconst@{yyconst}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yyconst}{yyconst}}
+{\footnotesize\ttfamily \#define yyconst}
+
+
+
+expr-\/lex.\+cpp 파일의 58 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}\label{expr-lex_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yyless}{yyless}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \#define yyless(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+                \{ \(\backslash\)
+                \textcolor{comment}{/* Undo effects of setting up yytext. */} \(\backslash\)
+                *\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_hold\_char; \(\backslash\)
+                YY\_RESTORE\_YY\_MORE\_OFFSET \(\backslash\)
+                yy\_c\_buf\_p = \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}} + \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} - \mbox{\hyperlink{expr-lex_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}}; \(\backslash\)
+                YY\_DO\_BEFORE\_ACTION; \textcolor{comment}{/* set up yytext again */} \(\backslash\)
+                \} \(\backslash\)
+        while ( 0 )
+\end{DoxyCode}
+
+
+expr-\/lex.\+cpp 파일의 1491 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}\label{expr-lex_8cpp_ae65cb72d09db0abdc4b8e8c4d533ab14}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yyless@{yyless}}
+\index{yyless@{yyless}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yyless}{yyless}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \#define yyless(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{do} \(\backslash\)
+                \{ \(\backslash\)
+                \textcolor{comment}{/* Undo effects of setting up yytext. */} \(\backslash\)
+                yytext[\mbox{\hyperlink{expr-lex_8cpp_a1b5865350b5ca5c1d69f429c2a652953}{yyleng}}] = yy\_hold\_char; \(\backslash\)
+                yy\_c\_buf\_p = \mbox{\hyperlink{expr-lex_8cpp_a35b96d819f6a8f8638894c429e68b02a}{yytext}} + \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}; \(\backslash\)
+                yy\_hold\_char = *yy\_c\_buf\_p; \(\backslash\)
+                *yy\_c\_buf\_p = \textcolor{charliteral}{'\(\backslash\)0'}; \(\backslash\)
+                yyleng = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}; \(\backslash\)
+                \} \(\backslash\)
+        while ( 0 )
+\end{DoxyCode}
+
+
+expr-\/lex.\+cpp 파일의 1491 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}\label{expr-lex_8cpp_a745d37b5e002b2e5f93ad42ea7b554be}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yymore@{yymore}}
+\index{yymore@{yymore}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yymore}{yymore}}
+{\footnotesize\ttfamily \#define yymore(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~yymore\+\_\+used\+\_\+but\+\_\+not\+\_\+detected}
+
+
+
+expr-\/lex.\+cpp 파일의 377 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a32b5b960944f946b192d54f672569cd9}\label{expr-lex_8cpp_a32b5b960944f946b192d54f672569cd9}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+S\+T\+A\+TE@{Y\+Y\+S\+T\+A\+TE}}
+\index{Y\+Y\+S\+T\+A\+TE@{Y\+Y\+S\+T\+A\+TE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+S\+T\+A\+TE}{YYSTATE}}
+{\footnotesize\ttfamily \#define Y\+Y\+S\+T\+A\+TE~\mbox{\hyperlink{expr-lex_8cpp_a8e14785f9eab7a997d659b25af9584c5}{Y\+Y\+\_\+\+S\+T\+A\+RT}}}
+
+
+
+expr-\/lex.\+cpp 파일의 89 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ac3286b18a2e91b4571b97df96a118e84}\label{expr-lex_8cpp_ac3286b18a2e91b4571b97df96a118e84}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yyterminate@{yyterminate}}
+\index{yyterminate@{yyterminate}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yyterminate}{yyterminate}}
+{\footnotesize\ttfamily \#define yyterminate(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~\mbox{\hyperlink{gb_codes_c_b_8h_a9717e7bbecb906637e86cef6da3d83c2}{return}} \mbox{\hyperlink{expr-lex_8cpp_a8e0bcf8f8a5b613ea583347f8bc31cbf}{Y\+Y\+\_\+\+N\+U\+LL}}}
+
+
+
+expr-\/lex.\+cpp 파일의 512 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}\label{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yytext\+\_\+ptr@{yytext\+\_\+ptr}}
+\index{yytext\+\_\+ptr@{yytext\+\_\+ptr}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yytext\+\_\+ptr}{yytext\_ptr}}
+{\footnotesize\ttfamily \#define yytext\+\_\+ptr~\mbox{\hyperlink{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}{yytext}}}
+
+
+
+expr-\/lex.\+cpp 파일의 274 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ade1e2db9970733fbc3d9fecd09ce9771}\label{expr-lex_8cpp_ade1e2db9970733fbc3d9fecd09ce9771}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yywrap@{yywrap}}
+\index{yywrap@{yywrap}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yywrap}{yywrap}}
+{\footnotesize\ttfamily \#define yywrap(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~1}
+
+
+
+expr-\/lex.\+cpp 파일의 268 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{타입정의 문서화}
+\mbox{\Hypertarget{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}\label{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}}
+\index{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE@{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}{YY\_BUFFER\_STATE}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}}$\ast$ \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}}}
+
+
+
+expr-\/lex.\+cpp 파일의 102 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a1f324b3cb0839eeb90145f0274e6946e}\label{expr-lex_8cpp_a1f324b3cb0839eeb90145f0274e6946e}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+C\+H\+AR@{Y\+Y\+\_\+\+C\+H\+AR}}
+\index{Y\+Y\+\_\+\+C\+H\+AR@{Y\+Y\+\_\+\+C\+H\+AR}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+C\+H\+AR}{YY\_CHAR}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{expr-lex_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+AR}}}
+
+
+
+expr-\/lex.\+cpp 파일의 270 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aa14cc3d400000eef0cd40225fd790cfe}\label{expr-lex_8cpp_aa14cc3d400000eef0cd40225fd790cfe}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}}
+\index{yy\+\_\+size\+\_\+t@{yy\+\_\+size\+\_\+t}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+size\+\_\+t}{yy\_size\_t}}
+{\footnotesize\ttfamily typedef unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_aa14cc3d400000eef0cd40225fd790cfe}{yy\+\_\+size\+\_\+t}}}
+
+
+
+expr-\/lex.\+cpp 파일의 144 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}\label{expr-lex_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}}
+\index{yy\+\_\+state\+\_\+type@{yy\+\_\+state\+\_\+type}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+state\+\_\+type}{yy\_state\_type}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\+\_\+state\+\_\+type}}}
+
+
+
+expr-\/lex.\+cpp 파일의 272 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{expr-lex_8cpp_a6d2c3c030982c7aa276480da4522ae0f}\label{expr-lex_8cpp_a6d2c3c030982c7aa276480da4522ae0f}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!exit@{exit}}
+\index{exit@{exit}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{exit()}{exit()}}
+{\footnotesize\ttfamily exit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_ae93e67b85c44f6bd31ead14a552a35c8}{Y\+Y\+\_\+\+E\+X\+I\+T\+\_\+\+F\+A\+I\+L\+U\+RE}}}]{ }\end{DoxyParamCaption})}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr-lex_8cpp_a6d2c3c030982c7aa276480da4522ae0f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr-lex_8cpp_a656fdf035cf4adb57d73e9cc5377d1b5}\label{expr-lex_8cpp_a656fdf035cf4adb57d73e9cc5377d1b5}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!expr\+Clean\+Buffer@{expr\+Clean\+Buffer}}
+\index{expr\+Clean\+Buffer@{expr\+Clean\+Buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Clean\+Buffer()}{exprCleanBuffer()}}
+{\footnotesize\ttfamily void expr\+Clean\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+expr-\/lex.\+cpp 파일의 1587 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1588 \{
+1589   \mbox{\hyperlink{expr-lex_8cpp_a05a39a25571bbcfcf45a1e04a8c24f9b}{yy\_delete\_buffer}}(yy\_current\_buffer);
+1590   yy\_init = 1;
+1591 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{expr-lex_8cpp_a656fdf035cf4adb57d73e9cc5377d1b5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr-lex_8cpp_aa656b692c972ef767f6fe691b696c978}\label{expr-lex_8cpp_aa656b692c972ef767f6fe691b696c978}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!for@{for}}
+\index{for@{for}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{for()}{for()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily for (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}}]{ = {\ttfamily 0;yy\+\_\+str\mbox{[}\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}\mbox{]};++\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a2732ab74fa0237854c2ba0f75f88a624}\label{expr-lex_8cpp_a2732ab74fa0237854c2ba0f75f88a624}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!for@{for}}
+\index{for@{for}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{for()}{for()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily for (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a709183e322e370a05cfdd3bb79f9ae79}\label{expr-lex_8cpp_a709183e322e370a05cfdd3bb79f9ae79}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{yy\+\_\+init}]{ }\end{DoxyParamCaption})}
+
+
+
+expr-\/lex.\+cpp 파일의 558 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+559                 \{
+560                 yy\_init = 0;
+561 
+562 \textcolor{preprocessor}{#ifdef YY\_USER\_INIT}
+563                 YY\_USER\_INIT;
+564 \textcolor{preprocessor}{#endif}
+565 
+566                 \textcolor{keywordflow}{if} ( ! yy\_start )
+567                         yy\_start = 1;   \textcolor{comment}{/* first start state */}
+568 
+569                 \textcolor{keywordflow}{if} ( ! \mbox{\hyperlink{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}{yyin}} )
+570                         \mbox{\hyperlink{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}{yyin}} = stdin;
+571 
+572                 \textcolor{keywordflow}{if} ( ! \mbox{\hyperlink{expr-lex_8cpp_a296847b42b0baa62e2af36cb79f3c0eb}{yyout}} )
+573                         \mbox{\hyperlink{expr-lex_8cpp_a296847b42b0baa62e2af36cb79f3c0eb}{yyout}} = stdout;
+574 
+575                 \textcolor{keywordflow}{if} ( ! yy\_current\_buffer )
+576                         yy\_current\_buffer =
+577                                 \mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\_create\_buffer}}( \mbox{\hyperlink{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}{yyin}}, 
+      \mbox{\hyperlink{expr-lex_8cpp_ae7e51116e747d3390e7a6cfc6532834c}{YY\_BUF\_SIZE}} );
+578 
+579                 \mbox{\hyperlink{expr-lex_8cpp_a30fc8e518fa4e332a8657f6f8afa8fd9}{yy\_load\_buffer\_state}}();
+580                 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{expr-lex_8cpp_addae29e78f788fccdc862bf7ab200706}\label{expr-lex_8cpp_addae29e78f788fccdc862bf7ab200706}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{yy\+\_\+accept}]{\mbox{[}yy\+\_\+current\+\_\+state\mbox{]} }\end{DoxyParamCaption})}
+
+
+
+expr-\/lex.\+cpp 파일의 1022 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1023                 \{
+1024                 yy\_last\_accepting\_state = \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}};
+1025                 yy\_last\_accepting\_cpos = \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}};
+1026                 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{expr-lex_8cpp_af866e536ece63dc9a073311488ba32d5}\label{expr-lex_8cpp_af866e536ece63dc9a073311488ba32d5}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\+\_\+cp}}$<$ yy\+\_\+current\+\_\+buffer-\/$>$\mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\+\_\+ch\+\_\+buf}}+}]{2 }\end{DoxyParamCaption})}
+
+
+
+expr-\/lex.\+cpp 파일의 1054 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1055                 \{ \textcolor{comment}{/* need to shift things up to make room */}
+1056                 \textcolor{comment}{/* +2 for EOB chars. */}
+1057                 \textcolor{keyword}{register} \textcolor{keywordtype}{int} number\_to\_move = yy\_n\_chars + 2;
+1058                 \textcolor{keyword}{register} \textcolor{keywordtype}{char} *dest = &yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_ad7b8df8d8a4688e57b0b8d3ca75adc85}{yy\_ch\_buf}}[
+1059                                         yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a48302f5f3477a9c78bbddf56d356ef54}{yy\_buf\_size}} + 2];
+1060                 \textcolor{keyword}{register} \textcolor{keywordtype}{char} *source =
+1061                                 &yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_ad7b8df8d8a4688e57b0b8d3ca75adc85}{yy\_ch\_buf}}[number\_to\_move];
+1062 
+1063                 \textcolor{keywordflow}{while} ( source > yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_ad7b8df8d8a4688e57b0b8d3ca75adc85}{yy\_ch\_buf}} )
+1064                         *--dest = *--source;
+1065 
+1066                 \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} += (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) (dest - source);
+1067                 \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}} += (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) (dest - source);
+1068                 yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a06406208824817acfec2183b79080945}{yy\_n\_chars}} =
+1069                         yy\_n\_chars = yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a48302f5f3477a9c78bbddf56d356ef54}{yy\_buf\_size}};
+1070 
+1071                 \textcolor{keywordflow}{if} ( yy\_cp < yy\_current\_buffer->\mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\_ch\_buf}} + 2 )
+1072                         \mbox{\hyperlink{expr-lex_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{YY\_FATAL\_ERROR}}( \textcolor{stringliteral}{"flex scanner push-back overflow"} );
+1073                 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{expr-lex_8cpp_a287b9b5ee695381a7c406c22383cba19}\label{expr-lex_8cpp_a287b9b5ee695381a7c406c22383cba19}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{yy\+\_\+current\+\_\+buffer}]{ }\end{DoxyParamCaption})}
+
+
+
+expr-\/lex.\+cpp 파일의 1183 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1184                 \{
+1185                 \textcolor{comment}{/* Flush out information for old buffer. */}
+1186                 *yy\_c\_buf\_p = yy\_hold\_char;
+1187                 yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a58aa927f098b99d99e75da80f9b681ef}{yy\_buf\_pos}} = yy\_c\_buf\_p;
+1188                 yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a06406208824817acfec2183b79080945}{yy\_n\_chars}} = yy\_n\_chars;
+1189                 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{expr-lex_8cpp_a9bf79ca516efbf960603adf3563802dc}\label{expr-lex_8cpp_a9bf79ca516efbf960603adf3563802dc}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{!}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a3d50472f9bfe9159e10300a257ce89e5}\label{expr-lex_8cpp_a3d50472f9bfe9159e10300a257ce89e5}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{! \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}-\/$>$}]{yy\+\_\+ch\+\_\+buf }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a9778f369b0dee28e4fc554e8fb5ca277}\label{expr-lex_8cpp_a9778f369b0dee28e4fc554e8fb5ca277}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}}]{ = {\ttfamily =yy\+\_\+current\+\_\+buffer} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a19617a8b9d14dc2f89ec78655a642df4}\label{expr-lex_8cpp_a19617a8b9d14dc2f89ec78655a642df4}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}-\/$>$}]{yy\+\_\+is\+\_\+our\+\_\+buffer }\end{DoxyParamCaption}) -\/$>$  \mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\+\_\+ch\+\_\+buf}})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_ac92e5ca38477fe229935a42d4c3959db}\label{expr-lex_8cpp_ac92e5ca38477fe229935a42d4c3959db}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!if@{if}}
+\index{if@{if}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{if()}{if()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily if (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}\label{expr-lex_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!while@{while}}
+\index{while@{while}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{while()}{while()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily while (\begin{DoxyParamCaption}\item[{1}]{ }\end{DoxyParamCaption})}
+
+
+
+expr-\/lex.\+cpp 파일의 582 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+583                 \{
+584                 \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_c\_buf\_p;
+585 
+586                 \textcolor{comment}{/* Support of yytext. */}
+587                 *\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_hold\_char;
+588 
+589                 \textcolor{comment}{/* yy\_bp points to the position in yy\_ch\_buf of the start of}
+590 \textcolor{comment}{                 * the current run.}
+591 \textcolor{comment}{                 */}
+592                 \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}} = \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}};
+593 
+594                 \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = yy\_start;
+595 yy\_match:
+596                 \textcolor{keywordflow}{do}
+597                         \{
+598                         \textcolor{keyword}{register} \mbox{\hyperlink{expr-lex_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{YY\_CHAR}} \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\_c}} = yy\_ec[\mbox{\hyperlink{expr-lex_8cpp_af1185350b7a92cf8aa5324c68850c8a6}{YY\_SC\_TO\_UI}}(*
+      \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}})];
+599                         \textcolor{keywordflow}{if} ( yy\_accept[\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}] )
+600                                 \{
+601                                 yy\_last\_accepting\_state = \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}};
+602                                 yy\_last\_accepting\_cpos = \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}};
+603                                 \}
+604                         \textcolor{keywordflow}{while} ( yy\_chk[yy\_base[\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}] + 
+      \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\_c}}] != \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} )
+605                                 \{
+606                                 \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) yy\_def[
+      \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}];
+607                                 \textcolor{keywordflow}{if} ( \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} >= 24 )
+608                                         \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\_c}} = yy\_meta[(\textcolor{keywordtype}{unsigned} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) 
+      \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\_c}}];
+609                                 \}
+610                         \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = yy\_nxt[yy\_base[
+      \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}] + (\textcolor{keywordtype}{unsigned} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\_c}}];
+611                         ++\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}};
+612                         \}
+613                 \textcolor{keywordflow}{while} ( yy\_base[\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}] != 33 );
+614 
+615 yy\_find\_action:
+616                 \mbox{\hyperlink{expr-lex_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\_act}} = yy\_accept[\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}];
+617                 \textcolor{keywordflow}{if} ( \mbox{\hyperlink{expr-lex_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\_act}} == 0 )
+618                         \{ \textcolor{comment}{/* have to back up */}
+619                         \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_last\_accepting\_cpos;
+620                         \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = yy\_last\_accepting\_state;
+621                         \mbox{\hyperlink{expr-lex_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\_act}} = yy\_accept[\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}];
+622                         \}
+623 
+624                 \mbox{\hyperlink{expr-lex_8cpp_acc3486d769af4e4b2820346a0093cc79}{YY\_DO\_BEFORE\_ACTION}};
+625 
+626 
+627 do\_action:      \textcolor{comment}{/* This label is used only to access EOF actions. */}
+628 
+629 
+630                 \textcolor{keywordflow}{switch} ( \mbox{\hyperlink{expr-lex_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\_act}} )
+631         \{ \textcolor{comment}{/* beginning of action switch */}
+632                         \textcolor{keywordflow}{case} 0: \textcolor{comment}{/* must back up */}
+633                         \textcolor{comment}{/* undo the effects of YY\_DO\_BEFORE\_ACTION */}
+634                         *\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_hold\_char;
+635                         \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_last\_accepting\_cpos;
+636                         \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = yy\_last\_accepting\_state;
+637                         \textcolor{keywordflow}{goto} yy\_find\_action;
+638 
+639 \textcolor{keywordflow}{case} 1:
+640 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+641 \textcolor{preprocessor}{#line 33 "expr.l"}
+642 \{
+643         \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_a6e19bb26b1cf6e33e3021ad463c1abb2}{TOKEN\_SIZEOF}};
+644 \}
+645         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+646 \textcolor{keywordflow}{case} 2:
+647 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+648 \textcolor{preprocessor}{#line 37 "expr.l"}
+649 \{
+650         \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_a008e051bec0c25081d2800989f86bce7}{TOKEN\_IDENTIFIER}};
+651 \}
+652         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+653 \textcolor{keywordflow}{case} 3:
+654 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+655 \textcolor{preprocessor}{#line 41 "expr.l"}
+656 \{
+657         \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_afab46303ed22655c1acbdad1c6f78df3}{TOKEN\_NUMBER}};
+658 \}
+659         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+660 \textcolor{keywordflow}{case} 4:
+661 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+662 \textcolor{preprocessor}{#line 45 "expr.l"}
+663 \{
+664         \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_aa5a331da77f5956fbc4e825deed94687}{TOKEN\_DOT}};
+665 \}       
+666         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+667 \textcolor{keywordflow}{case} 5:
+668 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+669 \textcolor{preprocessor}{#line 49 "expr.l"}
+670 \{
+671         \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_af6b51f1bfc2736f77d7ad045926f470d}{TOKEN\_ARROW}};
+672 \}
+673         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+674 \textcolor{keywordflow}{case} 6:
+675 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+676 \textcolor{preprocessor}{#line 53 "expr.l"}
+677 \{
+678         \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_ada8e4ac2a5428d01fdccddc2b7bf21b3}{TOKEN\_ADDR}};
+679 \}
+680         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+681 \textcolor{keywordflow}{case} 7:
+682 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+683 \textcolor{preprocessor}{#line 57 "expr.l"}
+684 \{
+685         \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_ad4a36807aa7985c539b62086b4607b22}{TOKEN\_STAR}};
+686 \}
+687         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+688 \textcolor{keywordflow}{case} 8:
+689 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+690 \textcolor{preprocessor}{#line 61 "expr.l"}
+691 
+692         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+693 \textcolor{keywordflow}{case} 9:
+694 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+695 \textcolor{preprocessor}{#line 63 "expr.l"}
+696 \textcolor{keywordflow}{return} *\mbox{\hyperlink{expr-lex_8cpp_a35b96d819f6a8f8638894c429e68b02a}{yytext}};
+697         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+698 \textcolor{keywordflow}{case} 10:
+699 \mbox{\hyperlink{expr-lex_8cpp_a690504b662e4281515bf12722df178ba}{YY\_RULE\_SETUP}}
+700 \textcolor{preprocessor}{#line 65 "expr.l"}
+701 \mbox{\hyperlink{expr-lex_8cpp_aad1dc60a04a1d8cfc8b3ded13601e361}{ECHO}};
+702         \mbox{\hyperlink{expr-lex_8cpp_a3cc40a460ad7df816678bcc05241e84c}{YY\_BREAK}}
+703 \textcolor{preprocessor}{#line 701 "expr-lex.cpp"}
+704 \textcolor{keywordflow}{case} \mbox{\hyperlink{expr-lex_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{YY\_STATE\_EOF}}(\mbox{\hyperlink{expr-lex_8cpp_aa3d063564f6ab16f6d408b8369d0e9ff}{INITIAL}}):
+705         \mbox{\hyperlink{expr-lex_8cpp_ac3286b18a2e91b4571b97df96a118e84}{yyterminate}}();
+706 
+707         \textcolor{keywordflow}{case} \mbox{\hyperlink{expr-lex_8cpp_ab2708fd42cff29ce6a0a52b91bea40d1}{YY\_END\_OF\_BUFFER}}:
+708                 \{
+709                 \textcolor{comment}{/* Amount of text matched not including the EOB char. */}
+710                 \textcolor{keywordtype}{int} yy\_amount\_of\_matched\_text = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) (\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} - 
+      \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}}) - 1;
+711 
+712                 \textcolor{comment}{/* Undo the effects of YY\_DO\_BEFORE\_ACTION. */}
+713                 *\mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_hold\_char;
+714                 \mbox{\hyperlink{expr-lex_8cpp_a56858d18c7eda4f53664496ef566f651}{YY\_RESTORE\_YY\_MORE\_OFFSET}}
+715 
+716                 \textcolor{keywordflow}{if} ( yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a70fd925d37a2f0454fbd0def675d106c}{yy\_buffer\_status}} == 
+      \mbox{\hyperlink{expr-lex_8cpp_a53579db42834b88199458993912c646d}{YY\_BUFFER\_NEW}} )
+717                         \{
+718                         \textcolor{comment}{/* We're scanning a new file or input source.  It's}
+719 \textcolor{comment}{                         * possible that this happened because the user}
+720 \textcolor{comment}{                         * just pointed yyin at a new source and called}
+721 \textcolor{comment}{                         * yylex().  If so, then we have to assure}
+722 \textcolor{comment}{                         * consistency between yy\_current\_buffer and our}
+723 \textcolor{comment}{                         * globals.  Here is the right place to do so, because}
+724 \textcolor{comment}{                         * this is the first action (other than possibly a}
+725 \textcolor{comment}{                         * back-up) that will match for the new input source.}
+726 \textcolor{comment}{                         */}
+727                         yy\_n\_chars = yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a06406208824817acfec2183b79080945}{yy\_n\_chars}};
+728                         yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a4843d1422e3276b636d475a3095bd948}{yy\_input\_file}} = \mbox{\hyperlink{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}{yyin}};
+729                         yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a70fd925d37a2f0454fbd0def675d106c}{yy\_buffer\_status}} = 
+      \mbox{\hyperlink{expr-lex_8cpp_a609d19f40900ecc2a5f812d9388c21fb}{YY\_BUFFER\_NORMAL}};
+730                         \}
+731 
+732                 \textcolor{comment}{/* Note that here we test for yy\_c\_buf\_p "<=" to the position}
+733 \textcolor{comment}{                 * of the first EOB in the buffer, since yy\_c\_buf\_p will}
+734 \textcolor{comment}{                 * already have been incremented past the NUL character}
+735 \textcolor{comment}{                 * (since all states make transitions on EOB to the}
+736 \textcolor{comment}{                 * end-of-buffer state).  Contrast this with the test}
+737 \textcolor{comment}{                 * in input().}
+738 \textcolor{comment}{                 */}
+739                 \textcolor{keywordflow}{if} ( yy\_c\_buf\_p <= &yy\_current\_buffer->\mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\_ch\_buf}}[yy\_n\_chars] )
+740                         \{ \textcolor{comment}{/* This was really a NUL. */}
+741                         \mbox{\hyperlink{expr-lex_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\_state\_type}} yy\_next\_state;
+742 
+743                         yy\_c\_buf\_p = \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}} + yy\_amount\_of\_matched\_text;
+744 
+745                         \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = yy\_get\_previous\_state();
+746 
+747                         \textcolor{comment}{/* Okay, we're now positioned to make the NUL}
+748 \textcolor{comment}{                         * transition.  We couldn't have}
+749 \textcolor{comment}{                         * yy\_get\_previous\_state() go ahead and do it}
+750 \textcolor{comment}{                         * for us because it doesn't know how to deal}
+751 \textcolor{comment}{                         * with the possibility of jamming (and we don't}
+752 \textcolor{comment}{                         * want to build jamming into it because then it}
+753 \textcolor{comment}{                         * will run more slowly).}
+754 \textcolor{comment}{                         */}
+755 
+756                         yy\_next\_state = yy\_try\_NUL\_trans( \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} );
+757 
+758                         \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}} = \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}} + \mbox{\hyperlink{expr-lex_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}};
+759 
+760                         \textcolor{keywordflow}{if} ( yy\_next\_state )
+761                                 \{
+762                                 \textcolor{comment}{/* Consume the NUL. */}
+763                                 \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = ++yy\_c\_buf\_p;
+764                                 \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = yy\_next\_state;
+765                                 \textcolor{keywordflow}{goto} yy\_match;
+766                                 \}
+767 
+768                         \textcolor{keywordflow}{else}
+769                                 \{
+770                                 \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_c\_buf\_p;
+771                                 \textcolor{keywordflow}{goto} yy\_find\_action;
+772                                 \}
+773                         \}
+774 
+775                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{switch} ( yy\_get\_next\_buffer() )
+776                         \{
+777                         \textcolor{keywordflow}{case} \mbox{\hyperlink{expr-lex_8cpp_a7f71d7fa2c403eb4b2f38cb9536f3c63}{EOB\_ACT\_END\_OF\_FILE}}:
+778                                 \{
+779                                 yy\_did\_buffer\_switch\_on\_eof = 0;
+780 
+781                                 \textcolor{keywordflow}{if} ( \mbox{\hyperlink{expr-lex_8cpp_ade1e2db9970733fbc3d9fecd09ce9771}{yywrap}}() )
+782                                         \{
+783                                         \textcolor{comment}{/* Note: because we've taken care in}
+784 \textcolor{comment}{                                         * yy\_get\_next\_buffer() to have set up}
+785 \textcolor{comment}{                                         * yytext, we can now set up}
+786 \textcolor{comment}{                                         * yy\_c\_buf\_p so that if some total}
+787 \textcolor{comment}{                                         * hoser (like flex itself) wants to}
+788 \textcolor{comment}{                                         * call the scanner after we return the}
+789 \textcolor{comment}{                                         * YY\_NULL, it'll still work - another}
+790 \textcolor{comment}{                                         * YY\_NULL will get returned.}
+791 \textcolor{comment}{                                         */}
+792                                         yy\_c\_buf\_p = \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}} + 
+      \mbox{\hyperlink{expr-lex_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}};
+793 
+794                                         \mbox{\hyperlink{expr-lex_8cpp_a7ffc8c947830757dd87ad202a6823edd}{yy\_act}} = \mbox{\hyperlink{expr-lex_8cpp_ab3077e60914fc54dcc55ecae1ce9700b}{YY\_STATE\_EOF}}(
+      \mbox{\hyperlink{expr-lex_8cpp_a8e14785f9eab7a997d659b25af9584c5}{YY\_START}});
+795                                         \textcolor{keywordflow}{goto} do\_action;
+796                                         \}
+797 
+798                                 \textcolor{keywordflow}{else}
+799                                         \{
+800                                         \textcolor{keywordflow}{if} ( ! yy\_did\_buffer\_switch\_on\_eof )
+801                                                 \mbox{\hyperlink{expr-lex_8cpp_a0406739e64fb5750cf995d2ae68ce69d}{YY\_NEW\_FILE}};
+802                                         \}
+803                                 \textcolor{keywordflow}{break};
+804                                 \}
+805 
+806                         \textcolor{keywordflow}{case} \mbox{\hyperlink{expr-lex_8cpp_adf4b0db227e07782e28ade353a7ba7a1}{EOB\_ACT\_CONTINUE\_SCAN}}:
+807                                 yy\_c\_buf\_p =
+808                                         \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}} + yy\_amount\_of\_matched\_text;
+809 
+810                                 \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = yy\_get\_previous\_state();
+811 
+812                                 \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_c\_buf\_p;
+813                                 \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}} = \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}} + \mbox{\hyperlink{expr-lex_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}};
+814                                 \textcolor{keywordflow}{goto} yy\_match;
+815 
+816                         \textcolor{keywordflow}{case} \mbox{\hyperlink{expr-lex_8cpp_ad1a0b5ebcabffe388e9e9ebb2619c1fb}{EOB\_ACT\_LAST\_MATCH}}:
+817                                 yy\_c\_buf\_p =
+818                                 &yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_ad7b8df8d8a4688e57b0b8d3ca75adc85}{yy\_ch\_buf}}[yy\_n\_chars];
+819 
+820                                 \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = yy\_get\_previous\_state();
+821 
+822                                 \mbox{\hyperlink{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}{yy\_cp}} = yy\_c\_buf\_p;
+823                                 \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\_bp}} = \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}} + \mbox{\hyperlink{expr-lex_8cpp_a68792d73820bc46a71d3d4e613f0b977}{YY\_MORE\_ADJ}};
+824                                 \textcolor{keywordflow}{goto} yy\_find\_action;
+825                         \}
+826                 \textcolor{keywordflow}{break};
+827                 \}
+828 
+829         \textcolor{keywordflow}{default}:
+830                 \mbox{\hyperlink{expr-lex_8cpp_ac0586b8b0b092d02f4ba7d45abe328f2}{YY\_FATAL\_ERROR}}(
+831                         \textcolor{stringliteral}{"fatal flex scanner internal error--no action found"} );
+832         \} \textcolor{comment}{/* end of action switch */}
+833                 \} \textcolor{comment}{/* end of scanning one token */}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{expr-lex_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr-lex_8cpp_a0e48c1f64b558d03d870367324920354}\label{expr-lex_8cpp_a0e48c1f64b558d03d870367324920354}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!while@{while}}
+\index{while@{while}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{while()}{while()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily while (\begin{DoxyParamCaption}\item[{yy\+\_\+chk+\mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\+\_\+c}}\mbox{]} !}]{\mbox{[}yy\+\_\+base\mbox{[}yy\+\_\+current\+\_\+state\mbox{]} = {\ttfamily \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\+\_\+current\+\_\+state}}} }\end{DoxyParamCaption})}
+
+
+
+expr-\/lex.\+cpp 파일의 1027 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1028                 \{
+1029                 \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) yy\_def[
+      \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}];
+1030                 \textcolor{keywordflow}{if} ( \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}} >= 24 )
+1031                         \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\_c}} = yy\_meta[(\textcolor{keywordtype}{unsigned} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\_c}}];
+1032                 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{expr-lex_8cpp_a05a39a25571bbcfcf45a1e04a8c24f9b}\label{expr-lex_8cpp_a05a39a25571bbcfcf45a1e04a8c24f9b}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}}
+\index{yy\+\_\+delete\+\_\+buffer@{yy\+\_\+delete\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+delete\+\_\+buffer()}{yy\_delete\_buffer()}}
+{\footnotesize\ttfamily void yy\+\_\+delete\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}}]{ }\end{DoxyParamCaption})}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{expr-lex_8cpp_a05a39a25571bbcfcf45a1e04a8c24f9b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr-lex_8cpp_a8eaf742e61b43d25af0aa73d14d6a4ae}\label{expr-lex_8cpp_a8eaf742e61b43d25af0aa73d14d6a4ae}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+flex\+\_\+free@{yy\+\_\+flex\+\_\+free}}
+\index{yy\+\_\+flex\+\_\+free@{yy\+\_\+flex\+\_\+free}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+flex\+\_\+free()}{yy\_flex\_free()}}
+{\footnotesize\ttfamily yy\+\_\+flex\+\_\+free (\begin{DoxyParamCaption}\item[{(void $\ast$)}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_aaad521488306a55a775adfe38ce4cf49}\label{expr-lex_8cpp_aaad521488306a55a775adfe38ce4cf49}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}}
+\index{yy\+\_\+flush\+\_\+buffer@{yy\+\_\+flush\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+flush\+\_\+buffer()}{yy\_flush\_buffer()}}
+{\footnotesize\ttfamily void yy\+\_\+flush\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_aa8fb2edba7d58cb3cd859f2b7831efac}\label{expr-lex_8cpp_aa8fb2edba7d58cb3cd859f2b7831efac}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}}
+\index{yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+init\+\_\+buffer()}{yy\_init\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily yy\+\_\+init\+\_\+buffer (\begin{DoxyParamCaption}\item[{yy\+\_\+current\+\_\+buffer}]{,  }\item[{input\+\_\+file}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a1ae002281d6d54c4ca55d32b423662f9}\label{expr-lex_8cpp_a1ae002281d6d54c4ca55d32b423662f9}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}}
+\index{yy\+\_\+init\+\_\+buffer@{yy\+\_\+init\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+init\+\_\+buffer()}{yy\_init\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void yy\+\_\+init\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}}]{,  }\item[{\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a30fc8e518fa4e332a8657f6f8afa8fd9}\label{expr-lex_8cpp_a30fc8e518fa4e332a8657f6f8afa8fd9}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}}
+\index{yy\+\_\+load\+\_\+buffer\+\_\+state@{yy\+\_\+load\+\_\+buffer\+\_\+state}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+load\+\_\+buffer\+\_\+state()}{yy\_load\_buffer\_state()}}
+{\footnotesize\ttfamily void yy\+\_\+load\+\_\+buffer\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+expr-\/lex.\+cpp 파일의 1206 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1208         \{
+1209         yy\_n\_chars = yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a06406208824817acfec2183b79080945}{yy\_n\_chars}};
+1210         \mbox{\hyperlink{expr-lex_8cpp_a790a191a93ef4d3b8c0bb43fd7480052}{yytext\_ptr}} = yy\_c\_buf\_p = yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a58aa927f098b99d99e75da80f9b681ef}{yy\_buf\_pos}};
+1211         \mbox{\hyperlink{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}{yyin}} = yy\_current\_buffer->\mbox{\hyperlink{structyy__buffer__state_a4843d1422e3276b636d475a3095bd948}{yy\_input\_file}};
+1212         yy\_hold\_char = *yy\_c\_buf\_p;
+1213         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{expr-lex_8cpp_ad0030daf8055c0afc233a0c34bc12fd6}\label{expr-lex_8cpp_ad0030daf8055c0afc233a0c34bc12fd6}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [1/9]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expr-lex_8cpp_a3528c58cdd338886f23357f42e2061b8}{yyrestart}} Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(F\+I\+LE $\ast$input\+\_\+file)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_aa4d8fcf388290ca0a2849fb6120b8bdb}\label{expr-lex_8cpp_aa4d8fcf388290ca0a2849fb6120b8bdb}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [2/9]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expr-lex_8cpp_a01ffaab94c1633ad975eb2e5d5ca360c}{yy\+\_\+switch\+\_\+to\+\_\+buffer}} Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} new\+\_\+buffer)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_ad0c2268922fe79170ffa21498ef4f02d}\label{expr-lex_8cpp_ad0c2268922fe79170ffa21498ef4f02d}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [3/9]}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} input Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(void)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_aa2feac785a778f388f5789c00eccf8c3}\label{expr-lex_8cpp_aa2feac785a778f388f5789c00eccf8c3}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [4/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}{yy\+\_\+create\+\_\+buffer}} Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(F\+I\+LE $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_af3396691b9b779b13d6cc623715bb1dd}\label{expr-lex_8cpp_af3396691b9b779b13d6cc623715bb1dd}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [5/9]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expr-lex_8cpp_aaad521488306a55a775adfe38ce4cf49}{yy\+\_\+flush\+\_\+buffer}} Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_adb439e9a28fc4c4ad50eff59cb513eba}\label{expr-lex_8cpp_adb439e9a28fc4c4ad50eff59cb513eba}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [6/9]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{expr-lex_8cpp_a1ae002281d6d54c4ca55d32b423662f9}{yy\+\_\+init\+\_\+buffer}} Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}, F\+I\+LE $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_abe2bec50f45200479e22b18dc62fee11}\label{expr-lex_8cpp_abe2bec50f45200479e22b18dc62fee11}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [7/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_af9ed770023a73cfa0b6cfd90b5a76fc9}{yy\+\_\+scan\+\_\+buffer}} Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(char $\ast$base, \mbox{\hyperlink{expr-lex_8cpp_aa14cc3d400000eef0cd40225fd790cfe}{yy\+\_\+size\+\_\+t}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a689b8676764ac30cbf27edfb45c74391}\label{expr-lex_8cpp_a689b8676764ac30cbf27edfb45c74391}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [8/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_ac0d3a22f8bc4cc5e7af2783fe375d5b0}{yy\+\_\+scan\+\_\+string}} Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}} char $\ast$yy\+\_\+str)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a0a2ce3902c765bc21ae783522d579223}\label{expr-lex_8cpp_a0a2ce3902c765bc21ae783522d579223}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}}
+\index{Y\+Y\+\_\+\+P\+R\+O\+TO@{Y\+Y\+\_\+\+P\+R\+O\+TO}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+P\+R\+O\+T\+O()}{YY\_PROTO()}\hspace{0.1cm}{\footnotesize\ttfamily [9/9]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} \mbox{\hyperlink{expr-lex_8cpp_a1171cd5559de417237e028ebb21b8e54}{yy\+\_\+scan\+\_\+bytes}} Y\+Y\+\_\+\+P\+R\+O\+TO (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}} char $\ast$bytes, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a1171cd5559de417237e028ebb21b8e54}\label{expr-lex_8cpp_a1171cd5559de417237e028ebb21b8e54}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+scan\+\_\+bytes@{yy\+\_\+scan\+\_\+bytes}}
+\index{yy\+\_\+scan\+\_\+bytes@{yy\+\_\+scan\+\_\+bytes}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+scan\+\_\+bytes()}{yy\_scan\_bytes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gb_codes_c_b_8h_a9717e7bbecb906637e86cef6da3d83c2}{return}} yy\+\_\+scan\+\_\+bytes (\begin{DoxyParamCaption}\item[{yy\+\_\+str}]{,  }\item[{\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a4f7f20d812f72fd97d855e769ad39cc5}\label{expr-lex_8cpp_a4f7f20d812f72fd97d855e769ad39cc5}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+switch\+\_\+to\+\_\+buffer()}{yy\_switch\_to\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void yy\+\_\+switch\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{new\+\_\+buffer}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [new]}}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a01ffaab94c1633ad975eb2e5d5ca360c}\label{expr-lex_8cpp_a01ffaab94c1633ad975eb2e5d5ca360c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}}
+\index{yy\+\_\+switch\+\_\+to\+\_\+buffer@{yy\+\_\+switch\+\_\+to\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+switch\+\_\+to\+\_\+buffer()}{yy\_switch\_to\_buffer()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily yy\+\_\+switch\+\_\+to\+\_\+buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a3528c58cdd338886f23357f42e2061b8}\label{expr-lex_8cpp_a3528c58cdd338886f23357f42e2061b8}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yyrestart@{yyrestart}}
+\index{yyrestart@{yyrestart}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yyrestart()}{yyrestart()}}
+{\footnotesize\ttfamily void yyrestart (\begin{DoxyParamCaption}\item[{input\+\_\+file}]{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}\label{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!b@{b}}
+\index{b@{b}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gb_codes_c_b_8h_a9717e7bbecb906637e86cef6da3d83c2}{return}} b = (\mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}}) yy\+\_\+flex\+\_\+alloc( sizeof( struct \mbox{\hyperlink{structyy__buffer__state}{yy\+\_\+buffer\+\_\+state}} ) )}
+
+
+
+expr-\/lex.\+cpp 파일의 1226 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}\label{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!buf@{buf}}
+\index{buf@{buf}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{buf}{buf}}
+{\footnotesize\ttfamily buf\mbox{[}\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}\mbox{]}}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+\{
+        \mbox{\hyperlink{structyy__buffer__state}{YY\_BUFFER\_STATE}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}
+\end{DoxyCode}
+
+
+expr-\/lex.\+cpp 파일의 1388 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a5aaef62994ad4e49e786f5228b548541}\label{expr-lex_8cpp_a5aaef62994ad4e49e786f5228b548541}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!expr\+Col@{expr\+Col}}
+\index{expr\+Col@{expr\+Col}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Col}{exprCol}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} expr\+Col}
+
+
+
+expr-\/lex.\+cpp 파일의 393 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aa1f704d92ffa441305e3434381d676f7}\label{expr-lex_8cpp_aa1f704d92ffa441305e3434381d676f7}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!expr\+String@{expr\+String}}
+\index{expr\+String@{expr\+String}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+String}{exprString}}
+{\footnotesize\ttfamily char$\ast$ expr\+String}
+
+
+
+expr-\/lex.\+cpp 파일의 392 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}\label{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!file@{file}}
+\index{file@{file}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ file}
+
+
+
+expr-\/lex.\+cpp 파일의 1273 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}\label{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!i@{i}}
+\index{i@{i}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} i}
+
+
+
+expr-\/lex.\+cpp 파일의 1392 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}\label{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!len@{len}}
+\index{len@{len}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{len}{len}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} len}
+
+
+
+expr-\/lex.\+cpp 파일의 1386 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}\label{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!n@{n}}
+\index{n@{n}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily n = \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} + 2}
+
+
+
+expr-\/lex.\+cpp 파일의 1391 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}\label{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!size@{size}}
+\index{size@{size}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_aa14cc3d400000eef0cd40225fd790cfe}{yy\+\_\+size\+\_\+t}} size}
+
+
+
+expr-\/lex.\+cpp 파일의 1221 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a7ffc8c947830757dd87ad202a6823edd}\label{expr-lex_8cpp_a7ffc8c947830757dd87ad202a6823edd}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+act@{yy\+\_\+act}}
+\index{yy\+\_\+act@{yy\+\_\+act}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+act}{yy\_act}}
+{\footnotesize\ttfamily register \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} yy\+\_\+act}
+
+
+
+expr-\/lex.\+cpp 파일의 551 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_adef6ed71d4cd59407dc44578f94e5fec}\label{expr-lex_8cpp_adef6ed71d4cd59407dc44578f94e5fec}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+at\+\_\+bol@{yy\+\_\+at\+\_\+bol}}
+\index{yy\+\_\+at\+\_\+bol@{yy\+\_\+at\+\_\+bol}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+at\+\_\+bol}{yy\_at\_bol}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+at\+\_\+bol = 1}
+
+
+
+expr-\/lex.\+cpp 파일의 1317 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}\label{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+bp@{yy\+\_\+bp}}
+\index{yy\+\_\+bp@{yy\+\_\+bp}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+bp}{yy\_bp}}
+{\footnotesize\ttfamily register char $\ast$ yy\+\_\+bp = \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+expr-\/lex.\+cpp 파일의 550 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a4eab751080565d2d6e83560583d15d1c}\label{expr-lex_8cpp_a4eab751080565d2d6e83560583d15d1c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+buf\+\_\+pos@{yy\+\_\+buf\+\_\+pos}}
+\index{yy\+\_\+buf\+\_\+pos@{yy\+\_\+buf\+\_\+pos}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+buf\+\_\+pos}{yy\_buf\_pos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+buf\+\_\+pos = \&\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}-\/$>$\mbox{\hyperlink{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}{yy\+\_\+ch\+\_\+buf}}\mbox{[}0\mbox{]}}
+
+
+
+expr-\/lex.\+cpp 파일의 1315 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a969f40813585d053e9cceaec3fe16f58}\label{expr-lex_8cpp_a969f40813585d053e9cceaec3fe16f58}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+buf\+\_\+size@{yy\+\_\+buf\+\_\+size}}
+\index{yy\+\_\+buf\+\_\+size@{yy\+\_\+buf\+\_\+size}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+buf\+\_\+size}{yy\_buf\_size}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+buf\+\_\+size = \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}}
+
+
+
+expr-\/lex.\+cpp 파일의 1230 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a44b78dddb082281d797f84223687c7e1}\label{expr-lex_8cpp_a44b78dddb082281d797f84223687c7e1}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+buffer\+\_\+status@{yy\+\_\+buffer\+\_\+status}}
+\index{yy\+\_\+buffer\+\_\+status@{yy\+\_\+buffer\+\_\+status}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+buffer\+\_\+status}{yy\_buffer\_status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+buffer\+\_\+status = \mbox{\hyperlink{expr-lex_8cpp_a53579db42834b88199458993912c646d}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+N\+EW}}}
+
+
+
+expr-\/lex.\+cpp 파일의 1318 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}\label{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+c@{yy\+\_\+c}}
+\index{yy\+\_\+c@{yy\+\_\+c}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+c}{yy\_c}}
+{\footnotesize\ttfamily register \mbox{\hyperlink{expr-lex_8cpp_a1f324b3cb0839eeb90145f0274e6946e}{Y\+Y\+\_\+\+C\+H\+AR}} yy\+\_\+c = 1}
+
+
+
+expr-\/lex.\+cpp 파일의 1021 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}\label{expr-lex_8cpp_a49f3339224f2ff52f9191b351b184dbd}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+ch\+\_\+buf@{yy\+\_\+ch\+\_\+buf}}
+\index{yy\+\_\+ch\+\_\+buf@{yy\+\_\+ch\+\_\+buf}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+ch\+\_\+buf}{yy\_ch\_buf}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+ch\+\_\+buf = (char $\ast$) yy\+\_\+flex\+\_\+alloc( \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}-\/$>$\mbox{\hyperlink{expr-lex_8cpp_a969f40813585d053e9cceaec3fe16f58}{yy\+\_\+buf\+\_\+size}} + 2 )}
+
+
+
+expr-\/lex.\+cpp 파일의 1235 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}\label{expr-lex_8cpp_aebf8322d98e81db5af081bb22a5f06fe}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+cp@{yy\+\_\+cp}}
+\index{yy\+\_\+cp@{yy\+\_\+cp}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+cp}{yy\_cp}}
+{\footnotesize\ttfamily $\ast$ yy\+\_\+cp = \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+expr-\/lex.\+cpp 파일의 550 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}\label{expr-lex_8cpp_a55588ac24161be2160e907e019dcae5c}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}}
+\index{yy\+\_\+create\+\_\+buffer@{yy\+\_\+create\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+create\+\_\+buffer}{yy\_create\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} yy\+\_\+create\+\_\+buffer(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}) F\+I\+LE $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}}
+
+\mbox{\Hypertarget{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}\label{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+current\+\_\+state@{yy\+\_\+current\+\_\+state}}
+\index{yy\+\_\+current\+\_\+state@{yy\+\_\+current\+\_\+state}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+current\+\_\+state}{yy\_current\_state}}
+{\footnotesize\ttfamily yy\+\_\+current\+\_\+state = yy\+\_\+nxt\mbox{[}yy\+\_\+base\mbox{[}yy\+\_\+current\+\_\+state\mbox{]} + (unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) \mbox{\hyperlink{expr-lex_8cpp_a2ce7598a28e3deb63b5ef934b031a93f}{yy\+\_\+c}}\mbox{]}}
+
+
+
+expr-\/lex.\+cpp 파일의 1033 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_abcefb20c54ce0f92452cfbb9cf657670}\label{expr-lex_8cpp_abcefb20c54ce0f92452cfbb9cf657670}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!Y\+Y\+\_\+\+D\+E\+CL@{Y\+Y\+\_\+\+D\+E\+CL}}
+\index{Y\+Y\+\_\+\+D\+E\+CL@{Y\+Y\+\_\+\+D\+E\+CL}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+\_\+\+D\+E\+CL}{YY\_DECL}}
+{\footnotesize\ttfamily Y\+Y\+\_\+\+D\+E\+CL}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+\{
+        \textcolor{keyword}{register} \mbox{\hyperlink{expr-lex_8cpp_a9ba7c416f135b0f0c1f4addded4616b5}{yy\_state\_type}} \mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\_current\_state}}
+\end{DoxyCode}
+
+
+expr-\/lex.\+cpp 파일의 548 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a0a1dd9ce87a49536adf8f6362b071057}\label{expr-lex_8cpp_a0a1dd9ce87a49536adf8f6362b071057}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+fill\+\_\+buffer@{yy\+\_\+fill\+\_\+buffer}}
+\index{yy\+\_\+fill\+\_\+buffer@{yy\+\_\+fill\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+fill\+\_\+buffer}{yy\_fill\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+fill\+\_\+buffer = 1}
+
+
+
+expr-\/lex.\+cpp 파일의 1281 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_af6c25e1253452c8f667697b573db784f}\label{expr-lex_8cpp_af6c25e1253452c8f667697b573db784f}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+input\+\_\+file@{yy\+\_\+input\+\_\+file}}
+\index{yy\+\_\+input\+\_\+file@{yy\+\_\+input\+\_\+file}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+input\+\_\+file}{yy\_input\_file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+input\+\_\+file = \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}}
+
+
+
+expr-\/lex.\+cpp 파일의 1280 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ad05318f0f8d19c7e46d72303ae11820e}\label{expr-lex_8cpp_ad05318f0f8d19c7e46d72303ae11820e}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+is\+\_\+interactive@{yy\+\_\+is\+\_\+interactive}}
+\index{yy\+\_\+is\+\_\+interactive@{yy\+\_\+is\+\_\+interactive}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+is\+\_\+interactive}{yy\_is\_interactive}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+is\+\_\+interactive = \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}} ? (\mbox{\hyperlink{expr-lex_8cpp_aef88e7abfad3a0a8812ec4a04ea1de6b}{isatty}}( \mbox{\hyperlink{expr-lex_8cpp_a2c12e4b6615ac6838a99d5b6fa619683}{fileno}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}) ) $>$ 0) \+: 0}
+
+
+
+expr-\/lex.\+cpp 파일의 1289 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a7494532160b510aa4e49743e9be97259}\label{expr-lex_8cpp_a7494532160b510aa4e49743e9be97259}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+is\+\_\+jam@{yy\+\_\+is\+\_\+jam}}
+\index{yy\+\_\+is\+\_\+jam@{yy\+\_\+is\+\_\+jam}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+is\+\_\+jam}{yy\_is\_jam}}
+{\footnotesize\ttfamily \mbox{\hyperlink{gb_codes_c_b_8h_a9717e7bbecb906637e86cef6da3d83c2}{return}} yy\+\_\+is\+\_\+jam = (\mbox{\hyperlink{expr-lex_8cpp_abb8b9672f94e21056888ae611b41cd1b}{yy\+\_\+current\+\_\+state}} == 23)}
+
+
+
+expr-\/lex.\+cpp 파일의 1034 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a725031cce2e48e1e5c7f713146ed73bc}\label{expr-lex_8cpp_a725031cce2e48e1e5c7f713146ed73bc}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+is\+\_\+our\+\_\+buffer@{yy\+\_\+is\+\_\+our\+\_\+buffer}}
+\index{yy\+\_\+is\+\_\+our\+\_\+buffer@{yy\+\_\+is\+\_\+our\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+is\+\_\+our\+\_\+buffer}{yy\_is\_our\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} yy\+\_\+is\+\_\+our\+\_\+buffer = 1}
+
+
+
+expr-\/lex.\+cpp 파일의 1239 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_af9ed770023a73cfa0b6cfd90b5a76fc9}\label{expr-lex_8cpp_af9ed770023a73cfa0b6cfd90b5a76fc9}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+scan\+\_\+buffer@{yy\+\_\+scan\+\_\+buffer}}
+\index{yy\+\_\+scan\+\_\+buffer@{yy\+\_\+scan\+\_\+buffer}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+scan\+\_\+buffer}{yy\_scan\_buffer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} yy\+\_\+scan\+\_\+buffer(base, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}) char $\ast$base}
+
+\mbox{\Hypertarget{expr-lex_8cpp_afe1a1d0d2103208153f7037bef67be96}\label{expr-lex_8cpp_afe1a1d0d2103208153f7037bef67be96}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+scan\+\_\+bytes@{yy\+\_\+scan\+\_\+bytes}}
+\index{yy\+\_\+scan\+\_\+bytes@{yy\+\_\+scan\+\_\+bytes}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+scan\+\_\+bytes}{yy\_scan\_bytes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} yy\+\_\+scan\+\_\+bytes(bytes, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}) \mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}} char $\ast$bytes}
+
+\mbox{\Hypertarget{expr-lex_8cpp_ac0d3a22f8bc4cc5e7af2783fe375d5b0}\label{expr-lex_8cpp_ac0d3a22f8bc4cc5e7af2783fe375d5b0}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yy\+\_\+scan\+\_\+string@{yy\+\_\+scan\+\_\+string}}
+\index{yy\+\_\+scan\+\_\+string@{yy\+\_\+scan\+\_\+string}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yy\+\_\+scan\+\_\+string}{yy\_scan\_string}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr-lex_8cpp_a4e5bd2d129903df83f3d13effaf8f3e4}{Y\+Y\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+T\+A\+TE}} yy\+\_\+scan\+\_\+string(yy\+\_\+str) \mbox{\hyperlink{expr-lex_8cpp_aa2f1a918be586b44bf08126bde2d7cc9}{yyconst}} char $\ast$yy\+\_\+str}
+
+\mbox{\Hypertarget{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}\label{expr-lex_8cpp_a87a127afa8f6c307fbfba10390675406}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yyin@{yyin}}
+\index{yyin@{yyin}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yyin}{yyin}}
+{\footnotesize\ttfamily F\+I\+LE $\ast$ yyin = (F\+I\+LE $\ast$) 0}
+
+
+
+expr-\/lex.\+cpp 파일의 271 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a1b5865350b5ca5c1d69f429c2a652953}\label{expr-lex_8cpp_a1b5865350b5ca5c1d69f429c2a652953}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yyleng@{yyleng}}
+\index{yyleng@{yyleng}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yyleng}{yyleng}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} yyleng}
+
+
+
+expr-\/lex.\+cpp 파일의 219 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a296847b42b0baa62e2af36cb79f3c0eb}\label{expr-lex_8cpp_a296847b42b0baa62e2af36cb79f3c0eb}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yyout@{yyout}}
+\index{yyout@{yyout}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yyout}{yyout}}
+{\footnotesize\ttfamily F\+I\+LE $\ast$ yyout = (F\+I\+LE $\ast$) 0}
+
+
+
+expr-\/lex.\+cpp 파일의 271 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_a35b96d819f6a8f8638894c429e68b02a}\label{expr-lex_8cpp_a35b96d819f6a8f8638894c429e68b02a}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yytext@{yytext}}
+\index{yytext@{yytext}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yytext}{yytext}}
+{\footnotesize\ttfamily char $\ast$ yytext}
+
+
+
+expr-\/lex.\+cpp 파일의 380 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr-lex_8cpp_ad6fabaea416e87b0f79fc34741e70818}\label{expr-lex_8cpp_ad6fabaea416e87b0f79fc34741e70818}} 
+\index{expr-\/lex.\+cpp@{expr-\/lex.\+cpp}!yytext\+\_\+ptr@{yytext\+\_\+ptr}}
+\index{yytext\+\_\+ptr@{yytext\+\_\+ptr}!expr-\/lex.\+cpp@{expr-\/lex.\+cpp}}
+\subsubsection{\texorpdfstring{yytext\+\_\+ptr}{yytext\_ptr}}
+{\footnotesize\ttfamily yytext\+\_\+ptr = \mbox{\hyperlink{expr-lex_8cpp_a71cf769ce518e8687bf8999b278c65f4}{yy\+\_\+bp}}}
+
+
+
+expr-\/lex.\+cpp 파일의 1078 번째 라인에서 정의되었습니다.
+

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_wav_writer.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -68,29 +92,203 @@ $(function() {
 <div class="title">WavWriter 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_wav_writer_8h_source.html">WavWriter.h</a>&gt;</code></p>
+<div class="dynheader">
+WavWriter에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wav_writer__coll__graph.png" border="0" usemap="#_wav_writer_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a18a057d0c1901caa6b08f528bd6908a7"><td class="memItemLeft" align="right" valign="top"><a id="a18a057d0c1901caa6b08f528bd6908a7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Open</b> (const char *name)</td></tr>
+<tr class="memitem:ada0f985bd68570f6d55442f96f3bda44"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wav_writer.html#ada0f985bd68570f6d55442f96f3bda44">WavWriter</a> ()</td></tr>
+<tr class="separator:ada0f985bd68570f6d55442f96f3bda44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53a03ef60fc6635381d059beaa6f0657"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wav_writer.html#a53a03ef60fc6635381d059beaa6f0657">~WavWriter</a> ()</td></tr>
+<tr class="separator:a53a03ef60fc6635381d059beaa6f0657"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18a057d0c1901caa6b08f528bd6908a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wav_writer.html#a18a057d0c1901caa6b08f528bd6908a7">Open</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *name)</td></tr>
 <tr class="separator:a18a057d0c1901caa6b08f528bd6908a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04fe7187eebeff2831af0bc85470744d"><td class="memItemLeft" align="right" valign="top"><a id="a04fe7187eebeff2831af0bc85470744d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetFormat</b> (const WAVEFORMATEX *format)</td></tr>
+<tr class="memitem:a04fe7187eebeff2831af0bc85470744d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wav_writer.html#a04fe7187eebeff2831af0bc85470744d">SetFormat</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> WAVEFORMATEX *format)</td></tr>
 <tr class="separator:a04fe7187eebeff2831af0bc85470744d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2033f614c70ac3e59d07fb43ea26577a"><td class="memItemLeft" align="right" valign="top"><a id="a2033f614c70ac3e59d07fb43ea26577a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>AddSound</b> (const u8 *data, int len)</td></tr>
+<tr class="memitem:a2033f614c70ac3e59d07fb43ea26577a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_wav_writer.html#a2033f614c70ac3e59d07fb43ea26577a">AddSound</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *data, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> <a class="el" href="expr-lex_8cpp.html#afed088663f8704004425cdae2120b9b3">len</a>)</td></tr>
 <tr class="separator:a2033f614c70ac3e59d07fb43ea26577a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_wav_writer_8h_source.html">WavWriter.h</a> 파일의 <a class="el" href="_wav_writer_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="ada0f985bd68570f6d55442f96f3bda44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada0f985bd68570f6d55442f96f3bda44">&#9670;&nbsp;</a></span>WavWriter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WavWriter::WavWriter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_wav_writer_8cpp_source.html">WavWriter.cpp</a> 파일의 <a class="el" href="_wav_writer_8cpp_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  m_file = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  m_len = 0;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  m_posSize = 0;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a53a03ef60fc6635381d059beaa6f0657"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53a03ef60fc6635381d059beaa6f0657">&#9670;&nbsp;</a></span>~WavWriter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WavWriter::~WavWriter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_wav_writer_8cpp_source.html">WavWriter.cpp</a> 파일의 <a class="el" href="_wav_writer_8cpp_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">if</span>(m_file)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    Close();</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a2033f614c70ac3e59d07fb43ea26577a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2033f614c70ac3e59d07fb43ea26577a">&#9670;&nbsp;</a></span>AddSound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WavWriter::AddSound </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_wav_writer_8cpp_source.html">WavWriter.cpp</a> 파일의 <a class="el" href="_wav_writer_8cpp_source.html#l00110">110</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordflow">if</span>(m_file == <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <span class="comment">// write a block of sound data</span></div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  fwrite(data, 1, <a class="code" href="expr-lex_8cpp.html#afed088663f8704004425cdae2120b9b3">len</a>, m_file);</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  m_len += <a class="code" href="expr-lex_8cpp.html#afed088663f8704004425cdae2120b9b3">len</a>;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_afed088663f8704004425cdae2120b9b3"><div class="ttname"><a href="expr-lex_8cpp.html#afed088663f8704004425cdae2120b9b3">len</a></div><div class="ttdeci">int len</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01386">expr-lex.cpp:1386</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wav_writer_a2033f614c70ac3e59d07fb43ea26577a_icgraph.png" border="0" usemap="#class_wav_writer_a2033f614c70ac3e59d07fb43ea26577a_icgraph" alt=""/></div>
+<map name="class_wav_writer_a2033f614c70ac3e59d07fb43ea26577a_icgraph" id="class_wav_writer_a2033f614c70ac3e59d07fb43ea26577a_icgraph">
+<area shape="rect" id="node2" href="class_direct_sound.html#a2e2a78f3a6719920fb2a9dfc48e4b1db" title="DirectSound::write" alt="" coords="204,5,332,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a18a057d0c1901caa6b08f528bd6908a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18a057d0c1901caa6b08f528bd6908a7">&#9670;&nbsp;</a></span>Open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WavWriter::Open </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_wav_writer_8cpp_source.html">WavWriter.cpp</a> 파일의 <a class="el" href="_wav_writer_8cpp_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  <span class="keywordflow">if</span>(m_file)</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    Close();</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  m_file = fopen(name, <span class="stringliteral">&quot;wb&quot;</span>);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keywordflow">if</span>(!m_file)</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="comment">// RIFF header</span></div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data[4] = { <span class="charliteral">&#39;R&#39;</span>, <span class="charliteral">&#39;I&#39;</span>, <span class="charliteral">&#39;F&#39;</span>, <span class="charliteral">&#39;F&#39;</span> };</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  fwrite(data, 1, 4, m_file);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(data, 0);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="comment">// write 0 for now. Will get filled during close</span></div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  fwrite(data, 1, 4, m_file);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="comment">// write WAVE header</span></div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data2[4] = { <span class="charliteral">&#39;W&#39;</span>, <span class="charliteral">&#39;A&#39;</span>, <span class="charliteral">&#39;V&#39;</span>, <span class="charliteral">&#39;E&#39;</span> };</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  fwrite(data2, 1, 4, m_file);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div><div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="_util_8cpp_html_a61ef2cbdb9d8b5c50004ebd1557439c7"><div class="ttname"><a href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a></div><div class="ttdeci">void utilPutDword(u8 *p, u32 value)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00190">Util.cpp:190</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wav_writer_a18a057d0c1901caa6b08f528bd6908a7_cgraph.png" border="0" usemap="#class_wav_writer_a18a057d0c1901caa6b08f528bd6908a7_cgraph" alt=""/></div>
+<map name="class_wav_writer_a18a057d0c1901caa6b08f528bd6908a7_cgraph" id="class_wav_writer_a18a057d0c1901caa6b08f528bd6908a7_cgraph">
+<area shape="rect" id="node2" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7" title="utilPutDword" alt="" coords="175,5,269,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wav_writer_a18a057d0c1901caa6b08f528bd6908a7_icgraph.png" border="0" usemap="#class_wav_writer_a18a057d0c1901caa6b08f528bd6908a7_icgraph" alt=""/></div>
+<map name="class_wav_writer_a18a057d0c1901caa6b08f528bd6908a7_icgraph" id="class_wav_writer_a18a057d0c1901caa6b08f528bd6908a7_icgraph">
+<area shape="rect" id="node2" href="class_direct_sound.html#a2e2a78f3a6719920fb2a9dfc48e4b1db" title="DirectSound::write" alt="" coords="175,5,303,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a04fe7187eebeff2831af0bc85470744d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04fe7187eebeff2831af0bc85470744d">&#9670;&nbsp;</a></span>SetFormat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WavWriter::SetFormat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> WAVEFORMATEX *&#160;</td>
+          <td class="paramname"><em>format</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_wav_writer_8cpp_source.html">WavWriter.cpp</a> 파일의 <a class="el" href="_wav_writer_8cpp_source.html#l00089">89</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">if</span>(m_file == <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// write fmt header</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data[4] = { <span class="charliteral">&#39;f&#39;</span>, <span class="charliteral">&#39;m&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39; &#39;</span> };</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  fwrite(data, 1, 4, m_file);</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> value = <span class="keyword">sizeof</span>(WAVEFORMATEX);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(data, value);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  fwrite(data, 1, 4, m_file);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  fwrite(format, 1, <span class="keyword">sizeof</span>(WAVEFORMATEX), m_file);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// start data header</span></div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> data2[4] = { <span class="charliteral">&#39;d&#39;</span>, <span class="charliteral">&#39;a&#39;</span>, <span class="charliteral">&#39;t&#39;</span>, <span class="charliteral">&#39;a&#39;</span> };</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  fwrite(data2, 1, 4, m_file);</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  </div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  m_posSize = ftell(m_file);</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="comment">// write 0 for data chunk size. Filled out during Close()</span></div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(data, 0);</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  fwrite(data, 1, 4, m_file);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div><div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="_util_8cpp_html_a61ef2cbdb9d8b5c50004ebd1557439c7"><div class="ttname"><a href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a></div><div class="ttdeci">void utilPutDword(u8 *p, u32 value)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00190">Util.cpp:190</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wav_writer_a04fe7187eebeff2831af0bc85470744d_cgraph.png" border="0" usemap="#class_wav_writer_a04fe7187eebeff2831af0bc85470744d_cgraph" alt=""/></div>
+<map name="class_wav_writer_a04fe7187eebeff2831af0bc85470744d_cgraph" id="class_wav_writer_a04fe7187eebeff2831af0bc85470744d_cgraph">
+<area shape="rect" id="node2" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7" title="utilPutDword" alt="" coords="204,5,299,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_wav_writer_a04fe7187eebeff2831af0bc85470744d_icgraph.png" border="0" usemap="#class_wav_writer_a04fe7187eebeff2831af0bc85470744d_icgraph" alt=""/></div>
+<map name="class_wav_writer_a04fe7187eebeff2831af0bc85470744d_icgraph" id="class_wav_writer_a04fe7187eebeff2831af0bc85470744d_icgraph">
+<area shape="rect" id="node2" href="class_direct_sound.html#a2e2a78f3a6719920fb2a9dfc48e4b1db" title="DirectSound::write" alt="" coords="204,5,332,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_wav_writer_8h_source.html">WavWriter.h</a></li>
-<li>src/win32/WavWriter.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_wav_writer_8h_source.html">WavWriter.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_wav_writer_8cpp_source.html">WavWriter.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_wav_writer.html">WavWriter</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

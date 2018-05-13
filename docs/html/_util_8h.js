@@ -1,0 +1,35 @@
+var _util_8h =
+[
+    [ "variable_desc", "structvariable__desc.html", "structvariable__desc" ],
+    [ "IMAGE_TYPE", "_util_8h.html#aef8b88d56fdf9a25f990a68d80c014d8", [
+      [ "IMAGE_UNKNOWN", "_util_8h.html#aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153", null ],
+      [ "IMAGE_GBA", "_util_8h.html#aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb", null ],
+      [ "IMAGE_GB", "_util_8h.html#aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed", null ]
+    ] ],
+    [ "utilApplyIPS", "_util_8h.html#a884404e568aa2a909bfd7e268866e697", null ],
+    [ "utilFindType", "_util_8h.html#aba08a34addc438babafe21597d94051d", null ],
+    [ "utilGBAFindSave", "_util_8h.html#a29f118c8c6fb8be1f4d2128d6ddd084d", null ],
+    [ "utilGetBaseName", "_util_8h.html#adf38da3dcfc7b09b213a9a3a530d5b1c", null ],
+    [ "utilGzClose", "_util_8h.html#ae27f61ca2a7be5ae312a177b9b7eca78", null ],
+    [ "utilGzMemTell", "_util_8h.html#a99f60350d1f02a32e39fda2978830191", null ],
+    [ "utilGzOpen", "_util_8h.html#a4030eff11c2659e960204acd8e8fdbd4", null ],
+    [ "utilGzRead", "_util_8h.html#a7c3497694953dfa7b0170b41e4b6ce93", null ],
+    [ "utilGzWrite", "_util_8h.html#a0c984fb94b8626c6a105fa293fa73d0e", null ],
+    [ "utilIsGBAImage", "_util_8h.html#afd15fdc98d04bd3ebc1a707c21c9a1f0", null ],
+    [ "utilIsGBImage", "_util_8h.html#a475390e214d531ed1e247f1b9f1d1e8a", null ],
+    [ "utilIsGzipFile", "_util_8h.html#a57a149550d3c90300a59dcc6a6bfc0fd", null ],
+    [ "utilIsRarFile", "_util_8h.html#aaceb2f8756701b5b7b0bf9e7e5c52027", null ],
+    [ "utilIsZipFile", "_util_8h.html#a523b23cf0d600dd7a4bd28be50125ec3", null ],
+    [ "utilLoad", "_util_8h.html#aa5476c6efd178f9749b3d69378d71b78", null ],
+    [ "utilMemGzOpen", "_util_8h.html#a02e6a64e4965d9911ebe6cf6b43fd192", null ],
+    [ "utilPutDword", "_util_8h.html#a68ad8f99ee5d4b1c900c8611b9ea1720", null ],
+    [ "utilPutWord", "_util_8h.html#ac254d0565afa11c8f95d0efd442e5d6d", null ],
+    [ "utilReadData", "_util_8h.html#a0470a6ff27a6e11e39454beda01b8f8c", null ],
+    [ "utilReadInt", "_util_8h.html#a7e12c3b92f76a948e194da25a2a12348", null ],
+    [ "utilUpdateSystemColorMaps", "_util_8h.html#a5d5317ea1bb74f382ceeffba7eeaa797", null ],
+    [ "utilWriteBMP", "_util_8h.html#a86a28c32bd0af05bf0bfe6751384e124", null ],
+    [ "utilWriteBMPFile", "_util_8h.html#af02cd604d272a2ba0a44d0363f3cab66", null ],
+    [ "utilWriteData", "_util_8h.html#a0c9f222455d76a6b24a371922106934e", null ],
+    [ "utilWriteInt", "_util_8h.html#ad7383f3cbe45a6e4848e55cd7ac3c9af", null ],
+    [ "utilWritePNGFile", "_util_8h.html#a04911fef03366718b828d8a296b3f43a", null ]
+];

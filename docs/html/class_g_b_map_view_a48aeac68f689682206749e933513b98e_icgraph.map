@@ -1,0 +1,11 @@
+<map id="GBMapView::render" name="GBMapView::render">
+<area shape="rect" id="node2" href="$class_g_b_map_view.html#a42de669273417186b01ca6f8d06eb347" title="GBMapView::paint" alt="" coords="192,183,323,209"/>
+<area shape="rect" id="node3" href="$class_g_b_map_view.html#ac34b80cd3cb8b8b6d434e59dcfb3bed2" title="GBMapView::OnRefresh" alt="" coords="375,5,538,32"/>
+<area shape="rect" id="node4" href="$class_g_b_map_view.html#af907981b2a105364f52d9fc11030a200" title="GBMapView::update" alt="" coords="386,56,527,83"/>
+<area shape="rect" id="node5" href="$class_g_b_map_view.html#a3bcd4b5e76fbe0ae04809770fce64765" title="GBMapView::OnInitDialog" alt="" coords="371,107,543,133"/>
+<area shape="rect" id="node6" href="$class_g_b_map_view.html#a7e9247c42189f718f173f765c4d5a5ba" title="GBMapView::OnBg0" alt="" coords="385,157,528,184"/>
+<area shape="rect" id="node7" href="$class_g_b_map_view.html#a8cbe9a5f305ebaff40a3a345f444ef98" title="GBMapView::OnBg1" alt="" coords="385,208,528,235"/>
+<area shape="rect" id="node8" href="$class_g_b_map_view.html#a157cce075c5c7ad137098c04201ce30d" title="GBMapView::OnBank0" alt="" coords="379,259,535,285"/>
+<area shape="rect" id="node9" href="$class_g_b_map_view.html#a7a1e36efab710bedd617b431486a42b3" title="GBMapView::OnBank1" alt="" coords="379,309,535,336"/>
+<area shape="rect" id="node10" href="$class_g_b_map_view.html#a9938d288e7e3c1b36757cbf49ff4bb97" title="GBMapView::OnStretch" alt="" coords="376,360,537,387"/>
+</map>

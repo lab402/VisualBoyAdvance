@@ -1,0 +1,29 @@
+<map id="exit" name="exit">
+<area shape="rect" id="node2" href="$elf_8cpp.html#a01d365faa9744064e832d40a7ddc3bc1" title="elfGetCompileUnitForData" alt="" coords="96,407,268,433"/>
+<area shape="rect" id="node3" href="$elf_8cpp.html#a3bba79b400ce1115c4c8c7b961fdb101" title="elfReadAttribute" alt="" coords="324,359,439,385"/>
+<area shape="rect" id="node5" href="$elf_8cpp.html#a9c17e9ba51ae96a7fdc57c61c3146899" title="elfParseType" alt="" coords="1270,144,1367,171"/>
+<area shape="rect" id="node16" href="$elf_8cpp.html#ad770db6fce1f2332d8c958d29bb09464" title="elfParseCFA" alt="" coords="882,651,977,677"/>
+<area shape="rect" id="node17" href="$elf_8cpp.html#a586476492edf86adf126f1e6669d777b" title="elfParseLineInfo" alt="" coords="1061,701,1175,728"/>
+<area shape="rect" id="node18" href="$remote_8cpp.html#a1a2754237d66e4d85d1223a4f2e806e5" title="remoteTcpInit" alt="" coords="132,752,232,779"/>
+<area shape="rect" id="node21" href="$remote_8cpp.html#a6d202e08314e8abe6b842ef95e9af1a9" title="remotePipeInit" alt="" coords="129,803,235,829"/>
+<area shape="rect" id="node22" href="$_s_d_l_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="157,853,207,880"/>
+<area shape="rect" id="node23" href="$_s_d_l_8cpp.html#a2ed419fdd59b1938a86ee79b3a8f65a3" title="Convert32bit" alt="" coords="135,904,229,931"/>
+<area shape="rect" id="node28" href="$_s_d_l_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="113,955,251,981"/>
+<area shape="rect" id="node4" href="$elf_8cpp.html#a5086d7d47689f577d3020c886d636bc2" title="elfSkipData" alt="" coords="703,409,791,436"/>
+<area shape="rect" id="node6" href="$elf_8cpp.html#a4e6431f5f20e1aad45627cc0f2dbc53a" title="elfParseBlock" alt="" coords="878,296,981,323"/>
+<area shape="rect" id="node7" href="$elf_8cpp.html#a2a3d342ad0ad1bc1db05265d4d580951" title="elfParseFunction" alt="" coords="1059,271,1177,297"/>
+<area shape="rect" id="node9" href="$elf_8cpp.html#a064cb5f206feeeb74557c95d0c3c45e2" title="elfParseCompUnit" alt="" coords="1460,600,1587,627"/>
+<area shape="rect" id="node12" href="$elf_8cpp.html#a97d7ccacc1b1397bd5f8b02ee7a5ebae" title="elfGetObjectAttributes" alt="" coords="495,257,645,284"/>
+<area shape="rect" id="node13" href="$elf_8cpp.html#a3ddc707814bbb91b3c6123af5841f725" title="elfParseObject" alt="" coords="693,283,800,309"/>
+<area shape="rect" id="node14" href="$elf_8cpp.html#a859fe654dda33d29ac38088284a942a7" title="elfGetFunctionAttributes" alt="" coords="848,93,1011,120"/>
+<area shape="rect" id="node15" href="$elf_8cpp.html#abf61a588d65b13ffb24081888eb1e08c" title="elfParseUnknownData" alt="" coords="855,549,1004,576"/>
+<area shape="rect" id="node8" href="$elf_8cpp.html#ac7fb301207eb827ea83c833094d908eb" title="elfParseCompileUnitChildren" alt="" coords="1225,499,1412,525"/>
+<area shape="rect" id="node10" href="$elf_8cpp.html#ae737de6c729da6007beee92d616221ce" title="elfReadProgram" alt="" coords="1635,651,1749,677"/>
+<area shape="rect" id="node11" href="$elf_8h.html#a435d491e508bb34a0ffe91a8f4491b3c" title="elfRead" alt="" coords="1797,651,1863,677"/>
+<area shape="rect" id="node19" href="$_v_b_a_8cpp.html#ae12004b9afc1b49d9f40d3efb5862c81" title="remoteSetProtocol" alt="" coords="316,777,447,804"/>
+<area shape="rect" id="node20" href="$class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="509,777,631,804"/>
+<area shape="rect" id="node24" href="$_s_d_l_8cpp.html#a4c7a89666b2346791cd66a5a254c4bcc" title="Draw_Overlay" alt="" coords="331,904,432,931"/>
+<area shape="rect" id="node25" href="$_s_d_l_8cpp.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="503,904,637,931"/>
+<area shape="rect" id="node26" href="$_s_d_l_8cpp.html#a50d948bf474caba7bfedd641bd5f4e2c" title="sdlWriteState" alt="" coords="696,929,797,956"/>
+<area shape="rect" id="node27" href="$_s_d_l_8cpp.html#a915c860581a6f2a7fa3f0d3ae784e21c" title="sdlReadState" alt="" coords="697,879,797,905"/>
+</map>

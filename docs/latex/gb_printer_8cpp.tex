@@ -1,0 +1,471 @@
+\hypertarget{gb_printer_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gb/gb\+Printer.cpp 파일 참조}
+\label{gb_printer_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gb/gb\+Printer.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gb/gb\+Printer.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+G\+B\+A.\+h\char`\"{}}\newline
+gb\+Printer.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{gb_printer_8cpp_acb4674ec30c8e2063e48d5e50f5e8310}{gb\+Printer\+Check\+C\+RC}} ()
+\item 
+void \mbox{\hyperlink{gb_printer_8cpp_a9c0689dd92376e8e417970449071dd91}{gb\+Printer\+Reset}} ()
+\item 
+void \mbox{\hyperlink{gb_printer_8cpp_a8dd92155e15bc774868bb536a3b7ada3}{gb\+Printer\+Show\+Data}} ()
+\item 
+void \mbox{\hyperlink{gb_printer_8cpp_acc7286a5db6e65d217524716542cbc15}{gb\+Printer\+Receive\+Data}} ()
+\item 
+void \mbox{\hyperlink{gb_printer_8cpp_acb19ed22c056fded1dab564831804a2c}{gb\+Printer\+Command}} ()
+\item 
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{gb_printer_8cpp_ad92e246f72a463f50f3c0856418e087e}{gb\+Printer\+Send}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{gb_printer_8cpp_affa130043c59146f96c61d92cc469615}{gb\+Printer\+Status}} = 0
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gb\+Printer\+State}} = 0
+\item 
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{gb_printer_8cpp_a078f61e372c7855c14857d047c3b5b96}{gb\+Printer\+Data}} \mbox{[}0x280 $\ast$9\mbox{]}
+\item 
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gb\+Printer\+Packet}} \mbox{[}0x400\mbox{]}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gb\+Printer\+Count}} = 0
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{gb_printer_8cpp_a3cfc19fa2eeb783258efbd6fb73de745}{gb\+Printer\+Data\+Count}} = 0
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gb\+Printer\+Data\+Size}} = 0
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{gb_printer_8cpp_a3eb47ce5a2891c13913d91f8b8e3f48a}{gb\+Printer\+Result}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{gb_printer_8cpp_acb4674ec30c8e2063e48d5e50f5e8310}\label{gb_printer_8cpp_acb4674ec30c8e2063e48d5e50f5e8310}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Check\+C\+RC@{gb\+Printer\+Check\+C\+RC}}
+\index{gb\+Printer\+Check\+C\+RC@{gb\+Printer\+Check\+C\+RC}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Check\+C\+R\+C()}{gbPrinterCheckCRC()}}
+{\footnotesize\ttfamily bool gb\+Printer\+Check\+C\+RC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gb\+Printer.\+cpp 파일의 32 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+33 \{
+34   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} crc = 0;
+35 
+36   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 2; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < (6+\mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}}); \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+37     crc += \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+38   \}
+39 
+40   \textcolor{keywordtype}{int} msgCrc = \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[6+\mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}}] +
+41     (\mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[7+\mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}}]<<8);
+42 
+43   \textcolor{keywordflow}{return} msgCrc == crc;
+44 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp_acb4674ec30c8e2063e48d5e50f5e8310_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_printer_8cpp_acb19ed22c056fded1dab564831804a2c}\label{gb_printer_8cpp_acb19ed22c056fded1dab564831804a2c}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Command@{gb\+Printer\+Command}}
+\index{gb\+Printer\+Command@{gb\+Printer\+Command}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Command()}{gbPrinterCommand()}}
+{\footnotesize\ttfamily void gb\+Printer\+Command (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gb\+Printer.\+cpp 파일의 136 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+137 \{
+138   \textcolor{keywordflow}{switch}(\mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[2]) \{
+139   \textcolor{keywordflow}{case} 0x01:
+140     \textcolor{comment}{// reset/initialize packet}
+141     \mbox{\hyperlink{gb_printer_8cpp_a3cfc19fa2eeb783258efbd6fb73de745}{gbPrinterDataCount}} = 0;
+142     \mbox{\hyperlink{gb_printer_8cpp_affa130043c59146f96c61d92cc469615}{gbPrinterStatus}} = 0;
+143     \textcolor{keywordflow}{break};
+144   \textcolor{keywordflow}{case} 0x02:
+145     \textcolor{comment}{// print packet}
+146     \mbox{\hyperlink{gb_printer_8cpp_a8dd92155e15bc774868bb536a3b7ada3}{gbPrinterShowData}}();
+147     \textcolor{keywordflow}{break};
+148   \textcolor{keywordflow}{case} 0x04:
+149     \textcolor{comment}{// data packet}
+150     \mbox{\hyperlink{gb_printer_8cpp_acc7286a5db6e65d217524716542cbc15}{gbPrinterReceiveData}}();
+151     \textcolor{keywordflow}{break};
+152   \textcolor{keywordflow}{case} 0x0f:
+153     \textcolor{comment}{// NUL packet}
+154     \textcolor{keywordflow}{break};
+155   \}
+156 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp_acb19ed22c056fded1dab564831804a2c_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp_acb19ed22c056fded1dab564831804a2c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_printer_8cpp_acc7286a5db6e65d217524716542cbc15}\label{gb_printer_8cpp_acc7286a5db6e65d217524716542cbc15}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Receive\+Data@{gb\+Printer\+Receive\+Data}}
+\index{gb\+Printer\+Receive\+Data@{gb\+Printer\+Receive\+Data}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Receive\+Data()}{gbPrinterReceiveData()}}
+{\footnotesize\ttfamily void gb\+Printer\+Receive\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gb\+Printer.\+cpp 파일의 106 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+107 \{
+108   \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[3]) \{ \textcolor{comment}{// compressed}
+109     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *data = &\mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[6];
+110     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *dest = &\mbox{\hyperlink{gb_printer_8cpp_a078f61e372c7855c14857d047c3b5b96}{gbPrinterData}}[\mbox{\hyperlink{gb_printer_8cpp_a3cfc19fa2eeb783258efbd6fb73de745}{gbPrinterDataCount}}];
+111     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = 0;
+112     \textcolor{keywordflow}{while}(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} < \mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}}) \{
+113       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} control = *data++;
+114       \textcolor{keywordflow}{if}(control & 0x80) \{ \textcolor{comment}{// repeated data}
+115         control &= 0x7f;
+116         control += 2;
+117         memset(dest, *data++, control);
+118         \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} += control;
+119         dest += control;
+120       \} \textcolor{keywordflow}{else} \{ \textcolor{comment}{// raw data}
+121         control++;
+122         memcpy(dest, data, control);
+123         dest += control;
+124         data += control;
+125         \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} += control;
+126       \}
+127     \}
+128   \} \textcolor{keywordflow}{else} \{
+129     memcpy(&\mbox{\hyperlink{gb_printer_8cpp_a078f61e372c7855c14857d047c3b5b96}{gbPrinterData}}[\mbox{\hyperlink{gb_printer_8cpp_a3cfc19fa2eeb783258efbd6fb73de745}{gbPrinterDataCount}}],
+130            &\mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[6],
+131            \mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}});
+132     \mbox{\hyperlink{gb_printer_8cpp_a3cfc19fa2eeb783258efbd6fb73de745}{gbPrinterDataCount}} += \mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}};
+133   \}
+134 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp_acc7286a5db6e65d217524716542cbc15_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_printer_8cpp_a9c0689dd92376e8e417970449071dd91}\label{gb_printer_8cpp_a9c0689dd92376e8e417970449071dd91}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Reset@{gb\+Printer\+Reset}}
+\index{gb\+Printer\+Reset@{gb\+Printer\+Reset}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Reset()}{gbPrinterReset()}}
+{\footnotesize\ttfamily void gb\+Printer\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gb\+Printer.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+47 \{
+48   \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}} = 0;
+49   \mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}} = 0;
+50   \mbox{\hyperlink{gb_printer_8cpp_a3cfc19fa2eeb783258efbd6fb73de745}{gbPrinterDataCount}} = 0;
+51   \mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}} = 0;
+52   \mbox{\hyperlink{gb_printer_8cpp_affa130043c59146f96c61d92cc469615}{gbPrinterStatus}} = 0;
+53   \mbox{\hyperlink{gb_printer_8cpp_a3eb47ce5a2891c13913d91f8b8e3f48a}{gbPrinterResult}} = 0;
+54 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp_a9c0689dd92376e8e417970449071dd91_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_printer_8cpp_ad92e246f72a463f50f3c0856418e087e}\label{gb_printer_8cpp_ad92e246f72a463f50f3c0856418e087e}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Send@{gb\+Printer\+Send}}
+\index{gb\+Printer\+Send@{gb\+Printer\+Send}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Send()}{gbPrinterSend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} gb\+Printer\+Send (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{b }\end{DoxyParamCaption})}
+
+
+
+gb\+Printer.\+cpp 파일의 158 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+159 \{
+160   \textcolor{keywordflow}{switch}(\mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}) \{
+161   \textcolor{keywordflow}{case} 0:
+162     \mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}} = 0;
+163     \textcolor{comment}{// receiving preamble}
+164     \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} == 0x88) \{
+165       \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}}++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+166       \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}++;
+167     \} \textcolor{keywordflow}{else} \{
+168       \textcolor{comment}{// todo: handle failure      }
+169       \mbox{\hyperlink{gb_printer_8cpp_a9c0689dd92376e8e417970449071dd91}{gbPrinterReset}}();
+170     \}
+171     \textcolor{keywordflow}{break};
+172   \textcolor{keywordflow}{case} 1:
+173     \textcolor{comment}{// receiving preamble    }
+174     \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} == 0x33) \{
+175       \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}}++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+176       \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}++;
+177     \} \textcolor{keywordflow}{else} \{
+178       \textcolor{comment}{// todo: handle failure}
+179       \mbox{\hyperlink{gb_printer_8cpp_a9c0689dd92376e8e417970449071dd91}{gbPrinterReset}}();
+180     \}
+181     \textcolor{keywordflow}{break};
+182   \textcolor{keywordflow}{case} 2:
+183     \textcolor{comment}{// receiving header}
+184     \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}}++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+185     \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}} == 6) \{
+186       \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}++;
+187       \mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}} = \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[4] + (
+      \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[5]<<8);
+188     \}
+189     \textcolor{keywordflow}{break};
+190   \textcolor{keywordflow}{case} 3:
+191     \textcolor{comment}{// receiving data}
+192     \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}}) \{
+193       \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}}++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+194       \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}} == (6+\mbox{\hyperlink{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}{gbPrinterDataSize}})) \{
+195         \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}++;
+196       \}
+197       \textcolor{keywordflow}{break};
+198     \}
+199     \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}++;
+200     \textcolor{comment}{// intentionally move to next if no data to receive}
+201   \textcolor{keywordflow}{case} 4:
+202     \textcolor{comment}{// receiving CRC}
+203     \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}}++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+204     \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}++;
+205     \textcolor{keywordflow}{break};
+206   \textcolor{keywordflow}{case} 5:
+207     \textcolor{comment}{// receiving CRC-2}
+208     \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}}++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+209     \textcolor{keywordflow}{if}(\mbox{\hyperlink{gb_printer_8cpp_acb4674ec30c8e2063e48d5e50f5e8310}{gbPrinterCheckCRC}}()) \{
+210       \mbox{\hyperlink{gb_printer_8cpp_acb19ed22c056fded1dab564831804a2c}{gbPrinterCommand}}();
+211     \}
+212     \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}++;
+213     \textcolor{keywordflow}{break};
+214   \textcolor{keywordflow}{case} 6:
+215     \textcolor{comment}{// receiving dummy 1}
+216     \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}}++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+217     \mbox{\hyperlink{gb_printer_8cpp_a3eb47ce5a2891c13913d91f8b8e3f48a}{gbPrinterResult}} = 0x81;
+218     \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}}++;
+219     \textcolor{keywordflow}{break};
+220   \textcolor{keywordflow}{case} 7:
+221     \textcolor{comment}{// receiving dummy 2}
+222     \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[\mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}}++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+223     \mbox{\hyperlink{gb_printer_8cpp_a3eb47ce5a2891c13913d91f8b8e3f48a}{gbPrinterResult}} = \mbox{\hyperlink{gb_printer_8cpp_affa130043c59146f96c61d92cc469615}{gbPrinterStatus}};
+224     \mbox{\hyperlink{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}{gbPrinterState}} = 0;
+225     \mbox{\hyperlink{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}{gbPrinterCount}} = 0;
+226     \textcolor{keywordflow}{break};
+227   \}
+228   \textcolor{keywordflow}{return} \mbox{\hyperlink{gb_printer_8cpp_a3eb47ce5a2891c13913d91f8b8e3f48a}{gbPrinterResult}};
+229 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp_ad92e246f72a463f50f3c0856418e087e_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp_ad92e246f72a463f50f3c0856418e087e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{gb_printer_8cpp_a8dd92155e15bc774868bb536a3b7ada3}\label{gb_printer_8cpp_a8dd92155e15bc774868bb536a3b7ada3}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Show\+Data@{gb\+Printer\+Show\+Data}}
+\index{gb\+Printer\+Show\+Data@{gb\+Printer\+Show\+Data}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Show\+Data()}{gbPrinterShowData()}}
+{\footnotesize\ttfamily void gb\+Printer\+Show\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+gb\+Printer.\+cpp 파일의 56 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+57 \{
+58   \mbox{\hyperlink{system_8cpp_a36b528a29e75e09aa9109e51d6ce4dac}{systemGbPrint}}(\mbox{\hyperlink{gb_printer_8cpp_a078f61e372c7855c14857d047c3b5b96}{gbPrinterData}},
+59                 \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[6],
+60                 \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[7],
+61                 \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[8],
+62                 \mbox{\hyperlink{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}{gbPrinterPacket}}[9]);
+63   \textcolor{comment}{/*}
+64 \textcolor{comment}{  allegro\_init();}
+65 \textcolor{comment}{  install\_keyboard();}
+66 \textcolor{comment}{  set\_gfx\_mode(GFX\_AUTODETECT, 160, 144, 0, 0);}
+67 \textcolor{comment}{  PALETTE pal;}
+68 \textcolor{comment}{  pal[0].r = 255;}
+69 \textcolor{comment}{  pal[0].g = 255;}
+70 \textcolor{comment}{  pal[0].b = 255;}
+71 \textcolor{comment}{  pal[1].r = 168;}
+72 \textcolor{comment}{  pal[1].g = 168;}
+73 \textcolor{comment}{  pal[1].b = 168;}
+74 \textcolor{comment}{  pal[2].r = 96;}
+75 \textcolor{comment}{  pal[2].g = 96;}
+76 \textcolor{comment}{  pal[2].b = 96;}
+77 \textcolor{comment}{  pal[3].r = 0;}
+78 \textcolor{comment}{  pal[3].g = 0;}
+79 \textcolor{comment}{  pal[3].b = 0;}
+80 \textcolor{comment}{  set\_palette(pal);}
+81 \textcolor{comment}{  acquire\_screen();  }
+82 \textcolor{comment}{  u8 *data = gbPrinterData;}
+83 \textcolor{comment}{  for(int y = 0; y < 0x12; y++) \{}
+84 \textcolor{comment}{    for(int x = 0; x < 0x14; x++) \{}
+85 \textcolor{comment}{      for(int k = 0; k < 8; k++) \{}
+86 \textcolor{comment}{        int a = *data++;}
+87 \textcolor{comment}{        int b = *data++;}
+88 \textcolor{comment}{        for(int j = 0; j < 8; j++) \{}
+89 \textcolor{comment}{          int mask = 1 << (7-j);}
+90 \textcolor{comment}{          int c = 0;}
+91 \textcolor{comment}{          if(a & mask)}
+92 \textcolor{comment}{            c++;}
+93 \textcolor{comment}{          if(b & mask)}
+94 \textcolor{comment}{            c+=2;}
+95 \textcolor{comment}{          putpixel(screen, x*8+j, y*8+k, c);}
+96 \textcolor{comment}{        \}}
+97 \textcolor{comment}{      \}}
+98 \textcolor{comment}{    \}}
+99 \textcolor{comment}{  \}}
+100 \textcolor{comment}{  release\_screen();}
+101 \textcolor{comment}{  while(!keypressed()) \{}
+102 \textcolor{comment}{  \}}
+103 \textcolor{comment}{  */}  
+104 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{gb_printer_8cpp_a8dd92155e15bc774868bb536a3b7ada3_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gb_printer_8cpp_a8dd92155e15bc774868bb536a3b7ada3_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}\label{gb_printer_8cpp_afbdf44a22d7b503355a07d56b7832d0d}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Count@{gb\+Printer\+Count}}
+\index{gb\+Printer\+Count@{gb\+Printer\+Count}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Count}{gbPrinterCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} gb\+Printer\+Count = 0}
+
+
+
+gb\+Printer.\+cpp 파일의 27 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_printer_8cpp_a078f61e372c7855c14857d047c3b5b96}\label{gb_printer_8cpp_a078f61e372c7855c14857d047c3b5b96}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Data@{gb\+Printer\+Data}}
+\index{gb\+Printer\+Data@{gb\+Printer\+Data}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Data}{gbPrinterData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} gb\+Printer\+Data\mbox{[}0x280 $\ast$9\mbox{]}}
+
+
+
+gb\+Printer.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_printer_8cpp_a3cfc19fa2eeb783258efbd6fb73de745}\label{gb_printer_8cpp_a3cfc19fa2eeb783258efbd6fb73de745}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Data\+Count@{gb\+Printer\+Data\+Count}}
+\index{gb\+Printer\+Data\+Count@{gb\+Printer\+Data\+Count}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Data\+Count}{gbPrinterDataCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} gb\+Printer\+Data\+Count = 0}
+
+
+
+gb\+Printer.\+cpp 파일의 28 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}\label{gb_printer_8cpp_a10c14209d5b83229ca0cf4024cbafcfe}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Data\+Size@{gb\+Printer\+Data\+Size}}
+\index{gb\+Printer\+Data\+Size@{gb\+Printer\+Data\+Size}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Data\+Size}{gbPrinterDataSize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} gb\+Printer\+Data\+Size = 0}
+
+
+
+gb\+Printer.\+cpp 파일의 29 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}\label{gb_printer_8cpp_a74c6447941897ea7f87066d7a1f4fee6}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Packet@{gb\+Printer\+Packet}}
+\index{gb\+Printer\+Packet@{gb\+Printer\+Packet}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Packet}{gbPrinterPacket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} gb\+Printer\+Packet\mbox{[}0x400\mbox{]}}
+
+
+
+gb\+Printer.\+cpp 파일의 26 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_printer_8cpp_a3eb47ce5a2891c13913d91f8b8e3f48a}\label{gb_printer_8cpp_a3eb47ce5a2891c13913d91f8b8e3f48a}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Result@{gb\+Printer\+Result}}
+\index{gb\+Printer\+Result@{gb\+Printer\+Result}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Result}{gbPrinterResult}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} gb\+Printer\+Result = 0}
+
+
+
+gb\+Printer.\+cpp 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}\label{gb_printer_8cpp_a0e15bb19ae136778fbdb6bdac0c3825f}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+State@{gb\+Printer\+State}}
+\index{gb\+Printer\+State@{gb\+Printer\+State}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+State}{gbPrinterState}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} gb\+Printer\+State = 0}
+
+
+
+gb\+Printer.\+cpp 파일의 24 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{gb_printer_8cpp_affa130043c59146f96c61d92cc469615}\label{gb_printer_8cpp_affa130043c59146f96c61d92cc469615}} 
+\index{gb\+Printer.\+cpp@{gb\+Printer.\+cpp}!gb\+Printer\+Status@{gb\+Printer\+Status}}
+\index{gb\+Printer\+Status@{gb\+Printer\+Status}!gb\+Printer.\+cpp@{gb\+Printer.\+cpp}}
+\subsubsection{\texorpdfstring{gb\+Printer\+Status}{gbPrinterStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} gb\+Printer\+Status = 0}
+
+
+
+gb\+Printer.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+

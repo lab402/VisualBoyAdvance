@@ -1,0 +1,3 @@
+<map id="GDIDisplay" name="GDIDisplay">
+<area shape="rect" id="node2" href="$class_i_display.html" title="{IDisplay\n||+ IDisplay()\l+ ~IDisplay()\l+ initialize()\l+ cleanup()\l+ render()\l+ checkFullScreen()\l+ renderMenu()\l+ clear()\l+ changeRenderSize()\l+ resize()\l+ setOption()\l+ getType()\l+ isSkinSupported()\l+ selectFullScreenMode()\l}" alt="" coords="5,5,176,273"/>
+</map>

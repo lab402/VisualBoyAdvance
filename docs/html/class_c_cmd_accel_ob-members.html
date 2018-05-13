@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_c_cmd_accel_ob.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">CCmdAccelOb 멤버 목록</div>  </div>
@@ -68,24 +92,27 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Add</b>(CAccelsOb *pAccel) (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Add</b>(BYTE cVirt, WORD wKey, bool bLocked=false) (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CCmdAccelOb</b>() (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>CCmdAccelOb</b>(WORD wIDCommand, LPCTSTR szCommand) (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CCmdAccelOb</b>(BYTE cVirt, WORD wIDCommand, WORD wKey, LPCTSTR szCommand, bool bLocked=false) (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DeleteUserAccels</b>() (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_Accels</b> (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_szCommand</b> (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_wIDCommand</b> (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator=</b>(const CCmdAccelOb &amp;from) (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Reset</b>() (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~CCmdAccelOb</b>() (다음에서 정의됨 : <a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a>)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a519f8c7ac935b0d06531589e5427b656">Add</a>(CAccelsOb *pAccel)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a15429015a20179a0e181347f35ad9c58">Add</a>(BYTE cVirt, WORD wKey, bool bLocked=false)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a2f5bb136c7ba36c31551cec05f3c47fc">CCmdAccelOb</a>()</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a245369282fbad17c28924e0568fa5bcc">CCmdAccelOb</a>(WORD wIDCommand, LPCTSTR szCommand)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a2c532e999fa7dcb99d7d9b1027cebbef">CCmdAccelOb</a>(BYTE cVirt, WORD wIDCommand, WORD wKey, LPCTSTR szCommand, bool bLocked=false)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a7040471adc76f057a1d79c9fdfb84fe8">DeleteUserAccels</a>()</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a85772f1ea9204af42b8a39a0135dc0f8">m_Accels</a></td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#acbd02cc68d3909b1e39b687e76f45d91">m_szCommand</a></td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#aa3eb02dcd39ff14763fdefd8fabd7591">m_wIDCommand</a></td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a045ce00d2465fefed857066eef1406a7">operator=</a>(const CCmdAccelOb &amp;from)</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#ac679e57ed400b175109af50ea2ce919d">Reset</a>()</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html#a41d00fee4f058c03fa85630612e1ab69">~CCmdAccelOb</a>()</td><td class="entry"><a class="el" href="class_c_cmd_accel_ob.html">CCmdAccelOb</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

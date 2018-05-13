@@ -1,0 +1,5 @@
+<map id="MainWnd::writeBatteryFile" name="MainWnd::writeBatteryFile">
+<area shape="rect" id="node2" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="242,5,385,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="228,56,399,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="238,107,389,133"/>
+</map>

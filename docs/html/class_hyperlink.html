@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_hyperlink.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -70,58 +94,320 @@ $(function() {
 <div class="title">Hyperlink 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_hyperlink_8h_source.html">Hyperlink.h</a>&gt;</code></p>
 <div class="dynheader">
 Hyperlink에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_hyperlink.png" usemap="#Hyperlink_map" alt=""/>
-  <map id="Hyperlink_map" name="Hyperlink_map">
-</map>
- </div></div>
+<div class="center"><img src="class_hyperlink__inherit__graph.png" border="0" usemap="#_hyperlink_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+Hyperlink에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_hyperlink__coll__graph.png" border="0" usemap="#_hyperlink_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a9fc8208b20a3f28c07bbb66aafe6fbee"><td class="memItemLeft" align="right" valign="top"><a id="a9fc8208b20a3f28c07bbb66aafe6fbee"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnClicked</b> ()</td></tr>
+<tr class="memitem:a54a241958a42b58e8fdb2d532ae16714"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a54a241958a42b58e8fdb2d532ae16714">Hyperlink</a> ()</td></tr>
+<tr class="separator:a54a241958a42b58e8fdb2d532ae16714"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fc8208b20a3f28c07bbb66aafe6fbee"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a9fc8208b20a3f28c07bbb66aafe6fbee">OnClicked</a> ()</td></tr>
 <tr class="separator:a9fc8208b20a3f28c07bbb66aafe6fbee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5310ef7bff2f6f70cf08493d574cc3d"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#ae5310ef7bff2f6f70cf08493d574cc3d">~Hyperlink</a> ()</td></tr>
+<tr class="separator:ae5310ef7bff2f6f70cf08493d574cc3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a78f23c373fa8a3e7deb0cd9e0f8100f4"><td class="memItemLeft" align="right" valign="top"><a id="a78f23c373fa8a3e7deb0cd9e0f8100f4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_over</b></td></tr>
+<tr class="memitem:a78f23c373fa8a3e7deb0cd9e0f8100f4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a78f23c373fa8a3e7deb0cd9e0f8100f4">m_over</a></td></tr>
 <tr class="separator:a78f23c373fa8a3e7deb0cd9e0f8100f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1caebeaeff16f7e5cf3a15718490b0c6"><td class="memItemLeft" align="right" valign="top"><a id="a1caebeaeff16f7e5cf3a15718490b0c6"></a>
-HCURSOR&#160;</td><td class="memItemRight" valign="bottom"><b>m_cursor</b></td></tr>
+<tr class="memitem:a1caebeaeff16f7e5cf3a15718490b0c6"><td class="memItemLeft" align="right" valign="top">HCURSOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a1caebeaeff16f7e5cf3a15718490b0c6">m_cursor</a></td></tr>
 <tr class="separator:a1caebeaeff16f7e5cf3a15718490b0c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a613980484b9ae1fbbb22d84b60fa1f33"><td class="memItemLeft" align="right" valign="top"><a id="a613980484b9ae1fbbb22d84b60fa1f33"></a>
-CFont&#160;</td><td class="memItemRight" valign="bottom"><b>m_underlineFont</b></td></tr>
+<tr class="memitem:a613980484b9ae1fbbb22d84b60fa1f33"><td class="memItemLeft" align="right" valign="top">CFont&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a613980484b9ae1fbbb22d84b60fa1f33">m_underlineFont</a></td></tr>
 <tr class="separator:a613980484b9ae1fbbb22d84b60fa1f33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a8825e770ef8eaebc598f887f8344b03a"><td class="memItemLeft" align="right" valign="top"><a id="a8825e770ef8eaebc598f887f8344b03a"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PreSubclassWindow</b> ()</td></tr>
+<tr class="memitem:a8825e770ef8eaebc598f887f8344b03a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a8825e770ef8eaebc598f887f8344b03a">PreSubclassWindow</a> ()</td></tr>
 <tr class="separator:a8825e770ef8eaebc598f887f8344b03a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b38eff4e51bdefd6f2158b0c8625659"><td class="memItemLeft" align="right" valign="top"><a id="a2b38eff4e51bdefd6f2158b0c8625659"></a>
-afx_msg HBRUSH&#160;</td><td class="memItemRight" valign="bottom"><b>CtlColor</b> (CDC *pDC, UINT nCtlColor)</td></tr>
+<tr class="memitem:a2b38eff4e51bdefd6f2158b0c8625659"><td class="memItemLeft" align="right" valign="top">afx_msg HBRUSH&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a2b38eff4e51bdefd6f2158b0c8625659">CtlColor</a> (CDC *pDC, UINT nCtlColor)</td></tr>
 <tr class="separator:a2b38eff4e51bdefd6f2158b0c8625659"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0af05ff8e84693b9bb575a814c2e46b9"><td class="memItemLeft" align="right" valign="top"><a id="a0af05ff8e84693b9bb575a814c2e46b9"></a>
-afx_msg BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEraseBkgnd</b> (CDC *pDC)</td></tr>
+<tr class="memitem:a0af05ff8e84693b9bb575a814c2e46b9"><td class="memItemLeft" align="right" valign="top">afx_msg BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a0af05ff8e84693b9bb575a814c2e46b9">OnEraseBkgnd</a> (CDC *pDC)</td></tr>
 <tr class="separator:a0af05ff8e84693b9bb575a814c2e46b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72fe2dbc81212528289454a7d13393c6"><td class="memItemLeft" align="right" valign="top"><a id="a72fe2dbc81212528289454a7d13393c6"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnMouseMove</b> (UINT nFlags, CPoint point)</td></tr>
+<tr class="memitem:a72fe2dbc81212528289454a7d13393c6"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_hyperlink.html#a72fe2dbc81212528289454a7d13393c6">OnMouseMove</a> (UINT nFlags, CPoint point)</td></tr>
 <tr class="separator:a72fe2dbc81212528289454a7d13393c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_hyperlink_8h_source.html">Hyperlink.h</a> 파일의 <a class="el" href="_hyperlink_8h_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a54a241958a42b58e8fdb2d532ae16714"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54a241958a42b58e8fdb2d532ae16714">&#9670;&nbsp;</a></span>Hyperlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hyperlink::Hyperlink </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8cpp_source.html">Hyperlink.cpp</a> 파일의 <a class="el" href="_hyperlink_8cpp_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="class_hyperlink.html#a78f23c373fa8a3e7deb0cd9e0f8100f4">m_over</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div><div class="ttc" id="class_hyperlink_html_a78f23c373fa8a3e7deb0cd9e0f8100f4"><div class="ttname"><a href="class_hyperlink.html#a78f23c373fa8a3e7deb0cd9e0f8100f4">Hyperlink::m_over</a></div><div class="ttdeci">bool m_over</div><div class="ttdef"><b>Definition:</b> <a href="_hyperlink_8h_source.html#l00053">Hyperlink.h:53</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae5310ef7bff2f6f70cf08493d574cc3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5310ef7bff2f6f70cf08493d574cc3d">&#9670;&nbsp;</a></span>~Hyperlink()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Hyperlink::~Hyperlink </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8cpp_source.html">Hyperlink.cpp</a> 파일의 <a class="el" href="_hyperlink_8cpp_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <a class="code" href="class_hyperlink.html#a613980484b9ae1fbbb22d84b60fa1f33">m_underlineFont</a>.DeleteObject();</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div><div class="ttc" id="class_hyperlink_html_a613980484b9ae1fbbb22d84b60fa1f33"><div class="ttname"><a href="class_hyperlink.html#a613980484b9ae1fbbb22d84b60fa1f33">Hyperlink::m_underlineFont</a></div><div class="ttdeci">CFont m_underlineFont</div><div class="ttdef"><b>Definition:</b> <a href="_hyperlink_8h_source.html#l00056">Hyperlink.h:56</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a2b38eff4e51bdefd6f2158b0c8625659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b38eff4e51bdefd6f2158b0c8625659">&#9670;&nbsp;</a></span>CtlColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HBRUSH Hyperlink::CtlColor </td>
+          <td>(</td>
+          <td class="paramtype">CDC *&#160;</td>
+          <td class="paramname"><em>pDC</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nCtlColor</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8cpp_source.html">Hyperlink.cpp</a> 파일의 <a class="el" href="_hyperlink_8cpp_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  pDC-&gt;SetTextColor(<a class="code" href="bilinear_8cpp.html#a4a118ad3ee36468a3fa616977a64864e">RGB</a>(0,0,240));</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    </div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">return</span> (HBRUSH)GetStockObject(NULL_BRUSH);</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div><div class="ttc" id="bilinear_8cpp_html_a4a118ad3ee36468a3fa616977a64864e"><div class="ttname"><a href="bilinear_8cpp.html#a4a118ad3ee36468a3fa616977a64864e">RGB</a></div><div class="ttdeci">#define RGB(r, g, b)</div><div class="ttdef"><b>Definition:</b> <a href="bilinear_8cpp_source.html#l00033">bilinear.cpp:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9fc8208b20a3f28c07bbb66aafe6fbee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc8208b20a3f28c07bbb66aafe6fbee">&#9670;&nbsp;</a></span>OnClicked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hyperlink::OnClicked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8cpp_source.html">Hyperlink.cpp</a> 파일의 <a class="el" href="_hyperlink_8cpp_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  CString url;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  GetWindowText(url);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  ::ShellExecute(0, _T(<span class="stringliteral">&quot;open&quot;</span>), url, </div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                 0, 0, SW_SHOWNORMAL);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a0af05ff8e84693b9bb575a814c2e46b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af05ff8e84693b9bb575a814c2e46b9">&#9670;&nbsp;</a></span>OnEraseBkgnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Hyperlink::OnEraseBkgnd </td>
+          <td>(</td>
+          <td class="paramtype">CDC *&#160;</td>
+          <td class="paramname"><em>pDC</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8cpp_source.html">Hyperlink.cpp</a> 파일의 <a class="el" href="_hyperlink_8cpp_source.html#l00094">94</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;{</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  CRect rect;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  GetClientRect(rect);</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  pDC-&gt;FillSolidRect(rect, ::GetSysColor(COLOR_3DFACE));</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">return</span> TRUE;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a72fe2dbc81212528289454a7d13393c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72fe2dbc81212528289454a7d13393c6">&#9670;&nbsp;</a></span>OnMouseMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hyperlink::OnMouseMove </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nFlags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CPoint&#160;</td>
+          <td class="paramname"><em>point</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8cpp_source.html">Hyperlink.cpp</a> 파일의 <a class="el" href="_hyperlink_8cpp_source.html#l00103">103</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="class_hyperlink.html#a78f23c373fa8a3e7deb0cd9e0f8100f4">m_over</a>) {</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="class_hyperlink.html#a78f23c373fa8a3e7deb0cd9e0f8100f4">m_over</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    SetCapture();</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    ::SetCursor(<a class="code" href="class_hyperlink.html#a1caebeaeff16f7e5cf3a15718490b0c6">m_cursor</a>);</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    CRect r;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    GetClientRect(&amp;r);</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">if</span>(!r.PtInRect(point)) {</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <a class="code" href="class_hyperlink.html#a78f23c373fa8a3e7deb0cd9e0f8100f4">m_over</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      ReleaseCapture();</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div><div class="ttc" id="class_hyperlink_html_a1caebeaeff16f7e5cf3a15718490b0c6"><div class="ttname"><a href="class_hyperlink.html#a1caebeaeff16f7e5cf3a15718490b0c6">Hyperlink::m_cursor</a></div><div class="ttdeci">HCURSOR m_cursor</div><div class="ttdef"><b>Definition:</b> <a href="_hyperlink_8h_source.html#l00054">Hyperlink.h:54</a></div></div>
+<div class="ttc" id="class_hyperlink_html_a78f23c373fa8a3e7deb0cd9e0f8100f4"><div class="ttname"><a href="class_hyperlink.html#a78f23c373fa8a3e7deb0cd9e0f8100f4">Hyperlink::m_over</a></div><div class="ttdeci">bool m_over</div><div class="ttdef"><b>Definition:</b> <a href="_hyperlink_8h_source.html#l00053">Hyperlink.h:53</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8825e770ef8eaebc598f887f8344b03a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8825e770ef8eaebc598f887f8344b03a">&#9670;&nbsp;</a></span>PreSubclassWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Hyperlink::PreSubclassWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8cpp_source.html">Hyperlink.cpp</a> 파일의 <a class="el" href="_hyperlink_8cpp_source.html#l00058">58</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;{</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  DWORD dwStyle = GetStyle();</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  ::SetWindowLong(GetSafeHwnd(), GWL_STYLE, dwStyle | SS_NOTIFY);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="comment">// 32649 is the hand cursor</span></div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <a class="code" href="class_hyperlink.html#a1caebeaeff16f7e5cf3a15718490b0c6">m_cursor</a> = LoadCursor(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, MAKEINTRESOURCE(32649));</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  CFont *font = GetFont();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  LOGFONT lg;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  font-&gt;GetLogFont(&amp;lg);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  lg.lfUnderline = TRUE;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  </div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="class_hyperlink.html#a613980484b9ae1fbbb22d84b60fa1f33">m_underlineFont</a>.CreateFontIndirect(&amp;lg);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  SetFont(&amp;<a class="code" href="class_hyperlink.html#a613980484b9ae1fbbb22d84b60fa1f33">m_underlineFont</a>);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    </div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  CStatic::PreSubclassWindow();</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div><div class="ttc" id="class_hyperlink_html_a1caebeaeff16f7e5cf3a15718490b0c6"><div class="ttname"><a href="class_hyperlink.html#a1caebeaeff16f7e5cf3a15718490b0c6">Hyperlink::m_cursor</a></div><div class="ttdeci">HCURSOR m_cursor</div><div class="ttdef"><b>Definition:</b> <a href="_hyperlink_8h_source.html#l00054">Hyperlink.h:54</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_hyperlink_html_a613980484b9ae1fbbb22d84b60fa1f33"><div class="ttname"><a href="class_hyperlink.html#a613980484b9ae1fbbb22d84b60fa1f33">Hyperlink::m_underlineFont</a></div><div class="ttdeci">CFont m_underlineFont</div><div class="ttdef"><b>Definition:</b> <a href="_hyperlink_8h_source.html#l00056">Hyperlink.h:56</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a1caebeaeff16f7e5cf3a15718490b0c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1caebeaeff16f7e5cf3a15718490b0c6">&#9670;&nbsp;</a></span>m_cursor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HCURSOR Hyperlink::m_cursor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8h_source.html">Hyperlink.h</a> 파일의 <a class="el" href="_hyperlink_8h_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a78f23c373fa8a3e7deb0cd9e0f8100f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78f23c373fa8a3e7deb0cd9e0f8100f4">&#9670;&nbsp;</a></span>m_over</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Hyperlink::m_over</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8h_source.html">Hyperlink.h</a> 파일의 <a class="el" href="_hyperlink_8h_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a613980484b9ae1fbbb22d84b60fa1f33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a613980484b9ae1fbbb22d84b60fa1f33">&#9670;&nbsp;</a></span>m_underlineFont</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CFont Hyperlink::m_underlineFont</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_hyperlink_8h_source.html">Hyperlink.h</a> 파일의 <a class="el" href="_hyperlink_8h_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_hyperlink_8h_source.html">Hyperlink.h</a></li>
-<li>src/win32/Hyperlink.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_hyperlink_8h_source.html">Hyperlink.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_hyperlink_8cpp_source.html">Hyperlink.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_hyperlink.html">Hyperlink</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,5 @@
+<map id="ResizeDlg::UpdateWindowSize" name="ResizeDlg::UpdateWindowSize">
+<area shape="rect" id="node2" href="$class_win_helper_1_1_c_defer_window_pos.html#a50e9a5dfc382996381a506d66f94efd6" title="WinHelper::CDeferWindowPos\l::DeferWindowPos" alt="" coords="256,5,455,47"/>
+<area shape="rect" id="node3" href="$_resize_dlg_8cpp.html#a1de1329cfe834f6067987ae67b4db837" title="ResizeDlgUpdateGripper" alt="" coords="273,71,437,98"/>
+<area shape="rect" id="node4" href="$_resize_dlg_8cpp.html#af86ee86600de84824a5d7b8b3aaed6e8" title="ResizeDlgUpdateGripperRect" alt="" coords="503,71,693,98"/>
+</map>

@@ -1,0 +1,24 @@
+<map id="gbSgbAttributeCharacter" name="gbSgbAttributeCharacter">
+<area shape="rect" id="node2" href="$gb_s_g_b_8h.html#a980431fabc7d4e58ff680de4f3f28960" title="gbSgbCommand" alt="" coords="217,309,336,336"/>
+<area shape="rect" id="node3" href="$gb_s_g_b_8h.html#a74a02c69af210c15a68067134eee4fde" title="gbSgbDoBitTransfer" alt="" coords="384,208,521,235"/>
+<area shape="rect" id="node4" href="$_g_b_8h.html#a157c79a0dc4e8fc437f796e71c05b9ba" title="gbWriteMemory" alt="" coords="569,157,684,184"/>
+<area shape="rect" id="node5" href="$_g_b_8cpp.html#ac130a501efb238debeffee371de75b76" title="gbVblank_interrupt" alt="" coords="911,208,1041,235"/>
+<area shape="rect" id="node8" href="$_g_b_8cpp.html#a19fff2993d4a444397da7a5b90dc854e" title="gbLcd_interrupt" alt="" coords="921,5,1031,32"/>
+<area shape="rect" id="node9" href="$_g_b_8cpp.html#a44d9e00cc746a8837f36145c098b4abf" title="gbTimer_interrupt" alt="" coords="915,56,1037,83"/>
+<area shape="rect" id="node10" href="$_g_b_8cpp.html#a9e579d0365c256fd369722a5ad640d81" title="gbSerial_interrupt" alt="" coords="736,107,859,133"/>
+<area shape="rect" id="node11" href="$_g_b_8cpp.html#af4fd216ba787a1cfd79eb1d675819c49" title="gbJoypad_interrupt" alt="" coords="732,157,863,184"/>
+<area shape="rect" id="node12" href="$gb_cheats_8h.html#a05513ab65554a4701968389cebd60612" title="gbCheatWrite" alt="" coords="747,259,848,285"/>
+<area shape="rect" id="node6" href="$_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="1122,81,1206,108"/>
+<area shape="rect" id="node7" href="$class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="1342,56,1510,83"/>
+<area shape="rect" id="node13" href="$_g_b_8h.html#a9447f508d6d45a49df2ce7619650a6de" title="gbReset" alt="" coords="941,259,1011,285"/>
+<area shape="rect" id="node14" href="$_g_b_8h.html#a537f2e73fde869ac2911162699b8f2da" title="gbReadGSASnapshot" alt="" coords="1089,259,1239,285"/>
+<area shape="rect" id="node16" href="$gb_s_g_b_8cpp.html#ad4eabf16da84e8b04ba189a4e8f47e86" title="gbSgbPicture" alt="" coords="1114,309,1214,336"/>
+<area shape="rect" id="node17" href="$gb_s_g_b_8cpp.html#a1da2966eb70a87994b5b95b900a8ffa7" title="gbSgbChrTransfer" alt="" coords="1101,360,1227,387"/>
+<area shape="rect" id="node18" href="$class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1099,208,1229,235"/>
+<area shape="rect" id="node15" href="$class_main_wnd.html#a1ba9d10fce306e309613d8e06097219c" title="MainWnd::OnFileImportGamesharksnapshot" alt="" coords="1287,360,1565,387"/>
+<area shape="rect" id="node19" href="$class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1347,107,1505,133"/>
+<area shape="rect" id="node20" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1349,157,1503,184"/>
+<area shape="rect" id="node21" href="$class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1333,208,1519,235"/>
+<area shape="rect" id="node22" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1323,259,1529,285"/>
+<area shape="rect" id="node23" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1305,309,1547,336"/>
+</map>

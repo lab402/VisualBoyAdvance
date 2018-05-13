@@ -1,0 +1,8 @@
+<map id="gbPrinterSend" name="gbPrinterSend">
+<area shape="rect" id="node2" href="$class_v_b_a_1_1_window.html#a2d6e4c0bd7467305b02bd6f5b0343f26" title="VBA::Window::vOnGBPrinter\lToggled" alt="" coords="163,5,354,47"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a5909d22b4cea6315004fc60b0f997b23" title="MainWnd::OnOptionsGameboy\lPrinter" alt="" coords="157,71,360,112"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#ab7257fc8414b9a73639c04106ecd1765" title="MainWnd::OnUpdateOptions\lGameboyPrinter" alt="" coords="165,136,353,177"/>
+<area shape="rect" id="node6" href="$class_v_b_a.html#aed48a7db8cc5b65a1e495661f6040915" title="VBA::loadSettings" alt="" coords="194,202,323,229"/>
+<area shape="rect" id="node3" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="408,13,565,39"/>
+<area shape="rect" id="node7" href="$class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="425,202,548,229"/>
+</map>

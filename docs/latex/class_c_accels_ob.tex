@@ -1,53 +1,347 @@
 \hypertarget{class_c_accels_ob}{}\section{C\+Accels\+Ob 클래스 참조}
 \label{class_c_accels_ob}\index{C\+Accels\+Ob@{C\+Accels\+Ob}}
-C\+Accels\+Ob에 대한 상속 다이어그램 \+: \begin{figure}[H]
+
+
+{\ttfamily \#include $<$Cmd\+Accel\+Ob.\+h$>$}
+
+
+
+C\+Accels\+Ob에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_c_accels_ob}
+\includegraphics[width=161pt]{class_c_accels_ob__inherit__graph}
+\end{center}
+\end{figure}
+
+
+C\+Accels\+Ob에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=161pt]{class_c_accels_ob__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_afca345908aafde57de46430bbf2018d9}\label{class_c_accels_ob_afca345908aafde57de46430bbf2018d9}} 
-{\bfseries C\+Accels\+Ob} (\mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} $\ast$p\+From)
+\mbox{\hyperlink{class_c_accels_ob_a6245b2db041ed3ba0aec609bbb1654cf}{C\+Accels\+Ob}} ()
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_acba35eec2e75114289468292870bf484}\label{class_c_accels_ob_acba35eec2e75114289468292870bf484}} 
-{\bfseries C\+Accels\+Ob} (B\+Y\+TE c\+Virt, W\+O\+RD w\+Key, bool b\+Locked=false)
+\mbox{\hyperlink{class_c_accels_ob_afca345908aafde57de46430bbf2018d9}{C\+Accels\+Ob}} (\mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} $\ast$p\+From)
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_aa28d7238be643bb20d922cb360881bd6}\label{class_c_accels_ob_aa28d7238be643bb20d922cb360881bd6}} 
-{\bfseries C\+Accels\+Ob} (L\+P\+A\+C\+C\+EL p\+A\+C\+C\+EL)
+\mbox{\hyperlink{class_c_accels_ob_acba35eec2e75114289468292870bf484}{C\+Accels\+Ob}} (B\+Y\+TE c\+Virt, W\+O\+RD w\+Key, bool b\+Locked=false)
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_ae6075be9ad7656823f5cecd277dd7d6e}\label{class_c_accels_ob_ae6075be9ad7656823f5cecd277dd7d6e}} 
-\mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} \& {\bfseries operator=} (const \mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} \&from)
+\mbox{\hyperlink{class_c_accels_ob_aa28d7238be643bb20d922cb360881bd6}{C\+Accels\+Ob}} (L\+P\+A\+C\+C\+EL p\+A\+C\+C\+EL)
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_afaf7510fa1e0707863f6bd469f190de6}\label{class_c_accels_ob_afaf7510fa1e0707863f6bd469f190de6}} 
-void {\bfseries Get\+String} (C\+String \&sz\+Buffer)
+\mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} \& \mbox{\hyperlink{class_c_accels_ob_ae6075be9ad7656823f5cecd277dd7d6e}{operator=}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} \&\mbox{\hyperlink{expr_8cpp_a765533dfc643627999c751f7e1514664}{from}})
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_a32714a4454d398d3d3a68d1705a76bc5}\label{class_c_accels_ob_a32714a4454d398d3d3a68d1705a76bc5}} 
-bool {\bfseries Is\+Equal} (W\+O\+RD w\+Key, bool b\+Ctrl, bool b\+Alt, bool b\+Shift)
+void \mbox{\hyperlink{class_c_accels_ob_afaf7510fa1e0707863f6bd469f190de6}{Get\+String}} (C\+String \&sz\+Buffer)
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_abbbdc5e93061f67ade785c9e4f07b918}\label{class_c_accels_ob_abbbdc5e93061f67ade785c9e4f07b918}} 
-D\+W\+O\+RD {\bfseries Get\+Data} ()
+bool \mbox{\hyperlink{class_c_accels_ob_a32714a4454d398d3d3a68d1705a76bc5}{Is\+Equal}} (W\+O\+RD w\+Key, bool b\+Ctrl, bool b\+Alt, bool b\+Shift)
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_a47a1e7e047807b7a36553aa351768096}\label{class_c_accels_ob_a47a1e7e047807b7a36553aa351768096}} 
-bool {\bfseries Set\+Data} (D\+W\+O\+RD dw\+Datas)
+D\+W\+O\+RD \mbox{\hyperlink{class_c_accels_ob_abbbdc5e93061f67ade785c9e4f07b918}{Get\+Data}} ()
+\item 
+bool \mbox{\hyperlink{class_c_accels_ob_a47a1e7e047807b7a36553aa351768096}{Set\+Data}} (D\+W\+O\+RD dw\+Datas)
 \end{DoxyCompactItemize}
 \subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}\label{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}} 
-B\+Y\+TE {\bfseries m\+\_\+c\+Virt}
+B\+Y\+TE \mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\+\_\+c\+Virt}}
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}\label{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}} 
-W\+O\+RD {\bfseries m\+\_\+w\+Key}
+W\+O\+RD \mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\+\_\+w\+Key}}
 \item 
-\mbox{\Hypertarget{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}\label{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}} 
-bool {\bfseries m\+\_\+b\+Locked}
+bool \mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\+\_\+b\+Locked}}
 \end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Cmd\+Accel\+Ob.\+h 파일의 51 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_c_accels_ob_a6245b2db041ed3ba0aec609bbb1654cf}\label{class_c_accels_ob_a6245b2db041ed3ba0aec609bbb1654cf}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{C\+Accels\+Ob()}{CAccelsOb()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily C\+Accels\+Ob\+::\+C\+Accels\+Ob (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 196 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+197 \{
+198   \mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} = 0;
+199   \mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} = 0;
+200   \mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\_bLocked}} = \textcolor{keyword}{false};
+201 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_c_accels_ob_afca345908aafde57de46430bbf2018d9}\label{class_c_accels_ob_afca345908aafde57de46430bbf2018d9}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{C\+Accels\+Ob()}{CAccelsOb()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily C\+Accels\+Ob\+::\+C\+Accels\+Ob (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} $\ast$}]{p\+From }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 207 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+208 \{
+209   ASSERT(pFrom != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+210   
+211   \mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} = pFrom->\mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}};
+212   \mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} = pFrom->\mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}};
+213   \mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\_bLocked}} = pFrom->\mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\_bLocked}};
+214 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_c_accels_ob_acba35eec2e75114289468292870bf484}\label{class_c_accels_ob_acba35eec2e75114289468292870bf484}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{C\+Accels\+Ob()}{CAccelsOb()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily C\+Accels\+Ob\+::\+C\+Accels\+Ob (\begin{DoxyParamCaption}\item[{B\+Y\+TE}]{c\+Virt,  }\item[{W\+O\+RD}]{w\+Key,  }\item[{bool}]{b\+Locked = {\ttfamily false} }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 220 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+221 \{
+222   \mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} = cVirt;
+223   \mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} = wKey;
+224   \mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\_bLocked}} = bLocked;
+225 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_c_accels_ob_aa28d7238be643bb20d922cb360881bd6}\label{class_c_accels_ob_aa28d7238be643bb20d922cb360881bd6}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{C\+Accels\+Ob()}{CAccelsOb()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily C\+Accels\+Ob\+::\+C\+Accels\+Ob (\begin{DoxyParamCaption}\item[{L\+P\+A\+C\+C\+EL}]{p\+A\+C\+C\+EL }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 231 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+232 \{
+233   ASSERT(pACCEL != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+234   
+235   \mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} = pACCEL->fVirt;
+236   \mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} = pACCEL->key;
+237   \mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\_bLocked}} = \textcolor{keyword}{false};
+238 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_c_accels_ob_abbbdc5e93061f67ade785c9e4f07b918}\label{class_c_accels_ob_abbbdc5e93061f67ade785c9e4f07b918}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!Get\+Data@{Get\+Data}}
+\index{Get\+Data@{Get\+Data}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{Get\+Data()}{GetData()}}
+{\footnotesize\ttfamily D\+W\+O\+RD C\+Accels\+Ob\+::\+Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 312 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+313 \{
+314   BYTE cLocalCodes = 0;
+315   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\_bLocked}})
+316     cLocalCodes = \mbox{\hyperlink{_cmd_accel_ob_8cpp_a34bbba669e2c198ae9348cdd388335b9}{DEFAULT\_ACCEL}};
+317   \textcolor{keywordflow}{else}
+318     cLocalCodes = \mbox{\hyperlink{_cmd_accel_ob_8cpp_a9997452be9ddc00acb200a6f3157c796}{USER\_ACCEL}};
+319   
+320   WORD bCodes = MAKEWORD(\mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}}, cLocalCodes);
+321   \textcolor{keywordflow}{return} MAKELONG(\mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}}, bCodes);
+322 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_accels_ob_abbbdc5e93061f67ade785c9e4f07b918_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_accels_ob_afaf7510fa1e0707863f6bd469f190de6}\label{class_c_accels_ob_afaf7510fa1e0707863f6bd469f190de6}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!Get\+String@{Get\+String}}
+\index{Get\+String@{Get\+String}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{Get\+String()}{GetString()}}
+{\footnotesize\ttfamily void C\+Accels\+Ob\+::\+Get\+String (\begin{DoxyParamCaption}\item[{C\+String \&}]{sz\+Buffer }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 259 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+260 \{
+261   szBuffer = \textcolor{stringliteral}{""};
+262   \textcolor{comment}{// in case of the object is not assigned, we avoid error messages}
+263   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} == 0)
+264     \textcolor{keywordflow}{return};
+265 
+266   \textcolor{comment}{// modifiers part}
+267   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+268   \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{_cmd_accel_ob_8h_a7d5276b01f235cf94741a632d2f10679}{sizetable}}(\mbox{\hyperlink{_cmd_accel_ob_8cpp_a8ea3c02453fe86a8f1328051718f3722}{mapVirtSysKeys}}); \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+269     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} & \mbox{\hyperlink{_cmd_accel_ob_8cpp_a8ea3c02453fe86a8f1328051718f3722}{mapVirtSysKeys}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].wKey) \{
+270       szBuffer += \mbox{\hyperlink{_cmd_accel_ob_8cpp_a8ea3c02453fe86a8f1328051718f3722}{mapVirtSysKeys}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structtag_m_a_p_v_i_r_t_k_e_y_s_a8450e89846bdbfa3f2daeec9583dfd15}{szKey}};
+271       szBuffer += \textcolor{stringliteral}{"+"};
+272     \}
+273   \}
+274   \textcolor{comment}{// and virtual key part}
+275   \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{_cmd_accel_ob_8h_a7d5276b01f235cf94741a632d2f10679}{sizetable}}(\mbox{\hyperlink{_cmd_accel_ob_8cpp_a6d45ebe30e35cc705c205f9848a7d27a}{mapVirtKeys}}); \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+276     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} == \mbox{\hyperlink{_cmd_accel_ob_8cpp_a6d45ebe30e35cc705c205f9848a7d27a}{mapVirtKeys}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].wKey) \{
+277       szBuffer += \mbox{\hyperlink{_cmd_accel_ob_8cpp_a6d45ebe30e35cc705c205f9848a7d27a}{mapVirtKeys}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structtag_m_a_p_v_i_r_t_k_e_y_s_a8450e89846bdbfa3f2daeec9583dfd15}{szKey}};
+278       \textcolor{keywordflow}{return};
+279     \}
+280   \}
+281   AfxMessageBox(\textcolor{stringliteral}{"Internal error : (CAccelsOb::GetString) m\_wKey invalid"});
+282 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_accels_ob_afaf7510fa1e0707863f6bd469f190de6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_accels_ob_a32714a4454d398d3d3a68d1705a76bc5}\label{class_c_accels_ob_a32714a4454d398d3d3a68d1705a76bc5}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!Is\+Equal@{Is\+Equal}}
+\index{Is\+Equal@{Is\+Equal}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{Is\+Equal()}{IsEqual()}}
+{\footnotesize\ttfamily bool C\+Accels\+Ob\+::\+Is\+Equal (\begin{DoxyParamCaption}\item[{W\+O\+RD}]{w\+Key,  }\item[{bool}]{b\+Ctrl,  }\item[{bool}]{b\+Alt,  }\item[{bool}]{b\+Shift }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 288 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+289 \{
+290   \textcolor{comment}{//        CString szTemp;}
+291   \textcolor{comment}{//        GetString(szTemp);}
+292 
+293   
+294   \textcolor{keywordtype}{bool} m\_bCtrl = (\mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} & FCONTROL) ? \textcolor{keyword}{true} : \textcolor{keyword}{false};
+295   \textcolor{keywordtype}{bool} bRet = (bCtrl == m\_bCtrl);
+296   
+297   \textcolor{keywordtype}{bool} m\_bAlt = (\mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} & FALT) ? \textcolor{keyword}{true} : \textcolor{keyword}{false};
+298   bRet &= (bAlt == m\_bAlt);
+299   
+300   \textcolor{keywordtype}{bool} m\_bShift = (\mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} & FSHIFT) ? \textcolor{keyword}{true} : \textcolor{keyword}{false};
+301   bRet &= (bShift == m\_bShift);
+302   
+303   bRet &= \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(\mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} == wKey);
+304   
+305   \textcolor{keywordflow}{return} bRet;
+306 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_c_accels_ob_a32714a4454d398d3d3a68d1705a76bc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_accels_ob_ae6075be9ad7656823f5cecd277dd7d6e}\label{class_c_accels_ob_ae6075be9ad7656823f5cecd277dd7d6e}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!operator=@{operator=}}
+\index{operator=@{operator=}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} \& C\+Accels\+Ob\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{class_c_accels_ob}{C\+Accels\+Ob}} \&}]{from }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 244 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+245 \{
+246   \mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} = \mbox{\hyperlink{expr_8cpp_a765533dfc643627999c751f7e1514664}{from}}.m\_cVirt;
+247   \mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} = \mbox{\hyperlink{expr_8cpp_a765533dfc643627999c751f7e1514664}{from}}.m\_wKey;
+248   \mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\_bLocked}} = \mbox{\hyperlink{expr_8cpp_a765533dfc643627999c751f7e1514664}{from}}.m\_bLocked;
+249   
+250   \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+251 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_c_accels_ob_a47a1e7e047807b7a36553aa351768096}\label{class_c_accels_ob_a47a1e7e047807b7a36553aa351768096}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!Set\+Data@{Set\+Data}}
+\index{Set\+Data@{Set\+Data}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{Set\+Data()}{SetData()}}
+{\footnotesize\ttfamily bool C\+Accels\+Ob\+::\+Set\+Data (\begin{DoxyParamCaption}\item[{D\+W\+O\+RD}]{dw\+Datas }\end{DoxyParamCaption})}
+
+
+
+Cmd\+Accel\+Ob.\+cpp 파일의 328 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+329 \{
+330   \mbox{\hyperlink{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}{m\_wKey}} = LOWORD(dwDatas);
+331   
+332   WORD bCodes = HIWORD(dwDatas);
+333   \mbox{\hyperlink{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}{m\_cVirt}} = LOBYTE(bCodes);
+334   
+335   BYTE cLocalCodes = HIBYTE(bCodes);
+336   \mbox{\hyperlink{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}{m\_bLocked}} = \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{bool}\textcolor{keyword}{>}(cLocalCodes == \mbox{\hyperlink{_cmd_accel_ob_8cpp_a34bbba669e2c198ae9348cdd388335b9}{DEFAULT\_ACCEL}});
+337   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+338 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_accels_ob_a47a1e7e047807b7a36553aa351768096_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}\label{class_c_accels_ob_ad8300bd20bd429ad61f89700e388dd9a}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!m\+\_\+b\+Locked@{m\+\_\+b\+Locked}}
+\index{m\+\_\+b\+Locked@{m\+\_\+b\+Locked}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{m\+\_\+b\+Locked}{m\_bLocked}}
+{\footnotesize\ttfamily bool C\+Accels\+Ob\+::m\+\_\+b\+Locked}
+
+
+
+Cmd\+Accel\+Ob.\+h 파일의 75 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}\label{class_c_accels_ob_a08b7003ccf92c6afcf31878960d8eee1}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!m\+\_\+c\+Virt@{m\+\_\+c\+Virt}}
+\index{m\+\_\+c\+Virt@{m\+\_\+c\+Virt}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{m\+\_\+c\+Virt}{m\_cVirt}}
+{\footnotesize\ttfamily B\+Y\+TE C\+Accels\+Ob\+::m\+\_\+c\+Virt}
+
+
+
+Cmd\+Accel\+Ob.\+h 파일의 73 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}\label{class_c_accels_ob_a1891250e9a4d00c0862f3a90a965d635}} 
+\index{C\+Accels\+Ob@{C\+Accels\+Ob}!m\+\_\+w\+Key@{m\+\_\+w\+Key}}
+\index{m\+\_\+w\+Key@{m\+\_\+w\+Key}!C\+Accels\+Ob@{C\+Accels\+Ob}}
+\subsubsection{\texorpdfstring{m\+\_\+w\+Key}{m\_wKey}}
+{\footnotesize\ttfamily W\+O\+RD C\+Accels\+Ob\+::m\+\_\+w\+Key}
+
+
+
+Cmd\+Accel\+Ob.\+h 파일의 74 번째 라인에서 정의되었습니다.
+
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/win32/Cmd\+Accel\+Ob.\+h\item 
-src/win32/Cmd\+Accel\+Ob.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{_cmd_accel_ob_8h}{Cmd\+Accel\+Ob.\+h}}\item 
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{_cmd_accel_ob_8cpp}{Cmd\+Accel\+Ob.\+cpp}}\end{DoxyCompactItemize}

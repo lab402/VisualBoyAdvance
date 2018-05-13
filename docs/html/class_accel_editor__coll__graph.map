@@ -1,0 +1,5 @@
+<map id="AccelEditor" name="AccelEditor">
+<area shape="rect" id="node2" href="$class_resize_dlg.html" title="{ResizeDlg\n||+ ResizeDlg()\l+ AddDialogData()\l+ SetData()\l+ UpdateWindowSize()\l+ OnWndMsg()\l}" alt="" coords="5,242,160,378"/>
+<area shape="rect" id="node4" href="$class_c_accelerator_manager.html" title="{CAcceleratorManager\n|# m_pWndConnected\l# m_mapAccelString\l# m_mapAccelTable\l# m_mapAccelTableSaved\l# m_bDefaultTable\l# m_hRegKey\l# m_szRegKey\l# m_bAutoSave\l|+ CAcceleratorManager()\l+ ~CAcceleratorManager()\l+ UpdateMenu()\l+ UpdateMenu()\l+ Connect()\l+ Load()\l+ Load()\l+ Write()\l+ Default()\l+ CreateDefaultTable()\l그리고 16개 더...\l# Reset()\l# AddAccel()\l}" alt="" coords="185,132,359,488"/>
+<area shape="rect" id="node6" href="$class_c_keyboard_edit.html" title="{CKeyboardEdit\n|+ m_bKeyDefined\l+ m_wVirtKey\l+ m_bCtrlPressed\l+ m_bAltPressed\l+ m_bShiftPressed\l|+ CKeyboardEdit()\l+ GetAccelKey()\l+ ResetKey()\l+ PreTranslateMessage()\l+ ~CKeyboardEdit()\l# DisplayKeyboardString()\l}" alt="" coords="384,205,557,415"/>
+</map>

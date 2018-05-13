@@ -1,0 +1,6 @@
+<map id="winlog" name="winlog">
+<area shape="rect" id="node2" href="$class_direct_draw_display.html#a310109ff2530aaa109ed048ede6e1564" title="DirectDrawDisplay::\linitialize" alt="" coords="128,5,264,47"/>
+<area shape="rect" id="node3" href="$class_direct_draw_display.html#ab09489c28cb1fb5aaab0e51824fe3a28" title="DirectDrawDisplay::\lrender" alt="" coords="128,71,264,112"/>
+<area shape="rect" id="node4" href="$class_g_d_i_display.html#a7d3e0b3443b68302d759d7cdecd718ef" title="GDIDisplay::initialize" alt="" coords="125,137,267,163"/>
+<area shape="rect" id="node5" href="$class_open_g_l_display.html#af0db619c7083f43e9bc61f1705843b53" title="OpenGLDisplay::initialize" alt="" coords="112,187,280,214"/>
+</map>

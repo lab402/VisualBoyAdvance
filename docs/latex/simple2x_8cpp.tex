@@ -1,0 +1,144 @@
+\hypertarget{simple2x_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/simple2x.cpp 파일 참조}
+\label{simple2x_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/simple2x.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/simple2x.\+cpp}}
+{\ttfamily \#include \char`\"{}System.\+h\char`\"{}}\newline
+simple2x.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{simple2x_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{simple2x_8cpp_a14bc8d578f781af160f982c421ddb8c7}{Simple2x}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$src\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{src\+Pitch}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$dst\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} dst\+Pitch, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} width, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} height)
+\item 
+void \mbox{\hyperlink{simple2x_8cpp_a8127b555bc7e0be7f6c21258866a5149}{Simple2x32}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$src\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{src\+Pitch}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$dst\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} dst\+Pitch, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} width, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} height)
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{simple2x_8cpp_a14bc8d578f781af160f982c421ddb8c7}\label{simple2x_8cpp_a14bc8d578f781af160f982c421ddb8c7}} 
+\index{simple2x.\+cpp@{simple2x.\+cpp}!Simple2x@{Simple2x}}
+\index{Simple2x@{Simple2x}!simple2x.\+cpp@{simple2x.\+cpp}}
+\subsubsection{\texorpdfstring{Simple2x()}{Simple2x()}}
+{\footnotesize\ttfamily void Simple2x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{src\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{src\+Pitch,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{dst\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{dst\+Pitch,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{width,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{height }\end{DoxyParamCaption})}
+
+
+
+simple2x.\+cpp 파일의 21 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+23 \{
+24   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *nextLine, *finish;
+25   
+26   nextLine = dstPtr + dstPitch;
+27   
+28   \textcolor{keywordflow}{do} \{
+29     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *bP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) srcPtr;
+30     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *dP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) dstPtr;
+31     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *nL = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) nextLine;
+32     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} currentPixel;
+33     
+34     finish = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *) bP + ((width+2) << 1);
+35     currentPixel = *bP++;
+36     
+37     \textcolor{keywordflow}{do} \{
+38 \textcolor{preprocessor}{#ifdef WORDS\_BIGENDIAN}
+39       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} color = currentPixel >> 16;
+40 \textcolor{preprocessor}{#else}
+41       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} color = currentPixel & 0xffff;
+42 \textcolor{preprocessor}{#endif}
+43 
+44       color = color | (color << 16);
+45 
+46       *(dP) = color;
+47       *(nL) = color;
+48 
+49 \textcolor{preprocessor}{#ifdef WORDS\_BIGENDIAN}
+50       color = currentPixel & 0xffff;
+51 \textcolor{preprocessor}{#else}
+52       color = currentPixel >> 16;
+53 \textcolor{preprocessor}{#endif}
+54       color = color| (color << 16);      
+55       *(dP + 1) = color;
+56       *(nL + 1) = color;
+57       
+58       currentPixel = *bP++;
+59       
+60       dP += 2;
+61       nL += 2;
+62     \} \textcolor{keywordflow}{while} ((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *) bP < finish);
+63     
+64     srcPtr += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}};
+65     dstPtr += dstPitch << 1;
+66     nextLine += dstPitch << 1;
+67   \}
+68   \textcolor{keywordflow}{while} (--height);
+69 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{simple2x_8cpp_a14bc8d578f781af160f982c421ddb8c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{simple2x_8cpp_a8127b555bc7e0be7f6c21258866a5149}\label{simple2x_8cpp_a8127b555bc7e0be7f6c21258866a5149}} 
+\index{simple2x.\+cpp@{simple2x.\+cpp}!Simple2x32@{Simple2x32}}
+\index{Simple2x32@{Simple2x32}!simple2x.\+cpp@{simple2x.\+cpp}}
+\subsubsection{\texorpdfstring{Simple2x32()}{Simple2x32()}}
+{\footnotesize\ttfamily void Simple2x32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{src\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{src\+Pitch,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{dst\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{dst\+Pitch,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{width,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{height }\end{DoxyParamCaption})}
+
+
+
+simple2x.\+cpp 파일의 71 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+73 \{
+74   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *nextLine, *finish;
+75   
+76   nextLine = dstPtr + dstPitch;
+77   
+78   \textcolor{keywordflow}{do} \{
+79     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *bP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) srcPtr;
+80     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *dP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) dstPtr;
+81     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *nL = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) nextLine;
+82     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} currentPixel;
+83     
+84     finish = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *) bP + ((width+1) << 2);
+85     currentPixel = *bP++;
+86     
+87     \textcolor{keywordflow}{do} \{
+88       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} color = currentPixel;
+89 
+90       *(dP) = color;
+91       *(dP+1) = color;
+92       *(nL) = color;
+93       *(nL + 1) = color;
+94       
+95       currentPixel = *bP++;
+96       
+97       dP += 2;
+98       nL += 2;
+99     \} \textcolor{keywordflow}{while} ((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *) bP < finish);
+100     
+101     srcPtr += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}};
+102     dstPtr += dstPitch << 1;
+103     nextLine += dstPitch << 1;
+104   \}
+105   \textcolor{keywordflow}{while} (--height);
+106 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{simple2x_8cpp_a8127b555bc7e0be7f6c21258866a5149_icgraph}
+\end{center}
+\end{figure}

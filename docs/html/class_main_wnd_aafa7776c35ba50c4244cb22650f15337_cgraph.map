@@ -1,0 +1,11 @@
+<map id="MainWnd::OnFileLoadgameMostrecent" name="MainWnd::OnFileLoadgameMostrecent">
+<area shape="rect" id="node2" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="539,5,681,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="525,56,695,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="535,107,685,133"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a84c4154350bd26b393fcd82948d342e1" title="MainWnd::OnFileLoadSlot" alt="" coords="301,157,476,184"/>
+<area shape="rect" id="node6" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="547,360,673,387"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#ae53f005e124fddf8681dc9a31992841f" title="MainWnd::loadSaveGame" alt="" coords="524,157,696,184"/>
+<area shape="rect" id="node8" href="$_main_wnd_file_8cpp.html#a8fb92e50593bf5bf4827794574c2d28f" title="InterframeCleanup" alt="" coords="547,208,673,235"/>
+<area shape="rect" id="node9" href="$system_8cpp.html#a0412545bfaba2004bf7a42d779ea5659" title="systemScreenMessage" alt="" coords="531,259,689,285"/>
+<area shape="rect" id="node10" href="$system_8cpp.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="543,309,677,336"/>
+</map>

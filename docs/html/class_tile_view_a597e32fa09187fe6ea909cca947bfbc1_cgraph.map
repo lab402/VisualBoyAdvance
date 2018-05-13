@@ -1,0 +1,18 @@
+<map id="TileView::OnInitDialog" name="TileView::OnInitDialog">
+<area shape="rect" id="node2" href="$class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5" title="ResizeDlg::SetData" alt="" coords="219,107,355,133"/>
+<area shape="rect" id="node9" href="$class_tile_view.html#a4341071a0cab0d5a8b6dfa7318230636" title="TileView::paint" alt="" coords="234,233,341,260"/>
+<area shape="rect" id="node16" href="$_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3" title="regQueryDwordValue" alt="" coords="215,284,359,311"/>
+<area shape="rect" id="node17" href="$class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812" title="BitmapControl::setStretch" alt="" coords="201,335,373,361"/>
+<area shape="rect" id="node3" href="$class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc" title="ResizeDlg::AddDialogData" alt="" coords="427,5,601,32"/>
+<area shape="rect" id="node5" href="$_resize_dlg_8cpp.html#a42fd95f9181ab52619b7bd3e5d51475b" title="ResizeDlgGetItemCount" alt="" coords="433,56,595,83"/>
+<area shape="rect" id="node6" href="$_resize_dlg_8cpp.html#ad4ba4376f50f357ac88b0fd3bfeb1a19" title="ResizeDlgCopyItems" alt="" coords="443,107,585,133"/>
+<area shape="rect" id="node7" href="$_resize_dlg_8cpp.html#a74702acf423eaa66851bd656c737b6ba" title="RegQueryValueExRecursive" alt="" coords="421,157,607,184"/>
+<area shape="rect" id="node4" href="$_resize_dlg_8cpp.html#af86ee86600de84824a5d7b8b3aaed6e8" title="ResizeDlgUpdateGripperRect" alt="" coords="655,5,845,32"/>
+<area shape="rect" id="node8" href="$_resize_dlg_8cpp.html#a37994396c85bf7d224452b133d9e3d6f" title="regGetINIPath" alt="" coords="699,132,801,159"/>
+<area shape="rect" id="node10" href="$class_tile_view.html#a4b8f6e14f8ee7d4abea3a751cb5f7d74" title="TileView::render" alt="" coords="457,233,571,260"/>
+<area shape="rect" id="node15" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="439,284,589,311"/>
+<area shape="rect" id="node11" href="$class_tile_view.html#a1232e131b9ef993edea4390809c41814" title="TileView::renderTile256" alt="" coords="673,183,827,209"/>
+<area shape="rect" id="node12" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="672,233,828,260"/>
+<area shape="rect" id="node13" href="$class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="664,284,836,311"/>
+<area shape="rect" id="node14" href="$class_tile_view.html#abc4f9051fc3c2bfad76a6b11787460f8" title="TileView::renderTile16" alt="" coords="676,335,824,361"/>
+</map>

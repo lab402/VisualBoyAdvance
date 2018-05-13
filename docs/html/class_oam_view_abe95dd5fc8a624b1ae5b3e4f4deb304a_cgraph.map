@@ -1,0 +1,8 @@
+<map id="OamView::OnChangeSprite" name="OamView::OnChangeSprite">
+<area shape="rect" id="node2" href="$class_oam_view.html#af9092e04b559ef87670e18dd42c45669" title="OamView::paint" alt="" coords="267,56,381,83"/>
+<area shape="rect" id="node7" href="$class_oam_view.html#ae51c17aebff73f557073546febb45eba" title="OamView::updateScrollInfo" alt="" coords="235,107,413,133"/>
+<area shape="rect" id="node3" href="$class_oam_view.html#a391d8ee2931b2927e936c7100e676451" title="OamView::render" alt="" coords="478,5,601,32"/>
+<area shape="rect" id="node5" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="461,56,617,83"/>
+<area shape="rect" id="node6" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="464,107,615,133"/>
+<area shape="rect" id="node4" href="$class_oam_view.html#aafceb25b05d3ff2eacffa1a53308ee1d" title="OamView::setAttributes" alt="" coords="665,5,825,32"/>
+</map>

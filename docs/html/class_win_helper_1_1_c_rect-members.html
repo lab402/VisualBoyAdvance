@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_win_helper_1_1_c_rect.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>WinHelper</b></li><li class="navelem"><a class="el" href="class_win_helper_1_1_c_rect.html">CRect</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">WinHelper::CRect 멤버 목록</div>  </div>
@@ -72,33 +92,36 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>BottomRight</b>() const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>CRect</b>() (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CRect</b>(const RECT &amp;rhs) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>CRect</b>(int xLeft, int yTop, int xRight, int yBottom) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Empty</b>() (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Height</b>() const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Inflate</b>(int cx, int cy) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Intersect</b>(const RECT &amp;rc) const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>IsEmpty</b>() const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Offset</b>(int cx, int cy) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator LPCRECT</b>() const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>operator LPRECT</b>() (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>operator=</b>(const RECT &amp;rhs) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>PtInRect</b>(const POINT &amp;pt) const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Set</b>(int xLeft, int yTop, int xRight, int yBottom) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>SetSize</b>(const CSize &amp;size) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>SetSize</b>(const SIZE &amp;size) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>SetSize</b>(int cx, int cy) (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Size</b>() const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>TopLeft</b>() const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Width</b>() const (다음에서 정의됨 : <a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a5484884c667466060e54d20f566376a6">BottomRight</a>() const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a23555d57c6d6f65272f0bc64378651b8">CRect</a>()</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#aae968ffaab6da35e85e7fa0e8941aea7">CRect</a>(const RECT &amp;rhs)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">explicit</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a3253ffe9a6b650c58100509712805d30">CRect</a>(int xLeft, int yTop, int xRight, int yBottom)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a15109200bd331bfcfa7bc7bfd86c2c52">Empty</a>()</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a227070170fb6da9f8539eb9d35749745">Height</a>() const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a360524ba4e46d6ff65f8e6fa2ee7ef6a">Inflate</a>(int cx, int cy)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#ae4e2111ea0d699b212744c15fc8ca560">Intersect</a>(const RECT &amp;rc) const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a6a78810f08fbb4559fee4910b531735a">IsEmpty</a>() const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#ab241031d5051b5fa34594cd83fa93534">Offset</a>(int cx, int cy)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a744e3b6f0a33e7143dbe852d71190875">operator LPCRECT</a>() const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#af8af272cf417faeddfba92f44a8b6cb9">operator LPRECT</a>()</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a138cae1d90a65763cb419e158b4c5dda">operator=</a>(const RECT &amp;rhs)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a8417d900e15e2aca83b29225d2dee165">PtInRect</a>(const POINT &amp;pt) const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a5cc306b936afd8a1fe8321a7846ad260">Set</a>(int xLeft, int yTop, int xRight, int yBottom)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#ab53ec9397692f842d8a5c289d44e4741">SetSize</a>(const CSize &amp;size)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a00602a2018250d3fb661831c0aa65ca1">SetSize</a>(const SIZE &amp;size)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a44277ee1ed92bf43b56021d630992987">SetSize</a>(int cx, int cy)</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#a37d2e20ba4edaf4f3ab837862ba73c11">Size</a>() const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#abb394a1600f994a4500c71a48db1b9ad">TopLeft</a>() const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html#acde8c61514d7814ab1d7c5f91e549a80">Width</a>() const</td><td class="entry"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

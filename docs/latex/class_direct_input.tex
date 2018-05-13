@@ -1,46 +1,625 @@
 \hypertarget{class_direct_input}{}\section{Direct\+Input 클래스 참조}
 \label{class_direct_input}\index{Direct\+Input@{Direct\+Input}}
-Direct\+Input에 대한 상속 다이어그램 \+: \begin{figure}[H]
+
+
+Direct\+Input에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_direct_input}
+\includegraphics[width=190pt]{class_direct_input__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Direct\+Input에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_direct_input__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_direct_input_a59a88d57b359bd26c800579edeb19419}\label{class_direct_input_a59a88d57b359bd26c800579edeb19419}} 
-virtual void {\bfseries check\+Devices} ()
+virtual void \mbox{\hyperlink{class_direct_input_a59a88d57b359bd26c800579edeb19419}{check\+Devices}} ()
 \item 
-\mbox{\Hypertarget{class_direct_input_a56c3e7924e9d115a2b20b31ee415d544}\label{class_direct_input_a56c3e7924e9d115a2b20b31ee415d544}} 
-virtual bool {\bfseries initialize} ()
+\mbox{\hyperlink{class_direct_input_a63ec945b71a6119e7e3d5d7195a9050f}{Direct\+Input}} ()
 \item 
-\mbox{\Hypertarget{class_direct_input_a53a2984e75989b381fdae4c8c33f5c32}\label{class_direct_input_a53a2984e75989b381fdae4c8c33f5c32}} 
-virtual bool {\bfseries read\+Devices} ()
+virtual \mbox{\hyperlink{class_direct_input_a9ad919625264b7115fdf20f77c9d2534}{$\sim$\+Direct\+Input}} ()
 \item 
-\mbox{\Hypertarget{class_direct_input_af7d74c03d302905eaa06e88ab37b7dac}\label{class_direct_input_af7d74c03d302905eaa06e88ab37b7dac}} 
-virtual u32 {\bfseries read\+Device} (int which)
+virtual bool \mbox{\hyperlink{class_direct_input_a56c3e7924e9d115a2b20b31ee415d544}{initialize}} ()
 \item 
-\mbox{\Hypertarget{class_direct_input_a8ea2797da0b1e806227628804591f63d}\label{class_direct_input_a8ea2797da0b1e806227628804591f63d}} 
-virtual C\+String {\bfseries get\+Key\+Name} (L\+O\+N\+G\+\_\+\+P\+TR key)
+virtual bool \mbox{\hyperlink{class_direct_input_a53a2984e75989b381fdae4c8c33f5c32}{read\+Devices}} ()
 \item 
-\mbox{\Hypertarget{class_direct_input_acecffb99132b93e827373a3683ce342b}\label{class_direct_input_acecffb99132b93e827373a3683ce342b}} 
-virtual void {\bfseries check\+Keys} ()
+virtual \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{class_direct_input_af7d74c03d302905eaa06e88ab37b7dac}{read\+Device}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} which)
 \item 
-\mbox{\Hypertarget{class_direct_input_a6e54dc09ff20e12dfe98a24607172c34}\label{class_direct_input_a6e54dc09ff20e12dfe98a24607172c34}} 
-virtual void {\bfseries check\+Motion\+Keys} ()
+virtual C\+String \mbox{\hyperlink{class_direct_input_a8ea2797da0b1e806227628804591f63d}{get\+Key\+Name}} (L\+O\+N\+G\+\_\+\+P\+TR key)
 \item 
-\mbox{\Hypertarget{class_direct_input_a4d81c1ee99e76949dac0acac4bad0937}\label{class_direct_input_a4d81c1ee99e76949dac0acac4bad0937}} 
-virtual void {\bfseries activate} ()
+virtual void \mbox{\hyperlink{class_direct_input_acecffb99132b93e827373a3683ce342b}{check\+Keys}} ()
 \item 
-\mbox{\Hypertarget{class_direct_input_a4b63243a3581158956baf495a0dee51e}\label{class_direct_input_a4b63243a3581158956baf495a0dee51e}} 
-virtual void {\bfseries load\+Settings} ()
+virtual void \mbox{\hyperlink{class_direct_input_a6e54dc09ff20e12dfe98a24607172c34}{check\+Motion\+Keys}} ()
 \item 
-\mbox{\Hypertarget{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d}\label{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d}} 
-virtual void {\bfseries save\+Settings} ()
+virtual void \mbox{\hyperlink{class_direct_input_a4d81c1ee99e76949dac0acac4bad0937}{activate}} ()
+\item 
+virtual void \mbox{\hyperlink{class_direct_input_a4b63243a3581158956baf495a0dee51e}{load\+Settings}} ()
+\item 
+virtual void \mbox{\hyperlink{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d}{save\+Settings}} ()
 \end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Direct\+Input.\+cpp 파일의 49 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_direct_input_a63ec945b71a6119e7e3d5d7195a9050f}\label{class_direct_input_a63ec945b71a6119e7e3d5d7195a9050f}} 
+\index{Direct\+Input@{Direct\+Input}!Direct\+Input@{Direct\+Input}}
+\index{Direct\+Input@{Direct\+Input}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{Direct\+Input()}{DirectInput()}}
+{\footnotesize\ttfamily Direct\+Input\+::\+Direct\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Direct\+Input.\+cpp 파일의 694 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+695 \{\}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_direct_input_a9ad919625264b7115fdf20f77c9d2534}\label{class_direct_input_a9ad919625264b7115fdf20f77c9d2534}} 
+\index{Direct\+Input@{Direct\+Input}!````~Direct\+Input@{$\sim$\+Direct\+Input}}
+\index{````~Direct\+Input@{$\sim$\+Direct\+Input}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{$\sim$\+Direct\+Input()}{~DirectInput()}}
+{\footnotesize\ttfamily Direct\+Input\+::$\sim$\+Direct\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Direct\+Input.\+cpp 파일의 697 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+698 \{
+699     \mbox{\hyperlink{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d}{saveSettings}}();
+700     \textcolor{keywordflow}{if} (pDirectInput != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+701         \textcolor{keywordflow}{if} (pDevices) \{
+702             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < numDevices ; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+703                 \textcolor{keywordflow}{if} (pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].device) \{
+704                     pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->Unacquire();
+705                     pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->Release();
+706                     pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+707                 \}
+708             \}
+709             free(pDevices);
+710             pDevices = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+711         \}
+712 
+713         pDirectInput->Release();
+714         pDirectInput = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+715     \}
+716 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_direct_input_a9ad919625264b7115fdf20f77c9d2534_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_direct_input_a4d81c1ee99e76949dac0acac4bad0937}\label{class_direct_input_a4d81c1ee99e76949dac0acac4bad0937}} 
+\index{Direct\+Input@{Direct\+Input}!activate@{activate}}
+\index{activate@{activate}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily void Direct\+Input\+::activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_a5917709c5d9cf1270d430667982895d1}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 1009 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1010 \{
+1011     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < numDevices; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+1012         \textcolor{keywordflow}{if} (pDevices != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} && pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].device != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1013             pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->Acquire();
+1014     \}
+1015 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_direct_input_a59a88d57b359bd26c800579edeb19419}\label{class_direct_input_a59a88d57b359bd26c800579edeb19419}} 
+\index{Direct\+Input@{Direct\+Input}!check\+Devices@{check\+Devices}}
+\index{check\+Devices@{check\+Devices}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{check\+Devices()}{checkDevices()}}
+{\footnotesize\ttfamily void Direct\+Input\+::check\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_a7a6ef57ff2638f545380618b2d3fdf9d}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 1003 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1004 \{
+1005     checkJoypads();
+1006     checkKeyboard();
+1007 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_direct_input_acecffb99132b93e827373a3683ce342b}\label{class_direct_input_acecffb99132b93e827373a3683ce342b}} 
+\index{Direct\+Input@{Direct\+Input}!check\+Keys@{check\+Keys}}
+\index{check\+Keys@{check\+Keys}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{check\+Keys()}{checkKeys()}}
+{\footnotesize\ttfamily void Direct\+Input\+::check\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_a91418a5762e6e50aa4f59e4ce92d2dfa}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 945 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+946 \{
+947     \mbox{\hyperlink{class_direct_input_acecffb99132b93e827373a3683ce342b}{::checkKeys}}();
+948 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_direct_input_a6e54dc09ff20e12dfe98a24607172c34}\label{class_direct_input_a6e54dc09ff20e12dfe98a24607172c34}} 
+\index{Direct\+Input@{Direct\+Input}!check\+Motion\+Keys@{check\+Motion\+Keys}}
+\index{check\+Motion\+Keys@{check\+Motion\+Keys}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{check\+Motion\+Keys()}{checkMotionKeys()}}
+{\footnotesize\ttfamily void Direct\+Input\+::check\+Motion\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_aac8f25a1a6a7e0bd54e5d50b9b774844}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 950 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+951 \{
+952     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_af6761499604a971a202b9ea0dc6ef5a9}{motion}}[\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65}{KEY\_LEFT}}])) \{
+953         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} += 3;
+954         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} > 2197)
+955             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} = 2197;
+956         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} < 2047)
+957             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} = 2057;
+958     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_af6761499604a971a202b9ea0dc6ef5a9}{motion}}[\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d}{KEY\_RIGHT}}])) \{
+959         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} -= 3;
+960         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} < 1897)
+961             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} = 1897;
+962         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} > 2047)
+963             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} = 2037;
+964     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} > 2047) \{
+965         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} -= 2;
+966         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} < 2047)
+967             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} = 2047;
+968     \} \textcolor{keywordflow}{else} \{
+969         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} += 2;
+970         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} > 2047)
+971             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a070ab23839c3e1b67c29c70a34c87b1a}{sensorX}} = 2047;
+972     \}
+973 
+974     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_af6761499604a971a202b9ea0dc6ef5a9}{motion}}[\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd}{KEY\_UP}}])) \{
+975         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} += 3;
+976         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} > 2197)
+977             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} = 2197;
+978         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} < 2047)
+979             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} = 2057;
+980     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_af6761499604a971a202b9ea0dc6ef5a9}{motion}}[\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416}{KEY\_DOWN}}])) \{
+981         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} -= 3;
+982         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} < 1897)
+983             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} = 1897;
+984         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} > 2047)
+985             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} = 2037;
+986     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} > 2047) \{
+987         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} -= 2;
+988         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} < 2047)
+989             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} = 2047;
+990     \} \textcolor{keywordflow}{else} \{
+991         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} += 2;
+992         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} > 2047)
+993             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a090bef0a0f7702b275e46ee14a130359}{sensorY}} = 2047;
+994     \}
+995 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{class_direct_input_a6e54dc09ff20e12dfe98a24607172c34_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_direct_input_a8ea2797da0b1e806227628804591f63d}\label{class_direct_input_a8ea2797da0b1e806227628804591f63d}} 
+\index{Direct\+Input@{Direct\+Input}!get\+Key\+Name@{get\+Key\+Name}}
+\index{get\+Key\+Name@{get\+Key\+Name}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{get\+Key\+Name()}{getKeyName()}}
+{\footnotesize\ttfamily C\+String Direct\+Input\+::get\+Key\+Name (\begin{DoxyParamCaption}\item[{L\+O\+N\+G\+\_\+\+P\+TR}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_a2c4ec8a744b040657e220480987cd8bf}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 878 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+879 \{
+880     LONG\_PTR d = (key >> 8);
+881     LONG\_PTR k = key & 255;
+882 
+883     DIDEVICEOBJECTINSTANCE di;
+884 
+885     ZeroMemory(&di,\textcolor{keyword}{sizeof}(DIDEVICEOBJECTINSTANCE));
+886 
+887     di.dwSize = \textcolor{keyword}{sizeof}(DIDEVICEOBJECTINSTANCE);
+888 
+889     CString winBuffer = \mbox{\hyperlink{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}{winResLoadString}}(\mbox{\hyperlink{resource_8h_a37a752d521d112ae1c29926245bfbdb3}{IDS\_ERROR}});
+890 
+891     \textcolor{keywordflow}{if} (d == 0) \{
+892         pDevices[0].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->GetObjectInfo( &di, (DWORD)key, DIPH\_BYOFFSET );
+893         winBuffer = di.tszName;
+894     \} \textcolor{keywordflow}{else} \{
+895         \textcolor{keywordflow}{if} (k < 16) \{
+896             \textcolor{keywordflow}{if} (k < 4) \{
+897                 \textcolor{keywordflow}{switch} (k) \{
+898                 \textcolor{keywordflow}{case} 0:
+899                     winBuffer.Format(\mbox{\hyperlink{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}{winResLoadString}}(
+      \mbox{\hyperlink{resource_8h_ad32682ac25366c72bba816946e68cd15}{IDS\_JOY\_LEFT}}), d);
+900                     \textcolor{keywordflow}{break};
+901                 \textcolor{keywordflow}{case} 1:
+902                     winBuffer.Format(\mbox{\hyperlink{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}{winResLoadString}}(
+      \mbox{\hyperlink{resource_8h_a2626dba528cae87166f55780e6519ece}{IDS\_JOY\_RIGHT}}), d);
+903                     \textcolor{keywordflow}{break};
+904                 \textcolor{keywordflow}{case} 2:
+905                     winBuffer.Format(\mbox{\hyperlink{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}{winResLoadString}}(\mbox{\hyperlink{resource_8h_aabfff1558ab3cba5b93e56f636c511a0}{IDS\_JOY\_UP}}), d);
+906                     \textcolor{keywordflow}{break};
+907                 \textcolor{keywordflow}{case} 3:
+908                     winBuffer.Format(\mbox{\hyperlink{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}{winResLoadString}}(
+      \mbox{\hyperlink{resource_8h_a7f422591d4c14bff69859ee7a72b09fb}{IDS\_JOY\_DOWN}}), d);
+909                     \textcolor{keywordflow}{break};
+910                 \}
+911             \} \textcolor{keywordflow}{else} \{
+912                 pDevices[d].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->GetObjectInfo(&di,
+913                                                   pDevices[d].axis[k>>1].offset,
+914                                                   DIPH\_BYOFFSET);
+915                 \textcolor{keywordflow}{if} (k & 1)
+916                     winBuffer.Format(\textcolor{stringliteral}{"Joy %d %s +"}, d, di.tszName);
+917                 \textcolor{keywordflow}{else}
+918                     winBuffer.Format(\textcolor{stringliteral}{"Joy %d %s -"}, d, di.tszName);
+919             \}
+920         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (k < 48) \{
+921             LONG\_PTR hat = (k >> 2) & 3;
+922             pDevices[d].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->GetObjectInfo(&di,
+923                                               (DWORD)DIJOFS\_POV(hat),
+924                                               DIPH\_BYOFFSET);
+925             \textcolor{keywordtype}{char} *dir = \textcolor{stringliteral}{"up"};
+926             LONG\_PTR dd = k & 3;
+927             \textcolor{keywordflow}{if} (dd == 1)
+928                 dir = \textcolor{stringliteral}{"down"};
+929             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (dd == 2)
+930                 dir = \textcolor{stringliteral}{"right"};
+931             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (dd == 3)
+932                 dir = \textcolor{stringliteral}{"left"};
+933             winBuffer.Format(\textcolor{stringliteral}{"Joy %d %s %s"}, d, di.tszName, dir);
+934         \} \textcolor{keywordflow}{else} \{
+935             pDevices[d].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->GetObjectInfo(&di,
+936                                               (DWORD)DIJOFS\_BUTTON(k-128),
+937                                               DIPH\_BYOFFSET);
+938             winBuffer.Format(\mbox{\hyperlink{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}{winResLoadString}}(\mbox{\hyperlink{resource_8h_a6fb7c54dffc3dcaca15791ef58f26735}{IDS\_JOY\_BUTTON}}),d,di.tszName);
+939         \}
+940     \}
+941 
+942     \textcolor{keywordflow}{return} winBuffer;
+943 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{class_direct_input_a8ea2797da0b1e806227628804591f63d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_direct_input_a56c3e7924e9d115a2b20b31ee415d544}\label{class_direct_input_a56c3e7924e9d115a2b20b31ee415d544}} 
+\index{Direct\+Input@{Direct\+Input}!initialize@{initialize}}
+\index{initialize@{initialize}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool Direct\+Input\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_affd45f0c278a6ff71b7ae1a567a3dc1c}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 719 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+720 \{
+721 
+722     HRESULT hr;
+723 
+724     hr = DirectInput8Create(
+725              AfxGetInstanceHandle(),
+726              \mbox{\hyperlink{_direct_input_8cpp_a1d7ab29fdefabdb4e7e7cd27ac4c9934}{DIRECTINPUT\_VERSION}},
+727              IID\_IDirectInput8,
+728              (LPVOID*)&pDirectInput,
+729              \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} );
+730 
+731     \textcolor{keywordflow}{if} ( hr != DI\_OK ) \{
+732         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+733     \}
+734 
+735 
+736 
+737 
+738     hr = pDirectInput->EnumDevices(DI8DEVCLASS\_GAMECTRL,
+739                                    \mbox{\hyperlink{_direct_input_8cpp_afbc5dda36f4cf8d820d085fd629941a8}{DIEnumDevicesCallback2}},
+740                                    \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+741                                    DIEDFL\_ATTACHEDONLY);
+742 
+743 
+744 
+745     pDevices = (\mbox{\hyperlink{structdevice_info}{deviceInfo}} *)calloc(numDevices, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{structdevice_info}{deviceInfo}}));
+746 
+747     hr = pDirectInput->CreateDevice(GUID\_SysKeyboard,&pDevices[0].device,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+748     pDevices[0].\mbox{\hyperlink{structdevice_info_a405fccb036e90884fb822c59433c2490}{isPolled}} = \textcolor{keyword}{false};
+749     pDevices[0].\mbox{\hyperlink{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}{needed}}  = \textcolor{keyword}{true};
+750     pDevices[0].\mbox{\hyperlink{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}{first}}  = \textcolor{keyword}{true};
+751 
+752     \textcolor{keywordflow}{if} (hr != DI\_OK) \{
+753         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+754     \}
+755 
+756 
+757     numDevices = 1;
+758 
+759     hr = pDirectInput->EnumDevices(DI8DEVCLASS\_GAMECTRL,
+760                                    DIEnumDevicesCallback,
+761                                    \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+762                                    DIEDFL\_ATTACHEDONLY);
+763 
+764 
+765     \textcolor{keywordflow}{if} (hr != DI\_OK) \{
+766         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+767     \}
+768 
+769     hr = pDevices[0].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->SetDataFormat(&c\_dfDIKeyboard);
+770 
+771     \textcolor{keywordflow}{if} (hr != DI\_OK) \{
+772         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+773     \}
+774 
+775     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+776     \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 1; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < numDevices; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+777         pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->SetDataFormat(&c\_dfDIJoystick);
+778         pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}{needed}} = \textcolor{keyword}{false};
+779         pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}{first}}  = \textcolor{keyword}{true};
+780         currentDevice = &pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+781         axisNumber = 0;
+782         currentDevice->\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->EnumObjects(EnumAxesCallback, \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, DIDFT\_AXIS);
+783         currentDevice->\mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}->EnumObjects(EnumPovsCallback, \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, DIDFT\_POV);
+784 
+785 
+786         currentDevice = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+787     \}
+788 
+789     \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < numDevices; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++)
+790         pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].device->Acquire();
+791 
+792     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+793 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_direct_input_a4b63243a3581158956baf495a0dee51e}\label{class_direct_input_a4b63243a3581158956baf495a0dee51e}} 
+\index{Direct\+Input@{Direct\+Input}!load\+Settings@{load\+Settings}}
+\index{load\+Settings@{load\+Settings}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{load\+Settings()}{loadSettings()}}
+{\footnotesize\ttfamily void Direct\+Input\+::load\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_a098708c062b906c84ab036c04d447a29}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 1017 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1018 \{
+1019     \mbox{\hyperlink{_direct_input_8cpp_a9545d7069e105eaad4d4df360b398846}{winReadKeys}}();
+1020 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_direct_input_a4b63243a3581158956baf495a0dee51e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_direct_input_af7d74c03d302905eaa06e88ab37b7dac}\label{class_direct_input_af7d74c03d302905eaa06e88ab37b7dac}} 
+\index{Direct\+Input@{Direct\+Input}!read\+Device@{read\+Device}}
+\index{read\+Device@{read\+Device}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{read\+Device()}{readDevice()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} Direct\+Input\+::read\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_a57a47977bda8fcf6de237401b4c2e0dd}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 809 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+810 \{
+811     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} res = 0;
+812     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_af42f79cc8ea9f0f95bf4634c0b9224dd}{joypadDefault}};
+813     \textcolor{keywordflow}{if} (which >= 0 && which <= 3)
+814         \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = which;
+815 
+816     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da1ae295c6714da69909086c747faa54e5}{KEY\_BUTTON\_A}}]))
+817         res |= 1;
+818     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da50189f77022f070b3e706a6085b9fa29}{KEY\_BUTTON\_B}}]))
+819         res |= 2;
+820     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035dade90864e26145a4d8f2b8ceadc102725}{KEY\_BUTTON\_SELECT}}]))
+821         res |= 4;
+822     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035daec224303ac98eea7226ce2996c1e27ce}{KEY\_BUTTON\_START}}]))
+823         res |= 8;
+824     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d}{KEY\_RIGHT}}]))
+825         res |= 16;
+826     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65}{KEY\_LEFT}}]))
+827         res |= 32;
+828     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd}{KEY\_UP}}]))
+829         res |= 64;
+830     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416}{KEY\_DOWN}}]))
+831         res |= 128;
+832     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da730cf8664b0f2ed33259cfdbc005ad0b}{KEY\_BUTTON\_R}}]))
+833         res |= 256;
+834     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035daaefd8022dd13c4e773eb50fcb01a3a9a}{KEY\_BUTTON\_L}}]))
+835         res |= 512;
+836 
+837     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{win32_2input_8h_a1fb9092bcdeada2d206bdc74afbbe122a5d7e2f02449f4c01111bf549d2595c03}{KEY\_BUTTON\_GS}}]))
+838         res |= 4096;
+839 
+840     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1a3c37d6609939c821133cf4a2cd9d0d}{autoFire}}) \{
+841         res &= (~\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1a3c37d6609939c821133cf4a2cd9d0d}{autoFire}});
+842         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a846626fa8ac7d18c7622e4ec49c526ff}{autoFireToggle}})
+843             res |= \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1a3c37d6609939c821133cf4a2cd9d0d}{autoFire}};
+844         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a846626fa8ac7d18c7622e4ec49c526ff}{autoFireToggle}} = !\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a846626fa8ac7d18c7622e4ec49c526ff}{autoFireToggle}};
+845     \}
+846 
+847     \textcolor{comment}{// disallow L+R or U+D of being pressed at the same time}
+848     \textcolor{keywordflow}{if} ((res & 48) == 48)
+849         res &= ~16;
+850     \textcolor{keywordflow}{if} ((res & 192) == 192)
+851         res &= ~128;
+852 
+853     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7fbf39fb4604c00c8ad139b2e27f3756}{movieRecording}}) \{
+854         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} == \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_af42f79cc8ea9f0f95bf4634c0b9224dd}{joypadDefault}}) \{
+855             \textcolor{keywordflow}{if} (res != \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a911d9dbab0a3565480a29b8149099ed1}{movieLastJoypad}}) \{
+856                 fwrite(&\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ae1d2d002a3d425b509b93171e8ade926}{movieFrame}}, 1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.
+      \mbox{\hyperlink{class_v_b_a_ae1d2d002a3d425b509b93171e8ade926}{movieFrame}}), \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_abf9ac3c15536552d322f20a2dad1f519}{movieFile}});
+857                 fwrite(&res, 1, \textcolor{keyword}{sizeof}(res), \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_abf9ac3c15536552d322f20a2dad1f519}{movieFile}});
+858                 \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a911d9dbab0a3565480a29b8149099ed1}{movieLastJoypad}} = res;
+859             \}
+860         \}
+861     \}
+862     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ac490c27ebc24ea8fbccf42e2909d04ed}{moviePlaying}}) \{
+863         \textcolor{keywordflow}{if} (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ae1d2d002a3d425b509b93171e8ade926}{movieFrame}} == \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_afcffae74eebd4424790f8c48faede1c8}{moviePlayFrame}}) \{
+864             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a911d9dbab0a3565480a29b8149099ed1}{movieLastJoypad}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.
+      \mbox{\hyperlink{class_v_b_a_ae528fc1f675add097200192deecb4236}{movieNextJoypad}};
+865             \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a0f0d982604ac77d23e7fd474c4ebbe2c}{movieReadNext}}();
+866         \}
+867         res = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a911d9dbab0a3565480a29b8149099ed1}{movieLastJoypad}};
+868     \}
+869     \textcolor{comment}{// we don't record speed up or screen capture buttons}
+870     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da9cff5f87f377ca825fcdd98865480f13}{KEY\_BUTTON\_SPEED}}]) || 
+      \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aab299545104f6df869bf8f7abee6ef0a}{speedupToggle}})
+871         res |= 1024;
+872     \textcolor{keywordflow}{if} (\mbox{\hyperlink{_direct_input_8cpp_a30b902f7fcac3e98c962cafe9fc11a80}{checkKey}}(\mbox{\hyperlink{_direct_input_8cpp_a2407686323030ec0e04e588c07092342}{joypad}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}][\mbox{\hyperlink{_s_d_l_8cpp_abc5c98fcc1211af2b80116dd6e0a035da67e58823e71e69a28c0cf30a8923a256}{KEY\_BUTTON\_CAPTURE}}]))
+873         res |= 2048;
+874 
+875     \textcolor{keywordflow}{return} res;
+876 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_direct_input_af7d74c03d302905eaa06e88ab37b7dac_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_direct_input_a53a2984e75989b381fdae4c8c33f5c32}\label{class_direct_input_a53a2984e75989b381fdae4c8c33f5c32}} 
+\index{Direct\+Input@{Direct\+Input}!read\+Devices@{read\+Devices}}
+\index{read\+Devices@{read\+Devices}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{read\+Devices()}{readDevices()}}
+{\footnotesize\ttfamily bool Direct\+Input\+::read\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_a422dbf7bc783378d47eddec93d1f565a}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 795 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+796 \{
+797     \textcolor{keywordtype}{bool} ok = \textcolor{keyword}{true};
+798     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < numDevices; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+799         \textcolor{keywordflow}{if} (pDevices[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].needed) \{
+800             \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}) \{
+801                 ok = readJoystick(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+802             \} \textcolor{keywordflow}{else}
+803                 ok = readKeyboard();
+804         \}
+805     \}
+806     \textcolor{keywordflow}{return} ok;
+807 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d}\label{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d}} 
+\index{Direct\+Input@{Direct\+Input}!save\+Settings@{save\+Settings}}
+\index{save\+Settings@{save\+Settings}!Direct\+Input@{Direct\+Input}}
+\subsubsection{\texorpdfstring{save\+Settings()}{saveSettings()}}
+{\footnotesize\ttfamily void Direct\+Input\+::save\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_input_a90c42a9d91bf671aaee3d5f611199eec}{Input}}를 구현.
+
+
+
+Direct\+Input.\+cpp 파일의 1022 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1023 \{
+1024     \mbox{\hyperlink{_direct_input_8cpp_a32464ab003ba84961ce16d69c6504b3d}{winSaveKeys}}();
+1025 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d_icgraph}
+\end{center}
+\end{figure}
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/win32/Direct\+Input.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{_direct_input_8cpp}{Direct\+Input.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,11 @@
+<map id="VBA::Config::Section::oGetKey" name="VBA::Config::Section::oGetKey">
+<area shape="rect" id="node2" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="721,141,879,167"/>
+<area shape="rect" id="node3" href="$class_v_b_a_1_1_window.html#a69ddb41bd29d9f0db04175671ff2e2f4" title="VBA::Window::bLoadROM" alt="" coords="205,102,381,129"/>
+<area shape="rect" id="node7" href="$class_v_b_a_1_1_window.html#a9a72206ce2e6c13d5bd66863292f9515" title="VBA::Window::vOnJoypadConfigure" alt="" coords="440,191,668,218"/>
+<area shape="rect" id="node8" href="$class_v_b_a_1_1_window.html#a35c038f07a5ea91103c5e05b82b8bd0b" title="VBA::Window::vOnGDBWait" alt="" coords="199,229,387,255"/>
+<area shape="rect" id="node9" href="$class_v_b_a_1_1_window.html#a12b2428d319af7010bbc689193f1b801" title="VBA::Window::on_focus\l_in_event" alt="" coords="211,280,374,321"/>
+<area shape="rect" id="node10" href="$class_v_b_a_1_1_window.html#a1153e9927db5e913c4364d507adbfc4b" title="VBA::Window::on_focus\l_out_event" alt="" coords="211,345,374,387"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_window.html#a8495a133642f2f0428d9487c86c8a231" title="VBA::Window::vOnFileOpen" alt="" coords="461,39,647,66"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_window.html#ab96850739fb7f53a370e6b6f059b87a9" title="VBA::Window::vOnRecentFile" alt="" coords="457,90,651,117"/>
+<area shape="rect" id="node6" href="$class_v_b_a_1_1_window.html#a266811d22fbeb400a01d1c2330fb9877" title="VBA::Window::vOnGDBLoadAndWait" alt="" coords="435,141,673,167"/>
+</map>

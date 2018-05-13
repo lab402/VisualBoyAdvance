@@ -1,0 +1,443 @@
+\hypertarget{_cheat_search_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Cheat\+Search.cpp 파일 참조}
+\label{_cheat_search_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Cheat\+Search.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Cheat\+Search.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Cheat\+Search.\+h\char`\"{}}\newline
+Cheat\+Search.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{_cheat_search_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_cheat_search_8cpp_a15dcda66385f7eef4240fc7868d46c8e}{cheat\+Search\+Cleanup}} (\mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$cs)
+\item 
+void \mbox{\hyperlink{_cheat_search_8cpp_a1779719e65aedd0eb19d29f7de1c1aeb}{cheat\+Search\+Start}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$cs)
+\item 
+\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} \mbox{\hyperlink{_cheat_search_8cpp_a80939ca99dea9754211e198281020394}{cheat\+Search\+Signed\+Read}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$data, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} off, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})
+\item 
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{_cheat_search_8cpp_a6896adc9224dadcd1351abbd6a6fc93a}{cheat\+Search\+Read}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$data, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} off, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})
+\item 
+void \mbox{\hyperlink{_cheat_search_8cpp_aa96e226cba5a501fe958decea1c46e29}{cheat\+Search}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$cs, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} compare, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}, bool is\+Signed)
+\item 
+void \mbox{\hyperlink{_cheat_search_8cpp_ac4f98ea28d7eff38c83216918248837b}{cheat\+Search\+Value}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$cs, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} compare, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}, bool is\+Signed, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} value)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_cheat_search_8cpp_af625b1b7d83cb7c6cd5f9e649646e2a9}{cheat\+Search\+Get\+Count}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$cs, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})
+\item 
+void \mbox{\hyperlink{_cheat_search_8cpp_a61ea1e5e35fc93f6e4be8db3a8c4288d}{cheat\+Search\+Update\+Values}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$cs)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_cheat_search_block}{Cheat\+Search\+Block}} \mbox{\hyperlink{_cheat_search_8cpp_a01a116f7256a66f344183e77291ce7f6}{cheat\+Search\+Blocks}} \mbox{[}4\mbox{]}
+\item 
+\mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} \mbox{\hyperlink{_cheat_search_8cpp_aeeb4f5916a0f16b1bb45e57aa2cc58d4}{cheat\+Search\+Data}}
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{_cheat_search_8cpp_aa96e226cba5a501fe958decea1c46e29}\label{_cheat_search_8cpp_aa96e226cba5a501fe958decea1c46e29}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search@{cheat\+Search}}
+\index{cheat\+Search@{cheat\+Search}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search()}{cheatSearch()}}
+{\footnotesize\ttfamily void cheat\+Search (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$}]{cs,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{compare,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{size,  }\item[{bool}]{is\+Signed }\end{DoxyParamCaption})}
+
+
+
+Cheat\+Search.\+cpp 파일의 166 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+168 \{
+169   \textcolor{keywordflow}{if}(compare < 0 || compare > \mbox{\hyperlink{_cheat_search_8h_a06fc87d81c62e9abb8790b6e5713c55ba1c30bb53503b288990cdfe93875a9a93}{SEARCH\_GE}})
+170     \textcolor{keywordflow}{return};
+171   \textcolor{keywordtype}{int} inc = 1;
+172   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}})
+173     inc = 2;
+174   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}})
+175     inc = 4;
+176 
+177   \textcolor{keywordflow}{if}(isSigned) \{
+178     bool (*func)(\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}},\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}}) = cheatSearchSignedFunc[compare];
+179 
+180     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+181       \mbox{\hyperlink{struct_cheat_search_block}{CheatSearchBlock}} *block = &cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+182       \textcolor{keywordtype}{int} size2 = block->\mbox{\hyperlink{struct_cheat_search_block_aaaf9517229363e8807cd511022d90012}{size}};
+183       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bits = block->\mbox{\hyperlink{struct_cheat_search_block_a59258efebf4223be206ad11d3ca8ebf4}{bits}};
+184       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *data = block->\mbox{\hyperlink{struct_cheat_search_block_aa3a8235324df132c5fc67c5239748f15}{data}};
+185       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *saved = block->\mbox{\hyperlink{struct_cheat_search_block_af2b921cffd3f8d9420a8b9a3a33752ca}{saved}};
+186       
+187       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size2; j += inc) \{
+188     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_cheat_search_8h_a89ff10221b7572ce2ede035627280bd3}{IS\_BIT\_SET}}(bits, j)) \{
+189       \mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} a = \mbox{\hyperlink{_cheat_search_8cpp_a80939ca99dea9754211e198281020394}{cheatSearchSignedRead}}(data, j, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+190       \mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = \mbox{\hyperlink{_cheat_search_8cpp_a80939ca99dea9754211e198281020394}{cheatSearchSignedRead}}(saved,j, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+191 
+192       \textcolor{keywordflow}{if}(!func(a, \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})) \{
+193         \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j);
+194         \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}})
+195           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+1);
+196         \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}}) \{
+197           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+2);
+198           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+3);
+199         \}
+200       \}
+201     \}
+202       \}
+203     \}
+204   \} \textcolor{keywordflow}{else} \{
+205     bool (*func)(\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}},\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}) = cheatSearchFunc[compare];
+206 
+207     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+208       \mbox{\hyperlink{struct_cheat_search_block}{CheatSearchBlock}} *block = &cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+209       \textcolor{keywordtype}{int} size2 = block->\mbox{\hyperlink{struct_cheat_search_block_aaaf9517229363e8807cd511022d90012}{size}};
+210       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bits = block->\mbox{\hyperlink{struct_cheat_search_block_a59258efebf4223be206ad11d3ca8ebf4}{bits}};
+211       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *data = block->\mbox{\hyperlink{struct_cheat_search_block_aa3a8235324df132c5fc67c5239748f15}{data}};
+212       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *saved = block->\mbox{\hyperlink{struct_cheat_search_block_af2b921cffd3f8d9420a8b9a3a33752ca}{saved}};
+213       
+214       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size2; j += inc) \{
+215     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_cheat_search_8h_a89ff10221b7572ce2ede035627280bd3}{IS\_BIT\_SET}}(bits, j)) \{
+216       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} a = \mbox{\hyperlink{_cheat_search_8cpp_a6896adc9224dadcd1351abbd6a6fc93a}{cheatSearchRead}}(data, j, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+217       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = \mbox{\hyperlink{_cheat_search_8cpp_a6896adc9224dadcd1351abbd6a6fc93a}{cheatSearchRead}}(saved,j, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+218 
+219       \textcolor{keywordflow}{if}(!func(a, \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})) \{
+220         \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j);
+221         \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}})
+222           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+1);
+223         \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}}) \{
+224           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+2);
+225           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+3);
+226         \}
+227       \}
+228     \}
+229       \}
+230     \}
+231   \}
+232 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{_cheat_search_8cpp_aa96e226cba5a501fe958decea1c46e29_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_cheat_search_8cpp_a15dcda66385f7eef4240fc7868d46c8e}\label{_cheat_search_8cpp_a15dcda66385f7eef4240fc7868d46c8e}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Cleanup@{cheat\+Search\+Cleanup}}
+\index{cheat\+Search\+Cleanup@{cheat\+Search\+Cleanup}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Cleanup()}{cheatSearchCleanup()}}
+{\footnotesize\ttfamily void cheat\+Search\+Cleanup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$}]{cs }\end{DoxyParamCaption})}
+
+
+
+Cheat\+Search.\+cpp 파일의 109 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+110 \{
+111   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}};
+112 
+113   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+114     free(cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{struct_cheat_search_block_af2b921cffd3f8d9420a8b9a3a33752ca}{saved}});
+115     free(cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{struct_cheat_search_block_a59258efebf4223be206ad11d3ca8ebf4}{bits}});
+116   \}
+117   cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}} = 0;
+118 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cheat_search_8cpp_a15dcda66385f7eef4240fc7868d46c8e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_cheat_search_8cpp_af625b1b7d83cb7c6cd5f9e649646e2a9}\label{_cheat_search_8cpp_af625b1b7d83cb7c6cd5f9e649646e2a9}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Get\+Count@{cheat\+Search\+Get\+Count}}
+\index{cheat\+Search\+Get\+Count@{cheat\+Search\+Get\+Count}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Get\+Count()}{cheatSearchGetCount()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} cheat\+Search\+Get\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$}]{cs,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Cheat\+Search.\+cpp 파일의 299 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+300 \{
+301   \textcolor{keywordtype}{int} res = 0;
+302   \textcolor{keywordtype}{int} inc = 1;
+303   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}})
+304     inc = 2;
+305   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}})
+306     inc = 4;
+307 
+308   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+309     \mbox{\hyperlink{struct_cheat_search_block}{CheatSearchBlock}} *block = &cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+310     
+311     \textcolor{keywordtype}{int} size2 = block->\mbox{\hyperlink{struct_cheat_search_block_aaaf9517229363e8807cd511022d90012}{size}};
+312     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bits = block->\mbox{\hyperlink{struct_cheat_search_block_a59258efebf4223be206ad11d3ca8ebf4}{bits}};
+313     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size2; j += inc) \{
+314       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_cheat_search_8h_a89ff10221b7572ce2ede035627280bd3}{IS\_BIT\_SET}}(bits, j))
+315     res++;
+316     \}
+317   \}
+318   \textcolor{keywordflow}{return} res;
+319 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cheat_search_8cpp_af625b1b7d83cb7c6cd5f9e649646e2a9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_cheat_search_8cpp_a6896adc9224dadcd1351abbd6a6fc93a}\label{_cheat_search_8cpp_a6896adc9224dadcd1351abbd6a6fc93a}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Read@{cheat\+Search\+Read}}
+\index{cheat\+Search\+Read@{cheat\+Search\+Read}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Read()}{cheatSearchRead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} cheat\+Search\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{off,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Cheat\+Search.\+cpp 파일의 153 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+154 \{
+155   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} res = data[off++];
+156   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}})
+157     res |= ((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})data[off++])<<8;
+158   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}}) \{
+159     res |= ((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})data[off++])<<8;
+160     res |= ((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})data[off++])<<16;
+161     res |= ((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})data[off++])<<24;
+162   \}
+163   \textcolor{keywordflow}{return} res;
+164 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cheat_search_8cpp_a6896adc9224dadcd1351abbd6a6fc93a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_cheat_search_8cpp_a80939ca99dea9754211e198281020394}\label{_cheat_search_8cpp_a80939ca99dea9754211e198281020394}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Signed\+Read@{cheat\+Search\+Signed\+Read}}
+\index{cheat\+Search\+Signed\+Read@{cheat\+Search\+Signed\+Read}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Signed\+Read()}{cheatSearchSignedRead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} cheat\+Search\+Signed\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{data,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{off,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{size }\end{DoxyParamCaption})}
+
+
+
+Cheat\+Search.\+cpp 파일의 132 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+133 \{
+134   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} res = data[off++];
+135 
+136   \textcolor{keywordflow}{switch}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}) \{
+137   \textcolor{keywordflow}{case} \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7af0816abbef0501e93cc698ee906d1fcc}{BITS\_8}}:
+138     res <<= 24;
+139     \textcolor{keywordflow}{return} ((\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}})res) >> 24;
+140   \textcolor{keywordflow}{case} \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}}:
+141     res |= ((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})data[off++])<<8;
+142     res <<= 16;
+143     \textcolor{keywordflow}{return} ((\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}})res) >> 16;
+144   \textcolor{keywordflow}{case} \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}}:
+145     res |= ((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})data[off++])<<8;
+146     res |= ((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})data[off++])<<16;
+147     res |= ((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})data[off++])<<24;
+148     \textcolor{keywordflow}{return} (\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}})res;
+149   \}
+150   \textcolor{keywordflow}{return} (\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}})res;
+151 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cheat_search_8cpp_a80939ca99dea9754211e198281020394_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_cheat_search_8cpp_a1779719e65aedd0eb19d29f7de1c1aeb}\label{_cheat_search_8cpp_a1779719e65aedd0eb19d29f7de1c1aeb}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Start@{cheat\+Search\+Start}}
+\index{cheat\+Search\+Start@{cheat\+Search\+Start}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Start()}{cheatSearchStart()}}
+{\footnotesize\ttfamily void cheat\+Search\+Start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$}]{cs }\end{DoxyParamCaption})}
+
+
+
+Cheat\+Search.\+cpp 파일의 120 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+121 \{
+122   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}};
+123   
+124   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+125     \mbox{\hyperlink{struct_cheat_search_block}{CheatSearchBlock}} *block = &cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+126 
+127     memset(block->\mbox{\hyperlink{struct_cheat_search_block_a59258efebf4223be206ad11d3ca8ebf4}{bits}}, 0xff, block->\mbox{\hyperlink{struct_cheat_search_block_aaaf9517229363e8807cd511022d90012}{size}} >> 3);
+128     memcpy(block->\mbox{\hyperlink{struct_cheat_search_block_af2b921cffd3f8d9420a8b9a3a33752ca}{saved}}, block->\mbox{\hyperlink{struct_cheat_search_block_aa3a8235324df132c5fc67c5239748f15}{data}}, block->\mbox{\hyperlink{struct_cheat_search_block_aaaf9517229363e8807cd511022d90012}{size}});
+129   \}
+130 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{_cheat_search_8cpp_a1779719e65aedd0eb19d29f7de1c1aeb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_cheat_search_8cpp_a61ea1e5e35fc93f6e4be8db3a8c4288d}\label{_cheat_search_8cpp_a61ea1e5e35fc93f6e4be8db3a8c4288d}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Update\+Values@{cheat\+Search\+Update\+Values}}
+\index{cheat\+Search\+Update\+Values@{cheat\+Search\+Update\+Values}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Update\+Values()}{cheatSearchUpdateValues()}}
+{\footnotesize\ttfamily void cheat\+Search\+Update\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$}]{cs }\end{DoxyParamCaption})}
+
+
+
+Cheat\+Search.\+cpp 파일의 321 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+322 \{
+323   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+324     \mbox{\hyperlink{struct_cheat_search_block}{CheatSearchBlock}} *block = &cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+325 
+326     memcpy(block->\mbox{\hyperlink{struct_cheat_search_block_af2b921cffd3f8d9420a8b9a3a33752ca}{saved}}, block->\mbox{\hyperlink{struct_cheat_search_block_aa3a8235324df132c5fc67c5239748f15}{data}}, block->\mbox{\hyperlink{struct_cheat_search_block_aaaf9517229363e8807cd511022d90012}{size}});
+327   \}
+328 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cheat_search_8cpp_a61ea1e5e35fc93f6e4be8db3a8c4288d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_cheat_search_8cpp_ac4f98ea28d7eff38c83216918248837b}\label{_cheat_search_8cpp_ac4f98ea28d7eff38c83216918248837b}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Value@{cheat\+Search\+Value}}
+\index{cheat\+Search\+Value@{cheat\+Search\+Value}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Value()}{cheatSearchValue()}}
+{\footnotesize\ttfamily void cheat\+Search\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} $\ast$}]{cs,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{compare,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{size,  }\item[{bool}]{is\+Signed,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{value }\end{DoxyParamCaption})}
+
+
+
+Cheat\+Search.\+cpp 파일의 234 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+236 \{
+237   \textcolor{keywordflow}{if}(compare < 0 || compare > \mbox{\hyperlink{_cheat_search_8h_a06fc87d81c62e9abb8790b6e5713c55ba1c30bb53503b288990cdfe93875a9a93}{SEARCH\_GE}})
+238     \textcolor{keywordflow}{return};
+239   \textcolor{keywordtype}{int} inc = 1;
+240   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}})
+241     inc = 2;
+242   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}})
+243     inc = 4;
+244 
+245   \textcolor{keywordflow}{if}(isSigned) \{
+246     bool (*func)(\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}},\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}}) = cheatSearchSignedFunc[compare];
+247 
+248     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+249       \mbox{\hyperlink{struct_cheat_search_block}{CheatSearchBlock}} *block = &cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+250       \textcolor{keywordtype}{int} size2 = block->\mbox{\hyperlink{struct_cheat_search_block_aaaf9517229363e8807cd511022d90012}{size}};
+251       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bits = block->\mbox{\hyperlink{struct_cheat_search_block_a59258efebf4223be206ad11d3ca8ebf4}{bits}};
+252       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *data = block->\mbox{\hyperlink{struct_cheat_search_block_aa3a8235324df132c5fc67c5239748f15}{data}};
+253       
+254       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size2; j += inc) \{
+255     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_cheat_search_8h_a89ff10221b7572ce2ede035627280bd3}{IS\_BIT\_SET}}(bits, j)) \{
+256       \mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} a = \mbox{\hyperlink{_cheat_search_8cpp_a80939ca99dea9754211e198281020394}{cheatSearchSignedRead}}(data, j, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+257       \mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = (\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}})value;
+258 
+259       \textcolor{keywordflow}{if}(!func(a, \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})) \{
+260         \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j);
+261         \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}})
+262           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+1);
+263         \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}}) \{
+264           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+2);
+265           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+3);
+266         \}
+267       \}
+268     \}
+269       \}
+270     \}
+271   \} \textcolor{keywordflow}{else} \{
+272     bool (*func)(\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}},\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}) = cheatSearchFunc[compare];
+273 
+274     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < cs->\mbox{\hyperlink{struct_cheat_search_data_a4c4d3092ddaff068d820c28067b15774}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+275       \mbox{\hyperlink{struct_cheat_search_block}{CheatSearchBlock}} *block = &cs->\mbox{\hyperlink{struct_cheat_search_data_ae0235bdc2000cc25b8c072442ce33c2c}{blocks}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+276       \textcolor{keywordtype}{int} size2 = block->\mbox{\hyperlink{struct_cheat_search_block_aaaf9517229363e8807cd511022d90012}{size}};
+277       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bits = block->\mbox{\hyperlink{struct_cheat_search_block_a59258efebf4223be206ad11d3ca8ebf4}{bits}};
+278       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *data = block->\mbox{\hyperlink{struct_cheat_search_block_aa3a8235324df132c5fc67c5239748f15}{data}};
+279       
+280       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j = 0; j < size2; j += inc) \{
+281     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_cheat_search_8h_a89ff10221b7572ce2ede035627280bd3}{IS\_BIT\_SET}}(bits, j)) \{
+282       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} a = \mbox{\hyperlink{_cheat_search_8cpp_a6896adc9224dadcd1351abbd6a6fc93a}{cheatSearchRead}}(data, j, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+283 
+284       \textcolor{keywordflow}{if}(!func(a, value)) \{
+285         \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j);
+286         \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb}{BITS\_16}})
+287           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+1);
+288         \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == \mbox{\hyperlink{_cheat_search_8h_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a}{BITS\_32}}) \{
+289           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+2);
+290           \mbox{\hyperlink{_cheat_search_8h_aa1ff8f8e612051a538e50643f88332e0}{CLEAR\_BIT}}(bits, j+3);
+291         \}
+292       \}
+293     \}
+294       \}
+295     \}
+296   \}
+297 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_cheat_search_8cpp_ac4f98ea28d7eff38c83216918248837b_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{_cheat_search_8cpp_a01a116f7256a66f344183e77291ce7f6}\label{_cheat_search_8cpp_a01a116f7256a66f344183e77291ce7f6}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Blocks@{cheat\+Search\+Blocks}}
+\index{cheat\+Search\+Blocks@{cheat\+Search\+Blocks}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Blocks}{cheatSearchBlocks}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_cheat_search_block}{Cheat\+Search\+Block}} cheat\+Search\+Blocks\mbox{[}4\mbox{]}}
+
+
+
+Cheat\+Search.\+cpp 파일의 24 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_cheat_search_8cpp_aeeb4f5916a0f16b1bb45e57aa2cc58d4}\label{_cheat_search_8cpp_aeeb4f5916a0f16b1bb45e57aa2cc58d4}} 
+\index{Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}!cheat\+Search\+Data@{cheat\+Search\+Data}}
+\index{cheat\+Search\+Data@{cheat\+Search\+Data}!Cheat\+Search.\+cpp@{Cheat\+Search.\+cpp}}
+\subsubsection{\texorpdfstring{cheat\+Search\+Data}{cheatSearchData}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_cheat_search_data}{Cheat\+Search\+Data}} cheat\+Search\+Data}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+= \{
+  0,
+  \mbox{\hyperlink{_cheat_search_8cpp_a01a116f7256a66f344183e77291ce7f6}{cheatSearchBlocks}}
+\}
+\end{DoxyCode}
+
+
+Cheat\+Search.\+cpp 파일의 26 번째 라인에서 정의되었습니다.
+

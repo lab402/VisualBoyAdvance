@@ -1,0 +1,19 @@
+<map id="VBA::Config::Section::sGetKey" name="VBA::Config::Section::sGetKey">
+<area shape="rect" id="node2" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="768,360,925,387"/>
+<area shape="rect" id="node3" href="$class_v_b_a_1_1_window.html#a69ddb41bd29d9f0db04175671ff2e2f4" title="VBA::Window::bLoadROM" alt="" coords="228,229,404,256"/>
+<area shape="rect" id="node7" href="$class_v_b_a_1_1_window.html#a68341ae65a5ec41c6e6269d6f579aa08" title="VBA::Window::vCaptureScreen" alt="" coords="215,5,417,32"/>
+<area shape="rect" id="node11" href="$class_v_b_a_1_1_window.html#a74bd51bc1e0e699d5523ad7828031394" title="VBA::Window::vOnFileLoad" alt="" coords="509,360,692,387"/>
+<area shape="rect" id="node12" href="$class_v_b_a_1_1_window.html#a27bb0ed15cc90758c95eb11fddd14a86" title="VBA::Window::vOnFileSave" alt="" coords="509,411,692,437"/>
+<area shape="rect" id="node13" href="$class_v_b_a_1_1_window.html#aa376015acdd7b7fe83a67bc1306d3553" title="VBA::Window::vOnImportBatteryFile" alt="" coords="485,461,717,488"/>
+<area shape="rect" id="node14" href="$class_v_b_a_1_1_window.html#a26d233092dd624a0bd3734ec0cdc0d7c" title="VBA::Window::vOnExportBatteryFile" alt="" coords="199,504,433,531"/>
+<area shape="rect" id="node15" href="$class_v_b_a_1_1_window.html#ae96308c56cf84f9c56dc97c196adc49c" title="VBA::Window::vOnFileScreen\lCapture" alt="" coords="219,555,413,597"/>
+<area shape="rect" id="node16" href="$class_v_b_a_1_1_window.html#ab0ff6c3b3ac5df7ab482be673ac02732" title="VBA::Window::vOnDirectories" alt="" coords="219,621,413,648"/>
+<area shape="rect" id="node17" href="$class_v_b_a_1_1_window.html#a5d20c67c2118e4a18e97cab4ba111c65" title="VBA::Window::vOnSelectBios" alt="" coords="218,56,414,83"/>
+<area shape="rect" id="node18" href="$class_v_b_a_1_1_window.html#a35c038f07a5ea91103c5e05b82b8bd0b" title="VBA::Window::vOnGDBWait" alt="" coords="222,301,410,328"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_window.html#a8495a133642f2f0428d9487c86c8a231" title="VBA::Window::vOnFileOpen" alt="" coords="508,259,693,285"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_window.html#ab96850739fb7f53a370e6b6f059b87a9" title="VBA::Window::vOnRecentFile" alt="" coords="503,157,698,184"/>
+<area shape="rect" id="node6" href="$class_v_b_a_1_1_window.html#a266811d22fbeb400a01d1c2330fb9877" title="VBA::Window::vOnGDBLoadAndWait" alt="" coords="481,208,720,235"/>
+<area shape="rect" id="node8" href="$_system_8h.html#a81adef9230693f8bca5eed965e5c9d78" title="systemScreenCapture" alt="" coords="525,5,676,32"/>
+<area shape="rect" id="node9" href="$_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="805,5,889,32"/>
+<area shape="rect" id="node10" href="$class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="973,5,1141,32"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_direct_input.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">DirectInput 멤버 목록</div>  </div>
@@ -68,26 +92,29 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_direct_input.html">DirectInput</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>activate</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>checkDevices</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>checkKeys</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>checkMotionKeys</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DirectInput</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getKeyName</b>(LONG_PTR key) (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>initialize</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Input</b>() (다음에서 정의됨 : <a class="el" href="class_input.html">Input</a>)</td><td class="entry"><a class="el" href="class_input.html">Input</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>loadSettings</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>readDevice</b>(int which) (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>readDevices</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>saveSettings</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~DirectInput</b>() (다음에서 정의됨 : <a class="el" href="class_direct_input.html">DirectInput</a>)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~Input</b>() (다음에서 정의됨 : <a class="el" href="class_input.html">Input</a>)</td><td class="entry"><a class="el" href="class_input.html">Input</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_direct_input.html#a4d81c1ee99e76949dac0acac4bad0937">activate</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_direct_input.html#a59a88d57b359bd26c800579edeb19419">checkDevices</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_direct_input.html#acecffb99132b93e827373a3683ce342b">checkKeys</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_direct_input.html#a6e54dc09ff20e12dfe98a24607172c34">checkMotionKeys</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_direct_input.html#a63ec945b71a6119e7e3d5d7195a9050f">DirectInput</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_direct_input.html#a8ea2797da0b1e806227628804591f63d">getKeyName</a>(LONG_PTR key)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_direct_input.html#a56c3e7924e9d115a2b20b31ee415d544">initialize</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_input.html#abae3f379d3f157cf42dc857309832dba">Input</a>()</td><td class="entry"><a class="el" href="class_input.html">Input</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_direct_input.html#a4b63243a3581158956baf495a0dee51e">loadSettings</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_direct_input.html#af7d74c03d302905eaa06e88ab37b7dac">readDevice</a>(int which)</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_direct_input.html#a53a2984e75989b381fdae4c8c33f5c32">readDevices</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_direct_input.html#aaf3473a97962c8dad1ef6715b5164c9d">saveSettings</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_direct_input.html#a9ad919625264b7115fdf20f77c9d2534">~DirectInput</a>()</td><td class="entry"><a class="el" href="class_direct_input.html">DirectInput</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_input.html#a230646fa6e6433b4d9ac3535b7d52087">~Input</a>()</td><td class="entry"><a class="el" href="class_input.html">Input</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

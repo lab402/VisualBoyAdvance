@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_e_l_f_abbrev.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,37 +92,146 @@ $(function() {
 <div class="title">ELFAbbrev 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="elf_8h_source.html">elf.h</a>&gt;</code></p>
+<div class="dynheader">
+ELFAbbrev에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_e_l_f_abbrev__coll__graph.png" border="0" usemap="#_e_l_f_abbrev_coll__map" alt="Collaboration graph"/></div>
+<map name="_e_l_f_abbrev_coll__map" id="_e_l_f_abbrev_coll__map">
+<area shape="rect" id="node2" href="struct_e_l_f_attr.html" title="{ELFAttr\n|+ name\l+ form\l+ value\l+ string\l+ data\l+ flag\l+ @3\l|}" alt="" coords="23,160,90,325"/>
+<area shape="rect" id="node3" href="struct_e_l_f_block.html" title="{ELFBlock\n|+ length\l+ data\l|}" alt="" coords="17,5,96,97"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a6b68af30db320e5db907501097c3b329"><td class="memItemLeft" align="right" valign="top"><a id="a6b68af30db320e5db907501097c3b329"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>number</b></td></tr>
+<tr class="memitem:a6b68af30db320e5db907501097c3b329"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_abbrev.html#a6b68af30db320e5db907501097c3b329">number</a></td></tr>
 <tr class="separator:a6b68af30db320e5db907501097c3b329"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f670bcd5edab3ceab501595357d4c01"><td class="memItemLeft" align="right" valign="top"><a id="a0f670bcd5edab3ceab501595357d4c01"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>tag</b></td></tr>
+<tr class="memitem:a0f670bcd5edab3ceab501595357d4c01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_abbrev.html#a0f670bcd5edab3ceab501595357d4c01">tag</a></td></tr>
 <tr class="separator:a0f670bcd5edab3ceab501595357d4c01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad82152aad0444c5b98f5194bd0dfbc15"><td class="memItemLeft" align="right" valign="top"><a id="ad82152aad0444c5b98f5194bd0dfbc15"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasChildren</b></td></tr>
+<tr class="memitem:ad82152aad0444c5b98f5194bd0dfbc15"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_abbrev.html#ad82152aad0444c5b98f5194bd0dfbc15">hasChildren</a></td></tr>
 <tr class="separator:ad82152aad0444c5b98f5194bd0dfbc15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5604c4d3d6d4e3beaf6cbbe7bdf8bd66"><td class="memItemLeft" align="right" valign="top"><a id="a5604c4d3d6d4e3beaf6cbbe7bdf8bd66"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>numAttrs</b></td></tr>
+<tr class="memitem:a5604c4d3d6d4e3beaf6cbbe7bdf8bd66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_abbrev.html#a5604c4d3d6d4e3beaf6cbbe7bdf8bd66">numAttrs</a></td></tr>
 <tr class="separator:a5604c4d3d6d4e3beaf6cbbe7bdf8bd66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc84e5b441529cc88fce41021fc0839c"><td class="memItemLeft" align="right" valign="top"><a id="afc84e5b441529cc88fce41021fc0839c"></a>
-<a class="el" href="struct_e_l_f_attr.html">ELFAttr</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>attrs</b></td></tr>
+<tr class="memitem:afc84e5b441529cc88fce41021fc0839c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_e_l_f_attr.html">ELFAttr</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_abbrev.html#afc84e5b441529cc88fce41021fc0839c">attrs</a></td></tr>
 <tr class="separator:afc84e5b441529cc88fce41021fc0839c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95ecd80ddef4fe77a44c0762725c06dc"><td class="memItemLeft" align="right" valign="top"><a id="a95ecd80ddef4fe77a44c0762725c06dc"></a>
-<a class="el" href="struct_e_l_f_abbrev.html">ELFAbbrev</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
+<tr class="memitem:a95ecd80ddef4fe77a44c0762725c06dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_e_l_f_abbrev.html">ELFAbbrev</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_abbrev.html#a95ecd80ddef4fe77a44c0762725c06dc">next</a></td></tr>
 <tr class="separator:a95ecd80ddef4fe77a44c0762725c06dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00105">105</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="afc84e5b441529cc88fce41021fc0839c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc84e5b441529cc88fce41021fc0839c">&#9670;&nbsp;</a></span>attrs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_e_l_f_attr.html">ELFAttr</a>* ELFAbbrev::attrs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00110">110</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad82152aad0444c5b98f5194bd0dfbc15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad82152aad0444c5b98f5194bd0dfbc15">&#9670;&nbsp;</a></span>hasChildren</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ELFAbbrev::hasChildren</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00108">108</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a95ecd80ddef4fe77a44c0762725c06dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95ecd80ddef4fe77a44c0762725c06dc">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_e_l_f_abbrev.html">ELFAbbrev</a>* ELFAbbrev::next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00111">111</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5604c4d3d6d4e3beaf6cbbe7bdf8bd66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5604c4d3d6d4e3beaf6cbbe7bdf8bd66">&#9670;&nbsp;</a></span>numAttrs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> ELFAbbrev::numAttrs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00109">109</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6b68af30db320e5db907501097c3b329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b68af30db320e5db907501097c3b329">&#9670;&nbsp;</a></span>number</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> ELFAbbrev::number</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00106">106</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0f670bcd5edab3ceab501595357d4c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f670bcd5edab3ceab501595357d4c01">&#9670;&nbsp;</a></span>tag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> ELFAbbrev::tag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00107">107</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/<a class="el" href="elf_8h_source.html">elf.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="elf_8h_source.html">elf.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_e_l_f_abbrev.html">ELFAbbrev</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

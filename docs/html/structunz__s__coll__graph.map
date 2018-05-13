@@ -1,0 +1,7 @@
+<map id="unz_s" name="unz_s">
+<area shape="rect" id="node2" href="$structfile__in__zip__read__info__s.html" title="{file_in_zip_read_info_s\n|+ read_buffer\l+ stream\l+ pos_in_zipfile\l+ stream_initialised\l+ offset_local_extrafield\l+ size_local_extrafield\l+ pos_local_extrafield\l+ crc32\l+ crc32_wait\l+ rest_read_compressed\l+ rest_read_uncompressed\l+ file\l+ compression_method\l+ byte_before_the_zipfile\l|}" alt="" coords="5,219,185,487"/>
+<area shape="rect" id="node3" href="$structunz__file__info__internal__s.html" title="{unz_file_info_internal_s\n|+ offset_curfile\l|}" alt="" coords="209,314,365,391"/>
+<area shape="rect" id="node4" href="$structunz__global__info__s.html" title="{unz_global_info_s\n|+ number_entry\l+ size_comment\l|}" alt="" coords="390,307,515,399"/>
+<area shape="rect" id="node5" href="$structunz__file__info__s.html" title="{unz_file_info_s\n|+ version\l+ version_needed\l+ flag\l+ compression_method\l+ dosDate\l+ crc\l+ compressed_size\l+ uncompressed_size\l+ size_filename\l+ size_file_extra\l+ size_file_comment\l+ disk_num_start\l+ internal_fa\l+ external_fa\l|}" alt="" coords="540,219,699,487"/>
+<area shape="rect" id="node6" href="$structtm__unz__s.html" title="{tm_unz_s\n|+ tm_sec\l+ tm_min\l+ tm_hour\l+ tm_mday\l+ tm_mon\l+ tm_year\l|}" alt="" coords="575,5,663,156"/>
+</map>

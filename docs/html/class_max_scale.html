@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_max_scale.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,58 +95,242 @@ $(function() {
 <div class="title">MaxScale 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_max_scale_8h_source.html">MaxScale.h</a>&gt;</code></p>
 <div class="dynheader">
 MaxScale에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_max_scale.png" usemap="#MaxScale_map" alt=""/>
-  <map id="MaxScale_map" name="MaxScale_map">
-</map>
- </div></div>
+<div class="center"><img src="class_max_scale__inherit__graph.png" border="0" usemap="#_max_scale_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+MaxScale에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_max_scale__coll__graph.png" border="0" usemap="#_max_scale_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:a2584d0e001acfcc3d5381fcfa28802d1"><td class="memItemLeft" align="right" valign="top"><a id="a2584d0e001acfcc3d5381fcfa28802d1"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_MAX_SCALE
+<tr class="memitem:a2584d0e001acfcc3d5381fcfa28802d1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_max_scale.html#a2584d0e001acfcc3d5381fcfa28802d1abe3c08f7c43ce9c923a676f61a12a09e">IDD</a> = IDD_MAX_SCALE
  }</td></tr>
 <tr class="separator:a2584d0e001acfcc3d5381fcfa28802d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:ac641f139272a4259f94f058bfeffa502"><td class="memItemLeft" align="right" valign="top"><a id="ac641f139272a4259f94f058bfeffa502"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MaxScale</b> (CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:ac641f139272a4259f94f058bfeffa502"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_max_scale.html#ac641f139272a4259f94f058bfeffa502">MaxScale</a> (CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:ac641f139272a4259f94f058bfeffa502"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a95c50937477be6af50f60f022b5fd4f8"><td class="memItemLeft" align="right" valign="top"><a id="a95c50937477be6af50f60f022b5fd4f8"></a>
-CEdit&#160;</td><td class="memItemRight" valign="bottom"><b>m_value</b></td></tr>
+<tr class="memitem:a95c50937477be6af50f60f022b5fd4f8"><td class="memItemLeft" align="right" valign="top">CEdit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_max_scale.html#a95c50937477be6af50f60f022b5fd4f8">m_value</a></td></tr>
 <tr class="separator:a95c50937477be6af50f60f022b5fd4f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a662145e5302d2f9ecf0beb9cb59badf6"><td class="memItemLeft" align="right" valign="top"><a id="a662145e5302d2f9ecf0beb9cb59badf6"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a662145e5302d2f9ecf0beb9cb59badf6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_max_scale.html#a662145e5302d2f9ecf0beb9cb59badf6">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a662145e5302d2f9ecf0beb9cb59badf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2adeba2f4a8d4371f8c8f301a44c0b3b"><td class="memItemLeft" align="right" valign="top"><a id="a2adeba2f4a8d4371f8c8f301a44c0b3b"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCancel</b> ()</td></tr>
+<tr class="memitem:a2adeba2f4a8d4371f8c8f301a44c0b3b"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_max_scale.html#a2adeba2f4a8d4371f8c8f301a44c0b3b">OnCancel</a> ()</td></tr>
 <tr class="separator:a2adeba2f4a8d4371f8c8f301a44c0b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3769f394432ad37e3d631434333d6141"><td class="memItemLeft" align="right" valign="top"><a id="a3769f394432ad37e3d631434333d6141"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOk</b> ()</td></tr>
+<tr class="memitem:a3769f394432ad37e3d631434333d6141"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_max_scale.html#a3769f394432ad37e3d631434333d6141">OnOk</a> ()</td></tr>
 <tr class="separator:a3769f394432ad37e3d631434333d6141"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d3d960c9c4846d318a878dec66cf8c5"><td class="memItemLeft" align="right" valign="top"><a id="a7d3d960c9c4846d318a878dec66cf8c5"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:a7d3d960c9c4846d318a878dec66cf8c5"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_max_scale.html#a7d3d960c9c4846d318a878dec66cf8c5">OnInitDialog</a> ()</td></tr>
 <tr class="separator:a7d3d960c9c4846d318a878dec66cf8c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_max_scale_8h_source.html">MaxScale.h</a> 파일의 <a class="el" href="_max_scale_8h_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a2584d0e001acfcc3d5381fcfa28802d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2584d0e001acfcc3d5381fcfa28802d1">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a2584d0e001acfcc3d5381fcfa28802d1abe3c08f7c43ce9c923a676f61a12a09e"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_max_scale_8h_source.html">MaxScale.h</a> 파일의 <a class="el" href="_max_scale_8h_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{ <a class="code" href="class_max_scale.html#a2584d0e001acfcc3d5381fcfa28802d1abe3c08f7c43ce9c923a676f61a12a09e">IDD</a> = <a class="code" href="resource_8h.html#a9b10112430de902e829e3f7ccde93676">IDD_MAX_SCALE</a> };</div><div class="ttc" id="resource_8h_html_a9b10112430de902e829e3f7ccde93676"><div class="ttname"><a href="resource_8h.html#a9b10112430de902e829e3f7ccde93676">IDD_MAX_SCALE</a></div><div class="ttdeci">#define IDD_MAX_SCALE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00096">resource.h:96</a></div></div>
+<div class="ttc" id="class_max_scale_html_a2584d0e001acfcc3d5381fcfa28802d1abe3c08f7c43ce9c923a676f61a12a09e"><div class="ttname"><a href="class_max_scale.html#a2584d0e001acfcc3d5381fcfa28802d1abe3c08f7c43ce9c923a676f61a12a09e">MaxScale::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_max_scale_8h_source.html#l00040">MaxScale.h:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="ac641f139272a4259f94f058bfeffa502"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac641f139272a4259f94f058bfeffa502">&#9670;&nbsp;</a></span>MaxScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MaxScale::MaxScale </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_max_scale_8cpp_source.html">MaxScale.cpp</a> 파일의 <a class="el" href="_max_scale_8cpp_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    : CDialog(<a class="code" href="class_max_scale.html#a2584d0e001acfcc3d5381fcfa28802d1abe3c08f7c43ce9c923a676f61a12a09e">MaxScale::IDD</a>, pParent)</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//{{AFX_DATA_INIT(MaxScale)</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// NOTE: the ClassWizard will add member initialization here</span></div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="ttc" id="class_max_scale_html_a2584d0e001acfcc3d5381fcfa28802d1abe3c08f7c43ce9c923a676f61a12a09e"><div class="ttname"><a href="class_max_scale.html#a2584d0e001acfcc3d5381fcfa28802d1abe3c08f7c43ce9c923a676f61a12a09e">MaxScale::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_max_scale_8h_source.html#l00040">MaxScale.h:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a662145e5302d2f9ecf0beb9cb59badf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a662145e5302d2f9ecf0beb9cb59badf6">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MaxScale::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_max_scale_8cpp_source.html">MaxScale.cpp</a> 파일의 <a class="el" href="_max_scale_8cpp_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//{{AFX_DATA_MAP(MaxScale)</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    DDX_Control(pDX, <a class="code" href="resource_8h.html#aa862eefddc803e8e65c3253b8029314f">IDC_VALUE</a>, <a class="code" href="class_max_scale.html#a95c50937477be6af50f60f022b5fd4f8">m_value</a>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="ttc" id="resource_8h_html_aa862eefddc803e8e65c3253b8029314f"><div class="ttname"><a href="resource_8h.html#aa862eefddc803e8e65c3253b8029314f">IDC_VALUE</a></div><div class="ttdeci">#define IDC_VALUE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00198">resource.h:198</a></div></div>
+<div class="ttc" id="class_max_scale_html_a95c50937477be6af50f60f022b5fd4f8"><div class="ttname"><a href="class_max_scale.html#a95c50937477be6af50f60f022b5fd4f8">MaxScale::m_value</a></div><div class="ttdeci">CEdit m_value</div><div class="ttdef"><b>Definition:</b> <a href="_max_scale_8h_source.html#l00041">MaxScale.h:41</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2adeba2f4a8d4371f8c8f301a44c0b3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2adeba2f4a8d4371f8c8f301a44c0b3b">&#9670;&nbsp;</a></span>OnCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MaxScale::OnCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_max_scale_8cpp_source.html">MaxScale.cpp</a> 파일의 <a class="el" href="_max_scale_8cpp_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  EndDialog(FALSE);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a7d3d960c9c4846d318a878dec66cf8c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d3d960c9c4846d318a878dec66cf8c5">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL MaxScale::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_max_scale_8cpp_source.html">MaxScale.cpp</a> 파일의 <a class="el" href="_max_scale_8cpp_source.html#l00077">77</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    CDialog::OnInitDialog();</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    </div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    CString temp;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  temp.Format(<span class="stringliteral">&quot;%d&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1a4cfe79496ea8a029bc591f33c489d6">fsMaxScale</a>);</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <a class="code" href="class_max_scale.html#a95c50937477be6af50f60f022b5fd4f8">m_value</a>.SetWindowText(temp);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    </div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                  <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a1a4cfe79496ea8a029bc591f33c489d6"><div class="ttname"><a href="class_v_b_a.html#a1a4cfe79496ea8a029bc591f33c489d6">VBA::fsMaxScale</a></div><div class="ttdeci">int fsMaxScale</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00189">VBA.h:189</a></div></div>
+<div class="ttc" id="class_max_scale_html_a95c50937477be6af50f60f022b5fd4f8"><div class="ttname"><a href="class_max_scale.html#a95c50937477be6af50f60f022b5fd4f8">MaxScale::m_value</a></div><div class="ttdeci">CEdit m_value</div><div class="ttdef"><b>Definition:</b> <a href="_max_scale_8h_source.html#l00041">MaxScale.h:41</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3769f394432ad37e3d631434333d6141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3769f394432ad37e3d631434333d6141">&#9670;&nbsp;</a></span>OnOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MaxScale::OnOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_max_scale_8cpp_source.html">MaxScale.cpp</a> 파일의 <a class="el" href="_max_scale_8cpp_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  CString tmp;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <a class="code" href="class_max_scale.html#a95c50937477be6af50f60f022b5fd4f8">m_value</a>.GetWindowText(tmp);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1a4cfe79496ea8a029bc591f33c489d6">fsMaxScale</a> = atoi(tmp);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  EndDialog(TRUE);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a1a4cfe79496ea8a029bc591f33c489d6"><div class="ttname"><a href="class_v_b_a.html#a1a4cfe79496ea8a029bc591f33c489d6">VBA::fsMaxScale</a></div><div class="ttdeci">int fsMaxScale</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00189">VBA.h:189</a></div></div>
+<div class="ttc" id="class_max_scale_html_a95c50937477be6af50f60f022b5fd4f8"><div class="ttname"><a href="class_max_scale.html#a95c50937477be6af50f60f022b5fd4f8">MaxScale::m_value</a></div><div class="ttdeci">CEdit m_value</div><div class="ttdef"><b>Definition:</b> <a href="_max_scale_8h_source.html#l00041">MaxScale.h:41</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a95c50937477be6af50f60f022b5fd4f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95c50937477be6af50f60f022b5fd4f8">&#9670;&nbsp;</a></span>m_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CEdit MaxScale::m_value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_max_scale_8h_source.html">MaxScale.h</a> 파일의 <a class="el" href="_max_scale_8h_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_max_scale_8h_source.html">MaxScale.h</a></li>
-<li>src/win32/MaxScale.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_max_scale_8h_source.html">MaxScale.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_max_scale_8cpp_source.html">MaxScale.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_max_scale.html">MaxScale</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_v_b_a_1_1_config_1_1_section.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>VBA</b></li><li class="navelem"><b>Config</b></li><li class="navelem"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html">Section</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -73,66 +93,547 @@ $(function() {
 <div class="title">VBA::Config::Section 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="configfile_8h_source.html">configfile.h</a>&gt;</code></p>
 <div class="dynheader">
 VBA::Config::Section에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_v_b_a_1_1_config_1_1_section.png" usemap="#VBA::Config::Section_map" alt=""/>
-  <map id="VBA::Config::Section_map" name="VBA::Config::Section_map">
-</map>
- </div></div>
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section__inherit__graph.png" border="0" usemap="#_v_b_a_1_1_config_1_1_section_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+VBA::Config::Section에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section__coll__graph.png" border="0" usemap="#_v_b_a_1_1_config_1_1_section_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:a79d4303068448425b08175c0d2dacfab"><td class="memItemLeft" align="right" valign="top"><a id="a79d4303068448425b08175c0d2dacfab"></a>
-typedef std::list&lt; <a class="el" href="class_v_b_a_1_1_config_1_1_line.html">Line</a> &gt;::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>const_iterator</b></td></tr>
+<tr class="memitem:a79d4303068448425b08175c0d2dacfab"><td class="memItemLeft" align="right" valign="top">typedef std::list&lt; <a class="el" href="class_v_b_a_1_1_config_1_1_line.html">Line</a> &gt;::<a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a></td></tr>
 <tr class="separator:a79d4303068448425b08175c0d2dacfab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:af1a15ac7cc46f2738a702b7dcbf62de2"><td class="memItemLeft" align="right" valign="top"><a id="af1a15ac7cc46f2738a702b7dcbf62de2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Section</b> (const std::string &amp;_rsName)</td></tr>
+<tr class="memitem:af1a15ac7cc46f2738a702b7dcbf62de2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#af1a15ac7cc46f2738a702b7dcbf62de2">Section</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;_rsName)</td></tr>
 <tr class="separator:af1a15ac7cc46f2738a702b7dcbf62de2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5d966e5bee05a441c62f775b79224baf"><td class="memItemLeft" align="right" valign="top"><a id="a5d966e5bee05a441c62f775b79224baf"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>sGetName</b> () const</td></tr>
+<tr class="memitem:a5d966e5bee05a441c62f775b79224baf"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a5d966e5bee05a441c62f775b79224baf">sGetName</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a5d966e5bee05a441c62f775b79224baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c189e6a7e47e3c13a4e3eb6aa7f477e"><td class="memItemLeft" align="right" valign="top"><a id="a2c189e6a7e47e3c13a4e3eb6aa7f477e"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>bKeyExists</b> (const std::string &amp;_rsKey)</td></tr>
+<tr class="memitem:a2c189e6a7e47e3c13a4e3eb6aa7f477e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a2c189e6a7e47e3c13a4e3eb6aa7f477e">bKeyExists</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;_rsKey)</td></tr>
 <tr class="separator:a2c189e6a7e47e3c13a4e3eb6aa7f477e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57e1b95cbea40db71c093381beff4b0e"><td class="memItemLeft" align="right" valign="top"><a id="a57e1b95cbea40db71c093381beff4b0e"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vSetKey</b> (const std::string &amp;_rsKey, const std::string &amp;_rsValue)</td></tr>
+<tr class="memitem:a57e1b95cbea40db71c093381beff4b0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a57e1b95cbea40db71c093381beff4b0e">vSetKey</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;_rsKey, <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;_rsValue)</td></tr>
 <tr class="separator:a57e1b95cbea40db71c093381beff4b0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ac9dfabf38bc1db83a6017e130f04ac"><td class="memItemLeft" align="right" valign="top"><a id="a7ac9dfabf38bc1db83a6017e130f04ac"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>sGetKey</b> (const std::string &amp;_rsKey) const</td></tr>
+<tr class="memitem:a7ac9dfabf38bc1db83a6017e130f04ac"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a7ac9dfabf38bc1db83a6017e130f04ac">sGetKey</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;_rsKey) <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a7ac9dfabf38bc1db83a6017e130f04ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4634d3e637b664d40ba4d36f859e4573"><td class="memItemLeft" align="right" valign="top"><a id="a4634d3e637b664d40ba4d36f859e4573"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vRemoveKey</b> (const std::string &amp;_rsKey)</td></tr>
+<tr class="memitem:a4634d3e637b664d40ba4d36f859e4573"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a4634d3e637b664d40ba4d36f859e4573">vRemoveKey</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;_rsKey)</td></tr>
 <tr class="separator:a4634d3e637b664d40ba4d36f859e4573"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd12017e2b18dd1e1be08dde721a37d0"><td class="memTemplParams" colspan="2"><a id="afd12017e2b18dd1e1be08dde721a37d0"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:afd12017e2b18dd1e1be08dde721a37d0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>vSetKey</b> (const std::string &amp;_rsKey, const T &amp;_rValue)</td></tr>
+<tr class="memitem:afd12017e2b18dd1e1be08dde721a37d0"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:afd12017e2b18dd1e1be08dde721a37d0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#afd12017e2b18dd1e1be08dde721a37d0">vSetKey</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;_rsKey, <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T &amp;_rValue)</td></tr>
 <tr class="separator:afd12017e2b18dd1e1be08dde721a37d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab169d7aae4e9dde91418ba1668e3ad39"><td class="memTemplParams" colspan="2"><a id="ab169d7aae4e9dde91418ba1668e3ad39"></a>
-template&lt;typename T &gt; </td></tr>
-<tr class="memitem:ab169d7aae4e9dde91418ba1668e3ad39"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><b>oGetKey</b> (const std::string &amp;_rsKey) const</td></tr>
+<tr class="memitem:ab169d7aae4e9dde91418ba1668e3ad39"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ab169d7aae4e9dde91418ba1668e3ad39"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#ab169d7aae4e9dde91418ba1668e3ad39">oGetKey</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;_rsKey) <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:ab169d7aae4e9dde91418ba1668e3ad39"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac345183b43a45fd3eeaa646eac631390"><td class="memItemLeft" align="right" valign="top"><a id="ac345183b43a45fd3eeaa646eac631390"></a>
-const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>begin</b> () const</td></tr>
+<tr class="memitem:ac345183b43a45fd3eeaa646eac631390"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">begin</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:ac345183b43a45fd3eeaa646eac631390"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15ff15ecb9f7f3aa0bb1c218d47f8829"><td class="memItemLeft" align="right" valign="top"><a id="a15ff15ecb9f7f3aa0bb1c218d47f8829"></a>
-const_iterator&#160;</td><td class="memItemRight" valign="bottom"><b>end</b> () const</td></tr>
+<tr class="memitem:a15ff15ecb9f7f3aa0bb1c218d47f8829"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">end</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a15ff15ecb9f7f3aa0bb1c218d47f8829"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="configfile_8h_source.html">configfile.h</a> 파일의 <a class="el" href="configfile_8h_source.html#l00084">84</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 타입정의 문서화</h2>
+<a id="a79d4303068448425b08175c0d2dacfab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79d4303068448425b08175c0d2dacfab">&#9670;&nbsp;</a></span>const_iterator</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::list&lt;<a class="el" href="class_v_b_a_1_1_config_1_1_line.html">Line</a>&gt;::<a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a> VBA::Config::Section::const_iterator</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8h_source.html">configfile.h</a> 파일의 <a class="el" href="configfile_8h_source.html#l00103">103</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="af1a15ac7cc46f2738a702b7dcbf62de2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a15ac7cc46f2738a702b7dcbf62de2">&#9670;&nbsp;</a></span>Section()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VBA::Config::Section::Section </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>_rsName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8cpp_source.html">configfile.cpp</a> 파일의 <a class="el" href="configfile_8cpp_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                       :</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  m_sName(_rsName)</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;{</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ac345183b43a45fd3eeaa646eac631390"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac345183b43a45fd3eeaa646eac631390">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a> VBA::Config::Section::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8h_source.html">configfile.h</a> 파일의 <a class="el" href="configfile_8h_source.html#l00104">104</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">return</span> std::list&lt;Line&gt;::begin();</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_ac345183b43a45fd3eeaa646eac631390_icgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_ac345183b43a45fd3eeaa646eac631390_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_ac345183b43a45fd3eeaa646eac631390_icgraph" id="class_v_b_a_1_1_config_1_1_section_ac345183b43a45fd3eeaa646eac631390_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_section.html#a2c189e6a7e47e3c13a4e3eb6aa7f477e" title="VBA::Config::Section\l::bKeyExists" alt="" coords="199,163,344,204"/>
+<area shape="rect" id="node4" href="class_v_b_a_1_1_config_1_1_section.html#a7ac9dfabf38bc1db83a6017e130f04ac" title="VBA::Config::Section\l::sGetKey" alt="" coords="199,359,344,400"/>
+<area shape="rect" id="node22" href="class_v_b_a_1_1_config_1_1_section.html#a4634d3e637b664d40ba4d36f859e4573" title="VBA::Config::Section\l::vRemoveKey" alt="" coords="199,740,344,781"/>
+<area shape="rect" id="node23" href="class_v_b_a_1_1_config_1_1_section.html#afd12017e2b18dd1e1be08dde721a37d0" title="VBA::Config::Section\l::vSetKey" alt="" coords="199,805,344,847"/>
+<area shape="rect" id="node24" href="class_v_b_a_1_1_config_1_1_section.html#ab169d7aae4e9dde91418ba1668e3ad39" title="VBA::Config::Section\l::oGetKey" alt="" coords="199,675,344,716"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_config_1_1_file.html#ac70f83e5efe3c2d7a66de7227099803b" title="VBA::Config::File::\lvLoad" alt="" coords="428,5,559,47"/>
+<area shape="rect" id="node5" href="class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="929,442,1087,469"/>
+<area shape="rect" id="node6" href="class_v_b_a_1_1_window.html#a69ddb41bd29d9f0db04175671ff2e2f4" title="VBA::Window::bLoadROM" alt="" coords="405,645,581,671"/>
+<area shape="rect" id="node10" href="class_v_b_a_1_1_window.html#a68341ae65a5ec41c6e6269d6f579aa08" title="VBA::Window::vCaptureScreen" alt="" coords="392,71,595,98"/>
+<area shape="rect" id="node14" href="class_v_b_a_1_1_window.html#a74bd51bc1e0e699d5523ad7828031394" title="VBA::Window::vOnFileLoad" alt="" coords="671,341,853,367"/>
+<area shape="rect" id="node15" href="class_v_b_a_1_1_window.html#a27bb0ed15cc90758c95eb11fddd14a86" title="VBA::Window::vOnFileSave" alt="" coords="671,391,853,418"/>
+<area shape="rect" id="node16" href="class_v_b_a_1_1_window.html#aa376015acdd7b7fe83a67bc1306d3553" title="VBA::Window::vOnImportBatteryFile" alt="" coords="646,442,878,469"/>
+<area shape="rect" id="node17" href="class_v_b_a_1_1_window.html#a26d233092dd624a0bd3734ec0cdc0d7c" title="VBA::Window::vOnExportBatteryFile" alt="" coords="645,493,879,519"/>
+<area shape="rect" id="node18" href="class_v_b_a_1_1_window.html#ae96308c56cf84f9c56dc97c196adc49c" title="VBA::Window::vOnFileScreen\lCapture" alt="" coords="396,123,591,164"/>
+<area shape="rect" id="node19" href="class_v_b_a_1_1_window.html#ab0ff6c3b3ac5df7ab482be673ac02732" title="VBA::Window::vOnDirectories" alt="" coords="396,189,591,215"/>
+<area shape="rect" id="node20" href="class_v_b_a_1_1_window.html#a5d20c67c2118e4a18e97cab4ba111c65" title="VBA::Window::vOnSelectBios" alt="" coords="395,239,591,266"/>
+<area shape="rect" id="node21" href="class_v_b_a_1_1_window.html#a35c038f07a5ea91103c5e05b82b8bd0b" title="VBA::Window::vOnGDBWait" alt="" coords="399,543,587,570"/>
+<area shape="rect" id="node7" href="class_v_b_a_1_1_window.html#a8495a133642f2f0428d9487c86c8a231" title="VBA::Window::vOnFileOpen" alt="" coords="669,695,855,722"/>
+<area shape="rect" id="node8" href="class_v_b_a_1_1_window.html#ab96850739fb7f53a370e6b6f059b87a9" title="VBA::Window::vOnRecentFile" alt="" coords="665,594,859,621"/>
+<area shape="rect" id="node9" href="class_v_b_a_1_1_window.html#a266811d22fbeb400a01d1c2330fb9877" title="VBA::Window::vOnGDBLoadAndWait" alt="" coords="643,645,881,671"/>
+<area shape="rect" id="node11" href="_system_8h.html#a81adef9230693f8bca5eed965e5c9d78" title="systemScreenCapture" alt="" coords="687,71,837,98"/>
+<area shape="rect" id="node12" href="_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="966,71,1050,98"/>
+<area shape="rect" id="node13" href="class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="1135,71,1303,98"/>
+<area shape="rect" id="node25" href="class_v_b_a_1_1_window.html#a9a72206ce2e6c13d5bd66863292f9515" title="VBA::Window::vOnJoypadConfigure" alt="" coords="648,746,876,773"/>
+<area shape="rect" id="node26" href="class_v_b_a_1_1_window.html#a12b2428d319af7010bbc689193f1b801" title="VBA::Window::on_focus\l_in_event" alt="" coords="412,913,575,955"/>
+<area shape="rect" id="node27" href="class_v_b_a_1_1_window.html#a1153e9927db5e913c4364d507adbfc4b" title="VBA::Window::on_focus\l_out_event" alt="" coords="412,848,575,889"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2c189e6a7e47e3c13a4e3eb6aa7f477e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c189e6a7e47e3c13a4e3eb6aa7f477e">&#9670;&nbsp;</a></span>bKeyExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VBA::Config::Section::bKeyExists </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>_rsKey</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8cpp_source.html">configfile.cpp</a> 파일의 <a class="el" href="configfile_8cpp_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;{</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordflow">for</span> (iterator it = <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">begin</a>(); it != <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">end</a>(); it++)</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (it-&gt;m_sKey == _rsKey)</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div><div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_ac345183b43a45fd3eeaa646eac631390"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">VBA::Config::Section::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00104">configfile.h:104</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_a15ff15ecb9f7f3aa0bb1c218d47f8829"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">VBA::Config::Section::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00108">configfile.h:108</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_a2c189e6a7e47e3c13a4e3eb6aa7f477e_cgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_a2c189e6a7e47e3c13a4e3eb6aa7f477e_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_a2c189e6a7e47e3c13a4e3eb6aa7f477e_cgraph" id="class_v_b_a_1_1_config_1_1_section_a2c189e6a7e47e3c13a4e3eb6aa7f477e_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390" title="VBA::Config::Section\l::begin" alt="" coords="213,5,359,47"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829" title="VBA::Config::Section::end" alt="" coords="199,71,373,98"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_a2c189e6a7e47e3c13a4e3eb6aa7f477e_icgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_a2c189e6a7e47e3c13a4e3eb6aa7f477e_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_a2c189e6a7e47e3c13a4e3eb6aa7f477e_icgraph" id="class_v_b_a_1_1_config_1_1_section_a2c189e6a7e47e3c13a4e3eb6aa7f477e_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_file.html#ac70f83e5efe3c2d7a66de7227099803b" title="VBA::Config::File::\lvLoad" alt="" coords="199,5,329,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a15ff15ecb9f7f3aa0bb1c218d47f8829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15ff15ecb9f7f3aa0bb1c218d47f8829">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a> VBA::Config::Section::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8h_source.html">configfile.h</a> 파일의 <a class="el" href="configfile_8h_source.html#l00108">108</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      <span class="keywordflow">return</span> std::list&lt;Line&gt;::end();</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    }</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_a15ff15ecb9f7f3aa0bb1c218d47f8829_icgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_a15ff15ecb9f7f3aa0bb1c218d47f8829_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_a15ff15ecb9f7f3aa0bb1c218d47f8829_icgraph" id="class_v_b_a_1_1_config_1_1_section_a15ff15ecb9f7f3aa0bb1c218d47f8829_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_section.html#a2c189e6a7e47e3c13a4e3eb6aa7f477e" title="VBA::Config::Section\l::bKeyExists" alt="" coords="228,163,373,204"/>
+<area shape="rect" id="node4" href="class_v_b_a_1_1_config_1_1_section.html#a7ac9dfabf38bc1db83a6017e130f04ac" title="VBA::Config::Section\l::sGetKey" alt="" coords="228,359,373,400"/>
+<area shape="rect" id="node22" href="class_v_b_a_1_1_config_1_1_section.html#a4634d3e637b664d40ba4d36f859e4573" title="VBA::Config::Section\l::vRemoveKey" alt="" coords="228,740,373,781"/>
+<area shape="rect" id="node23" href="class_v_b_a_1_1_config_1_1_section.html#afd12017e2b18dd1e1be08dde721a37d0" title="VBA::Config::Section\l::vSetKey" alt="" coords="228,805,373,847"/>
+<area shape="rect" id="node24" href="class_v_b_a_1_1_config_1_1_section.html#ab169d7aae4e9dde91418ba1668e3ad39" title="VBA::Config::Section\l::oGetKey" alt="" coords="228,675,373,716"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_config_1_1_file.html#ac70f83e5efe3c2d7a66de7227099803b" title="VBA::Config::File::\lvLoad" alt="" coords="457,5,588,47"/>
+<area shape="rect" id="node5" href="class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="959,442,1116,469"/>
+<area shape="rect" id="node6" href="class_v_b_a_1_1_window.html#a69ddb41bd29d9f0db04175671ff2e2f4" title="VBA::Window::bLoadROM" alt="" coords="435,645,611,671"/>
+<area shape="rect" id="node10" href="class_v_b_a_1_1_window.html#a68341ae65a5ec41c6e6269d6f579aa08" title="VBA::Window::vCaptureScreen" alt="" coords="421,71,624,98"/>
+<area shape="rect" id="node14" href="class_v_b_a_1_1_window.html#a74bd51bc1e0e699d5523ad7828031394" title="VBA::Window::vOnFileLoad" alt="" coords="700,341,883,367"/>
+<area shape="rect" id="node15" href="class_v_b_a_1_1_window.html#a27bb0ed15cc90758c95eb11fddd14a86" title="VBA::Window::vOnFileSave" alt="" coords="700,391,883,418"/>
+<area shape="rect" id="node16" href="class_v_b_a_1_1_window.html#aa376015acdd7b7fe83a67bc1306d3553" title="VBA::Window::vOnImportBatteryFile" alt="" coords="675,442,907,469"/>
+<area shape="rect" id="node17" href="class_v_b_a_1_1_window.html#a26d233092dd624a0bd3734ec0cdc0d7c" title="VBA::Window::vOnExportBatteryFile" alt="" coords="674,493,909,519"/>
+<area shape="rect" id="node18" href="class_v_b_a_1_1_window.html#ae96308c56cf84f9c56dc97c196adc49c" title="VBA::Window::vOnFileScreen\lCapture" alt="" coords="425,123,620,164"/>
+<area shape="rect" id="node19" href="class_v_b_a_1_1_window.html#ab0ff6c3b3ac5df7ab482be673ac02732" title="VBA::Window::vOnDirectories" alt="" coords="425,189,620,215"/>
+<area shape="rect" id="node20" href="class_v_b_a_1_1_window.html#a5d20c67c2118e4a18e97cab4ba111c65" title="VBA::Window::vOnSelectBios" alt="" coords="425,239,621,266"/>
+<area shape="rect" id="node21" href="class_v_b_a_1_1_window.html#a35c038f07a5ea91103c5e05b82b8bd0b" title="VBA::Window::vOnGDBWait" alt="" coords="429,543,617,570"/>
+<area shape="rect" id="node7" href="class_v_b_a_1_1_window.html#a8495a133642f2f0428d9487c86c8a231" title="VBA::Window::vOnFileOpen" alt="" coords="699,695,884,722"/>
+<area shape="rect" id="node8" href="class_v_b_a_1_1_window.html#ab96850739fb7f53a370e6b6f059b87a9" title="VBA::Window::vOnRecentFile" alt="" coords="694,594,889,621"/>
+<area shape="rect" id="node9" href="class_v_b_a_1_1_window.html#a266811d22fbeb400a01d1c2330fb9877" title="VBA::Window::vOnGDBLoadAndWait" alt="" coords="672,645,911,671"/>
+<area shape="rect" id="node11" href="_system_8h.html#a81adef9230693f8bca5eed965e5c9d78" title="systemScreenCapture" alt="" coords="716,71,867,98"/>
+<area shape="rect" id="node12" href="_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="995,71,1079,98"/>
+<area shape="rect" id="node13" href="class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="1164,71,1332,98"/>
+<area shape="rect" id="node25" href="class_v_b_a_1_1_window.html#a9a72206ce2e6c13d5bd66863292f9515" title="VBA::Window::vOnJoypadConfigure" alt="" coords="677,746,905,773"/>
+<area shape="rect" id="node26" href="class_v_b_a_1_1_window.html#a12b2428d319af7010bbc689193f1b801" title="VBA::Window::on_focus\l_in_event" alt="" coords="441,913,604,955"/>
+<area shape="rect" id="node27" href="class_v_b_a_1_1_window.html#a1153e9927db5e913c4364d507adbfc4b" title="VBA::Window::on_focus\l_out_event" alt="" coords="441,848,604,889"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab169d7aae4e9dde91418ba1668e3ad39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab169d7aae4e9dde91418ba1668e3ad39">&#9670;&nbsp;</a></span>oGetKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T VBA::Config::Section::oGetKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>_rsKey</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8h_source.html">configfile.h</a> 파일의 <a class="el" href="configfile_8h_source.html#l00185">185</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  T oValue;</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a> it = <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">begin</a>(); it != <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">end</a>(); it++)</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  {</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordflow">if</span> (it-&gt;m_sKey == _rsKey)</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    {</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;      std::istringstream oIn(it-&gt;m_sValue);</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      oIn &gt;&gt; oValue;</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      <span class="keywordflow">return</span> oValue;</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  }</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;  <span class="keywordflow">throw</span> KeyNotFound(m_sName, _rsKey);</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}</div><div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_ac345183b43a45fd3eeaa646eac631390"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">VBA::Config::Section::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00104">configfile.h:104</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_a79d4303068448425b08175c0d2dacfab"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">VBA::Config::Section::const_iterator</a></div><div class="ttdeci">std::list&lt; Line &gt;::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00103">configfile.h:103</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_a15ff15ecb9f7f3aa0bb1c218d47f8829"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">VBA::Config::Section::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00108">configfile.h:108</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_ab169d7aae4e9dde91418ba1668e3ad39_cgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_ab169d7aae4e9dde91418ba1668e3ad39_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_ab169d7aae4e9dde91418ba1668e3ad39_cgraph" id="class_v_b_a_1_1_config_1_1_section_ab169d7aae4e9dde91418ba1668e3ad39_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390" title="VBA::Config::Section\l::begin" alt="" coords="213,5,359,47"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829" title="VBA::Config::Section::end" alt="" coords="199,71,373,98"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_ab169d7aae4e9dde91418ba1668e3ad39_icgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_ab169d7aae4e9dde91418ba1668e3ad39_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_ab169d7aae4e9dde91418ba1668e3ad39_icgraph" id="class_v_b_a_1_1_config_1_1_section_ab169d7aae4e9dde91418ba1668e3ad39_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="721,141,879,167"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_window.html#a69ddb41bd29d9f0db04175671ff2e2f4" title="VBA::Window::bLoadROM" alt="" coords="205,102,381,129"/>
+<area shape="rect" id="node7" href="class_v_b_a_1_1_window.html#a9a72206ce2e6c13d5bd66863292f9515" title="VBA::Window::vOnJoypadConfigure" alt="" coords="440,191,668,218"/>
+<area shape="rect" id="node8" href="class_v_b_a_1_1_window.html#a35c038f07a5ea91103c5e05b82b8bd0b" title="VBA::Window::vOnGDBWait" alt="" coords="199,229,387,255"/>
+<area shape="rect" id="node9" href="class_v_b_a_1_1_window.html#a12b2428d319af7010bbc689193f1b801" title="VBA::Window::on_focus\l_in_event" alt="" coords="211,280,374,321"/>
+<area shape="rect" id="node10" href="class_v_b_a_1_1_window.html#a1153e9927db5e913c4364d507adbfc4b" title="VBA::Window::on_focus\l_out_event" alt="" coords="211,345,374,387"/>
+<area shape="rect" id="node4" href="class_v_b_a_1_1_window.html#a8495a133642f2f0428d9487c86c8a231" title="VBA::Window::vOnFileOpen" alt="" coords="461,39,647,66"/>
+<area shape="rect" id="node5" href="class_v_b_a_1_1_window.html#ab96850739fb7f53a370e6b6f059b87a9" title="VBA::Window::vOnRecentFile" alt="" coords="457,90,651,117"/>
+<area shape="rect" id="node6" href="class_v_b_a_1_1_window.html#a266811d22fbeb400a01d1c2330fb9877" title="VBA::Window::vOnGDBLoadAndWait" alt="" coords="435,141,673,167"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7ac9dfabf38bc1db83a6017e130f04ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac9dfabf38bc1db83a6017e130f04ac">&#9670;&nbsp;</a></span>sGetKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string VBA::Config::Section::sGetKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>_rsKey</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8cpp_source.html">configfile.cpp</a> 파일의 <a class="el" href="configfile_8cpp_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordflow">for</span> (<a class="code" href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">const_iterator</a> it = <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">begin</a>(); it != <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">end</a>(); it++)</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  {</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> (it-&gt;m_sKey == _rsKey)</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <span class="keywordflow">return</span> it-&gt;m_sValue;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">throw</span> KeyNotFound(m_sName, _rsKey);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div><div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_ac345183b43a45fd3eeaa646eac631390"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">VBA::Config::Section::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00104">configfile.h:104</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_a79d4303068448425b08175c0d2dacfab"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#a79d4303068448425b08175c0d2dacfab">VBA::Config::Section::const_iterator</a></div><div class="ttdeci">std::list&lt; Line &gt;::const_iterator const_iterator</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00103">configfile.h:103</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_a15ff15ecb9f7f3aa0bb1c218d47f8829"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">VBA::Config::Section::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00108">configfile.h:108</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_a7ac9dfabf38bc1db83a6017e130f04ac_cgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_a7ac9dfabf38bc1db83a6017e130f04ac_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_a7ac9dfabf38bc1db83a6017e130f04ac_cgraph" id="class_v_b_a_1_1_config_1_1_section_a7ac9dfabf38bc1db83a6017e130f04ac_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390" title="VBA::Config::Section\l::begin" alt="" coords="213,5,359,47"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829" title="VBA::Config::Section::end" alt="" coords="199,71,373,98"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_a7ac9dfabf38bc1db83a6017e130f04ac_icgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_a7ac9dfabf38bc1db83a6017e130f04ac_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_a7ac9dfabf38bc1db83a6017e130f04ac_icgraph" id="class_v_b_a_1_1_config_1_1_section_a7ac9dfabf38bc1db83a6017e130f04ac_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="768,360,925,387"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_window.html#a69ddb41bd29d9f0db04175671ff2e2f4" title="VBA::Window::bLoadROM" alt="" coords="228,229,404,256"/>
+<area shape="rect" id="node7" href="class_v_b_a_1_1_window.html#a68341ae65a5ec41c6e6269d6f579aa08" title="VBA::Window::vCaptureScreen" alt="" coords="215,5,417,32"/>
+<area shape="rect" id="node11" href="class_v_b_a_1_1_window.html#a74bd51bc1e0e699d5523ad7828031394" title="VBA::Window::vOnFileLoad" alt="" coords="509,360,692,387"/>
+<area shape="rect" id="node12" href="class_v_b_a_1_1_window.html#a27bb0ed15cc90758c95eb11fddd14a86" title="VBA::Window::vOnFileSave" alt="" coords="509,411,692,437"/>
+<area shape="rect" id="node13" href="class_v_b_a_1_1_window.html#aa376015acdd7b7fe83a67bc1306d3553" title="VBA::Window::vOnImportBatteryFile" alt="" coords="485,461,717,488"/>
+<area shape="rect" id="node14" href="class_v_b_a_1_1_window.html#a26d233092dd624a0bd3734ec0cdc0d7c" title="VBA::Window::vOnExportBatteryFile" alt="" coords="199,504,433,531"/>
+<area shape="rect" id="node15" href="class_v_b_a_1_1_window.html#ae96308c56cf84f9c56dc97c196adc49c" title="VBA::Window::vOnFileScreen\lCapture" alt="" coords="219,555,413,597"/>
+<area shape="rect" id="node16" href="class_v_b_a_1_1_window.html#ab0ff6c3b3ac5df7ab482be673ac02732" title="VBA::Window::vOnDirectories" alt="" coords="219,621,413,648"/>
+<area shape="rect" id="node17" href="class_v_b_a_1_1_window.html#a5d20c67c2118e4a18e97cab4ba111c65" title="VBA::Window::vOnSelectBios" alt="" coords="218,56,414,83"/>
+<area shape="rect" id="node18" href="class_v_b_a_1_1_window.html#a35c038f07a5ea91103c5e05b82b8bd0b" title="VBA::Window::vOnGDBWait" alt="" coords="222,301,410,328"/>
+<area shape="rect" id="node4" href="class_v_b_a_1_1_window.html#a8495a133642f2f0428d9487c86c8a231" title="VBA::Window::vOnFileOpen" alt="" coords="508,259,693,285"/>
+<area shape="rect" id="node5" href="class_v_b_a_1_1_window.html#ab96850739fb7f53a370e6b6f059b87a9" title="VBA::Window::vOnRecentFile" alt="" coords="503,157,698,184"/>
+<area shape="rect" id="node6" href="class_v_b_a_1_1_window.html#a266811d22fbeb400a01d1c2330fb9877" title="VBA::Window::vOnGDBLoadAndWait" alt="" coords="481,208,720,235"/>
+<area shape="rect" id="node8" href="_system_8h.html#a81adef9230693f8bca5eed965e5c9d78" title="systemScreenCapture" alt="" coords="525,5,676,32"/>
+<area shape="rect" id="node9" href="_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="805,5,889,32"/>
+<area shape="rect" id="node10" href="class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="973,5,1141,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5d966e5bee05a441c62f775b79224baf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d966e5bee05a441c62f775b79224baf">&#9670;&nbsp;</a></span>sGetName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string VBA::Config::Section::sGetName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8h_source.html">configfile.h</a> 파일의 <a class="el" href="configfile_8h_source.html#l00089">89</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{ <span class="keywordflow">return</span> m_sName; }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a4634d3e637b664d40ba4d36f859e4573"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4634d3e637b664d40ba4d36f859e4573">&#9670;&nbsp;</a></span>vRemoveKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::Config::Section::vRemoveKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>_rsKey</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8cpp_source.html">configfile.cpp</a> 파일의 <a class="el" href="configfile_8cpp_source.html#l00083">83</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">for</span> (iterator it = <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">begin</a>(); it != <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">end</a>(); it++)</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  {</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">if</span> (it-&gt;m_sKey == _rsKey)</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      erase(it);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">return</span>;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  }</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div><div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_ac345183b43a45fd3eeaa646eac631390"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">VBA::Config::Section::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00104">configfile.h:104</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_a15ff15ecb9f7f3aa0bb1c218d47f8829"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">VBA::Config::Section::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00108">configfile.h:108</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_a4634d3e637b664d40ba4d36f859e4573_cgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_a4634d3e637b664d40ba4d36f859e4573_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_a4634d3e637b664d40ba4d36f859e4573_cgraph" id="class_v_b_a_1_1_config_1_1_section_a4634d3e637b664d40ba4d36f859e4573_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390" title="VBA::Config::Section\l::begin" alt="" coords="213,5,359,47"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829" title="VBA::Config::Section::end" alt="" coords="199,71,373,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a57e1b95cbea40db71c093381beff4b0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57e1b95cbea40db71c093381beff4b0e">&#9670;&nbsp;</a></span>vSetKey() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::Config::Section::vSetKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>_rsKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>_rsValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_a57e1b95cbea40db71c093381beff4b0e_icgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_a57e1b95cbea40db71c093381beff4b0e_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_a57e1b95cbea40db71c093381beff4b0e_icgraph" id="class_v_b_a_1_1_config_1_1_section_a57e1b95cbea40db71c093381beff4b0e_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_file.html#ac70f83e5efe3c2d7a66de7227099803b" title="VBA::Config::File::\lvLoad" alt="" coords="243,41,373,82"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_window.html#a69ddb41bd29d9f0db04175671ff2e2f4" title="VBA::Window::bLoadROM" alt="" coords="220,107,396,133"/>
+<area shape="rect" id="node8" href="class_v_b_a_1_1_window.html#a9457e3b8fe1022c96a548e1169002f0c" title="VBA::Window::vOnLoadGame\lAutoToggled" alt="" coords="487,158,683,199"/>
+<area shape="rect" id="node9" href="class_v_b_a_1_1_window.html#aed773f053d4ab731d5a555dc940c0195" title="VBA::Window::vOnRecentFreeze\lToggled" alt="" coords="477,223,692,265"/>
+<area shape="rect" id="node10" href="class_v_b_a_1_1_window.html#a1d969d55fcb1a69d13d3a29c9365e699" title="VBA::Window::vOnFrameskip\lToggled" alt="" coords="487,289,682,330"/>
+<area shape="rect" id="node11" href="class_v_b_a_1_1_window.html#af0072d4a223c1a543dd5ce0933a72804" title="VBA::Window::vOnVideoScale\lToggled" alt="" coords="485,354,684,395"/>
+<area shape="rect" id="node12" href="class_v_b_a_1_1_window.html#aabcf3fafc945b040ac1f775cb32a7245" title="VBA::Window::vOnLayerToggled" alt="" coords="479,420,690,447"/>
+<area shape="rect" id="node13" href="class_v_b_a_1_1_window.html#ab0ff6c3b3ac5df7ab482be673ac02732" title="VBA::Window::vOnDirectories" alt="" coords="487,471,682,497"/>
+<area shape="rect" id="node14" href="class_v_b_a_1_1_window.html#aec8ba72231d668912f3b71353925f2f2" title="VBA::Window::vOnPauseWhen\lInactiveToggled" alt="" coords="483,522,687,563"/>
+<area shape="rect" id="node15" href="class_v_b_a_1_1_window.html#a5d20c67c2118e4a18e97cab4ba111c65" title="VBA::Window::vOnSelectBios" alt="" coords="487,588,683,615"/>
+<area shape="rect" id="node16" href="class_v_b_a_1_1_window.html#a4c3cba9990c0f7315b49d2c8d338280b" title="VBA::Window::vOnUseBiosToggled" alt="" coords="471,639,698,665"/>
+<area shape="rect" id="node17" href="class_v_b_a_1_1_window.html#a81a46aa6f68c512ed86aa04ca13dbd71" title="VBA::Window::vOnShowSpeed\lToggled" alt="" coords="483,690,686,731"/>
+<area shape="rect" id="node18" href="class_v_b_a_1_1_window.html#ac28bedaab2e51b684869e85b4b20b7be" title="VBA::Window::vOnSaveType\lToggled" alt="" coords="490,755,679,797"/>
+<area shape="rect" id="node19" href="class_v_b_a_1_1_window.html#a592d046d6e85921562d26285387cc45a" title="VBA::Window::vOnFlashSize\lToggled" alt="" coords="489,821,680,862"/>
+<area shape="rect" id="node20" href="class_v_b_a_1_1_window.html#a8536700b1c3ab6cd07b8fd14bf3d3d82" title="VBA::Window::vOnScreenshot\lFormatToggled" alt="" coords="485,886,684,927"/>
+<area shape="rect" id="node21" href="class_v_b_a_1_1_window.html#af883be4dc5fbd611a2b5610aa26cfff7" title="VBA::Window::vOnSoundStatus\lToggled" alt="" coords="204,871,412,913"/>
+<area shape="rect" id="node22" href="class_v_b_a_1_1_window.html#acf58efc519acc8f3fd42b0e3481eff23" title="VBA::Window::vOnSoundEcho\lToggled" alt="" coords="208,937,408,978"/>
+<area shape="rect" id="node23" href="class_v_b_a_1_1_window.html#a424a694cc0b0e3cb750ed07457b2b11e" title="VBA::Window::vOnSoundLow\lPassToggled" alt="" coords="211,1002,405,1043"/>
+<area shape="rect" id="node24" href="class_v_b_a_1_1_window.html#a1b7f801dd8f6c48c9161314e4ed266ed" title="VBA::Window::vOnSoundReverse\lToggled" alt="" coords="200,1067,416,1109"/>
+<area shape="rect" id="node25" href="class_v_b_a_1_1_window.html#aa64899ec70d7a82ab4eee24567585f3b" title="VBA::Window::vOnSoundChannel\lToggled" alt="" coords="199,1133,417,1174"/>
+<area shape="rect" id="node26" href="class_v_b_a_1_1_window.html#ae0ea496e382a463114dab0895698fed7" title="VBA::Window::vOnSoundQuality\lToggled" alt="" coords="203,1198,413,1239"/>
+<area shape="rect" id="node27" href="class_v_b_a_1_1_window.html#a6e1456ec5b5efc3a5e24d91ed918d503" title="VBA::Window::vOnSoundVolume\lToggled" alt="" coords="201,1263,415,1305"/>
+<area shape="rect" id="node28" href="class_v_b_a_1_1_window.html#aa7cf1b717713eb050de751b12ddfe72a" title="VBA::Window::vOnGBBorder\lToggled" alt="" coords="213,1329,403,1370"/>
+<area shape="rect" id="node29" href="class_v_b_a_1_1_window.html#a2d6e4c0bd7467305b02bd6f5b0343f26" title="VBA::Window::vOnGBPrinter\lToggled" alt="" coords="213,1394,403,1435"/>
+<area shape="rect" id="node30" href="class_v_b_a_1_1_window.html#a223cab540dae446895699f2ca1494f8e" title="VBA::Window::vOnEmulator\lTypeToggled" alt="" coords="215,1459,401,1501"/>
+<area shape="rect" id="node31" href="class_v_b_a_1_1_window.html#ad73fe13a9e4c8b40fbe6f0726210cc5c" title="VBA::Window::vOnFilter2x\lToggled" alt="" coords="220,1525,396,1566"/>
+<area shape="rect" id="node32" href="class_v_b_a_1_1_window.html#afddc93921e9561601104184bb16941e5" title="VBA::Window::vOnFilterIBToggled" alt="" coords="199,1591,417,1617"/>
+<area shape="rect" id="node33" href="class_v_b_a_1_1_window.html#a38491fe3a0daf6be7ab610fd282d2e47" title="VBA::Window::vOnJoypadToggled" alt="" coords="199,1641,417,1668"/>
+<area shape="rect" id="node34" href="class_v_b_a_1_1_window.html#a7267bdc270816ef841f3fe1bcfd03f27" title="VBA::Window::vOnAutofire\lToggled" alt="" coords="219,1693,397,1734"/>
+<area shape="rect" id="node4" href="class_v_b_a_1_1_window.html#a8495a133642f2f0428d9487c86c8a231" title="VBA::Window::vOnFileOpen" alt="" coords="492,5,677,32"/>
+<area shape="rect" id="node6" href="class_v_b_a_1_1_window.html#ab96850739fb7f53a370e6b6f059b87a9" title="VBA::Window::vOnRecentFile" alt="" coords="487,56,682,83"/>
+<area shape="rect" id="node7" href="class_v_b_a_1_1_window.html#a266811d22fbeb400a01d1c2330fb9877" title="VBA::Window::vOnGDBLoadAndWait" alt="" coords="465,107,704,133"/>
+<area shape="rect" id="node5" href="class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="752,893,909,920"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afd12017e2b18dd1e1be08dde721a37d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd12017e2b18dd1e1be08dde721a37d0">&#9670;&nbsp;</a></span>vSetKey() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::Config::Section::vSetKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> std::string &amp;&#160;</td>
+          <td class="paramname"><em>_rsKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> T &amp;&#160;</td>
+          <td class="paramname"><em>_rValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="configfile_8h_source.html">configfile.h</a> 파일의 <a class="el" href="configfile_8h_source.html#l00169">169</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  std::ostringstream oOut;</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  oOut &lt;&lt; _rValue;</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordflow">for</span> (iterator it = <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">begin</a>(); it != <a class="code" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">end</a>(); it++)</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  {</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <span class="keywordflow">if</span> (it-&gt;m_sKey == _rsKey)</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    {</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      it-&gt;m_sValue = oOut.str();</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keywordflow">return</span>;</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  }</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  push_back(Line(_rsKey, oOut.str()));</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div><div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_ac345183b43a45fd3eeaa646eac631390"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390">VBA::Config::Section::begin</a></div><div class="ttdeci">const_iterator begin() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00104">configfile.h:104</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_config_1_1_section_html_a15ff15ecb9f7f3aa0bb1c218d47f8829"><div class="ttname"><a href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829">VBA::Config::Section::end</a></div><div class="ttdeci">const_iterator end() const</div><div class="ttdef"><b>Definition:</b> <a href="configfile_8h_source.html#l00108">configfile.h:108</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_config_1_1_section_afd12017e2b18dd1e1be08dde721a37d0_cgraph.png" border="0" usemap="#class_v_b_a_1_1_config_1_1_section_afd12017e2b18dd1e1be08dde721a37d0_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_config_1_1_section_afd12017e2b18dd1e1be08dde721a37d0_cgraph" id="class_v_b_a_1_1_config_1_1_section_afd12017e2b18dd1e1be08dde721a37d0_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390" title="VBA::Config::Section\l::begin" alt="" coords="213,5,359,47"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829" title="VBA::Config::Section::end" alt="" coords="199,71,373,98"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/gtk/<a class="el" href="configfile_8h_source.html">configfile.h</a></li>
-<li>src/gtk/configfile.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/<a class="el" href="configfile_8h_source.html">configfile.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/<a class="el" href="configfile_8cpp_source.html">configfile.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_v_b_a.html">VBA</a></li><li class="navelem"><a class="el" href="namespace_v_b_a_1_1_config.html">Config</a></li><li class="navelem"><a class="el" href="class_v_b_a_1_1_config_1_1_section.html">Section</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

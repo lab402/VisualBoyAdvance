@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_c_keyboard_edit.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -70,61 +94,393 @@ $(function() {
 <div class="title">CKeyboardEdit 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a>&gt;</code></p>
 <div class="dynheader">
 CKeyboardEdit에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_c_keyboard_edit.png" usemap="#CKeyboardEdit_map" alt=""/>
-  <map id="CKeyboardEdit_map" name="CKeyboardEdit_map">
-</map>
- </div></div>
+<div class="center"><img src="class_c_keyboard_edit__inherit__graph.png" border="0" usemap="#_c_keyboard_edit_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+CKeyboardEdit에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_keyboard_edit__coll__graph.png" border="0" usemap="#_c_keyboard_edit_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a920dfccebef5e2260e59003e4959ef9f"><td class="memItemLeft" align="right" valign="top"><a id="a920dfccebef5e2260e59003e4959ef9f"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetAccelKey</b> (WORD &amp;wVirtKey, bool &amp;bCtrl, bool &amp;bAlt, bool &amp;bShift)</td></tr>
+<tr class="memitem:a1a1165204f7f3bbfbd997c8cc94c97f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#a1a1165204f7f3bbfbd997c8cc94c97f8">CKeyboardEdit</a> ()</td></tr>
+<tr class="separator:a1a1165204f7f3bbfbd997c8cc94c97f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920dfccebef5e2260e59003e4959ef9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#a920dfccebef5e2260e59003e4959ef9f">GetAccelKey</a> (WORD &amp;wVirtKey, bool &amp;bCtrl, bool &amp;bAlt, bool &amp;bShift)</td></tr>
 <tr class="separator:a920dfccebef5e2260e59003e4959ef9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0185cc0cad77250cc32ef1d9ffb8593"><td class="memItemLeft" align="right" valign="top"><a id="ad0185cc0cad77250cc32ef1d9ffb8593"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>ResetKey</b> ()</td></tr>
+<tr class="memitem:ad0185cc0cad77250cc32ef1d9ffb8593"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593">ResetKey</a> ()</td></tr>
 <tr class="separator:ad0185cc0cad77250cc32ef1d9ffb8593"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7700247028b07400adf5056c6627e19a"><td class="memItemLeft" align="right" valign="top"><a id="a7700247028b07400adf5056c6627e19a"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>PreTranslateMessage</b> (MSG *pMsg)</td></tr>
+<tr class="memitem:a7700247028b07400adf5056c6627e19a"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#a7700247028b07400adf5056c6627e19a">PreTranslateMessage</a> (<a class="el" href="prof_8cpp.html#a0c719c414608ef14852670b063876c07">MSG</a> *pMsg)</td></tr>
 <tr class="separator:a7700247028b07400adf5056c6627e19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeddf780fee33d17188b5641cd384ab92"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#aeddf780fee33d17188b5641cd384ab92">~CKeyboardEdit</a> ()</td></tr>
+<tr class="separator:aeddf780fee33d17188b5641cd384ab92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a9bf24703c8d1a3a019b43dc67c26c3a0"><td class="memItemLeft" align="right" valign="top"><a id="a9bf24703c8d1a3a019b43dc67c26c3a0"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bKeyDefined</b></td></tr>
+<tr class="memitem:a9bf24703c8d1a3a019b43dc67c26c3a0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a></td></tr>
 <tr class="separator:a9bf24703c8d1a3a019b43dc67c26c3a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a4efef92e151002720d0d930db29521"><td class="memItemLeft" align="right" valign="top"><a id="a6a4efef92e151002720d0d930db29521"></a>
-WORD&#160;</td><td class="memItemRight" valign="bottom"><b>m_wVirtKey</b></td></tr>
+<tr class="memitem:a6a4efef92e151002720d0d930db29521"><td class="memItemLeft" align="right" valign="top">WORD&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">m_wVirtKey</a></td></tr>
 <tr class="separator:a6a4efef92e151002720d0d930db29521"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0dbb417bbaaeaa95c00fceaecd210064"><td class="memItemLeft" align="right" valign="top"><a id="a0dbb417bbaaeaa95c00fceaecd210064"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bCtrlPressed</b></td></tr>
+<tr class="memitem:a0dbb417bbaaeaa95c00fceaecd210064"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">m_bCtrlPressed</a></td></tr>
 <tr class="separator:a0dbb417bbaaeaa95c00fceaecd210064"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a724b035848eeca7bebc24e1309afeb6d"><td class="memItemLeft" align="right" valign="top"><a id="a724b035848eeca7bebc24e1309afeb6d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bAltPressed</b></td></tr>
+<tr class="memitem:a724b035848eeca7bebc24e1309afeb6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">m_bAltPressed</a></td></tr>
 <tr class="separator:a724b035848eeca7bebc24e1309afeb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4a4f45be9ef923961ab92a48a28f789"><td class="memItemLeft" align="right" valign="top"><a id="ac4a4f45be9ef923961ab92a48a28f789"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bShiftPressed</b></td></tr>
+<tr class="memitem:ac4a4f45be9ef923961ab92a48a28f789"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">m_bShiftPressed</a></td></tr>
 <tr class="separator:ac4a4f45be9ef923961ab92a48a28f789"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a432e346d4d5285064b5e92ff4c6a0385"><td class="memItemLeft" align="right" valign="top"><a id="a432e346d4d5285064b5e92ff4c6a0385"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DisplayKeyboardString</b> ()</td></tr>
+<tr class="memitem:a432e346d4d5285064b5e92ff4c6a0385"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_keyboard_edit.html#a432e346d4d5285064b5e92ff4c6a0385">DisplayKeyboardString</a> ()</td></tr>
 <tr class="separator:a432e346d4d5285064b5e92ff4c6a0385"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a> 파일의 <a class="el" href="_keyboard_edit_8h_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a1a1165204f7f3bbfbd997c8cc94c97f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a1165204f7f3bbfbd997c8cc94c97f8">&#9670;&nbsp;</a></span>CKeyboardEdit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CKeyboardEdit::CKeyboardEdit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8cpp_source.html">KeyboardEdit.cpp</a> 파일의 <a class="el" href="_keyboard_edit_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593">ResetKey</a> ();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div><div class="ttc" id="class_c_keyboard_edit_html_ad0185cc0cad77250cc32ef1d9ffb8593"><div class="ttname"><a href="class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593">CKeyboardEdit::ResetKey</a></div><div class="ttdeci">void ResetKey()</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8cpp_source.html#l00122">KeyboardEdit.cpp:122</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a9bf24703c8d1a3a019b43dc67c26c3a0"><div class="ttname"><a href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">CKeyboardEdit::m_bKeyDefined</a></div><div class="ttdeci">bool m_bKeyDefined</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00048">KeyboardEdit.h:48</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_keyboard_edit_a1a1165204f7f3bbfbd997c8cc94c97f8_cgraph.png" border="0" usemap="#class_c_keyboard_edit_a1a1165204f7f3bbfbd997c8cc94c97f8_cgraph" alt=""/></div>
+<map name="class_c_keyboard_edit_a1a1165204f7f3bbfbd997c8cc94c97f8_cgraph" id="class_c_keyboard_edit_a1a1165204f7f3bbfbd997c8cc94c97f8_cgraph">
+<area shape="rect" id="node2" href="class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593" title="CKeyboardEdit::ResetKey" alt="" coords="257,5,432,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aeddf780fee33d17188b5641cd384ab92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeddf780fee33d17188b5641cd384ab92">&#9670;&nbsp;</a></span>~CKeyboardEdit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CKeyboardEdit::~CKeyboardEdit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8cpp_source.html">KeyboardEdit.cpp</a> 파일의 <a class="el" href="_keyboard_edit_8cpp_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a432e346d4d5285064b5e92ff4c6a0385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a432e346d4d5285064b5e92ff4c6a0385">&#9670;&nbsp;</a></span>DisplayKeyboardString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CKeyboardEdit::DisplayKeyboardString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8cpp_source.html">KeyboardEdit.cpp</a> 파일의 <a class="el" href="_keyboard_edit_8cpp_source.html#l00092">92</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  CString strKbd;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="comment">// modifiers</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">m_bCtrlPressed</a>)</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    strKbd = <span class="stringliteral">&quot;Ctrl&quot;</span>;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">m_bAltPressed</a>) {</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">if</span> (strKbd.GetLength () &gt; 0)</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      strKbd += <span class="charliteral">&#39;+&#39;</span>;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    strKbd += <span class="stringliteral">&quot;Alt&quot;</span>;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">m_bShiftPressed</a>) {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> (strKbd.GetLength () &gt; 0)</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      strKbd += <span class="charliteral">&#39;+&#39;</span>;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    strKbd += <span class="stringliteral">&quot;Shift&quot;</span>;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  }</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  <span class="comment">// virtual key</span></div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  LPCTSTR szVirtKey = <a class="code" href="_keyboard_edit_8cpp.html#a114f9fd0dc48511b3d2799f967360087">mapVirtKeysStringFromWORD</a>(<a class="code" href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">m_wVirtKey</a>);</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  <span class="keywordflow">if</span> (szVirtKey != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordflow">if</span> (strKbd.GetLength () &gt; 0)</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      strKbd += <span class="charliteral">&#39;+&#39;</span>;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    strKbd += szVirtKey;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  }</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  SetWindowText (strKbd);</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a724b035848eeca7bebc24e1309afeb6d"><div class="ttname"><a href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">CKeyboardEdit::m_bAltPressed</a></div><div class="ttdeci">bool m_bAltPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00052">KeyboardEdit.h:52</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a0dbb417bbaaeaa95c00fceaecd210064"><div class="ttname"><a href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">CKeyboardEdit::m_bCtrlPressed</a></div><div class="ttdeci">bool m_bCtrlPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00051">KeyboardEdit.h:51</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_ac4a4f45be9ef923961ab92a48a28f789"><div class="ttname"><a href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">CKeyboardEdit::m_bShiftPressed</a></div><div class="ttdeci">bool m_bShiftPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00053">KeyboardEdit.h:53</a></div></div>
+<div class="ttc" id="_keyboard_edit_8cpp_html_a114f9fd0dc48511b3d2799f967360087"><div class="ttname"><a href="_keyboard_edit_8cpp.html#a114f9fd0dc48511b3d2799f967360087">mapVirtKeysStringFromWORD</a></div><div class="ttdeci">TCHAR * mapVirtKeysStringFromWORD(WORD wKey)</div><div class="ttdef"><b>Definition:</b> <a href="_cmd_accel_ob_8cpp_source.html#l00174">CmdAccelOb.cpp:174</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a6a4efef92e151002720d0d930db29521"><div class="ttname"><a href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">CKeyboardEdit::m_wVirtKey</a></div><div class="ttdeci">WORD m_wVirtKey</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00050">KeyboardEdit.h:50</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_keyboard_edit_a432e346d4d5285064b5e92ff4c6a0385_cgraph.png" border="0" usemap="#class_c_keyboard_edit_a432e346d4d5285064b5e92ff4c6a0385_cgraph" alt=""/></div>
+<map name="class_c_keyboard_edit_a432e346d4d5285064b5e92ff4c6a0385_cgraph" id="class_c_keyboard_edit_a432e346d4d5285064b5e92ff4c6a0385_cgraph">
+<area shape="rect" id="node2" href="_keyboard_edit_8cpp.html#a114f9fd0dc48511b3d2799f967360087" title="mapVirtKeysStringFromWORD" alt="" coords="268,13,471,39"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_keyboard_edit_a432e346d4d5285064b5e92ff4c6a0385_icgraph.png" border="0" usemap="#class_c_keyboard_edit_a432e346d4d5285064b5e92ff4c6a0385_icgraph" alt=""/></div>
+<map name="class_c_keyboard_edit_a432e346d4d5285064b5e92ff4c6a0385_icgraph" id="class_c_keyboard_edit_a432e346d4d5285064b5e92ff4c6a0385_icgraph">
+<area shape="rect" id="node2" href="class_c_keyboard_edit.html#a7700247028b07400adf5056c6627e19a" title="CKeyboardEdit::PreTranslate\lMessage" alt="" coords="268,5,459,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a920dfccebef5e2260e59003e4959ef9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920dfccebef5e2260e59003e4959ef9f">&#9670;&nbsp;</a></span>GetAccelKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyboardEdit::GetAccelKey </td>
+          <td>(</td>
+          <td class="paramtype">WORD &amp;&#160;</td>
+          <td class="paramname"><em>wVirtKey</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bCtrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bAlt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>bShift</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8cpp_source.html">KeyboardEdit.cpp</a> 파일의 <a class="el" href="_keyboard_edit_8cpp_source.html#l00137">137</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;{</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a>)</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  </div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  wVirtKey = <a class="code" href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">m_wVirtKey</a>;</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  bAlt = <a class="code" href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">m_bAltPressed</a>;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  bCtrl = <a class="code" href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">m_bCtrlPressed</a>;</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  bShift = <a class="code" href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">m_bShiftPressed</a>;</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div><div class="ttc" id="class_c_keyboard_edit_html_a9bf24703c8d1a3a019b43dc67c26c3a0"><div class="ttname"><a href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">CKeyboardEdit::m_bKeyDefined</a></div><div class="ttdeci">bool m_bKeyDefined</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00048">KeyboardEdit.h:48</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a724b035848eeca7bebc24e1309afeb6d"><div class="ttname"><a href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">CKeyboardEdit::m_bAltPressed</a></div><div class="ttdeci">bool m_bAltPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00052">KeyboardEdit.h:52</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a0dbb417bbaaeaa95c00fceaecd210064"><div class="ttname"><a href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">CKeyboardEdit::m_bCtrlPressed</a></div><div class="ttdeci">bool m_bCtrlPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00051">KeyboardEdit.h:51</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_ac4a4f45be9ef923961ab92a48a28f789"><div class="ttname"><a href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">CKeyboardEdit::m_bShiftPressed</a></div><div class="ttdeci">bool m_bShiftPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00053">KeyboardEdit.h:53</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a6a4efef92e151002720d0d930db29521"><div class="ttname"><a href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">CKeyboardEdit::m_wVirtKey</a></div><div class="ttdeci">WORD m_wVirtKey</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00050">KeyboardEdit.h:50</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_keyboard_edit_a920dfccebef5e2260e59003e4959ef9f_icgraph.png" border="0" usemap="#class_c_keyboard_edit_a920dfccebef5e2260e59003e4959ef9f_icgraph" alt=""/></div>
+<map name="class_c_keyboard_edit_a920dfccebef5e2260e59003e4959ef9f_icgraph" id="class_c_keyboard_edit_a920dfccebef5e2260e59003e4959ef9f_icgraph">
+<area shape="rect" id="node2" href="class_accel_editor.html#ad33ae69dcc262dd73595cb33d82c209e" title="AccelEditor::OnAssign" alt="" coords="248,5,403,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7700247028b07400adf5056c6627e19a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7700247028b07400adf5056c6627e19a">&#9670;&nbsp;</a></span>PreTranslateMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL CKeyboardEdit::PreTranslateMessage </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="prof_8cpp.html#a0c719c414608ef14852670b063876c07">MSG</a> *&#160;</td>
+          <td class="paramname"><em>pMsg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8cpp_source.html">KeyboardEdit.cpp</a> 파일의 <a class="el" href="_keyboard_edit_8cpp_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;{</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">bool</span> bPressed;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">if</span> ((bPressed = (pMsg-&gt;message == WM_KEYDOWN)) || pMsg-&gt;message == WM_KEYUP || (bPressed = (pMsg-&gt;message == WM_SYSKEYDOWN)) || pMsg-&gt;message == WM_SYSKEYUP) {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">if</span> (bPressed &amp;&amp; <a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a> &amp;&amp; !((1 &lt;&lt; 30) &amp; pMsg-&gt;lParam))</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      <a class="code" href="class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593">ResetKey</a> ();</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (pMsg-&gt;wParam == VK_SHIFT &amp;&amp; !<a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a>)</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <a class="code" href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">m_bShiftPressed</a> = bPressed;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pMsg-&gt;wParam == VK_CONTROL &amp;&amp;!<a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a>) {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">m_bCtrlPressed</a> = bPressed;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (pMsg-&gt;wParam == VK_MENU &amp;&amp; !<a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a>)</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <a class="code" href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">m_bAltPressed</a> = bPressed;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">else</span> {</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">if</span> (!<a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a>) {</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <a class="code" href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">m_wVirtKey</a> = (WORD)pMsg-&gt;wParam;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        <a class="code" href="arm-new_8h.html#a93120066fd6daa54150af823953378d1">if</a> (bPressed)</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          <a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      }</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="class_c_keyboard_edit.html#a432e346d4d5285064b5e92ff4c6a0385">DisplayKeyboardString</a> ();</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> TRUE;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        </div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordflow">return</span> CEdit::PreTranslateMessage(pMsg);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div><div class="ttc" id="class_c_keyboard_edit_html_ad0185cc0cad77250cc32ef1d9ffb8593"><div class="ttname"><a href="class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593">CKeyboardEdit::ResetKey</a></div><div class="ttdeci">void ResetKey()</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8cpp_source.html#l00122">KeyboardEdit.cpp:122</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a9bf24703c8d1a3a019b43dc67c26c3a0"><div class="ttname"><a href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">CKeyboardEdit::m_bKeyDefined</a></div><div class="ttdeci">bool m_bKeyDefined</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00048">KeyboardEdit.h:48</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a724b035848eeca7bebc24e1309afeb6d"><div class="ttname"><a href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">CKeyboardEdit::m_bAltPressed</a></div><div class="ttdeci">bool m_bAltPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00052">KeyboardEdit.h:52</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a0dbb417bbaaeaa95c00fceaecd210064"><div class="ttname"><a href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">CKeyboardEdit::m_bCtrlPressed</a></div><div class="ttdeci">bool m_bCtrlPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00051">KeyboardEdit.h:51</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_ac4a4f45be9ef923961ab92a48a28f789"><div class="ttname"><a href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">CKeyboardEdit::m_bShiftPressed</a></div><div class="ttdeci">bool m_bShiftPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00053">KeyboardEdit.h:53</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a432e346d4d5285064b5e92ff4c6a0385"><div class="ttname"><a href="class_c_keyboard_edit.html#a432e346d4d5285064b5e92ff4c6a0385">CKeyboardEdit::DisplayKeyboardString</a></div><div class="ttdeci">void DisplayKeyboardString()</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8cpp_source.html#l00092">KeyboardEdit.cpp:92</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a6a4efef92e151002720d0d930db29521"><div class="ttname"><a href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">CKeyboardEdit::m_wVirtKey</a></div><div class="ttdeci">WORD m_wVirtKey</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00050">KeyboardEdit.h:50</a></div></div>
+<div class="ttc" id="arm-new_8h_html_a93120066fd6daa54150af823953378d1"><div class="ttname"><a href="arm-new_8h.html#a93120066fd6daa54150af823953378d1">if</a></div><div class="ttdeci">if(busPrefetchCount &amp;0xFFFFFE00) busPrefetchCount=0x100|(busPrefetchCount &amp;0xFF)</div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_keyboard_edit_a7700247028b07400adf5056c6627e19a_cgraph.png" border="0" usemap="#class_c_keyboard_edit_a7700247028b07400adf5056c6627e19a_cgraph" alt=""/></div>
+<map name="class_c_keyboard_edit_a7700247028b07400adf5056c6627e19a_cgraph" id="class_c_keyboard_edit_a7700247028b07400adf5056c6627e19a_cgraph">
+<area shape="rect" id="node2" href="class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593" title="CKeyboardEdit::ResetKey" alt="" coords="264,5,439,32"/>
+<area shape="rect" id="node3" href="arm-new_8h.html#a93120066fd6daa54150af823953378d1" title="if" alt="" coords="332,56,371,83"/>
+<area shape="rect" id="node4" href="class_c_keyboard_edit.html#a432e346d4d5285064b5e92ff4c6a0385" title="CKeyboardEdit::DisplayKeyboard\lString" alt="" coords="244,107,459,149"/>
+<area shape="rect" id="node5" href="_keyboard_edit_8cpp.html#a114f9fd0dc48511b3d2799f967360087" title="mapVirtKeysStringFromWORD" alt="" coords="507,115,709,141"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad0185cc0cad77250cc32ef1d9ffb8593"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0185cc0cad77250cc32ef1d9ffb8593">&#9670;&nbsp;</a></span>ResetKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CKeyboardEdit::ResetKey </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8cpp_source.html">KeyboardEdit.cpp</a> 파일의 <a class="el" href="_keyboard_edit_8cpp_source.html#l00122">122</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  <a class="code" href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">m_wVirtKey</a> = 0;</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <a class="code" href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">m_bCtrlPressed</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <a class="code" href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">m_bAltPressed</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">m_bShiftPressed</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  </div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  <a class="code" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  <span class="keywordflow">if</span>(m_hWnd != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    SetWindowText(_T(<span class="stringliteral">&quot;&quot;</span>));</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div><div class="ttc" id="class_c_keyboard_edit_html_a9bf24703c8d1a3a019b43dc67c26c3a0"><div class="ttname"><a href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">CKeyboardEdit::m_bKeyDefined</a></div><div class="ttdeci">bool m_bKeyDefined</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00048">KeyboardEdit.h:48</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a724b035848eeca7bebc24e1309afeb6d"><div class="ttname"><a href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">CKeyboardEdit::m_bAltPressed</a></div><div class="ttdeci">bool m_bAltPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00052">KeyboardEdit.h:52</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a0dbb417bbaaeaa95c00fceaecd210064"><div class="ttname"><a href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">CKeyboardEdit::m_bCtrlPressed</a></div><div class="ttdeci">bool m_bCtrlPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00051">KeyboardEdit.h:51</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_ac4a4f45be9ef923961ab92a48a28f789"><div class="ttname"><a href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">CKeyboardEdit::m_bShiftPressed</a></div><div class="ttdeci">bool m_bShiftPressed</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00053">KeyboardEdit.h:53</a></div></div>
+<div class="ttc" id="class_c_keyboard_edit_html_a6a4efef92e151002720d0d930db29521"><div class="ttname"><a href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">CKeyboardEdit::m_wVirtKey</a></div><div class="ttdeci">WORD m_wVirtKey</div><div class="ttdef"><b>Definition:</b> <a href="_keyboard_edit_8h_source.html#l00050">KeyboardEdit.h:50</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_keyboard_edit_ad0185cc0cad77250cc32ef1d9ffb8593_icgraph.png" border="0" usemap="#class_c_keyboard_edit_ad0185cc0cad77250cc32ef1d9ffb8593_icgraph" alt=""/></div>
+<map name="class_c_keyboard_edit_ad0185cc0cad77250cc32ef1d9ffb8593_icgraph" id="class_c_keyboard_edit_ad0185cc0cad77250cc32ef1d9ffb8593_icgraph">
+<area shape="rect" id="node2" href="class_accel_editor.html#ad33ae69dcc262dd73595cb33d82c209e" title="AccelEditor::OnAssign" alt="" coords="253,5,407,32"/>
+<area shape="rect" id="node3" href="class_accel_editor.html#a40b74b67b95694245502b15ceedd278c" title="AccelEditor::OnRemove" alt="" coords="250,56,410,83"/>
+<area shape="rect" id="node4" href="class_c_keyboard_edit.html#a1a1165204f7f3bbfbd997c8cc94c97f8" title="CKeyboardEdit::CKeyboardEdit" alt="" coords="228,107,432,133"/>
+<area shape="rect" id="node5" href="class_c_keyboard_edit.html#a7700247028b07400adf5056c6627e19a" title="CKeyboardEdit::PreTranslate\lMessage" alt="" coords="235,158,425,199"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a724b035848eeca7bebc24e1309afeb6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724b035848eeca7bebc24e1309afeb6d">&#9670;&nbsp;</a></span>m_bAltPressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyboardEdit::m_bAltPressed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a> 파일의 <a class="el" href="_keyboard_edit_8h_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0dbb417bbaaeaa95c00fceaecd210064"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dbb417bbaaeaa95c00fceaecd210064">&#9670;&nbsp;</a></span>m_bCtrlPressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyboardEdit::m_bCtrlPressed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a> 파일의 <a class="el" href="_keyboard_edit_8h_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9bf24703c8d1a3a019b43dc67c26c3a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf24703c8d1a3a019b43dc67c26c3a0">&#9670;&nbsp;</a></span>m_bKeyDefined</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyboardEdit::m_bKeyDefined</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a> 파일의 <a class="el" href="_keyboard_edit_8h_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac4a4f45be9ef923961ab92a48a28f789"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4a4f45be9ef923961ab92a48a28f789">&#9670;&nbsp;</a></span>m_bShiftPressed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CKeyboardEdit::m_bShiftPressed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a> 파일의 <a class="el" href="_keyboard_edit_8h_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6a4efef92e151002720d0d930db29521"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4efef92e151002720d0d930db29521">&#9670;&nbsp;</a></span>m_wVirtKey</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">WORD CKeyboardEdit::m_wVirtKey</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a> 파일의 <a class="el" href="_keyboard_edit_8h_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a></li>
-<li>src/win32/KeyboardEdit.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_keyboard_edit_8h_source.html">KeyboardEdit.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_keyboard_edit_8cpp_source.html">KeyboardEdit.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

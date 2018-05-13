@@ -1,0 +1,6 @@
+<map id="utilReadInt" name="utilReadInt">
+<area shape="rect" id="node2" href="$_cheats_8h.html#aeb57276ef7881a84ab0c06cdd5d9976b" title="cheatsReadGame" alt="" coords="144,5,271,32"/>
+<area shape="rect" id="node3" href="$_e_eprom_8h.html#a7afd8118af1786271c392f83fac44532" title="eepromReadGame" alt="" coords="142,56,273,83"/>
+<area shape="rect" id="node4" href="$gb_cheats_8h.html#aaf0e545768836b242130504ed454236f" title="gbCheatsReadGame" alt="" coords="136,107,279,133"/>
+<area shape="rect" id="node5" href="$gb_sound_8h.html#a67af7c9aeabcd4c0138c3010eed0ce16" title="gbSoundReadGame" alt="" coords="138,157,277,184"/>
+</map>

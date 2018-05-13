@@ -1,0 +1,5 @@
+<map id="gbDrawSpriteTile" name="gbDrawSpriteTile">
+<area shape="rect" id="node2" href="$gb_globals_8h.html#afcb2dc536cc547b95b06da02914a121e" title="gbDrawSprites" alt="" coords="172,5,279,32"/>
+<area shape="rect" id="node3" href="$_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="327,5,411,32"/>
+<area shape="rect" id="node4" href="$class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="459,5,627,32"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_debugger_command.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,31 +92,104 @@ $(function() {
 <div class="title">DebuggerCommand 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+DebuggerCommand에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_debugger_command__coll__graph.png" border="0" usemap="#_debugger_command_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a14e015150e5517ddf66877dff61190df"><td class="memItemLeft" align="right" valign="top"><a id="a14e015150e5517ddf66877dff61190df"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a14e015150e5517ddf66877dff61190df"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_debugger_command.html#a14e015150e5517ddf66877dff61190df">name</a></td></tr>
 <tr class="separator:a14e015150e5517ddf66877dff61190df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7dc1272eddb6304a1266dff8b4d99d18"><td class="memItemLeft" align="right" valign="top"><a id="a7dc1272eddb6304a1266dff8b4d99d18"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>function</b> )(int, char **)</td></tr>
+<tr class="memitem:a7dc1272eddb6304a1266dff8b4d99d18"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_debugger_command.html#a7dc1272eddb6304a1266dff8b4d99d18">function</a> )(<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>, char **)</td></tr>
 <tr class="separator:a7dc1272eddb6304a1266dff8b4d99d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23a8468dffa8e08b122db31ac3c11a4c"><td class="memItemLeft" align="right" valign="top"><a id="a23a8468dffa8e08b122db31ac3c11a4c"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>help</b></td></tr>
+<tr class="memitem:a23a8468dffa8e08b122db31ac3c11a4c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_debugger_command.html#a23a8468dffa8e08b122db31ac3c11a4c">help</a></td></tr>
 <tr class="separator:a23a8468dffa8e08b122db31ac3c11a4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa127ebfc49b0d9b0837c4fd2329e0110"><td class="memItemLeft" align="right" valign="top"><a id="aa127ebfc49b0d9b0837c4fd2329e0110"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>syntax</b></td></tr>
+<tr class="memitem:aa127ebfc49b0d9b0837c4fd2329e0110"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_debugger_command.html#aa127ebfc49b0d9b0837c4fd2329e0110">syntax</a></td></tr>
 <tr class="separator:aa127ebfc49b0d9b0837c4fd2329e0110"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="debugger_8cpp_source.html">debugger.cpp</a> 파일의 <a class="el" href="debugger_8cpp_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a7dc1272eddb6304a1266dff8b4d99d18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc1272eddb6304a1266dff8b4d99d18">&#9670;&nbsp;</a></span>function</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* DebuggerCommand::function) (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>, char **)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="debugger_8cpp_source.html">debugger.cpp</a> 파일의 <a class="el" href="debugger_8cpp_source.html#l00072">72</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a23a8468dffa8e08b122db31ac3c11a4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23a8468dffa8e08b122db31ac3c11a4c">&#9670;&nbsp;</a></span>help</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* DebuggerCommand::help</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="debugger_8cpp_source.html">debugger.cpp</a> 파일의 <a class="el" href="debugger_8cpp_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a14e015150e5517ddf66877dff61190df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14e015150e5517ddf66877dff61190df">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* DebuggerCommand::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="debugger_8cpp_source.html">debugger.cpp</a> 파일의 <a class="el" href="debugger_8cpp_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa127ebfc49b0d9b0837c4fd2329e0110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa127ebfc49b0d9b0837c4fd2329e0110">&#9670;&nbsp;</a></span>syntax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* DebuggerCommand::syntax</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="debugger_8cpp_source.html">debugger.cpp</a> 파일의 <a class="el" href="debugger_8cpp_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/sdl/debugger.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/sdl/<a class="el" href="debugger_8cpp_source.html">debugger.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_debugger_command.html">DebuggerCommand</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,25 @@
+var _gfx_8cpp =
+[
+    [ "coeff", "_gfx_8cpp.html#ad73573cf73499a28db092acb084a0632", null ],
+    [ "gfxBG2Changed", "_gfx_8cpp.html#acd4ebedfc225fc59f14f04bfcfd88b2f", null ],
+    [ "gfxBG2LastX", "_gfx_8cpp.html#a5bb571422fc74c0c62b1d6a181749038", null ],
+    [ "gfxBG2LastY", "_gfx_8cpp.html#aa2fd60c744168eab45dc71b8a0c5340b", null ],
+    [ "gfxBG2X", "_gfx_8cpp.html#aff4bb9b41b0123fc18bb198df3985784", null ],
+    [ "gfxBG2Y", "_gfx_8cpp.html#ae5e109078eed074f79492b0c04e138dd", null ],
+    [ "gfxBG3Changed", "_gfx_8cpp.html#acb3314dad174b2250cfadd02aa4adb83", null ],
+    [ "gfxBG3LastX", "_gfx_8cpp.html#a4722fff5c58740f157a9412b514ffa6e", null ],
+    [ "gfxBG3LastY", "_gfx_8cpp.html#aa2fd6a7200c2b3f3e0fb8ad927c4e446", null ],
+    [ "gfxBG3X", "_gfx_8cpp.html#a9668f45297cfc5e83c447cbc2a860f55", null ],
+    [ "gfxBG3Y", "_gfx_8cpp.html#a57e0c088be88221f81ec4e43841113cd", null ],
+    [ "gfxInWin0", "_gfx_8cpp.html#a9774eaf959a3173d8fd9751dbf7f34de", null ],
+    [ "gfxInWin1", "_gfx_8cpp.html#a1f12ad682615d06093160342a023f68d", null ],
+    [ "gfxLastVCOUNT", "_gfx_8cpp.html#acf998f793cce146d2d46e22aa08892af", null ],
+    [ "line0", "_gfx_8cpp.html#ad70f49f0ac66d2b3bc4bf7486e4ffeaa", null ],
+    [ "line1", "_gfx_8cpp.html#a533f59e7f4522f0f08633c25188f91b1", null ],
+    [ "line2", "_gfx_8cpp.html#a046a0f8f07d8cb733584b4c777cfc441", null ],
+    [ "line3", "_gfx_8cpp.html#ad0f7ff49c3a068ebdfcf67dcec440780", null ],
+    [ "lineMix", "_gfx_8cpp.html#a9c62070b0fb6224a1fa9bf94b9599710", null ],
+    [ "lineOBJ", "_gfx_8cpp.html#ad61abf95cf6ca3ac01e9c1ed5d1ce9c6", null ],
+    [ "lineOBJpixleft", "_gfx_8cpp.html#a294685c699f5d099585ff598683506c5", null ],
+    [ "lineOBJWin", "_gfx_8cpp.html#a5d0bce77dd98cfe3fb1e970838f239c8", null ]
+];

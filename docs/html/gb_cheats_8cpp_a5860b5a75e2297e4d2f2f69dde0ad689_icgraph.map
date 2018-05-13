@@ -1,0 +1,6 @@
+<map id="gbCheatDisable" name="gbCheatDisable">
+<area shape="rect" id="node2" href="$gb_cheats_8h.html#a5fe6a356ce452b784ba838d3ae32bce2" title="gbCheatReadGSCodeFile" alt="" coords="179,5,349,32"/>
+<area shape="rect" id="node4" href="$class_g_b_cheat_list.html#a3a9af133cd9547881b6f71404ab9171f" title="GBCheatList::OnEnable" alt="" coords="183,56,345,83"/>
+<area shape="rect" id="node5" href="$class_g_b_cheat_list.html#a35c4625f3b1696bf7647d23831ae310b" title="GBCheatList::OnItemchanged\lCheatList" alt="" coords="167,107,361,149"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a3e7abf73687cb0dbf61c3707de5e10f4" title="MainWnd::OnFileImportGamesharkcodefile" alt="" coords="409,5,680,32"/>
+</map>

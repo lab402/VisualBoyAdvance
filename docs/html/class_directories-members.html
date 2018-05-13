@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_directories.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Directories 멤버 목록</div>  </div>
@@ -68,35 +92,38 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_directories.html">Directories</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>browseForDir</b>(CString title) (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>Directories</b>(CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>initialFolderDir</b> (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_batteryPath</b> (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_capturePath</b> (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_gbromPath</b> (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_romPath</b> (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_savePath</b> (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnBatteryDir</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnBatteryDirReset</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnCancel</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnCaptureDir</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnCaptureDirReset</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnGbromDir</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnGbromDirReset</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnOK</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnRomDir</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnRomDirReset</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnSaveDir</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnSaveDirReset</b>() (다음에서 정의됨 : <a class="el" href="class_directories.html">Directories</a>)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a7e24bf265fe6af9c01e0939952c337e1">browseForDir</a>(CString title)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#a03ef542d611759b1b619742e0bde92e7">Directories</a>(CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a1c9309bbbbd233e7d5916f868f1f2671">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#af0d05207ae8fd4572edf7950c207d6c0a6b2cbc79bd35885c2f543f480aa0b2e6">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a5f307fd959af44c194c520b5452cafba">initialFolderDir</a></td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#af8f18fc9d1fbcd0df0cba4ec6fb862de">m_batteryPath</a></td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a4010cf261f54e1477c6587395fd055d4">m_capturePath</a></td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#adffa22cb6f6be3c0b7327670dd885f83">m_gbromPath</a></td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a2d5fa2646d8216ec7f2093073174ab38">m_romPath</a></td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#a9293c8e99ad84e8a78d127ff09534d6c">m_savePath</a></td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a31c9021298d9f3a3ea1beabe73ab7685">OnBatteryDir</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#a9479f79772b934344110acfccd64a064">OnBatteryDirReset</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a139df4e3666356c21c7e5f02ae268193">OnCancel</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#a01d34b2ff1d1c0a2a3e638e0cfdd7db7">OnCaptureDir</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a2e98e0696392fcd819f48ac56012c35d">OnCaptureDirReset</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#acb13ecb0add4c5e10ed47d40d6a8605c">OnGbromDir</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#aa323eb09c0caba8b8e5ff7984fd8e2e6">OnGbromDirReset</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#a53964c598a5541b1d65cfee62e5d8587">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#aabe175a096e8718818d7bca6bd6cd455">OnOK</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#a0ed6f361bde84a4a6a37c41582a929ec">OnRomDir</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#a944a8a843ab8f0cdec54bf8aaba7d8a5">OnRomDirReset</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_directories.html#a0951489dd35ed7af5fb7ea27c95fbe8e">OnSaveDir</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_directories.html#aeb85866cbd498c057e9bf66b58a78959">OnSaveDirReset</a>()</td><td class="entry"><a class="el" href="class_directories.html">Directories</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,50 +1,608 @@
 \hypertarget{class_c_skin}{}\section{C\+Skin 클래스 참조}
 \label{class_c_skin}\index{C\+Skin@{C\+Skin}}
+
+
+{\ttfamily \#include $<$skin.\+h$>$}
+
+
+
+C\+Skin에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=162pt]{class_c_skin__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d}\label{class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d}} 
-bool {\bfseries Initialize} (const char $\ast$)
+\mbox{\hyperlink{class_c_skin_a2126d21d5cb401180163298c61533b87}{C\+Skin}} ()
 \item 
-\mbox{\Hypertarget{class_c_skin_a13edf7704211f61440871e17eda1d216}\label{class_c_skin_a13edf7704211f61440871e17eda1d216}} 
-void {\bfseries Destroy} ()
+virtual \mbox{\hyperlink{class_c_skin_a206a4d1b135da1869bdf786aba217c2b}{$\sim$\+C\+Skin}} ()
 \item 
-\mbox{\Hypertarget{class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47}\label{class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47}} 
-bool {\bfseries Hook} (C\+Wnd $\ast$p\+Wnd)
+bool \mbox{\hyperlink{class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d}{Initialize}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$)
 \item 
-\mbox{\Hypertarget{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3}\label{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3}} 
-bool {\bfseries Un\+Hook} ()
+void \mbox{\hyperlink{class_c_skin_a13edf7704211f61440871e17eda1d216}{Destroy}} ()
 \item 
-\mbox{\Hypertarget{class_c_skin_a99b438d858bbafa83569f19e707ba3c9}\label{class_c_skin_a99b438d858bbafa83569f19e707ba3c9}} 
-bool {\bfseries Hooked} ()
+bool \mbox{\hyperlink{class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47}{Hook}} (C\+Wnd $\ast$p\+Wnd)
 \item 
-\mbox{\Hypertarget{class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b}\label{class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b}} 
-bool {\bfseries Enable} (bool b\+Enable)
+bool \mbox{\hyperlink{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3}{Un\+Hook}} ()
 \item 
-\mbox{\Hypertarget{class_c_skin_adb8775c6c421ab3551b51e803bcf20d3}\label{class_c_skin_adb8775c6c421ab3551b51e803bcf20d3}} 
-bool {\bfseries Enabled} ()
+bool \mbox{\hyperlink{class_c_skin_a99b438d858bbafa83569f19e707ba3c9}{Hooked}} ()
 \item 
-\mbox{\Hypertarget{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}\label{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}} 
-int {\bfseries Width} ()
+bool \mbox{\hyperlink{class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b}{Enable}} (bool b\+Enable)
 \item 
-\mbox{\Hypertarget{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}\label{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}} 
-int {\bfseries Height} ()
+bool \mbox{\hyperlink{class_c_skin_adb8775c6c421ab3551b51e803bcf20d3}{Enabled}} ()
 \item 
-\mbox{\Hypertarget{class_c_skin_a8fe20ca67965deec6e5e29a2bf467933}\label{class_c_skin_a8fe20ca67965deec6e5e29a2bf467933}} 
-R\+E\+CT \& {\bfseries Get\+Blit\+Rect} ()
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}{Width}} ()
 \item 
-\mbox{\Hypertarget{class_c_skin_a4112f4df38d9917d38c5db2622777c1f}\label{class_c_skin_a4112f4df38d9917d38c5db2622777c1f}} 
-H\+DC {\bfseries H\+DC} ()
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}{Height}} ()
+\item 
+R\+E\+CT \& \mbox{\hyperlink{class_c_skin_a8fe20ca67965deec6e5e29a2bf467933}{Get\+Blit\+Rect}} ()
+\item 
+H\+DC \mbox{\hyperlink{class_c_skin_a4112f4df38d9917d38c5db2622777c1f}{H\+DC}} ()
 \end{DoxyCompactItemize}
 \subsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_c_skin_ac58ecd226acd172d4941912f99e2cb12}\label{class_c_skin_ac58ecd226acd172d4941912f99e2cb12}} 
-L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK {\bfseries Skin\+Wnd\+Proc} (H\+W\+ND h\+Wnd, U\+I\+NT u\+Message, W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{class_c_skin_ac58ecd226acd172d4941912f99e2cb12}{Skin\+Wnd\+Proc}} (H\+W\+ND h\+Wnd, U\+I\+NT u\+Message, W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
 \end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+skin.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_c_skin_a2126d21d5cb401180163298c61533b87}\label{class_c_skin_a2126d21d5cb401180163298c61533b87}} 
+\index{C\+Skin@{C\+Skin}!C\+Skin@{C\+Skin}}
+\index{C\+Skin@{C\+Skin}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{C\+Skin()}{CSkin()}}
+{\footnotesize\ttfamily C\+Skin\+::\+C\+Skin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+35 \{
+36   \textcolor{comment}{// default starting values}
+37   m\_bHooked = \textcolor{keyword}{false};
+38   m\_OldWndProc = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+39 
+40   m\_rect.top = 0;
+41   m\_rect.bottom = 0;
+42   m\_rect.right = 0;
+43   m\_rect.left = 0;
+44 
+45   m\_dOldStyle = 0;
+46 
+47   m\_oldRect = m\_rect;
+48   m\_nButtons = 0;
+49   m\_buttons = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+50 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_c_skin_a206a4d1b135da1869bdf786aba217c2b}\label{class_c_skin_a206a4d1b135da1869bdf786aba217c2b}} 
+\index{C\+Skin@{C\+Skin}!````~C\+Skin@{$\sim$\+C\+Skin}}
+\index{````~C\+Skin@{$\sim$\+C\+Skin}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{$\sim$\+C\+Skin()}{~CSkin()}}
+{\footnotesize\ttfamily C\+Skin\+::$\sim$\+C\+Skin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+skin.\+cpp 파일의 55 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+56 \{
+57   \mbox{\hyperlink{class_c_skin_a13edf7704211f61440871e17eda1d216}{Destroy}}();
+58 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_a206a4d1b135da1869bdf786aba217c2b_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_c_skin_a13edf7704211f61440871e17eda1d216}\label{class_c_skin_a13edf7704211f61440871e17eda1d216}} 
+\index{C\+Skin@{C\+Skin}!Destroy@{Destroy}}
+\index{Destroy@{Destroy}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Destroy()}{Destroy()}}
+{\footnotesize\ttfamily void C\+Skin\+::\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 86 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+87 \{
+88   \textcolor{keywordflow}{if} (m\_buttons) \{
+89     \textcolor{keyword}{delete}[] m\_buttons;
+90     m\_buttons = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+91   \}
+92 
+93   \textcolor{comment}{// unhook the window}
+94   \mbox{\hyperlink{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3}{UnHook}}();
+95 
+96   \textcolor{comment}{// free bitmaps and device context}
+97   \textcolor{keywordflow}{if} (m\_dcSkin) \{ SelectObject(m\_dcSkin, m\_hOldBmp); DeleteDC(m\_dcSkin); m\_dcSkin = 
+      \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}; \}
+98   \textcolor{keywordflow}{if} (m\_hBmp) \{ DeleteObject(m\_hBmp); m\_hBmp = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}; \}
+99 
+100   \textcolor{comment}{// free skin region}
+101   \textcolor{keywordflow}{if} (m\_rgnSkin) \{ DeleteObject(m\_rgnSkin); m\_rgnSkin = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}; \}
+102   
+103 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_a13edf7704211f61440871e17eda1d216_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=280pt]{class_c_skin_a13edf7704211f61440871e17eda1d216_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b}\label{class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b}} 
+\index{C\+Skin@{C\+Skin}!Enable@{Enable}}
+\index{Enable@{Enable}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Enable()}{Enable()}}
+{\footnotesize\ttfamily bool C\+Skin\+::\+Enable (\begin{DoxyParamCaption}\item[{bool}]{b\+Enable }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 110 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+111 \{
+112   \textcolor{comment}{// refuse to enable if there is no window subclassed yet.}
+113   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_c_skin_a99b438d858bbafa83569f19e707ba3c9}{Hooked}}()) \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+114 
+115   \textcolor{comment}{// toggle}
+116   m\_bEnabled = bEnable;
+117 
+118   \textcolor{comment}{// force window repainting}
+119   InvalidateRect(m\_hWnd, \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, TRUE);
+120 
+121   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+122 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_adb8775c6c421ab3551b51e803bcf20d3}\label{class_c_skin_adb8775c6c421ab3551b51e803bcf20d3}} 
+\index{C\+Skin@{C\+Skin}!Enabled@{Enabled}}
+\index{Enabled@{Enabled}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Enabled()}{Enabled()}}
+{\footnotesize\ttfamily bool C\+Skin\+::\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 129 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+130 \{
+131   \textcolor{keywordflow}{return} m\_bEnabled;
+132 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_c_skin_a8fe20ca67965deec6e5e29a2bf467933}\label{class_c_skin_a8fe20ca67965deec6e5e29a2bf467933}} 
+\index{C\+Skin@{C\+Skin}!Get\+Blit\+Rect@{Get\+Blit\+Rect}}
+\index{Get\+Blit\+Rect@{Get\+Blit\+Rect}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Get\+Blit\+Rect()}{GetBlitRect()}}
+{\footnotesize\ttfamily R\+E\+CT\& C\+Skin\+::\+Get\+Blit\+Rect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+skin.\+h 파일의 147 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+147 \{ \textcolor{keywordflow}{return} m\_rect; \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_a8fe20ca67965deec6e5e29a2bf467933_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_a4112f4df38d9917d38c5db2622777c1f}\label{class_c_skin_a4112f4df38d9917d38c5db2622777c1f}} 
+\index{C\+Skin@{C\+Skin}!H\+DC@{H\+DC}}
+\index{H\+DC@{H\+DC}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{H\+D\+C()}{HDC()}}
+{\footnotesize\ttfamily H\+DC C\+Skin\+::\+H\+DC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 281 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+282 \{
+283   \textcolor{keywordflow}{return} m\_dcSkin;
+284 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{class_c_skin_a4112f4df38d9917d38c5db2622777c1f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}\label{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}} 
+\index{C\+Skin@{C\+Skin}!Height@{Height}}
+\index{Height@{Height}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Height()}{Height()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} C\+Skin\+::\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 271 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+272 \{
+273   \textcolor{keywordflow}{return} m\_iHeight;
+274 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47}\label{class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47}} 
+\index{C\+Skin@{C\+Skin}!Hook@{Hook}}
+\index{Hook@{Hook}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Hook()}{Hook()}}
+{\footnotesize\ttfamily bool C\+Skin\+::\+Hook (\begin{DoxyParamCaption}\item[{C\+Wnd $\ast$}]{p\+Wnd }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 139 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+140 \{
+141   \textcolor{comment}{// unsubclass any other window}
+142   \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_skin_a99b438d858bbafa83569f19e707ba3c9}{Hooked}}()) \mbox{\hyperlink{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3}{UnHook}}();
+143 
+144   \textcolor{comment}{// this will be our new subclassed window}
+145   m\_hWnd = (HWND)*pWnd;
+146 
+147   \textcolor{comment}{// --------------------------------------------------}
+148   \textcolor{comment}{// change window style (get rid of the caption bar)}
+149   \textcolor{comment}{// --------------------------------------------------}
+150   LONG\_PTR dwStyle = GetWindowLongPtr(m\_hWnd, GWL\_STYLE);
+151   m\_dOldStyle = dwStyle;
+152   dwStyle &= ~(WS\_CAPTION|WS\_SIZEBOX);
+153   SetWindowLongPtr(m\_hWnd, GWL\_STYLE, dwStyle);
+154 
+155   RECT r;
+156   pWnd->GetWindowRect(&r);
+157   m\_oldRect = r;
+158   pWnd->MoveWindow(r.left,
+159                    r.top,
+160                    m\_iWidth,
+161                    m\_iHeight,
+162                    FALSE);
+163   
+164   pWnd->SetMenu(\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+165   
+166   \textcolor{keywordflow}{if}(m\_rgnSkin != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+167     \textcolor{comment}{// set the skin region to the window}
+168     pWnd->SetWindowRgn(m\_rgnSkin, \textcolor{keyword}{true});    
+169 
+170   \textcolor{comment}{// subclass the window procedure}
+171   m\_OldWndProc = (WNDPROC)SetWindowLongPtr( m\_hWnd, GWLP\_WNDPROC, (LONG\_PTR)
+      \mbox{\hyperlink{class_c_skin_ac58ecd226acd172d4941912f99e2cb12}{SkinWndProc}} );
+172 
+173   \textcolor{comment}{// store a pointer to our class instance inside the window procedure.}
+174   \textcolor{keywordflow}{if} (!SetProp(m\_hWnd, \textcolor{stringliteral}{"skin"}, (\textcolor{keywordtype}{void}*)\textcolor{keyword}{this}))
+175     \{
+176       \textcolor{comment}{// if we fail to do so, we just can't activate the skin.}
+177       \mbox{\hyperlink{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3}{UnHook}}();
+178       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+179     \}
+180 
+181   
+182   \textcolor{comment}{// update flag}
+183   m\_bHooked = ( m\_OldWndProc ? true : false );
+184 
+185   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < m\_nButtons; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+186     RECT r;
+187     m\_buttons[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{class_skin_button_aef7f1ced23d060545eabd5b57175143a}{GetRect}}(r);
+188     m\_buttons[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{class_skin_button_ad70dc6ed236a2274028c32744e3690bb}{CreateButton}}(\textcolor{stringliteral}{""}, WS\_VISIBLE, r, pWnd, 0);
+189   \}
+190   
+191   \textcolor{comment}{// force window repainting}
+192   RedrawWindow(\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},RDW\_INVALIDATE|RDW\_ERASE|RDW\_ALLCHILDREN);  
+193 
+194   \textcolor{comment}{// successful return if we're hooked.}
+195   \textcolor{keywordflow}{return} m\_bHooked;
+196 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_a99b438d858bbafa83569f19e707ba3c9}\label{class_c_skin_a99b438d858bbafa83569f19e707ba3c9}} 
+\index{C\+Skin@{C\+Skin}!Hooked@{Hooked}}
+\index{Hooked@{Hooked}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Hooked()}{Hooked()}}
+{\footnotesize\ttfamily bool C\+Skin\+::\+Hooked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 251 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+252 \{
+253   \textcolor{keywordflow}{return} m\_bHooked;
+254 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_a99b438d858bbafa83569f19e707ba3c9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d}\label{class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d}} 
+\index{C\+Skin@{C\+Skin}!Initialize@{Initialize}}
+\index{Initialize@{Initialize}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Initialize()}{Initialize()}}
+{\footnotesize\ttfamily bool C\+Skin\+::\+Initialize (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{skin\+File }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 74 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+75 \{
+76   \textcolor{comment}{// try to retrieve the skin data from resource.}
+77   \textcolor{keywordtype}{bool} res = GetSkinData(skinFile);
+78   \textcolor{keywordflow}{if}(!res) 
+79     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, m\_error);
+80   \textcolor{keywordflow}{return} res;
+81 \}  
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3}\label{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3}} 
+\index{C\+Skin@{C\+Skin}!Un\+Hook@{Un\+Hook}}
+\index{Un\+Hook@{Un\+Hook}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Un\+Hook()}{UnHook()}}
+{\footnotesize\ttfamily bool C\+Skin\+::\+Un\+Hook (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 203 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+204 \{
+205   \textcolor{comment}{// just to be safe we'll check this}
+206   WNDPROC OurWnd;
+207 
+208   \textcolor{comment}{// cannot unsubclass if there is no window subclassed}
+209   \textcolor{comment}{// returns true anyways.}
+210   \textcolor{keywordflow}{if} (!\mbox{\hyperlink{class_c_skin_a99b438d858bbafa83569f19e707ba3c9}{Hooked}}()) \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+211   
+212   \textcolor{keywordflow}{if}(m\_rgnSkin != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+213     \textcolor{comment}{// remove the skin region from the window}
+214     SetWindowRgn(m\_hWnd, \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, \textcolor{keyword}{true});
+215 
+216   \textcolor{comment}{// unsubclass the window procedure}
+217   OurWnd = (WNDPROC)SetWindowLongPtr( m\_hWnd, GWLP\_WNDPROC, (LONG\_PTR)m\_OldWndProc );
+218 
+219   \textcolor{comment}{// remove the pointer to our class instance, but if we fail we don't care.}
+220   RemoveProp(m\_hWnd, \textcolor{stringliteral}{"skin"});
+221 
+222   \textcolor{comment}{// update flag - if we can't get our window procedure address again,}
+223   \textcolor{comment}{// we failed to unhook the window.}
+224   m\_bHooked = ( OurWnd ? false : true );
+225 
+226   SetWindowLongPtr(m\_hWnd, GWL\_STYLE, m\_dOldStyle);
+227 
+228   RECT r;
+229 
+230   GetWindowRect(m\_hWnd, &r);
+231   
+232   MoveWindow(m\_hWnd,
+233              r.left,
+234              r.top,
+235              m\_oldRect.right - m\_oldRect.left,
+236              m\_oldRect.bottom - m\_oldRect.top,
+237              FALSE);
+238   
+239   \textcolor{comment}{// force window repainting}
+240   RedrawWindow(\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},RDW\_INVALIDATE|RDW\_ERASE|RDW\_ALLCHILDREN);  
+241 
+242   \textcolor{comment}{// successful return if we're unhooked.}
+243   \textcolor{keywordflow}{return} !m\_bHooked;
+244 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}\label{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}} 
+\index{C\+Skin@{C\+Skin}!Width@{Width}}
+\index{Width@{Width}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Width()}{Width()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} C\+Skin\+::\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 261 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+262 \{
+263   \textcolor{keywordflow}{return} m\_iWidth;
+264 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Friend, 그리고 관련된 함수 문서화}
+\mbox{\Hypertarget{class_c_skin_ac58ecd226acd172d4941912f99e2cb12}\label{class_c_skin_ac58ecd226acd172d4941912f99e2cb12}} 
+\index{C\+Skin@{C\+Skin}!Skin\+Wnd\+Proc@{Skin\+Wnd\+Proc}}
+\index{Skin\+Wnd\+Proc@{Skin\+Wnd\+Proc}!C\+Skin@{C\+Skin}}
+\subsubsection{\texorpdfstring{Skin\+Wnd\+Proc}{SkinWndProc}}
+{\footnotesize\ttfamily L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK Skin\+Wnd\+Proc (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{h\+Wnd,  }\item[{U\+I\+NT}]{u\+Message,  }\item[{W\+P\+A\+R\+AM}]{w\+Param,  }\item[{L\+P\+A\+R\+AM}]{l\+Param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+skin.\+cpp 파일의 532 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+533 \{
+534   \textcolor{comment}{// we will need a pointer to the associated class instance}
+535   \textcolor{comment}{// (it was stored in the window before, remember?)}
+536   \mbox{\hyperlink{class_c_skin}{CSkin}} *pSkin = (\mbox{\hyperlink{class_c_skin}{CSkin}}*)GetProp(hWnd, \_T(\textcolor{stringliteral}{"skin"}));
+537 
+538   \textcolor{comment}{// to handle WM\_PAINT}
+539   PAINTSTRUCT ps;
+540 
+541   \textcolor{comment}{// if we fail to get our class instance, we can't handle anything.}
+542   \textcolor{keywordflow}{if} (!pSkin) \textcolor{keywordflow}{return} DefWindowProc(hWnd,uMessage,wParam,lParam);
+543 
+544   \textcolor{keywordflow}{switch}(uMessage)
+545     \{
+546     \textcolor{keywordflow}{case} WM\_WINDOWPOSCHANGING:
+547       \{
+548         LPWINDOWPOS pos = (LPWINDOWPOS)lParam;
+549         pos->cx = pSkin->\mbox{\hyperlink{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}{Width}}();
+550         pos->cy = pSkin->\mbox{\hyperlink{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}{Height}}();
+551         \textcolor{keywordflow}{return} 0L;
+552       \}
+553       \textcolor{keywordflow}{break};
+554 
+555     \textcolor{keywordflow}{case} WM\_PAINT:
+556       \{
+557         \textcolor{comment}{// ---------------------------------------------------------}
+558         \textcolor{comment}{// here we just need to blit our skin}
+559         \textcolor{comment}{// directly to the device context}
+560         \textcolor{comment}{// passed by the painting message.}
+561         \textcolor{comment}{// ---------------------------------------------------------}
+562         BeginPaint(hWnd,&ps);
+563 
+564         \textcolor{comment}{// blit the skin}
+565         BitBlt(ps.hdc,0,0,pSkin->\mbox{\hyperlink{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}{Width}}(),pSkin->\mbox{\hyperlink{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}{Height}}(),pSkin->\mbox{\hyperlink{class_c_skin_a4112f4df38d9917d38c5db2622777c1f}{HDC}}(),0,0,SRCCOPY);
+566 
+567         EndPaint(hWnd,&ps);
+568         \textcolor{keywordflow}{break};
+569       \}
+570 
+571     \textcolor{keywordflow}{case} WM\_LBUTTONDOWN:
+572       \{
+573         \textcolor{comment}{// ---------------------------------------------------------}
+574         \textcolor{comment}{// this is a common trick for easy dragging of the window.}
+575         \textcolor{comment}{// this message fools windows telling that the user is}
+576         \textcolor{comment}{// actually dragging the application caption bar.}
+577         \textcolor{comment}{// ---------------------------------------------------------}
+578         SendMessage(hWnd, WM\_NCLBUTTONDOWN, HTCAPTION,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+579         \textcolor{keywordflow}{break};
+580       \}
+581 
+582     \}
+583 
+584   \textcolor{comment}{// ---------------------------------------------------------}
+585   \textcolor{comment}{// call the default window procedure to keep things going.}
+586   \textcolor{comment}{// ---------------------------------------------------------}
+587   \textcolor{keywordflow}{return} CallWindowProc(pSkin->m\_OldWndProc, hWnd, uMessage, wParam, lParam);
+588 \}
+\end{DoxyCode}
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/win32/skin.\+h\item 
-src/win32/skin.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{skin_8h}{skin.\+h}}\item 
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{skin_8cpp}{skin.\+cpp}}\end{DoxyCompactItemize}

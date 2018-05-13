@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_win_helper_1_1_c_point.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>WinHelper</b></li><li class="navelem"><a class="el" href="class_win_helper_1_1_c_point.html">CPoint</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -72,45 +92,258 @@ $(function() {
 <div class="title">WinHelper::CPoint 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_win_helper_8h_source.html">WinHelper.h</a>&gt;</code></p>
 <div class="dynheader">
 WinHelper::CPoint에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_win_helper_1_1_c_point.png" usemap="#WinHelper::CPoint_map" alt=""/>
-  <map id="WinHelper::CPoint_map" name="WinHelper::CPoint_map">
-</map>
- </div></div>
+<div class="center"><img src="class_win_helper_1_1_c_point__inherit__graph.png" border="0" usemap="#_win_helper_1_1_c_point_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+WinHelper::CPoint에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_win_helper_1_1_c_point__coll__graph.png" border="0" usemap="#_win_helper_1_1_c_point_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a1c07b1e078177dbd626443830d1bd8c8"><td class="memItemLeft" align="right" valign="top"><a id="a1c07b1e078177dbd626443830d1bd8c8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CPoint</b> (LPARAM lParam)</td></tr>
+<tr class="memitem:a4782057717b0d09e643de9ce65835317"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_point.html#a4782057717b0d09e643de9ce65835317">CPoint</a> ()</td></tr>
+<tr class="separator:a4782057717b0d09e643de9ce65835317"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c07b1e078177dbd626443830d1bd8c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_point.html#a1c07b1e078177dbd626443830d1bd8c8">CPoint</a> (LPARAM lParam)</td></tr>
 <tr class="separator:a1c07b1e078177dbd626443830d1bd8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af80910f72f637b0cbbe5f45cdf692d70"><td class="memItemLeft" align="right" valign="top"><a id="af80910f72f637b0cbbe5f45cdf692d70"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CPoint</b> (int nX, int nY)</td></tr>
+<tr class="memitem:af80910f72f637b0cbbe5f45cdf692d70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_point.html#af80910f72f637b0cbbe5f45cdf692d70">CPoint</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> nX, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> nY)</td></tr>
 <tr class="separator:af80910f72f637b0cbbe5f45cdf692d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24a90efac3a1cb2e699ea7cfa6f85bf6"><td class="memItemLeft" align="right" valign="top"><a id="a24a90efac3a1cb2e699ea7cfa6f85bf6"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CPoint</b> (const POINT &amp;pt)</td></tr>
+<tr class="memitem:a24a90efac3a1cb2e699ea7cfa6f85bf6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_point.html#a24a90efac3a1cb2e699ea7cfa6f85bf6">CPoint</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> POINT &amp;pt)</td></tr>
 <tr class="separator:a24a90efac3a1cb2e699ea7cfa6f85bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad210b7d4619dad03142acdd689f4e46"><td class="memItemLeft" align="right" valign="top"><a id="aad210b7d4619dad03142acdd689f4e46"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_win_helper_1_1_c_point.html">CPoint</a> &amp;rhs) const</td></tr>
+<tr class="memitem:aad210b7d4619dad03142acdd689f4e46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_point.html#aad210b7d4619dad03142acdd689f4e46">operator==</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="class_win_helper_1_1_c_point.html">CPoint</a> &amp;rhs) <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:aad210b7d4619dad03142acdd689f4e46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54c819ee7db3549434ac6e5cc8c6b103"><td class="memItemLeft" align="right" valign="top"><a id="a54c819ee7db3549434ac6e5cc8c6b103"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (const <a class="el" href="class_win_helper_1_1_c_point.html">CPoint</a> &amp;rhs) const</td></tr>
+<tr class="memitem:a54c819ee7db3549434ac6e5cc8c6b103"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_point.html#a54c819ee7db3549434ac6e5cc8c6b103">operator!=</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="class_win_helper_1_1_c_point.html">CPoint</a> &amp;rhs) <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a54c819ee7db3549434ac6e5cc8c6b103"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3aa8bdc5ec8ff66c3492bc39c2a3e6a1"><td class="memItemLeft" align="right" valign="top"><a id="a3aa8bdc5ec8ff66c3492bc39c2a3e6a1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator LPPOINT</b> ()</td></tr>
+<tr class="memitem:a3aa8bdc5ec8ff66c3492bc39c2a3e6a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_point.html#a3aa8bdc5ec8ff66c3492bc39c2a3e6a1">operator LPPOINT</a> ()</td></tr>
 <tr class="separator:a3aa8bdc5ec8ff66c3492bc39c2a3e6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00125">125</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a4782057717b0d09e643de9ce65835317"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4782057717b0d09e643de9ce65835317">&#9670;&nbsp;</a></span>CPoint() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CPoint::CPoint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00130">130</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{};</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a1c07b1e078177dbd626443830d1bd8c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c07b1e078177dbd626443830d1bd8c8">&#9670;&nbsp;</a></span>CPoint() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CPoint::CPoint </td>
+          <td>(</td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00131">131</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{ x = LOWORD( lParam ); y = HIWORD(lParam); }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="af80910f72f637b0cbbe5f45cdf692d70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af80910f72f637b0cbbe5f45cdf692d70">&#9670;&nbsp;</a></span>CPoint() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CPoint::CPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>nX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>nY</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00132">132</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;{ x = nX; y = nY; }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a24a90efac3a1cb2e699ea7cfa6f85bf6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24a90efac3a1cb2e699ea7cfa6f85bf6">&#9670;&nbsp;</a></span>CPoint() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CPoint::CPoint </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> POINT &amp;&#160;</td>
+          <td class="paramname"><em>pt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00133">133</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{ x = pt.x; y = pt.y; }</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a3aa8bdc5ec8ff66c3492bc39c2a3e6a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3aa8bdc5ec8ff66c3492bc39c2a3e6a1">&#9670;&nbsp;</a></span>operator LPPOINT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CPoint::operator LPPOINT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00136">136</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">this</span>; }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a54c819ee7db3549434ac6e5cc8c6b103"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54c819ee7db3549434ac6e5cc8c6b103">&#9670;&nbsp;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WinHelper::CPoint::operator!= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="class_win_helper_1_1_c_point.html">CPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00135">135</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;{ <span class="keywordflow">return</span> x != rhs.x || y != rhs.y; }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aad210b7d4619dad03142acdd689f4e46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad210b7d4619dad03142acdd689f4e46">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WinHelper::CPoint::operator== </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="class_win_helper_1_1_c_point.html">CPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00134">134</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;{ <span class="keywordflow">return</span> x == rhs.x &amp;&amp; y == rhs.y; }</div></div><!-- fragment -->
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_win_helper_8h_source.html">WinHelper.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_win_helper_8h_source.html">WinHelper.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_win_helper.html">WinHelper</a></li><li class="navelem"><a class="el" href="class_win_helper_1_1_c_point.html">CPoint</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

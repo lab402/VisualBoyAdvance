@@ -1,0 +1,5 @@
+<map id="gbSoundSetQuality" name="gbSoundSetQuality">
+<area shape="rect" id="node2" href="$system_8cpp.html#a98f45c601382b0dee2729693bc8720c7" title="systemCanChangeSoundQuality" alt="" coords="188,5,399,32"/>
+<area shape="rect" id="node3" href="$gb_sound_8cpp.html#a2f94fcc352d566069ad4cee1e9a62a39" title="soundShutdown" alt="" coords="236,56,351,83"/>
+<area shape="rect" id="node4" href="$gb_sound_8cpp.html#a48aac7ccc2439587be697d3f15fcd2e7" title="soundInit" alt="" coords="256,107,331,133"/>
+</map>

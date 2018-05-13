@@ -1,0 +1,11 @@
+<map id="unzLocateFile" name="unzLocateFile">
+<area shape="rect" id="node2" href="$unzip_8cpp.html#a54821c0b6da683800164a56f2ae14f33" title="unzGoToFirstFile" alt="" coords="187,5,309,32"/>
+<area shape="rect" id="node8" href="$unzip_8cpp.html#ac99166540260b60340f4787af0a90029" title="unzGetCurrentFileInfo" alt="" coords="175,56,321,83"/>
+<area shape="rect" id="node9" href="$unzip_8cpp.html#a271f325759b3251ee728a8f850291dcf" title="unzStringFileNameCompare" alt="" coords="156,107,340,133"/>
+<area shape="rect" id="node10" href="$unzip_8cpp.html#acb457ebeaee7cb850c11a4a3d4b58201" title="unzGoToNextFile" alt="" coords="187,157,309,184"/>
+<area shape="rect" id="node3" href="$unzip_8cpp.html#a63347eee791bfbd6f1c65ade6d487cf6" title="unzlocal_GetCurrentFileInfo\lInternal" alt="" coords="388,49,569,90"/>
+<area shape="rect" id="node4" href="$unzip_8cpp.html#a396ee9eef44ba468556e5bbbda9d6c9e" title="unzlocal_getLong" alt="" coords="653,5,775,32"/>
+<area shape="rect" id="node6" href="$unzip_8cpp.html#aae00122ac858120e991550221c76214b" title="unzlocal_getShort" alt="" coords="651,56,777,83"/>
+<area shape="rect" id="node7" href="$unzip_8cpp.html#aef5be704f689c792449ab4a95846e9cb" title="unzlocal_DosDateToTmuDate" alt="" coords="617,107,811,133"/>
+<area shape="rect" id="node5" href="$unzip_8cpp.html#a56a54c33c87152307e98e1abba6c0bf5" title="unzlocal_getByte" alt="" coords="859,31,981,57"/>
+</map>

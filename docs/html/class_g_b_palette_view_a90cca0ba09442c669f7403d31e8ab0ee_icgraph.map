@@ -1,0 +1,4 @@
+<map id="GBPaletteView::save" name="GBPaletteView::save">
+<area shape="rect" id="node2" href="$class_g_b_palette_view.html#a0186b41f6db460271256f36800ffa980" title="GBPaletteView::OnSaveBg" alt="" coords="199,5,378,32"/>
+<area shape="rect" id="node3" href="$class_g_b_palette_view.html#a20eb0c24604804e9c33db15f3ff394f0" title="GBPaletteView::OnSaveObj" alt="" coords="197,56,380,83"/>
+</map>

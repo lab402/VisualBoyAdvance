@@ -1,0 +1,15 @@
+<map id="TileView::renderTile16" name="TileView::renderTile16">
+<area shape="rect" id="node2" href="$class_tile_view.html#a4b8f6e14f8ee7d4abea3a751cb5f7d74" title="TileView::render" alt="" coords="201,259,316,285"/>
+<area shape="rect" id="node3" href="$class_tile_view.html#a4341071a0cab0d5a8b6dfa7318230636" title="TileView::paint" alt="" coords="364,259,471,285"/>
+<area shape="rect" id="node4" href="$class_tile_view.html#a09b04d6b0135ef2b6da3c08796c1d354" title="TileView::update" alt="" coords="539,5,656,32"/>
+<area shape="rect" id="node5" href="$class_tile_view.html#a597e32fa09187fe6ea909cca947bfbc1" title="TileView::OnInitDialog" alt="" coords="523,56,671,83"/>
+<area shape="rect" id="node6" href="$class_tile_view.html#a482139c5bc655015ba0700db5c04ec91" title="TileView::On16Colors" alt="" coords="524,107,671,133"/>
+<area shape="rect" id="node7" href="$class_tile_view.html#a021f1139dccc2ec023a315ed1f4619e1" title="TileView::On256Colors" alt="" coords="521,157,674,184"/>
+<area shape="rect" id="node8" href="$class_tile_view.html#a5b1b1e61396178f21ee28c6c7a779142" title="TileView::OnCharbase0" alt="" coords="519,208,676,235"/>
+<area shape="rect" id="node9" href="$class_tile_view.html#a4c2151cc553eabc4d08f8a8b6954aa72" title="TileView::OnCharbase1" alt="" coords="519,259,676,285"/>
+<area shape="rect" id="node10" href="$class_tile_view.html#ab50f2c2c7575222ee7e4bb72161bbda7" title="TileView::OnCharbase2" alt="" coords="519,309,676,336"/>
+<area shape="rect" id="node11" href="$class_tile_view.html#af0ec3a1a2c7e142612fe13d85c4faa63" title="TileView::OnCharbase3" alt="" coords="519,360,676,387"/>
+<area shape="rect" id="node12" href="$class_tile_view.html#abfd5f9562f84ae4903db87425788d410" title="TileView::OnCharbase4" alt="" coords="519,411,676,437"/>
+<area shape="rect" id="node13" href="$class_tile_view.html#afe0a1c444008b7e76d4669ffdda2e0bd" title="TileView::OnStretch" alt="" coords="529,461,666,488"/>
+<area shape="rect" id="node14" href="$class_tile_view.html#a8ca2f73ad6c372183494c0870905b9ac" title="TileView::OnHScroll" alt="" coords="529,512,666,539"/>
+</map>

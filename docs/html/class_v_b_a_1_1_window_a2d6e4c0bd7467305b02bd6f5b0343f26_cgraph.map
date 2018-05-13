@@ -1,0 +1,10 @@
+<map id="VBA::Window::vOnGBPrinterToggled" name="VBA::Window::vOnGBPrinterToggled">
+<area shape="rect" id="node2" href="$gb_printer_8cpp.html#ad92e246f72a463f50f3c0856418e087e" title="gbPrinterSend" alt="" coords="265,56,369,83"/>
+<area shape="rect" id="node9" href="$class_v_b_a_1_1_config_1_1_section.html#a57e1b95cbea40db71c093381beff4b0e" title="VBA::Config::Section\l::vSetKey" alt="" coords="244,107,389,149"/>
+<area shape="rect" id="node3" href="$gb_printer_8cpp.html#a9c0689dd92376e8e417970449071dd91" title="gbPrinterReset" alt="" coords="453,5,561,32"/>
+<area shape="rect" id="node4" href="$gb_printer_8cpp.html#acb4674ec30c8e2063e48d5e50f5e8310" title="gbPrinterCheckCRC" alt="" coords="437,56,576,83"/>
+<area shape="rect" id="node5" href="$gb_printer_8cpp.html#acb19ed22c056fded1dab564831804a2c" title="gbPrinterCommand" alt="" coords="440,107,573,133"/>
+<area shape="rect" id="node6" href="$gb_printer_8cpp.html#a8dd92155e15bc774868bb536a3b7ada3" title="gbPrinterShowData" alt="" coords="631,81,764,108"/>
+<area shape="rect" id="node8" href="$gb_printer_8cpp.html#acc7286a5db6e65d217524716542cbc15" title="gbPrinterReceiveData" alt="" coords="624,132,771,159"/>
+<area shape="rect" id="node7" href="$system_8cpp.html#a36b528a29e75e09aa9109e51d6ce4dac" title="systemGbPrint" alt="" coords="819,81,928,108"/>
+</map>

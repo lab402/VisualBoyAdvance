@@ -1,0 +1,24 @@
+<map id="C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/window.cpp" name="C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/window.cpp">
+<area shape="rect" id="node2" href="$window_8h.html" title="window.h" alt="" coords="591,109,665,136"/>
+<area shape="rect" id="node33" href="$_g_b_a_8h.html" title="../GBA.h" alt="" coords="1438,109,1511,136"/>
+<area shape="rect" id="node38" href="$_g_b_8h.html" title="../gb/GB.h" alt="" coords="1941,109,2024,136"/>
+<area shape="rect" id="node39" href="$gb_globals_8h.html" title="../gb/gbGlobals.h" alt="" coords="2049,109,2170,136"/>
+<area shape="rect" id="node40" href="$gb_printer_8h.html" title="../gb/gbPrinter.h" alt="" coords="2195,109,2309,136"/>
+<area shape="rect" id="node41" href="$_sound_8h.html" title="../Sound.h" alt="" coords="1741,184,1824,211"/>
+<area shape="rect" id="node42" href="$_util_8h.html" title="../Util.h" alt="" coords="2333,109,2397,136"/>
+<area shape="rect" id="node43" href="$menuitem_8h.html" title="menuitem.h" alt="" coords="2421,109,2512,136"/>
+<area shape="rect" id="node46" href="$tools_8h.html" title="tools.h" alt="" coords="1181,109,1243,136"/>
+<area shape="rect" id="node48" href="$intl_8h.html" title="intl.h" alt="" coords="2536,109,2587,136"/>
+<area shape="rect" id="node7" href="$sigccompat_8h.html" title="sigccompat.h" alt="" coords="722,259,822,285"/>
+<area shape="rect" id="node16" href="$_system_8h.html" title="../System.h" alt="" coords="1239,341,1329,367"/>
+<area shape="rect" id="node19" href="$configfile_8h.html" title="configfile.h" alt="" coords="164,184,247,211"/>
+<area shape="rect" id="node22" href="$screenarea_8h.html" title="screenarea.h" alt="" coords="922,184,1019,211"/>
+<area shape="rect" id="node25" href="$filters_8h.html" title="filters.h" alt="" coords="1157,259,1221,285"/>
+<area shape="rect" id="node26" href="$gtk_2input_8h.html" title="input.h" alt="" coords="415,259,476,285"/>
+<area shape="rect" id="node28" href="$joypadconfig_8h.html" title="joypadconfig.h" alt="" coords="575,184,681,211"/>
+<area shape="rect" id="node17" href="$unzip_8h.html" title="unzip.h" alt="" coords="1252,423,1316,449"/>
+<area shape="rect" id="node34" href="$_cheats_8h.html" title="Cheats.h" alt="" coords="1437,184,1512,211"/>
+<area shape="rect" id="node35" href="$_globals_8h.html" title="Globals.h" alt="" coords="1536,184,1613,211"/>
+<area shape="rect" id="node36" href="$_e_eprom_8h.html" title="EEprom.h" alt="" coords="1637,184,1717,211"/>
+<area shape="rect" id="node37" href="$_flash_8h.html" title="Flash.h" alt="" coords="1347,184,1413,211"/>
+</map>

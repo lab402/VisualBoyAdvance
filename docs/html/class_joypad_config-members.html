@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_joypad_config.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">JoypadConfig 멤버 목록</div>  </div>
@@ -68,38 +92,41 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_joypad_config.html">JoypadConfig</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>assignKey</b>(int id, LONG_PTR key) (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>assignKeys</b>() (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>buttonA</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>buttonB</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>buttonGS</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>buttonL</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>buttonR</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>buttonSelect</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>buttonStart</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>capture</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>down</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>JoypadConfig</b>(int w, CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>left</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnCancel</b>() (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnDestroy</b>() (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnKeyDown</b>(UINT nChar, UINT nRepCnt, UINT nFlags) (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnOk</b>() (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnTimer</b>(UINT_PTR nIDEvent) (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>right</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>speed</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>timerId</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>up</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>which</b> (다음에서 정의됨 : <a class="el" href="class_joypad_config.html">JoypadConfig</a>)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636">assignKey</a>(int id, LONG_PTR key)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#a37ced249f71ab247733787e07085e295">assignKeys</a>()</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a8b18405a6d92fbdca34cb1d1a6fcee2c">buttonA</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#a8600f90f1074cda2ff14b73e6fc8e3d6">buttonB</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a4aa48681f17e03adced442271f29211f">buttonGS</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#a5a03e1bd6ea571aeeadfbaee7362830f">buttonL</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#ae8492d5da1c116da58dbaecc7572576b">buttonR</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#a79baa8f4d47b02dde3f032961e239556">buttonSelect</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a9083bf057d36c0fd78fe1976bee9fb74">buttonStart</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#a82881a0174178e60d0a60a2b574fd385">capture</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a9b0e5a934f13fb9009211c082933eb50">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#ad42ffdfc61bb990382b0a35d15909644">down</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a3de60b70a9e5b5a104211e300d388beaa3576d2df47b78d2eb08aaf607547efaf">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#ade281c386d18c3e9ab2d806cd89ab7ce">JoypadConfig</a>(int w, CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a99c36e2559ce17f64aa004c37c5f8771">left</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#a1ff1e82beb3c0cb4363165277fabc796">OnCancel</a>()</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a466cce6bccb02ce7a31dd5697668c904">OnDestroy</a>()</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#afc8d09942cc5d7ff9e69e27a98ff2430">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a17d863f586b81ee50fa579ec637d834c">OnKeyDown</a>(UINT nChar, UINT nRepCnt, UINT nFlags)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#a80b628b0368a606e47d6ecd2d1e76624">OnOk</a>()</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#af55cd03e7ed293d17d338858285a8087">OnTimer</a>(UINT_PTR nIDEvent)</td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#ae941e8b6868e423b3c2bf4313c3c340f">right</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a57365c2b56d24e6cf20d3586d692583d">speed</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#ae2eb21b8f63e8cf86a5461e78901c3f5">timerId</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_joypad_config.html#a65379815cbe3f6b1d63d6d6655be22dd">up</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_joypad_config.html#ad71f1ad36754d788de00eb4bb5630dda">which</a></td><td class="entry"><a class="el" href="class_joypad_config.html">JoypadConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

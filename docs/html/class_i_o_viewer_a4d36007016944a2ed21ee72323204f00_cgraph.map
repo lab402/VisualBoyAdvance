@@ -1,0 +1,10 @@
+<map id="IOViewer::OnInitDialog" name="IOViewer::OnInitDialog">
+<area shape="rect" id="node2" href="$class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5" title="ResizeDlg::SetData" alt="" coords="205,81,341,108"/>
+<area shape="rect" id="node9" href="$class_i_o_viewer.html#a500c8fc593280ff95977fb59293b6ab6" title="IOViewer::update" alt="" coords="213,132,334,159"/>
+<area shape="rect" id="node3" href="$class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc" title="ResizeDlg::AddDialogData" alt="" coords="395,5,569,32"/>
+<area shape="rect" id="node5" href="$_resize_dlg_8cpp.html#a42fd95f9181ab52619b7bd3e5d51475b" title="ResizeDlgGetItemCount" alt="" coords="401,56,563,83"/>
+<area shape="rect" id="node6" href="$_resize_dlg_8cpp.html#ad4ba4376f50f357ac88b0fd3bfeb1a19" title="ResizeDlgCopyItems" alt="" coords="411,107,553,133"/>
+<area shape="rect" id="node7" href="$_resize_dlg_8cpp.html#a74702acf423eaa66851bd656c737b6ba" title="RegQueryValueExRecursive" alt="" coords="389,157,575,184"/>
+<area shape="rect" id="node4" href="$_resize_dlg_8cpp.html#af86ee86600de84824a5d7b8b3aaed6e8" title="ResizeDlgUpdateGripperRect" alt="" coords="623,5,813,32"/>
+<area shape="rect" id="node8" href="$_resize_dlg_8cpp.html#a37994396c85bf7d224452b133d9e3d6f" title="regGetINIPath" alt="" coords="667,157,769,184"/>
+</map>

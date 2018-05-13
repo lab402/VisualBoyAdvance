@@ -1,0 +1,12 @@
+<map id="utilGzRead" name="utilGzRead">
+<area shape="rect" id="node2" href="$_cheats_8h.html#aeb57276ef7881a84ab0c06cdd5d9976b" title="cheatsReadGame" alt="" coords="299,5,425,32"/>
+<area shape="rect" id="node3" href="$_e_eprom_8h.html#a7afd8118af1786271c392f83fac44532" title="eepromReadGame" alt="" coords="297,144,427,171"/>
+<area shape="rect" id="node4" href="$gb_cheats_8h.html#aaf0e545768836b242130504ed454236f" title="gbCheatsReadGame" alt="" coords="291,81,433,108"/>
+<area shape="rect" id="node5" href="$gb_s_g_b_8h.html#aa7dd0b9bce0255b73cc107100c580a79" title="gbSgbReadGame" alt="" coords="300,347,424,373"/>
+<area shape="rect" id="node6" href="$gb_sound_8h.html#a67af7c9aeabcd4c0138c3010eed0ce16" title="gbSoundReadGame" alt="" coords="293,195,431,221"/>
+<area shape="rect" id="node7" href="$_r_t_c_8h.html#a16788a471c2a76dc75739132e516a34c" title="rtcReadGame" alt="" coords="140,245,243,272"/>
+<area shape="rect" id="node8" href="$_sound_8h.html#a705f2d56c4b55d2dd50fafafa3c72723" title="soundReadGame" alt="" coords="301,397,423,424"/>
+<area shape="rect" id="node9" href="$_util_8h.html#a7e12c3b92f76a948e194da25a2a12348" title="utilReadInt" alt="" coords="150,93,233,120"/>
+<area shape="rect" id="node10" href="$_util_8h.html#a0470a6ff27a6e11e39454beda01b8f8c" title="utilReadData" alt="" coords="143,296,239,323"/>
+<area shape="rect" id="node11" href="$_flash_8h.html#a1ff823996a13f728b505f719ad1a6a54" title="flashReadGame" alt="" coords="305,296,419,323"/>
+</map>

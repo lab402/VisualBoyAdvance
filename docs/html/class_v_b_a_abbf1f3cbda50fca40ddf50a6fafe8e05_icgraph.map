@@ -1,0 +1,8 @@
+<map id="VBA::winLoadLanguage" name="VBA::winLoadLanguage">
+<area shape="rect" id="node2" href="$class_v_b_a.html#ae872998a3ecf3ec0d504378744f441e6" title="VBA::winSetLanguageOption" alt="" coords="213,111,404,138"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a9e8eaf3488f32697f695789cb89a7dce" title="MainWnd::OnOptionsLanguage\lSystem" alt="" coords="452,5,655,47"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a611b1bde0b2a2ca47ace63d4dec8c27a" title="MainWnd::OnOptionsLanguage\lEnglish" alt="" coords="452,71,655,112"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a49362710ce41db0c6afc8e8bf529ea4d" title="MainWnd::OnOptionsLanguage\lOther" alt="" coords="452,136,655,177"/>
+<area shape="rect" id="node6" href="$class_v_b_a.html#aed48a7db8cc5b65a1e495661f6040915" title="VBA::loadSettings" alt="" coords="489,202,618,229"/>
+<area shape="rect" id="node7" href="$class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="703,202,825,229"/>
+</map>

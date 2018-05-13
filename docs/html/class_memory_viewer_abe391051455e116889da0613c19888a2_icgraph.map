@@ -1,0 +1,11 @@
+<map id="MemoryViewer::setAddress" name="MemoryViewer::setAddress">
+<area shape="rect" id="node2" href="$class_g_b_memory_viewer_dlg.html#ade5919e22370d16bb0457a79f81d5877" title="GBMemoryViewerDlg::OnGo" alt="" coords="249,5,437,32"/>
+<area shape="rect" id="node3" href="$class_g_b_memory_viewer_dlg.html#a4e089b7216a76ba514f26f061f53fd8c" title="GBMemoryViewerDlg::\lOnSelchangeAddresses" alt="" coords="261,57,424,98"/>
+<area shape="rect" id="node4" href="$class_memory_viewer.html#ab371c01b5cc7069561f448e46e7d44a4" title="MemoryViewer::OnVScroll" alt="" coords="255,123,430,149"/>
+<area shape="rect" id="node5" href="$class_memory_viewer.html#a0a371c925fc00dd78fedd8d21ebc8cdc" title="MemoryViewer::moveAddress" alt="" coords="245,173,440,200"/>
+<area shape="rect" id="node9" href="$class_memory_viewer_dlg.html#aa21f28b3490b179e79e3a3687fef0c45" title="MemoryViewerDlg::OnGo" alt="" coords="258,224,427,251"/>
+<area shape="rect" id="node10" href="$class_memory_viewer_dlg.html#ab7624247967998f1973da99a035a28e3" title="MemoryViewerDlg::OnSelchange\lAddresses" alt="" coords="236,275,449,317"/>
+<area shape="rect" id="node6" href="$class_memory_viewer.html#afc4781b16d21212f67e5dd299c537718" title="MemoryViewer::OnKeyDown" alt="" coords="497,148,685,175"/>
+<area shape="rect" id="node7" href="$class_memory_viewer.html#ab3cf8e1e2318a15b1e7c783b9a7bad80" title="MemoryViewer::OnEditInput" alt="" coords="499,199,683,225"/>
+<area shape="rect" id="node8" href="$class_memory_viewer.html#a47fb6730b742faedeafbb622e008317e" title="MemoryViewer::OnWMChar" alt="" coords="733,199,917,225"/>
+</map>

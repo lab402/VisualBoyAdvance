@@ -1,0 +1,9 @@
+<map id="MainWnd::OnFileTogglemenu" name="MainWnd::OnFileTogglemenu">
+<area shape="rect" id="node2" href="$class_v_b_a.html#accf3451bad473b90400193636cd27c96" title="VBA::updateMenuBar" alt="" coords="259,5,407,32"/>
+<area shape="rect" id="node5" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="247,56,420,83"/>
+<area shape="rect" id="node6" href="$class_v_b_a.html#acb822065cba8b15810c5a61fd05ca831" title="VBA::adjustDestRect" alt="" coords="260,107,407,133"/>
+<area shape="rect" id="node8" href="$class_i_display.html#ad0b4ba99f59edd7a6857e3b3941b3ba2" title="IDisplay::resize" alt="" coords="278,157,389,184"/>
+<area shape="rect" id="node3" href="$_win_res_util_8cpp.html#a455bea54e4ebdd67b568795f019b8d30" title="winResLoadMenu" alt="" coords="472,5,596,32"/>
+<area shape="rect" id="node4" href="$_win_res_util_8cpp.html#aef09e649be3760e91ac176df7a0f4473" title="winResGetResource" alt="" coords="648,5,788,32"/>
+<area shape="rect" id="node7" href="$class_c_skin.html#a8fe20ca67965deec6e5e29a2bf467933" title="CSkin::GetBlitRect" alt="" coords="468,107,600,133"/>
+</map>

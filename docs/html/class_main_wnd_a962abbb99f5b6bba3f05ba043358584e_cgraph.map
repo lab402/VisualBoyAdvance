@@ -1,0 +1,13 @@
+<map id="MainWnd::OnFileSave" name="MainWnd::OnFileSave">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="205,5,378,32"/>
+<area shape="rect" id="node4" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="220,56,363,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="206,107,377,133"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="216,157,367,184"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a7adc4aa2a10246fa13637e9d0870843d" title="MainWnd::winLoadFilter" alt="" coords="211,208,372,235"/>
+<area shape="rect" id="node8" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="450,233,577,260"/>
+<area shape="rect" id="node9" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="231,309,352,336"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#a2ce340f4f9cfbb4ec41be6ce2e33ed23" title="MainWnd::writeSaveGame" alt="" coords="204,360,379,387"/>
+<area shape="rect" id="node11" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="215,411,367,437"/>
+<area shape="rect" id="node12" href="$system_8cpp.html#a0412545bfaba2004bf7a42d779ea5659" title="systemScreenMessage" alt="" coords="212,461,371,488"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="427,5,600,32"/>
+</map>

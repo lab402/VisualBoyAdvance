@@ -1,37 +1,141 @@
 \hypertarget{struct_object}{}\section{Object 구조체 참조}
 \label{struct_object}\index{Object@{Object}}
+
+
+{\ttfamily \#include $<$elf.\+h$>$}
+
+
+
+Object에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{struct_object__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{struct_object_a1792dbef505e3bb7eab133117b431010}\label{struct_object_a1792dbef505e3bb7eab133117b431010}} 
-char $\ast$ {\bfseries name}
+char $\ast$ \mbox{\hyperlink{struct_object_a1792dbef505e3bb7eab133117b431010}{name}}
 \item 
-\mbox{\Hypertarget{struct_object_a378b52bc4620a2ec9df0f0d3d0a1b48a}\label{struct_object_a378b52bc4620a2ec9df0f0d3d0a1b48a}} 
-int {\bfseries file}
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{struct_object_a378b52bc4620a2ec9df0f0d3d0a1b48a}{file}}
 \item 
-\mbox{\Hypertarget{struct_object_aa3f350a46fefbb0a82c0a00dede2294a}\label{struct_object_aa3f350a46fefbb0a82c0a00dede2294a}} 
-int {\bfseries line}
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{struct_object_aa3f350a46fefbb0a82c0a00dede2294a}{line}}
 \item 
-\mbox{\Hypertarget{struct_object_add5f5917bb52d63d6b80e56c8f48ba59}\label{struct_object_add5f5917bb52d63d6b80e56c8f48ba59}} 
-bool {\bfseries external}
+bool \mbox{\hyperlink{struct_object_add5f5917bb52d63d6b80e56c8f48ba59}{external}}
 \item 
-\mbox{\Hypertarget{struct_object_ae0e4e287e6fcefa00b8ae4e4c127ffa9}\label{struct_object_ae0e4e287e6fcefa00b8ae4e4c127ffa9}} 
-\mbox{\hyperlink{struct_type}{Type}} $\ast$ {\bfseries type}
+\mbox{\hyperlink{struct_type}{Type}} $\ast$ \mbox{\hyperlink{struct_object_ae0e4e287e6fcefa00b8ae4e4c127ffa9}{type}}
 \item 
-\mbox{\Hypertarget{struct_object_ad1adf7cf51dfe7a95d2802696f93bd0f}\label{struct_object_ad1adf7cf51dfe7a95d2802696f93bd0f}} 
-\mbox{\hyperlink{struct_e_l_f_block}{E\+L\+F\+Block}} $\ast$ {\bfseries location}
+\mbox{\hyperlink{struct_e_l_f_block}{E\+L\+F\+Block}} $\ast$ \mbox{\hyperlink{struct_object_ad1adf7cf51dfe7a95d2802696f93bd0f}{location}}
 \item 
-\mbox{\Hypertarget{struct_object_a15512a3ed1b2415c37a5d240a215cbb4}\label{struct_object_a15512a3ed1b2415c37a5d240a215cbb4}} 
-u32 {\bfseries start\+Scope}
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{struct_object_a15512a3ed1b2415c37a5d240a215cbb4}{start\+Scope}}
 \item 
-\mbox{\Hypertarget{struct_object_a897fd61737cc389e4660eb6df0f54a4f}\label{struct_object_a897fd61737cc389e4660eb6df0f54a4f}} 
-u32 {\bfseries end\+Scope}
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{struct_object_a897fd61737cc389e4660eb6df0f54a4f}{end\+Scope}}
 \item 
-\mbox{\Hypertarget{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}\label{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}} 
-\mbox{\hyperlink{struct_object}{Object}} $\ast$ {\bfseries next}
+\mbox{\hyperlink{struct_object}{Object}} $\ast$ \mbox{\hyperlink{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}{next}}
 \end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+elf.\+h 파일의 181 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_object_a897fd61737cc389e4660eb6df0f54a4f}\label{struct_object_a897fd61737cc389e4660eb6df0f54a4f}} 
+\index{Object@{Object}!end\+Scope@{end\+Scope}}
+\index{end\+Scope@{end\+Scope}!Object@{Object}}
+\subsubsection{\texorpdfstring{end\+Scope}{endScope}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} Object\+::end\+Scope}
+
+
+
+elf.\+h 파일의 189 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_object_add5f5917bb52d63d6b80e56c8f48ba59}\label{struct_object_add5f5917bb52d63d6b80e56c8f48ba59}} 
+\index{Object@{Object}!external@{external}}
+\index{external@{external}!Object@{Object}}
+\subsubsection{\texorpdfstring{external}{external}}
+{\footnotesize\ttfamily bool Object\+::external}
+
+
+
+elf.\+h 파일의 185 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_object_a378b52bc4620a2ec9df0f0d3d0a1b48a}\label{struct_object_a378b52bc4620a2ec9df0f0d3d0a1b48a}} 
+\index{Object@{Object}!file@{file}}
+\index{file@{file}!Object@{Object}}
+\subsubsection{\texorpdfstring{file}{file}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Object\+::file}
+
+
+
+elf.\+h 파일의 183 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_object_aa3f350a46fefbb0a82c0a00dede2294a}\label{struct_object_aa3f350a46fefbb0a82c0a00dede2294a}} 
+\index{Object@{Object}!line@{line}}
+\index{line@{line}!Object@{Object}}
+\subsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Object\+::line}
+
+
+
+elf.\+h 파일의 184 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_object_ad1adf7cf51dfe7a95d2802696f93bd0f}\label{struct_object_ad1adf7cf51dfe7a95d2802696f93bd0f}} 
+\index{Object@{Object}!location@{location}}
+\index{location@{location}!Object@{Object}}
+\subsubsection{\texorpdfstring{location}{location}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_e_l_f_block}{E\+L\+F\+Block}}$\ast$ Object\+::location}
+
+
+
+elf.\+h 파일의 187 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_object_a1792dbef505e3bb7eab133117b431010}\label{struct_object_a1792dbef505e3bb7eab133117b431010}} 
+\index{Object@{Object}!name@{name}}
+\index{name@{name}!Object@{Object}}
+\subsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily char$\ast$ Object\+::name}
+
+
+
+elf.\+h 파일의 182 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}\label{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}} 
+\index{Object@{Object}!next@{next}}
+\index{next@{next}!Object@{Object}}
+\subsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_object}{Object}}$\ast$ Object\+::next}
+
+
+
+elf.\+h 파일의 190 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_object_a15512a3ed1b2415c37a5d240a215cbb4}\label{struct_object_a15512a3ed1b2415c37a5d240a215cbb4}} 
+\index{Object@{Object}!start\+Scope@{start\+Scope}}
+\index{start\+Scope@{start\+Scope}!Object@{Object}}
+\subsubsection{\texorpdfstring{start\+Scope}{startScope}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} Object\+::start\+Scope}
+
+
+
+elf.\+h 파일의 188 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_object_ae0e4e287e6fcefa00b8ae4e4c127ffa9}\label{struct_object_ae0e4e287e6fcefa00b8ae4e4c127ffa9}} 
+\index{Object@{Object}!type@{type}}
+\index{type@{type}!Object@{Object}}
+\subsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_type}{Type}}$\ast$ Object\+::type}
+
+
+
+elf.\+h 파일의 186 번째 라인에서 정의되었습니다.
+
 
 
 이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/elf.\+h\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\mbox{\hyperlink{elf_8h}{elf.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="ColorButton::setColor" name="ColorButton::setColor">
+<area shape="rect" id="node2" href="$class_g_b_color_dlg.html#a1e00eaaeaf344a830f1dd5692e26af1d" title="GBColorDlg::setWhich" alt="" coords="242,81,395,108"/>
+<area shape="rect" id="node7" href="$class_g_b_color_dlg.html#a244aa29f38fa1e813aca166ba63982c6" title="GBColorDlg::OnColorClicked" alt="" coords="225,132,413,159"/>
+<area shape="rect" id="node8" href="$class_g_b_color_dlg.html#aa2227421c4564023d2ded8198b2194d3" title="GBColorDlg::OnSelchangePredefined" alt="" coords="200,183,437,209"/>
+<area shape="rect" id="node3" href="$class_g_b_color_dlg.html#adab1ec84eb5ffdf0489cfe025d01ea7b" title="GBColorDlg::OnReset" alt="" coords="495,5,644,32"/>
+<area shape="rect" id="node4" href="$class_g_b_color_dlg.html#a2648ec830505581e9268be52c4136df6" title="GBColorDlg::OnUser1" alt="" coords="495,56,644,83"/>
+<area shape="rect" id="node5" href="$class_g_b_color_dlg.html#a932281a7e5ed6c1e816dff7403d1ee2e" title="GBColorDlg::OnUser2" alt="" coords="495,107,644,133"/>
+<area shape="rect" id="node6" href="$class_g_b_color_dlg.html#a376d61164a4ef4b8a60a0a3297e5470e" title="GBColorDlg::OnInitDialog" alt="" coords="485,157,653,184"/>
+</map>

@@ -1,0 +1,26 @@
+var _g_b_ainline_8h =
+[
+    [ "CPUReadByteQuick", "_g_b_ainline_8h.html#ab9d417f7a58507a4fd4a574eb00d7106", null ],
+    [ "CPUReadHalfWordQuick", "_g_b_ainline_8h.html#a61e2bc29faecc87495deda27757cc7af", null ],
+    [ "CPUReadMemoryQuick", "_g_b_ainline_8h.html#ae45f9b4e317620550878e8cd94d3e823", null ],
+    [ "cpuDmaHack", "_g_b_ainline_8h.html#ad8603b451773af6832b10ccbf5f6fa06", null ],
+    [ "cpuDmaLast", "_g_b_ainline_8h.html#a579603fb12cee32efa0898455a24c028", null ],
+    [ "cpuEEPROMEnabled", "_g_b_ainline_8h.html#aa1a8baad6736bd22118791b6a2781459", null ],
+    [ "cpuEEPROMSensorEnabled", "_g_b_ainline_8h.html#a2b5934aec711b0a1a6551fb7df7d5b8d", null ],
+    [ "cpuFlashEnabled", "_g_b_ainline_8h.html#a4b0c57198d1f829143cb6be1d67fe748", null ],
+    [ "cpuSramEnabled", "_g_b_ainline_8h.html#af6ba5a07d2ec90a3ebabc37940687e13", null ],
+    [ "cpuTotalTicks", "_g_b_ainline_8h.html#a71538b6f476376486cfab8c41250fb79", null ],
+    [ "myROM", "_g_b_ainline_8h.html#ad70032c1f13d208f14db3245a7535c40", null ],
+    [ "timer0ClockReload", "_g_b_ainline_8h.html#a89bcbecd82246f9ec669069786379d43", null ],
+    [ "timer0On", "_g_b_ainline_8h.html#a63a87c7336dbc7384f408f90cf77cfdc", null ],
+    [ "timer0Ticks", "_g_b_ainline_8h.html#ae0d4a2a332daaaa7c3640676d646c874", null ],
+    [ "timer1ClockReload", "_g_b_ainline_8h.html#a412c994a0ab2f9db4d7abe2c55fcb4b8", null ],
+    [ "timer1On", "_g_b_ainline_8h.html#aa7d55ae1e4dfb3ef72127343234ee6a3", null ],
+    [ "timer1Ticks", "_g_b_ainline_8h.html#aa6f528317b9afd198fcaf36d5eb858b9", null ],
+    [ "timer2ClockReload", "_g_b_ainline_8h.html#a1ac9e5d667d1f015929f07c9482bc1ef", null ],
+    [ "timer2On", "_g_b_ainline_8h.html#a0914fbc3ee5efdee849e705950cd04fa", null ],
+    [ "timer2Ticks", "_g_b_ainline_8h.html#adfdb83d24b9b2d2aa081cb898de21459", null ],
+    [ "timer3ClockReload", "_g_b_ainline_8h.html#aeb1e8e4f0c5c58e688a8d225c6a3dbd1", null ],
+    [ "timer3On", "_g_b_ainline_8h.html#a1c0ae8fbc33ecd90b78748f92cca1a94", null ],
+    [ "timer3Ticks", "_g_b_ainline_8h.html#adcdd4b77e0bc3b64e979f7f10c6423f8", null ]
+];

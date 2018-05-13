@@ -1,0 +1,11 @@
+<map id="MapView::OnSave" name="MapView::OnSave">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a228edf26b0dc4129658c174ee5a3c27c" title="VBA::winLoadFilter" alt="" coords="191,5,324,32"/>
+<area shape="rect" id="node3" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="381,31,508,57"/>
+<area shape="rect" id="node4" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="197,107,318,133"/>
+<area shape="rect" id="node5" href="$class_file_dlg.html#adee4c9560d3c2668654c50970f8e7f12" title="FileDlg::getFilterIndex" alt="" coords="183,157,331,184"/>
+<area shape="rect" id="node6" href="$class_map_view.html#a792d85841dc88e63ab7f31ed6de066d7" title="MapView::saveBMP" alt="" coords="188,208,327,235"/>
+<area shape="rect" id="node9" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="181,259,333,285"/>
+<area shape="rect" id="node10" href="$class_map_view.html#afadc38148227210fd5d8e12c50e7f22d" title="MapView::savePNG" alt="" coords="189,309,326,336"/>
+<area shape="rect" id="node7" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="385,284,504,311"/>
+<area shape="rect" id="node8" href="$_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7" title="utilPutDword" alt="" coords="397,208,492,235"/>
+</map>

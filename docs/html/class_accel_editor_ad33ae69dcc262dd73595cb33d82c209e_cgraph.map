@@ -1,0 +1,6 @@
+<map id="AccelEditor::OnAssign" name="AccelEditor::OnAssign">
+<area shape="rect" id="node2" href="$class_c_keyboard_edit.html#a920dfccebef5e2260e59003e4959ef9f" title="CKeyboardEdit::GetAccelKey" alt="" coords="208,5,403,32"/>
+<area shape="rect" id="node3" href="$class_c_accels_ob.html#a32714a4454d398d3d3a68d1705a76bc5" title="CAccelsOb::IsEqual" alt="" coords="236,56,375,83"/>
+<area shape="rect" id="node4" href="$class_c_accels_ob.html#afaf7510fa1e0707863f6bd469f190de6" title="CAccelsOb::GetString" alt="" coords="230,107,381,133"/>
+<area shape="rect" id="node5" href="$class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593" title="CKeyboardEdit::ResetKey" alt="" coords="218,157,393,184"/>
+</map>

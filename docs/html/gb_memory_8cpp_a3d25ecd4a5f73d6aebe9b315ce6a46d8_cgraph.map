@@ -1,0 +1,4 @@
+<map id="mapperMBC7ReadRAM" name="mapperMBC7ReadRAM">
+<area shape="rect" id="node2" href="$system_8cpp.html#a98be40d27b2b488b73b0344ee7a5c4a7" title="systemGetSensorX" alt="" coords="214,5,349,32"/>
+<area shape="rect" id="node3" href="$system_8cpp.html#a5499890640c80f44388c4dce21d7d69a" title="systemGetSensorY" alt="" coords="213,56,349,83"/>
+</map>

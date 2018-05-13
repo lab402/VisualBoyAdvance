@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_throttle.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,58 +95,248 @@ $(function() {
 <div class="title">Throttle 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_throttle_8h_source.html">Throttle.h</a>&gt;</code></p>
 <div class="dynheader">
 Throttle에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_throttle.png" usemap="#Throttle_map" alt=""/>
-  <map id="Throttle_map" name="Throttle_map">
-</map>
- </div></div>
+<div class="center"><img src="class_throttle__inherit__graph.png" border="0" usemap="#_throttle_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+Throttle에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_throttle__coll__graph.png" border="0" usemap="#_throttle_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:abdcbc5b42292d645e94509c3735773a0"><td class="memItemLeft" align="right" valign="top"><a id="abdcbc5b42292d645e94509c3735773a0"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_THROTTLE
+<tr class="memitem:abdcbc5b42292d645e94509c3735773a0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_throttle.html#abdcbc5b42292d645e94509c3735773a0af868d2e986217a461e4c8a6d70dabbb3">IDD</a> = IDD_THROTTLE
  }</td></tr>
 <tr class="separator:abdcbc5b42292d645e94509c3735773a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:ad87807ba6799b18bfb06e6e7bd3c4b62"><td class="memItemLeft" align="right" valign="top"><a id="ad87807ba6799b18bfb06e6e7bd3c4b62"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Throttle</b> (CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:ad87807ba6799b18bfb06e6e7bd3c4b62"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_throttle.html#ad87807ba6799b18bfb06e6e7bd3c4b62">Throttle</a> (CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:ad87807ba6799b18bfb06e6e7bd3c4b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:aba71c48b95cd2a114625ebb3db55bc0b"><td class="memItemLeft" align="right" valign="top"><a id="aba71c48b95cd2a114625ebb3db55bc0b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_throttle</b></td></tr>
+<tr class="memitem:aba71c48b95cd2a114625ebb3db55bc0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">m_throttle</a></td></tr>
 <tr class="separator:aba71c48b95cd2a114625ebb3db55bc0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a634843a66c6f1f27b70d8313a88765a5"><td class="memItemLeft" align="right" valign="top"><a id="a634843a66c6f1f27b70d8313a88765a5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a634843a66c6f1f27b70d8313a88765a5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_throttle.html#a634843a66c6f1f27b70d8313a88765a5">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a634843a66c6f1f27b70d8313a88765a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac091cd673324246105b4c3d76e25e894"><td class="memItemLeft" align="right" valign="top"><a id="ac091cd673324246105b4c3d76e25e894"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:ac091cd673324246105b4c3d76e25e894"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_throttle.html#ac091cd673324246105b4c3d76e25e894">OnInitDialog</a> ()</td></tr>
 <tr class="separator:ac091cd673324246105b4c3d76e25e894"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a958ff983d0c33bebd3a4035695774eed"><td class="memItemLeft" align="right" valign="top"><a id="a958ff983d0c33bebd3a4035695774eed"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCancel</b> ()</td></tr>
+<tr class="memitem:a958ff983d0c33bebd3a4035695774eed"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_throttle.html#a958ff983d0c33bebd3a4035695774eed">OnCancel</a> ()</td></tr>
 <tr class="separator:a958ff983d0c33bebd3a4035695774eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8947386977fc3c1e47bea6f3ddb07b8"><td class="memItemLeft" align="right" valign="top"><a id="ae8947386977fc3c1e47bea6f3ddb07b8"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOk</b> ()</td></tr>
+<tr class="memitem:ae8947386977fc3c1e47bea6f3ddb07b8"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_throttle.html#ae8947386977fc3c1e47bea6f3ddb07b8">OnOk</a> ()</td></tr>
 <tr class="separator:ae8947386977fc3c1e47bea6f3ddb07b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_throttle_8h_source.html">Throttle.h</a> 파일의 <a class="el" href="_throttle_8h_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="abdcbc5b42292d645e94509c3735773a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdcbc5b42292d645e94509c3735773a0">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="abdcbc5b42292d645e94509c3735773a0af868d2e986217a461e4c8a6d70dabbb3"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_throttle_8h_source.html">Throttle.h</a> 파일의 <a class="el" href="_throttle_8h_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{ <a class="code" href="class_throttle.html#abdcbc5b42292d645e94509c3735773a0af868d2e986217a461e4c8a6d70dabbb3">IDD</a> = <a class="code" href="resource_8h.html#af00c6901f808bab40e1b25a0e14e7e8f">IDD_THROTTLE</a> };</div><div class="ttc" id="resource_8h_html_af00c6901f808bab40e1b25a0e14e7e8f"><div class="ttname"><a href="resource_8h.html#af00c6901f808bab40e1b25a0e14e7e8f">IDD_THROTTLE</a></div><div class="ttdeci">#define IDD_THROTTLE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00087">resource.h:87</a></div></div>
+<div class="ttc" id="class_throttle_html_abdcbc5b42292d645e94509c3735773a0af868d2e986217a461e4c8a6d70dabbb3"><div class="ttname"><a href="class_throttle.html#abdcbc5b42292d645e94509c3735773a0af868d2e986217a461e4c8a6d70dabbb3">Throttle::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8h_source.html#l00040">Throttle.h:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="ad87807ba6799b18bfb06e6e7bd3c4b62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad87807ba6799b18bfb06e6e7bd3c4b62">&#9670;&nbsp;</a></span>Throttle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Throttle::Throttle </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_throttle_8cpp_source.html">Throttle.cpp</a> 파일의 <a class="el" href="_throttle_8cpp_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  : CDialog(<a class="code" href="class_throttle.html#abdcbc5b42292d645e94509c3735773a0af868d2e986217a461e4c8a6d70dabbb3">Throttle::IDD</a>, pParent)</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(Throttle)</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">m_throttle</a> = 0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="ttc" id="class_throttle_html_aba71c48b95cd2a114625ebb3db55bc0b"><div class="ttname"><a href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">Throttle::m_throttle</a></div><div class="ttdeci">int m_throttle</div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8h_source.html#l00041">Throttle.h:41</a></div></div>
+<div class="ttc" id="class_throttle_html_abdcbc5b42292d645e94509c3735773a0af868d2e986217a461e4c8a6d70dabbb3"><div class="ttname"><a href="class_throttle.html#abdcbc5b42292d645e94509c3735773a0af868d2e986217a461e4c8a6d70dabbb3">Throttle::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8h_source.html#l00040">Throttle.h:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a634843a66c6f1f27b70d8313a88765a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634843a66c6f1f27b70d8313a88765a5">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Throttle::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_throttle_8cpp_source.html">Throttle.cpp</a> 파일의 <a class="el" href="_throttle_8cpp_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(Throttle)</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  DDX_Text(pDX, <a class="code" href="resource_8h.html#a56fe47d89724d47f1bcb9147f82c8246">IDC_THROTTLE</a>, <a class="code" href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">m_throttle</a>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="ttc" id="class_throttle_html_aba71c48b95cd2a114625ebb3db55bc0b"><div class="ttname"><a href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">Throttle::m_throttle</a></div><div class="ttdeci">int m_throttle</div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8h_source.html#l00041">Throttle.h:41</a></div></div>
+<div class="ttc" id="resource_8h_html_a56fe47d89724d47f1bcb9147f82c8246"><div class="ttname"><a href="resource_8h.html#a56fe47d89724d47f1bcb9147f82c8246">IDC_THROTTLE</a></div><div class="ttdeci">#define IDC_THROTTLE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00478">resource.h:478</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a958ff983d0c33bebd3a4035695774eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a958ff983d0c33bebd3a4035695774eed">&#9670;&nbsp;</a></span>OnCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Throttle::OnCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_throttle_8cpp_source.html">Throttle.cpp</a> 파일의 <a class="el" href="_throttle_8cpp_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  EndDialog(<span class="keyword">false</span>);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ac091cd673324246105b4c3d76e25e894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac091cd673324246105b4c3d76e25e894">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Throttle::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_throttle_8cpp_source.html">Throttle.cpp</a> 파일의 <a class="el" href="_throttle_8cpp_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  CenterWindow();</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ae8947386977fc3c1e47bea6f3ddb07b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8947386977fc3c1e47bea6f3ddb07b8">&#9670;&nbsp;</a></span>OnOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Throttle::OnOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_throttle_8cpp_source.html">Throttle.cpp</a> 파일의 <a class="el" href="_throttle_8cpp_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  UpdateData();</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">if</span>(m_throttle &lt; 5 || m_throttle &gt; 1000)</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="resource_8h.html#adcc62f18f7b427c2dbf32e08589f19aa">IDS_INVALID_THROTTLE_VALUE</a>, <span class="stringliteral">&quot;Invalid throttle value. Please enter a number between 5 and 1000&quot;</span>);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    EndDialog(<a class="code" href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">m_throttle</a>);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div><div class="ttc" id="class_throttle_html_aba71c48b95cd2a114625ebb3db55bc0b"><div class="ttname"><a href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">Throttle::m_throttle</a></div><div class="ttdeci">int m_throttle</div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8h_source.html#l00041">Throttle.h:41</a></div></div>
+<div class="ttc" id="resource_8h_html_adcc62f18f7b427c2dbf32e08589f19aa"><div class="ttname"><a href="resource_8h.html#adcc62f18f7b427c2dbf32e08589f19aa">IDS_INVALID_THROTTLE_VALUE</a></div><div class="ttdeci">#define IDS_INVALID_THROTTLE_VALUE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00364">resource.h:364</a></div></div>
+<div class="ttc" id="system_8cpp_html_a747a9cb8e015a3d45cca636b5bd0fc69"><div class="ttname"><a href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a></div><div class="ttdeci">void systemMessage(int _iId, const char *_csFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00073">system.cpp:73</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_throttle_ae8947386977fc3c1e47bea6f3ddb07b8_cgraph.png" border="0" usemap="#class_throttle_ae8947386977fc3c1e47bea6f3ddb07b8_cgraph" alt=""/></div>
+<map name="class_throttle_ae8947386977fc3c1e47bea6f3ddb07b8_cgraph" id="class_throttle_ae8947386977fc3c1e47bea6f3ddb07b8_cgraph">
+<area shape="rect" id="node2" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="160,5,279,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="aba71c48b95cd2a114625ebb3db55bc0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba71c48b95cd2a114625ebb3db55bc0b">&#9670;&nbsp;</a></span>m_throttle</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> Throttle::m_throttle</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_throttle_8h_source.html">Throttle.h</a> 파일의 <a class="el" href="_throttle_8h_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_throttle_8h_source.html">Throttle.h</a></li>
-<li>src/win32/Throttle.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_throttle_8h_source.html">Throttle.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_throttle_8cpp_source.html">Throttle.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_throttle.html">Throttle</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

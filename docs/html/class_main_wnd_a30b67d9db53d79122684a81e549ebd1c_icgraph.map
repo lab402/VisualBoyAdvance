@@ -1,0 +1,8 @@
+<map id="MainWnd::updateSoundChannels" name="MainWnd::updateSoundChannels">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a6a21a6e3756553868f1792f371e7c468" title="MainWnd::OnOptionsSoundChannel1" alt="" coords="279,5,517,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a4f31de4544cb10e41968ccabfec95422" title="MainWnd::OnOptionsSoundChannel2" alt="" coords="279,56,517,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#afa834c32c467c4c0e60aeea35034336b" title="MainWnd::OnOptionsSoundChannel3" alt="" coords="279,107,517,133"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a1c6886c26731e96cff8cd50c16c42101" title="MainWnd::OnOptionsSoundChannel4" alt="" coords="279,157,517,184"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#adf862907e5764ee38c51cdd192dc5bae" title="MainWnd::OnOptionsSoundDirectsounda" alt="" coords="268,208,528,235"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a19e333bd762c2497d3ff416d21c3c0c0" title="MainWnd::OnOptionsSoundDirectsoundb" alt="" coords="268,259,528,285"/>
+</map>

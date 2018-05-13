@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_input.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -68,58 +92,554 @@ $(function() {
 <div class="title">Input 클래스 참조<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="win32_2input_8h_source.html">Input.h</a>&gt;</code></p>
 <div class="dynheader">
 Input에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_input.png" usemap="#Input_map" alt=""/>
-  <map id="Input_map" name="Input_map">
-<area href="class_direct_input.html" alt="DirectInput" shape="rect" coords="0,56,73,80"/>
+<div class="center"><img src="class_input__inherit__graph.png" border="0" usemap="#_input_inherit__map" alt="Inheritance graph"/></div>
+<map name="_input_inherit__map" id="_input_inherit__map">
+<area shape="rect" id="node2" href="class_direct_input.html" title="{DirectInput\n||+ checkDevices()\l+ DirectInput()\l+ ~DirectInput()\l+ initialize()\l+ readDevices()\l+ readDevice()\l+ getKeyName()\l+ checkKeys()\l+ checkMotionKeys()\l+ activate()\l+ loadSettings()\l+ saveSettings()\l}" alt="" coords="5,292,152,531"/>
 </map>
- </div></div>
+</div>
+<div class="dynheader">
+Input에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input__coll__graph.png" border="0" usemap="#_input_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:affd45f0c278a6ff71b7ae1a567a3dc1c"><td class="memItemLeft" align="right" valign="top"><a id="affd45f0c278a6ff71b7ae1a567a3dc1c"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> ()=0</td></tr>
+<tr class="memitem:abae3f379d3f157cf42dc857309832dba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#abae3f379d3f157cf42dc857309832dba">Input</a> ()</td></tr>
+<tr class="separator:abae3f379d3f157cf42dc857309832dba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a230646fa6e6433b4d9ac3535b7d52087"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a230646fa6e6433b4d9ac3535b7d52087">~Input</a> ()</td></tr>
+<tr class="separator:a230646fa6e6433b4d9ac3535b7d52087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affd45f0c278a6ff71b7ae1a567a3dc1c"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#affd45f0c278a6ff71b7ae1a567a3dc1c">initialize</a> ()=0</td></tr>
 <tr class="separator:affd45f0c278a6ff71b7ae1a567a3dc1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a422dbf7bc783378d47eddec93d1f565a"><td class="memItemLeft" align="right" valign="top"><a id="a422dbf7bc783378d47eddec93d1f565a"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>readDevices</b> ()=0</td></tr>
+<tr class="memitem:a422dbf7bc783378d47eddec93d1f565a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a422dbf7bc783378d47eddec93d1f565a">readDevices</a> ()=0</td></tr>
 <tr class="separator:a422dbf7bc783378d47eddec93d1f565a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57a47977bda8fcf6de237401b4c2e0dd"><td class="memItemLeft" align="right" valign="top"><a id="a57a47977bda8fcf6de237401b4c2e0dd"></a>
-virtual u32&#160;</td><td class="memItemRight" valign="bottom"><b>readDevice</b> (int which)=0</td></tr>
+<tr class="memitem:a57a47977bda8fcf6de237401b4c2e0dd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a57a47977bda8fcf6de237401b4c2e0dd">readDevice</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> which)=0</td></tr>
 <tr class="separator:a57a47977bda8fcf6de237401b4c2e0dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c4ec8a744b040657e220480987cd8bf"><td class="memItemLeft" align="right" valign="top"><a id="a2c4ec8a744b040657e220480987cd8bf"></a>
-virtual CString&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyName</b> (LONG_PTR key)=0</td></tr>
+<tr class="memitem:a2c4ec8a744b040657e220480987cd8bf"><td class="memItemLeft" align="right" valign="top">virtual CString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a> (LONG_PTR key)=0</td></tr>
 <tr class="separator:a2c4ec8a744b040657e220480987cd8bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91418a5762e6e50aa4f59e4ce92d2dfa"><td class="memItemLeft" align="right" valign="top"><a id="a91418a5762e6e50aa4f59e4ce92d2dfa"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>checkKeys</b> ()=0</td></tr>
+<tr class="memitem:a91418a5762e6e50aa4f59e4ce92d2dfa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa">checkKeys</a> ()=0</td></tr>
 <tr class="separator:a91418a5762e6e50aa4f59e4ce92d2dfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac8f25a1a6a7e0bd54e5d50b9b774844"><td class="memItemLeft" align="right" valign="top"><a id="aac8f25a1a6a7e0bd54e5d50b9b774844"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>checkMotionKeys</b> ()=0</td></tr>
+<tr class="memitem:aac8f25a1a6a7e0bd54e5d50b9b774844"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#aac8f25a1a6a7e0bd54e5d50b9b774844">checkMotionKeys</a> ()=0</td></tr>
 <tr class="separator:aac8f25a1a6a7e0bd54e5d50b9b774844"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a6ef57ff2638f545380618b2d3fdf9d"><td class="memItemLeft" align="right" valign="top"><a id="a7a6ef57ff2638f545380618b2d3fdf9d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>checkDevices</b> ()=0</td></tr>
+<tr class="memitem:a7a6ef57ff2638f545380618b2d3fdf9d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a7a6ef57ff2638f545380618b2d3fdf9d">checkDevices</a> ()=0</td></tr>
 <tr class="separator:a7a6ef57ff2638f545380618b2d3fdf9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5917709c5d9cf1270d430667982895d1"><td class="memItemLeft" align="right" valign="top"><a id="a5917709c5d9cf1270d430667982895d1"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>activate</b> ()=0</td></tr>
+<tr class="memitem:a5917709c5d9cf1270d430667982895d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a5917709c5d9cf1270d430667982895d1">activate</a> ()=0</td></tr>
 <tr class="separator:a5917709c5d9cf1270d430667982895d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a098708c062b906c84ab036c04d447a29"><td class="memItemLeft" align="right" valign="top"><a id="a098708c062b906c84ab036c04d447a29"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>loadSettings</b> ()=0</td></tr>
+<tr class="memitem:a098708c062b906c84ab036c04d447a29"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a098708c062b906c84ab036c04d447a29">loadSettings</a> ()=0</td></tr>
 <tr class="separator:a098708c062b906c84ab036c04d447a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90c42a9d91bf671aaee3d5f611199eec"><td class="memItemLeft" align="right" valign="top"><a id="a90c42a9d91bf671aaee3d5f611199eec"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>saveSettings</b> ()=0</td></tr>
+<tr class="memitem:a90c42a9d91bf671aaee3d5f611199eec"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_input.html#a90c42a9d91bf671aaee3d5f611199eec">saveSettings</a> ()=0</td></tr>
 <tr class="separator:a90c42a9d91bf671aaee3d5f611199eec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="win32_2input_8h_source.html">Input.h</a> 파일의 <a class="el" href="win32_2input_8h_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="abae3f379d3f157cf42dc857309832dba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abae3f379d3f157cf42dc857309832dba">&#9670;&nbsp;</a></span>Input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Input::Input </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="win32_2input_8h_source.html">Input.h</a> 파일의 <a class="el" href="win32_2input_8h_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;{};</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a230646fa6e6433b4d9ac3535b7d52087"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a230646fa6e6433b4d9ac3535b7d52087">&#9670;&nbsp;</a></span>~Input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual Input::~Input </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="win32_2input_8h_source.html">Input.h</a> 파일의 <a class="el" href="win32_2input_8h_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{};</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a5917709c5d9cf1270d430667982895d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5917709c5d9cf1270d430667982895d1">&#9670;&nbsp;</a></span>activate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Input::activate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#a4d81c1ee99e76949dac0acac4bad0937">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_a5917709c5d9cf1270d430667982895d1_icgraph.png" border="0" usemap="#class_input_a5917709c5d9cf1270d430667982895d1_icgraph" alt=""/></div>
+<map name="class_input_a5917709c5d9cf1270d430667982895d1_icgraph" id="class_input_a5917709c5d9cf1270d430667982895d1_icgraph">
+<area shape="rect" id="node2" href="class_main_wnd.html#a13b06fced945b76eb11328fb66f70123" title="MainWnd::OnActivate" alt="" coords="156,5,304,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7a6ef57ff2638f545380618b2d3fdf9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a6ef57ff2638f545380618b2d3fdf9d">&#9670;&nbsp;</a></span>checkDevices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Input::checkDevices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#a59a88d57b359bd26c800579edeb19419">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_a7a6ef57ff2638f545380618b2d3fdf9d_icgraph.png" border="0" usemap="#class_input_a7a6ef57ff2638f545380618b2d3fdf9d_icgraph" alt=""/></div>
+<map name="class_input_a7a6ef57ff2638f545380618b2d3fdf9d_icgraph" id="class_input_a7a6ef57ff2638f545380618b2d3fdf9d_icgraph">
+<area shape="rect" id="node2" href="class_joypad_config.html#af55cd03e7ed293d17d338858285a8087" title="JoypadConfig::OnTimer" alt="" coords="192,5,348,32"/>
+<area shape="rect" id="node3" href="class_motion_config.html#ac787a62c63e00f55582bb4695bbd04d6" title="MotionConfig::OnTimer" alt="" coords="193,56,347,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a91418a5762e6e50aa4f59e4ce92d2dfa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91418a5762e6e50aa4f59e4ce92d2dfa">&#9670;&nbsp;</a></span>checkKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Input::checkKeys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#acecffb99132b93e827373a3683ce342b">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_a91418a5762e6e50aa4f59e4ce92d2dfa_icgraph.png" border="0" usemap="#class_input_a91418a5762e6e50aa4f59e4ce92d2dfa_icgraph" alt=""/></div>
+<map name="class_input_a91418a5762e6e50aa4f59e4ce92d2dfa_icgraph" id="class_input_a91418a5762e6e50aa4f59e4ce92d2dfa_icgraph">
+<area shape="rect" id="node2" href="class_joypad_config.html#a80b628b0368a606e47d6ecd2d1e76624" title="JoypadConfig::OnOk" alt="" coords="176,308,317,334"/>
+<area shape="rect" id="node3" href="class_motion_config.html#a252355cb318ff1f62c63d89941b2758e" title="MotionConfig::OnOk" alt="" coords="177,358,316,385"/>
+<area shape="rect" id="node4" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="365,409,533,436"/>
+<area shape="rect" id="node23" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="639,569,825,596"/>
+<area shape="rect" id="node32" href="class_v_b_a.html#ac19c75e259950ddd9bb5e97d73203ebb" title="VBA::initInput" alt="" coords="195,409,298,436"/>
+<area shape="rect" id="node5" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="667,234,797,261"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="581,285,883,312"/>
+<area shape="rect" id="node12" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="631,336,833,378"/>
+<area shape="rect" id="node13" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="631,402,833,443"/>
+<area shape="rect" id="node14" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="663,468,801,494"/>
+<area shape="rect" id="node15" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="655,133,809,160"/>
+<area shape="rect" id="node6" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="973,310,1131,337"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="975,361,1129,388"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="959,412,1145,438"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="949,209,1155,236"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="931,260,1173,286"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="953,158,1151,185"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="932,57,1172,84"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="962,108,1142,134"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="1221,184,1511,210"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="1221,234,1511,261"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="1221,133,1511,160"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="1277,82,1455,109"/>
+<area shape="rect" id="node24" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="962,569,1142,596"/>
+<area shape="rect" id="node25" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="1224,477,1508,504"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="1234,528,1498,570"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="1234,594,1498,635"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="1234,659,1498,700"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="1221,725,1511,752"/>
+<area shape="rect" id="node30" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="1307,426,1425,453"/>
+<area shape="rect" id="node31" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1559,217,1681,244"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aac8f25a1a6a7e0bd54e5d50b9b774844"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac8f25a1a6a7e0bd54e5d50b9b774844">&#9670;&nbsp;</a></span>checkMotionKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Input::checkMotionKeys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#a6e54dc09ff20e12dfe98a24607172c34">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_aac8f25a1a6a7e0bd54e5d50b9b774844_icgraph.png" border="0" usemap="#class_input_aac8f25a1a6a7e0bd54e5d50b9b774844_icgraph" alt=""/></div>
+<map name="class_input_aac8f25a1a6a7e0bd54e5d50b9b774844_icgraph" id="class_input_aac8f25a1a6a7e0bd54e5d50b9b774844_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#aa9261eefa083d6e37e2f6ce4a84d882c" title="systemUpdateMotionSensor" alt="" coords="216,5,403,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2c4ec8a744b040657e220480987cd8bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c4ec8a744b040657e220480987cd8bf">&#9670;&nbsp;</a></span>getKeyName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual CString Input::getKeyName </td>
+          <td>(</td>
+          <td class="paramtype">LONG_PTR&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#a8ea2797da0b1e806227628804591f63d">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_a2c4ec8a744b040657e220480987cd8bf_icgraph.png" border="0" usemap="#class_input_a2c4ec8a744b040657e220480987cd8bf_icgraph" alt=""/></div>
+<map name="class_input_a2c4ec8a744b040657e220480987cd8bf_icgraph" id="class_input_a2c4ec8a744b040657e220480987cd8bf_icgraph">
+<area shape="rect" id="node2" href="class_joypad_edit_control.html#a26c5c6132fe22f6947adc741c930504e" title="JoypadEditControl::\lOnJoyConfig" alt="" coords="208,5,343,47"/>
+<area shape="rect" id="node3" href="class_joypad_config.html#afc8d09942cc5d7ff9e69e27a98ff2430" title="JoypadConfig::OnInitDialog" alt="" coords="187,71,364,98"/>
+<area shape="rect" id="node4" href="class_motion_config.html#ac1e282a94d14b433764eeae95b4cab6b" title="MotionConfig::OnInitDialog" alt="" coords="188,122,363,149"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="affd45f0c278a6ff71b7ae1a567a3dc1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affd45f0c278a6ff71b7ae1a567a3dc1c">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Input::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#a56c3e7924e9d115a2b20b31ee415d544">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_affd45f0c278a6ff71b7ae1a567a3dc1c_icgraph.png" border="0" usemap="#class_input_affd45f0c278a6ff71b7ae1a567a3dc1c_icgraph" alt=""/></div>
+<map name="class_input_affd45f0c278a6ff71b7ae1a567a3dc1c_icgraph" id="class_input_affd45f0c278a6ff71b7ae1a567a3dc1c_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#ac19c75e259950ddd9bb5e97d73203ebb" title="VBA::initInput" alt="" coords="159,344,261,371"/>
+<area shape="rect" id="node3" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1503,137,1625,164"/>
+<area shape="rect" id="node4" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="309,344,477,371"/>
+<area shape="rect" id="node23" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="583,548,769,575"/>
+<area shape="rect" id="node5" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="611,264,741,291"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="525,315,827,341"/>
+<area shape="rect" id="node12" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="575,366,777,407"/>
+<area shape="rect" id="node13" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="575,431,777,473"/>
+<area shape="rect" id="node14" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="607,497,745,524"/>
+<area shape="rect" id="node15" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="599,137,753,164"/>
+<area shape="rect" id="node6" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="917,365,1075,392"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="919,416,1073,443"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="903,467,1089,493"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="893,264,1099,291"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="875,315,1117,341"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="897,163,1095,189"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="876,61,1116,88"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="906,112,1086,139"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="1165,163,1455,189"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="1165,213,1455,240"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="1165,112,1455,139"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="1221,61,1399,88"/>
+<area shape="rect" id="node24" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="906,533,1086,560"/>
+<area shape="rect" id="node25" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="1168,409,1452,436"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="1178,461,1442,502"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="1178,526,1442,567"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="1178,591,1442,633"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="1165,657,1455,684"/>
+<area shape="rect" id="node30" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="1251,264,1369,291"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a098708c062b906c84ab036c04d447a29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098708c062b906c84ab036c04d447a29">&#9670;&nbsp;</a></span>loadSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Input::loadSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#a4b63243a3581158956baf495a0dee51e">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_a098708c062b906c84ab036c04d447a29_icgraph.png" border="0" usemap="#class_input_a098708c062b906c84ab036c04d447a29_icgraph" alt=""/></div>
+<map name="class_input_a098708c062b906c84ab036c04d447a29_icgraph" id="class_input_a098708c062b906c84ab036c04d447a29_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#ac19c75e259950ddd9bb5e97d73203ebb" title="VBA::initInput" alt="" coords="184,344,287,371"/>
+<area shape="rect" id="node3" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1528,137,1651,164"/>
+<area shape="rect" id="node4" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="335,344,503,371"/>
+<area shape="rect" id="node23" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="608,548,795,575"/>
+<area shape="rect" id="node5" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="637,264,766,291"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="551,315,852,341"/>
+<area shape="rect" id="node12" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="600,366,803,407"/>
+<area shape="rect" id="node13" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="600,431,803,473"/>
+<area shape="rect" id="node14" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="633,497,770,524"/>
+<area shape="rect" id="node15" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="624,137,779,164"/>
+<area shape="rect" id="node6" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="943,365,1100,392"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="944,416,1099,443"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="929,467,1114,493"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="918,264,1125,291"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="900,315,1143,341"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="922,163,1121,189"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="901,61,1141,88"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="931,112,1111,139"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="1191,163,1480,189"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="1191,213,1480,240"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="1191,112,1480,139"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="1246,61,1425,88"/>
+<area shape="rect" id="node24" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="931,533,1111,560"/>
+<area shape="rect" id="node25" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="1193,409,1477,436"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="1203,461,1467,502"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="1203,526,1467,567"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="1203,591,1467,633"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="1191,657,1480,684"/>
+<area shape="rect" id="node30" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="1277,264,1394,291"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a57a47977bda8fcf6de237401b4c2e0dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a47977bda8fcf6de237401b4c2e0dd">&#9670;&nbsp;</a></span>readDevice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> Input::readDevice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>which</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#af7d74c03d302905eaa06e88ab37b7dac">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_a57a47977bda8fcf6de237401b4c2e0dd_icgraph.png" border="0" usemap="#class_input_a57a47977bda8fcf6de237401b4c2e0dd_icgraph" alt=""/></div>
+<map name="class_input_a57a47977bda8fcf6de237401b4c2e0dd_icgraph" id="class_input_a57a47977bda8fcf6de237401b4c2e0dd_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#a9d1313081bb58fa96da076854bc2aaa1" title="systemReadJoypad" alt="" coords="175,5,311,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a422dbf7bc783378d47eddec93d1f565a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a422dbf7bc783378d47eddec93d1f565a">&#9670;&nbsp;</a></span>readDevices()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool Input::readDevices </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#a53a2984e75989b381fdae4c8c33f5c32">DirectInput</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_input_a422dbf7bc783378d47eddec93d1f565a_icgraph.png" border="0" usemap="#class_input_a422dbf7bc783378d47eddec93d1f565a_icgraph" alt=""/></div>
+<map name="class_input_a422dbf7bc783378d47eddec93d1f565a_icgraph" id="class_input_a422dbf7bc783378d47eddec93d1f565a_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#a24194cb2b20ad5c912f4998dffe67bc0" title="systemReadJoypads" alt="" coords="181,5,324,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a90c42a9d91bf671aaee3d5f611199eec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90c42a9d91bf671aaee3d5f611199eec">&#9670;&nbsp;</a></span>saveSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Input::saveSettings </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_input.html#aaf3473a97962c8dad1ef6715b5164c9d">DirectInput</a>에서 구현되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="win32_2input_8h_source.html">Input.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="win32_2input_8h_source.html">Input.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_input.html">Input</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

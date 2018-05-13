@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_c_keyboard_edit.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">CKeyboardEdit 멤버 목록</div>  </div>
@@ -68,23 +92,26 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>CKeyboardEdit</b>() (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DisplayKeyboardString</b>() (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>GetAccelKey</b>(WORD &amp;wVirtKey, bool &amp;bCtrl, bool &amp;bAlt, bool &amp;bShift) (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_bAltPressed</b> (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_bCtrlPressed</b> (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_bKeyDefined</b> (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_bShiftPressed</b> (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_wVirtKey</b> (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PreTranslateMessage</b>(MSG *pMsg) (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>ResetKey</b>() (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~CKeyboardEdit</b>() (다음에서 정의됨 : <a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a>)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_keyboard_edit.html#a1a1165204f7f3bbfbd997c8cc94c97f8">CKeyboardEdit</a>()</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_keyboard_edit.html#a432e346d4d5285064b5e92ff4c6a0385">DisplayKeyboardString</a>()</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_keyboard_edit.html#a920dfccebef5e2260e59003e4959ef9f">GetAccelKey</a>(WORD &amp;wVirtKey, bool &amp;bCtrl, bool &amp;bAlt, bool &amp;bShift)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_keyboard_edit.html#a724b035848eeca7bebc24e1309afeb6d">m_bAltPressed</a></td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_keyboard_edit.html#a0dbb417bbaaeaa95c00fceaecd210064">m_bCtrlPressed</a></td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_keyboard_edit.html#a9bf24703c8d1a3a019b43dc67c26c3a0">m_bKeyDefined</a></td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_keyboard_edit.html#ac4a4f45be9ef923961ab92a48a28f789">m_bShiftPressed</a></td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_keyboard_edit.html#a6a4efef92e151002720d0d930db29521">m_wVirtKey</a></td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_keyboard_edit.html#a7700247028b07400adf5056c6627e19a">PreTranslateMessage</a>(MSG *pMsg)</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593">ResetKey</a>()</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_c_keyboard_edit.html#aeddf780fee33d17188b5641cd384ab92">~CKeyboardEdit</a>()</td><td class="entry"><a class="el" href="class_c_keyboard_edit.html">CKeyboardEdit</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

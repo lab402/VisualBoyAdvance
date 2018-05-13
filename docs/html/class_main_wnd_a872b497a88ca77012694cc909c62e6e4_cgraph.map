@@ -1,0 +1,9 @@
+<map id="MainWnd::fileOpenSelect" name="MainWnd::fileOpenSelect">
+<area shape="rect" id="node2" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="232,5,375,32"/>
+<area shape="rect" id="node3" href="$_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3" title="regQueryDwordValue" alt="" coords="231,56,375,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a7adc4aa2a10246fa13637e9d0870843d" title="MainWnd::winLoadFilter" alt="" coords="223,107,384,133"/>
+<area shape="rect" id="node5" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="432,132,559,159"/>
+<area shape="rect" id="node6" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="243,208,364,235"/>
+<area shape="rect" id="node7" href="$_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e" title="regSetDwordValue" alt="" coords="239,259,368,285"/>
+<area shape="rect" id="node8" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="227,309,379,336"/>
+</map>

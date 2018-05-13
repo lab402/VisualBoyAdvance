@@ -1,0 +1,6 @@
+<map id="MainWnd::OnOptionsGameboyColors" name="MainWnd::OnOptionsGameboyColors">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="256,5,429,32"/>
+<area shape="rect" id="node4" href="$class_g_b_color_dlg.html#a8f4e8dbf15d1f2d1bab9df384ebf484e" title="GBColorDlg::getWhich" alt="" coords="266,56,419,83"/>
+<area shape="rect" id="node5" href="$class_g_b_color_dlg.html#ab3fe3dff45003cb0483ad90eb42a3052" title="GBColorDlg::getColors" alt="" coords="266,107,419,133"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="477,5,651,32"/>
+</map>

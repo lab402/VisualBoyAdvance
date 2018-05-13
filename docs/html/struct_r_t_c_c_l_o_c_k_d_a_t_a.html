@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_r_t_c_c_l_o_c_k_d_a_t_a.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,52 +92,230 @@ $(function() {
 <div class="title">RTCCLOCKDATA 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+RTCCLOCKDATA에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_r_t_c_c_l_o_c_k_d_a_t_a__coll__graph.png" border="0" usemap="#_r_t_c_c_l_o_c_k_d_a_t_a_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a6761fe56d94421e4d8a684d2dd0acad3"><td class="memItemLeft" align="right" valign="top"><a id="a6761fe56d94421e4d8a684d2dd0acad3"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>byte0</b></td></tr>
+<tr class="memitem:a6761fe56d94421e4d8a684d2dd0acad3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#a6761fe56d94421e4d8a684d2dd0acad3">byte0</a></td></tr>
 <tr class="separator:a6761fe56d94421e4d8a684d2dd0acad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e8628728166853bb0c50a22a1071af8"><td class="memItemLeft" align="right" valign="top"><a id="a7e8628728166853bb0c50a22a1071af8"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>byte1</b></td></tr>
+<tr class="memitem:a7e8628728166853bb0c50a22a1071af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#a7e8628728166853bb0c50a22a1071af8">byte1</a></td></tr>
 <tr class="separator:a7e8628728166853bb0c50a22a1071af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35e3e12280a58eeac5fd27e586c9b57a"><td class="memItemLeft" align="right" valign="top"><a id="a35e3e12280a58eeac5fd27e586c9b57a"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>byte2</b></td></tr>
+<tr class="memitem:a35e3e12280a58eeac5fd27e586c9b57a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#a35e3e12280a58eeac5fd27e586c9b57a">byte2</a></td></tr>
 <tr class="separator:a35e3e12280a58eeac5fd27e586c9b57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a911611e39e00cb0cc98cad454768f888"><td class="memItemLeft" align="right" valign="top"><a id="a911611e39e00cb0cc98cad454768f888"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>command</b></td></tr>
+<tr class="memitem:a911611e39e00cb0cc98cad454768f888"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#a911611e39e00cb0cc98cad454768f888">command</a></td></tr>
 <tr class="separator:a911611e39e00cb0cc98cad454768f888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac87f848e9ad2f8d80c19f25c528f9fe8"><td class="memItemLeft" align="right" valign="top"><a id="ac87f848e9ad2f8d80c19f25c528f9fe8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>dataLen</b></td></tr>
+<tr class="memitem:ac87f848e9ad2f8d80c19f25c528f9fe8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#ac87f848e9ad2f8d80c19f25c528f9fe8">dataLen</a></td></tr>
 <tr class="separator:ac87f848e9ad2f8d80c19f25c528f9fe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a20c0f94e7e275c1d52b18be2886df0df"><td class="memItemLeft" align="right" valign="top"><a id="a20c0f94e7e275c1d52b18be2886df0df"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bits</b></td></tr>
+<tr class="memitem:a20c0f94e7e275c1d52b18be2886df0df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#a20c0f94e7e275c1d52b18be2886df0df">bits</a></td></tr>
 <tr class="separator:a20c0f94e7e275c1d52b18be2886df0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff7d87dd71426276629f84e79cf3e77a"><td class="memItemLeft" align="right" valign="top"><a id="aff7d87dd71426276629f84e79cf3e77a"></a>
-RTCSTATE&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+<tr class="memitem:aff7d87dd71426276629f84e79cf3e77a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_r_t_c_8cpp.html#a54e09f92e494a3c69e989df3d1129367">RTCSTATE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#aff7d87dd71426276629f84e79cf3e77a">state</a></td></tr>
 <tr class="separator:aff7d87dd71426276629f84e79cf3e77a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ba8929e9478b7a19f1d852f1b059ffd"><td class="memItemLeft" align="right" valign="top"><a id="a0ba8929e9478b7a19f1d852f1b059ffd"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>data</b> [12]</td></tr>
+<tr class="memitem:a0ba8929e9478b7a19f1d852f1b059ffd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#a0ba8929e9478b7a19f1d852f1b059ffd">data</a> [12]</td></tr>
 <tr class="separator:a0ba8929e9478b7a19f1d852f1b059ffd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa53127b494b4bcdff480d76c326a3c24"><td class="memItemLeft" align="right" valign="top"><a id="aa53127b494b4bcdff480d76c326a3c24"></a>
-u8&#160;</td><td class="memItemRight" valign="bottom"><b>reserved</b> [12]</td></tr>
+<tr class="memitem:aa53127b494b4bcdff480d76c326a3c24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#aa53127b494b4bcdff480d76c326a3c24">reserved</a> [12]</td></tr>
 <tr class="separator:aa53127b494b4bcdff480d76c326a3c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac98c4aeff33301d5ac6b4161c98c90a7"><td class="memItemLeft" align="right" valign="top"><a id="ac98c4aeff33301d5ac6b4161c98c90a7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>reserved2</b></td></tr>
+<tr class="memitem:ac98c4aeff33301d5ac6b4161c98c90a7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#ac98c4aeff33301d5ac6b4161c98c90a7">reserved2</a></td></tr>
 <tr class="separator:ac98c4aeff33301d5ac6b4161c98c90a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af852b907782adf7d24694ceadaebf008"><td class="memItemLeft" align="right" valign="top"><a id="af852b907782adf7d24694ceadaebf008"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>reserved3</b></td></tr>
+<tr class="memitem:af852b907782adf7d24694ceadaebf008"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html#af852b907782adf7d24694ceadaebf008">reserved3</a></td></tr>
 <tr class="separator:af852b907782adf7d24694ceadaebf008"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a20c0f94e7e275c1d52b18be2886df0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20c0f94e7e275c1d52b18be2886df0df">&#9670;&nbsp;</a></span>bits</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> RTCCLOCKDATA::bits</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6761fe56d94421e4d8a684d2dd0acad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6761fe56d94421e4d8a684d2dd0acad3">&#9670;&nbsp;</a></span>byte0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> RTCCLOCKDATA::byte0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a7e8628728166853bb0c50a22a1071af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e8628728166853bb0c50a22a1071af8">&#9670;&nbsp;</a></span>byte1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> RTCCLOCKDATA::byte1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a35e3e12280a58eeac5fd27e586c9b57a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e3e12280a58eeac5fd27e586c9b57a">&#9670;&nbsp;</a></span>byte2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> RTCCLOCKDATA::byte2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a911611e39e00cb0cc98cad454768f888"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a911611e39e00cb0cc98cad454768f888">&#9670;&nbsp;</a></span>command</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> RTCCLOCKDATA::command</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0ba8929e9478b7a19f1d852f1b059ffd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ba8929e9478b7a19f1d852f1b059ffd">&#9670;&nbsp;</a></span>data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> RTCCLOCKDATA::data[12]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00039">39</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac87f848e9ad2f8d80c19f25c528f9fe8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac87f848e9ad2f8d80c19f25c528f9fe8">&#9670;&nbsp;</a></span>dataLen</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> RTCCLOCKDATA::dataLen</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa53127b494b4bcdff480d76c326a3c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa53127b494b4bcdff480d76c326a3c24">&#9670;&nbsp;</a></span>reserved</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> RTCCLOCKDATA::reserved[12]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac98c4aeff33301d5ac6b4161c98c90a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac98c4aeff33301d5ac6b4161c98c90a7">&#9670;&nbsp;</a></span>reserved2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RTCCLOCKDATA::reserved2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af852b907782adf7d24694ceadaebf008"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af852b907782adf7d24694ceadaebf008">&#9670;&nbsp;</a></span>reserved3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> RTCCLOCKDATA::reserved3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aff7d87dd71426276629f84e79cf3e77a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aff7d87dd71426276629f84e79cf3e77a">&#9670;&nbsp;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_r_t_c_8cpp.html#a54e09f92e494a3c69e989df3d1129367">RTCSTATE</a> RTCCLOCKDATA::state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a> 파일의 <a class="el" href="_r_t_c_8cpp_source.html#l00038">38</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/RTC.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="_r_t_c_8cpp_source.html">RTC.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_r_t_c_c_l_o_c_k_d_a_t_a.html">RTCCLOCKDATA</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

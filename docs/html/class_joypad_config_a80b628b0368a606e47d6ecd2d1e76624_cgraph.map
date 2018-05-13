@@ -1,0 +1,5 @@
+<map id="JoypadConfig::OnOk" name="JoypadConfig::OnOk">
+<area shape="rect" id="node2" href="$class_joypad_config.html#a37ced249f71ab247733787e07085e295" title="JoypadConfig::assignKeys" alt="" coords="195,5,369,32"/>
+<area shape="rect" id="node4" href="$class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa" title="Input::checkKeys" alt="" coords="221,56,343,83"/>
+<area shape="rect" id="node3" href="$class_joypad_config.html#a6fe836465dc6d861d96691c03ad0a636" title="JoypadConfig::assignKey" alt="" coords="417,5,585,32"/>
+</map>

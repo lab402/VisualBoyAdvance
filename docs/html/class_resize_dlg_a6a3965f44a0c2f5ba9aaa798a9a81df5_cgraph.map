@@ -1,0 +1,8 @@
+<map id="ResizeDlg::SetData" name="ResizeDlg::SetData">
+<area shape="rect" id="node2" href="$class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc" title="ResizeDlg::AddDialogData" alt="" coords="195,5,369,32"/>
+<area shape="rect" id="node4" href="$_resize_dlg_8cpp.html#a42fd95f9181ab52619b7bd3e5d51475b" title="ResizeDlgGetItemCount" alt="" coords="201,56,363,83"/>
+<area shape="rect" id="node5" href="$_resize_dlg_8cpp.html#ad4ba4376f50f357ac88b0fd3bfeb1a19" title="ResizeDlgCopyItems" alt="" coords="211,107,353,133"/>
+<area shape="rect" id="node6" href="$_resize_dlg_8cpp.html#a74702acf423eaa66851bd656c737b6ba" title="RegQueryValueExRecursive" alt="" coords="189,157,375,184"/>
+<area shape="rect" id="node3" href="$_resize_dlg_8cpp.html#af86ee86600de84824a5d7b8b3aaed6e8" title="ResizeDlgUpdateGripperRect" alt="" coords="423,5,613,32"/>
+<area shape="rect" id="node7" href="$_resize_dlg_8cpp.html#a37994396c85bf7d224452b133d9e3d6f" title="regGetINIPath" alt="" coords="467,157,569,184"/>
+</map>

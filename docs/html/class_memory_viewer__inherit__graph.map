@@ -1,0 +1,4 @@
+<map id="MemoryViewer" name="MemoryViewer">
+<area shape="rect" id="node3" href="$class_g_b_a_memory_viewer.html" title="{GBAMemoryViewer\n||+ GBAMemoryViewer()\l+ readData()\l+ editData()\l}" alt="" coords="5,535,161,641"/>
+<area shape="rect" id="node4" href="$class_g_b_memory_viewer.html" title="{GBMemoryViewer\n||+ GBMemoryViewer()\l+ readData()\l+ editData()\l}" alt="" coords="186,535,333,641"/>
+</map>

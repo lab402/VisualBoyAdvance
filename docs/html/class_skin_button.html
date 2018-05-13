@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_skin_button.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -69,82 +93,683 @@ $(function() {
 <div class="title">SkinButton 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="skin_button_8h_source.html">skinButton.h</a>&gt;</code></p>
 <div class="dynheader">
 SkinButton에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_skin_button.png" usemap="#SkinButton_map" alt=""/>
-  <map id="SkinButton_map" name="SkinButton_map">
-</map>
- </div></div>
+<div class="center"><img src="class_skin_button__inherit__graph.png" border="0" usemap="#_skin_button_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+SkinButton에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_skin_button__coll__graph.png" border="0" usemap="#_skin_button_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:ad70dc6ed236a2274028c32744e3690bb"><td class="memItemLeft" align="right" valign="top"><a id="ad70dc6ed236a2274028c32744e3690bb"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>CreateButton</b> (const char *, DWORD, const RECT &amp;, CWnd *, UINT)</td></tr>
+<tr class="memitem:aa21793524684d86b0ef80fd9e6d57ba7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#aa21793524684d86b0ef80fd9e6d57ba7">SkinButton</a> ()</td></tr>
+<tr class="separator:aa21793524684d86b0ef80fd9e6d57ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad70dc6ed236a2274028c32744e3690bb"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ad70dc6ed236a2274028c32744e3690bb">CreateButton</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *, DWORD, <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;, CWnd *, UINT)</td></tr>
 <tr class="separator:ad70dc6ed236a2274028c32744e3690bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0546240e8395f52b721a5c95f03de902"><td class="memItemLeft" align="right" valign="top"><a id="a0546240e8395f52b721a5c95f03de902"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetNormalBitmap</b> (HBITMAP)</td></tr>
+<tr class="memitem:a0546240e8395f52b721a5c95f03de902"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#a0546240e8395f52b721a5c95f03de902">SetNormalBitmap</a> (HBITMAP)</td></tr>
 <tr class="separator:a0546240e8395f52b721a5c95f03de902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42845ac49a2d37651369d40a81656c4b"><td class="memItemLeft" align="right" valign="top"><a id="a42845ac49a2d37651369d40a81656c4b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetDownBitmap</b> (HBITMAP)</td></tr>
+<tr class="memitem:a42845ac49a2d37651369d40a81656c4b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#a42845ac49a2d37651369d40a81656c4b">SetDownBitmap</a> (HBITMAP)</td></tr>
 <tr class="separator:a42845ac49a2d37651369d40a81656c4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2f72f089e76e7611f5498deab412d80"><td class="memItemLeft" align="right" valign="top"><a id="aa2f72f089e76e7611f5498deab412d80"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetOverBitmap</b> (HBITMAP)</td></tr>
+<tr class="memitem:aa2f72f089e76e7611f5498deab412d80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#aa2f72f089e76e7611f5498deab412d80">SetOverBitmap</a> (HBITMAP)</td></tr>
 <tr class="separator:aa2f72f089e76e7611f5498deab412d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad260dbe4c70216d2c3d1f8df018c05a7"><td class="memItemLeft" align="right" valign="top"><a id="ad260dbe4c70216d2c3d1f8df018c05a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRect</b> (const RECT &amp;)</td></tr>
+<tr class="memitem:ad260dbe4c70216d2c3d1f8df018c05a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ad260dbe4c70216d2c3d1f8df018c05a7">SetRect</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;)</td></tr>
 <tr class="separator:ad260dbe4c70216d2c3d1f8df018c05a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef7f1ced23d060545eabd5b57175143a"><td class="memItemLeft" align="right" valign="top"><a id="aef7f1ced23d060545eabd5b57175143a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>GetRect</b> (RECT &amp;r)</td></tr>
+<tr class="memitem:aef7f1ced23d060545eabd5b57175143a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#aef7f1ced23d060545eabd5b57175143a">GetRect</a> (RECT &amp;r)</td></tr>
 <tr class="separator:aef7f1ced23d060545eabd5b57175143a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae710ecb793cf09d625d842bb863aa1da"><td class="memItemLeft" align="right" valign="top"><a id="ae710ecb793cf09d625d842bb863aa1da"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetId</b> (const char *)</td></tr>
+<tr class="memitem:ae710ecb793cf09d625d842bb863aa1da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ae710ecb793cf09d625d842bb863aa1da">SetId</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td></tr>
 <tr class="separator:ae710ecb793cf09d625d842bb863aa1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe8db625fad410a12db9eb1a281ba214"><td class="memItemLeft" align="right" valign="top"><a id="abe8db625fad410a12db9eb1a281ba214"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetRegion</b> (HRGN)</td></tr>
+<tr class="memitem:abe8db625fad410a12db9eb1a281ba214"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#abe8db625fad410a12db9eb1a281ba214">SetRegion</a> (HRGN)</td></tr>
 <tr class="separator:abe8db625fad410a12db9eb1a281ba214"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ceb207ee0e34032dd2bc12c3da24e15"><td class="memItemLeft" align="right" valign="top"><a id="a9ceb207ee0e34032dd2bc12c3da24e15"></a>
-afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>OnMouseLeaveMsg</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memitem:a9ceb207ee0e34032dd2bc12c3da24e15"><td class="memItemLeft" align="right" valign="top">afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#a9ceb207ee0e34032dd2bc12c3da24e15">OnMouseLeaveMsg</a> (WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="separator:a9ceb207ee0e34032dd2bc12c3da24e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4654dfa88cab2918e1fcd58223cdd5a"><td class="memItemLeft" align="right" valign="top"><a id="ad4654dfa88cab2918e1fcd58223cdd5a"></a>
-afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>OnMouseMoveMsg</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memitem:ad4654dfa88cab2918e1fcd58223cdd5a"><td class="memItemLeft" align="right" valign="top">afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ad4654dfa88cab2918e1fcd58223cdd5a">OnMouseMoveMsg</a> (WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="separator:ad4654dfa88cab2918e1fcd58223cdd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a824c7ad6169c7373af133b1df439a405"><td class="memItemLeft" align="right" valign="top"><a id="a824c7ad6169c7373af133b1df439a405"></a>
-afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>OnLButtonDownMsg</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memitem:a824c7ad6169c7373af133b1df439a405"><td class="memItemLeft" align="right" valign="top">afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#a824c7ad6169c7373af133b1df439a405">OnLButtonDownMsg</a> (WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="separator:a824c7ad6169c7373af133b1df439a405"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a698952f37a3b9b3dbc3341260c7737bc"><td class="memItemLeft" align="right" valign="top"><a id="a698952f37a3b9b3dbc3341260c7737bc"></a>
-afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>OnLButtonUpMsg</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memitem:a698952f37a3b9b3dbc3341260c7737bc"><td class="memItemLeft" align="right" valign="top">afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#a698952f37a3b9b3dbc3341260c7737bc">OnLButtonUpMsg</a> (WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="separator:a698952f37a3b9b3dbc3341260c7737bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab91c10baa5bcb5f7c0303b8b4e2b2ed3"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ab91c10baa5bcb5f7c0303b8b4e2b2ed3">~SkinButton</a> ()</td></tr>
+<tr class="separator:ab91c10baa5bcb5f7c0303b8b4e2b2ed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:ad046e6e663c72734fb1dc470d67f6ae0"><td class="memItemLeft" align="right" valign="top"><a id="ad046e6e663c72734fb1dc470d67f6ae0"></a>
-afx_msg BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEraseBkgnd</b> (CDC *pDC)</td></tr>
+<tr class="memitem:ad046e6e663c72734fb1dc470d67f6ae0"><td class="memItemLeft" align="right" valign="top">afx_msg BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ad046e6e663c72734fb1dc470d67f6ae0">OnEraseBkgnd</a> (CDC *pDC)</td></tr>
 <tr class="separator:ad046e6e663c72734fb1dc470d67f6ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac508eb8cb788a169c264f48e202aec37"><td class="memItemLeft" align="right" valign="top"><a id="ac508eb8cb788a169c264f48e202aec37"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPaint</b> ()</td></tr>
+<tr class="memitem:ac508eb8cb788a169c264f48e202aec37"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ac508eb8cb788a169c264f48e202aec37">OnPaint</a> ()</td></tr>
 <tr class="separator:ac508eb8cb788a169c264f48e202aec37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab89eac5d77588b47adfcbb9f664568be"><td class="memItemLeft" align="right" valign="top"><a id="ab89eac5d77588b47adfcbb9f664568be"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnKillFocus</b> (CWnd *pNewWnd)</td></tr>
+<tr class="memitem:ab89eac5d77588b47adfcbb9f664568be"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ab89eac5d77588b47adfcbb9f664568be">OnKillFocus</a> (CWnd *pNewWnd)</td></tr>
 <tr class="separator:ab89eac5d77588b47adfcbb9f664568be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad4f3d9812259e8f4a9df22a14ae06c6f"><td class="memItemLeft" align="right" valign="top"><a id="ad4f3d9812259e8f4a9df22a14ae06c6f"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCaptureChanged</b> (CWnd *pWnd)</td></tr>
+<tr class="memitem:ad4f3d9812259e8f4a9df22a14ae06c6f"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#ad4f3d9812259e8f4a9df22a14ae06c6f">OnCaptureChanged</a> (CWnd *pWnd)</td></tr>
 <tr class="separator:ad4f3d9812259e8f4a9df22a14ae06c6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d8e1d9486a36b42c1a1d2a26bde5efa"><td class="memItemLeft" align="right" valign="top"><a id="a1d8e1d9486a36b42c1a1d2a26bde5efa"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnContextMenu</b> (CWnd *pWnd, CPoint point)</td></tr>
+<tr class="memitem:a1d8e1d9486a36b42c1a1d2a26bde5efa"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_skin_button.html#a1d8e1d9486a36b42c1a1d2a26bde5efa">OnContextMenu</a> (CWnd *pWnd, CPoint point)</td></tr>
 <tr class="separator:a1d8e1d9486a36b42c1a1d2a26bde5efa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="skin_button_8h_source.html">skinButton.h</a> 파일의 <a class="el" href="skin_button_8h_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="aa21793524684d86b0ef80fd9e6d57ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa21793524684d86b0ef80fd9e6d57ba7">&#9670;&nbsp;</a></span>SkinButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SkinButton::SkinButton </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  normalBmp = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  downBmp = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  overBmp = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  mouseOver = <span class="keyword">false</span>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordtype">id</span> = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  idCommand = 0;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  region = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  buttonMask = 0;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  menu = -1;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab91c10baa5bcb5f7c0303b8b4e2b2ed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab91c10baa5bcb5f7c0303b8b4e2b2ed3">&#9670;&nbsp;</a></span>~SkinButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SkinButton::~SkinButton </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;{</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  DestroyWindow();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">if</span>(normalBmp) {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    DeleteObject(normalBmp);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    normalBmp = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span>(downBmp) {</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    DeleteObject(downBmp);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    downBmp = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  }</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">if</span>(overBmp) {</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    DeleteObject(overBmp);</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    overBmp = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">if</span>(region) {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    DeleteObject(region);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    region = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ad70dc6ed236a2274028c32744e3690bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad70dc6ed236a2274028c32744e3690bb">&#9670;&nbsp;</a></span>CreateButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL SkinButton::CreateButton </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DWORD&#160;</td>
+          <td class="paramname"><em>style</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;&#160;</td>
+          <td class="paramname"><em>r</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>parent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>id</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00321">321</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;{</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;  <span class="keywordflow">return</span> CWnd::Create(<span class="stringliteral">&quot;BUTTON&quot;</span>,</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                      name,</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                      style|WS_CHILDWINDOW,</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                      r,</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                      parent,</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                      <span class="keywordtype">id</span>);</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_skin_button_ad70dc6ed236a2274028c32744e3690bb_icgraph.png" border="0" usemap="#class_skin_button_ad70dc6ed236a2274028c32744e3690bb_icgraph" alt=""/></div>
+<map name="class_skin_button_ad70dc6ed236a2274028c32744e3690bb_icgraph" id="class_skin_button_ad70dc6ed236a2274028c32744e3690bb_icgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#a4897349a9944fe2e2ee9cfdc4f0baf47" title="CSkin::Hook" alt="" coords="224,245,319,272"/>
+<area shape="rect" id="node3" href="class_v_b_a.html#a4648998e25679df69b15afdccb428b8f" title="VBA::winUpdateSkin" alt="" coords="367,245,509,272"/>
+<area shape="rect" id="node4" href="class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="557,209,820,250"/>
+<area shape="rect" id="node5" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="595,275,782,301"/>
+<area shape="rect" id="node6" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="868,195,1048,221"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="1099,5,1383,32"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="1109,57,1373,98"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="1109,122,1373,163"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="1109,187,1373,229"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="1096,253,1385,280"/>
+<area shape="rect" id="node12" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="1182,304,1299,331"/>
+<area shape="rect" id="node13" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1456,304,1579,331"/>
+<area shape="rect" id="node14" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="1433,355,1601,381"/>
+<area shape="rect" id="node15" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1735,212,1865,239"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1649,263,1951,289"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1699,314,1901,355"/>
+<area shape="rect" id="node23" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1699,379,1901,421"/>
+<area shape="rect" id="node24" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1731,445,1869,472"/>
+<area shape="rect" id="node25" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1723,496,1877,523"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="2041,111,2199,137"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="2043,161,2197,188"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="2027,212,2213,239"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="2017,263,2223,289"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1999,313,2241,340"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="2021,445,2219,472"/>
+<area shape="rect" id="node30" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="2000,496,2240,523"/>
+<area shape="rect" id="node31" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="2030,547,2210,573"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="2289,395,2579,421"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="2289,445,2579,472"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="2289,496,2579,523"/>
+<area shape="rect" id="node32" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="2345,547,2523,573"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aef7f1ced23d060545eabd5b57175143a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef7f1ced23d060545eabd5b57175143a">&#9670;&nbsp;</a></span>GetRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::GetRect </td>
+          <td>(</td>
+          <td class="paramtype">RECT &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00316">316</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  r = rect;</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_skin_button_aef7f1ced23d060545eabd5b57175143a_icgraph.png" border="0" usemap="#class_skin_button_aef7f1ced23d060545eabd5b57175143a_icgraph" alt=""/></div>
+<map name="class_skin_button_aef7f1ced23d060545eabd5b57175143a_icgraph" id="class_skin_button_aef7f1ced23d060545eabd5b57175143a_icgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#a4897349a9944fe2e2ee9cfdc4f0baf47" title="CSkin::Hook" alt="" coords="196,245,291,272"/>
+<area shape="rect" id="node3" href="class_v_b_a.html#a4648998e25679df69b15afdccb428b8f" title="VBA::winUpdateSkin" alt="" coords="339,245,481,272"/>
+<area shape="rect" id="node4" href="class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="529,209,792,250"/>
+<area shape="rect" id="node5" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="567,275,754,301"/>
+<area shape="rect" id="node6" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="840,195,1020,221"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="1071,5,1355,32"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="1081,57,1345,98"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="1081,122,1345,163"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="1081,187,1345,229"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="1068,253,1357,280"/>
+<area shape="rect" id="node12" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="1154,304,1271,331"/>
+<area shape="rect" id="node13" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1428,304,1551,331"/>
+<area shape="rect" id="node14" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="1405,355,1573,381"/>
+<area shape="rect" id="node15" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1707,212,1837,239"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1621,263,1923,289"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1671,314,1873,355"/>
+<area shape="rect" id="node23" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1671,379,1873,421"/>
+<area shape="rect" id="node24" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1703,445,1841,472"/>
+<area shape="rect" id="node25" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1695,496,1849,523"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="2013,111,2171,137"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="2015,161,2169,188"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1999,212,2185,239"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1989,263,2195,289"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1971,313,2213,340"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="1993,445,2191,472"/>
+<area shape="rect" id="node30" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="1972,496,2212,523"/>
+<area shape="rect" id="node31" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="2002,547,2182,573"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="2261,395,2551,421"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="2261,445,2551,472"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="2261,496,2551,523"/>
+<area shape="rect" id="node32" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="2317,547,2495,573"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad4f3d9812259e8f4a9df22a14ae06c6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f3d9812259e8f4a9df22a14ae06c6f">&#9670;&nbsp;</a></span>OnCaptureChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::OnCaptureChanged </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pWnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00215">215</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;{</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  <span class="keywordflow">if</span>(mouseOver) {</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    ReleaseCapture();</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    Invalidate();</div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  }</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  </div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  CWnd::OnCaptureChanged(pWnd);</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a1d8e1d9486a36b42c1a1d2a26bde5efa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d8e1d9486a36b42c1a1d2a26bde5efa">&#9670;&nbsp;</a></span>OnContextMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::OnContextMenu </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CPoint&#160;</td>
+          <td class="paramname"><em>point</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00236">236</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ad046e6e663c72734fb1dc470d67f6ae0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad046e6e663c72734fb1dc470d67f6ae0">&#9670;&nbsp;</a></span>OnEraseBkgnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL SkinButton::OnEraseBkgnd </td>
+          <td>(</td>
+          <td class="paramtype">CDC *&#160;</td>
+          <td class="paramname"><em>pDC</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00090">90</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordflow">return</span> TRUE;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ab89eac5d77588b47adfcbb9f664568be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab89eac5d77588b47adfcbb9f664568be">&#9670;&nbsp;</a></span>OnKillFocus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::OnKillFocus </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pNewWnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00207">207</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;{</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  mouseOver = <span class="keyword">false</span>;</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  Invalidate();</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  CWnd::OnKillFocus(pNewWnd);</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a824c7ad6169c7373af133b1df439a405"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a824c7ad6169c7373af133b1df439a405">&#9670;&nbsp;</a></span>OnLButtonDownMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT SkinButton::OnLButtonDownMsg </td>
+          <td>(</td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00150">150</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;{</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <span class="keywordflow">if</span>(idCommand != 0)</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">return</span> Default();</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  POINT pt;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  pt.x = LOWORD(lParam);</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  pt.y = HIWORD(lParam);</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  RECT r;</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  GetClientRect(&amp;r);</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  BOOL inside = PtInRect(&amp;r, pt);</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <span class="keywordflow">if</span>(region != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    inside &amp;= PtInRegion(region, pt.x, pt.y);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <span class="keywordflow">if</span>(inside) {</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span>(buttonMask)</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a18dd81b37aa33a8f580a2dabe358a280">skinButtons</a> = buttonMask;</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordflow">return</span> Default();</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  }</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <span class="keywordflow">return</span> GetParent()-&gt;SendMessage(WM_LBUTTONDOWN, wParam, lParam);</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a18dd81b37aa33a8f580a2dabe358a280"><div class="ttname"><a href="class_v_b_a.html#a18dd81b37aa33a8f580a2dabe358a280">VBA::skinButtons</a></div><div class="ttdeci">int skinButtons</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00150">VBA.h:150</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a698952f37a3b9b3dbc3341260c7737bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a698952f37a3b9b3dbc3341260c7737bc">&#9670;&nbsp;</a></span>OnLButtonUpMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT SkinButton::OnLButtonUpMsg </td>
+          <td>(</td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00118">118</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  POINT pt;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  pt.x = LOWORD(lParam);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  pt.y = HIWORD(lParam);</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  RECT r;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  GetClientRect(&amp;r);</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  BOOL inside = PtInRect(&amp;r, pt);</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  <span class="keywordflow">if</span>(region != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    inside &amp;= PtInRegion(region, pt.x, pt.y);</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keywordflow">if</span>(inside) {</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    ReleaseCapture();</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    Invalidate();</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    HWND hWnd = m_hWnd;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">if</span>(idCommand != 0)</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      GetParent()-&gt;SendMessage(WM_COMMAND, idCommand, 0);</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(buttonMask)</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a18dd81b37aa33a8f580a2dabe358a280">skinButtons</a> = 0;</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(menu != -1) {</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      HMENU m = GetSubMenu(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acf9d855b5b959a2df9c6cb21b888366e">menu</a>, menu);</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      pt.x = r.left;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      pt.y = r.bottom;</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      ClientToScreen(&amp;pt);</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.m_pMainWnd-&gt;SendMessage(WM_INITMENUPOPUP, (WPARAM)m, menu);</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;      TrackPopupMenu(m, 0, pt.x, pt.y, 0, *<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.m_pMainWnd, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    }</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    return ::DefWindowProc(hWnd, WM_LBUTTONUP, wParam, lParam);</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  }</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="keywordflow">return</span> GetParent()-&gt;SendMessage(WM_LBUTTONUP, wParam, lParam);</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_v_b_a_html_acf9d855b5b959a2df9c6cb21b888366e"><div class="ttname"><a href="class_v_b_a.html#acf9d855b5b959a2df9c6cb21b888366e">VBA::menu</a></div><div class="ttdeci">HMENU menu</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00067">VBA.h:67</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a18dd81b37aa33a8f580a2dabe358a280"><div class="ttname"><a href="class_v_b_a.html#a18dd81b37aa33a8f580a2dabe358a280">VBA::skinButtons</a></div><div class="ttdeci">int skinButtons</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00150">VBA.h:150</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9ceb207ee0e34032dd2bc12c3da24e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ceb207ee0e34032dd2bc12c3da24e15">&#9670;&nbsp;</a></span>OnMouseLeaveMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT SkinButton::OnMouseLeaveMsg </td>
+          <td>(</td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00225">225</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;{</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  <span class="keywordflow">if</span>(mouseOver) {</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    ReleaseCapture();</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    mouseOver = <span class="keyword">false</span>;</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    Invalidate();</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  }</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <span class="keywordflow">return</span> Default();</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ad4654dfa88cab2918e1fcd58223cdd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4654dfa88cab2918e1fcd58223cdd5a">&#9670;&nbsp;</a></span>OnMouseMoveMsg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT SkinButton::OnMouseMoveMsg </td>
+          <td>(</td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00171">171</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;{</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordflow">if</span>(wParam &amp; MK_LBUTTON &amp;&amp; !mouseOver)</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">return</span> Default();</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="keywordflow">if</span>(GetCapture() != <span class="keyword">this</span>) {</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    SetCapture();</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  }</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  POINT pt;</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;  pt.x = LOWORD(lParam);</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  pt.y = HIWORD(lParam);</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="comment">//  ClientToScreen(getHandle(), &amp;p);</span></div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  RECT r;</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;  GetClientRect(&amp;r);</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  BOOL inside = PtInRect(&amp;r, pt);</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <span class="keywordflow">if</span>(region != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    inside &amp;= PtInRegion(region, pt.x, pt.y);</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  <span class="keywordflow">if</span>(!inside) {</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">//  HWND h = WindowFromPoint(p);</span></div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">//  if(h != getHandle()) {</span></div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordflow">if</span>(mouseOver) {</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      mouseOver = <span class="keyword">false</span>;</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      Invalidate();</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    }</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <span class="keywordflow">if</span>(!(wParam &amp; MK_LBUTTON))</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      ReleaseCapture();</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <span class="keywordflow">if</span>(!mouseOver) {</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;      mouseOver = <span class="keyword">true</span>;</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;      Invalidate();</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    }</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;  <span class="keywordflow">return</span> Default();</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac508eb8cb788a169c264f48e202aec37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac508eb8cb788a169c264f48e202aec37">&#9670;&nbsp;</a></span>OnPaint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::OnPaint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00095">95</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  PAINTSTRUCT ps;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  HDC hDC = ::BeginPaint(m_hWnd, &amp;ps);</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  HDC memDC = ::CreateCompatibleDC(hDC);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  LRESULT state = ::SendMessage(m_hWnd, BM_GETSTATE, 0, 0);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  HBITMAP oldBitmap;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <span class="keywordflow">if</span>(state &amp; BST_PUSHED)</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    oldBitmap = (HBITMAP)SelectObject(memDC, downBmp);</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span>(mouseOver &amp;&amp; overBmp != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    oldBitmap = (HBITMAP)SelectObject(memDC, overBmp);</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    oldBitmap = (HBITMAP)SelectObject(memDC, normalBmp);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  SelectClipRgn(hDC, region);</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  BitBlt(hDC, 0, 0, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">rect</a>.right - <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">rect</a>.left,</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;         <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">rect</a>.bottom - <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">rect</a>.top, memDC, 0, 0, SRCCOPY);</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  SelectClipRgn(hDC, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  SelectObject(memDC, oldBitmap);</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  DeleteDC(memDC);</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  ::EndPaint(m_hWnd, &amp;ps);</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a1303c6cf4f955c31d828de3fe77355f1"><div class="ttname"><a href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">VBA::rect</a></div><div class="ttdeci">RECT rect</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00198">VBA.h:198</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a42845ac49a2d37651369d40a81656c4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42845ac49a2d37651369d40a81656c4b">&#9670;&nbsp;</a></span>SetDownBitmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::SetDownBitmap </td>
+          <td>(</td>
+          <td class="paramtype">HBITMAP&#160;</td>
+          <td class="paramname"><em>bmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00245">245</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;{</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;  downBmp = bmp;</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ae710ecb793cf09d625d842bb863aa1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae710ecb793cf09d625d842bb863aa1da">&#9670;&nbsp;</a></span>SetId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::SetId </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00260">260</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;{</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;  this-&gt;<span class="keywordtype">id</span> = id;</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="skin_button_8cpp.html#a0902750e5d4d5fc36d5a1e4bf45dc4b8">winAccelGetID</a>(<span class="keywordtype">id</span>, idCommand)) {</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keywordflow">if</span>(!strcmp(<span class="keywordtype">id</span>, <span class="stringliteral">&quot;A&quot;</span>))</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      buttonMask = 1;</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;B&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;      buttonMask = 2;</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;SEL&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      buttonMask = 4;</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;START&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      buttonMask = 8;</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;R&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      buttonMask = 16;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;L&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      buttonMask = 32;</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;U&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      buttonMask = 64;</div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;D&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      buttonMask = 128;</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;BR&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      buttonMask = 256;</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;BL&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      buttonMask = 512;</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;SPEED&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      buttonMask = 1024;</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;CAPTURE&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      buttonMask = 2048;</div><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;GS&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      buttonMask = 4096;</div><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;UR&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      buttonMask = 64+16;</div><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;UL&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      buttonMask = 64+32;</div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;DR&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      buttonMask = 128+16;</div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;DL&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      buttonMask = 128+32;</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;MENUFILE&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      menu = 0;</div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;MENUOPTIONS&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      menu = 1;</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;MENUCHEATS&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      menu = 2;</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;MENUTOOLS&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      menu = 3;</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strcmp(<span class="stringliteral">&quot;MENUHELP&quot;</span>, <span class="keywordtype">id</span>))</div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      menu = 4;</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  }</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;}</div><div class="ttc" id="skin_button_8cpp_html_a0902750e5d4d5fc36d5a1e4bf45dc4b8"><div class="ttname"><a href="skin_button_8cpp.html#a0902750e5d4d5fc36d5a1e4bf45dc4b8">winAccelGetID</a></div><div class="ttdeci">bool winAccelGetID(const char *command, WORD &amp;id)</div><div class="ttdef"><b>Definition:</b> <a href="_commands_8cpp_source.html#l00235">Commands.cpp:235</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_skin_button_ae710ecb793cf09d625d842bb863aa1da_cgraph.png" border="0" usemap="#class_skin_button_ae710ecb793cf09d625d842bb863aa1da_cgraph" alt=""/></div>
+<map name="class_skin_button_ae710ecb793cf09d625d842bb863aa1da_cgraph" id="class_skin_button_ae710ecb793cf09d625d842bb863aa1da_cgraph">
+<area shape="rect" id="node2" href="skin_button_8cpp.html#a0902750e5d4d5fc36d5a1e4bf45dc4b8" title="winAccelGetID" alt="" coords="177,5,284,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0546240e8395f52b721a5c95f03de902"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0546240e8395f52b721a5c95f03de902">&#9670;&nbsp;</a></span>SetNormalBitmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::SetNormalBitmap </td>
+          <td>(</td>
+          <td class="paramtype">HBITMAP&#160;</td>
+          <td class="paramname"><em>bmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00240">240</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;{</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  normalBmp = bmp;</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aa2f72f089e76e7611f5498deab412d80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2f72f089e76e7611f5498deab412d80">&#9670;&nbsp;</a></span>SetOverBitmap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::SetOverBitmap </td>
+          <td>(</td>
+          <td class="paramtype">HBITMAP&#160;</td>
+          <td class="paramname"><em>bmp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00250">250</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;{</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  overBmp = bmp;</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ad260dbe4c70216d2c3d1f8df018c05a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad260dbe4c70216d2c3d1f8df018c05a7">&#9670;&nbsp;</a></span>SetRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::SetRect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;&#160;</td>
+          <td class="paramname"><em>r</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00255">255</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;{</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;  rect = r;</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="abe8db625fad410a12db9eb1a281ba214"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe8db625fad410a12db9eb1a281ba214">&#9670;&nbsp;</a></span>SetRegion()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SkinButton::SetRegion </td>
+          <td>(</td>
+          <td class="paramtype">HRGN&#160;</td>
+          <td class="paramname"><em>rgn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a> 파일의 <a class="el" href="skin_button_8cpp_source.html#l00311">311</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;{</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  region = rgn;</div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="skin_button_8h_source.html">skinButton.h</a></li>
-<li>src/win32/skinButton.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="skin_button_8h_source.html">skinButton.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="skin_button_8cpp_source.html">skinButton.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_skin_button.html">SkinButton</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

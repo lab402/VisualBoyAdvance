@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_string_tokenizer.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -68,26 +92,130 @@ $(function() {
 <div class="title">StringTokenizer 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_string_tokenizer_8h_source.html">StringTokenizer.h</a>&gt;</code></p>
+<div class="dynheader">
+StringTokenizer에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_string_tokenizer__coll__graph.png" border="0" usemap="#_string_tokenizer_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:abeba9010a819d5d0bf8436894f71f049"><td class="memItemLeft" align="right" valign="top"><a id="abeba9010a819d5d0bf8436894f71f049"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b> ()</td></tr>
+<tr class="memitem:abeba9010a819d5d0bf8436894f71f049"><td class="memItemLeft" align="right" valign="top"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_tokenizer.html#abeba9010a819d5d0bf8436894f71f049">next</a> ()</td></tr>
 <tr class="separator:abeba9010a819d5d0bf8436894f71f049"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad9d79efdc0b06f3ac696ed650d2f392"><td class="memItemLeft" align="right" valign="top"><a id="aad9d79efdc0b06f3ac696ed650d2f392"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>StringTokenizer</b> (CString str, CString token)</td></tr>
+<tr class="memitem:aad9d79efdc0b06f3ac696ed650d2f392"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_tokenizer.html#aad9d79efdc0b06f3ac696ed650d2f392">StringTokenizer</a> (CString str, CString token)</td></tr>
 <tr class="separator:aad9d79efdc0b06f3ac696ed650d2f392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a59cd69f871ace17ec831e1508b377"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_string_tokenizer.html#a26a59cd69f871ace17ec831e1508b377">~StringTokenizer</a> ()</td></tr>
+<tr class="separator:a26a59cd69f871ace17ec831e1508b377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_string_tokenizer_8h_source.html">StringTokenizer.h</a> 파일의 <a class="el" href="_string_tokenizer_8h_source.html#l00031">31</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="aad9d79efdc0b06f3ac696ed650d2f392"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad9d79efdc0b06f3ac696ed650d2f392">&#9670;&nbsp;</a></span>StringTokenizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">StringTokenizer::StringTokenizer </td>
+          <td>(</td>
+          <td class="paramtype">CString&#160;</td>
+          <td class="paramname"><em>str</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CString&#160;</td>
+          <td class="paramname"><em>token</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_string_tokenizer_8cpp_source.html">StringTokenizer.cpp</a> 파일의 <a class="el" href="_string_tokenizer_8cpp_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  m_right = str;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  m_delim = del;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a26a59cd69f871ace17ec831e1508b377"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26a59cd69f871ace17ec831e1508b377">&#9670;&nbsp;</a></span>~StringTokenizer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">StringTokenizer::~StringTokenizer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_string_tokenizer_8cpp_source.html">StringTokenizer.cpp</a> 파일의 <a class="el" href="_string_tokenizer_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="abeba9010a819d5d0bf8436894f71f049"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeba9010a819d5d0bf8436894f71f049">&#9670;&nbsp;</a></span>next()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char * StringTokenizer::next </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_string_tokenizer_8cpp_source.html">StringTokenizer.cpp</a> 파일의 <a class="el" href="_string_tokenizer_8cpp_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">int</span> index = m_right.FindOneOf(m_delim);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  </div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keywordflow">while</span>(index == 0) {</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    m_right = m_right.Right(m_right.GetLength()-1);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    index = m_right.FindOneOf(m_delim);</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  }</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keywordflow">if</span>(index == -1) {</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">if</span>(m_right.IsEmpty())</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    m_token = m_right;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    m_right.Empty();</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> m_token;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  }</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  m_token = m_right.Left(index);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  m_right = m_right.Right(m_right.GetLength()-(1+index));</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">return</span> m_token;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_string_tokenizer_abeba9010a819d5d0bf8436894f71f049_icgraph.png" border="0" usemap="#class_string_tokenizer_abeba9010a819d5d0bf8436894f71f049_icgraph" alt=""/></div>
+<map name="class_string_tokenizer_abeba9010a819d5d0bf8436894f71f049_icgraph" id="class_string_tokenizer_abeba9010a819d5d0bf8436894f71f049_icgraph">
+<area shape="rect" id="node2" href="class_add_g_s_a_code.html#a857608ad314694d15ee6e811fb528d0b" title="AddGSACode::OnOk" alt="" coords="201,5,347,32"/>
+<area shape="rect" id="node3" href="class_add_c_b_a_code.html#a63c5cc95366a1a0aad123432054f977a" title="AddCBACode::OnOk" alt="" coords="202,56,346,83"/>
+<area shape="rect" id="node4" href="class_add_cheat_code.html#a77b1ec1f5e067495aef92a2f9b8750c8" title="AddCheatCode::OnOk" alt="" coords="199,107,349,133"/>
+<area shape="rect" id="node5" href="class_add_g_b_code.html#ad6bdbbb8375531b30329c5ab4689c052" title="AddGBCode::OnOk" alt="" coords="206,157,342,184"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_string_tokenizer_8h_source.html">StringTokenizer.h</a></li>
-<li>src/win32/StringTokenizer.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_string_tokenizer_8h_source.html">StringTokenizer.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_string_tokenizer_8cpp_source.html">StringTokenizer.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_string_tokenizer.html">StringTokenizer</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

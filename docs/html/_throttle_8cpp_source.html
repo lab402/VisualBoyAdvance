@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>ModernVBA: C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/Throttle.cpp 소스 파일</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">ModernVBA
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 다음에 의해 생성됨 :  Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'검색');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','검색');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_throttle_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Throttle.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_throttle_8cpp.html">이 파일의 문서화 페이지로 가기</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// VisualBoyAdvance - Nintendo Gameboy/GameboyAdvance (TM) emulator.</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">// Copyright (C) 1999-2003 Forgotten</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Copyright (C) 2004 Forgotten and the VBA development team</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// This program is free software; you can redistribute it and/or modify</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">// it under the terms of the GNU General Public License as published by</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// the Free Software Foundation; either version 2, or(at your option)</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">// any later version.</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// This program is distributed in the hope that it will be useful,</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// but WITHOUT ANY WARRANTY; without even the implied warranty of</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// GNU General Public License for more details.</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// You should have received a copy of the GNU General Public License</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// along with this program; if not, write to the Free Software Foundation,</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// Throttle.cpp : implementation file</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">//</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="stdafx_8h.html">stdafx.h</a>&quot;</span></div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_v_b_a_8h.html">vba.h</a>&quot;</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_throttle_8h.html">Throttle.h</a>&quot;</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#ifdef _DEBUG</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define new DEBUG_NEW</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#undef THIS_FILE</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">static</span> <span class="keywordtype">char</span> THIS_FILE[] = __FILE__;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">// Throttle dialog</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div><div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_throttle.html#ad87807ba6799b18bfb06e6e7bd3c4b62">   36</a></span>&#160;<a class="code" href="class_throttle.html#ad87807ba6799b18bfb06e6e7bd3c4b62">Throttle::Throttle</a>(CWnd* pParent <span class="comment">/*=NULL*/</span>)</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  : CDialog(<a class="code" href="class_throttle.html">Throttle</a>::IDD, pParent)</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(Throttle)</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">m_throttle</a> = 0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_throttle.html#a634843a66c6f1f27b70d8313a88765a5">   45</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_throttle.html#a634843a66c6f1f27b70d8313a88765a5">Throttle::DoDataExchange</a>(CDataExchange* pDX)</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(Throttle)</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  DDX_Text(pDX, <a class="code" href="resource_8h.html#a56fe47d89724d47f1bcb9147f82c8246">IDC_THROTTLE</a>, <a class="code" href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">m_throttle</a>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;BEGIN_MESSAGE_MAP(<a class="code" href="class_throttle.html">Throttle</a>, CDialog)</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">//{{AFX_MSG_MAP(Throttle)</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  ON_BN_CLICKED(<a class="code" href="resource_8h.html#a9f066b92f1c9e4f0f0a679d67fd29d31">ID_CANCEL</a>, OnCancel)</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  ON_BN_CLICKED(<a class="code" href="resource_8h.html#a4cf7b8af561e85b223c39c4c2b22ef18">ID_OK</a>, OnOk)</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">//}}AFX_MSG_MAP</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  END_MESSAGE_MAP()</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  </div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// Throttle message handlers</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_throttle.html#ac091cd673324246105b4c3d76e25e894">   64</a></span>&#160;BOOL <a class="code" href="class_throttle.html">Throttle</a>::OnInitDialog() </div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  </div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  CenterWindow();</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  </div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_throttle.html#a958ff983d0c33bebd3a4035695774eed">   74</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_throttle.html#a958ff983d0c33bebd3a4035695774eed">Throttle::OnCancel</a>() </div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  EndDialog(<span class="keyword">false</span>);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="class_throttle.html#ae8947386977fc3c1e47bea6f3ddb07b8">   79</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="class_throttle.html#ae8947386977fc3c1e47bea6f3ddb07b8">Throttle::OnOk</a>() </div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  UpdateData();</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">if</span>(m_throttle &lt; 5 || m_throttle &gt; 1000)</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="resource_8h.html#adcc62f18f7b427c2dbf32e08589f19aa">IDS_INVALID_THROTTLE_VALUE</a>, <span class="stringliteral">&quot;Invalid throttle value. Please enter a number between 5 and 1000&quot;</span>);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    EndDialog(<a class="code" href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">m_throttle</a>);</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div><div class="ttc" id="class_throttle_html_aba71c48b95cd2a114625ebb3db55bc0b"><div class="ttname"><a href="class_throttle.html#aba71c48b95cd2a114625ebb3db55bc0b">Throttle::m_throttle</a></div><div class="ttdeci">int m_throttle</div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8h_source.html#l00041">Throttle.h:41</a></div></div>
+<div class="ttc" id="class_throttle_html"><div class="ttname"><a href="class_throttle.html">Throttle</a></div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8h_source.html#l00032">Throttle.h:32</a></div></div>
+<div class="ttc" id="class_throttle_html_a958ff983d0c33bebd3a4035695774eed"><div class="ttname"><a href="class_throttle.html#a958ff983d0c33bebd3a4035695774eed">Throttle::OnCancel</a></div><div class="ttdeci">afx_msg void OnCancel()</div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8cpp_source.html#l00074">Throttle.cpp:74</a></div></div>
+<div class="ttc" id="resource_8h_html_a9f066b92f1c9e4f0f0a679d67fd29d31"><div class="ttname"><a href="resource_8h.html#a9f066b92f1c9e4f0f0a679d67fd29d31">ID_CANCEL</a></div><div class="ttdeci">#define ID_CANCEL</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00118">resource.h:118</a></div></div>
+<div class="ttc" id="resource_8h_html_a4cf7b8af561e85b223c39c4c2b22ef18"><div class="ttname"><a href="resource_8h.html#a4cf7b8af561e85b223c39c4c2b22ef18">ID_OK</a></div><div class="ttdeci">#define ID_OK</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00116">resource.h:116</a></div></div>
+<div class="ttc" id="stdafx_8h_html"><div class="ttname"><a href="stdafx_8h.html">stdafx.h</a></div></div>
+<div class="ttc" id="class_throttle_html_a634843a66c6f1f27b70d8313a88765a5"><div class="ttname"><a href="class_throttle.html#a634843a66c6f1f27b70d8313a88765a5">Throttle::DoDataExchange</a></div><div class="ttdeci">virtual void DoDataExchange(CDataExchange *pDX)</div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8cpp_source.html#l00045">Throttle.cpp:45</a></div></div>
+<div class="ttc" id="resource_8h_html_a56fe47d89724d47f1bcb9147f82c8246"><div class="ttname"><a href="resource_8h.html#a56fe47d89724d47f1bcb9147f82c8246">IDC_THROTTLE</a></div><div class="ttdeci">#define IDC_THROTTLE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00478">resource.h:478</a></div></div>
+<div class="ttc" id="resource_8h_html_adcc62f18f7b427c2dbf32e08589f19aa"><div class="ttname"><a href="resource_8h.html#adcc62f18f7b427c2dbf32e08589f19aa">IDS_INVALID_THROTTLE_VALUE</a></div><div class="ttdeci">#define IDS_INVALID_THROTTLE_VALUE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00364">resource.h:364</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html"><div class="ttname"><a href="_v_b_a_8h.html">VBA.h</a></div></div>
+<div class="ttc" id="_throttle_8h_html"><div class="ttname"><a href="_throttle_8h.html">Throttle.h</a></div></div>
+<div class="ttc" id="class_throttle_html_ae8947386977fc3c1e47bea6f3ddb07b8"><div class="ttname"><a href="class_throttle.html#ae8947386977fc3c1e47bea6f3ddb07b8">Throttle::OnOk</a></div><div class="ttdeci">afx_msg void OnOk()</div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8cpp_source.html#l00079">Throttle.cpp:79</a></div></div>
+<div class="ttc" id="system_8cpp_html_a747a9cb8e015a3d45cca636b5bd0fc69"><div class="ttname"><a href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a></div><div class="ttdeci">void systemMessage(int _iId, const char *_csFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00073">system.cpp:73</a></div></div>
+<div class="ttc" id="class_throttle_html_ad87807ba6799b18bfb06e6e7bd3c4b62"><div class="ttname"><a href="class_throttle.html#ad87807ba6799b18bfb06e6e7bd3c4b62">Throttle::Throttle</a></div><div class="ttdeci">Throttle(CWnd *pParent=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="_throttle_8cpp_source.html#l00036">Throttle.cpp:36</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_7dc28ed10c1e0aa99689948e6211576b.html">win32</a></li><li class="navelem"><a class="el" href="_throttle_8cpp.html">Throttle.cpp</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
+</body>
+</html>

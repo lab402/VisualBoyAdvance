@@ -1,0 +1,713 @@
+\hypertarget{getopt_8c}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/getopt.c 파일 참조}
+\label{getopt_8c}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/getopt.\+c@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/getopt.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}getopt.\+h\char`\"{}}\newline
+getopt.\+c에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{getopt_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{getopt_8c_a9bcd7db9771ff03b7e5a9fec9c489861}{\+\_\+\+N\+O\+\_\+\+P\+R\+O\+TO}}
+\item 
+\#define \mbox{\hyperlink{getopt_8c_a2c212835823e3c54a8ab6d95c652660e}{const}}
+\item 
+\#define \mbox{\hyperlink{getopt_8c_a5325c715897861c318d3ae312ac452cc}{G\+E\+T\+O\+P\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}~2
+\item 
+\#define \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\+\_\+}}(msgid)~(msgid)
+\item 
+\#define \mbox{\hyperlink{getopt_8c_a6e06e56c5fa96faaf47f3b231e015e35}{S\+W\+A\+P\+\_\+\+F\+L\+A\+GS}}(ch1,  ch2)
+\item 
+\#define \mbox{\hyperlink{getopt_8c_a71ceb8911d64b39b402041ba5ea8453c}{N\+O\+N\+O\+P\+T\+I\+O\+N\+\_\+P}}~(argv\mbox{[}\mbox{\hyperlink{getopt_8h_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}\mbox{]}\mbox{[}0\mbox{]} != \textquotesingle{}-\/\textquotesingle{} $\vert$$\vert$ argv\mbox{[}\mbox{\hyperlink{getopt_8h_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}\mbox{]}\mbox{[}1\mbox{]} == \textquotesingle{}\textbackslash{}0\textquotesingle{})
+\end{DoxyCompactItemize}
+\subsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ \mbox{\hyperlink{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a0e73a0691c110b1442d8364d1d12eccc}{R\+E\+Q\+U\+I\+R\+E\+\_\+\+O\+R\+D\+ER}}, 
+\mbox{\hyperlink{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57acfdde4b47c27f4efbd832e1ac7f8a8fc}{P\+E\+R\+M\+U\+TE}}, 
+\mbox{\hyperlink{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a3c56550bfafe809d9214b863b69c31c5}{R\+E\+T\+U\+R\+N\+\_\+\+I\+N\+\_\+\+O\+R\+D\+ER}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{getopt_8c_aee28fd8a0e40b6d958f7d20348e45368}{getenv}} ()
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{getopt_8c_a0df92a0ae8fe1fd43268c738f548674f}{\+\_\+getopt\+\_\+internal}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} argc, char $\ast$\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} $\ast$argv, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$optstring, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} struct \mbox{\hyperlink{structoption}{option}} $\ast$longopts, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$longind, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} long\+\_\+only)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{getopt_8c_a1b2ada39ab92162c6ec9c67c8093fa2e}{getopt}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} argc, char $\ast$\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} $\ast$argv, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$optstring)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} = 1
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{getopt_8c_a28286be757527aeb1db951b5da9aeec1}{\+\_\+\+\_\+getopt\+\_\+initialized}} = 0
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}} = 1
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}{optopt}} = \textquotesingle{}?\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{getopt_8c_a86a239addea586602343007a370bf8ad}\label{getopt_8c_a86a239addea586602343007a370bf8ad}} 
+\index{getopt.\+c@{getopt.\+c}!\+\_\+@{\+\_\+}}
+\index{\+\_\+@{\+\_\+}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+}{\_}}
+{\footnotesize\ttfamily \#define \+\_\+(\begin{DoxyParamCaption}\item[{}]{msgid }\end{DoxyParamCaption})~(msgid)}
+
+
+
+getopt.\+c 파일의 89 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{getopt_8c_a9bcd7db9771ff03b7e5a9fec9c489861}\label{getopt_8c_a9bcd7db9771ff03b7e5a9fec9c489861}} 
+\index{getopt.\+c@{getopt.\+c}!\+\_\+\+N\+O\+\_\+\+P\+R\+O\+TO@{\+\_\+\+N\+O\+\_\+\+P\+R\+O\+TO}}
+\index{\+\_\+\+N\+O\+\_\+\+P\+R\+O\+TO@{\+\_\+\+N\+O\+\_\+\+P\+R\+O\+TO}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+N\+O\+\_\+\+P\+R\+O\+TO}{\_NO\_PROTO}}
+{\footnotesize\ttfamily \#define \+\_\+\+N\+O\+\_\+\+P\+R\+O\+TO}
+
+
+
+getopt.\+c 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{getopt_8c_a2c212835823e3c54a8ab6d95c652660e}\label{getopt_8c_a2c212835823e3c54a8ab6d95c652660e}} 
+\index{getopt.\+c@{getopt.\+c}!const@{const}}
+\index{const@{const}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{const}{const}}
+{\footnotesize\ttfamily \#define const}
+
+
+
+getopt.\+c 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{getopt_8c_a5325c715897861c318d3ae312ac452cc}\label{getopt_8c_a5325c715897861c318d3ae312ac452cc}} 
+\index{getopt.\+c@{getopt.\+c}!G\+E\+T\+O\+P\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{G\+E\+T\+O\+P\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{G\+E\+T\+O\+P\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+V\+E\+R\+S\+I\+ON@{G\+E\+T\+O\+P\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+V\+E\+R\+S\+I\+ON}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{G\+E\+T\+O\+P\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+V\+E\+R\+S\+I\+ON}{GETOPT\_INTERFACE\_VERSION}}
+{\footnotesize\ttfamily \#define G\+E\+T\+O\+P\+T\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+V\+E\+R\+S\+I\+ON~2}
+
+
+
+getopt.\+c 파일의 55 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{getopt_8c_a71ceb8911d64b39b402041ba5ea8453c}\label{getopt_8c_a71ceb8911d64b39b402041ba5ea8453c}} 
+\index{getopt.\+c@{getopt.\+c}!N\+O\+N\+O\+P\+T\+I\+O\+N\+\_\+P@{N\+O\+N\+O\+P\+T\+I\+O\+N\+\_\+P}}
+\index{N\+O\+N\+O\+P\+T\+I\+O\+N\+\_\+P@{N\+O\+N\+O\+P\+T\+I\+O\+N\+\_\+P}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{N\+O\+N\+O\+P\+T\+I\+O\+N\+\_\+P}{NONOPTION\_P}}
+{\footnotesize\ttfamily \#define N\+O\+N\+O\+P\+T\+I\+O\+N\+\_\+P~(argv\mbox{[}\mbox{\hyperlink{getopt_8h_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}\mbox{]}\mbox{[}0\mbox{]} != \textquotesingle{}-\/\textquotesingle{} $\vert$$\vert$ argv\mbox{[}\mbox{\hyperlink{getopt_8h_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}\mbox{]}\mbox{[}1\mbox{]} == \textquotesingle{}\textbackslash{}0\textquotesingle{})}
+
+\mbox{\Hypertarget{getopt_8c_a6e06e56c5fa96faaf47f3b231e015e35}\label{getopt_8c_a6e06e56c5fa96faaf47f3b231e015e35}} 
+\index{getopt.\+c@{getopt.\+c}!S\+W\+A\+P\+\_\+\+F\+L\+A\+GS@{S\+W\+A\+P\+\_\+\+F\+L\+A\+GS}}
+\index{S\+W\+A\+P\+\_\+\+F\+L\+A\+GS@{S\+W\+A\+P\+\_\+\+F\+L\+A\+GS}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{S\+W\+A\+P\+\_\+\+F\+L\+A\+GS}{SWAP\_FLAGS}}
+{\footnotesize\ttfamily \#define S\+W\+A\+P\+\_\+\+F\+L\+A\+GS(\begin{DoxyParamCaption}\item[{}]{ch1,  }\item[{}]{ch2 }\end{DoxyParamCaption})}
+
+
+
+getopt.\+c 파일의 297 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{열거형 타입 문서화}
+\mbox{\Hypertarget{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57}\label{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+Q\+U\+I\+R\+E\+\_\+\+O\+R\+D\+ER@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+O\+R\+D\+ER}!getopt.\+c@{getopt.\+c}}\index{getopt.\+c@{getopt.\+c}!R\+E\+Q\+U\+I\+R\+E\+\_\+\+O\+R\+D\+ER@{R\+E\+Q\+U\+I\+R\+E\+\_\+\+O\+R\+D\+ER}}}\mbox{\Hypertarget{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a0e73a0691c110b1442d8364d1d12eccc}\label{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a0e73a0691c110b1442d8364d1d12eccc}} 
+R\+E\+Q\+U\+I\+R\+E\+\_\+\+O\+R\+D\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\+E\+R\+M\+U\+TE@{P\+E\+R\+M\+U\+TE}!getopt.\+c@{getopt.\+c}}\index{getopt.\+c@{getopt.\+c}!P\+E\+R\+M\+U\+TE@{P\+E\+R\+M\+U\+TE}}}\mbox{\Hypertarget{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57acfdde4b47c27f4efbd832e1ac7f8a8fc}\label{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57acfdde4b47c27f4efbd832e1ac7f8a8fc}} 
+P\+E\+R\+M\+U\+TE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+E\+T\+U\+R\+N\+\_\+\+I\+N\+\_\+\+O\+R\+D\+ER@{R\+E\+T\+U\+R\+N\+\_\+\+I\+N\+\_\+\+O\+R\+D\+ER}!getopt.\+c@{getopt.\+c}}\index{getopt.\+c@{getopt.\+c}!R\+E\+T\+U\+R\+N\+\_\+\+I\+N\+\_\+\+O\+R\+D\+ER@{R\+E\+T\+U\+R\+N\+\_\+\+I\+N\+\_\+\+O\+R\+D\+ER}}}\mbox{\Hypertarget{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a3c56550bfafe809d9214b863b69c31c5}\label{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a3c56550bfafe809d9214b863b69c31c5}} 
+R\+E\+T\+U\+R\+N\+\_\+\+I\+N\+\_\+\+O\+R\+D\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+getopt.\+c 파일의 191 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+192 \{
+193   \mbox{\hyperlink{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a0e73a0691c110b1442d8364d1d12eccc}{REQUIRE\_ORDER}}, \mbox{\hyperlink{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57acfdde4b47c27f4efbd832e1ac7f8a8fc}{PERMUTE}}, \mbox{\hyperlink{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a3c56550bfafe809d9214b863b69c31c5}{RETURN\_IN\_ORDER}}
+194 \} ordering;
+\end{DoxyCode}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{getopt_8c_a0df92a0ae8fe1fd43268c738f548674f}\label{getopt_8c_a0df92a0ae8fe1fd43268c738f548674f}} 
+\index{getopt.\+c@{getopt.\+c}!\+\_\+getopt\+\_\+internal@{\+\_\+getopt\+\_\+internal}}
+\index{\+\_\+getopt\+\_\+internal@{\+\_\+getopt\+\_\+internal}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+getopt\+\_\+internal()}{\_getopt\_internal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+getopt\+\_\+internal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{argc,  }\item[{char $\ast$\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} $\ast$}]{argv,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{optstring,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} struct \mbox{\hyperlink{structoption}{option}} $\ast$}]{longopts,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$}]{longind,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{long\+\_\+only }\end{DoxyParamCaption})}
+
+
+
+getopt.\+c 파일의 521 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+528 \{
+529   \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+530 
+531   \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} == 0 || !\mbox{\hyperlink{getopt_8c_a28286be757527aeb1db951b5da9aeec1}{\_\_getopt\_initialized}})
+532     \{
+533       \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} == 0)
+534     \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} = 1;   \textcolor{comment}{/* Don't scan ARGV[0], the program name.  */}
+535       optstring = \_getopt\_initialize (argc, argv, optstring);
+536       \mbox{\hyperlink{getopt_8c_a28286be757527aeb1db951b5da9aeec1}{\_\_getopt\_initialized}} = 1;
+537     \}
+538 
+539   \textcolor{comment}{/* Test whether ARGV[optind] points to a non-option argument.}
+540 \textcolor{comment}{     Either it does not have option syntax, or there is an environment flag}
+541 \textcolor{comment}{     from the shell indicating it is not an option.  The later information}
+542 \textcolor{comment}{     is only used when the used in the GNU libc.  */}
+543 \textcolor{preprocessor}{#ifdef \_LIBC}
+544 \textcolor{preprocessor}{# define NONOPTION\_P (argv[optind][0] != '-' || argv[optind][1] == '\(\backslash\)0'       \(\backslash\)}
+545 \textcolor{preprocessor}{              || (optind < nonoption\_flags\_len                \(\backslash\)}
+546 \textcolor{preprocessor}{              && \_\_getopt\_nonoption\_flags[optind] == '1'))}
+547 \textcolor{preprocessor}{#else}
+548 \textcolor{preprocessor}{# define NONOPTION\_P (argv[optind][0] != '-' || argv[optind][1] == '\(\backslash\)0')}
+549 \textcolor{preprocessor}{#endif}
+550 
+551   \textcolor{keywordflow}{if} (nextchar == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} || *nextchar == \textcolor{charliteral}{'\(\backslash\)0'})
+552     \{
+553       \textcolor{comment}{/* Advance to the next ARGV-element.  */}
+554 
+555       \textcolor{comment}{/* Give FIRST\_NONOPT & LAST\_NONOPT rational values if OPTIND has been}
+556 \textcolor{comment}{     moved back by the user (who may also have changed the arguments).  */}
+557       \textcolor{keywordflow}{if} (last\_nonopt > \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}})
+558     last\_nonopt = \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}};
+559       \textcolor{keywordflow}{if} (first\_nonopt > \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}})
+560     first\_nonopt = \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}};
+561 
+562       \textcolor{keywordflow}{if} (ordering == \mbox{\hyperlink{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57acfdde4b47c27f4efbd832e1ac7f8a8fc}{PERMUTE}})
+563     \{
+564       \textcolor{comment}{/* If we have just processed some options following some non-options,}
+565 \textcolor{comment}{         exchange them so that the options come first.  */}
+566 
+567       \textcolor{keywordflow}{if} (first\_nonopt != last\_nonopt && last\_nonopt != \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}})
+568         exchange ((\textcolor{keywordtype}{char} **) argv);
+569       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (last\_nonopt != \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}})
+570         first\_nonopt = \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}};
+571 
+572       \textcolor{comment}{/* Skip any additional non-options}
+573 \textcolor{comment}{         and extend the range of non-options previously skipped.  */}
+574 
+575       \textcolor{keywordflow}{while} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} < argc && \mbox{\hyperlink{getopt_8c_a71ceb8911d64b39b402041ba5ea8453c}{NONOPTION\_P}})
+576         \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+577       last\_nonopt = \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}};
+578     \}
+579 
+580       \textcolor{comment}{/* The special ARGV-element `--' means premature end of options.}
+581 \textcolor{comment}{     Skip it like a null option,}
+582 \textcolor{comment}{     then exchange with previous non-options as if it were an option,}
+583 \textcolor{comment}{     then skip everything else like a non-option.  */}
+584 
+585       \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} != argc && !strcmp (argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}], \textcolor{stringliteral}{"--"}))
+586     \{
+587       \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+588 
+589       \textcolor{keywordflow}{if} (first\_nonopt != last\_nonopt && last\_nonopt != \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}})
+590         exchange ((\textcolor{keywordtype}{char} **) argv);
+591       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (first\_nonopt == last\_nonopt)
+592         first\_nonopt = \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}};
+593       last\_nonopt = argc;
+594 
+595       \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} = argc;
+596     \}
+597 
+598       \textcolor{comment}{/* If we have done all the ARGV-elements, stop the scan}
+599 \textcolor{comment}{     and back over any non-options that we skipped and permuted.  */}
+600 
+601       \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} == argc)
+602     \{
+603       \textcolor{comment}{/* Set the next-arg-index to point at the non-options}
+604 \textcolor{comment}{         that we previously skipped, so the caller will digest them.  */}
+605       \textcolor{keywordflow}{if} (first\_nonopt != last\_nonopt)
+606         \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} = first\_nonopt;
+607       \textcolor{keywordflow}{return} -1;
+608     \}
+609 
+610       \textcolor{comment}{/* If we have come to a non-option and did not permute it,}
+611 \textcolor{comment}{     either stop the scan or describe it to the caller and pass it by.  */}
+612 
+613       \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_a71ceb8911d64b39b402041ba5ea8453c}{NONOPTION\_P}})
+614     \{
+615       \textcolor{keywordflow}{if} (ordering == \mbox{\hyperlink{getopt_8c_ab04a0655cd1e3bcac5e8f48c18df1a57a0e73a0691c110b1442d8364d1d12eccc}{REQUIRE\_ORDER}})
+616         \textcolor{keywordflow}{return} -1;
+617       \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++];
+618       \textcolor{keywordflow}{return} 1;
+619     \}
+620 
+621       \textcolor{comment}{/* We have found another option-ARGV-element.}
+622 \textcolor{comment}{     Skip the initial punctuation.  */}
+623 
+624       nextchar = (argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}] + 1
+625           + (longopts != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} && argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}][1] == \textcolor{charliteral}{'-'}));
+626     \}
+627 
+628   \textcolor{comment}{/* Decode the current option-ARGV-element.  */}
+629 
+630   \textcolor{comment}{/* Check whether the ARGV-element is a long option.}
+631 \textcolor{comment}{}
+632 \textcolor{comment}{     If long\_only and the ARGV-element has the form "-f", where f is}
+633 \textcolor{comment}{     a valid short option, don't consider it an abbreviated form of}
+634 \textcolor{comment}{     a long option that starts with f.  Otherwise there would be no}
+635 \textcolor{comment}{     way to give the -f short option.}
+636 \textcolor{comment}{}
+637 \textcolor{comment}{     On the other hand, if there's a long option "fubar" and}
+638 \textcolor{comment}{     the ARGV-element is "-fu", do consider that an abbreviation of}
+639 \textcolor{comment}{     the long option, just like "--fu", and not "-f" with arg "u".}
+640 \textcolor{comment}{}
+641 \textcolor{comment}{     This distinction seems to be the most useful approach.  */}
+642 
+643   \textcolor{keywordflow}{if} (longopts != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}
+644       && (argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}][1] == \textcolor{charliteral}{'-'}
+645       || (long\_only && (argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}][2] || !my\_index (optstring, argv[
+      \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}][1])))))
+646     \{
+647       \textcolor{keywordtype}{char} *nameend;
+648       \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structoption}{option}} *p;
+649       \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structoption}{option}} *pfound = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+650       \textcolor{keywordtype}{int} exact = 0;
+651       \textcolor{keywordtype}{int} ambig = 0;
+652       \textcolor{keywordtype}{int} indfound = -1;
+653       \textcolor{keywordtype}{int} option\_index;
+654 
+655       \textcolor{keywordflow}{for} (nameend = nextchar; *nameend && *nameend != \textcolor{charliteral}{'='}; nameend++)
+656     \textcolor{comment}{/* Do nothing.  */} ;
+657 
+658       \textcolor{comment}{/* Test all long options for either exact match}
+659 \textcolor{comment}{     or abbreviated matches.  */}
+660       \textcolor{keywordflow}{for} (p = longopts, option\_index = 0; p->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}}; p++, option\_index++)
+661     \textcolor{keywordflow}{if} (!strncmp (p->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}}, nextchar, nameend - nextchar))
+662       \{
+663         \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) (nameend - nextchar)
+664         == (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) strlen (p->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}}))
+665           \{
+666         \textcolor{comment}{/* Exact match found.  */}
+667         pfound = p;
+668         indfound = option\_index;
+669         exact = 1;
+670         \textcolor{keywordflow}{break};
+671           \}
+672         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pfound == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+673           \{
+674         \textcolor{comment}{/* First nonexact match found.  */}
+675         pfound = p;
+676         indfound = option\_index;
+677           \}
+678         \textcolor{keywordflow}{else}
+679           \textcolor{comment}{/* Second or later nonexact match found.  */}
+680           ambig = 1;
+681       \}
+682 
+683       \textcolor{keywordflow}{if} (ambig && !exact)
+684     \{
+685       \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+686         fprintf (stderr, \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: option `%s' is ambiguous\(\backslash\)n"}),
+687              argv[0], argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}]);
+688       nextchar += strlen (nextchar);
+689       \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+690       \mbox{\hyperlink{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}{optopt}} = 0;
+691       \textcolor{keywordflow}{return} \textcolor{charliteral}{'?'};
+692     \}
+693 
+694       \textcolor{keywordflow}{if} (pfound != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+695     \{
+696       option\_index = indfound;
+697       \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+698       \textcolor{keywordflow}{if} (*nameend)
+699         \{
+700           \textcolor{comment}{/* Don't test has\_arg with >, because some C compilers don't}
+701 \textcolor{comment}{         allow it to be used on enums.  */}
+702           \textcolor{keywordflow}{if} (pfound->\mbox{\hyperlink{structoption_a90d7ee9a51eea5c002682dbd0af149e4}{has\_arg}})
+703         \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = nameend + 1;
+704           \textcolor{keywordflow}{else}
+705         \{
+706           \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+707             \{
+708               \textcolor{keywordflow}{if} (argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} - 1][1] == \textcolor{charliteral}{'-'})
+709             \textcolor{comment}{/* --option */}
+710             fprintf (stderr,
+711                  \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: option `--%s' doesn't allow an argument\(\backslash\)n"}),
+712                  argv[0], pfound->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}});
+713               \textcolor{keywordflow}{else}
+714             \textcolor{comment}{/* +option or -option */}
+715             fprintf (stderr,
+716                  \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: option `%c%s' doesn't allow an argument\(\backslash\)n"}),
+717                  argv[0], argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} - 1][0], pfound->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}});
+718 
+719               nextchar += strlen (nextchar);
+720 
+721               \mbox{\hyperlink{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}{optopt}} = pfound->\mbox{\hyperlink{structoption_a13bd155ec3b405d29c41ab8d0793be11}{val}};
+722               \textcolor{keywordflow}{return} \textcolor{charliteral}{'?'};
+723             \}
+724         \}
+725         \}
+726       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pfound->\mbox{\hyperlink{structoption_a90d7ee9a51eea5c002682dbd0af149e4}{has\_arg}} == 1)
+727         \{
+728           \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} < argc)
+729         \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++];
+730           \textcolor{keywordflow}{else}
+731         \{
+732           \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+733             fprintf (stderr,
+734                \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: option `%s' requires an argument\(\backslash\)n"}),
+735                argv[0], argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} - 1]);
+736           nextchar += strlen (nextchar);
+737           \mbox{\hyperlink{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}{optopt}} = pfound->\mbox{\hyperlink{structoption_a13bd155ec3b405d29c41ab8d0793be11}{val}};
+738           \textcolor{keywordflow}{return} optstring[0] == \textcolor{charliteral}{':'} ? \textcolor{charliteral}{':'} : \textcolor{charliteral}{'?'};
+739         \}
+740         \}
+741       nextchar += strlen (nextchar);
+742       \textcolor{keywordflow}{if} (longind != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+743         *longind = option\_index;
+744       \textcolor{keywordflow}{if} (pfound->\mbox{\hyperlink{structoption_ab366eea5fe7be25c1928328ba715e353}{flag}})
+745         \{
+746           *(pfound->\mbox{\hyperlink{structoption_ab366eea5fe7be25c1928328ba715e353}{flag}}) = pfound->\mbox{\hyperlink{structoption_a13bd155ec3b405d29c41ab8d0793be11}{val}};
+747           \textcolor{keywordflow}{return} 0;
+748         \}
+749       \textcolor{keywordflow}{return} pfound->\mbox{\hyperlink{structoption_a13bd155ec3b405d29c41ab8d0793be11}{val}};
+750     \}
+751 
+752       \textcolor{comment}{/* Can't find it as a long option.  If this is not getopt\_long\_only,}
+753 \textcolor{comment}{     or the option starts with '--' or is not a valid short}
+754 \textcolor{comment}{     option, then it's an error.}
+755 \textcolor{comment}{     Otherwise interpret it as a short option.  */}
+756       \textcolor{keywordflow}{if} (!long\_only || argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}][1] == \textcolor{charliteral}{'-'}
+757       || my\_index (optstring, *nextchar) == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+758     \{
+759       \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+760         \{
+761           \textcolor{keywordflow}{if} (argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}][1] == \textcolor{charliteral}{'-'})
+762         \textcolor{comment}{/* --option */}
+763         fprintf (stderr, \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: unrecognized option `--%s'\(\backslash\)n"}),
+764              argv[0], nextchar);
+765           \textcolor{keywordflow}{else}
+766         \textcolor{comment}{/* +option or -option */}
+767         fprintf (stderr, \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: unrecognized option `%c%s'\(\backslash\)n"}),
+768              argv[0], argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}][0], nextchar);
+769         \}
+770       nextchar = (\textcolor{keywordtype}{char} *) \textcolor{stringliteral}{""};
+771       \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+772       \mbox{\hyperlink{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}{optopt}} = 0;
+773       \textcolor{keywordflow}{return} \textcolor{charliteral}{'?'};
+774     \}
+775     \}
+776 
+777   \textcolor{comment}{/* Look at and handle the next short option-character.  */}
+778 
+779   \{
+780     \textcolor{keywordtype}{char} c = *nextchar++;
+781     \textcolor{keywordtype}{char} *temp = my\_index (optstring, c);
+782 
+783     \textcolor{comment}{/* Increment `optind' when we start to process its last character.  */}
+784     \textcolor{keywordflow}{if} (*nextchar == \textcolor{charliteral}{'\(\backslash\)0'})
+785       ++\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}};
+786 
+787     \textcolor{keywordflow}{if} (temp == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} || c == \textcolor{charliteral}{':'})
+788       \{
+789     \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+790       \{
+791         \textcolor{keywordflow}{if} (posixly\_correct)
+792           \textcolor{comment}{/* 1003.2 specifies the format of this message.  */}
+793           fprintf (stderr, \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: illegal option -- %c\(\backslash\)n"}),
+794                argv[0], c);
+795         \textcolor{keywordflow}{else}
+796           fprintf (stderr, \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: invalid option -- %c\(\backslash\)n"}),
+797                argv[0], c);
+798       \}
+799     \mbox{\hyperlink{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}{optopt}} = c;
+800     \textcolor{keywordflow}{return} \textcolor{charliteral}{'?'};
+801       \}
+802     \textcolor{comment}{/* Convenience. Treat POSIX -W foo same as long option --foo */}
+803     \textcolor{keywordflow}{if} (temp[0] == \textcolor{charliteral}{'W'} && temp[1] == \textcolor{charliteral}{';'})
+804       \{
+805     \textcolor{keywordtype}{char} *nameend;
+806     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structoption}{option}} *p;
+807     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structoption}{option}} *pfound = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+808     \textcolor{keywordtype}{int} exact = 0;
+809     \textcolor{keywordtype}{int} ambig = 0;
+810     \textcolor{keywordtype}{int} indfound = 0;
+811     \textcolor{keywordtype}{int} option\_index;
+812 
+813     \textcolor{comment}{/* This is an option that requires an argument.  */}
+814     \textcolor{keywordflow}{if} (*nextchar != \textcolor{charliteral}{'\(\backslash\)0'})
+815       \{
+816         \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = nextchar;
+817         \textcolor{comment}{/* If we end this ARGV-element by taking the rest as an arg,}
+818 \textcolor{comment}{           we must advance to the next element now.  */}
+819         \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+820       \}
+821     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} == argc)
+822       \{
+823         \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+824           \{
+825         \textcolor{comment}{/* 1003.2 specifies the format of this message.  */}
+826         fprintf (stderr, \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: option requires an argument -- %c\(\backslash\)n"}),
+827              argv[0], c);
+828           \}
+829         \mbox{\hyperlink{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}{optopt}} = c;
+830         \textcolor{keywordflow}{if} (optstring[0] == \textcolor{charliteral}{':'})
+831           c = \textcolor{charliteral}{':'};
+832         \textcolor{keywordflow}{else}
+833           c = \textcolor{charliteral}{'?'};
+834         \textcolor{keywordflow}{return} c;
+835       \}
+836     \textcolor{keywordflow}{else}
+837       \textcolor{comment}{/* We already incremented `optind' once;}
+838 \textcolor{comment}{         increment it again when taking next ARGV-elt as argument.  */}
+839       \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++];
+840 
+841     \textcolor{comment}{/* optarg is now the argument, see if it's in the}
+842 \textcolor{comment}{       table of longopts.  */}
+843 
+844     \textcolor{keywordflow}{for} (nextchar = nameend = \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}}; *nameend && *nameend != \textcolor{charliteral}{'='}; nameend++)
+845       \textcolor{comment}{/* Do nothing.  */} ;
+846 
+847     \textcolor{comment}{/* Test all long options for either exact match}
+848 \textcolor{comment}{       or abbreviated matches.  */}
+849     \textcolor{keywordflow}{for} (p = longopts, option\_index = 0; p->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}}; p++, option\_index++)
+850       \textcolor{keywordflow}{if} (!strncmp (p->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}}, nextchar, nameend - nextchar))
+851         \{
+852           \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) (nameend - nextchar) == strlen (p->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}}))
+853         \{
+854           \textcolor{comment}{/* Exact match found.  */}
+855           pfound = p;
+856           indfound = option\_index;
+857           exact = 1;
+858           \textcolor{keywordflow}{break};
+859         \}
+860           \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pfound == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+861         \{
+862           \textcolor{comment}{/* First nonexact match found.  */}
+863           pfound = p;
+864           indfound = option\_index;
+865         \}
+866           \textcolor{keywordflow}{else}
+867         \textcolor{comment}{/* Second or later nonexact match found.  */}
+868         ambig = 1;
+869         \}
+870     \textcolor{keywordflow}{if} (ambig && !exact)
+871       \{
+872         \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+873           fprintf (stderr, \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: option `-W %s' is ambiguous\(\backslash\)n"}),
+874                argv[0], argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}]);
+875         nextchar += strlen (nextchar);
+876         \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+877         \textcolor{keywordflow}{return} \textcolor{charliteral}{'?'};
+878       \}
+879     \textcolor{keywordflow}{if} (pfound != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+880       \{
+881         option\_index = indfound;
+882         \textcolor{keywordflow}{if} (*nameend)
+883           \{
+884         \textcolor{comment}{/* Don't test has\_arg with >, because some C compilers don't}
+885 \textcolor{comment}{           allow it to be used on enums.  */}
+886         \textcolor{keywordflow}{if} (pfound->\mbox{\hyperlink{structoption_a90d7ee9a51eea5c002682dbd0af149e4}{has\_arg}})
+887           \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = nameend + 1;
+888         \textcolor{keywordflow}{else}
+889           \{
+890             \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+891               fprintf (stderr, \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"\(\backslash\)}
+892 \textcolor{stringliteral}{%s: option `-W %s' doesn't allow an argument\(\backslash\)n"}),
+893                    argv[0], pfound->\mbox{\hyperlink{structoption_a92c850a23c7828c1dba453bf8d15e1f0}{name}});
+894 
+895             nextchar += strlen (nextchar);
+896             \textcolor{keywordflow}{return} \textcolor{charliteral}{'?'};
+897           \}
+898           \}
+899         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (pfound->\mbox{\hyperlink{structoption_a90d7ee9a51eea5c002682dbd0af149e4}{has\_arg}} == 1)
+900           \{
+901         \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} < argc)
+902           \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++];
+903         \textcolor{keywordflow}{else}
+904           \{
+905             \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+906               fprintf (stderr,
+907                    \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: option `%s' requires an argument\(\backslash\)n"}),
+908                    argv[0], argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} - 1]);
+909             nextchar += strlen (nextchar);
+910             \textcolor{keywordflow}{return} optstring[0] == \textcolor{charliteral}{':'} ? \textcolor{charliteral}{':'} : \textcolor{charliteral}{'?'};
+911           \}
+912           \}
+913         nextchar += strlen (nextchar);
+914         \textcolor{keywordflow}{if} (longind != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+915           *longind = option\_index;
+916         \textcolor{keywordflow}{if} (pfound->\mbox{\hyperlink{structoption_ab366eea5fe7be25c1928328ba715e353}{flag}})
+917           \{
+918         *(pfound->\mbox{\hyperlink{structoption_ab366eea5fe7be25c1928328ba715e353}{flag}}) = pfound->\mbox{\hyperlink{structoption_a13bd155ec3b405d29c41ab8d0793be11}{val}};
+919         \textcolor{keywordflow}{return} 0;
+920           \}
+921         \textcolor{keywordflow}{return} pfound->\mbox{\hyperlink{structoption_a13bd155ec3b405d29c41ab8d0793be11}{val}};
+922       \}
+923       nextchar = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+924       \textcolor{keywordflow}{return} \textcolor{charliteral}{'W'};   \textcolor{comment}{/* Let the application handle it.   */}
+925       \}
+926     \textcolor{keywordflow}{if} (temp[1] == \textcolor{charliteral}{':'})
+927       \{
+928     \textcolor{keywordflow}{if} (temp[2] == \textcolor{charliteral}{':'})
+929       \{
+930         \textcolor{comment}{/* This is an option that accepts an argument optionally.  */}
+931         \textcolor{keywordflow}{if} (*nextchar != \textcolor{charliteral}{'\(\backslash\)0'})
+932           \{
+933         \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = nextchar;
+934         \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+935           \}
+936         \textcolor{keywordflow}{else}
+937           \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+938         nextchar = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+939       \}
+940     \textcolor{keywordflow}{else}
+941       \{
+942         \textcolor{comment}{/* This is an option that requires an argument.  */}
+943         \textcolor{keywordflow}{if} (*nextchar != \textcolor{charliteral}{'\(\backslash\)0'})
+944           \{
+945         \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = nextchar;
+946         \textcolor{comment}{/* If we end this ARGV-element by taking the rest as an arg,}
+947 \textcolor{comment}{           we must advance to the next element now.  */}
+948         \mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++;
+949           \}
+950         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}} == argc)
+951           \{
+952         \textcolor{keywordflow}{if} (\mbox{\hyperlink{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}{opterr}})
+953           \{
+954             \textcolor{comment}{/* 1003.2 specifies the format of this message.  */}
+955             fprintf (stderr,
+956                \mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\textcolor{stringliteral}{"%s: option requires an argument -- %c\(\backslash\)n"}),
+957                argv[0], c);
+958           \}
+959         \mbox{\hyperlink{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}{optopt}} = c;
+960         \textcolor{keywordflow}{if} (optstring[0] == \textcolor{charliteral}{':'})
+961           c = \textcolor{charliteral}{':'};
+962         \textcolor{keywordflow}{else}
+963           c = \textcolor{charliteral}{'?'};
+964           \}
+965         \textcolor{keywordflow}{else}
+966           \textcolor{comment}{/* We already incremented `optind' once;}
+967 \textcolor{comment}{         increment it again when taking next ARGV-elt as argument.  */}
+968           \mbox{\hyperlink{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}{optarg}} = argv[\mbox{\hyperlink{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}{optind}}++];
+969         nextchar = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+970       \}
+971       \}
+972     \textcolor{keywordflow}{return} c;
+973   \}
+974 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{getopt_8c_a0df92a0ae8fe1fd43268c738f548674f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{getopt_8c_aee28fd8a0e40b6d958f7d20348e45368}\label{getopt_8c_aee28fd8a0e40b6d958f7d20348e45368}} 
+\index{getopt.\+c@{getopt.\+c}!getenv@{getenv}}
+\index{getenv@{getenv}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{getenv()}{getenv()}}
+{\footnotesize\ttfamily char$\ast$ getenv (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{getopt_8c_aee28fd8a0e40b6d958f7d20348e45368_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{getopt_8c_a1b2ada39ab92162c6ec9c67c8093fa2e}\label{getopt_8c_a1b2ada39ab92162c6ec9c67c8093fa2e}} 
+\index{getopt.\+c@{getopt.\+c}!getopt@{getopt}}
+\index{getopt@{getopt}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{getopt()}{getopt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} getopt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{argc,  }\item[{char $\ast$\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} $\ast$}]{argv,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{optstring }\end{DoxyParamCaption})}
+
+
+
+getopt.\+c 파일의 977 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+981 \{
+982   \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt_8c_a0df92a0ae8fe1fd43268c738f548674f}{\_getopt\_internal}} (argc, argv, optstring,
+983                (\textcolor{keyword}{const} \textcolor{keyword}{struct} \mbox{\hyperlink{structoption}{option}} *) 0,
+984                (\textcolor{keywordtype}{int} *) 0,
+985                0);
+986 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{getopt_8c_a1b2ada39ab92162c6ec9c67c8093fa2e_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{getopt_8c_a28286be757527aeb1db951b5da9aeec1}\label{getopt_8c_a28286be757527aeb1db951b5da9aeec1}} 
+\index{getopt.\+c@{getopt.\+c}!\+\_\+\+\_\+getopt\+\_\+initialized@{\+\_\+\+\_\+getopt\+\_\+initialized}}
+\index{\+\_\+\+\_\+getopt\+\_\+initialized@{\+\_\+\+\_\+getopt\+\_\+initialized}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{\+\_\+\+\_\+getopt\+\_\+initialized}{\_\_getopt\_initialized}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+\+\_\+getopt\+\_\+initialized = 0}
+
+
+
+getopt.\+c 파일의 140 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}\label{getopt_8c_adb50a0eab9fed92fc3bfc7dfa4f2c410}} 
+\index{getopt.\+c@{getopt.\+c}!optarg@{optarg}}
+\index{optarg@{optarg}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{optarg}{optarg}}
+{\footnotesize\ttfamily char$\ast$ optarg = \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+getopt.\+c 파일의 119 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}\label{getopt_8c_ae30f05ee1e2e5652f174a35c7875d25e}} 
+\index{getopt.\+c@{getopt.\+c}!opterr@{opterr}}
+\index{opterr@{opterr}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{opterr}{opterr}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} opterr = 1}
+
+
+
+getopt.\+c 파일의 154 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}\label{getopt_8c_ad5e1c16213bbee2d5e8cc363309f418c}} 
+\index{getopt.\+c@{getopt.\+c}!optind@{optind}}
+\index{optind@{optind}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{optind}{optind}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} optind = 1}
+
+
+
+getopt.\+c 파일의 134 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}\label{getopt_8c_a475b8db98445da73e5f62a1ef6324b95}} 
+\index{getopt.\+c@{getopt.\+c}!optopt@{optopt}}
+\index{optopt@{optopt}!getopt.\+c@{getopt.\+c}}
+\subsubsection{\texorpdfstring{optopt}{optopt}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} optopt = \textquotesingle{}?\textquotesingle{}}
+
+
+
+getopt.\+c 파일의 160 번째 라인에서 정의되었습니다.
+

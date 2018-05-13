@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_win_helper_1_1_c_rect.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>WinHelper</b></li><li class="navelem"><a class="el" href="class_win_helper_1_1_c_rect.html">CRect</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -72,87 +92,791 @@ $(function() {
 <div class="title">WinHelper::CRect 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_win_helper_8h_source.html">WinHelper.h</a>&gt;</code></p>
 <div class="dynheader">
 WinHelper::CRect에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_win_helper_1_1_c_rect.png" usemap="#WinHelper::CRect_map" alt=""/>
-  <map id="WinHelper::CRect_map" name="WinHelper::CRect_map">
-</map>
- </div></div>
+<div class="center"><img src="class_win_helper_1_1_c_rect__inherit__graph.png" border="0" usemap="#_win_helper_1_1_c_rect_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+WinHelper::CRect에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_win_helper_1_1_c_rect__coll__graph.png" border="0" usemap="#_win_helper_1_1_c_rect_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:aae968ffaab6da35e85e7fa0e8941aea7"><td class="memItemLeft" align="right" valign="top"><a id="aae968ffaab6da35e85e7fa0e8941aea7"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CRect</b> (const RECT &amp;rhs)</td></tr>
+<tr class="memitem:a23555d57c6d6f65272f0bc64378651b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a23555d57c6d6f65272f0bc64378651b8">CRect</a> ()</td></tr>
+<tr class="separator:a23555d57c6d6f65272f0bc64378651b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aae968ffaab6da35e85e7fa0e8941aea7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#aae968ffaab6da35e85e7fa0e8941aea7">CRect</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;rhs)</td></tr>
 <tr class="separator:aae968ffaab6da35e85e7fa0e8941aea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3253ffe9a6b650c58100509712805d30"><td class="memItemLeft" align="right" valign="top"><a id="a3253ffe9a6b650c58100509712805d30"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>CRect</b> (int xLeft, int yTop, int xRight, int yBottom)</td></tr>
+<tr class="memitem:a3253ffe9a6b650c58100509712805d30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a3253ffe9a6b650c58100509712805d30">CRect</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> xLeft, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> yTop, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> xRight, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> yBottom)</td></tr>
 <tr class="separator:a3253ffe9a6b650c58100509712805d30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acde8c61514d7814ab1d7c5f91e549a80"><td class="memItemLeft" align="right" valign="top"><a id="acde8c61514d7814ab1d7c5f91e549a80"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Width</b> () const</td></tr>
+<tr class="memitem:acde8c61514d7814ab1d7c5f91e549a80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#acde8c61514d7814ab1d7c5f91e549a80">Width</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:acde8c61514d7814ab1d7c5f91e549a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a227070170fb6da9f8539eb9d35749745"><td class="memItemLeft" align="right" valign="top"><a id="a227070170fb6da9f8539eb9d35749745"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Height</b> () const</td></tr>
+<tr class="memitem:a227070170fb6da9f8539eb9d35749745"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a227070170fb6da9f8539eb9d35749745">Height</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a227070170fb6da9f8539eb9d35749745"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a744e3b6f0a33e7143dbe852d71190875"><td class="memItemLeft" align="right" valign="top"><a id="a744e3b6f0a33e7143dbe852d71190875"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator LPCRECT</b> () const</td></tr>
+<tr class="memitem:a744e3b6f0a33e7143dbe852d71190875"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a744e3b6f0a33e7143dbe852d71190875">operator LPCRECT</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a744e3b6f0a33e7143dbe852d71190875"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8af272cf417faeddfba92f44a8b6cb9"><td class="memItemLeft" align="right" valign="top"><a id="af8af272cf417faeddfba92f44a8b6cb9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>operator LPRECT</b> ()</td></tr>
+<tr class="memitem:af8af272cf417faeddfba92f44a8b6cb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#af8af272cf417faeddfba92f44a8b6cb9">operator LPRECT</a> ()</td></tr>
 <tr class="separator:af8af272cf417faeddfba92f44a8b6cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37d2e20ba4edaf4f3ab837862ba73c11"><td class="memItemLeft" align="right" valign="top"><a id="a37d2e20ba4edaf4f3ab837862ba73c11"></a>
-<a class="el" href="class_win_helper_1_1_c_size.html">CSize</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Size</b> () const</td></tr>
+<tr class="memitem:a37d2e20ba4edaf4f3ab837862ba73c11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_win_helper_1_1_c_size.html">CSize</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a37d2e20ba4edaf4f3ab837862ba73c11">Size</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a37d2e20ba4edaf4f3ab837862ba73c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb394a1600f994a4500c71a48db1b9ad"><td class="memItemLeft" align="right" valign="top"><a id="abb394a1600f994a4500c71a48db1b9ad"></a>
-POINT&#160;</td><td class="memItemRight" valign="bottom"><b>TopLeft</b> () const</td></tr>
+<tr class="memitem:abb394a1600f994a4500c71a48db1b9ad"><td class="memItemLeft" align="right" valign="top">POINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#abb394a1600f994a4500c71a48db1b9ad">TopLeft</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:abb394a1600f994a4500c71a48db1b9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5484884c667466060e54d20f566376a6"><td class="memItemLeft" align="right" valign="top"><a id="a5484884c667466060e54d20f566376a6"></a>
-POINT&#160;</td><td class="memItemRight" valign="bottom"><b>BottomRight</b> () const</td></tr>
+<tr class="memitem:a5484884c667466060e54d20f566376a6"><td class="memItemLeft" align="right" valign="top">POINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a5484884c667466060e54d20f566376a6">BottomRight</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a5484884c667466060e54d20f566376a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc306b936afd8a1fe8321a7846ad260"><td class="memItemLeft" align="right" valign="top"><a id="a5cc306b936afd8a1fe8321a7846ad260"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> (int xLeft, int yTop, int xRight, int yBottom)</td></tr>
+<tr class="memitem:a5cc306b936afd8a1fe8321a7846ad260"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a5cc306b936afd8a1fe8321a7846ad260">Set</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> xLeft, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> yTop, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> xRight, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> yBottom)</td></tr>
 <tr class="separator:a5cc306b936afd8a1fe8321a7846ad260"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a78810f08fbb4559fee4910b531735a"><td class="memItemLeft" align="right" valign="top"><a id="a6a78810f08fbb4559fee4910b531735a"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsEmpty</b> () const</td></tr>
+<tr class="memitem:a6a78810f08fbb4559fee4910b531735a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a6a78810f08fbb4559fee4910b531735a">IsEmpty</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a6a78810f08fbb4559fee4910b531735a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15109200bd331bfcfa7bc7bfd86c2c52"><td class="memItemLeft" align="right" valign="top"><a id="a15109200bd331bfcfa7bc7bfd86c2c52"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Empty</b> ()</td></tr>
+<tr class="memitem:a15109200bd331bfcfa7bc7bfd86c2c52"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a15109200bd331bfcfa7bc7bfd86c2c52">Empty</a> ()</td></tr>
 <tr class="separator:a15109200bd331bfcfa7bc7bfd86c2c52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab53ec9397692f842d8a5c289d44e4741"><td class="memItemLeft" align="right" valign="top"><a id="ab53ec9397692f842d8a5c289d44e4741"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSize</b> (const <a class="el" href="class_win_helper_1_1_c_size.html">CSize</a> &amp;size)</td></tr>
+<tr class="memitem:ab53ec9397692f842d8a5c289d44e4741"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#ab53ec9397692f842d8a5c289d44e4741">SetSize</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="class_win_helper_1_1_c_size.html">CSize</a> &amp;<a class="el" href="expr-lex_8cpp.html#ab7d671599a7b25ca99a487fa341bc33a">size</a>)</td></tr>
 <tr class="separator:ab53ec9397692f842d8a5c289d44e4741"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00602a2018250d3fb661831c0aa65ca1"><td class="memItemLeft" align="right" valign="top"><a id="a00602a2018250d3fb661831c0aa65ca1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSize</b> (const SIZE &amp;size)</td></tr>
+<tr class="memitem:a00602a2018250d3fb661831c0aa65ca1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a00602a2018250d3fb661831c0aa65ca1">SetSize</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> SIZE &amp;<a class="el" href="expr-lex_8cpp.html#ab7d671599a7b25ca99a487fa341bc33a">size</a>)</td></tr>
 <tr class="separator:a00602a2018250d3fb661831c0aa65ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44277ee1ed92bf43b56021d630992987"><td class="memItemLeft" align="right" valign="top"><a id="a44277ee1ed92bf43b56021d630992987"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetSize</b> (int cx, int cy)</td></tr>
+<tr class="memitem:a44277ee1ed92bf43b56021d630992987"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a44277ee1ed92bf43b56021d630992987">SetSize</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cx, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cy)</td></tr>
 <tr class="separator:a44277ee1ed92bf43b56021d630992987"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab241031d5051b5fa34594cd83fa93534"><td class="memItemLeft" align="right" valign="top"><a id="ab241031d5051b5fa34594cd83fa93534"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Offset</b> (int cx, int cy)</td></tr>
+<tr class="memitem:ab241031d5051b5fa34594cd83fa93534"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#ab241031d5051b5fa34594cd83fa93534">Offset</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cx, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cy)</td></tr>
 <tr class="separator:ab241031d5051b5fa34594cd83fa93534"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a360524ba4e46d6ff65f8e6fa2ee7ef6a"><td class="memItemLeft" align="right" valign="top"><a id="a360524ba4e46d6ff65f8e6fa2ee7ef6a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Inflate</b> (int cx, int cy)</td></tr>
+<tr class="memitem:a360524ba4e46d6ff65f8e6fa2ee7ef6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a360524ba4e46d6ff65f8e6fa2ee7ef6a">Inflate</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cx, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cy)</td></tr>
 <tr class="separator:a360524ba4e46d6ff65f8e6fa2ee7ef6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a138cae1d90a65763cb419e158b4c5dda"><td class="memItemLeft" align="right" valign="top"><a id="a138cae1d90a65763cb419e158b4c5dda"></a>
-<a class="el" href="class_win_helper_1_1_c_rect.html">CRect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operator=</b> (const RECT &amp;rhs)</td></tr>
+<tr class="memitem:a138cae1d90a65763cb419e158b4c5dda"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_win_helper_1_1_c_rect.html">CRect</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a138cae1d90a65763cb419e158b4c5dda">operator=</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;rhs)</td></tr>
 <tr class="separator:a138cae1d90a65763cb419e158b4c5dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8417d900e15e2aca83b29225d2dee165"><td class="memItemLeft" align="right" valign="top"><a id="a8417d900e15e2aca83b29225d2dee165"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>PtInRect</b> (const POINT &amp;pt) const</td></tr>
+<tr class="memitem:a8417d900e15e2aca83b29225d2dee165"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#a8417d900e15e2aca83b29225d2dee165">PtInRect</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> POINT &amp;pt) <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a8417d900e15e2aca83b29225d2dee165"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4e2111ea0d699b212744c15fc8ca560"><td class="memItemLeft" align="right" valign="top"><a id="ae4e2111ea0d699b212744c15fc8ca560"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Intersect</b> (const RECT &amp;rc) const</td></tr>
+<tr class="memitem:ae4e2111ea0d699b212744c15fc8ca560"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_win_helper_1_1_c_rect.html#ae4e2111ea0d699b212744c15fc8ca560">Intersect</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;rc) <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:ae4e2111ea0d699b212744c15fc8ca560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a23555d57c6d6f65272f0bc64378651b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23555d57c6d6f65272f0bc64378651b8">&#9670;&nbsp;</a></span>CRect() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CRect::CRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aae968ffaab6da35e85e7fa0e8941aea7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae968ffaab6da35e85e7fa0e8941aea7">&#9670;&nbsp;</a></span>CRect() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CRect::CRect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;{ <a class="code" href="class_win_helper_1_1_c_rect.html#a5cc306b936afd8a1fe8321a7846ad260">Set</a>( rhs.left, rhs.top, rhs.right, rhs.bottom );}</div><div class="ttc" id="class_win_helper_1_1_c_rect_html_a5cc306b936afd8a1fe8321a7846ad260"><div class="ttname"><a href="class_win_helper_1_1_c_rect.html#a5cc306b936afd8a1fe8321a7846ad260">WinHelper::CRect::Set</a></div><div class="ttdeci">void Set(int xLeft, int yTop, int xRight, int yBottom)</div><div class="ttdef"><b>Definition:</b> <a href="_win_helper_8h_source.html#l00085">WinHelper.h:85</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_win_helper_1_1_c_rect_aae968ffaab6da35e85e7fa0e8941aea7_cgraph.png" border="0" usemap="#class_win_helper_1_1_c_rect_aae968ffaab6da35e85e7fa0e8941aea7_cgraph" alt=""/></div>
+<map name="class_win_helper_1_1_c_rect_aae968ffaab6da35e85e7fa0e8941aea7_cgraph" id="class_win_helper_1_1_c_rect_aae968ffaab6da35e85e7fa0e8941aea7_cgraph">
+<area shape="rect" id="node2" href="class_win_helper_1_1_c_rect.html#a5cc306b936afd8a1fe8321a7846ad260" title="WinHelper::CRect::Set" alt="" coords="224,5,379,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3253ffe9a6b650c58100509712805d30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3253ffe9a6b650c58100509712805d30">&#9670;&nbsp;</a></span>CRect() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CRect::CRect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>xLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>yTop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>xRight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>yBottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;{ <a class="code" href="class_win_helper_1_1_c_rect.html#a5cc306b936afd8a1fe8321a7846ad260">Set</a>( xLeft, yTop, xRight, yBottom ); }</div><div class="ttc" id="class_win_helper_1_1_c_rect_html_a5cc306b936afd8a1fe8321a7846ad260"><div class="ttname"><a href="class_win_helper_1_1_c_rect.html#a5cc306b936afd8a1fe8321a7846ad260">WinHelper::CRect::Set</a></div><div class="ttdeci">void Set(int xLeft, int yTop, int xRight, int yBottom)</div><div class="ttdef"><b>Definition:</b> <a href="_win_helper_8h_source.html#l00085">WinHelper.h:85</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_win_helper_1_1_c_rect_a3253ffe9a6b650c58100509712805d30_cgraph.png" border="0" usemap="#class_win_helper_1_1_c_rect_a3253ffe9a6b650c58100509712805d30_cgraph" alt=""/></div>
+<map name="class_win_helper_1_1_c_rect_a3253ffe9a6b650c58100509712805d30_cgraph" id="class_win_helper_1_1_c_rect_a3253ffe9a6b650c58100509712805d30_cgraph">
+<area shape="rect" id="node2" href="class_win_helper_1_1_c_rect.html#a5cc306b936afd8a1fe8321a7846ad260" title="WinHelper::CRect::Set" alt="" coords="224,5,379,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a5484884c667466060e54d20f566376a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5484884c667466060e54d20f566376a6">&#9670;&nbsp;</a></span>BottomRight()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">POINT WinHelper::CRect::BottomRight </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00083">83</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{ POINT pt = { right, bottom }; <span class="keywordflow">return</span> pt; }   </div></div><!-- fragment -->
+</div>
+</div>
+<a id="a15109200bd331bfcfa7bc7bfd86c2c52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15109200bd331bfcfa7bc7bfd86c2c52">&#9670;&nbsp;</a></span>Empty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WinHelper::CRect::Empty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00089">89</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;{ left = right = top = bottom = 0; }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a227070170fb6da9f8539eb9d35749745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a227070170fb6da9f8539eb9d35749745">&#9670;&nbsp;</a></span>Height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> WinHelper::CRect::Height </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{ <span class="keywordflow">return</span> bottom - top; }</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_win_helper_1_1_c_rect_a227070170fb6da9f8539eb9d35749745_icgraph.png" border="0" usemap="#class_win_helper_1_1_c_rect_a227070170fb6da9f8539eb9d35749745_icgraph" alt=""/></div>
+<map name="class_win_helper_1_1_c_rect_a227070170fb6da9f8539eb9d35749745_icgraph" id="class_win_helper_1_1_c_rect_a227070170fb6da9f8539eb9d35749745_icgraph">
+<area shape="rect" id="node2" href="class_win_helper_1_1_c_rect.html#a37d2e20ba4edaf4f3ab837862ba73c11" title="WinHelper::CRect::Size" alt="" coords="243,5,403,32"/>
+<area shape="rect" id="node3" href="class_win_helper_1_1_c_defer_window_pos.html#aeba6047e5182577c14bfe4729a602ca9" title="WinHelper::CDeferWindowPos\l::DeferWindowPos" alt="" coords="224,57,423,98"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a360524ba4e46d6ff65f8e6fa2ee7ef6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a360524ba4e46d6ff65f8e6fa2ee7ef6a">&#9670;&nbsp;</a></span>Inflate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WinHelper::CRect::Inflate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>cy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00103">103</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        {</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;          top-=cy;</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;          bottom+=cy;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;          right+=cx;</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;          left-=cx;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ae4e2111ea0d699b212744c15fc8ca560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4e2111ea0d699b212744c15fc8ca560">&#9670;&nbsp;</a></span>Intersect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WinHelper::CRect::Intersect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;&#160;</td>
+          <td class="paramname"><em>rc</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00121">121</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{ <span class="keywordflow">return</span> ( rc.left &lt; right &amp;&amp; rc.right &gt; left &amp;&amp; rc.top &lt; bottom &amp;&amp; rc.bottom &gt; top ); }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a6a78810f08fbb4559fee4910b531735a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a78810f08fbb4559fee4910b531735a">&#9670;&nbsp;</a></span>IsEmpty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WinHelper::CRect::IsEmpty </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{ <span class="keywordflow">return</span> left == 0 &amp;&amp; right == 0 &amp;&amp; top == 0 &amp;&amp; bottom == 0 ? true : <span class="keyword">false</span>; }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ab241031d5051b5fa34594cd83fa93534"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab241031d5051b5fa34594cd83fa93534">&#9670;&nbsp;</a></span>Offset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WinHelper::CRect::Offset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>cy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00095">95</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          top+=cy;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          bottom+=cy;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;          right+=cx;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;          left+=cx;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a744e3b6f0a33e7143dbe852d71190875"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a744e3b6f0a33e7143dbe852d71190875">&#9670;&nbsp;</a></span>operator LPCRECT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CRect::operator LPCRECT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">this</span>; };</div></div><!-- fragment -->
+</div>
+</div>
+<a id="af8af272cf417faeddfba92f44a8b6cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8af272cf417faeddfba92f44a8b6cb9">&#9670;&nbsp;</a></span>operator LPRECT()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">WinHelper::CRect::operator LPRECT </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00077">77</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;{ <span class="keywordflow">return</span> <span class="keyword">this</span>; };</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a138cae1d90a65763cb419e158b4c5dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a138cae1d90a65763cb419e158b4c5dda">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_win_helper_1_1_c_rect.html">CRect</a>&amp; WinHelper::CRect::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> RECT &amp;&#160;</td>
+          <td class="paramname"><em>rhs</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00111">111</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        {</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          left = rhs.left; top = rhs.top;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;          right = rhs.right; bottom = rhs.bottom;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;          <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a8417d900e15e2aca83b29225d2dee165"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8417d900e15e2aca83b29225d2dee165">&#9670;&nbsp;</a></span>PtInRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool WinHelper::CRect::PtInRect </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> POINT &amp;&#160;</td>
+          <td class="paramname"><em>pt</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00119">119</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{       <span class="keywordflow">return</span>  ( pt.x &gt;= left &amp;&amp; pt.x &lt; right &amp;&amp; pt.y &gt;=top &amp;&amp; pt.y &lt; bottom ); }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a5cc306b936afd8a1fe8321a7846ad260"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cc306b936afd8a1fe8321a7846ad260">&#9670;&nbsp;</a></span>Set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WinHelper::CRect::Set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>xLeft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>yTop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>xRight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>yBottom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00085">85</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{ top = yTop; bottom = yBottom; right = xRight; left = xLeft; }</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_win_helper_1_1_c_rect_a5cc306b936afd8a1fe8321a7846ad260_icgraph.png" border="0" usemap="#class_win_helper_1_1_c_rect_a5cc306b936afd8a1fe8321a7846ad260_icgraph" alt=""/></div>
+<map name="class_win_helper_1_1_c_rect_a5cc306b936afd8a1fe8321a7846ad260_icgraph" id="class_win_helper_1_1_c_rect_a5cc306b936afd8a1fe8321a7846ad260_icgraph">
+<area shape="rect" id="node2" href="class_win_helper_1_1_c_rect.html#aae968ffaab6da35e85e7fa0e8941aea7" title="WinHelper::CRect::CRect" alt="" coords="208,5,379,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab53ec9397692f842d8a5c289d44e4741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab53ec9397692f842d8a5c289d44e4741">&#9670;&nbsp;</a></span>SetSize() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WinHelper::CRect::SetSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="class_win_helper_1_1_c_size.html">CSize</a> &amp;&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00091">91</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{ bottom = top + <a class="code" href="expr-lex_8cpp.html#ab7d671599a7b25ca99a487fa341bc33a">size</a>.cy; right = left + <a class="code" href="expr-lex_8cpp.html#ab7d671599a7b25ca99a487fa341bc33a">size</a>.cx; }</div><div class="ttc" id="expr-lex_8cpp_html_ab7d671599a7b25ca99a487fa341bc33a"><div class="ttname"><a href="expr-lex_8cpp.html#ab7d671599a7b25ca99a487fa341bc33a">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01221">expr-lex.cpp:1221</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a00602a2018250d3fb661831c0aa65ca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00602a2018250d3fb661831c0aa65ca1">&#9670;&nbsp;</a></span>SetSize() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WinHelper::CRect::SetSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> SIZE &amp;&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00092">92</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;{ bottom = top + <a class="code" href="expr-lex_8cpp.html#ab7d671599a7b25ca99a487fa341bc33a">size</a>.cy; right = left + <a class="code" href="expr-lex_8cpp.html#ab7d671599a7b25ca99a487fa341bc33a">size</a>.cx; }</div><div class="ttc" id="expr-lex_8cpp_html_ab7d671599a7b25ca99a487fa341bc33a"><div class="ttname"><a href="expr-lex_8cpp.html#ab7d671599a7b25ca99a487fa341bc33a">size</a></div><div class="ttdeci">int size</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01221">expr-lex.cpp:1221</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a44277ee1ed92bf43b56021d630992987"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44277ee1ed92bf43b56021d630992987">&#9670;&nbsp;</a></span>SetSize() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void WinHelper::CRect::SetSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>cx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>cy</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00093">93</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;{ bottom = top + cy; right = left + cx; }</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a37d2e20ba4edaf4f3ab837862ba73c11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37d2e20ba4edaf4f3ab837862ba73c11">&#9670;&nbsp;</a></span>Size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_win_helper_1_1_c_size.html">CSize</a> WinHelper::CRect::Size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;{ CSize s( <a class="code" href="class_win_helper_1_1_c_rect.html#acde8c61514d7814ab1d7c5f91e549a80">Width</a>(), <a class="code" href="class_win_helper_1_1_c_rect.html#a227070170fb6da9f8539eb9d35749745">Height</a>() ); <span class="keywordflow">return</span> s; }</div><div class="ttc" id="class_win_helper_1_1_c_rect_html_acde8c61514d7814ab1d7c5f91e549a80"><div class="ttname"><a href="class_win_helper_1_1_c_rect.html#acde8c61514d7814ab1d7c5f91e549a80">WinHelper::CRect::Width</a></div><div class="ttdeci">int Width() const</div><div class="ttdef"><b>Definition:</b> <a href="_win_helper_8h_source.html#l00072">WinHelper.h:72</a></div></div>
+<div class="ttc" id="class_win_helper_1_1_c_rect_html_a227070170fb6da9f8539eb9d35749745"><div class="ttname"><a href="class_win_helper_1_1_c_rect.html#a227070170fb6da9f8539eb9d35749745">WinHelper::CRect::Height</a></div><div class="ttdeci">int Height() const</div><div class="ttdef"><b>Definition:</b> <a href="_win_helper_8h_source.html#l00074">WinHelper.h:74</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_win_helper_1_1_c_rect_a37d2e20ba4edaf4f3ab837862ba73c11_cgraph.png" border="0" usemap="#class_win_helper_1_1_c_rect_a37d2e20ba4edaf4f3ab837862ba73c11_cgraph" alt=""/></div>
+<map name="class_win_helper_1_1_c_rect_a37d2e20ba4edaf4f3ab837862ba73c11_cgraph" id="class_win_helper_1_1_c_rect_a37d2e20ba4edaf4f3ab837862ba73c11_cgraph">
+<area shape="rect" id="node2" href="class_win_helper_1_1_c_rect.html#acde8c61514d7814ab1d7c5f91e549a80" title="WinHelper::CRect::Width" alt="" coords="215,5,383,32"/>
+<area shape="rect" id="node3" href="class_win_helper_1_1_c_rect.html#a227070170fb6da9f8539eb9d35749745" title="WinHelper::CRect::Height" alt="" coords="213,56,384,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abb394a1600f994a4500c71a48db1b9ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb394a1600f994a4500c71a48db1b9ad">&#9670;&nbsp;</a></span>TopLeft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">POINT WinHelper::CRect::TopLeft </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00081">81</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{ POINT pt = { left, top }; <span class="keywordflow">return</span> pt; }   </div></div><!-- fragment -->
+</div>
+</div>
+<a id="acde8c61514d7814ab1d7c5f91e549a80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acde8c61514d7814ab1d7c5f91e549a80">&#9670;&nbsp;</a></span>Width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> WinHelper::CRect::Width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_win_helper_8h_source.html">WinHelper.h</a> 파일의 <a class="el" href="_win_helper_8h_source.html#l00072">72</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{ <span class="keywordflow">return</span> right - left; }</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_win_helper_1_1_c_rect_acde8c61514d7814ab1d7c5f91e549a80_icgraph.png" border="0" usemap="#class_win_helper_1_1_c_rect_acde8c61514d7814ab1d7c5f91e549a80_icgraph" alt=""/></div>
+<map name="class_win_helper_1_1_c_rect_acde8c61514d7814ab1d7c5f91e549a80_icgraph" id="class_win_helper_1_1_c_rect_acde8c61514d7814ab1d7c5f91e549a80_icgraph">
+<area shape="rect" id="node2" href="class_win_helper_1_1_c_rect.html#a37d2e20ba4edaf4f3ab837862ba73c11" title="WinHelper::CRect::Size" alt="" coords="241,5,401,32"/>
+<area shape="rect" id="node3" href="class_win_helper_1_1_c_defer_window_pos.html#aeba6047e5182577c14bfe4729a602ca9" title="WinHelper::CDeferWindowPos\l::DeferWindowPos" alt="" coords="221,57,420,98"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_win_helper_8h_source.html">WinHelper.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_win_helper_8h_source.html">WinHelper.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_win_helper.html">WinHelper</a></li><li class="navelem"><a class="el" href="class_win_helper_1_1_c_rect.html">CRect</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

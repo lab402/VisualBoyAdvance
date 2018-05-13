@@ -1,0 +1,8 @@
+<map id="CPUUpdateCPSR" name="CPUUpdateCPSR">
+<area shape="rect" id="node2" href="$remote_8cpp.html#a10da286ad7e1f3a23321ecb350790632" title="remoteSendStatus" alt="" coords="188,69,319,96"/>
+<area shape="rect" id="node7" href="$remote_8cpp.html#a05e72d5a52d6e6ea14536f17042cbf13" title="remoteReadRegisters" alt="" coords="180,132,327,159"/>
+<area shape="rect" id="node3" href="$remote_8cpp.html#a2a3582d89ee0431494a63172d29b92b7" title="remoteStepOverRange" alt="" coords="375,5,527,32"/>
+<area shape="rect" id="node4" href="$_v_b_a_8cpp.html#a3fc86793182abde32b75da7885cb7337" title="remoteStubMain" alt="" coords="575,56,692,83"/>
+<area shape="rect" id="node6" href="$_v_b_a_8cpp.html#a5309cd8c07c439a8edfa790743175a19" title="remoteStubSignal" alt="" coords="388,107,513,133"/>
+<area shape="rect" id="node5" href="$class_v_b_a.html#a0296d1fa6a340dffd47dbe623b64475c" title="VBA::OnIdle" alt="" coords="740,56,835,83"/>
+</map>

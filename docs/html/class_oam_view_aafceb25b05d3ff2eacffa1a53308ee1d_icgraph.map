@@ -1,0 +1,9 @@
+<map id="OamView::setAttributes" name="OamView::setAttributes">
+<area shape="rect" id="node2" href="$class_oam_view.html#a391d8ee2931b2927e936c7100e676451" title="OamView::render" alt="" coords="213,107,336,133"/>
+<area shape="rect" id="node3" href="$class_oam_view.html#af9092e04b559ef87670e18dd42c45669" title="OamView::paint" alt="" coords="384,107,499,133"/>
+<area shape="rect" id="node4" href="$class_oam_view.html#a9a54cb2672c3302524a00b744d09b645" title="OamView::update" alt="" coords="575,5,700,32"/>
+<area shape="rect" id="node5" href="$class_oam_view.html#a925c72977181efd7be81b302af7ed071" title="OamView::OnInitDialog" alt="" coords="559,56,715,83"/>
+<area shape="rect" id="node6" href="$class_oam_view.html#a60c3ddf70e740451daa8bb8a76661667" title="OamView::OnStretch" alt="" coords="565,107,710,133"/>
+<area shape="rect" id="node7" href="$class_oam_view.html#abe95dd5fc8a624b1ae5b3e4f4deb304a" title="OamView::OnChangeSprite" alt="" coords="547,157,728,184"/>
+<area shape="rect" id="node8" href="$class_oam_view.html#abe18288bced0938ce18be385de441bd4" title="OamView::OnHScroll" alt="" coords="565,208,710,235"/>
+</map>

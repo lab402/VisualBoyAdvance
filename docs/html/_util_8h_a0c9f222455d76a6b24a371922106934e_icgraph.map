@@ -1,0 +1,7 @@
+<map id="utilWriteData" name="utilWriteData">
+<area shape="rect" id="node2" href="$_e_eprom_8h.html#ae1a9cd954c2f43107489dfa77230db8d" title="eepromSaveGame" alt="" coords="155,5,283,32"/>
+<area shape="rect" id="node3" href="$_flash_8h.html#afb269843175d3b676471eac113e11913" title="flashSaveGame" alt="" coords="163,56,275,83"/>
+<area shape="rect" id="node4" href="$gb_s_g_b_8h.html#a34673f3a4366c96d30755e16212350f4" title="gbSgbSaveGame" alt="" coords="157,107,280,133"/>
+<area shape="rect" id="node5" href="$gb_sound_8h.html#a29eba8ccb5623503ee3f48eca2e8b6a9" title="gbSoundSaveGame" alt="" coords="151,157,287,184"/>
+<area shape="rect" id="node6" href="$_sound_8h.html#aa3914cb52519d298a96ccfde9d124a5d" title="soundSaveGame" alt="" coords="159,208,279,235"/>
+</map>

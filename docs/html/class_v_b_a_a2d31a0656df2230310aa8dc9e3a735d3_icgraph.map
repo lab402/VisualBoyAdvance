@@ -1,0 +1,28 @@
+<map id="VBA::winRemoveUpdateListener" name="VBA::winRemoveUpdateListener">
+<area shape="rect" id="node2" href="$class_disassemble.html#a5423cb1c85c1e4bb05b3d4018c804826" title="Disassemble::OnAutoUpdate" alt="" coords="277,5,468,32"/>
+<area shape="rect" id="node3" href="$class_disassemble.html#a8f239c5117018f44ee0847b530a9eee1" title="Disassemble::OnClose" alt="" coords="295,56,450,83"/>
+<area shape="rect" id="node4" href="$class_g_b_disassemble.html#a2cbf8f743dec4f14119762d81f77ad60" title="GBDisassemble::OnClose" alt="" coords="285,107,460,133"/>
+<area shape="rect" id="node5" href="$class_g_b_disassemble.html#a5fad3e2f0c06721bd881fa0dda1001e4" title="GBDisassemble::OnAutoUpdate" alt="" coords="268,157,477,184"/>
+<area shape="rect" id="node6" href="$class_g_b_map_view.html#ad58a2f86c686e80be789229bdee2e64f" title="GBMapView::OnAutoUpdate" alt="" coords="279,208,466,235"/>
+<area shape="rect" id="node7" href="$class_g_b_map_view.html#a71cb2125ab0c6216749d128c16d37bff" title="GBMapView::OnClose" alt="" coords="297,259,449,285"/>
+<area shape="rect" id="node8" href="$class_g_b_memory_viewer_dlg.html#aff8b13af0ecd94d5ef812dbfcb73728a" title="GBMemoryViewerDlg::\lOnClose" alt="" coords="295,310,450,351"/>
+<area shape="rect" id="node9" href="$class_g_b_memory_viewer_dlg.html#a7c7da28ae22f8a9f5f8ad3e6bb358949" title="GBMemoryViewerDlg::\lOnAutoUpdate" alt="" coords="295,375,450,417"/>
+<area shape="rect" id="node10" href="$class_g_b_oam_view.html#a2c508aeb9089bfb1a21f88bd92c6753d" title="GBOamView::OnAutoUpdate" alt="" coords="277,441,468,468"/>
+<area shape="rect" id="node11" href="$class_g_b_oam_view.html#a09793b8c72f602f1e30b802552c13ee3" title="GBOamView::OnClose" alt="" coords="295,492,450,519"/>
+<area shape="rect" id="node12" href="$class_g_b_palette_view.html#a8d2c0e66a90accbbe35b286a51857728" title="GBPaletteView::OnAutoUpdate" alt="" coords="271,543,474,569"/>
+<area shape="rect" id="node13" href="$class_g_b_palette_view.html#a7cbc4954d55851e0991ee4419904fcec" title="GBPaletteView::OnClose" alt="" coords="289,593,457,620"/>
+<area shape="rect" id="node14" href="$class_g_b_tile_view.html#a59304e229d01ff07e7e232389d19017b" title="GBTileView::OnClose" alt="" coords="299,644,446,671"/>
+<area shape="rect" id="node15" href="$class_g_b_tile_view.html#ad31fb32f27279e00c296717013144d33" title="GBTileView::OnAutoUpdate" alt="" coords="281,695,464,721"/>
+<area shape="rect" id="node16" href="$class_i_o_viewer.html#a99c1044f4eed5c69ca652edfc032289d" title="IOViewer::OnClose" alt="" coords="307,745,439,772"/>
+<area shape="rect" id="node17" href="$class_i_o_viewer.html#a8e9ae4ebf837dff76500534337c0d609" title="IOViewer::OnAutoUpdate" alt="" coords="289,796,456,823"/>
+<area shape="rect" id="node18" href="$class_map_view.html#ace8d1802d7e8ae5bd92e572b9c0c84df" title="MapView::OnAutoUpdate" alt="" coords="289,847,457,873"/>
+<area shape="rect" id="node19" href="$class_map_view.html#a4831981d7411a8a37353679421517cf8" title="MapView::OnClose" alt="" coords="306,897,439,924"/>
+<area shape="rect" id="node20" href="$class_memory_viewer_dlg.html#a49522f159a0ccbca8c511e5c248b9b93" title="MemoryViewerDlg::OnClose" alt="" coords="280,948,465,975"/>
+<area shape="rect" id="node21" href="$class_memory_viewer_dlg.html#abd1a90d5974c83a3b388043d6162f118" title="MemoryViewerDlg::OnAutoUpdate" alt="" coords="263,999,483,1025"/>
+<area shape="rect" id="node22" href="$class_oam_view.html#a5c3407e6ff2ffc673ea913d19883a4c8" title="OamView::OnAutoUpdate" alt="" coords="287,1049,458,1076"/>
+<area shape="rect" id="node23" href="$class_oam_view.html#aa09ba3520dcfe8357764cbbd170e7c9c" title="OamView::OnClose" alt="" coords="305,1100,441,1127"/>
+<area shape="rect" id="node24" href="$class_palette_view.html#a4308e6a50e6b4870432bcb90c03f3c91" title="PaletteView::OnAutoUpdate" alt="" coords="281,1151,465,1177"/>
+<area shape="rect" id="node25" href="$class_palette_view.html#a58ce1d32d85fc8ee06f4e97948684cea" title="PaletteView::OnClose" alt="" coords="298,1201,447,1228"/>
+<area shape="rect" id="node26" href="$class_tile_view.html#a88e865b649c2a32c403670cca70ed55c" title="TileView::OnClose" alt="" coords="309,1252,437,1279"/>
+<area shape="rect" id="node27" href="$class_tile_view.html#ab51dcedc72c43cf57133d4adcd264c10" title="TileView::OnAutoUpdate" alt="" coords="291,1303,454,1329"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="VBA::initInput" name="VBA::initInput">
+<area shape="rect" id="node2" href="$_v_b_a_8cpp.html#a93c7d83181c7df44bc628c163ab7ef25" title="newDirectInput" alt="" coords="168,5,275,32"/>
+<area shape="rect" id="node3" href="$class_input.html#affd45f0c278a6ff71b7ae1a567a3dc1c" title="Input::initialize" alt="" coords="169,56,274,83"/>
+<area shape="rect" id="node4" href="$class_input.html#a098708c062b906c84ab036c04d447a29" title="Input::loadSettings" alt="" coords="156,107,287,133"/>
+<area shape="rect" id="node5" href="$class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa" title="Input::checkKeys" alt="" coords="160,157,283,184"/>
+</map>

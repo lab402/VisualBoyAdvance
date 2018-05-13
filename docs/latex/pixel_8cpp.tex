@@ -1,0 +1,204 @@
+\hypertarget{pixel_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/pixel.cpp 파일 참조}
+\label{pixel_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/pixel.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/pixel.\+cpp}}
+{\ttfamily \#include \char`\"{}System.\+h\char`\"{}}\newline
+pixel.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{pixel_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{pixel_8cpp_a756f0437ee364cd817956de4dcefe324}{Pixelate}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$src\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{src\+Pitch}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$delta\+Ptr, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$dst\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} dst\+Pitch, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} width, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} height)
+\item 
+void \mbox{\hyperlink{pixel_8cpp_a2abf381251f35056d4f4e86fa0402381}{Pixelate32}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$src\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{src\+Pitch}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$dst\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} dst\+Pitch, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} width, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} height)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{pixel_8cpp_adc95249f4e7f061627835e49b2cf5210}{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}}
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{pixel_8cpp_a756f0437ee364cd817956de4dcefe324}\label{pixel_8cpp_a756f0437ee364cd817956de4dcefe324}} 
+\index{pixel.\+cpp@{pixel.\+cpp}!Pixelate@{Pixelate}}
+\index{Pixelate@{Pixelate}!pixel.\+cpp@{pixel.\+cpp}}
+\subsubsection{\texorpdfstring{Pixelate()}{Pixelate()}}
+{\footnotesize\ttfamily void Pixelate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{src\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{src\+Pitch,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{delta\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{dst\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{dst\+Pitch,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{width,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{height }\end{DoxyParamCaption})}
+
+
+
+pixel.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+25 \{
+26   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *nextLine, *finish;
+27   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} colorMask = ~(\mbox{\hyperlink{pixel_8cpp_adc95249f4e7f061627835e49b2cf5210}{RGB\_LOW\_BITS\_MASK}} | (\mbox{\hyperlink{pixel_8cpp_adc95249f4e7f061627835e49b2cf5210}{RGB\_LOW\_BITS\_MASK}} << 16));
+28   
+29   nextLine = dstPtr + dstPitch;
+30   
+31   \textcolor{keywordflow}{do} \{
+32     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *bP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) srcPtr;
+33     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *xP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) deltaPtr;
+34     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *dP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) dstPtr;
+35     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *nL = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) nextLine;
+36     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} currentPixel;
+37     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} nextPixel;
+38     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} currentDelta;
+39     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} nextDelta;
+40     
+41     finish = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *) bP + ((width+2) << 1);
+42     nextPixel = *bP++;
+43     nextDelta = *xP++;
+44     
+45     \textcolor{keywordflow}{do} \{
+46       currentPixel = nextPixel;
+47       currentDelta = nextDelta;
+48       nextPixel = *bP++;
+49       nextDelta = *xP++;
+50       
+51       \textcolor{keywordflow}{if} ((nextPixel != nextDelta) || (currentPixel != currentDelta)) \{
+52         \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} colorA, colorB, product;
+53         
+54         *(xP - 2) = currentPixel;
+55 \textcolor{preprocessor}{#ifdef WORDS\_BIGENDIAN}
+56         colorA = currentPixel >> 16;
+57         colorB = currentPixel & 0xffff;
+58 \textcolor{preprocessor}{#else}
+59         colorA = currentPixel & 0xffff;
+60         colorB = currentPixel >> 16;
+61 \textcolor{preprocessor}{#endif}
+62         product = (((colorA & colorMask) >> 1) & colorMask) >> 1;
+63         
+64 \textcolor{preprocessor}{#ifdef WORDS\_BIGENDIAN}
+65         *(nL) = (product << 16) | (product);
+66         *(dP) = (colorA << 16) | product;
+67 \textcolor{preprocessor}{#else}
+68         *(nL) = product | (product << 16);
+69         *(dP) = colorA | (product << 16);
+70 \textcolor{preprocessor}{#endif}
+71         
+72 \textcolor{preprocessor}{#ifdef WORDS\_BIGENDIAN}
+73         colorA = nextPixel >> 16;
+74 \textcolor{preprocessor}{#else}
+75         colorA = nextPixel & 0xffff;
+76 \textcolor{preprocessor}{#endif}
+77         product = (((colorB & colorMask) >> 1) & colorMask) >> 1;
+78 \textcolor{preprocessor}{#ifdef WORDS\_BIGENDIAN}
+79         *(nL + 1) = (product << 16) | (product);
+80         *(dP + 1) = (colorB << 16) | (product);
+81 \textcolor{preprocessor}{#else}
+82         *(nL + 1) = (product) | (product << 16);
+83         *(dP + 1) = (colorB) | (product << 16);
+84 \textcolor{preprocessor}{#endif}
+85       \}
+86       
+87       dP += 2;
+88       nL += 2;
+89     \} \textcolor{keywordflow}{while} ((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *) bP < finish);
+90     
+91     deltaPtr += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}};
+92     srcPtr += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}};
+93     dstPtr += dstPitch << 1;
+94     nextLine += dstPitch << 1;
+95   \}
+96   \textcolor{keywordflow}{while} (--height);
+97 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pixel_8cpp_a756f0437ee364cd817956de4dcefe324_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{pixel_8cpp_a2abf381251f35056d4f4e86fa0402381}\label{pixel_8cpp_a2abf381251f35056d4f4e86fa0402381}} 
+\index{pixel.\+cpp@{pixel.\+cpp}!Pixelate32@{Pixelate32}}
+\index{Pixelate32@{Pixelate32}!pixel.\+cpp@{pixel.\+cpp}}
+\subsubsection{\texorpdfstring{Pixelate32()}{Pixelate32()}}
+{\footnotesize\ttfamily void Pixelate32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{src\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{src\+Pitch,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{dst\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{dst\+Pitch,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{width,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{height }\end{DoxyParamCaption})}
+
+
+
+pixel.\+cpp 파일의 99 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+101 \{
+102   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *nextLine, *finish;
+103   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} colorMask = ~\mbox{\hyperlink{pixel_8cpp_adc95249f4e7f061627835e49b2cf5210}{RGB\_LOW\_BITS\_MASK}};
+104   
+105   nextLine = dstPtr + dstPitch;
+106   
+107   \textcolor{keywordflow}{do} \{
+108     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *bP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) srcPtr;
+109     \textcolor{comment}{//    u32 *xP = (u32 *) deltaPtr;}
+110     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *dP = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) dstPtr;
+111     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *nL = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *) nextLine;
+112     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} currentPixel;
+113     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} nextPixel;
+114     
+115     finish = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *) bP + ((width+1) << 2);
+116     nextPixel = *bP++;
+117     
+118     \textcolor{keywordflow}{do} \{
+119       currentPixel = nextPixel;
+120       nextPixel = *bP++;
+121       
+122       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} colorA, colorB, product;
+123         
+124       colorA = currentPixel;
+125       colorB = nextPixel;
+126 
+127       product = (((colorA & colorMask) >> 1) & colorMask) >> 1;
+128       *(nL) = product;
+129       *(nL+1) = product;
+130       *(dP) = colorA;
+131       *(dP+1) = product;
+132 
+133       nextPixel = *bP++;
+134       colorA = nextPixel;
+135       product = (((colorB & colorMask) >> 1) & colorMask) >> 1;
+136       *(nL + 2) = product;
+137       *(nL + 3) = product;
+138       *(dP + 2) = colorB;
+139       *(dP + 3) = product;
+140       
+141       dP += 4;
+142       nL += 4;
+143     \} \textcolor{keywordflow}{while} ((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *) bP < finish);
+144     
+145     srcPtr += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}};
+146     dstPtr += dstPitch << 1;
+147     nextLine += dstPitch << 1;
+148   \}
+149   \textcolor{keywordflow}{while} (--height);
+150 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pixel_8cpp_a2abf381251f35056d4f4e86fa0402381_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{pixel_8cpp_adc95249f4e7f061627835e49b2cf5210}\label{pixel_8cpp_adc95249f4e7f061627835e49b2cf5210}} 
+\index{pixel.\+cpp@{pixel.\+cpp}!R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK@{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}}
+\index{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK@{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}!pixel.\+cpp@{pixel.\+cpp}}
+\subsubsection{\texorpdfstring{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}{RGB\_LOW\_BITS\_MASK}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}
+
+
+
+system.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+

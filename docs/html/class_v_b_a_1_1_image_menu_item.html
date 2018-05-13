@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_v_b_a_1_1_image_menu_item.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>VBA</b></li><li class="navelem"><a class="el" href="class_v_b_a_1_1_image_menu_item.html">ImageMenuItem</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -72,39 +92,215 @@ $(function() {
 <div class="title">VBA::ImageMenuItem 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="menuitem_8h_source.html">menuitem.h</a>&gt;</code></p>
 <div class="dynheader">
 VBA::ImageMenuItem에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_v_b_a_1_1_image_menu_item.png" usemap="#VBA::ImageMenuItem_map" alt=""/>
-  <map id="VBA::ImageMenuItem_map" name="VBA::ImageMenuItem_map">
-</map>
- </div></div>
+<div class="center"><img src="class_v_b_a_1_1_image_menu_item__inherit__graph.png" border="0" usemap="#_v_b_a_1_1_image_menu_item_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+VBA::ImageMenuItem에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_image_menu_item__coll__graph.png" border="0" usemap="#_v_b_a_1_1_image_menu_item_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a52aaf1e5ccc5520a9136f113ee69c47b"><td class="memItemLeft" align="right" valign="top"><a id="a52aaf1e5ccc5520a9136f113ee69c47b"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ImageMenuItem</b> (Widget &amp;_roImage, const Glib::ustring &amp;_rsLabel, bool _bMnemonic=false)</td></tr>
+<tr class="memitem:a3068604a06c803d7dc6592eb2b0a0184"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_image_menu_item.html#a3068604a06c803d7dc6592eb2b0a0184">ImageMenuItem</a> ()</td></tr>
+<tr class="separator:a3068604a06c803d7dc6592eb2b0a0184"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52aaf1e5ccc5520a9136f113ee69c47b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_image_menu_item.html#a52aaf1e5ccc5520a9136f113ee69c47b">ImageMenuItem</a> (Widget &amp;_roImage, <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Glib::ustring &amp;_rsLabel, bool _bMnemonic=false)</td></tr>
 <tr class="separator:a52aaf1e5ccc5520a9136f113ee69c47b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cc1d64f1275f7e31c6cf1d48a21c070"><td class="memItemLeft" align="right" valign="top"><a id="a3cc1d64f1275f7e31c6cf1d48a21c070"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ImageMenuItem</b> (const Glib::ustring &amp;_rsLabel, bool _bMnemonic=false)</td></tr>
+<tr class="memitem:a3cc1d64f1275f7e31c6cf1d48a21c070"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_image_menu_item.html#a3cc1d64f1275f7e31c6cf1d48a21c070">ImageMenuItem</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Glib::ustring &amp;_rsLabel, bool _bMnemonic=false)</td></tr>
 <tr class="separator:a3cc1d64f1275f7e31c6cf1d48a21c070"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b7e700a518ea938513b80817662b1d1"><td class="memItemLeft" align="right" valign="top"><a id="a3b7e700a518ea938513b80817662b1d1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ImageMenuItem</b> (const Gtk::StockID &amp;_roId)</td></tr>
+<tr class="memitem:a3b7e700a518ea938513b80817662b1d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_image_menu_item.html#a3b7e700a518ea938513b80817662b1d1">ImageMenuItem</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Gtk::StockID &amp;_roId)</td></tr>
 <tr class="separator:a3b7e700a518ea938513b80817662b1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a709d7e9ac328ac7d53f576caf804398b"><td class="memItemLeft" align="right" valign="top"><a id="a709d7e9ac328ac7d53f576caf804398b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set_accel_key</b> (const Gtk::AccelKey &amp;_roAccelKey)</td></tr>
+<tr class="memitem:a709d7e9ac328ac7d53f576caf804398b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_image_menu_item.html#a709d7e9ac328ac7d53f576caf804398b">set_accel_key</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Gtk::AccelKey &amp;_roAccelKey)</td></tr>
 <tr class="separator:a709d7e9ac328ac7d53f576caf804398b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="menuitem_8h_source.html">menuitem.h</a> 파일의 <a class="el" href="menuitem_8h_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a3068604a06c803d7dc6592eb2b0a0184"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3068604a06c803d7dc6592eb2b0a0184">&#9670;&nbsp;</a></span>ImageMenuItem() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VBA::ImageMenuItem::ImageMenuItem </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="menuitem_8h_source.html">menuitem.h</a> 파일의 <a class="el" href="menuitem_8h_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a52aaf1e5ccc5520a9136f113ee69c47b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52aaf1e5ccc5520a9136f113ee69c47b">&#9670;&nbsp;</a></span>ImageMenuItem() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VBA::ImageMenuItem::ImageMenuItem </td>
+          <td>(</td>
+          <td class="paramtype">Widget &amp;&#160;</td>
+          <td class="paramname"><em>_roImage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Glib::ustring &amp;&#160;</td>
+          <td class="paramname"><em>_rsLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_bMnemonic</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="menuitem_8h_source.html">menuitem.h</a> 파일의 <a class="el" href="menuitem_8h_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                                                          :</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    Gtk::ImageMenuItem(_roImage, _rsLabel, _bMnemonic)</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a3cc1d64f1275f7e31c6cf1d48a21c070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cc1d64f1275f7e31c6cf1d48a21c070">&#9670;&nbsp;</a></span>ImageMenuItem() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VBA::ImageMenuItem::ImageMenuItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Glib::ustring &amp;&#160;</td>
+          <td class="paramname"><em>_rsLabel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>_bMnemonic</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="menuitem_8h_source.html">menuitem.h</a> 파일의 <a class="el" href="menuitem_8h_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                                                                       :</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    Gtk::ImageMenuItem(_rsLabel, _bMnemonic)</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a3b7e700a518ea938513b80817662b1d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b7e700a518ea938513b80817662b1d1">&#9670;&nbsp;</a></span>ImageMenuItem() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VBA::ImageMenuItem::ImageMenuItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Gtk::StockID &amp;&#160;</td>
+          <td class="paramname"><em>_roId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="menuitem_8h_source.html">menuitem.h</a> 파일의 <a class="el" href="menuitem_8h_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                          :</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    Gtk::ImageMenuItem(_roId)</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a709d7e9ac328ac7d53f576caf804398b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a709d7e9ac328ac7d53f576caf804398b">&#9670;&nbsp;</a></span>set_accel_key()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::ImageMenuItem::set_accel_key </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> Gtk::AccelKey &amp;&#160;</td>
+          <td class="paramname"><em>_roAccelKey</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="menuitem_8h_source.html">menuitem.h</a> 파일의 <a class="el" href="menuitem_8h_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      Gtk::MenuItem::set_accel_key(_roAccelKey);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div></div><!-- fragment -->
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/gtk/<a class="el" href="menuitem_8h_source.html">menuitem.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/<a class="el" href="menuitem_8h_source.html">menuitem.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_v_b_a.html">VBA</a></li><li class="navelem"><a class="el" href="class_v_b_a_1_1_image_menu_item.html">ImageMenuItem</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

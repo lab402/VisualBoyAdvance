@@ -1,0 +1,1761 @@
+\hypertarget{unzip_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/unzip.cpp 파일 참조}
+\label{unzip_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/unzip.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/unzip.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}zlib.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}unzip.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+unzip.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structunz__file__info__internal__s}{unz\+\_\+file\+\_\+info\+\_\+internal\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{structfile__in__zip__read__info__s}{file\+\_\+in\+\_\+zip\+\_\+read\+\_\+info\+\_\+s}}
+\item 
+struct \mbox{\hyperlink{structunz__s}{unz\+\_\+s}}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}}~static
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_ac01c3d5519b2ebeb874e4db73b09fd6f}{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+\_\+\+NO}}
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_ac88907609a3408a8ee6544287b6c9880}{U\+N\+Z\+\_\+\+B\+U\+F\+S\+I\+ZE}}~(16384)
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a97ef86322b25dcc3d0fc5eb50d386b54}{U\+N\+Z\+\_\+\+M\+A\+X\+F\+I\+L\+E\+N\+A\+M\+E\+I\+N\+Z\+IP}}~(256)
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_ac5c822e3692a95451e8f70a5916f05a3}{A\+L\+L\+OC}}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})~(malloc(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}))
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a5fb23c00a00f3856832e660edc2ab03d}{T\+R\+Y\+F\+R\+EE}}(p)~\{\mbox{\hyperlink{thumb_8h_ace94b9910dcb92506fbb8144edb58af8}{if}} (p) free(p);\}
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_ad43fed5cb489b2075313779a757e5c03}{S\+I\+Z\+E\+C\+E\+N\+T\+R\+A\+L\+D\+I\+R\+I\+T\+EM}}~(0x2e)
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a3c43e42371a71abc3db1b5a013382e77}{S\+I\+Z\+E\+Z\+I\+P\+L\+O\+C\+A\+L\+H\+E\+A\+D\+ER}}~(0x1e)
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a4c8d0b76b470ba65a43ca46a88320f39}{S\+E\+E\+K\+\_\+\+C\+UR}}~1
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_ad2a2e6c114780c3071efd24f16c7f7d8}{S\+E\+E\+K\+\_\+\+E\+ND}}~2
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{S\+E\+E\+K\+\_\+\+S\+ET}}~0
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a211c212a9634c4a42e21d04861c0bdd5}{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+V\+A\+L\+UE}}~2
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a245d2af04dc8b6d6617f21d34635b033}{S\+T\+R\+C\+M\+P\+C\+A\+S\+E\+N\+O\+S\+E\+N\+T\+I\+V\+E\+F\+U\+N\+C\+T\+I\+ON}}~\mbox{\hyperlink{unzip_8cpp_a87020390a71a0591c13e22b1b529573b}{strcmpcasenosensitive\+\_\+internal}}
+\item 
+\#define \mbox{\hyperlink{unzip_8cpp_a11acfc377461094b27681612f0bd277d}{B\+U\+F\+R\+E\+A\+D\+C\+O\+M\+M\+E\+NT}}~(0x400)
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structunz__file__info__internal__s}{unz\+\_\+file\+\_\+info\+\_\+internal\+\_\+s}} \mbox{\hyperlink{unzip_8cpp_a8f7400cb2fdf408412d6f75accea8305}{unz\+\_\+file\+\_\+info\+\_\+internal}}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}{unzlocal\+\_\+get\+Byte}} (F\+I\+LE $\ast$fin, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$pi)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\+\_\+get\+Short}} (F\+I\+LE $\ast$fin, u\+Long $\ast$pX)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\+\_\+get\+Long}} (F\+I\+LE $\ast$fin, u\+Long $\ast$pX)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{unzip_8cpp_a87020390a71a0591c13e22b1b529573b}{strcmpcasenosensitive\+\_\+internal}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$file\+Name1, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$file\+Name2)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a271f325759b3251ee728a8f850291dcf}{unz\+String\+File\+Name\+Compare}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$file\+Name1, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$file\+Name2, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} i\+Case\+Sensitivity)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} u\+Long \mbox{\hyperlink{unzip_8cpp_ad468af80daf0af6b832a81161501ccca}{unzlocal\+\_\+\+Search\+Central\+Dir}} (F\+I\+LE $\ast$fin)
+\item 
+\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a4efe7bf26960a0a0c66122788b175f97}{unz\+Open}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$path)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_af6ab0ba88ab5da62747df8f9336f1bb3}{unz\+Close}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_af05d6e3eac6ec396d9d134ca140fec61}{unz\+Get\+Global\+Info}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{unzip_8h_a18c3b238618ea86ef503ecbd4092dbce}{unz\+\_\+global\+\_\+info}} $\ast$pglobal\+\_\+info)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} void \mbox{\hyperlink{unzip_8cpp_aef5be704f689c792449ab4a95846e9cb}{unzlocal\+\_\+\+Dos\+Date\+To\+Tmu\+Date}} (u\+Long ul\+Dos\+Date, \mbox{\hyperlink{unzip_8h_a369a14c48c4b71afa6bf6cf95c6b9160}{tm\+\_\+unz}} $\ast$ptm)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6}{unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal}} \mbox{\hyperlink{unzip_8cpp_a40a0223f97fb689126323fc842156a17}{OF}} ((\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{unzip_8h_a03b3ec1a8745daa96699ac49f193b177}{unz\+\_\+file\+\_\+info}} $\ast$pfile\+\_\+info, \mbox{\hyperlink{unzip_8cpp_a8f7400cb2fdf408412d6f75accea8305}{unz\+\_\+file\+\_\+info\+\_\+internal}} $\ast$pfile\+\_\+info\+\_\+internal, char $\ast$sz\+File\+Name, u\+Long file\+Name\+Buffer\+Size, void $\ast$extra\+Field, u\+Long extra\+Field\+Buffer\+Size, char $\ast$sz\+Comment, u\+Long comment\+Buffer\+Size))
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6}{unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{unzip_8h_a03b3ec1a8745daa96699ac49f193b177}{unz\+\_\+file\+\_\+info}} $\ast$pfile\+\_\+info, \mbox{\hyperlink{unzip_8cpp_a8f7400cb2fdf408412d6f75accea8305}{unz\+\_\+file\+\_\+info\+\_\+internal}} $\ast$pfile\+\_\+info\+\_\+internal, char $\ast$sz\+File\+Name, u\+Long file\+Name\+Buffer\+Size, void $\ast$extra\+Field, u\+Long extra\+Field\+Buffer\+Size, char $\ast$sz\+Comment, u\+Long comment\+Buffer\+Size)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_ac99166540260b60340f4787af0a90029}{unz\+Get\+Current\+File\+Info}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{unzip_8h_a03b3ec1a8745daa96699ac49f193b177}{unz\+\_\+file\+\_\+info}} $\ast$pfile\+\_\+info, char $\ast$sz\+File\+Name, u\+Long file\+Name\+Buffer\+Size, void $\ast$extra\+Field, u\+Long extra\+Field\+Buffer\+Size, char $\ast$sz\+Comment, u\+Long comment\+Buffer\+Size)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a54821c0b6da683800164a56f2ae14f33}{unz\+Go\+To\+First\+File}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_acb457ebeaee7cb850c11a4a3d4b58201}{unz\+Go\+To\+Next\+File}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a22730edef5a8a98b367bb30a0d619608}{unz\+Locate\+File}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$sz\+File\+Name, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} i\+Case\+Sensitivity)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{unzip_8cpp_ae29f32a517b1bf71b222191636739fa6}{unzlocal\+\_\+\+Check\+Current\+File\+Coherency\+Header}} (\mbox{\hyperlink{structunz__s}{unz\+\_\+s}} $\ast$s, u\+Int $\ast$pi\+Size\+Var, u\+Long $\ast$poffset\+\_\+local\+\_\+extrafield, u\+Int $\ast$psize\+\_\+local\+\_\+extrafield)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a65deebb4ecb3ba110c343c21a4cd9a75}{unz\+Open\+Current\+File}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a782029e380dc5ab5dab00361c9c14f58}{unz\+Read\+Current\+File}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}} \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, unsigned \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+\item 
+z\+\_\+off\+\_\+t Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a17362e5016023e9424a318d93c0475d4}{unztell}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a564f8ada96a5b2e3c5815306fa146d68}{unzeof}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_a012cad9a0262291930ec7e34cd7c5bea}{unz\+Get\+Local\+Extrafield}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}} \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, unsigned \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_ac48279e5325cfdabbc67a312b1d32700}{unz\+Close\+Current\+File}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{unzip_8cpp_adc36ff0866254ca420c9cd9d7dccfa99}{unz\+Get\+Global\+Comment}} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, char $\ast$sz\+Comment, u\+Long u\+Size\+Buf)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char \mbox{\hyperlink{unzip_8cpp_aee9e9bcd4db86fe55bcc3685fafa5990}{unz\+\_\+copyright}} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{unzip_8cpp_ac5c822e3692a95451e8f70a5916f05a3}\label{unzip_8cpp_ac5c822e3692a95451e8f70a5916f05a3}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!A\+L\+L\+OC@{A\+L\+L\+OC}}
+\index{A\+L\+L\+OC@{A\+L\+L\+OC}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{A\+L\+L\+OC}{ALLOC}}
+{\footnotesize\ttfamily \#define A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} }\end{DoxyParamCaption})~(malloc(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}))}
+
+
+
+unzip.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a11acfc377461094b27681612f0bd277d}\label{unzip_8cpp_a11acfc377461094b27681612f0bd277d}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!B\+U\+F\+R\+E\+A\+D\+C\+O\+M\+M\+E\+NT@{B\+U\+F\+R\+E\+A\+D\+C\+O\+M\+M\+E\+NT}}
+\index{B\+U\+F\+R\+E\+A\+D\+C\+O\+M\+M\+E\+NT@{B\+U\+F\+R\+E\+A\+D\+C\+O\+M\+M\+E\+NT}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{B\+U\+F\+R\+E\+A\+D\+C\+O\+M\+M\+E\+NT}{BUFREADCOMMENT}}
+{\footnotesize\ttfamily \#define B\+U\+F\+R\+E\+A\+D\+C\+O\+M\+M\+E\+NT~(0x400)}
+
+
+
+unzip.\+cpp 파일의 281 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_ac01c3d5519b2ebeb874e4db73b09fd6f}\label{unzip_8cpp_ac01c3d5519b2ebeb874e4db73b09fd6f}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+\_\+\+NO@{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+\_\+\+NO}}
+\index{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+\_\+\+NO@{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+\_\+\+NO}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+\_\+\+NO}{CASESENSITIVITYDEFAULT\_NO}}
+{\footnotesize\ttfamily \#define C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+\_\+\+NO}
+
+
+
+unzip.\+cpp 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a211c212a9634c4a42e21d04861c0bdd5}\label{unzip_8cpp_a211c212a9634c4a42e21d04861c0bdd5}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+V\+A\+L\+UE@{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+V\+A\+L\+UE}}
+\index{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+V\+A\+L\+UE@{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+V\+A\+L\+UE}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+V\+A\+L\+UE}{CASESENSITIVITYDEFAULTVALUE}}
+{\footnotesize\ttfamily \#define C\+A\+S\+E\+S\+E\+N\+S\+I\+T\+I\+V\+I\+T\+Y\+D\+E\+F\+A\+U\+L\+T\+V\+A\+L\+UE~2}
+
+
+
+unzip.\+cpp 파일의 250 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}\label{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!local@{local}}
+\index{local@{local}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{local}{local}}
+{\footnotesize\ttfamily \#define local~static}
+
+
+
+unzip.\+cpp 파일의 45 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a4c8d0b76b470ba65a43ca46a88320f39}\label{unzip_8cpp_a4c8d0b76b470ba65a43ca46a88320f39}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!S\+E\+E\+K\+\_\+\+C\+UR@{S\+E\+E\+K\+\_\+\+C\+UR}}
+\index{S\+E\+E\+K\+\_\+\+C\+UR@{S\+E\+E\+K\+\_\+\+C\+UR}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{S\+E\+E\+K\+\_\+\+C\+UR}{SEEK\_CUR}}
+{\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+C\+UR~1}
+
+
+
+unzip.\+cpp 파일의 79 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_ad2a2e6c114780c3071efd24f16c7f7d8}\label{unzip_8cpp_ad2a2e6c114780c3071efd24f16c7f7d8}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!S\+E\+E\+K\+\_\+\+E\+ND@{S\+E\+E\+K\+\_\+\+E\+ND}}
+\index{S\+E\+E\+K\+\_\+\+E\+ND@{S\+E\+E\+K\+\_\+\+E\+ND}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{S\+E\+E\+K\+\_\+\+E\+ND}{SEEK\_END}}
+{\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+E\+ND~2}
+
+
+
+unzip.\+cpp 파일의 83 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}\label{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!S\+E\+E\+K\+\_\+\+S\+ET@{S\+E\+E\+K\+\_\+\+S\+ET}}
+\index{S\+E\+E\+K\+\_\+\+S\+ET@{S\+E\+E\+K\+\_\+\+S\+ET}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{S\+E\+E\+K\+\_\+\+S\+ET}{SEEK\_SET}}
+{\footnotesize\ttfamily \#define S\+E\+E\+K\+\_\+\+S\+ET~0}
+
+
+
+unzip.\+cpp 파일의 87 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_ad43fed5cb489b2075313779a757e5c03}\label{unzip_8cpp_ad43fed5cb489b2075313779a757e5c03}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!S\+I\+Z\+E\+C\+E\+N\+T\+R\+A\+L\+D\+I\+R\+I\+T\+EM@{S\+I\+Z\+E\+C\+E\+N\+T\+R\+A\+L\+D\+I\+R\+I\+T\+EM}}
+\index{S\+I\+Z\+E\+C\+E\+N\+T\+R\+A\+L\+D\+I\+R\+I\+T\+EM@{S\+I\+Z\+E\+C\+E\+N\+T\+R\+A\+L\+D\+I\+R\+I\+T\+EM}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{S\+I\+Z\+E\+C\+E\+N\+T\+R\+A\+L\+D\+I\+R\+I\+T\+EM}{SIZECENTRALDIRITEM}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E\+C\+E\+N\+T\+R\+A\+L\+D\+I\+R\+I\+T\+EM~(0x2e)}
+
+
+
+unzip.\+cpp 파일의 72 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a3c43e42371a71abc3db1b5a013382e77}\label{unzip_8cpp_a3c43e42371a71abc3db1b5a013382e77}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!S\+I\+Z\+E\+Z\+I\+P\+L\+O\+C\+A\+L\+H\+E\+A\+D\+ER@{S\+I\+Z\+E\+Z\+I\+P\+L\+O\+C\+A\+L\+H\+E\+A\+D\+ER}}
+\index{S\+I\+Z\+E\+Z\+I\+P\+L\+O\+C\+A\+L\+H\+E\+A\+D\+ER@{S\+I\+Z\+E\+Z\+I\+P\+L\+O\+C\+A\+L\+H\+E\+A\+D\+ER}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{S\+I\+Z\+E\+Z\+I\+P\+L\+O\+C\+A\+L\+H\+E\+A\+D\+ER}{SIZEZIPLOCALHEADER}}
+{\footnotesize\ttfamily \#define S\+I\+Z\+E\+Z\+I\+P\+L\+O\+C\+A\+L\+H\+E\+A\+D\+ER~(0x1e)}
+
+
+
+unzip.\+cpp 파일의 73 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a245d2af04dc8b6d6617f21d34635b033}\label{unzip_8cpp_a245d2af04dc8b6d6617f21d34635b033}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!S\+T\+R\+C\+M\+P\+C\+A\+S\+E\+N\+O\+S\+E\+N\+T\+I\+V\+E\+F\+U\+N\+C\+T\+I\+ON@{S\+T\+R\+C\+M\+P\+C\+A\+S\+E\+N\+O\+S\+E\+N\+T\+I\+V\+E\+F\+U\+N\+C\+T\+I\+ON}}
+\index{S\+T\+R\+C\+M\+P\+C\+A\+S\+E\+N\+O\+S\+E\+N\+T\+I\+V\+E\+F\+U\+N\+C\+T\+I\+ON@{S\+T\+R\+C\+M\+P\+C\+A\+S\+E\+N\+O\+S\+E\+N\+T\+I\+V\+E\+F\+U\+N\+C\+T\+I\+ON}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{S\+T\+R\+C\+M\+P\+C\+A\+S\+E\+N\+O\+S\+E\+N\+T\+I\+V\+E\+F\+U\+N\+C\+T\+I\+ON}{STRCMPCASENOSENTIVEFUNCTION}}
+{\footnotesize\ttfamily \#define S\+T\+R\+C\+M\+P\+C\+A\+S\+E\+N\+O\+S\+E\+N\+T\+I\+V\+E\+F\+U\+N\+C\+T\+I\+ON~\mbox{\hyperlink{unzip_8cpp_a87020390a71a0591c13e22b1b529573b}{strcmpcasenosensitive\+\_\+internal}}}
+
+
+
+unzip.\+cpp 파일의 256 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a5fb23c00a00f3856832e660edc2ab03d}\label{unzip_8cpp_a5fb23c00a00f3856832e660edc2ab03d}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!T\+R\+Y\+F\+R\+EE@{T\+R\+Y\+F\+R\+EE}}
+\index{T\+R\+Y\+F\+R\+EE@{T\+R\+Y\+F\+R\+EE}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{T\+R\+Y\+F\+R\+EE}{TRYFREE}}
+{\footnotesize\ttfamily \#define T\+R\+Y\+F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~\{\mbox{\hyperlink{thumb_8h_ace94b9910dcb92506fbb8144edb58af8}{if}} (p) free(p);\}}
+
+
+
+unzip.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_ac88907609a3408a8ee6544287b6c9880}\label{unzip_8cpp_ac88907609a3408a8ee6544287b6c9880}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!U\+N\+Z\+\_\+\+B\+U\+F\+S\+I\+ZE@{U\+N\+Z\+\_\+\+B\+U\+F\+S\+I\+ZE}}
+\index{U\+N\+Z\+\_\+\+B\+U\+F\+S\+I\+ZE@{U\+N\+Z\+\_\+\+B\+U\+F\+S\+I\+ZE}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{U\+N\+Z\+\_\+\+B\+U\+F\+S\+I\+ZE}{UNZ\_BUFSIZE}}
+{\footnotesize\ttfamily \#define U\+N\+Z\+\_\+\+B\+U\+F\+S\+I\+ZE~(16384)}
+
+
+
+unzip.\+cpp 파일의 58 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{unzip_8cpp_a97ef86322b25dcc3d0fc5eb50d386b54}\label{unzip_8cpp_a97ef86322b25dcc3d0fc5eb50d386b54}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!U\+N\+Z\+\_\+\+M\+A\+X\+F\+I\+L\+E\+N\+A\+M\+E\+I\+N\+Z\+IP@{U\+N\+Z\+\_\+\+M\+A\+X\+F\+I\+L\+E\+N\+A\+M\+E\+I\+N\+Z\+IP}}
+\index{U\+N\+Z\+\_\+\+M\+A\+X\+F\+I\+L\+E\+N\+A\+M\+E\+I\+N\+Z\+IP@{U\+N\+Z\+\_\+\+M\+A\+X\+F\+I\+L\+E\+N\+A\+M\+E\+I\+N\+Z\+IP}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{U\+N\+Z\+\_\+\+M\+A\+X\+F\+I\+L\+E\+N\+A\+M\+E\+I\+N\+Z\+IP}{UNZ\_MAXFILENAMEINZIP}}
+{\footnotesize\ttfamily \#define U\+N\+Z\+\_\+\+M\+A\+X\+F\+I\+L\+E\+N\+A\+M\+E\+I\+N\+Z\+IP~(256)}
+
+
+
+unzip.\+cpp 파일의 62 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{타입정의 문서화}
+\mbox{\Hypertarget{unzip_8cpp_a8f7400cb2fdf408412d6f75accea8305}\label{unzip_8cpp_a8f7400cb2fdf408412d6f75accea8305}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+\_\+file\+\_\+info\+\_\+internal@{unz\+\_\+file\+\_\+info\+\_\+internal}}
+\index{unz\+\_\+file\+\_\+info\+\_\+internal@{unz\+\_\+file\+\_\+info\+\_\+internal}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+\_\+file\+\_\+info\+\_\+internal}{unz\_file\_info\_internal}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structunz__file__info__internal__s}{unz\+\_\+file\+\_\+info\+\_\+internal\+\_\+s}}  \mbox{\hyperlink{unzip_8cpp_a8f7400cb2fdf408412d6f75accea8305}{unz\+\_\+file\+\_\+info\+\_\+internal}}}
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{unzip_8cpp_a40a0223f97fb689126323fc842156a17}\label{unzip_8cpp_a40a0223f97fb689126323fc842156a17}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!OF@{OF}}
+\index{OF@{OF}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{O\+F()}{OF()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6}{unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal}} OF (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{unzip_8h_a03b3ec1a8745daa96699ac49f193b177}{unz\+\_\+file\+\_\+info}} $\ast$pfile\+\_\+info, \mbox{\hyperlink{unzip_8cpp_a8f7400cb2fdf408412d6f75accea8305}{unz\+\_\+file\+\_\+info\+\_\+internal}} $\ast$pfile\+\_\+info\+\_\+internal, char $\ast$sz\+File\+Name, u\+Long file\+Name\+Buffer\+Size, void $\ast$extra\+Field, u\+Long extra\+Field\+Buffer\+Size, char $\ast$sz\+Comment, u\+Long comment\+Buffer\+Size)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{unzip_8cpp_a87020390a71a0591c13e22b1b529573b}\label{unzip_8cpp_a87020390a71a0591c13e22b1b529573b}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!strcmpcasenosensitive\+\_\+internal@{strcmpcasenosensitive\+\_\+internal}}
+\index{strcmpcasenosensitive\+\_\+internal@{strcmpcasenosensitive\+\_\+internal}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{strcmpcasenosensitive\+\_\+internal()}{strcmpcasenosensitive\_internal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} strcmpcasenosensitive\+\_\+internal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{file\+Name1,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{file\+Name2 }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 226 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+228 \{
+229         \textcolor{keywordflow}{for} (;;)
+230         \{
+231                 \textcolor{keywordtype}{char} c1=*(fileName1++);
+232                 \textcolor{keywordtype}{char} c2=*(fileName2++);
+233                 \textcolor{keywordflow}{if} ((c1>=\textcolor{charliteral}{'a'}) && (c1<=\textcolor{charliteral}{'z'}))
+234                         c1 -= 0x20;
+235                 \textcolor{keywordflow}{if} ((c2>=\textcolor{charliteral}{'a'}) && (c2<=\textcolor{charliteral}{'z'}))
+236                         c2 -= 0x20;
+237                 \textcolor{keywordflow}{if} (c1==\textcolor{charliteral}{'\(\backslash\)0'})
+238                         \textcolor{keywordflow}{return} ((c2==\textcolor{charliteral}{'\(\backslash\)0'}) ? 0 : -1);
+239                 \textcolor{keywordflow}{if} (c2==\textcolor{charliteral}{'\(\backslash\)0'})
+240                         \textcolor{keywordflow}{return} 1;
+241                 \textcolor{keywordflow}{if} (c1<c2)
+242                         \textcolor{keywordflow}{return} -1;
+243                 \textcolor{keywordflow}{if} (c1>c2)
+244                         \textcolor{keywordflow}{return} 1;
+245         \}
+246 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{unzip_8cpp_af6ab0ba88ab5da62747df8f9336f1bb3}\label{unzip_8cpp_af6ab0ba88ab5da62747df8f9336f1bb3}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Close@{unz\+Close}}
+\index{unz\+Close@{unz\+Close}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Close()}{unzClose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 449 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+450 \{
+451         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+452         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+453                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+454         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+455 
+456     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}}!=\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+457         \mbox{\hyperlink{unzip_8cpp_ac48279e5325cfdabbc67a312b1d32700}{unzCloseCurrentFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+458 
+459         fclose(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}});
+460         \mbox{\hyperlink{unzip_8cpp_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(s);
+461         \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+462 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{unzip_8cpp_af6ab0ba88ab5da62747df8f9336f1bb3_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_af6ab0ba88ab5da62747df8f9336f1bb3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_ac48279e5325cfdabbc67a312b1d32700}\label{unzip_8cpp_ac48279e5325cfdabbc67a312b1d32700}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Close\+Current\+File@{unz\+Close\+Current\+File}}
+\index{unz\+Close\+Current\+File@{unz\+Close\+Current\+File}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Close\+Current\+File()}{unzCloseCurrentFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Close\+Current\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 1201 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1202 \{
+1203         \textcolor{keywordtype}{int} err=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+1204 
+1205         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+1206         \mbox{\hyperlink{structfile__in__zip__read__info__s}{file\_in\_zip\_read\_info\_s}}* pfile\_in\_zip\_read\_info;
+1207         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1208                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1209         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+1210     pfile\_in\_zip\_read\_info=s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}};
+1211 
+1212         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1213                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1214 
+1215 
+1216         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3801645cfa5bfd147fd8d037fcf9a5}{rest\_read\_uncompressed}} == 0)
+1217         \{
+1218                 \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a9d7e4dc6f312fb59bf8e60fb952f4d68}{crc32}} != pfile\_in\_zip\_read\_info->
+      \mbox{\hyperlink{structfile__in__zip__read__info__s_a6120c521be40e8ba530249f0c766ab9d}{crc32\_wait}})
+1219                         err=\mbox{\hyperlink{unzip_8h_ae9155f504a5db40587b390f9e487c303}{UNZ\_CRCERROR}};
+1220         \}
+1221 
+1222 
+1223         \mbox{\hyperlink{unzip_8cpp_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6310a19e33ac2cf3280aa74199cbd89b}{read\_buffer}});
+1224         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6310a19e33ac2cf3280aa74199cbd89b}{read\_buffer}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+1225         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8f2d03c24a7b1058288606687eb6d448}{stream\_initialised}})
+1226                 inflateEnd(&pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}});
+1227 
+1228         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8f2d03c24a7b1058288606687eb6d448}{stream\_initialised}} = 0;
+1229         \mbox{\hyperlink{unzip_8cpp_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(pfile\_in\_zip\_read\_info);
+1230 
+1231     s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}}=\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+1232 
+1233         \textcolor{keywordflow}{return} err;
+1234 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_ac48279e5325cfdabbc67a312b1d32700_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a564f8ada96a5b2e3c5815306fa146d68}\label{unzip_8cpp_a564f8ada96a5b2e3c5815306fa146d68}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unzeof@{unzeof}}
+\index{unzeof@{unzeof}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unzeof()}{unzeof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unzeof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 1125 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1126 \{
+1127         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+1128         \mbox{\hyperlink{structfile__in__zip__read__info__s}{file\_in\_zip\_read\_info\_s}}* pfile\_in\_zip\_read\_info;
+1129         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1130                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1131         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+1132     pfile\_in\_zip\_read\_info=s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}};
+1133 
+1134         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1135                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1136         
+1137         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3801645cfa5bfd147fd8d037fcf9a5}{rest\_read\_uncompressed}} == 0)
+1138                 \textcolor{keywordflow}{return} 1;
+1139         \textcolor{keywordflow}{else}
+1140                 \textcolor{keywordflow}{return} 0;
+1141 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{unzip_8cpp_ac99166540260b60340f4787af0a90029}\label{unzip_8cpp_ac99166540260b60340f4787af0a90029}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Get\+Current\+File\+Info@{unz\+Get\+Current\+File\+Info}}
+\index{unz\+Get\+Current\+File\+Info@{unz\+Get\+Current\+File\+Info}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Get\+Current\+File\+Info()}{unzGetCurrentFileInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Get\+Current\+File\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file,  }\item[{\mbox{\hyperlink{unzip_8h_a03b3ec1a8745daa96699ac49f193b177}{unz\+\_\+file\+\_\+info}} $\ast$}]{pfile\+\_\+info,  }\item[{char $\ast$}]{sz\+File\+Name,  }\item[{u\+Long}]{file\+Name\+Buffer\+Size,  }\item[{void $\ast$}]{extra\+Field,  }\item[{u\+Long}]{extra\+Field\+Buffer\+Size,  }\item[{char $\ast$}]{sz\+Comment,  }\item[{u\+Long}]{comment\+Buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 670 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+678 \{
+679         \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6}{unzlocal\_GetCurrentFileInfoInternal}}(
+      \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}},pfile\_info,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+680                                                                                                 szFileName,
+      fileNameBufferSize,
+681                                                                                                 extraField,
+      extraFieldBufferSize,
+682                                                                                                 szComment,
+      commentBufferSize);
+683 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_ac99166540260b60340f4787af0a90029_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_ac99166540260b60340f4787af0a90029_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_adc36ff0866254ca420c9cd9d7dccfa99}\label{unzip_8cpp_adc36ff0866254ca420c9cd9d7dccfa99}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Get\+Global\+Comment@{unz\+Get\+Global\+Comment}}
+\index{unz\+Get\+Global\+Comment@{unz\+Get\+Global\+Comment}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Get\+Global\+Comment()}{unzGetGlobalComment()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Get\+Global\+Comment (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file,  }\item[{char $\ast$}]{sz\+Comment,  }\item[{u\+Long}]{u\+Size\+Buf }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 1242 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1245 \{
+1246   \textcolor{comment}{//int err=UNZ\_OK;}
+1247         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+1248         uLong uReadThis ;
+1249         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1250                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1251         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+1252 
+1253         uReadThis = uSizeBuf;
+1254         \textcolor{keywordflow}{if} (uReadThis>s->\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}}.\mbox{\hyperlink{structunz__global__info__s_a10b58ab57b62301de813ecac0e974363}{size\_comment}})
+1255                 uReadThis = s->\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}}.\mbox{\hyperlink{structunz__global__info__s_a10b58ab57b62301de813ecac0e974363}{size\_comment}};
+1256 
+1257         \textcolor{keywordflow}{if} (fseek(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},s->\mbox{\hyperlink{structunz__s_a2d8ae4c0975d2057e30b13c3148c27eb}{central\_pos}}+22,\mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}})!=0)
+1258                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+1259 
+1260         \textcolor{keywordflow}{if} (uReadThis>0)
+1261     \{
+1262       *szComment=\textcolor{charliteral}{'\(\backslash\)0'};
+1263           \textcolor{keywordflow}{if} (fread(szComment,(uInt)uReadThis,1,s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}})!=1)
+1264                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+1265     \}
+1266 
+1267         \textcolor{keywordflow}{if} ((szComment != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) && (uSizeBuf > s->\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}}.\mbox{\hyperlink{structunz__global__info__s_a10b58ab57b62301de813ecac0e974363}{size\_comment}}))
+1268                 *(szComment+s->\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}}.\mbox{\hyperlink{structunz__global__info__s_a10b58ab57b62301de813ecac0e974363}{size\_comment}})=\textcolor{charliteral}{'\(\backslash\)0'};
+1269         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})uReadThis;
+1270 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{unzip_8cpp_af05d6e3eac6ec396d9d134ca140fec61}\label{unzip_8cpp_af05d6e3eac6ec396d9d134ca140fec61}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Get\+Global\+Info@{unz\+Get\+Global\+Info}}
+\index{unz\+Get\+Global\+Info@{unz\+Get\+Global\+Info}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Get\+Global\+Info()}{unzGetGlobalInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Get\+Global\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file,  }\item[{\mbox{\hyperlink{unzip_8h_a18c3b238618ea86ef503ecbd4092dbce}{unz\+\_\+global\+\_\+info}} $\ast$}]{pglobal\+\_\+info }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 469 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+471 \{
+472         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+473         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+474                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+475         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+476         *pglobal\_info=s->\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}};
+477         \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+478 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{unzip_8cpp_a012cad9a0262291930ec7e34cd7c5bea}\label{unzip_8cpp_a012cad9a0262291930ec7e34cd7c5bea}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Get\+Local\+Extrafield@{unz\+Get\+Local\+Extrafield}}
+\index{unz\+Get\+Local\+Extrafield@{unz\+Get\+Local\+Extrafield}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Get\+Local\+Extrafield()}{unzGetLocalExtrafield()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Get\+Local\+Extrafield (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file,  }\item[{\mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}}}]{buf,  }\item[{unsigned}]{len }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 1157 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1158 \{
+1159         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+1160         \mbox{\hyperlink{structfile__in__zip__read__info__s}{file\_in\_zip\_read\_info\_s}}* pfile\_in\_zip\_read\_info;
+1161         uInt read\_now;
+1162         uLong size\_to\_read;
+1163 
+1164         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1165                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1166         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+1167     pfile\_in\_zip\_read\_info=s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}};
+1168 
+1169         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1170                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1171 
+1172         size\_to\_read = (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a9abdc9b3f3d500d894a635cc9e956180}{size\_local\_extrafield}} - 
+1173                                 pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_aa07cf3d7d5d68e9537ffe99499d7db6f}{pos\_local\_extrafield}});
+1174 
+1175         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1176                 \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})size\_to\_read;
+1177         
+1178         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}>size\_to\_read)
+1179                 read\_now = (uInt)size\_to\_read;
+1180         \textcolor{keywordflow}{else}
+1181                 read\_now = (uInt)\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} ;
+1182 
+1183         \textcolor{keywordflow}{if} (read\_now==0)
+1184                 \textcolor{keywordflow}{return} 0;
+1185         
+1186         \textcolor{keywordflow}{if} (fseek(pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_ac1b9fbf81aac280e5e9f6eaca864161b}{file}},
+1187               pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3a240c367e7d6d199859b1b311128c}{offset\_local\_extrafield}} + 
+1188                           pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_aa07cf3d7d5d68e9537ffe99499d7db6f}{pos\_local\_extrafield}},
+      \mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}})!=0)
+1189                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+1190 
+1191         \textcolor{keywordflow}{if} (fread(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}},(uInt)size\_to\_read,1,pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_ac1b9fbf81aac280e5e9f6eaca864161b}{file}})!=1)
+1192                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+1193 
+1194         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})read\_now;
+1195 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{unzip_8cpp_a54821c0b6da683800164a56f2ae14f33}\label{unzip_8cpp_a54821c0b6da683800164a56f2ae14f33}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Go\+To\+First\+File@{unz\+Go\+To\+First\+File}}
+\index{unz\+Go\+To\+First\+File@{unz\+Go\+To\+First\+File}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Go\+To\+First\+File()}{unzGoToFirstFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Go\+To\+First\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 689 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+690 \{
+691         \textcolor{keywordtype}{int} err=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+692         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+693         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+694                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+695         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+696         s->\mbox{\hyperlink{structunz__s_a70f2901a7ba85573aa280bad826baf4a}{pos\_in\_central\_dir}}=s->\mbox{\hyperlink{structunz__s_ac6c37ef70549769fa59bca623565d78f}{offset\_central\_dir}};
+697         s->\mbox{\hyperlink{structunz__s_a737337b347bd5cc52bfabdcfbc11b853}{num\_file}}=0;
+698         err=\mbox{\hyperlink{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6}{unzlocal\_GetCurrentFileInfoInternal}}(
+      \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}},&s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}},
+699                                                                                          &s->
+      \mbox{\hyperlink{structunz__s_a36625697385b9a675f02a446fa5ba583}{cur\_file\_info\_internal}},
+700                                                                                          
+      \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},0,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},0,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},0);
+701         s->\mbox{\hyperlink{structunz__s_abe2244ba62db8b3251634e26183f1c9a}{current\_file\_ok}} = (err == \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}});
+702         \textcolor{keywordflow}{return} err;
+703 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a54821c0b6da683800164a56f2ae14f33_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a54821c0b6da683800164a56f2ae14f33_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_acb457ebeaee7cb850c11a4a3d4b58201}\label{unzip_8cpp_acb457ebeaee7cb850c11a4a3d4b58201}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Go\+To\+Next\+File@{unz\+Go\+To\+Next\+File}}
+\index{unz\+Go\+To\+Next\+File@{unz\+Go\+To\+Next\+File}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Go\+To\+Next\+File()}{unzGoToNextFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Go\+To\+Next\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 711 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+712 \{
+713         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;       
+714         \textcolor{keywordtype}{int} err;
+715 
+716         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+717                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+718         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+719         \textcolor{keywordflow}{if} (!s->\mbox{\hyperlink{structunz__s_abe2244ba62db8b3251634e26183f1c9a}{current\_file\_ok}})
+720                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ac55ed190d07021ce9bc1bf34b91dcae9}{UNZ\_END\_OF\_LIST\_OF\_FILE}};
+721         \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structunz__s_a737337b347bd5cc52bfabdcfbc11b853}{num\_file}}+1==s->\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}}.\mbox{\hyperlink{structunz__global__info__s_a827d1cd1d09f12acd6c2ee12494cb320}{number\_entry}})
+722                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ac55ed190d07021ce9bc1bf34b91dcae9}{UNZ\_END\_OF\_LIST\_OF\_FILE}};
+723 
+724         s->\mbox{\hyperlink{structunz__s_a70f2901a7ba85573aa280bad826baf4a}{pos\_in\_central\_dir}} += \mbox{\hyperlink{unzip_8cpp_ad43fed5cb489b2075313779a757e5c03}{SIZECENTRALDIRITEM}} + s->
+      \mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_ae4f2f81a5301f7df9014838a56a496c6}{size\_filename}} +
+725                         s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_a479402dcb3555c922e3ce87c8f967990}{size\_file\_extra}} + s->
+      \mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_afa9feffb3b9c9c03e02599118d5f548e}{size\_file\_comment}} ;
+726         s->\mbox{\hyperlink{structunz__s_a737337b347bd5cc52bfabdcfbc11b853}{num\_file}}++;
+727         err = \mbox{\hyperlink{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6}{unzlocal\_GetCurrentFileInfoInternal}}(
+      \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}},&s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}},
+728                                                                                            &s->
+      \mbox{\hyperlink{structunz__s_a36625697385b9a675f02a446fa5ba583}{cur\_file\_info\_internal}},
+729                                                                                            
+      \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},0,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},0,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},0);
+730         s->\mbox{\hyperlink{structunz__s_abe2244ba62db8b3251634e26183f1c9a}{current\_file\_ok}} = (err == \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}});
+731         \textcolor{keywordflow}{return} err;
+732 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_acb457ebeaee7cb850c11a4a3d4b58201_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_acb457ebeaee7cb850c11a4a3d4b58201_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_ae29f32a517b1bf71b222191636739fa6}\label{unzip_8cpp_ae29f32a517b1bf71b222191636739fa6}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unzlocal\+\_\+\+Check\+Current\+File\+Coherency\+Header@{unzlocal\+\_\+\+Check\+Current\+File\+Coherency\+Header}}
+\index{unzlocal\+\_\+\+Check\+Current\+File\+Coherency\+Header@{unzlocal\+\_\+\+Check\+Current\+File\+Coherency\+Header}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unzlocal\+\_\+\+Check\+Current\+File\+Coherency\+Header()}{unzlocal\_CheckCurrentFileCoherencyHeader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} unzlocal\+\_\+\+Check\+Current\+File\+Coherency\+Header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunz__s}{unz\+\_\+s}} $\ast$}]{s,  }\item[{u\+Int $\ast$}]{pi\+Size\+Var,  }\item[{u\+Long $\ast$}]{poffset\+\_\+local\+\_\+extrafield,  }\item[{u\+Int $\ast$}]{psize\+\_\+local\+\_\+extrafield }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 795 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+799 \{
+800         uLong uMagic,uData,uFlags;
+801         uLong size\_filename;
+802         uLong size\_extra\_field;
+803         \textcolor{keywordtype}{int} err=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+804 
+805         *piSizeVar = 0;
+806         *poffset\_local\_extrafield = 0;
+807         *psize\_local\_extrafield = 0;
+808 
+809         \textcolor{keywordflow}{if} (fseek(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},s->\mbox{\hyperlink{structunz__s_a36625697385b9a675f02a446fa5ba583}{cur\_file\_info\_internal}}.
+      \mbox{\hyperlink{structunz__file__info__internal__s_a23d3a1c3584888bdf066d7bfed95f62e}{offset\_curfile}} +
+810                                                                 s->
+      \mbox{\hyperlink{structunz__s_a788688a8021cbbba6a2ac1765edd362e}{byte\_before\_the\_zipfile}},\mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}})!=0)
+811                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+812 
+813 
+814         \textcolor{keywordflow}{if} (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+815                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uMagic) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+816                         err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+817                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (uMagic!=0x04034b50)
+818                         err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+819 
+820         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uData) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+821                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+822 \textcolor{comment}{/*}
+823 \textcolor{comment}{        else if ((err==UNZ\_OK) && (uData!=s->cur\_file\_info.wVersion))}
+824 \textcolor{comment}{                err=UNZ\_BADZIPFILE;}
+825 \textcolor{comment}{*/}
+826         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uFlags) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+827                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+828 
+829         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uData) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+830                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+831         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (uData!=s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.
+      \mbox{\hyperlink{structunz__file__info__s_aaaca88f0ebec5c1cfebb436b8e70a774}{compression\_method}}))
+832                 err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+833 
+834     \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_aaaca88f0ebec5c1cfebb436b8e70a774}{compression\_method}}!=0) &&
+835                          (s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_aaaca88f0ebec5c1cfebb436b8e70a774}{compression\_method}}!=Z\_DEFLATED))
+836         err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+837 
+838         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uData) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) \textcolor{comment}{/* date/time */}
+839                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+840 
+841         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uData) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) \textcolor{comment}{/* crc */}
+842                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+843         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (uData!=s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.
+      \mbox{\hyperlink{structunz__file__info__s_a6d741cb2df07794d7a4794841148893b}{crc}}) &&
+844                                       ((uFlags & 8)==0))
+845                 err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+846 
+847         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uData) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) \textcolor{comment}{/* size compr */}
+848                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+849         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (uData!=s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.
+      \mbox{\hyperlink{structunz__file__info__s_a35ee9d733879c87565e40a545fe46fb6}{compressed\_size}}) &&
+850                                                           ((uFlags & 8)==0))
+851                 err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+852 
+853         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uData) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) \textcolor{comment}{/* size uncompr */}
+854                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+855         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (uData!=s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.
+      \mbox{\hyperlink{structunz__file__info__s_a7696a98511bc57e389485e5313a9c2bf}{uncompressed\_size}}) && 
+856                                                           ((uFlags & 8)==0))
+857                 err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+858 
+859 
+860         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&size\_filename) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+861                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+862         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (size\_filename!=s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.
+      \mbox{\hyperlink{structunz__file__info__s_ae4f2f81a5301f7df9014838a56a496c6}{size\_filename}}))
+863                 err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+864 
+865         *piSizeVar += (uInt)size\_filename;
+866 
+867         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&size\_extra\_field) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+868                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+869         *poffset\_local\_extrafield= s->\mbox{\hyperlink{structunz__s_a36625697385b9a675f02a446fa5ba583}{cur\_file\_info\_internal}}.
+      \mbox{\hyperlink{structunz__file__info__internal__s_a23d3a1c3584888bdf066d7bfed95f62e}{offset\_curfile}} +
+870                                                                         
+      \mbox{\hyperlink{unzip_8cpp_a3c43e42371a71abc3db1b5a013382e77}{SIZEZIPLOCALHEADER}} + size\_filename;
+871         *psize\_local\_extrafield = (uInt)size\_extra\_field;
+872 
+873         *piSizeVar += (uInt)size\_extra\_field;
+874 
+875         \textcolor{keywordflow}{return} err;
+876 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_ae29f32a517b1bf71b222191636739fa6_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_ae29f32a517b1bf71b222191636739fa6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_aef5be704f689c792449ab4a95846e9cb}\label{unzip_8cpp_aef5be704f689c792449ab4a95846e9cb}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unzlocal\+\_\+\+Dos\+Date\+To\+Tmu\+Date@{unzlocal\+\_\+\+Dos\+Date\+To\+Tmu\+Date}}
+\index{unzlocal\+\_\+\+Dos\+Date\+To\+Tmu\+Date@{unzlocal\+\_\+\+Dos\+Date\+To\+Tmu\+Date}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unzlocal\+\_\+\+Dos\+Date\+To\+Tmu\+Date()}{unzlocal\_DosDateToTmuDate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} void unzlocal\+\_\+\+Dos\+Date\+To\+Tmu\+Date (\begin{DoxyParamCaption}\item[{u\+Long}]{ul\+Dos\+Date,  }\item[{\mbox{\hyperlink{unzip_8h_a369a14c48c4b71afa6bf6cf95c6b9160}{tm\+\_\+unz}} $\ast$}]{ptm }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 484 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+485 \{
+486     uLong uDate;
+487     uDate = (uLong)(ulDosDate>>16);
+488     ptm->\mbox{\hyperlink{structtm__unz__s_a51ed1873e1dcabf08ff0f85caf8aefee}{tm\_mday}} = (uInt)(uDate&0x1f) ;
+489     ptm->\mbox{\hyperlink{structtm__unz__s_a4f5e461d8cad18d1aff7ec012168111d}{tm\_mon}} =  (uInt)((((uDate)&0x1E0)/0x20)-1) ;
+490     ptm->\mbox{\hyperlink{structtm__unz__s_a5f17147e3cfbbfdbeb2e29cbc1df8136}{tm\_year}} = (uInt)(((uDate&0x0FE00)/0x0200)+1980) ;
+491 
+492     ptm->\mbox{\hyperlink{structtm__unz__s_ada09255f794d6c2db07ef73b77266b9c}{tm\_hour}} = (uInt) ((ulDosDate &0xF800)/0x800);
+493     ptm->\mbox{\hyperlink{structtm__unz__s_ac5a6bf08a4c5db8ae2243d4f0c35b192}{tm\_min}} =  (uInt) ((ulDosDate&0x7E0)/0x20) ;
+494     ptm->\mbox{\hyperlink{structtm__unz__s_ab91e69a9869e5db5be51b1aebaa5ea0d}{tm\_sec}} =  (uInt) (2*(ulDosDate&0x1f)) ;
+495 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_aef5be704f689c792449ab4a95846e9cb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}\label{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unzlocal\+\_\+get\+Byte@{unzlocal\+\_\+get\+Byte}}
+\index{unzlocal\+\_\+get\+Byte@{unzlocal\+\_\+get\+Byte}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unzlocal\+\_\+get\+Byte()}{unzlocal\_getByte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} unzlocal\+\_\+get\+Byte (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fin,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$}]{pi }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 154 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+155 \{
+156     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} c;
+157         \textcolor{keywordtype}{size\_t} err = fread(&c, 1, 1, fin);
+158     \textcolor{keywordflow}{if} (err==1)
+159     \{
+160         *pi = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})c;
+161         \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+162     \}
+163     \textcolor{keywordflow}{else}
+164     \{
+165         \textcolor{keywordflow}{if} (ferror(fin)) 
+166             \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+167         \textcolor{keywordflow}{else}
+168             \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_a0438887aea4e1c58e1b3955838a907f3}{UNZ\_EOF}};
+169     \}
+170 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6}\label{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal@{unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal}}
+\index{unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal@{unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal()}{unzlocal\_GetCurrentFileInfoInternal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} unzlocal\+\_\+\+Get\+Current\+File\+Info\+Internal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file,  }\item[{\mbox{\hyperlink{unzip_8h_a03b3ec1a8745daa96699ac49f193b177}{unz\+\_\+file\+\_\+info}} $\ast$}]{pfile\+\_\+info,  }\item[{\mbox{\hyperlink{unzip_8cpp_a8f7400cb2fdf408412d6f75accea8305}{unz\+\_\+file\+\_\+info\+\_\+internal}} $\ast$}]{pfile\+\_\+info\+\_\+internal,  }\item[{char $\ast$}]{sz\+File\+Name,  }\item[{u\+Long}]{file\+Name\+Buffer\+Size,  }\item[{void $\ast$}]{extra\+Field,  }\item[{u\+Long}]{extra\+Field\+Buffer\+Size,  }\item[{char $\ast$}]{sz\+Comment,  }\item[{u\+Long}]{comment\+Buffer\+Size }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 511 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+520 \{
+521         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+522         \mbox{\hyperlink{structunz__file__info__s}{unz\_file\_info}} file\_info;
+523         \mbox{\hyperlink{structunz__file__info__internal__s}{unz\_file\_info\_internal}} file\_info\_internal;
+524         \textcolor{keywordtype}{int} err=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+525         uLong uMagic;
+526         \textcolor{keywordtype}{long} lSeek=0;
+527 
+528         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+529                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+530         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+531         \textcolor{keywordflow}{if} (fseek(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},s->\mbox{\hyperlink{structunz__s_a70f2901a7ba85573aa280bad826baf4a}{pos\_in\_central\_dir}}+s->
+      \mbox{\hyperlink{structunz__s_a788688a8021cbbba6a2ac1765edd362e}{byte\_before\_the\_zipfile}},\mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}})!=0)
+532                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+533 
+534 
+535         \textcolor{comment}{/* we check the magic */}
+536         \textcolor{keywordflow}{if} (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+537                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&uMagic) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+538                         err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+539                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (uMagic!=0x02014b50)
+540                         err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+541 
+542         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.\mbox{\hyperlink{structunz__file__info__s_a635f933b26b636d8314cef61af62fcef}{version}}) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+543                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+544 
+545         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_a1578aca2bb7fed658f9f94c78d00288e}{version\_needed}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+546                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+547 
+548         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.\mbox{\hyperlink{structunz__file__info__s_adff7171a3114d55e5532c593b1779ecc}{flag}}) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+549                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+550 
+551         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_aaaca88f0ebec5c1cfebb436b8e70a774}{compression\_method}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+552                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+553 
+554         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.\mbox{\hyperlink{structunz__file__info__s_a14bd7da84cada0f4b1455d60274eef91}{dosDate}}) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+555                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+556 
+557     \mbox{\hyperlink{unzip_8cpp_aef5be704f689c792449ab4a95846e9cb}{unzlocal\_DosDateToTmuDate}}(file\_info.\mbox{\hyperlink{structunz__file__info__s_a14bd7da84cada0f4b1455d60274eef91}{dosDate}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_ad52c08c65349f674b00244d81cdb1736}{tmu\_date}});
+558 
+559         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.\mbox{\hyperlink{structunz__file__info__s_a6d741cb2df07794d7a4794841148893b}{crc}}) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+560                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+561 
+562         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_a35ee9d733879c87565e40a545fe46fb6}{compressed\_size}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+563                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+564 
+565         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_a7696a98511bc57e389485e5313a9c2bf}{uncompressed\_size}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+566                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+567 
+568         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_ae4f2f81a5301f7df9014838a56a496c6}{size\_filename}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+569                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+570 
+571         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_a479402dcb3555c922e3ce87c8f967990}{size\_file\_extra}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+572                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+573 
+574         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_afa9feffb3b9c9c03e02599118d5f548e}{size\_file\_comment}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+575                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+576 
+577         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_ab7bfba2b7d0cdb7260a7cd9f9ccd00ff}{disk\_num\_start}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+578                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+579 
+580         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.
+      \mbox{\hyperlink{structunz__file__info__s_aa20738bf82bca71cc950b9475b5d8c3c}{internal\_fa}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+581                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+582 
+583         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info.\mbox{\hyperlink{structunz__file__info__s_ae3365fdb260668fca60bfb975b1513aa}{external\_fa}}) != 
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+584                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+585 
+586         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},&file\_info\_internal.
+      \mbox{\hyperlink{structunz__file__info__internal__s_a23d3a1c3584888bdf066d7bfed95f62e}{offset\_curfile}}) != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+587                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+588 
+589         lSeek+=file\_info.\mbox{\hyperlink{structunz__file__info__s_ae4f2f81a5301f7df9014838a56a496c6}{size\_filename}};
+590         \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (szFileName!=\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}))
+591         \{
+592                 uLong uSizeRead ;
+593                 \textcolor{keywordflow}{if} (file\_info.\mbox{\hyperlink{structunz__file__info__s_ae4f2f81a5301f7df9014838a56a496c6}{size\_filename}}<fileNameBufferSize)
+594                 \{
+595                         *(szFileName+file\_info.\mbox{\hyperlink{structunz__file__info__s_ae4f2f81a5301f7df9014838a56a496c6}{size\_filename}})=\textcolor{charliteral}{'\(\backslash\)0'};
+596                         uSizeRead = file\_info.\mbox{\hyperlink{structunz__file__info__s_ae4f2f81a5301f7df9014838a56a496c6}{size\_filename}};
+597                 \}
+598                 \textcolor{keywordflow}{else}
+599                         uSizeRead = fileNameBufferSize;
+600 
+601                 \textcolor{keywordflow}{if} ((file\_info.\mbox{\hyperlink{structunz__file__info__s_ae4f2f81a5301f7df9014838a56a496c6}{size\_filename}}>0) && (fileNameBufferSize>0))
+602                         \textcolor{keywordflow}{if} (fread(szFileName,(uInt)uSizeRead,1,s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}})!=1)
+603                                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+604                 lSeek -= uSizeRead;
+605         \}
+606 
+607         
+608         \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (extraField!=\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}))
+609         \{
+610                 uLong uSizeRead ;
+611                 \textcolor{keywordflow}{if} (file\_info.\mbox{\hyperlink{structunz__file__info__s_a479402dcb3555c922e3ce87c8f967990}{size\_file\_extra}}<extraFieldBufferSize)
+612                         uSizeRead = file\_info.\mbox{\hyperlink{structunz__file__info__s_a479402dcb3555c922e3ce87c8f967990}{size\_file\_extra}};
+613                 \textcolor{keywordflow}{else}
+614                         uSizeRead = extraFieldBufferSize;
+615 
+616                 \textcolor{keywordflow}{if} (lSeek!=0)
+617                         \textcolor{keywordflow}{if} (fseek(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},lSeek,\mbox{\hyperlink{unzip_8cpp_a4c8d0b76b470ba65a43ca46a88320f39}{SEEK\_CUR}})==0)
+618                                 lSeek=0;
+619                         \textcolor{keywordflow}{else}
+620                                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+621                 \textcolor{keywordflow}{if} ((file\_info.\mbox{\hyperlink{structunz__file__info__s_a479402dcb3555c922e3ce87c8f967990}{size\_file\_extra}}>0) && (extraFieldBufferSize>0))
+622                         \textcolor{keywordflow}{if} (fread(extraField,(uInt)uSizeRead,1,s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}})!=1)
+623                                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+624                 lSeek += file\_info.\mbox{\hyperlink{structunz__file__info__s_a479402dcb3555c922e3ce87c8f967990}{size\_file\_extra}} - uSizeRead;
+625         \}
+626         \textcolor{keywordflow}{else}
+627                 lSeek+=file\_info.\mbox{\hyperlink{structunz__file__info__s_a479402dcb3555c922e3ce87c8f967990}{size\_file\_extra}}; 
+628 
+629         
+630         \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (szComment!=\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}))
+631         \{
+632                 uLong uSizeRead ;
+633                 \textcolor{keywordflow}{if} (file\_info.\mbox{\hyperlink{structunz__file__info__s_afa9feffb3b9c9c03e02599118d5f548e}{size\_file\_comment}}<commentBufferSize)
+634                 \{
+635                         *(szComment+file\_info.\mbox{\hyperlink{structunz__file__info__s_afa9feffb3b9c9c03e02599118d5f548e}{size\_file\_comment}})=\textcolor{charliteral}{'\(\backslash\)0'};
+636                         uSizeRead = file\_info.\mbox{\hyperlink{structunz__file__info__s_afa9feffb3b9c9c03e02599118d5f548e}{size\_file\_comment}};
+637                 \}
+638                 \textcolor{keywordflow}{else}
+639                         uSizeRead = commentBufferSize;
+640 
+641                 \textcolor{keywordflow}{if} (lSeek!=0)
+642                         \textcolor{keywordflow}{if} (fseek(s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}},lSeek,\mbox{\hyperlink{unzip_8cpp_a4c8d0b76b470ba65a43ca46a88320f39}{SEEK\_CUR}})==0)
+643                                 lSeek=0;
+644                         \textcolor{keywordflow}{else}
+645                                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+646                 \textcolor{keywordflow}{if} ((file\_info.\mbox{\hyperlink{structunz__file__info__s_afa9feffb3b9c9c03e02599118d5f548e}{size\_file\_comment}}>0) && (commentBufferSize>0))
+647                         \textcolor{keywordflow}{if} (fread(szComment,(uInt)uSizeRead,1,s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}})!=1)
+648                                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+649                 lSeek+=file\_info.\mbox{\hyperlink{structunz__file__info__s_afa9feffb3b9c9c03e02599118d5f548e}{size\_file\_comment}} - uSizeRead;
+650         \}
+651         \textcolor{keywordflow}{else}
+652                 lSeek+=file\_info.\mbox{\hyperlink{structunz__file__info__s_afa9feffb3b9c9c03e02599118d5f548e}{size\_file\_comment}};
+653 
+654         \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (pfile\_info!=\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}))
+655                 *pfile\_info=file\_info;
+656 
+657         \textcolor{keywordflow}{if} ((err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) && (pfile\_info\_internal!=\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}))
+658                 *pfile\_info\_internal=file\_info\_internal;
+659 
+660         \textcolor{keywordflow}{return} err;
+661 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a63347eee791bfbd6f1c65ade6d487cf6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}\label{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unzlocal\+\_\+get\+Long@{unzlocal\+\_\+get\+Long}}
+\index{unzlocal\+\_\+get\+Long@{unzlocal\+\_\+get\+Long}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unzlocal\+\_\+get\+Long()}{unzlocal\_getLong()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} unzlocal\+\_\+get\+Long (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fin,  }\item[{u\+Long $\ast$}]{pX }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 196 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+197 \{
+198     uLong x ;
+199     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+200     \textcolor{keywordtype}{int} err;
+201 
+202     err = \mbox{\hyperlink{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}{unzlocal\_getByte}}(fin,&\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+203     x = (uLong)\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+204     
+205     \textcolor{keywordflow}{if} (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+206         err = \mbox{\hyperlink{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}{unzlocal\_getByte}}(fin,&\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+207     x += ((uLong)\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}})<<8;
+208 
+209     \textcolor{keywordflow}{if} (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+210         err = \mbox{\hyperlink{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}{unzlocal\_getByte}}(fin,&\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+211     x += ((uLong)\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}})<<16;
+212 
+213     \textcolor{keywordflow}{if} (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+214         err = \mbox{\hyperlink{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}{unzlocal\_getByte}}(fin,&\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+215     x += ((uLong)\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}})<<24;
+216    
+217     \textcolor{keywordflow}{if} (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+218         *pX = x;
+219     \textcolor{keywordflow}{else}
+220         *pX = 0;
+221     \textcolor{keywordflow}{return} err;
+222 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_aae00122ac858120e991550221c76214b}\label{unzip_8cpp_aae00122ac858120e991550221c76214b}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unzlocal\+\_\+get\+Short@{unzlocal\+\_\+get\+Short}}
+\index{unzlocal\+\_\+get\+Short@{unzlocal\+\_\+get\+Short}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unzlocal\+\_\+get\+Short()}{unzlocal\_getShort()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} unzlocal\+\_\+get\+Short (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fin,  }\item[{u\+Long $\ast$}]{pX }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 176 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+177 \{
+178     uLong x ;
+179     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+180     \textcolor{keywordtype}{int} err;
+181 
+182     err = \mbox{\hyperlink{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}{unzlocal\_getByte}}(fin,&\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+183     x = (uLong)\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+184     
+185     \textcolor{keywordflow}{if} (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+186         err = \mbox{\hyperlink{unzip_8cpp_a56a54c33c87152307e98e1abba6c0bf5}{unzlocal\_getByte}}(fin,&\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+187     x += ((uLong)\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}})<<8;
+188    
+189     \textcolor{keywordflow}{if} (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+190         *pX = x;
+191     \textcolor{keywordflow}{else}
+192         *pX = 0;
+193     \textcolor{keywordflow}{return} err;
+194 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{unzip_8cpp_aae00122ac858120e991550221c76214b_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_aae00122ac858120e991550221c76214b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_ad468af80daf0af6b832a81161501ccca}\label{unzip_8cpp_ad468af80daf0af6b832a81161501ccca}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unzlocal\+\_\+\+Search\+Central\+Dir@{unzlocal\+\_\+\+Search\+Central\+Dir}}
+\index{unzlocal\+\_\+\+Search\+Central\+Dir@{unzlocal\+\_\+\+Search\+Central\+Dir}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unzlocal\+\_\+\+Search\+Central\+Dir()}{unzlocal\_SearchCentralDir()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} u\+Long unzlocal\+\_\+\+Search\+Central\+Dir (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fin }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 287 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+288 \{
+289         \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}* \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}};
+290         uLong uSizeFile;
+291         uLong uBackRead;
+292         uLong uMaxBack=0xffff; \textcolor{comment}{/* maximum size of global comment */}
+293         uLong uPosFound=0;
+294         
+295         \textcolor{keywordflow}{if} (fseek(fin,0,\mbox{\hyperlink{unzip_8cpp_ad2a2e6c114780c3071efd24f16c7f7d8}{SEEK\_END}}) != 0)
+296                 \textcolor{keywordflow}{return} 0;
+297 
+298 
+299         uSizeFile = ftell( fin );
+300         
+301         \textcolor{keywordflow}{if} (uMaxBack>uSizeFile)
+302                 uMaxBack = uSizeFile;
+303 
+304         \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}} = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)\mbox{\hyperlink{unzip_8cpp_ac5c822e3692a95451e8f70a5916f05a3}{ALLOC}}(\mbox{\hyperlink{unzip_8cpp_a11acfc377461094b27681612f0bd277d}{BUFREADCOMMENT}}+4);
+305         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+306                 \textcolor{keywordflow}{return} 0;
+307 
+308         uBackRead = 4;
+309         \textcolor{keywordflow}{while} (uBackRead<uMaxBack)
+310         \{
+311                 uLong uReadSize,uReadPos ;
+312                 \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+313                 \textcolor{keywordflow}{if} (uBackRead+\mbox{\hyperlink{unzip_8cpp_a11acfc377461094b27681612f0bd277d}{BUFREADCOMMENT}}>uMaxBack) 
+314                         uBackRead = uMaxBack;
+315                 \textcolor{keywordflow}{else}
+316                         uBackRead+=\mbox{\hyperlink{unzip_8cpp_a11acfc377461094b27681612f0bd277d}{BUFREADCOMMENT}};
+317                 uReadPos = uSizeFile-uBackRead ;
+318                 
+319                 uReadSize = ((\mbox{\hyperlink{unzip_8cpp_a11acfc377461094b27681612f0bd277d}{BUFREADCOMMENT}}+4) < (uSizeFile-uReadPos)) ? 
+320                      (\mbox{\hyperlink{unzip_8cpp_a11acfc377461094b27681612f0bd277d}{BUFREADCOMMENT}}+4) : (uSizeFile-uReadPos);
+321                 \textcolor{keywordflow}{if} (fseek(fin,uReadPos,\mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}})!=0)
+322                         \textcolor{keywordflow}{break};
+323 
+324                 \textcolor{keywordflow}{if} (fread(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}},(uInt)uReadSize,1,fin)!=1)
+325                         \textcolor{keywordflow}{break};
+326 
+327                 \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}=(\textcolor{keywordtype}{int})uReadSize-3; (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}--)>0;)
+328                         \textcolor{keywordflow}{if} (((*(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}+\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}))==0x50) && ((*(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}+\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+1))==0x4b) && 
+329                                 ((*(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}+\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+2))==0x05) && ((*(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}+\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+3))==0x06))
+330                         \{
+331                                 uPosFound = uReadPos+\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+332                                 \textcolor{keywordflow}{break};
+333                         \}
+334 
+335                 \textcolor{keywordflow}{if} (uPosFound!=0)
+336                         \textcolor{keywordflow}{break};
+337         \}
+338         \mbox{\hyperlink{unzip_8cpp_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}});
+339         \textcolor{keywordflow}{return} uPosFound;
+340 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_ad468af80daf0af6b832a81161501ccca_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a22730edef5a8a98b367bb30a0d619608}\label{unzip_8cpp_a22730edef5a8a98b367bb30a0d619608}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Locate\+File@{unz\+Locate\+File}}
+\index{unz\+Locate\+File@{unz\+Locate\+File}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Locate\+File()}{unzLocateFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Locate\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{sz\+File\+Name,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{i\+Case\+Sensitivity }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 743 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+746 \{
+747         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;       
+748         \textcolor{keywordtype}{int} err;
+749 
+750         
+751         uLong num\_fileSaved;
+752         uLong pos\_in\_central\_dirSaved;
+753 
+754 
+755         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+756                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+757 
+758     \textcolor{keywordflow}{if} (strlen(szFileName)>=\mbox{\hyperlink{unzip_8cpp_a97ef86322b25dcc3d0fc5eb50d386b54}{UNZ\_MAXFILENAMEINZIP}})
+759         \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+760 
+761         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+762         \textcolor{keywordflow}{if} (!s->\mbox{\hyperlink{structunz__s_abe2244ba62db8b3251634e26183f1c9a}{current\_file\_ok}})
+763                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ac55ed190d07021ce9bc1bf34b91dcae9}{UNZ\_END\_OF\_LIST\_OF\_FILE}};
+764 
+765         num\_fileSaved = s->\mbox{\hyperlink{structunz__s_a737337b347bd5cc52bfabdcfbc11b853}{num\_file}};
+766         pos\_in\_central\_dirSaved = s->\mbox{\hyperlink{structunz__s_a70f2901a7ba85573aa280bad826baf4a}{pos\_in\_central\_dir}};
+767 
+768         err = \mbox{\hyperlink{unzip_8cpp_a54821c0b6da683800164a56f2ae14f33}{unzGoToFirstFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+769 
+770         \textcolor{keywordflow}{while} (err == \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+771         \{
+772                 \textcolor{keywordtype}{char} szCurrentFileName[\mbox{\hyperlink{unzip_8cpp_a97ef86322b25dcc3d0fc5eb50d386b54}{UNZ\_MAXFILENAMEINZIP}}+1];
+773                 \mbox{\hyperlink{unzip_8cpp_ac99166540260b60340f4787af0a90029}{unzGetCurrentFileInfo}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}},\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+774                                                                 szCurrentFileName,\textcolor{keyword}{sizeof}(szCurrentFileName)
+      -1,
+775                                                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},0,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},0);
+776                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a271f325759b3251ee728a8f850291dcf}{unzStringFileNameCompare}}(szCurrentFileName,
+777                                                                                 szFileName,iCaseSensitivity
+      )==0)
+778                         \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+779                 err = \mbox{\hyperlink{unzip_8cpp_acb457ebeaee7cb850c11a4a3d4b58201}{unzGoToNextFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+780         \}
+781 
+782         s->\mbox{\hyperlink{structunz__s_a737337b347bd5cc52bfabdcfbc11b853}{num\_file}} = num\_fileSaved ;
+783         s->\mbox{\hyperlink{structunz__s_a70f2901a7ba85573aa280bad826baf4a}{pos\_in\_central\_dir}} = pos\_in\_central\_dirSaved ;
+784         \textcolor{keywordflow}{return} err;
+785 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a22730edef5a8a98b367bb30a0d619608_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a4efe7bf26960a0a0c66122788b175f97}\label{unzip_8cpp_a4efe7bf26960a0a0c66122788b175f97}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Open@{unz\+Open}}
+\index{unz\+Open@{unz\+Open}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Open()}{unzOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}} Z\+E\+X\+P\+O\+RT unz\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{path }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 351 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+352 \{
+353         \mbox{\hyperlink{structunz__s}{unz\_s}} us;
+354         \mbox{\hyperlink{structunz__s}{unz\_s}} *s;
+355         uLong central\_pos,uL;
+356         FILE * fin ;
+357 
+358         uLong number\_disk;          \textcolor{comment}{/* number of the current dist, used for }
+359 \textcolor{comment}{                                                                   spaning ZIP, unsupported, always 0*/}
+360         uLong number\_disk\_with\_CD;  \textcolor{comment}{/* number the the disk with central dir, used}
+361 \textcolor{comment}{                                                                   for spaning ZIP, unsupported, always 0*/}
+362         uLong number\_entry\_CD;      \textcolor{comment}{/* total number of entries in}
+363 \textcolor{comment}{                                       the central dir }
+364 \textcolor{comment}{                                       (same than number\_entry on nospan) */}
+365 
+366         \textcolor{keywordtype}{int} err=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+367 
+368     \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aee9e9bcd4db86fe55bcc3685fafa5990}{unz\_copyright}}[0]!=\textcolor{charliteral}{' '})
+369         \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+370 
+371     fin=fopen(path,\textcolor{stringliteral}{"rb"});
+372         \textcolor{keywordflow}{if} (fin==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+373                 \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+374 
+375         central\_pos = \mbox{\hyperlink{unzip_8cpp_ad468af80daf0af6b832a81161501ccca}{unzlocal\_SearchCentralDir}}(fin);
+376         \textcolor{keywordflow}{if} (central\_pos==0)
+377                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+378 
+379         \textcolor{keywordflow}{if} (fseek(fin,central\_pos,\mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}})!=0)
+380                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+381 
+382         \textcolor{comment}{/* the signature, already checked */}
+383         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(fin,&uL)!=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+384                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+385 
+386         \textcolor{comment}{/* number of this disk */}
+387         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(fin,&number\_disk)!=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+388                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+389 
+390         \textcolor{comment}{/* number of the disk with the start of the central directory */}
+391         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(fin,&number\_disk\_with\_CD)!=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+392                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+393 
+394         \textcolor{comment}{/* total number of entries in the central dir on this disk */}
+395         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(fin,&us.\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}}.\mbox{\hyperlink{structunz__global__info__s_a827d1cd1d09f12acd6c2ee12494cb320}{number\_entry}})!=
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+396                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+397 
+398         \textcolor{comment}{/* total number of entries in the central dir */}
+399         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(fin,&number\_entry\_CD)!=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+400                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+401 
+402         \textcolor{keywordflow}{if} ((number\_entry\_CD!=us.\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}}.\mbox{\hyperlink{structunz__global__info__s_a827d1cd1d09f12acd6c2ee12494cb320}{number\_entry}}) ||
+403                 (number\_disk\_with\_CD!=0) ||
+404                 (number\_disk!=0))
+405                 err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+406 
+407         \textcolor{comment}{/* size of the central directory */}
+408         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(fin,&us.\mbox{\hyperlink{structunz__s_a60b803a02e17ae46755cb94026ae973a}{size\_central\_dir}})!=
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+409                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+410 
+411         \textcolor{comment}{/* offset of start of central directory with respect to the }
+412 \textcolor{comment}{              starting disk number */}
+413         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_a396ee9eef44ba468556e5bbbda9d6c9e}{unzlocal\_getLong}}(fin,&us.\mbox{\hyperlink{structunz__s_ac6c37ef70549769fa59bca623565d78f}{offset\_central\_dir}})!=
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+414                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+415 
+416         \textcolor{comment}{/* zipfile comment length */}
+417         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_aae00122ac858120e991550221c76214b}{unzlocal\_getShort}}(fin,&us.\mbox{\hyperlink{structunz__s_a131303f89af11a26b53e99a58d6517cf}{gi}}.\mbox{\hyperlink{structunz__global__info__s_a10b58ab57b62301de813ecac0e974363}{size\_comment}})!=
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+418                 err=\mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+419 
+420         \textcolor{keywordflow}{if} ((central\_pos<us.\mbox{\hyperlink{structunz__s_ac6c37ef70549769fa59bca623565d78f}{offset\_central\_dir}}+us.
+      \mbox{\hyperlink{structunz__s_a60b803a02e17ae46755cb94026ae973a}{size\_central\_dir}}) && 
+421                 (err==\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}))
+422                 err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+423 
+424         \textcolor{keywordflow}{if} (err!=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+425         \{
+426                 fclose(fin);
+427                 \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+428         \}
+429 
+430         us.\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}}=fin;
+431         us.\mbox{\hyperlink{structunz__s_a788688a8021cbbba6a2ac1765edd362e}{byte\_before\_the\_zipfile}} = central\_pos -
+432                                     (us.\mbox{\hyperlink{structunz__s_ac6c37ef70549769fa59bca623565d78f}{offset\_central\_dir}}+us.
+      \mbox{\hyperlink{structunz__s_a60b803a02e17ae46755cb94026ae973a}{size\_central\_dir}});
+433         us.\mbox{\hyperlink{structunz__s_a2d8ae4c0975d2057e30b13c3148c27eb}{central\_pos}} = central\_pos;
+434     us.\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+435         
+436 
+437         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{unzip_8cpp_ac5c822e3692a95451e8f70a5916f05a3}{ALLOC}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structunz__s}{unz\_s}}));
+438         *s=us;
+439         \mbox{\hyperlink{unzip_8cpp_a54821c0b6da683800164a56f2ae14f33}{unzGoToFirstFile}}((\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unzFile}})s);   
+440         \textcolor{keywordflow}{return} (\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unzFile}})s;      
+441 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a4efe7bf26960a0a0c66122788b175f97_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a4efe7bf26960a0a0c66122788b175f97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a65deebb4ecb3ba110c343c21a4cd9a75}\label{unzip_8cpp_a65deebb4ecb3ba110c343c21a4cd9a75}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Open\+Current\+File@{unz\+Open\+Current\+File}}
+\index{unz\+Open\+Current\+File@{unz\+Open\+Current\+File}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Open\+Current\+File()}{unzOpenCurrentFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Open\+Current\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 882 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+883 \{
+884         \textcolor{keywordtype}{int} err=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+885         \textcolor{keywordtype}{int} Store;
+886         uInt iSizeVar;
+887         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+888         \mbox{\hyperlink{structfile__in__zip__read__info__s}{file\_in\_zip\_read\_info\_s}}* pfile\_in\_zip\_read\_info;
+889         uLong offset\_local\_extrafield;  \textcolor{comment}{/* offset of the local extra field */}
+890         uInt  size\_local\_extrafield;    \textcolor{comment}{/* size of the local extra field */}
+891 
+892         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+893                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+894         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+895         \textcolor{keywordflow}{if} (!s->\mbox{\hyperlink{structunz__s_abe2244ba62db8b3251634e26183f1c9a}{current\_file\_ok}})
+896                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+897 
+898     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}} != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+899         \mbox{\hyperlink{unzip_8cpp_ac48279e5325cfdabbc67a312b1d32700}{unzCloseCurrentFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+900 
+901         \textcolor{keywordflow}{if} (\mbox{\hyperlink{unzip_8cpp_ae29f32a517b1bf71b222191636739fa6}{unzlocal\_CheckCurrentFileCoherencyHeader}}(s,&iSizeVar,
+902                                 &offset\_local\_extrafield,&size\_local\_extrafield)!=
+      \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+903                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+904 
+905         pfile\_in\_zip\_read\_info = (\mbox{\hyperlink{structfile__in__zip__read__info__s}{file\_in\_zip\_read\_info\_s}}*)
+906                                                                             
+      \mbox{\hyperlink{unzip_8cpp_ac5c822e3692a95451e8f70a5916f05a3}{ALLOC}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structfile__in__zip__read__info__s}{file\_in\_zip\_read\_info\_s}}));
+907         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+908                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_a813da146afcb179d57e948bf6871799b}{UNZ\_INTERNALERROR}};
+909 
+910         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6310a19e33ac2cf3280aa74199cbd89b}{read\_buffer}}=(\textcolor{keywordtype}{char}*)\mbox{\hyperlink{unzip_8cpp_ac5c822e3692a95451e8f70a5916f05a3}{ALLOC}}(
+      \mbox{\hyperlink{unzip_8cpp_ac88907609a3408a8ee6544287b6c9880}{UNZ\_BUFSIZE}});
+911         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3a240c367e7d6d199859b1b311128c}{offset\_local\_extrafield}} = offset\_local\_extrafield;
+912         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a9abdc9b3f3d500d894a635cc9e956180}{size\_local\_extrafield}} = size\_local\_extrafield;
+913         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_aa07cf3d7d5d68e9537ffe99499d7db6f}{pos\_local\_extrafield}}=0;
+914 
+915         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6310a19e33ac2cf3280aa74199cbd89b}{read\_buffer}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+916         \{
+917                 \mbox{\hyperlink{unzip_8cpp_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(pfile\_in\_zip\_read\_info);
+918                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_a813da146afcb179d57e948bf6871799b}{UNZ\_INTERNALERROR}};
+919         \}
+920 
+921         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8f2d03c24a7b1058288606687eb6d448}{stream\_initialised}}=0;
+922         
+923         \textcolor{keywordflow}{if} ((s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_aaaca88f0ebec5c1cfebb436b8e70a774}{compression\_method}}!=0) &&
+924         (s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_aaaca88f0ebec5c1cfebb436b8e70a774}{compression\_method}}!=Z\_DEFLATED))
+925                 err=\mbox{\hyperlink{unzip_8h_a3fcc1d41cbea304ce10286ce99577625}{UNZ\_BADZIPFILE}};
+926         Store = s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_aaaca88f0ebec5c1cfebb436b8e70a774}{compression\_method}}==0;
+927 
+928         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6120c521be40e8ba530249f0c766ab9d}{crc32\_wait}}=s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.
+      \mbox{\hyperlink{structunz__file__info__s_a6d741cb2df07794d7a4794841148893b}{crc}};
+929         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a9d7e4dc6f312fb59bf8e60fb952f4d68}{crc32}}=0;
+930         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a86cbaa96568192cae9ab9cd606963fdb}{compression\_method}} =
+931             s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_aaaca88f0ebec5c1cfebb436b8e70a774}{compression\_method}};
+932         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_ac1b9fbf81aac280e5e9f6eaca864161b}{file}}=s->\mbox{\hyperlink{structunz__s_ae3672e9d6fcd9741941ed1ba376f86c7}{file}};
+933         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a52c8e657a1238a3b9fa87b4167d9b7a3}{byte\_before\_the\_zipfile}}=s->
+      \mbox{\hyperlink{structunz__s_a788688a8021cbbba6a2ac1765edd362e}{byte\_before\_the\_zipfile}};
+934 
+935     pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.total\_out = 0;
+936 
+937         \textcolor{keywordflow}{if} (!Store)
+938         \{
+939           pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.zalloc = (alloc\_func)0;
+940           pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.zfree = (free\_func)0;
+941           pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.opaque = (voidpf)0; 
+942       
+943           err=inflateInit2(&pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}, -MAX\_WBITS);
+944           \textcolor{keywordflow}{if} (err == Z\_OK)
+945             pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8f2d03c24a7b1058288606687eb6d448}{stream\_initialised}}=1;
+946         \textcolor{comment}{/* windowBits is passed < 0 to tell that there is no zlib header.}
+947 \textcolor{comment}{         * Note that in this case inflate *requires* an extra "dummy" byte}
+948 \textcolor{comment}{         * after the compressed stream in order to complete decompression and}
+949 \textcolor{comment}{         * return Z\_STREAM\_END. }
+950 \textcolor{comment}{         * In unzip, i don't wait absolutely Z\_STREAM\_END because I known the }
+951 \textcolor{comment}{         * size of both compressed and uncompressed data}
+952 \textcolor{comment}{         */}
+953         \}
+954         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a4c7b8e6502f7195feefd676dff0bb494}{rest\_read\_compressed}} = 
+955             s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_a35ee9d733879c87565e40a545fe46fb6}{compressed\_size}} ;
+956         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3801645cfa5bfd147fd8d037fcf9a5}{rest\_read\_uncompressed}} = 
+957             s->\mbox{\hyperlink{structunz__s_ab1963897ac959ca0f9b4208c573c2795}{cur\_file\_info}}.\mbox{\hyperlink{structunz__file__info__s_a7696a98511bc57e389485e5313a9c2bf}{uncompressed\_size}} ;
+958 
+959         
+960         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a01d6195d7977bec4db506cdbee9b8a13}{pos\_in\_zipfile}} = 
+961             s->\mbox{\hyperlink{structunz__s_a36625697385b9a675f02a446fa5ba583}{cur\_file\_info\_internal}}.\mbox{\hyperlink{structunz__file__info__internal__s_a23d3a1c3584888bdf066d7bfed95f62e}{offset\_curfile}} + 
+      \mbox{\hyperlink{unzip_8cpp_a3c43e42371a71abc3db1b5a013382e77}{SIZEZIPLOCALHEADER}} + 
+962                           iSizeVar;
+963         
+964         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_in = (uInt)0;
+965 
+966 
+967         s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}} = pfile\_in\_zip\_read\_info;
+968     \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+969 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{unzip_8cpp_a65deebb4ecb3ba110c343c21a4cd9a75_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a782029e380dc5ab5dab00361c9c14f58}\label{unzip_8cpp_a782029e380dc5ab5dab00361c9c14f58}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+Read\+Current\+File@{unz\+Read\+Current\+File}}
+\index{unz\+Read\+Current\+File@{unz\+Read\+Current\+File}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+Read\+Current\+File()}{unzReadCurrentFile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+Read\+Current\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file,  }\item[{\mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}}}]{buf,  }\item[{unsigned}]{len }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 982 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+983 \{
+984         \textcolor{keywordtype}{int} err=\mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}};
+985         uInt iRead = 0;
+986         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+987         \mbox{\hyperlink{structfile__in__zip__read__info__s}{file\_in\_zip\_read\_info\_s}}* pfile\_in\_zip\_read\_info;
+988         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+989                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+990         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+991     pfile\_in\_zip\_read\_info=s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}};
+992 
+993         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+994                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+995 
+996 
+997         \textcolor{keywordflow}{if} ((pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6310a19e33ac2cf3280aa74199cbd89b}{read\_buffer}} == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}))
+998                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_ac55ed190d07021ce9bc1bf34b91dcae9}{UNZ\_END\_OF\_LIST\_OF\_FILE}};
+999         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}==0)
+1000                 \textcolor{keywordflow}{return} 0;
+1001 
+1002         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.next\_out = (Bytef*)\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}};
+1003 
+1004         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_out = (uInt)\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+1005         
+1006         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}>pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3801645cfa5bfd147fd8d037fcf9a5}{rest\_read\_uncompressed}})
+1007                 pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_out = 
+1008                   (uInt)pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3801645cfa5bfd147fd8d037fcf9a5}{rest\_read\_uncompressed}};
+1009 
+1010         \mbox{\hyperlink{expr-lex_8cpp_a8fdafe3be7e00ce3d4f0cb50a9a5eb39}{while}} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_out>0)
+1011         \{
+1012                 \textcolor{keywordflow}{if} ((pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_in==0) &&
+1013             (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a4c7b8e6502f7195feefd676dff0bb494}{rest\_read\_compressed}}>0))
+1014                 \{
+1015                         uInt uReadThis = \mbox{\hyperlink{unzip_8cpp_ac88907609a3408a8ee6544287b6c9880}{UNZ\_BUFSIZE}};
+1016                         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a4c7b8e6502f7195feefd676dff0bb494}{rest\_read\_compressed}}<uReadThis)
+1017                                 uReadThis = (uInt)pfile\_in\_zip\_read\_info->
+      \mbox{\hyperlink{structfile__in__zip__read__info__s_a4c7b8e6502f7195feefd676dff0bb494}{rest\_read\_compressed}};
+1018                         \mbox{\hyperlink{arm-new_8h_a93120066fd6daa54150af823953378d1}{if}} (uReadThis == 0)
+1019                                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_a0438887aea4e1c58e1b3955838a907f3}{UNZ\_EOF}};
+1020                         \textcolor{keywordflow}{if} (fseek(pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_ac1b9fbf81aac280e5e9f6eaca864161b}{file}},
+1021                       pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a01d6195d7977bec4db506cdbee9b8a13}{pos\_in\_zipfile}} + 
+1022                          pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a52c8e657a1238a3b9fa87b4167d9b7a3}{byte\_before\_the\_zipfile}},
+      \mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}})!=0)
+1023                                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+1024                         \textcolor{keywordflow}{if} (fread(pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6310a19e33ac2cf3280aa74199cbd89b}{read\_buffer}},uReadThis,1,
+1025                          pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_ac1b9fbf81aac280e5e9f6eaca864161b}{file}})!=1)
+1026                                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aae99fb3e34ea9f78ca8ba4a716f86e68}{UNZ\_ERRNO}};
+1027                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a01d6195d7977bec4db506cdbee9b8a13}{pos\_in\_zipfile}} += uReadThis;
+1028 
+1029                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a4c7b8e6502f7195feefd676dff0bb494}{rest\_read\_compressed}}-=uReadThis;
+1030                         
+1031                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.next\_in = 
+1032                 (Bytef*)pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6310a19e33ac2cf3280aa74199cbd89b}{read\_buffer}};
+1033                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_in = (uInt)uReadThis;
+1034                 \}
+1035 
+1036                 \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a86cbaa96568192cae9ab9cd606963fdb}{compression\_method}}==0)
+1037                 \{
+1038                         uInt uDoCopy,\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} ;
+1039                         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_out < 
+1040                             pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_in)
+1041                                 uDoCopy = pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_out ;
+1042                         \textcolor{keywordflow}{else}
+1043                                 uDoCopy = pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_in ;
+1044                                 
+1045                         \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}=0;\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}<uDoCopy;\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++)
+1046                                 *(pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.next\_out+
+      \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}) =
+1047                         *(pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.next\_in+\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});
+1048                                         
+1049                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a9d7e4dc6f312fb59bf8e60fb952f4d68}{crc32}} = crc32(pfile\_in\_zip\_read\_info->
+      \mbox{\hyperlink{structfile__in__zip__read__info__s_a9d7e4dc6f312fb59bf8e60fb952f4d68}{crc32}},
+1050                                                                 pfile\_in\_zip\_read\_info->
+      \mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.next\_out,
+1051                                                                 uDoCopy);
+1052                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3801645cfa5bfd147fd8d037fcf9a5}{rest\_read\_uncompressed}}-=uDoCopy;
+1053                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_in -= uDoCopy;
+1054                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.avail\_out -= uDoCopy;
+1055                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.next\_out += uDoCopy;
+1056                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.next\_in += uDoCopy;
+1057             pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.total\_out += uDoCopy;
+1058                         iRead += uDoCopy;
+1059                 \}
+1060                 \textcolor{keywordflow}{else}
+1061                 \{
+1062                         uLong uTotalOutBefore,uTotalOutAfter;
+1063                         \textcolor{keyword}{const} Bytef *bufBefore;
+1064                         uLong uOutThis;
+1065                         \textcolor{keywordtype}{int} flush=Z\_SYNC\_FLUSH;
+1066 
+1067                         uTotalOutBefore = pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.total\_out;
+1068                         bufBefore = pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.next\_out;
+1069 
+1070                         \textcolor{comment}{/*}
+1071 \textcolor{comment}{                        if ((pfile\_in\_zip\_read\_info->rest\_read\_uncompressed ==}
+1072 \textcolor{comment}{                                 pfile\_in\_zip\_read\_info->stream.avail\_out) &&}
+1073 \textcolor{comment}{                                (pfile\_in\_zip\_read\_info->rest\_read\_compressed == 0))}
+1074 \textcolor{comment}{                                flush = Z\_FINISH;}
+1075 \textcolor{comment}{                        */}
+1076                         err=inflate(&pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}},flush);
+1077 
+1078                         uTotalOutAfter = pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.total\_out;
+1079                         uOutThis = uTotalOutAfter-uTotalOutBefore;
+1080                         
+1081                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a9d7e4dc6f312fb59bf8e60fb952f4d68}{crc32}} = 
+1082                 crc32(pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a9d7e4dc6f312fb59bf8e60fb952f4d68}{crc32}},bufBefore,
+1083                         (uInt)(uOutThis));
+1084 
+1085                         pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a8e3801645cfa5bfd147fd8d037fcf9a5}{rest\_read\_uncompressed}} -=
+1086                 uOutThis;
+1087 
+1088                         iRead += (uInt)(uTotalOutAfter - uTotalOutBefore);
+1089             
+1090                         \textcolor{keywordflow}{if} (err==Z\_STREAM\_END)
+1091                                 \textcolor{keywordflow}{return} (iRead==0) ? \mbox{\hyperlink{unzip_8h_a0438887aea4e1c58e1b3955838a907f3}{UNZ\_EOF}} : iRead;
+1092                         \textcolor{keywordflow}{if} (err!=Z\_OK) 
+1093                                 \textcolor{keywordflow}{break};
+1094                 \}
+1095         \}
+1096 
+1097         \textcolor{keywordflow}{if} (err==Z\_OK)
+1098                 \textcolor{keywordflow}{return} iRead;
+1099         \textcolor{keywordflow}{return} err;
+1100 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{unzip_8cpp_a782029e380dc5ab5dab00361c9c14f58_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a271f325759b3251ee728a8f850291dcf}\label{unzip_8cpp_a271f325759b3251ee728a8f850291dcf}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+String\+File\+Name\+Compare@{unz\+String\+File\+Name\+Compare}}
+\index{unz\+String\+File\+Name\+Compare@{unz\+String\+File\+Name\+Compare}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+String\+File\+Name\+Compare()}{unzStringFileNameCompare()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT unz\+String\+File\+Name\+Compare (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{file\+Name1,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{file\+Name2,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{i\+Case\+Sensitivity }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 268 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+271 \{
+272         \textcolor{keywordflow}{if} (iCaseSensitivity==0)
+273                 iCaseSensitivity=\mbox{\hyperlink{unzip_8cpp_a211c212a9634c4a42e21d04861c0bdd5}{CASESENSITIVITYDEFAULTVALUE}};
+274 
+275         \textcolor{keywordflow}{if} (iCaseSensitivity==1)
+276                 \textcolor{keywordflow}{return} strcmp(fileName1,fileName2);
+277 
+278         \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8cpp_a245d2af04dc8b6d6617f21d34635b033}{STRCMPCASENOSENTIVEFUNCTION}}(fileName1,fileName2);
+279 \} 
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{unzip_8cpp_a271f325759b3251ee728a8f850291dcf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{unzip_8cpp_a17362e5016023e9424a318d93c0475d4}\label{unzip_8cpp_a17362e5016023e9424a318d93c0475d4}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unztell@{unztell}}
+\index{unztell@{unztell}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unztell()}{unztell()}}
+{\footnotesize\ttfamily z\+\_\+off\+\_\+t Z\+E\+X\+P\+O\+RT unztell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unz\+File}}}]{file }\end{DoxyParamCaption})}
+
+
+
+unzip.\+cpp 파일의 1106 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1107 \{
+1108         \mbox{\hyperlink{structunz__s}{unz\_s}}* s;
+1109         \mbox{\hyperlink{structfile__in__zip__read__info__s}{file\_in\_zip\_read\_info\_s}}* pfile\_in\_zip\_read\_info;
+1110         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1111                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1112         s=(\mbox{\hyperlink{structunz__s}{unz\_s}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+1113     pfile\_in\_zip\_read\_info=s->\mbox{\hyperlink{structunz__s_a7a5f0568475ad9a36ee2c1f3972406f0}{pfile\_in\_zip\_read}};
+1114 
+1115         \textcolor{keywordflow}{if} (pfile\_in\_zip\_read\_info==\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1116                 \textcolor{keywordflow}{return} \mbox{\hyperlink{unzip_8h_aca983831f4d25e504d544eb07f48e39b}{UNZ\_PARAMERROR}};
+1117 
+1118         \textcolor{keywordflow}{return} (z\_off\_t)pfile\_in\_zip\_read\_info->\mbox{\hyperlink{structfile__in__zip__read__info__s_a6973c6240c02a1c8e014d6078bb2bbfc}{stream}}.total\_out;
+1119 \}
+\end{DoxyCode}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{unzip_8cpp_aee9e9bcd4db86fe55bcc3685fafa5990}\label{unzip_8cpp_aee9e9bcd4db86fe55bcc3685fafa5990}} 
+\index{unzip.\+cpp@{unzip.\+cpp}!unz\+\_\+copyright@{unz\+\_\+copyright}}
+\index{unz\+\_\+copyright@{unz\+\_\+copyright}!unzip.\+cpp@{unzip.\+cpp}}
+\subsubsection{\texorpdfstring{unz\+\_\+copyright}{unz\_copyright}}
+{\footnotesize\ttfamily \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char unz\+\_\+copyright\mbox{[}$\,$\mbox{]}}
+
+{\bfseries 초기값\+:}
+\begin{DoxyCode}
+=
+   \textcolor{stringliteral}{" unzip 0.15 Copyright 1998 Gilles Vollant "}
+\end{DoxyCode}
+
+
+unzip.\+cpp 파일의 90 번째 라인에서 정의되었습니다.
+

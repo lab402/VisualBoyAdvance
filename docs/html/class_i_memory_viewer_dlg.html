@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_i_memory_viewer_dlg.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -68,32 +92,93 @@ $(function() {
 <div class="title">IMemoryViewerDlg 클래스 참조<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_memory_viewer_8h_source.html">MemoryViewer.h</a>&gt;</code></p>
 <div class="dynheader">
 IMemoryViewerDlg에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_i_memory_viewer_dlg.png" usemap="#IMemoryViewerDlg_map" alt=""/>
-  <map id="IMemoryViewerDlg_map" name="IMemoryViewerDlg_map">
-<area href="class_g_b_memory_viewer_dlg.html" alt="GBMemoryViewerDlg" shape="rect" coords="0,56,134,80"/>
-<area href="class_memory_viewer_dlg.html" alt="MemoryViewerDlg" shape="rect" coords="144,56,278,80"/>
+<div class="center"><img src="class_i_memory_viewer_dlg__inherit__graph.png" border="0" usemap="#_i_memory_viewer_dlg_inherit__map" alt="Inheritance graph"/></div>
+<map name="_i_memory_viewer_dlg_inherit__map" id="_i_memory_viewer_dlg_inherit__map">
+<area shape="rect" id="node2" href="class_g_b_memory_viewer_dlg.html" title="{GBMemoryViewerDlg\n|+ m_current\l+ m_address\l+ m_addresses\l+ m_size\l|+ setCurrentAddress()\l+ GBMemoryViewerDlg()\l+ update()\l# DoDataExchange()\l# PostNcDestroy()\l# OnInitDialog()\l# OnClose()\l# OnRefresh()\l# On8Bit()\l# On16Bit()\l# On32Bit()\l# OnAutoUpdate()\l# OnGo()\l# OnSelchangeAddresses()\l# OnSave()\l# OnLoad()\l}" alt="" coords="5,138,187,479"/>
+<area shape="rect" id="node3" href="class_memory_viewer_dlg.html" title="{MemoryViewerDlg\n|+ autoUpdate\l+ m_current\l+ m_address\l+ m_addresses\l+ m_size\l|+ setCurrentAddress()\l+ update()\l+ MemoryViewerDlg()\l# DoDataExchange()\l# PostNcDestroy()\l# OnInitDialog()\l# OnClose()\l# OnRefresh()\l# On8Bit()\l# On16Bit()\l# On32Bit()\l# OnAutoUpdate()\l# OnGo()\l# OnSelchangeAddresses()\l# OnSave()\l# OnLoad()\l}" alt="" coords="211,131,392,487"/>
 </map>
- </div></div>
+</div>
+<div class="dynheader">
+IMemoryViewerDlg에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_memory_viewer_dlg__coll__graph.png" border="0" usemap="#_i_memory_viewer_dlg_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a95cad5a86447abbc593b7154c110bb2c"><td class="memItemLeft" align="right" valign="top"><a id="a95cad5a86447abbc593b7154c110bb2c"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setCurrentAddress</b> (u32 address)=0</td></tr>
+<tr class="memitem:a95cad5a86447abbc593b7154c110bb2c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_memory_viewer_dlg.html#a95cad5a86447abbc593b7154c110bb2c">setCurrentAddress</a> (<a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> address)=0</td></tr>
 <tr class="separator:a95cad5a86447abbc593b7154c110bb2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_memory_viewer_8h_source.html">MemoryViewer.h</a> 파일의 <a class="el" href="_memory_viewer_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a95cad5a86447abbc593b7154c110bb2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95cad5a86447abbc593b7154c110bb2c">&#9670;&nbsp;</a></span>setCurrentAddress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IMemoryViewerDlg::setCurrentAddress </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td>
+          <td class="paramname"><em>address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_g_b_memory_viewer_dlg.html#a9d6e6bf119f77c2b8843800ae5a6df7b">GBMemoryViewerDlg</a>, <a class="el" href="class_memory_viewer_dlg.html#ac027e2a8dc226a7053068680050abd1f">MemoryViewerDlg</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_memory_viewer_dlg_a95cad5a86447abbc593b7154c110bb2c_icgraph.png" border="0" usemap="#class_i_memory_viewer_dlg_a95cad5a86447abbc593b7154c110bb2c_icgraph" alt=""/></div>
+<map name="class_i_memory_viewer_dlg_a95cad5a86447abbc593b7154c110bb2c_icgraph" id="class_i_memory_viewer_dlg_a95cad5a86447abbc593b7154c110bb2c_icgraph">
+<area shape="rect" id="node2" href="class_memory_viewer.html#abfed49727a6de1b52e5495ed96816759" title="MemoryViewer::setCaretPos" alt="" coords="252,283,440,309"/>
+<area shape="rect" id="node3" href="class_memory_viewer.html#abe391051455e116889da0613c19888a2" title="MemoryViewer::setAddress" alt="" coords="502,173,685,200"/>
+<area shape="rect" id="node7" href="class_memory_viewer.html#a0a371c925fc00dd78fedd8d21ebc8cdc" title="MemoryViewer::moveAddress" alt="" coords="756,291,951,317"/>
+<area shape="rect" id="node13" href="class_memory_viewer.html#aa17edb0fbc507fe79493ec235cd124f2" title="MemoryViewer::OnLButtonDown" alt="" coords="488,308,699,335"/>
+<area shape="rect" id="node14" href="class_memory_viewer.html#a8a245f3c99b525dded9e776a4a5976de" title="MemoryViewer::OnSetFocus" alt="" coords="499,359,688,385"/>
+<area shape="rect" id="node4" href="class_g_b_memory_viewer_dlg.html#ade5919e22370d16bb0457a79f81d5877" title="GBMemoryViewerDlg::OnGo" alt="" coords="759,5,947,32"/>
+<area shape="rect" id="node5" href="class_g_b_memory_viewer_dlg.html#a4e089b7216a76ba514f26f061f53fd8c" title="GBMemoryViewerDlg::\lOnSelchangeAddresses" alt="" coords="772,57,935,98"/>
+<area shape="rect" id="node6" href="class_memory_viewer.html#ab371c01b5cc7069561f448e46e7d44a4" title="MemoryViewer::OnVScroll" alt="" coords="766,123,941,149"/>
+<area shape="rect" id="node11" href="class_memory_viewer_dlg.html#aa21f28b3490b179e79e3a3687fef0c45" title="MemoryViewerDlg::OnGo" alt="" coords="769,173,938,200"/>
+<area shape="rect" id="node12" href="class_memory_viewer_dlg.html#ab7624247967998f1973da99a035a28e3" title="MemoryViewerDlg::OnSelchange\lAddresses" alt="" coords="747,225,960,266"/>
+<area shape="rect" id="node8" href="class_memory_viewer.html#afc4781b16d21212f67e5dd299c537718" title="MemoryViewer::OnKeyDown" alt="" coords="1008,265,1196,292"/>
+<area shape="rect" id="node9" href="class_memory_viewer.html#ab3cf8e1e2318a15b1e7c783b9a7bad80" title="MemoryViewer::OnEditInput" alt="" coords="1010,316,1194,343"/>
+<area shape="rect" id="node10" href="class_memory_viewer.html#a47fb6730b742faedeafbb622e008317e" title="MemoryViewer::OnWMChar" alt="" coords="1244,316,1428,343"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_memory_viewer_8h_source.html">MemoryViewer.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_memory_viewer_8h_source.html">MemoryViewer.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_memory_viewer_dlg.html">IMemoryViewerDlg</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

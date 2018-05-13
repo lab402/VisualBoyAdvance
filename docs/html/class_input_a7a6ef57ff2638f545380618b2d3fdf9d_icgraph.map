@@ -1,0 +1,4 @@
+<map id="Input::checkDevices" name="Input::checkDevices">
+<area shape="rect" id="node2" href="$class_joypad_config.html#af55cd03e7ed293d17d338858285a8087" title="JoypadConfig::OnTimer" alt="" coords="192,5,348,32"/>
+<area shape="rect" id="node3" href="$class_motion_config.html#ac787a62c63e00f55582bb4695bbd04d6" title="MotionConfig::OnTimer" alt="" coords="193,56,347,83"/>
+</map>

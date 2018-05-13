@@ -1,0 +1,174 @@
+\hypertarget{namespace_v_b_a}{}\section{V\+BA 네임스페이스 참조}
+\label{namespace_v_b_a}\index{V\+BA@{V\+BA}}
+\subsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_v_b_a_1_1_config}{Config}}
+\end{DoxyCompactItemize}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_v_b_a_1_1_image_menu_item}{Image\+Menu\+Item}}
+\item 
+class \mbox{\hyperlink{class_v_b_a_1_1_joypad_config}{Joypad\+Config}}
+\item 
+class \mbox{\hyperlink{class_v_b_a_1_1_joypad_config_dialog}{Joypad\+Config\+Dialog}}
+\item 
+class \mbox{\hyperlink{class_v_b_a_1_1_keymap}{Keymap}}
+\item 
+class \mbox{\hyperlink{class_v_b_a_1_1_menu_item}{Menu\+Item}}
+\item 
+class \mbox{\hyperlink{class_v_b_a_1_1_screen_area}{Screen\+Area}}
+\item 
+class \mbox{\hyperlink{class_v_b_a_1_1_window}{Window}}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_v_b_a_accd36b6c101a516c50cf8288976739c4}{Filter2x}} \mbox{\hyperlink{namespace_v_b_a_a2a6c0188179e4ee017369e21d8e6f268}{pv\+Get\+Filter2x}} (\mbox{\hyperlink{class_v_b_a_a1683020d7324daf3bda627d0d3658e3e}{E\+Filter2x}} \+\_\+e\+Filter2x, \mbox{\hyperlink{class_v_b_a_a6ec41ea038b4ea42eb8d9ea59d3eb4c5}{E\+Filter\+Depth}} \+\_\+e\+Depth)
+\item 
+\mbox{\hyperlink{class_v_b_a_a3269ee707f37ad255f2b7b0f20921158}{Filter\+IB}} \mbox{\hyperlink{namespace_v_b_a_ad5980a2981a7b766dce52ebc49a987bb}{pv\+Get\+Filter\+IB}} (\mbox{\hyperlink{class_v_b_a_a304ffeb9f4a8b26e7fa4e2eb620d780f}{E\+Filter\+IB}} \+\_\+e\+Filter\+IB, \mbox{\hyperlink{class_v_b_a_a6ec41ea038b4ea42eb8d9ea59d3eb4c5}{E\+Filter\+Depth}} \+\_\+e\+Depth)
+\item 
+std\+::string \mbox{\hyperlink{namespace_v_b_a_ad362cd74dbe4234578a0a124f3522dcf}{s\+Cut\+Suffix}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} std\+::string \&\+\_\+rs\+String, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} std\+::string \&\+\_\+rs\+Sep)
+\item 
+Glib\+::ustring \mbox{\hyperlink{namespace_v_b_a_aa627086c3b36799bc10a36048e5c5b68}{s\+Cut\+Suffix}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} Glib\+::ustring \&\+\_\+rs\+String, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} Glib\+::ustring \&\+\_\+rs\+Sep)
+\item 
+bool \mbox{\hyperlink{namespace_v_b_a_ad93561fe4528e04192e066e138c3572b}{b\+Has\+Suffix}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} Glib\+::ustring \&\+\_\+rs\+String, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} Glib\+::ustring \&\+\_\+rs\+Suffix, bool \+\_\+b\+Case\+Sensitive)
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{namespace_v_b_a_ad93561fe4528e04192e066e138c3572b}\label{namespace_v_b_a_ad93561fe4528e04192e066e138c3572b}} 
+\index{V\+BA@{V\+BA}!b\+Has\+Suffix@{b\+Has\+Suffix}}
+\index{b\+Has\+Suffix@{b\+Has\+Suffix}!V\+BA@{V\+BA}}
+\subsubsection{\texorpdfstring{b\+Has\+Suffix()}{bHasSuffix()}}
+{\footnotesize\ttfamily bool V\+B\+A\+::b\+Has\+Suffix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} Glib\+::ustring \&}]{\+\_\+rs\+String,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} Glib\+::ustring \&}]{\+\_\+rs\+Suffix,  }\item[{bool}]{\+\_\+b\+Case\+Sensitive }\end{DoxyParamCaption})}
+
+
+
+tools.\+cpp 파일의 36 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+39 \{
+40   \textcolor{keywordflow}{if} (\_rsSuffix.size() > \_rsString.size())
+41   \{
+42     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+43   \}
+44 
+45   Glib::ustring sEnd = \_rsString.substr(\_rsString.size() - \_rsSuffix.size());
+46 
+47   \textcolor{keywordflow}{if} (\_bCaseSensitive)
+48   \{
+49     \textcolor{keywordflow}{if} (\_rsSuffix == sEnd)
+50     \{
+51       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+52     \}
+53   \}
+54   \textcolor{keywordflow}{else}
+55   \{
+56     \textcolor{keywordflow}{if} (\_rsSuffix.lowercase() == sEnd.lowercase())
+57     \{
+58       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+59     \}
+60   \}
+61 
+62   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+63 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_v_b_a_ad93561fe4528e04192e066e138c3572b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_v_b_a_a2a6c0188179e4ee017369e21d8e6f268}\label{namespace_v_b_a_a2a6c0188179e4ee017369e21d8e6f268}} 
+\index{V\+BA@{V\+BA}!pv\+Get\+Filter2x@{pv\+Get\+Filter2x}}
+\index{pv\+Get\+Filter2x@{pv\+Get\+Filter2x}!V\+BA@{V\+BA}}
+\subsubsection{\texorpdfstring{pv\+Get\+Filter2x()}{pvGetFilter2x()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_v_b_a_accd36b6c101a516c50cf8288976739c4}{Filter2x}} V\+B\+A\+::pv\+Get\+Filter2x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_b_a_a1683020d7324daf3bda627d0d3658e3e}{E\+Filter2x}}}]{\+\_\+e\+Filter2x,  }\item[{\mbox{\hyperlink{class_v_b_a_a6ec41ea038b4ea42eb8d9ea59d3eb4c5}{E\+Filter\+Depth}}}]{\+\_\+e\+Depth }\end{DoxyParamCaption})}
+
+
+
+filters.\+cpp 파일의 49 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+50 \{
+51   \textcolor{keywordflow}{return} apvFilters2x[\_eFilter2x][\_eDepth];
+52 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_v_b_a_a2a6c0188179e4ee017369e21d8e6f268_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_v_b_a_ad5980a2981a7b766dce52ebc49a987bb}\label{namespace_v_b_a_ad5980a2981a7b766dce52ebc49a987bb}} 
+\index{V\+BA@{V\+BA}!pv\+Get\+Filter\+IB@{pv\+Get\+Filter\+IB}}
+\index{pv\+Get\+Filter\+IB@{pv\+Get\+Filter\+IB}!V\+BA@{V\+BA}}
+\subsubsection{\texorpdfstring{pv\+Get\+Filter\+I\+B()}{pvGetFilterIB()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_v_b_a_a3269ee707f37ad255f2b7b0f20921158}{Filter\+IB}} V\+B\+A\+::pv\+Get\+Filter\+IB (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_v_b_a_a304ffeb9f4a8b26e7fa4e2eb620d780f}{E\+Filter\+IB}}}]{\+\_\+e\+Filter\+IB,  }\item[{\mbox{\hyperlink{class_v_b_a_a6ec41ea038b4ea42eb8d9ea59d3eb4c5}{E\+Filter\+Depth}}}]{\+\_\+e\+Depth }\end{DoxyParamCaption})}
+
+
+
+filters.\+cpp 파일의 54 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+55 \{
+56   \textcolor{keywordflow}{return} apvFiltersIB[\_eFilterIB][\_eDepth];
+57 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_v_b_a_ad5980a2981a7b766dce52ebc49a987bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_v_b_a_ad362cd74dbe4234578a0a124f3522dcf}\label{namespace_v_b_a_ad362cd74dbe4234578a0a124f3522dcf}} 
+\index{V\+BA@{V\+BA}!s\+Cut\+Suffix@{s\+Cut\+Suffix}}
+\index{s\+Cut\+Suffix@{s\+Cut\+Suffix}!V\+BA@{V\+BA}}
+\subsubsection{\texorpdfstring{s\+Cut\+Suffix()}{sCutSuffix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::string V\+B\+A\+::s\+Cut\+Suffix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} std\+::string \&}]{\+\_\+rs\+String,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} std\+::string \&}]{\+\_\+rs\+Sep }\end{DoxyParamCaption})}
+
+
+
+tools.\+cpp 파일의 24 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+26 \{
+27   \textcolor{keywordflow}{return} \_rsString.substr(0, \_rsString.find\_last\_of(\_rsSep));
+28 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_v_b_a_ad362cd74dbe4234578a0a124f3522dcf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_v_b_a_aa627086c3b36799bc10a36048e5c5b68}\label{namespace_v_b_a_aa627086c3b36799bc10a36048e5c5b68}} 
+\index{V\+BA@{V\+BA}!s\+Cut\+Suffix@{s\+Cut\+Suffix}}
+\index{s\+Cut\+Suffix@{s\+Cut\+Suffix}!V\+BA@{V\+BA}}
+\subsubsection{\texorpdfstring{s\+Cut\+Suffix()}{sCutSuffix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Glib\+::ustring V\+B\+A\+::s\+Cut\+Suffix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} Glib\+::ustring \&}]{\+\_\+rs\+String,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} Glib\+::ustring \&}]{\+\_\+rs\+Sep }\end{DoxyParamCaption})}
+
+
+
+tools.\+cpp 파일의 30 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+32 \{
+33   \textcolor{keywordflow}{return} \_rsString.substr(0, \_rsString.find\_last\_of(\_rsSep));
+34 \}
+\end{DoxyCode}

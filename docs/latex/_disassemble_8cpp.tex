@@ -1,0 +1,81 @@
+\hypertarget{_disassemble_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Disassemble.cpp 파일 참조}
+\label{_disassemble_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Disassemble.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Disassemble.\+cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vba.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Disassemble.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+System.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../armdis.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Globals.\+h\char`\"{}}\newline
+Disassemble.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_disassemble_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_disassemble_8cpp_ac48694e791b50357a1a762322adbbed4}{C\+P\+U\+Update\+C\+P\+SR}} ()
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_disassemble_8cpp_af9cc36078b1b311753963297ae7f2a74}{emulating}}
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{_disassemble_8cpp_ac48694e791b50357a1a762322adbbed4}\label{_disassemble_8cpp_ac48694e791b50357a1a762322adbbed4}} 
+\index{Disassemble.\+cpp@{Disassemble.\+cpp}!C\+P\+U\+Update\+C\+P\+SR@{C\+P\+U\+Update\+C\+P\+SR}}
+\index{C\+P\+U\+Update\+C\+P\+SR@{C\+P\+U\+Update\+C\+P\+SR}!Disassemble.\+cpp@{Disassemble.\+cpp}}
+\subsubsection{\texorpdfstring{C\+P\+U\+Update\+C\+P\+S\+R()}{CPUUpdateCPSR()}}
+{\footnotesize\ttfamily void C\+P\+U\+Update\+C\+P\+SR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+G\+B\+A.\+cpp 파일의 1697 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1698 \{
+1699   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} CPSR = \mbox{\hyperlink{_g_b_a_8h_ae29faba89509024ffd1a292badcedf2d}{reg}}[16].\mbox{\hyperlink{unionreg__pair_a9f6a42d56c07829d7013571eda998252}{I}} & 0x40;
+1700   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_8h_a6de466ba75c7d109f8efb7598c10047f}{N\_FLAG}})
+1701     CPSR |= 0x80000000;
+1702   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_8h_a53a7db1c6b43d8626d6fb547dc2cc1cb}{Z\_FLAG}})
+1703     CPSR |= 0x40000000;
+1704   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_8h_aa29c80f7f7f901ec7a2c57887f56585d}{C\_FLAG}})
+1705     CPSR |= 0x20000000;
+1706   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_a_8h_a11a0e7b14a93be5eb2720b0151900919}{V\_FLAG}})
+1707     CPSR |= 0x10000000;
+1708   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{_g_b_a_8h_adeb5542a7f7ef80090a22d0133606250}{armState}})
+1709     CPSR |= 0x00000020;
+1710   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{_g_b_a_8h_a6f8e529a8b221e4426c7e829ac8b8ac0}{armIrqEnable}})
+1711     CPSR |= 0x80;
+1712   CPSR |= (\mbox{\hyperlink{_g_b_a_8h_a2ad2744f0d07ed890a28f4d169c102ec}{armMode}} & 0x1F);
+1713   \mbox{\hyperlink{_g_b_a_8h_ae29faba89509024ffd1a292badcedf2d}{reg}}[16].\mbox{\hyperlink{unionreg__pair_a9f6a42d56c07829d7013571eda998252}{I}} = CPSR;
+1714 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_disassemble_8cpp_ac48694e791b50357a1a762322adbbed4_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{_disassemble_8cpp_af9cc36078b1b311753963297ae7f2a74}\label{_disassemble_8cpp_af9cc36078b1b311753963297ae7f2a74}} 
+\index{Disassemble.\+cpp@{Disassemble.\+cpp}!emulating@{emulating}}
+\index{emulating@{emulating}!Disassemble.\+cpp@{Disassemble.\+cpp}}
+\subsubsection{\texorpdfstring{emulating}{emulating}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} emulating}
+
+
+
+system.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+

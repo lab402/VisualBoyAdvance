@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdevice_info.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">deviceInfo 멤버 목록</div>  </div>
@@ -68,26 +92,29 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="structdevice_info.html">deviceInfo</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>axis</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>center</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>data</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>device</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>first</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>isPolled</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>nAxes</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>nButtons</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>needed</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>negative</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>nPovs</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>offset</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>positive</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>state</b> (다음에서 정의됨 : <a class="el" href="structdevice_info.html">deviceInfo</a>)</td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdevice_info.html#aa3139c27b267c0ec8b6f4d96629ee0e2">axis</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdevice_info.html#a06a2e7b32ae7d9ca107f65b56920da72">center</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdevice_info.html#a24db93457c0c8b0c0461e3db1c55ad48">data</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdevice_info.html#a4e2b017b67b850eb267097f95776273f">device</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdevice_info.html#a0bc40134953f30c68ccf0d2d69e67f17">first</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdevice_info.html#a405fccb036e90884fb822c59433c2490">isPolled</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdevice_info.html#a5ceef6ccdfa5c12661b77e036ba91682">nAxes</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdevice_info.html#ad88fd10c7065c35ea68687b9871ebed0">nButtons</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdevice_info.html#a3e85cef35fcad73f9f5fcd75a627ec80">needed</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdevice_info.html#a8131c05a7b3332b266af2aa8f2e6528a">negative</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdevice_info.html#a5554d019728b7dace75256a64411417c">nPovs</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdevice_info.html#a224f64e679eb41aa2c894856d693d57d">offset</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structdevice_info.html#ae4cfa5b3fb76573fdf1e3936373ae47a">positive</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structdevice_info.html#a32e5855cac9794767be03c67be242c01">state</a></td><td class="entry"><a class="el" href="structdevice_info.html">deviceInfo</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

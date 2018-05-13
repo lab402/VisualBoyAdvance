@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_g_b_memory_viewer_dlg.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">GBMemoryViewerDlg 멤버 목록</div>  </div>
@@ -68,38 +92,41 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>AddDialogData</b>() (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>GBMemoryViewerDlg</b>(CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_address</b> (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_addresses</b> (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_current</b> (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_size</b> (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>On16Bit</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>On32Bit</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>On8Bit</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnAutoUpdate</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnClose</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnGo</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnLoad</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnRefresh</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnSave</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnSelchangeAddresses</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnWndMsg</b>(UINT, WPARAM, LPARAM, LRESULT *) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PostNcDestroy</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>ResizeDlg</b>(UINT id, CWnd *parent=NULL) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setCurrentAddress</b>(u32 address) (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>SetData</b>(const DialogSizerSizingItem *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>update</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a>)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>UpdateWindowSize</b>(const int cx, const int cy, HWND) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc">AddDialogData</a>()</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a124868a573da84a7958c38409059bde3">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#ae3507dbe84b33eb4839ba04b706f3bcc">GBMemoryViewerDlg</a>(CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a9817c54337df4c66ab82b7ea720879a2afc6cb593bc0443ee2b8bc010574cb6a5">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#abf9f9d9537192c37806951dc8b1f96c0">m_address</a></td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#af3cb69fc0a793bfb57e2abebbb300e4d">m_addresses</a></td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a6348445a74339561b811824e2698d501">m_current</a></td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a9837ff346b59fb46c6b778a0adf8adf8">m_size</a></td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a52b3f9fedab4314bd634becf88c756a2">On16Bit</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a4e97f32250cfe77d1381fb21eed6daa4">On32Bit</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a3e6f7abe8cf8dbc567d662eb33cf569b">On8Bit</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a7c7da28ae22f8a9f5f8ad3e6bb358949">OnAutoUpdate</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#aff8b13af0ecd94d5ef812dbfcb73728a">OnClose</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#ade5919e22370d16bb0457a79f81d5877">OnGo</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a17f1561370d3e56e71044555399dc8de">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#ac81a1ae7e069e1db594879cddbd7b6d8">OnLoad</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a06c19ee769949ce93010ff891bcac340">OnRefresh</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#abea90b70d9579272367ed561fe796b01">OnSave</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a4e089b7216a76ba514f26f061f53fd8c">OnSelchangeAddresses</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_resize_dlg.html#a9d3f421da2488db11224b0508be654fd">OnWndMsg</a>(UINT, WPARAM, LPARAM, LRESULT *)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a5c0847f6b059bc27ccf18ae85ebe249a">PostNcDestroy</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg</a>(UINT id, CWnd *parent=NULL)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#a9d6e6bf119f77c2b8843800ae5a6df7b">setCurrentAddress</a>(u32 address)</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">SetData</a>(const DialogSizerSizingItem *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html#acb02578600a9ecd38ac653306241089b">update</a>()</td><td class="entry"><a class="el" href="class_g_b_memory_viewer_dlg.html">GBMemoryViewerDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_resize_dlg.html#ae2d0d2b44dd32f668c6d9091b14bfc00">UpdateWindowSize</a>(const int cx, const int cy, HWND)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

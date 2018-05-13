@@ -1,0 +1,28 @@
+<map id="VBA::Config::Section::begin" name="VBA::Config::Section::begin">
+<area shape="rect" id="node2" href="$class_v_b_a_1_1_config_1_1_section.html#a2c189e6a7e47e3c13a4e3eb6aa7f477e" title="VBA::Config::Section\l::bKeyExists" alt="" coords="199,163,344,204"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_config_1_1_section.html#a7ac9dfabf38bc1db83a6017e130f04ac" title="VBA::Config::Section\l::sGetKey" alt="" coords="199,359,344,400"/>
+<area shape="rect" id="node22" href="$class_v_b_a_1_1_config_1_1_section.html#a4634d3e637b664d40ba4d36f859e4573" title="VBA::Config::Section\l::vRemoveKey" alt="" coords="199,740,344,781"/>
+<area shape="rect" id="node23" href="$class_v_b_a_1_1_config_1_1_section.html#afd12017e2b18dd1e1be08dde721a37d0" title="VBA::Config::Section\l::vSetKey" alt="" coords="199,805,344,847"/>
+<area shape="rect" id="node24" href="$class_v_b_a_1_1_config_1_1_section.html#ab169d7aae4e9dde91418ba1668e3ad39" title="VBA::Config::Section\l::oGetKey" alt="" coords="199,675,344,716"/>
+<area shape="rect" id="node3" href="$class_v_b_a_1_1_config_1_1_file.html#ac70f83e5efe3c2d7a66de7227099803b" title="VBA::Config::File::\lvLoad" alt="" coords="428,5,559,47"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="929,442,1087,469"/>
+<area shape="rect" id="node6" href="$class_v_b_a_1_1_window.html#a69ddb41bd29d9f0db04175671ff2e2f4" title="VBA::Window::bLoadROM" alt="" coords="405,645,581,671"/>
+<area shape="rect" id="node10" href="$class_v_b_a_1_1_window.html#a68341ae65a5ec41c6e6269d6f579aa08" title="VBA::Window::vCaptureScreen" alt="" coords="392,71,595,98"/>
+<area shape="rect" id="node14" href="$class_v_b_a_1_1_window.html#a74bd51bc1e0e699d5523ad7828031394" title="VBA::Window::vOnFileLoad" alt="" coords="671,341,853,367"/>
+<area shape="rect" id="node15" href="$class_v_b_a_1_1_window.html#a27bb0ed15cc90758c95eb11fddd14a86" title="VBA::Window::vOnFileSave" alt="" coords="671,391,853,418"/>
+<area shape="rect" id="node16" href="$class_v_b_a_1_1_window.html#aa376015acdd7b7fe83a67bc1306d3553" title="VBA::Window::vOnImportBatteryFile" alt="" coords="646,442,878,469"/>
+<area shape="rect" id="node17" href="$class_v_b_a_1_1_window.html#a26d233092dd624a0bd3734ec0cdc0d7c" title="VBA::Window::vOnExportBatteryFile" alt="" coords="645,493,879,519"/>
+<area shape="rect" id="node18" href="$class_v_b_a_1_1_window.html#ae96308c56cf84f9c56dc97c196adc49c" title="VBA::Window::vOnFileScreen\lCapture" alt="" coords="396,123,591,164"/>
+<area shape="rect" id="node19" href="$class_v_b_a_1_1_window.html#ab0ff6c3b3ac5df7ab482be673ac02732" title="VBA::Window::vOnDirectories" alt="" coords="396,189,591,215"/>
+<area shape="rect" id="node20" href="$class_v_b_a_1_1_window.html#a5d20c67c2118e4a18e97cab4ba111c65" title="VBA::Window::vOnSelectBios" alt="" coords="395,239,591,266"/>
+<area shape="rect" id="node21" href="$class_v_b_a_1_1_window.html#a35c038f07a5ea91103c5e05b82b8bd0b" title="VBA::Window::vOnGDBWait" alt="" coords="399,543,587,570"/>
+<area shape="rect" id="node7" href="$class_v_b_a_1_1_window.html#a8495a133642f2f0428d9487c86c8a231" title="VBA::Window::vOnFileOpen" alt="" coords="669,695,855,722"/>
+<area shape="rect" id="node8" href="$class_v_b_a_1_1_window.html#ab96850739fb7f53a370e6b6f059b87a9" title="VBA::Window::vOnRecentFile" alt="" coords="665,594,859,621"/>
+<area shape="rect" id="node9" href="$class_v_b_a_1_1_window.html#a266811d22fbeb400a01d1c2330fb9877" title="VBA::Window::vOnGDBLoadAndWait" alt="" coords="643,645,881,671"/>
+<area shape="rect" id="node11" href="$_system_8h.html#a81adef9230693f8bca5eed965e5c9d78" title="systemScreenCapture" alt="" coords="687,71,837,98"/>
+<area shape="rect" id="node12" href="$_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="966,71,1050,98"/>
+<area shape="rect" id="node13" href="$class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="1135,71,1303,98"/>
+<area shape="rect" id="node25" href="$class_v_b_a_1_1_window.html#a9a72206ce2e6c13d5bd66863292f9515" title="VBA::Window::vOnJoypadConfigure" alt="" coords="648,746,876,773"/>
+<area shape="rect" id="node26" href="$class_v_b_a_1_1_window.html#a12b2428d319af7010bbc689193f1b801" title="VBA::Window::on_focus\l_in_event" alt="" coords="412,913,575,955"/>
+<area shape="rect" id="node27" href="$class_v_b_a_1_1_window.html#a1153e9927db5e913c4364d507adbfc4b" title="VBA::Window::on_focus\l_out_event" alt="" coords="412,848,575,889"/>
+</map>

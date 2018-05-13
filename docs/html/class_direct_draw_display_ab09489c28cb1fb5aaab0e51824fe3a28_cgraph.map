@@ -1,0 +1,6 @@
+<map id="DirectDrawDisplay::render" name="DirectDrawDisplay::render">
+<area shape="rect" id="node2" href="$display_8cpp.html#af067251fbfac32e8e783daa9587befd8" title="copyImage" alt="" coords="203,5,289,32"/>
+<area shape="rect" id="node3" href="$_text_8cpp.html#a1d0e441a05598dc1c83d0487e5a0fead" title="drawTextTransp" alt="" coords="189,56,303,83"/>
+<area shape="rect" id="node4" href="$_text_8cpp.html#ad1345a6f1db95575b5857ee2654eca47" title="drawText" alt="" coords="209,107,283,133"/>
+<area shape="rect" id="node5" href="$_direct_draw_8cpp.html#aceca31284db939464c9dc0fb15c92786" title="winlog" alt="" coords="217,157,275,184"/>
+</map>

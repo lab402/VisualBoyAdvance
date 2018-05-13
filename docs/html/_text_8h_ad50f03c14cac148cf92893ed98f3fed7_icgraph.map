@@ -1,0 +1,7 @@
+<map id="drawTextTransp" name="drawTextTransp">
+<area shape="rect" id="node2" href="$_s_d_l_8cpp.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="167,31,302,57"/>
+<area shape="rect" id="node5" href="$class_direct_draw_display.html#ab09489c28cb1fb5aaab0e51824fe3a28" title="DirectDrawDisplay::\lrender" alt="" coords="167,82,303,123"/>
+<area shape="rect" id="node6" href="$class_g_d_i_display.html#a7c83b043ba5d2058b8419053615ffabc" title="GDIDisplay::render" alt="" coords="169,148,300,175"/>
+<area shape="rect" id="node3" href="$_s_d_l_8cpp.html#a50d948bf474caba7bfedd641bd5f4e2c" title="sdlWriteState" alt="" coords="351,5,452,32"/>
+<area shape="rect" id="node4" href="$_s_d_l_8cpp.html#a915c860581a6f2a7fa3f0d3ae784e21c" title="sdlReadState" alt="" coords="351,56,451,83"/>
+</map>

@@ -1,0 +1,34 @@
+<map id="C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/VBA.cpp" name="C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/VBA.cpp">
+<area shape="rect" id="node2" href="$stdafx_8h.html" title="stdafx.h" alt="" coords="467,109,535,136"/>
+<area shape="rect" id="node7" href="$resource_8h.html" title="resource.h" alt="" coords="613,259,695,285"/>
+<area shape="rect" id="node13" href="$_system_8h.html" title="../System.h" alt="" coords="823,333,914,360"/>
+<area shape="rect" id="node18" href="$_util_8h.html" title="../Util.h" alt="" coords="719,259,783,285"/>
+<area shape="rect" id="node19" href="$_a_v_i_write_8h.html" title="AVIWrite.h" alt="" coords="1197,109,1282,136"/>
+<area shape="rect" id="node21" href="$_lang_select_8h.html" title="LangSelect.h" alt="" coords="1306,109,1405,136"/>
+<area shape="rect" id="node22" href="$_main_wnd_8h.html" title="MainWnd.h" alt="" coords="1429,109,1517,136"/>
+<area shape="rect" id="node23" href="$_reg_8h.html" title="Reg.h" alt="" coords="1541,109,1597,136"/>
+<area shape="rect" id="node24" href="$resource2_8h.html" title="resource2.h" alt="" coords="1621,109,1711,136"/>
+<area shape="rect" id="node25" href="$skin_8h.html" title="skin.h" alt="" coords="1736,109,1793,136"/>
+<area shape="rect" id="node27" href="$_wav_writer_8h.html" title="WavWriter.h" alt="" coords="1818,109,1911,136"/>
+<area shape="rect" id="node29" href="$_win_res_util_8h.html" title="WinResUtil.h" alt="" coords="1935,109,2034,136"/>
+<area shape="rect" id="node30" href="$agbprint_8h.html" title="../agbprint.h" alt="" coords="2058,109,2149,136"/>
+<area shape="rect" id="node31" href="$_cheat_search_8h.html" title="../cheatSearch.h" alt="" coords="859,259,977,285"/>
+<area shape="rect" id="node32" href="$_g_b_a_8h.html" title="../GBA.h" alt="" coords="1048,109,1121,136"/>
+<area shape="rect" id="node34" href="$_globals_8h.html" title="Globals.h" alt="" coords="1358,184,1435,211"/>
+<area shape="rect" id="node37" href="$_r_t_c_8h.html" title="../RTC.h" alt="" coords="2173,109,2244,136"/>
+<area shape="rect" id="node38" href="$_sound_8h.html" title="../Sound.h" alt="" coords="1002,259,1085,285"/>
+<area shape="rect" id="node39" href="$gb_globals_8h.html" title="../gb/gbGlobals.h" alt="" coords="2268,109,2389,136"/>
+<area shape="rect" id="node40" href="$gb_printer_8h.html" title="../gb/gbPrinter.h" alt="" coords="2414,109,2529,136"/>
+<area shape="rect" id="node6" href="$_v_b_a_8h.html" title="VBA.h" alt="" coords="424,184,484,211"/>
+<area shape="rect" id="node8" href="$_accelerator_manager_8h.html" title="AcceleratorManager.h" alt="" coords="101,259,250,285"/>
+<area shape="rect" id="node11" href="$_display_8h.html" title="Display.h" alt="" coords="275,259,351,285"/>
+<area shape="rect" id="node12" href="$win32_2input_8h.html" title="Input.h" alt="" coords="426,259,487,285"/>
+<area shape="rect" id="node16" href="$_i_update_8h.html" title="IUpdate.h" alt="" coords="511,259,589,285"/>
+<area shape="rect" id="node17" href="$win32_2_sound_8h.html" title="Sound.h" alt="" coords="5,259,76,285"/>
+<area shape="rect" id="node9" href="$_cmd_accel_ob_8h.html" title="CmdAccelOb.h" alt="" coords="167,333,277,360"/>
+<area shape="rect" id="node14" href="$unzip_8h.html" title="unzip.h" alt="" coords="837,408,901,435"/>
+<area shape="rect" id="node26" href="$skin_button_8h.html" title="skinButton.h" alt="" coords="1713,184,1808,211"/>
+<area shape="rect" id="node33" href="$_cheats_8h.html" title="Cheats.h" alt="" coords="1155,184,1230,211"/>
+<area shape="rect" id="node35" href="$_e_eprom_8h.html" title="EEprom.h" alt="" coords="1254,184,1334,211"/>
+<area shape="rect" id="node36" href="$_flash_8h.html" title="Flash.h" alt="" coords="1015,184,1080,211"/>
+</map>

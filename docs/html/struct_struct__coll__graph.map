@@ -1,0 +1,10 @@
+<map id="Struct" name="Struct">
+<area shape="rect" id="node4" href="$struct_type.html" title="{Type\n|+ offset\l+ type\l+ name\l+ encoding\l+ size\l+ bitSize\l+ @5\l|}" alt="" coords="323,300,410,465"/>
+<area shape="rect" id="node2" href="$struct_member.html" title="{Member\n|+ name\l+ bitSize\l+ bitOffset\l+ byteSize\l|}" alt="" coords="12,543,97,664"/>
+<area shape="rect" id="node3" href="$struct_e_l_f_block.html" title="{ELFBlock\n|+ length\l+ data\l|}" alt="" coords="103,337,182,429"/>
+<area shape="rect" id="node7" href="$struct_object.html" title="{Object\n|+ name\l+ file\l+ line\l+ external\l+ startScope\l+ endScope\l|}" alt="" coords="162,528,259,679"/>
+<area shape="rect" id="node5" href="$struct_array.html" title="{Array\n|+ maxBounds\l+ bounds\l|}" alt="" coords="344,557,447,649"/>
+<area shape="rect" id="node6" href="$struct_function_type.html" title="{FunctionType\n||}" alt="" coords="446,741,546,819"/>
+<area shape="rect" id="node8" href="$struct_enum.html" title="{Enum\n|+ count\l|}" alt="" coords="333,160,400,237"/>
+<area shape="rect" id="node9" href="$struct_enum_member.html" title="{EnumMember\n|+ name\l+ value\l|}" alt="" coords="315,5,418,97"/>
+</map>

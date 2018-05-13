@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_motion_config.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">MotionConfig 멤버 목록</div>  </div>
@@ -68,27 +92,30 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_motion_config.html">MotionConfig</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>assignKey</b>(int id, LONG_PTR key) (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>assignKeys</b>() (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>down</b> (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>left</b> (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>MotionConfig</b>(CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnCancel</b>() (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnDestroy</b>() (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnKeyDown</b>(UINT nChar, UINT nRepCnt, UINT nFlags) (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnOk</b>() (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnTimer</b>(UINT_PTR nIDEvent) (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>right</b> (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>up</b> (다음에서 정의됨 : <a class="el" href="class_motion_config.html">MotionConfig</a>)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef">assignKey</a>(int id, LONG_PTR key)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_motion_config.html#a73d6bc239e8abd59b68f23ddaaf6daf4">assignKeys</a>()</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_motion_config.html#a1f27a900666b5c804f255f39b32d5dfd">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">down</a></td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_motion_config.html#a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">left</a></td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_motion_config.html#a005e9fbe2d6a2d783a48e1bc3b6aa27e">MotionConfig</a>(CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_motion_config.html#a3b2f649ce95dfb9f6b1efb8c7d8c9213">OnCancel</a>()</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_motion_config.html#a45547ed24ce1f7fdabd5754ec526d0a9">OnDestroy</a>()</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_motion_config.html#ac1e282a94d14b433764eeae95b4cab6b">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_motion_config.html#a210354b3272911c9ed7507c7262243f1">OnKeyDown</a>(UINT nChar, UINT nRepCnt, UINT nFlags)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_motion_config.html#a252355cb318ff1f62c63d89941b2758e">OnOk</a>()</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_motion_config.html#ac787a62c63e00f55582bb4695bbd04d6">OnTimer</a>(UINT_PTR nIDEvent)</td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">right</a></td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">up</a></td><td class="entry"><a class="el" href="class_motion_config.html">MotionConfig</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,8 @@
+<map id="gbSgbMaskEnable" name="gbSgbMaskEnable">
+<area shape="rect" id="node2" href="$gb_s_g_b_8cpp.html#ae32c1827b3f9c9a897a3249e72697a7b" title="gbSgbFillScreen" alt="" coords="385,31,503,57"/>
+<area shape="rect" id="node6" href="$gb_s_g_b_8cpp.html#af317983dce6743159185981f1f84e782" title="gbSgbRenderBorder" alt="" coords="184,81,323,108"/>
+<area shape="rect" id="node3" href="$gb_s_g_b_8cpp.html#ac6d5b63346d3bf8cabc8821a7748f93c" title="gbSgbDraw16Bit" alt="" coords="565,5,684,32"/>
+<area shape="rect" id="node4" href="$gb_s_g_b_8cpp.html#a1aea036b2948a760a356a9f3073cfeee" title="gbSgbDraw24Bit" alt="" coords="565,56,684,83"/>
+<area shape="rect" id="node5" href="$gb_s_g_b_8cpp.html#a392dff285bf3fecb8e2bbd0f64fdf0de" title="gbSgbDraw32Bit" alt="" coords="565,107,684,133"/>
+<area shape="rect" id="node7" href="$gb_s_g_b_8cpp.html#aeb7b2d01545ddcbcb89db687a815d0f5" title="gbSgbDrawBorderTile" alt="" coords="371,81,517,108"/>
+</map>

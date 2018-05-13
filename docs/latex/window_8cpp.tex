@@ -1,0 +1,403 @@
+\hypertarget{window_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gtk/window.cpp 파일 참조}
+\label{window_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gtk/window.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gtk/window.\+cpp}}
+{\ttfamily \#include \char`\"{}window.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gb/\+G\+B.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gb/gb\+Globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gb/gb\+Printer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Sound.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}menuitem.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}tools.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}intl.\+h\char`\"{}}\newline
+window.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{window_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_v_b_a}{V\+BA}}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{window_8cpp_a9f014181ce9f2daee148f90876f6b86a}{remote\+Init}} ()
+\item 
+void \mbox{\hyperlink{window_8cpp_ad472decd8f1a11c276d8bfb3740bd8ec}{remote\+Clean\+Up}} ()
+\item 
+void \mbox{\hyperlink{window_8cpp_a3fc86793182abde32b75da7885cb7337}{remote\+Stub\+Main}} ()
+\item 
+void \mbox{\hyperlink{window_8cpp_a5309cd8c07c439a8edfa790743175a19}{remote\+Stub\+Signal}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+void \mbox{\hyperlink{window_8cpp_a2e3d3e94a2ed5eb4ad78a320f24ca743}{remote\+Output}} (char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})
+\item 
+void \mbox{\hyperlink{window_8cpp_ae12004b9afc1b49d9f40d3efb5862c81}{remote\+Set\+Protocol}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+void \mbox{\hyperlink{window_8cpp_a0753bdc2e948e3b0bf452e8183c74dfd}{remote\+Set\+Port}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{window_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}{system\+Rendered\+Frames}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{window_8cpp_a1ab370d42d7c840823753c8d6ff0717e}{system\+F\+PS}}
+\item 
+bool \mbox{\hyperlink{window_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{window_8cpp_adc95249f4e7f061627835e49b2cf5210}{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}}
+\item 
+void($\ast$ \mbox{\hyperlink{window_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}{dbg\+Main}} )()
+\item 
+void($\ast$ \mbox{\hyperlink{window_8cpp_aaa0130c668d61033a5012af849b1fead}{dbg\+Signal}} )(\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+void($\ast$ \mbox{\hyperlink{window_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}{dbg\+Output}} )(char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{window_8cpp_ad472decd8f1a11c276d8bfb3740bd8ec}\label{window_8cpp_ad472decd8f1a11c276d8bfb3740bd8ec}} 
+\index{window.\+cpp@{window.\+cpp}!remote\+Clean\+Up@{remote\+Clean\+Up}}
+\index{remote\+Clean\+Up@{remote\+Clean\+Up}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Clean\+Up()}{remoteCleanUp()}}
+{\footnotesize\ttfamily void remote\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 695 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+696 \{
+697   \textcolor{keywordflow}{if}(\mbox{\hyperlink{remote_8cpp_a8b47a61ef4a04597c16570307653bfaa}{remoteCleanUpFnc}})
+698     \mbox{\hyperlink{remote_8cpp_a8b47a61ef4a04597c16570307653bfaa}{remoteCleanUpFnc}}();
+699 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{window_8cpp_a9f014181ce9f2daee148f90876f6b86a}\label{window_8cpp_a9f014181ce9f2daee148f90876f6b86a}} 
+\index{window.\+cpp@{window.\+cpp}!remote\+Init@{remote\+Init}}
+\index{remote\+Init@{remote\+Init}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Init()}{remoteInit()}}
+{\footnotesize\ttfamily void remote\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 223 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+224 \{
+225   \textcolor{keywordflow}{if}(\mbox{\hyperlink{remote_8cpp_ae3ddfb7b5069325e5fa15294e5896001}{remoteInitFnc}})
+226     \mbox{\hyperlink{remote_8cpp_ae3ddfb7b5069325e5fa15294e5896001}{remoteInitFnc}}();
+227 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{window_8cpp_a2e3d3e94a2ed5eb4ad78a320f24ca743}\label{window_8cpp_a2e3d3e94a2ed5eb4ad78a320f24ca743}} 
+\index{window.\+cpp@{window.\+cpp}!remote\+Output@{remote\+Output}}
+\index{remote\+Output@{remote\+Output}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Output()}{remoteOutput()}}
+{\footnotesize\ttfamily void remote\+Output (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 280 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+281 \{
+282   \textcolor{keywordtype}{char} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}[16384];
+283 
+284   \textcolor{keywordtype}{char} *d = \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+285   *d++ = \textcolor{charliteral}{'O'};
+286   
+287   \textcolor{keywordflow}{if}(s) \{
+288     \textcolor{keywordtype}{char} c = *s++;
+289     \textcolor{keywordflow}{while}(c) \{
+290       sprintf(d, \textcolor{stringliteral}{"%02x"}, c);
+291       d += 2;
+292       c = *s++;
+293     \}
+294   \} \textcolor{keywordflow}{else} \{
+295     \textcolor{keywordtype}{char} c= \mbox{\hyperlink{remote_8cpp_a188015cef02393d35ef21ba66274bedb}{debuggerReadByte}}(addr);
+296     addr++;
+297     \textcolor{keywordflow}{while}(c) \{
+298       sprintf(d, \textcolor{stringliteral}{"%02x"}, c);
+299       d += 2;
+300       c = \mbox{\hyperlink{remote_8cpp_a188015cef02393d35ef21ba66274bedb}{debuggerReadByte}}(addr);
+301       addr++;
+302     \}
+303   \}
+304   \mbox{\hyperlink{remote_8cpp_a81762106aecfb89930ba4e1167fa707b}{remotePutPacket}}(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+305   \textcolor{comment}{//  fprintf(stderr, "Output sent %s\(\backslash\)n", buffer);}
+306 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{window_8cpp_a0753bdc2e948e3b0bf452e8183c74dfd}\label{window_8cpp_a0753bdc2e948e3b0bf452e8183c74dfd}} 
+\index{window.\+cpp@{window.\+cpp}!remote\+Set\+Port@{remote\+Set\+Port}}
+\index{remote\+Set\+Port@{remote\+Set\+Port}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Set\+Port()}{remoteSetPort()}}
+{\footnotesize\ttfamily void remote\+Set\+Port (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 203 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+204 \{
+205   \mbox{\hyperlink{remote_8cpp_ac1516adfacc81febfec6649c436ef48a}{remotePort}} = port;
+206 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{window_8cpp_ae12004b9afc1b49d9f40d3efb5862c81}\label{window_8cpp_ae12004b9afc1b49d9f40d3efb5862c81}} 
+\index{window.\+cpp@{window.\+cpp}!remote\+Set\+Protocol@{remote\+Set\+Protocol}}
+\index{remote\+Set\+Protocol@{remote\+Set\+Protocol}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Set\+Protocol()}{remoteSetProtocol()}}
+{\footnotesize\ttfamily void remote\+Set\+Protocol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 208 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+209 \{
+210   \textcolor{keywordflow}{if}(p == 0) \{
+211     \mbox{\hyperlink{remote_8cpp_a0cd5c838f10a8a30bb031a2099240d14}{remoteSendFnc}} = \mbox{\hyperlink{remote_8cpp_acd199a54f4a8761ea81a181ebc1086d8}{remoteTcpSend}};
+212     \mbox{\hyperlink{remote_8cpp_a368aeed3847bc048b8674ee0bcb41b0d}{remoteRecvFnc}} = \mbox{\hyperlink{remote_8cpp_a67adc9ae86fefaa9026c97a35a175b61}{remoteTcpRecv}};
+213     \mbox{\hyperlink{remote_8cpp_ae3ddfb7b5069325e5fa15294e5896001}{remoteInitFnc}} = \mbox{\hyperlink{remote_8cpp_a1a2754237d66e4d85d1223a4f2e806e5}{remoteTcpInit}};
+214     \mbox{\hyperlink{remote_8cpp_a8b47a61ef4a04597c16570307653bfaa}{remoteCleanUpFnc}} = \mbox{\hyperlink{remote_8cpp_ac32da3e5706a2aec3cdaa3e05d939234}{remoteTcpCleanUp}};
+215   \} \textcolor{keywordflow}{else} \{
+216     \mbox{\hyperlink{remote_8cpp_a0cd5c838f10a8a30bb031a2099240d14}{remoteSendFnc}} = \mbox{\hyperlink{remote_8cpp_a52093b8cfb3b5128f0442a478f6c7b73}{remotePipeSend}};
+217     \mbox{\hyperlink{remote_8cpp_a368aeed3847bc048b8674ee0bcb41b0d}{remoteRecvFnc}} = \mbox{\hyperlink{remote_8cpp_a388eaec68932978af9249b3f8f2c5111}{remotePipeRecv}};
+218     \mbox{\hyperlink{remote_8cpp_ae3ddfb7b5069325e5fa15294e5896001}{remoteInitFnc}} = \mbox{\hyperlink{remote_8cpp_a6d202e08314e8abe6b842ef95e9af1a9}{remotePipeInit}};
+219     \mbox{\hyperlink{remote_8cpp_a8b47a61ef4a04597c16570307653bfaa}{remoteCleanUpFnc}} = \mbox{\hyperlink{remote_8cpp_a35ea11a64d6aa80068edaec71efd4bfb}{remotePipeCleanUp}};    
+220   \}
+221 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{window_8cpp_a3fc86793182abde32b75da7885cb7337}\label{window_8cpp_a3fc86793182abde32b75da7885cb7337}} 
+\index{window.\+cpp@{window.\+cpp}!remote\+Stub\+Main@{remote\+Stub\+Main}}
+\index{remote\+Stub\+Main@{remote\+Stub\+Main}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Stub\+Main()}{remoteStubMain()}}
+{\footnotesize\ttfamily void remote\+Stub\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 568 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+569 \{
+570   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{remote_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}})
+571     \textcolor{keywordflow}{return};
+572 
+573   \textcolor{keywordflow}{if}(\mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}}) \{
+574     \mbox{\hyperlink{remote_8cpp_a10da286ad7e1f3a23321ecb350790632}{remoteSendStatus}}();
+575     \mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}} = \textcolor{keyword}{false};
+576   \}
+577   
+578   \textcolor{keywordflow}{while}(1) \{
+579     \textcolor{keywordtype}{char} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}[1024];
+580     \textcolor{keywordtype}{int} res = \mbox{\hyperlink{remote_8cpp_a368aeed3847bc048b8674ee0bcb41b0d}{remoteRecvFnc}}(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, 1024);
+581     
+582     \textcolor{keywordflow}{if}(res == -1) \{
+583       fprintf(stderr, \textcolor{stringliteral}{"GDB connection lost\(\backslash\)n"});
+584 \textcolor{preprocessor}{#ifdef SDL}
+585       \mbox{\hyperlink{system_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}{dbgMain}} = \mbox{\hyperlink{system_8cpp_a1070cb2c9d3d47b8d468cd78d3433468}{debuggerMain}};
+586       \mbox{\hyperlink{system_8cpp_aaa0130c668d61033a5012af849b1fead}{dbgSignal}} = \mbox{\hyperlink{system_8cpp_a03f1aa69b417ab50a498a95738d2eeb5}{debuggerSignal}};
+587 \textcolor{preprocessor}{#endif}
+588       \mbox{\hyperlink{remote_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}} = \textcolor{keyword}{false};
+589       \textcolor{keywordflow}{break};
+590     \}
+591 
+592     \textcolor{comment}{//    fprintf(stderr, "Received %s\(\backslash\)n", buffer);}
+593     \textcolor{keywordtype}{char} *p = \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+594     \textcolor{keywordtype}{char} c = *p++;
+595     \textcolor{keywordtype}{char} pp = \textcolor{charliteral}{'+'};
+596     \mbox{\hyperlink{remote_8cpp_a0cd5c838f10a8a30bb031a2099240d14}{remoteSendFnc}}(&pp, 1);
+597 
+598     \textcolor{keywordflow}{if}(c != \textcolor{charliteral}{'$'})
+599       \textcolor{keywordflow}{continue};
+600     c= *p++;
+601     \textcolor{keywordflow}{switch}(c) \{
+602     \textcolor{keywordflow}{case} \textcolor{charliteral}{'?'}:
+603       \mbox{\hyperlink{remote_8cpp_a24235adffe0138858ef6522c74936db5}{remoteSendSignal}}();
+604       \textcolor{keywordflow}{break};
+605     \textcolor{keywordflow}{case} \textcolor{charliteral}{'D'}:
+606       \mbox{\hyperlink{remote_8cpp_a81762106aecfb89930ba4e1167fa707b}{remotePutPacket}}(\textcolor{stringliteral}{"OK"});
+607 \textcolor{preprocessor}{#ifdef SDL}
+608       \mbox{\hyperlink{system_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}{dbgMain}} = \mbox{\hyperlink{system_8cpp_a1070cb2c9d3d47b8d468cd78d3433468}{debuggerMain}};
+609       \mbox{\hyperlink{system_8cpp_aaa0130c668d61033a5012af849b1fead}{dbgSignal}} = \mbox{\hyperlink{system_8cpp_a03f1aa69b417ab50a498a95738d2eeb5}{debuggerSignal}};
+610 \textcolor{preprocessor}{#endif}
+611       \mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}} = \textcolor{keyword}{true};
+612       \mbox{\hyperlink{remote_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}} = \textcolor{keyword}{false};
+613       \textcolor{keywordflow}{return};
+614     \textcolor{keywordflow}{case} \textcolor{charliteral}{'e'}:
+615       \mbox{\hyperlink{remote_8cpp_a2a3582d89ee0431494a63172d29b92b7}{remoteStepOverRange}}(p);
+616       \textcolor{keywordflow}{break};
+617     \textcolor{keywordflow}{case} \textcolor{charliteral}{'k'}:
+618       \mbox{\hyperlink{remote_8cpp_a81762106aecfb89930ba4e1167fa707b}{remotePutPacket}}(\textcolor{stringliteral}{"OK"});
+619 \textcolor{preprocessor}{#ifdef SDL}
+620       \mbox{\hyperlink{system_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}{dbgMain}} = \mbox{\hyperlink{system_8cpp_a1070cb2c9d3d47b8d468cd78d3433468}{debuggerMain}};
+621       \mbox{\hyperlink{system_8cpp_aaa0130c668d61033a5012af849b1fead}{dbgSignal}} = \mbox{\hyperlink{system_8cpp_a03f1aa69b417ab50a498a95738d2eeb5}{debuggerSignal}};
+622 \textcolor{preprocessor}{#endif}
+623       \mbox{\hyperlink{remote_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}} = \textcolor{keyword}{false};
+624       \mbox{\hyperlink{remote_8cpp_af9cc36078b1b311753963297ae7f2a74}{emulating}} = \textcolor{keyword}{false};
+625       \textcolor{keywordflow}{return};
+626     \textcolor{keywordflow}{case} \textcolor{charliteral}{'C'}:
+627       \mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}} = \textcolor{keyword}{true};
+628       \mbox{\hyperlink{remote_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}} = \textcolor{keyword}{false};
+629       \textcolor{keywordflow}{return};
+630     \textcolor{keywordflow}{case} \textcolor{charliteral}{'c'}:
+631       \mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}} = \textcolor{keyword}{true};
+632       \mbox{\hyperlink{remote_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}} = \textcolor{keyword}{false};
+633       \textcolor{keywordflow}{return};
+634     \textcolor{keywordflow}{case} \textcolor{charliteral}{'s'}:
+635       \mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}} = \textcolor{keyword}{true};
+636       \mbox{\hyperlink{remote_8cpp_aafaa594e0091ce6315ba02745484dbd3}{remoteSignal}} = 5;
+637       \mbox{\hyperlink{_g_b_a_8cpp_a4b7cf35cc5b9d6e9a65dad93a9a0d918}{CPULoop}}(1);
+638       \textcolor{keywordflow}{if}(\mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}}) \{
+639         \mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}} = \textcolor{keyword}{false};
+640         \mbox{\hyperlink{remote_8cpp_a10da286ad7e1f3a23321ecb350790632}{remoteSendStatus}}();
+641       \}
+642       \textcolor{keywordflow}{break};
+643     \textcolor{keywordflow}{case} \textcolor{charliteral}{'g'}:
+644       \mbox{\hyperlink{remote_8cpp_a05e72d5a52d6e6ea14536f17042cbf13}{remoteReadRegisters}}(p);
+645       \textcolor{keywordflow}{break};
+646     \textcolor{keywordflow}{case} \textcolor{charliteral}{'P'}:
+647       \mbox{\hyperlink{remote_8cpp_ab82be9d3951d0d33bb3d86a302fcfda7}{remoteWriteRegister}}(p);
+648       \textcolor{keywordflow}{break};
+649     \textcolor{keywordflow}{case} \textcolor{charliteral}{'M'}:
+650       \mbox{\hyperlink{remote_8cpp_a26ac0e70fdeb38e5edf448380676b158}{remoteMemoryWrite}}(p);
+651       \textcolor{keywordflow}{break};
+652     \textcolor{keywordflow}{case} \textcolor{charliteral}{'m'}:
+653       \mbox{\hyperlink{remote_8cpp_acfadaff4b66fe22811b9364c889bca53}{remoteMemoryRead}}(p);
+654       \textcolor{keywordflow}{break};
+655     \textcolor{keywordflow}{case} \textcolor{charliteral}{'X'}:
+656       \mbox{\hyperlink{remote_8cpp_a972db5062e0f189ab38c26977a056c21}{remoteBinaryWrite}}(p);
+657       \textcolor{keywordflow}{break};
+658     \textcolor{keywordflow}{case} \textcolor{charliteral}{'H'}:
+659       \mbox{\hyperlink{remote_8cpp_a81762106aecfb89930ba4e1167fa707b}{remotePutPacket}}(\textcolor{stringliteral}{"OK"});
+660       \textcolor{keywordflow}{break};
+661     \textcolor{keywordflow}{case} \textcolor{charliteral}{'q'}:
+662       \mbox{\hyperlink{remote_8cpp_a81762106aecfb89930ba4e1167fa707b}{remotePutPacket}}(\textcolor{stringliteral}{""});
+663       \textcolor{keywordflow}{break};
+664     \textcolor{keywordflow}{case} \textcolor{charliteral}{'Z'}:
+665       \textcolor{keywordflow}{if}(*p++ == \textcolor{charliteral}{'2'}) \{
+666         \mbox{\hyperlink{remote_8cpp_aede3a4f42394a87ac92207e75e393a2f}{remoteWriteWatch}}(p, \textcolor{keyword}{true});
+667       \} \textcolor{keywordflow}{else}
+668         \mbox{\hyperlink{remote_8cpp_a81762106aecfb89930ba4e1167fa707b}{remotePutPacket}}(\textcolor{stringliteral}{""});
+669       \textcolor{keywordflow}{break};
+670     \textcolor{keywordflow}{case} \textcolor{charliteral}{'z'}:
+671       \textcolor{keywordflow}{if}(*p++ == \textcolor{charliteral}{'2'}) \{
+672     \mbox{\hyperlink{remote_8cpp_aede3a4f42394a87ac92207e75e393a2f}{remoteWriteWatch}}(p, \textcolor{keyword}{false});
+673       \} \textcolor{keywordflow}{else}
+674     \mbox{\hyperlink{remote_8cpp_a81762106aecfb89930ba4e1167fa707b}{remotePutPacket}}(\textcolor{stringliteral}{""});
+675       \textcolor{keywordflow}{break};
+676     \textcolor{keywordflow}{default}:
+677       \{
+678         *(strchr(p, \textcolor{charliteral}{'#'}) + 3) = 0;      
+679         fprintf(stderr, \textcolor{stringliteral}{"Unknown packet %s\(\backslash\)n"}, --p);
+680         \mbox{\hyperlink{remote_8cpp_a81762106aecfb89930ba4e1167fa707b}{remotePutPacket}}(\textcolor{stringliteral}{""});
+681       \}
+682       \textcolor{keywordflow}{break};
+683     \}
+684   \}    
+685 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{window_8cpp_a5309cd8c07c439a8edfa790743175a19}\label{window_8cpp_a5309cd8c07c439a8edfa790743175a19}} 
+\index{window.\+cpp@{window.\+cpp}!remote\+Stub\+Signal@{remote\+Stub\+Signal}}
+\index{remote\+Stub\+Signal@{remote\+Stub\+Signal}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Stub\+Signal()}{remoteStubSignal()}}
+{\footnotesize\ttfamily void remote\+Stub\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 687 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+688 \{
+689   \mbox{\hyperlink{remote_8cpp_aafaa594e0091ce6315ba02745484dbd3}{remoteSignal}} = sig;
+690   \mbox{\hyperlink{remote_8cpp_a6702c65c9ba0fd03fa64b36a8192c02b}{remoteResumed}} = \textcolor{keyword}{false};
+691   \mbox{\hyperlink{remote_8cpp_a10da286ad7e1f3a23321ecb350790632}{remoteSendStatus}}();
+692   \mbox{\hyperlink{remote_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}} = \textcolor{keyword}{true};
+693 \}
+\end{DoxyCode}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{window_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}\label{window_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}} 
+\index{window.\+cpp@{window.\+cpp}!dbg\+Main@{dbg\+Main}}
+\index{dbg\+Main@{dbg\+Main}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{dbg\+Main}{dbgMain}}
+{\footnotesize\ttfamily void($\ast$ dbg\+Main) ()}
+
+
+
+system.\+cpp 파일의 345 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{window_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}\label{window_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}} 
+\index{window.\+cpp@{window.\+cpp}!dbg\+Output@{dbg\+Output}}
+\index{dbg\+Output@{dbg\+Output}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{dbg\+Output}{dbgOutput}}
+{\footnotesize\ttfamily void($\ast$ dbg\+Output) (char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})}
+
+
+
+system.\+cpp 파일의 347 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{window_8cpp_aaa0130c668d61033a5012af849b1fead}\label{window_8cpp_aaa0130c668d61033a5012af849b1fead}} 
+\index{window.\+cpp@{window.\+cpp}!dbg\+Signal@{dbg\+Signal}}
+\index{dbg\+Signal@{dbg\+Signal}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{dbg\+Signal}{dbgSignal}}
+{\footnotesize\ttfamily void($\ast$ dbg\+Signal) (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})}
+
+
+
+system.\+cpp 파일의 346 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{window_8cpp_af67e2df4c66ef114f4edb85c06810007}\label{window_8cpp_af67e2df4c66ef114f4edb85c06810007}} 
+\index{window.\+cpp@{window.\+cpp}!debugger@{debugger}}
+\index{debugger@{debugger}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{debugger}{debugger}}
+{\footnotesize\ttfamily bool debugger}
+
+
+
+system.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{window_8cpp_adc95249f4e7f061627835e49b2cf5210}\label{window_8cpp_adc95249f4e7f061627835e49b2cf5210}} 
+\index{window.\+cpp@{window.\+cpp}!R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK@{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}}
+\index{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK@{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}{RGB\_LOW\_BITS\_MASK}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}
+
+
+
+system.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{window_8cpp_a1ab370d42d7c840823753c8d6ff0717e}\label{window_8cpp_a1ab370d42d7c840823753c8d6ff0717e}} 
+\index{window.\+cpp@{window.\+cpp}!system\+F\+PS@{system\+F\+PS}}
+\index{system\+F\+PS@{system\+F\+PS}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{system\+F\+PS}{systemFPS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+F\+PS}
+
+
+
+system.\+cpp 파일의 57 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{window_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}\label{window_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}} 
+\index{window.\+cpp@{window.\+cpp}!system\+Rendered\+Frames@{system\+Rendered\+Frames}}
+\index{system\+Rendered\+Frames@{system\+Rendered\+Frames}!window.\+cpp@{window.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Rendered\+Frames}{systemRenderedFrames}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Rendered\+Frames}
+
+
+
+system.\+cpp 파일의 56 번째 라인에서 정의되었습니다.
+

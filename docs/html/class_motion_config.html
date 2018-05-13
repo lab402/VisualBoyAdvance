@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_motion_config.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,82 +95,547 @@ $(function() {
 <div class="title">MotionConfig 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_joypad_8h_source.html">Joypad.h</a>&gt;</code></p>
 <div class="dynheader">
 MotionConfig에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_motion_config.png" usemap="#MotionConfig_map" alt=""/>
-  <map id="MotionConfig_map" name="MotionConfig_map">
+<div class="center"><img src="class_motion_config__inherit__graph.png" border="0" usemap="#_motion_config_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+MotionConfig에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_config__coll__graph.png" border="0" usemap="#_motion_config_coll__map" alt="Collaboration graph"/></div>
+<map name="_motion_config_coll__map" id="_motion_config_coll__map">
+<area shape="rect" id="node3" href="class_joypad_edit_control.html" title="{JoypadEditControl\n||+ JoypadEditControl()\l+ PreTranslateMessage()\l+ OnJoyConfig()\l+ ~JoypadEditControl()\l}" alt="" coords="96,132,264,253"/>
 </map>
- </div></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:a8d6ecd105518fc0b880fdd120583c743"><td class="memItemLeft" align="right" valign="top"><a id="a8d6ecd105518fc0b880fdd120583c743"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_MOTION_CONFIG
+<tr class="memitem:a8d6ecd105518fc0b880fdd120583c743"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_motion_config.html#a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a">IDD</a> = IDD_MOTION_CONFIG
  }</td></tr>
 <tr class="separator:a8d6ecd105518fc0b880fdd120583c743"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a73d6bc239e8abd59b68f23ddaaf6daf4"><td class="memItemLeft" align="right" valign="top"><a id="a73d6bc239e8abd59b68f23ddaaf6daf4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>assignKeys</b> ()</td></tr>
+<tr class="memitem:a73d6bc239e8abd59b68f23ddaaf6daf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a73d6bc239e8abd59b68f23ddaaf6daf4">assignKeys</a> ()</td></tr>
 <tr class="separator:a73d6bc239e8abd59b68f23ddaaf6daf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50d94176c92cf39ca894892a0b3bf2ef"><td class="memItemLeft" align="right" valign="top"><a id="a50d94176c92cf39ca894892a0b3bf2ef"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>assignKey</b> (int id, LONG_PTR key)</td></tr>
+<tr class="memitem:a50d94176c92cf39ca894892a0b3bf2ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef">assignKey</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> <a class="el" href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a>, LONG_PTR key)</td></tr>
 <tr class="separator:a50d94176c92cf39ca894892a0b3bf2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a005e9fbe2d6a2d783a48e1bc3b6aa27e"><td class="memItemLeft" align="right" valign="top"><a id="a005e9fbe2d6a2d783a48e1bc3b6aa27e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>MotionConfig</b> (CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:a005e9fbe2d6a2d783a48e1bc3b6aa27e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a005e9fbe2d6a2d783a48e1bc3b6aa27e">MotionConfig</a> (CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:a005e9fbe2d6a2d783a48e1bc3b6aa27e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a44c25ec4fbd230d6fe19416d8c280157"><td class="memItemLeft" align="right" valign="top"><a id="a44c25ec4fbd230d6fe19416d8c280157"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>up</b></td></tr>
+<tr class="memitem:a44c25ec4fbd230d6fe19416d8c280157"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">up</a></td></tr>
 <tr class="separator:a44c25ec4fbd230d6fe19416d8c280157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9203bef30efdd067ea44d1f7cded8dc"><td class="memItemLeft" align="right" valign="top"><a id="ae9203bef30efdd067ea44d1f7cded8dc"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>right</b></td></tr>
+<tr class="memitem:ae9203bef30efdd067ea44d1f7cded8dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">right</a></td></tr>
 <tr class="separator:ae9203bef30efdd067ea44d1f7cded8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a634ed163b30d08aceb8573542ee7fc07"><td class="memItemLeft" align="right" valign="top"><a id="a634ed163b30d08aceb8573542ee7fc07"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>left</b></td></tr>
+<tr class="memitem:a634ed163b30d08aceb8573542ee7fc07"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">left</a></td></tr>
 <tr class="separator:a634ed163b30d08aceb8573542ee7fc07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fd0b825d61a2959b3dd20ea3c0fb9ad"><td class="memItemLeft" align="right" valign="top"><a id="a0fd0b825d61a2959b3dd20ea3c0fb9ad"></a>
-<a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><b>down</b></td></tr>
+<tr class="memitem:a0fd0b825d61a2959b3dd20ea3c0fb9ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">down</a></td></tr>
 <tr class="separator:a0fd0b825d61a2959b3dd20ea3c0fb9ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a1f27a900666b5c804f255f39b32d5dfd"><td class="memItemLeft" align="right" valign="top"><a id="a1f27a900666b5c804f255f39b32d5dfd"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a1f27a900666b5c804f255f39b32d5dfd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a1f27a900666b5c804f255f39b32d5dfd">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a1f27a900666b5c804f255f39b32d5dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b2f649ce95dfb9f6b1efb8c7d8c9213"><td class="memItemLeft" align="right" valign="top"><a id="a3b2f649ce95dfb9f6b1efb8c7d8c9213"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCancel</b> ()</td></tr>
+<tr class="memitem:a3b2f649ce95dfb9f6b1efb8c7d8c9213"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a3b2f649ce95dfb9f6b1efb8c7d8c9213">OnCancel</a> ()</td></tr>
 <tr class="separator:a3b2f649ce95dfb9f6b1efb8c7d8c9213"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a252355cb318ff1f62c63d89941b2758e"><td class="memItemLeft" align="right" valign="top"><a id="a252355cb318ff1f62c63d89941b2758e"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOk</b> ()</td></tr>
+<tr class="memitem:a252355cb318ff1f62c63d89941b2758e"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a252355cb318ff1f62c63d89941b2758e">OnOk</a> ()</td></tr>
 <tr class="separator:a252355cb318ff1f62c63d89941b2758e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45547ed24ce1f7fdabd5754ec526d0a9"><td class="memItemLeft" align="right" valign="top"><a id="a45547ed24ce1f7fdabd5754ec526d0a9"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnDestroy</b> ()</td></tr>
+<tr class="memitem:a45547ed24ce1f7fdabd5754ec526d0a9"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a45547ed24ce1f7fdabd5754ec526d0a9">OnDestroy</a> ()</td></tr>
 <tr class="separator:a45547ed24ce1f7fdabd5754ec526d0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac1e282a94d14b433764eeae95b4cab6b"><td class="memItemLeft" align="right" valign="top"><a id="ac1e282a94d14b433764eeae95b4cab6b"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:ac1e282a94d14b433764eeae95b4cab6b"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#ac1e282a94d14b433764eeae95b4cab6b">OnInitDialog</a> ()</td></tr>
 <tr class="separator:ac1e282a94d14b433764eeae95b4cab6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a210354b3272911c9ed7507c7262243f1"><td class="memItemLeft" align="right" valign="top"><a id="a210354b3272911c9ed7507c7262243f1"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnKeyDown</b> (UINT nChar, UINT nRepCnt, UINT nFlags)</td></tr>
+<tr class="memitem:a210354b3272911c9ed7507c7262243f1"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#a210354b3272911c9ed7507c7262243f1">OnKeyDown</a> (UINT nChar, UINT nRepCnt, UINT nFlags)</td></tr>
 <tr class="separator:a210354b3272911c9ed7507c7262243f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac787a62c63e00f55582bb4695bbd04d6"><td class="memItemLeft" align="right" valign="top"><a id="ac787a62c63e00f55582bb4695bbd04d6"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnTimer</b> (UINT_PTR nIDEvent)</td></tr>
+<tr class="memitem:ac787a62c63e00f55582bb4695bbd04d6"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_motion_config.html#ac787a62c63e00f55582bb4695bbd04d6">OnTimer</a> (UINT_PTR nIDEvent)</td></tr>
 <tr class="separator:ac787a62c63e00f55582bb4695bbd04d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00111">111</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a8d6ecd105518fc0b880fdd120583c743"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d6ecd105518fc0b880fdd120583c743">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00121">121</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{ <a class="code" href="class_motion_config.html#a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a">IDD</a> = <a class="code" href="resource_8h.html#ac12b1e04b51749dc1fea2c3bef6809c6">IDD_MOTION_CONFIG</a> };</div><div class="ttc" id="class_motion_config_html_a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a"><div class="ttname"><a href="class_motion_config.html#a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a">MotionConfig::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00121">Joypad.h:121</a></div></div>
+<div class="ttc" id="resource_8h_html_ac12b1e04b51749dc1fea2c3bef6809c6"><div class="ttname"><a href="resource_8h.html#ac12b1e04b51749dc1fea2c3bef6809c6">IDD_MOTION_CONFIG</a></div><div class="ttdeci">#define IDD_MOTION_CONFIG</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00068">resource.h:68</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a005e9fbe2d6a2d783a48e1bc3b6aa27e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a005e9fbe2d6a2d783a48e1bc3b6aa27e">&#9670;&nbsp;</a></span>MotionConfig()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MotionConfig::MotionConfig </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00295">295</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  : CDialog(<a class="code" href="class_motion_config.html#a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a">MotionConfig::IDD</a>, pParent)</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;{</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(MotionConfig)</span></div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;  <span class="comment">// NOTE: the ClassWizard will add member initialization here</span></div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  timerId = 0;</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;}</div><div class="ttc" id="class_motion_config_html_a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a"><div class="ttname"><a href="class_motion_config.html#a8d6ecd105518fc0b880fdd120583c743acda326956e507e0274c3deb88512c76a">MotionConfig::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00121">Joypad.h:121</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a50d94176c92cf39ca894892a0b3bf2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50d94176c92cf39ca894892a0b3bf2ef">&#9670;&nbsp;</a></span>assignKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionConfig::assignKey </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LONG_PTR&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00382">382</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;{</div><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <span class="keywordflow">switch</span>(<span class="keywordtype">id</span>) {</div><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a>:</div><div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a>] = key;</div><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a>:</div><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a>] = key;</div><div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a>:</div><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a>] = key;</div><div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a>:</div><div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a>] = key;</div><div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;  }</div><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div><div class="ttc" id="resource_8h_html_ae29438ab510968afa9068e0c6b80ed57"><div class="ttname"><a href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a></div><div class="ttdeci">#define IDC_EDIT_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00106">resource.h:106</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00272">SDL.cpp:272</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00271">SDL.cpp:271</a></div></div>
+<div class="ttc" id="resource_8h_html_ae8bd1d3525011019fb5ff9406e0d2404"><div class="ttname"><a href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a></div><div class="ttdeci">#define IDC_EDIT_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00104">resource.h:104</a></div></div>
+<div class="ttc" id="resource_8h_html_a3c298d6303318c2193f262cfae3e413c"><div class="ttname"><a href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a></div><div class="ttdeci">#define IDC_EDIT_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00102">resource.h:102</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00272">SDL.cpp:272</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00271">SDL.cpp:271</a></div></div>
+<div class="ttc" id="_joypad_8cpp_html_af6761499604a971a202b9ea0dc6ef5a9"><div class="ttname"><a href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a></div><div class="ttdeci">LONG_PTR motion[4]</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00301">SDL.cpp:301</a></div></div>
+<div class="ttc" id="resource_8h_html_ae0645e746a25d4d061e3fae80babcc78"><div class="ttname"><a href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a></div><div class="ttdeci">#define IDC_EDIT_UP</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00100">resource.h:100</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_config_a50d94176c92cf39ca894892a0b3bf2ef_icgraph.png" border="0" usemap="#class_motion_config_a50d94176c92cf39ca894892a0b3bf2ef_icgraph" alt=""/></div>
+<map name="class_motion_config_a50d94176c92cf39ca894892a0b3bf2ef_icgraph" id="class_motion_config_a50d94176c92cf39ca894892a0b3bf2ef_icgraph">
+<area shape="rect" id="node2" href="class_motion_config.html#a73d6bc239e8abd59b68f23ddaaf6daf4" title="MotionConfig::assignKeys" alt="" coords="220,5,393,32"/>
+<area shape="rect" id="node3" href="class_motion_config.html#a252355cb318ff1f62c63d89941b2758e" title="MotionConfig::OnOk" alt="" coords="441,5,580,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a73d6bc239e8abd59b68f23ddaaf6daf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73d6bc239e8abd59b68f23ddaaf6daf4">&#9670;&nbsp;</a></span>assignKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionConfig::assignKeys </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00400">400</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;{</div><div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a>;</div><div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;</div><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a>;</div><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;  <a class="code" href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">up</a>, GWLP_USERDATA));</div><div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;</div><div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a>;</div><div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;  <a class="code" href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">down</a>, GWLP_USERDATA));</div><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;</div><div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a>;</div><div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <a class="code" href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">left</a>, GWLP_USERDATA));</div><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;</div><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  <span class="keywordtype">id</span> = <a class="code" href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a>;</div><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;  <a class="code" href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef">assignKey</a>(<span class="keywordtype">id</span>, GetWindowLongPtr(<a class="code" href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">right</a>, GWLP_USERDATA));</div><div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;}</div><div class="ttc" id="resource_8h_html_ae29438ab510968afa9068e0c6b80ed57"><div class="ttname"><a href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a></div><div class="ttdeci">#define IDC_EDIT_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00106">resource.h:106</a></div></div>
+<div class="ttc" id="class_motion_config_html_a44c25ec4fbd230d6fe19416d8c280157"><div class="ttname"><a href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">MotionConfig::up</a></div><div class="ttdeci">JoypadEditControl up</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00122">Joypad.h:122</a></div></div>
+<div class="ttc" id="resource_8h_html_ae8bd1d3525011019fb5ff9406e0d2404"><div class="ttname"><a href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a></div><div class="ttdeci">#define IDC_EDIT_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00104">resource.h:104</a></div></div>
+<div class="ttc" id="resource_8h_html_a3c298d6303318c2193f262cfae3e413c"><div class="ttname"><a href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a></div><div class="ttdeci">#define IDC_EDIT_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00102">resource.h:102</a></div></div>
+<div class="ttc" id="_commands_8cpp_html_a7b7a6396b2c82ad46c6d8b2bf141a8dd"><div class="ttname"><a href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a></div><div class="ttdeci">WORD id</div><div class="ttdef"><b>Definition:</b> <a href="_commands_8cpp_source.html#l00034">Commands.cpp:34</a></div></div>
+<div class="ttc" id="class_motion_config_html_a0fd0b825d61a2959b3dd20ea3c0fb9ad"><div class="ttname"><a href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">MotionConfig::down</a></div><div class="ttdeci">JoypadEditControl down</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00125">Joypad.h:125</a></div></div>
+<div class="ttc" id="class_motion_config_html_a50d94176c92cf39ca894892a0b3bf2ef"><div class="ttname"><a href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef">MotionConfig::assignKey</a></div><div class="ttdeci">void assignKey(int id, LONG_PTR key)</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8cpp_source.html#l00382">Joypad.cpp:382</a></div></div>
+<div class="ttc" id="resource_8h_html_ae0645e746a25d4d061e3fae80babcc78"><div class="ttname"><a href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a></div><div class="ttdeci">#define IDC_EDIT_UP</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00100">resource.h:100</a></div></div>
+<div class="ttc" id="class_motion_config_html_ae9203bef30efdd067ea44d1f7cded8dc"><div class="ttname"><a href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">MotionConfig::right</a></div><div class="ttdeci">JoypadEditControl right</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00123">Joypad.h:123</a></div></div>
+<div class="ttc" id="class_motion_config_html_a634ed163b30d08aceb8573542ee7fc07"><div class="ttname"><a href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">MotionConfig::left</a></div><div class="ttdeci">JoypadEditControl left</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00124">Joypad.h:124</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_config_a73d6bc239e8abd59b68f23ddaaf6daf4_cgraph.png" border="0" usemap="#class_motion_config_a73d6bc239e8abd59b68f23ddaaf6daf4_cgraph" alt=""/></div>
+<map name="class_motion_config_a73d6bc239e8abd59b68f23ddaaf6daf4_cgraph" id="class_motion_config_a73d6bc239e8abd59b68f23ddaaf6daf4_cgraph">
+<area shape="rect" id="node2" href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef" title="MotionConfig::assignKey" alt="" coords="227,5,393,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_config_a73d6bc239e8abd59b68f23ddaaf6daf4_icgraph.png" border="0" usemap="#class_motion_config_a73d6bc239e8abd59b68f23ddaaf6daf4_icgraph" alt=""/></div>
+<map name="class_motion_config_a73d6bc239e8abd59b68f23ddaaf6daf4_icgraph" id="class_motion_config_a73d6bc239e8abd59b68f23ddaaf6daf4_icgraph">
+<area shape="rect" id="node2" href="class_motion_config.html#a252355cb318ff1f62c63d89941b2758e" title="MotionConfig::OnOk" alt="" coords="227,5,365,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1f27a900666b5c804f255f39b32d5dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f27a900666b5c804f255f39b32d5dfd">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionConfig::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00305">305</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;{</div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(MotionConfig)</span></div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a>, <a class="code" href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">up</a>);</div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a>, <a class="code" href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">right</a>);</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a>, <a class="code" href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">left</a>);</div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a>, <a class="code" href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">down</a>);</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div><div class="ttc" id="resource_8h_html_ae29438ab510968afa9068e0c6b80ed57"><div class="ttname"><a href="resource_8h.html#ae29438ab510968afa9068e0c6b80ed57">IDC_EDIT_RIGHT</a></div><div class="ttdeci">#define IDC_EDIT_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00106">resource.h:106</a></div></div>
+<div class="ttc" id="class_motion_config_html_a44c25ec4fbd230d6fe19416d8c280157"><div class="ttname"><a href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">MotionConfig::up</a></div><div class="ttdeci">JoypadEditControl up</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00122">Joypad.h:122</a></div></div>
+<div class="ttc" id="resource_8h_html_ae8bd1d3525011019fb5ff9406e0d2404"><div class="ttname"><a href="resource_8h.html#ae8bd1d3525011019fb5ff9406e0d2404">IDC_EDIT_LEFT</a></div><div class="ttdeci">#define IDC_EDIT_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00104">resource.h:104</a></div></div>
+<div class="ttc" id="resource_8h_html_a3c298d6303318c2193f262cfae3e413c"><div class="ttname"><a href="resource_8h.html#a3c298d6303318c2193f262cfae3e413c">IDC_EDIT_DOWN</a></div><div class="ttdeci">#define IDC_EDIT_DOWN</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00102">resource.h:102</a></div></div>
+<div class="ttc" id="class_motion_config_html_a0fd0b825d61a2959b3dd20ea3c0fb9ad"><div class="ttname"><a href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">MotionConfig::down</a></div><div class="ttdeci">JoypadEditControl down</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00125">Joypad.h:125</a></div></div>
+<div class="ttc" id="resource_8h_html_ae0645e746a25d4d061e3fae80babcc78"><div class="ttname"><a href="resource_8h.html#ae0645e746a25d4d061e3fae80babcc78">IDC_EDIT_UP</a></div><div class="ttdeci">#define IDC_EDIT_UP</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00100">resource.h:100</a></div></div>
+<div class="ttc" id="class_motion_config_html_ae9203bef30efdd067ea44d1f7cded8dc"><div class="ttname"><a href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">MotionConfig::right</a></div><div class="ttdeci">JoypadEditControl right</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00123">Joypad.h:123</a></div></div>
+<div class="ttc" id="class_motion_config_html_a634ed163b30d08aceb8573542ee7fc07"><div class="ttname"><a href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">MotionConfig::left</a></div><div class="ttdeci">JoypadEditControl left</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00124">Joypad.h:124</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3b2f649ce95dfb9f6b1efb8c7d8c9213"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b2f649ce95dfb9f6b1efb8c7d8c9213">&#9670;&nbsp;</a></span>OnCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionConfig::OnCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00328">328</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;{</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  EndDialog(FALSE);</div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a45547ed24ce1f7fdabd5754ec526d0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45547ed24ce1f7fdabd5754ec526d0a9">&#9670;&nbsp;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionConfig::OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00340">340</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;{</div><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  CDialog::OnDestroy();</div><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  </div><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;  KillTimer(timerId);</div><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ac1e282a94d14b433764eeae95b4cab6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1e282a94d14b433764eeae95b4cab6b">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL MotionConfig::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00347">347</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;{</div><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  </div><div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  timerId = SetTimer(0,200,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;  </div><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  SetWindowLongPtr(<a class="code" href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">up</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a>]);</div><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  <a class="code" href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">up</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a>]));</div><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  </div><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  SetWindowLongPtr(<a class="code" href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">down</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a>]);</div><div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;  <a class="code" href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">down</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a>]));</div><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;</div><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  SetWindowLongPtr(<a class="code" href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">left</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a>]);</div><div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <a class="code" href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">left</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a>]));</div><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;</div><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;  SetWindowLongPtr(<a class="code" href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">right</a>, GWLP_USERDATA,<a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a>]);</div><div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;  <a class="code" href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">right</a>.SetWindowText(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">getKeyName</a>(<a class="code" href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a>[<a class="code" href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a>]));</div><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;</div><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  CenterWindow();</div><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;}</div><div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035daa9cdac7967bf7d88fdb761138a2a3416">KEY_DOWN</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00272">SDL.cpp:272</a></div></div>
+<div class="ttc" id="class_motion_config_html_a44c25ec4fbd230d6fe19416d8c280157"><div class="ttname"><a href="class_motion_config.html#a44c25ec4fbd230d6fe19416d8c280157">MotionConfig::up</a></div><div class="ttdeci">JoypadEditControl up</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00122">Joypad.h:122</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da612120b69c7dfd46086db7aaebdbcf65">KEY_LEFT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00271">SDL.cpp:271</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da0848a442d907968b211b97bc2bd88acd">KEY_UP</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00272">SDL.cpp:272</a></div></div>
+<div class="ttc" id="class_motion_config_html_a0fd0b825d61a2959b3dd20ea3c0fb9ad"><div class="ttname"><a href="class_motion_config.html#a0fd0b825d61a2959b3dd20ea3c0fb9ad">MotionConfig::down</a></div><div class="ttdeci">JoypadEditControl down</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00125">Joypad.h:125</a></div></div>
+<div class="ttc" id="class_v_b_a_html_aaab971cb5d67a69e1a26502d15a4dc60"><div class="ttname"><a href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">VBA::input</a></div><div class="ttdeci">Input * input</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00161">VBA.h:161</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d"><div class="ttname"><a href="_s_d_l_8cpp.html#abc5c98fcc1211af2b80116dd6e0a035da6504370d9c6391e1a9da6a1a529b089d">KEY_RIGHT</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00271">SDL.cpp:271</a></div></div>
+<div class="ttc" id="class_input_html_a2c4ec8a744b040657e220480987cd8bf"><div class="ttname"><a href="class_input.html#a2c4ec8a744b040657e220480987cd8bf">Input::getKeyName</a></div><div class="ttdeci">virtual CString getKeyName(LONG_PTR key)=0</div></div>
+<div class="ttc" id="_joypad_8cpp_html_af6761499604a971a202b9ea0dc6ef5a9"><div class="ttname"><a href="_joypad_8cpp.html#af6761499604a971a202b9ea0dc6ef5a9">motion</a></div><div class="ttdeci">LONG_PTR motion[4]</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00301">SDL.cpp:301</a></div></div>
+<div class="ttc" id="class_motion_config_html_ae9203bef30efdd067ea44d1f7cded8dc"><div class="ttname"><a href="class_motion_config.html#ae9203bef30efdd067ea44d1f7cded8dc">MotionConfig::right</a></div><div class="ttdeci">JoypadEditControl right</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00123">Joypad.h:123</a></div></div>
+<div class="ttc" id="class_motion_config_html_a634ed163b30d08aceb8573542ee7fc07"><div class="ttname"><a href="class_motion_config.html#a634ed163b30d08aceb8573542ee7fc07">MotionConfig::left</a></div><div class="ttdeci">JoypadEditControl left</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8h_source.html#l00124">Joypad.h:124</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_config_ac1e282a94d14b433764eeae95b4cab6b_cgraph.png" border="0" usemap="#class_motion_config_ac1e282a94d14b433764eeae95b4cab6b_cgraph" alt=""/></div>
+<map name="class_motion_config_ac1e282a94d14b433764eeae95b4cab6b_cgraph" id="class_motion_config_ac1e282a94d14b433764eeae95b4cab6b_cgraph">
+<area shape="rect" id="node2" href="class_input.html#a2c4ec8a744b040657e220480987cd8bf" title="Input::getKeyName" alt="" coords="228,5,361,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a210354b3272911c9ed7507c7262243f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210354b3272911c9ed7507c7262243f1">&#9670;&nbsp;</a></span>OnKeyDown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionConfig::OnKeyDown </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nChar</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nRepCnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nFlags</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00371">371</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;{</div><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a252355cb318ff1f62c63d89941b2758e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a252355cb318ff1f62c63d89941b2758e">&#9670;&nbsp;</a></span>OnOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionConfig::OnOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00333">333</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;{</div><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <a class="code" href="class_motion_config.html#a73d6bc239e8abd59b68f23ddaaf6daf4">assignKeys</a>();</div><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;  <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa">checkKeys</a>();</div><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  EndDialog( TRUE);</div><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;}</div><div class="ttc" id="class_motion_config_html_a73d6bc239e8abd59b68f23ddaaf6daf4"><div class="ttname"><a href="class_motion_config.html#a73d6bc239e8abd59b68f23ddaaf6daf4">MotionConfig::assignKeys</a></div><div class="ttdeci">void assignKeys()</div><div class="ttdef"><b>Definition:</b> <a href="_joypad_8cpp_source.html#l00400">Joypad.cpp:400</a></div></div>
+<div class="ttc" id="class_v_b_a_html_aaab971cb5d67a69e1a26502d15a4dc60"><div class="ttname"><a href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">VBA::input</a></div><div class="ttdeci">Input * input</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00161">VBA.h:161</a></div></div>
+<div class="ttc" id="class_input_html_a91418a5762e6e50aa4f59e4ce92d2dfa"><div class="ttname"><a href="class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa">Input::checkKeys</a></div><div class="ttdeci">virtual void checkKeys()=0</div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_config_a252355cb318ff1f62c63d89941b2758e_cgraph.png" border="0" usemap="#class_motion_config_a252355cb318ff1f62c63d89941b2758e_cgraph" alt=""/></div>
+<map name="class_motion_config_a252355cb318ff1f62c63d89941b2758e_cgraph" id="class_motion_config_a252355cb318ff1f62c63d89941b2758e_cgraph">
+<area shape="rect" id="node2" href="class_motion_config.html#a73d6bc239e8abd59b68f23ddaaf6daf4" title="MotionConfig::assignKeys" alt="" coords="192,5,365,32"/>
+<area shape="rect" id="node4" href="class_input.html#a91418a5762e6e50aa4f59e4ce92d2dfa" title="Input::checkKeys" alt="" coords="217,56,340,83"/>
+<area shape="rect" id="node3" href="class_motion_config.html#a50d94176c92cf39ca894892a0b3bf2ef" title="MotionConfig::assignKey" alt="" coords="413,5,580,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac787a62c63e00f55582bb4695bbd04d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac787a62c63e00f55582bb4695bbd04d6">&#9670;&nbsp;</a></span>OnTimer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MotionConfig::OnTimer </td>
+          <td>(</td>
+          <td class="paramtype">UINT_PTR&#160;</td>
+          <td class="paramname"><em>nIDEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a> 파일의 <a class="el" href="_joypad_8cpp_source.html#l00375">375</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;{</div><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;  <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">input</a>-&gt;<a class="code" href="class_input.html#a7a6ef57ff2638f545380618b2d3fdf9d">checkDevices</a>();</div><div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;  </div><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;  CDialog::OnTimer(nIDEvent);</div><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;}</div><div class="ttc" id="class_input_html_a7a6ef57ff2638f545380618b2d3fdf9d"><div class="ttname"><a href="class_input.html#a7a6ef57ff2638f545380618b2d3fdf9d">Input::checkDevices</a></div><div class="ttdeci">virtual void checkDevices()=0</div></div>
+<div class="ttc" id="class_v_b_a_html_aaab971cb5d67a69e1a26502d15a4dc60"><div class="ttname"><a href="class_v_b_a.html#aaab971cb5d67a69e1a26502d15a4dc60">VBA::input</a></div><div class="ttdeci">Input * input</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00161">VBA.h:161</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_motion_config_ac787a62c63e00f55582bb4695bbd04d6_cgraph.png" border="0" usemap="#class_motion_config_ac787a62c63e00f55582bb4695bbd04d6_cgraph" alt=""/></div>
+<map name="class_motion_config_ac787a62c63e00f55582bb4695bbd04d6_cgraph" id="class_motion_config_ac787a62c63e00f55582bb4695bbd04d6_cgraph">
+<area shape="rect" id="node2" href="class_input.html#a7a6ef57ff2638f545380618b2d3fdf9d" title="Input::checkDevices" alt="" coords="208,5,347,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a0fd0b825d61a2959b3dd20ea3c0fb9ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fd0b825d61a2959b3dd20ea3c0fb9ad">&#9670;&nbsp;</a></span>down</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> MotionConfig::down</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00125">125</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a634ed163b30d08aceb8573542ee7fc07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a634ed163b30d08aceb8573542ee7fc07">&#9670;&nbsp;</a></span>left</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> MotionConfig::left</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00124">124</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae9203bef30efdd067ea44d1f7cded8dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9203bef30efdd067ea44d1f7cded8dc">&#9670;&nbsp;</a></span>right</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> MotionConfig::right</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00123">123</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a44c25ec4fbd230d6fe19416d8c280157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44c25ec4fbd230d6fe19416d8c280157">&#9670;&nbsp;</a></span>up</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joypad_edit_control.html">JoypadEditControl</a> MotionConfig::up</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_joypad_8h_source.html">Joypad.h</a> 파일의 <a class="el" href="_joypad_8h_source.html#l00122">122</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_joypad_8h_source.html">Joypad.h</a></li>
-<li>src/win32/Joypad.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_joypad_8h_source.html">Joypad.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_joypad_8cpp_source.html">Joypad.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_motion_config.html">MotionConfig</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_bug_report.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,61 +95,352 @@ $(function() {
 <div class="title">BugReport 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_bug_report_8h_source.html">BugReport.h</a>&gt;</code></p>
 <div class="dynheader">
 BugReport에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_bug_report.png" usemap="#BugReport_map" alt=""/>
-  <map id="BugReport_map" name="BugReport_map">
-</map>
- </div></div>
+<div class="center"><img src="class_bug_report__inherit__graph.png" border="0" usemap="#_bug_report_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+BugReport에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bug_report__coll__graph.png" border="0" usemap="#_bug_report_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:ac5c6f1960b86db3b70eab6b21625913e"><td class="memItemLeft" align="right" valign="top"><a id="ac5c6f1960b86db3b70eab6b21625913e"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_BUG_REPORT
+<tr class="memitem:ac5c6f1960b86db3b70eab6b21625913e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_bug_report.html#ac5c6f1960b86db3b70eab6b21625913eaf9e146b90ba979e2a6a8b7a3ad251d1b">IDD</a> = IDD_BUG_REPORT
  }</td></tr>
 <tr class="separator:ac5c6f1960b86db3b70eab6b21625913e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a0b78ee082b1ca2a2a2c16db3d65842fb"><td class="memItemLeft" align="right" valign="top"><a id="a0b78ee082b1ca2a2a2c16db3d65842fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>BugReport</b> (CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:a0b78ee082b1ca2a2a2c16db3d65842fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bug_report.html#a0b78ee082b1ca2a2a2c16db3d65842fb">BugReport</a> (CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:a0b78ee082b1ca2a2a2c16db3d65842fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:aef6dd887fcfe40d98d0fa1c6cf2d2466"><td class="memItemLeft" align="right" valign="top"><a id="aef6dd887fcfe40d98d0fa1c6cf2d2466"></a>
-CEdit&#160;</td><td class="memItemRight" valign="bottom"><b>m_report</b></td></tr>
+<tr class="memitem:aef6dd887fcfe40d98d0fa1c6cf2d2466"><td class="memItemLeft" align="right" valign="top">CEdit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bug_report.html#aef6dd887fcfe40d98d0fa1c6cf2d2466">m_report</a></td></tr>
 <tr class="separator:aef6dd887fcfe40d98d0fa1c6cf2d2466"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a5b019306aeca9497b7b6efd438a44558"><td class="memItemLeft" align="right" valign="top"><a id="a5b019306aeca9497b7b6efd438a44558"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a5b019306aeca9497b7b6efd438a44558"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bug_report.html#a5b019306aeca9497b7b6efd438a44558">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a5b019306aeca9497b7b6efd438a44558"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe00e8dd3efa190199d8d645cb702e07"><td class="memItemLeft" align="right" valign="top"><a id="afe00e8dd3efa190199d8d645cb702e07"></a>
-CString&#160;</td><td class="memItemRight" valign="bottom"><b>createReport</b> ()</td></tr>
+<tr class="memitem:afe00e8dd3efa190199d8d645cb702e07"><td class="memItemLeft" align="right" valign="top">CString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bug_report.html#afe00e8dd3efa190199d8d645cb702e07">createReport</a> ()</td></tr>
 <tr class="separator:afe00e8dd3efa190199d8d645cb702e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b74689c7cf7ed6daeaaf2dc8f1498ab"><td class="memItemLeft" align="right" valign="top"><a id="a6b74689c7cf7ed6daeaaf2dc8f1498ab"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCopy</b> ()</td></tr>
+<tr class="memitem:a6b74689c7cf7ed6daeaaf2dc8f1498ab"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bug_report.html#a6b74689c7cf7ed6daeaaf2dc8f1498ab">OnCopy</a> ()</td></tr>
 <tr class="separator:a6b74689c7cf7ed6daeaaf2dc8f1498ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c9a7f1da33a46ca97f0ecd821e701e9"><td class="memItemLeft" align="right" valign="top"><a id="a2c9a7f1da33a46ca97f0ecd821e701e9"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOk</b> ()</td></tr>
+<tr class="memitem:a2c9a7f1da33a46ca97f0ecd821e701e9"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bug_report.html#a2c9a7f1da33a46ca97f0ecd821e701e9">OnOk</a> ()</td></tr>
 <tr class="separator:a2c9a7f1da33a46ca97f0ecd821e701e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abcfc2e192747272d1708a1d479bfd45b"><td class="memItemLeft" align="right" valign="top"><a id="abcfc2e192747272d1708a1d479bfd45b"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:abcfc2e192747272d1708a1d479bfd45b"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bug_report.html#abcfc2e192747272d1708a1d479bfd45b">OnInitDialog</a> ()</td></tr>
 <tr class="separator:abcfc2e192747272d1708a1d479bfd45b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_bug_report_8h_source.html">BugReport.h</a> 파일의 <a class="el" href="_bug_report_8h_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="ac5c6f1960b86db3b70eab6b21625913e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5c6f1960b86db3b70eab6b21625913e">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ac5c6f1960b86db3b70eab6b21625913eaf9e146b90ba979e2a6a8b7a3ad251d1b"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_bug_report_8h_source.html">BugReport.h</a> 파일의 <a class="el" href="_bug_report_8h_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{ <a class="code" href="class_bug_report.html#ac5c6f1960b86db3b70eab6b21625913eaf9e146b90ba979e2a6a8b7a3ad251d1b">IDD</a> = <a class="code" href="resource_8h.html#a9bcd4d7dc84cbbbe2beaccd69851840e">IDD_BUG_REPORT</a> };</div><div class="ttc" id="class_bug_report_html_ac5c6f1960b86db3b70eab6b21625913eaf9e146b90ba979e2a6a8b7a3ad251d1b"><div class="ttname"><a href="class_bug_report.html#ac5c6f1960b86db3b70eab6b21625913eaf9e146b90ba979e2a6a8b7a3ad251d1b">BugReport::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_bug_report_8h_source.html#l00040">BugReport.h:40</a></div></div>
+<div class="ttc" id="resource_8h_html_a9bcd4d7dc84cbbbe2beaccd69851840e"><div class="ttname"><a href="resource_8h.html#a9bcd4d7dc84cbbbe2beaccd69851840e">IDD_BUG_REPORT</a></div><div class="ttdeci">#define IDD_BUG_REPORT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00097">resource.h:97</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a0b78ee082b1ca2a2a2c16db3d65842fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b78ee082b1ca2a2a2c16db3d65842fb">&#9670;&nbsp;</a></span>BugReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BugReport::BugReport </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_bug_report_8cpp_source.html">BugReport.cpp</a> 파일의 <a class="el" href="_bug_report_8cpp_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  : CDialog(<a class="code" href="class_bug_report.html#ac5c6f1960b86db3b70eab6b21625913eaf9e146b90ba979e2a6a8b7a3ad251d1b">BugReport::IDD</a>, pParent)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(BugReport)</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <span class="comment">// NOTE: the ClassWizard will add member initialization here</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div><div class="ttc" id="class_bug_report_html_ac5c6f1960b86db3b70eab6b21625913eaf9e146b90ba979e2a6a8b7a3ad251d1b"><div class="ttname"><a href="class_bug_report.html#ac5c6f1960b86db3b70eab6b21625913eaf9e146b90ba979e2a6a8b7a3ad251d1b">BugReport::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_bug_report_8h_source.html#l00040">BugReport.h:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="afe00e8dd3efa190199d8d645cb702e07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe00e8dd3efa190199d8d645cb702e07">&#9670;&nbsp;</a></span>createReport()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CString BugReport::createReport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_bug_report_8cpp_source.html">BugReport.cpp</a> 파일의 <a class="el" href="_bug_report_8cpp_source.html#l00138">138</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;{</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96">winCheckFullscreen</a>();</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  CString report = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Emu version  : %s\r\n&quot;</span>, <a class="code" href="_auto_build_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a>);</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Emu Type     : %s\r\n&quot;</span>,</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;#ifdef FINAL_VERSION</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;#ifdef DEV_VERSION</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;               <span class="stringliteral">&quot;Development Version&quot;</span></div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;#<span class="keywordflow">else</span></div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;               <span class="stringliteral">&quot;Normal Version&quot;</span></div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;#endif</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;#<span class="keywordflow">else</span></div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;               <span class="stringliteral">&quot;Debug Version&quot;</span></div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;#endif</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;               );</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="gb_globals_8h.html#af9cc36078b1b311753963297ae7f2a74">emulating</a>) {</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    AppendFormat(report, <span class="stringliteral">&quot;File         : %s\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ac85720ef4e00c5455be15266b7119045">szFile</a>);</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">char</span> <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>[20];</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#af300759fcbc7eeb00ce73f956fc5ddb7">cartridgeType</a> == 0) {</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;      <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> check = 0;</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; 0x4000; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> += 4) {</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        check += *((<a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> *)&amp;<a class="code" href="gb_globals_8h.html#aec268401eba88422e56ca0a7a86cb991">bios</a>[<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>]);</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      }</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      AppendFormat(report, <span class="stringliteral">&quot;BIOS Checksum: %08X\r\n&quot;</span>, check);</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      strncpy(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, (<span class="keyword">const</span> <span class="keywordtype">char</span> *)&amp;<a class="code" href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a>[0xa0], 12);</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>[12] = 0;</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      AppendFormat(report, <span class="stringliteral">&quot;Internal name: %s\r\n&quot;</span>, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;      </div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      strncpy(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, (<span class="keyword">const</span> <span class="keywordtype">char</span> *)&amp;<a class="code" href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a>[0xac], 4);</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>[4] = 0;</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      AppendFormat(report, <span class="stringliteral">&quot;Game code    : %s\r\n&quot;</span>, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      CString res = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> *p = (<a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> *)<a class="code" href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a>;</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> *end = (<a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> *)((<span class="keywordtype">char</span> *)<a class="code" href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a>+<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ab7d47241ad4bc8c0e6717770797e6d57">romSize</a>);</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keywordflow">while</span>(p  &lt; end) {</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> d = <a class="code" href="_port_8h.html#adc768b10d187a6d70e6b927d589c948d">READ32LE</a>(p);</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    </div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">if</span>(d == 0x52504545) {</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;          <span class="keywordflow">if</span>(memcmp(p, <span class="stringliteral">&quot;EEPROM_&quot;</span>, 7) == 0) {</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            res += (<span class="keyword">const</span> <span class="keywordtype">char</span> *)p;</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            res += <span class="charliteral">&#39; &#39;</span>;</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;          }</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (d == 0x4D415253) {</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;          <span class="keywordflow">if</span>(memcmp(p, <span class="stringliteral">&quot;SRAM_&quot;</span>, 5) == 0) {</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            res += (<span class="keyword">const</span> <span class="keywordtype">char</span> *)p;</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            res += <span class="charliteral">&#39; &#39;</span>;</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;          }</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (d == 0x53414C46) {</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;          <span class="keywordflow">if</span>(memcmp(p, <span class="stringliteral">&quot;FLASH1M_&quot;</span>, 8) == 0) {</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            res += (<span class="keyword">const</span> <span class="keywordtype">char</span> *)p;</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            res += <span class="charliteral">&#39; &#39;</span>;</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;          }</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(memcmp(p, <span class="stringliteral">&quot;FLASH&quot;</span>, 5) == 0) {</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;          res += (<span class="keyword">const</span> <span class="keywordtype">char</span> *)p;</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;          res += <span class="charliteral">&#39; &#39;</span>;</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (d == 0x52494953) {</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;          <span class="keywordflow">if</span>(memcmp(p, <span class="stringliteral">&quot;SIIRTC_V&quot;</span>, 8) == 0) {</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            res += (<span class="keyword">const</span> <span class="keywordtype">char</span> *)p;</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            res += <span class="charliteral">&#39; &#39;</span>;</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;          }</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        }</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        p++;</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;      }</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      <span class="keywordflow">if</span>(res.GetLength() &gt; 0)</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        AppendFormat(report, <span class="stringliteral">&quot;Cart Save    : %s\r\n&quot;</span>, res);</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#af300759fcbc7eeb00ce73f956fc5ddb7">cartridgeType</a> == 1) {</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      strncpy(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, (<span class="keyword">const</span> <span class="keywordtype">char</span> *)&amp;<a class="code" href="gb_globals_8cpp.html#ae4f6bd8162474dbcfdbc54c36d7f5695">gbRom</a>[0x134], 15);</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>[15] = 0;</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      AppendFormat(report, <span class="stringliteral">&quot;Game title   : %s\r\n&quot;</span>, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    }</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  }</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  </div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Using BIOS   : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a0ad579388cd52cc4df5fadc560f27a37">useBiosFile</a>);</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Skip BIOS    : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a5cb340a521f9f53bf082a63b26fbda25">skipBiosFile</a>);</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Disable SFX  : %d\r\n&quot;</span>, <a class="code" href="_globals_8cpp.html#a71b9f49fb3c59657da7fa489a52b615e">cpuDisableSfx</a>);</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Throttle     : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#af21b98509a2589b38e4787f065b40a2b">throttle</a>);</div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Rewind       : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a682a6a9633f41038b23a2bdcdbde844e">rewindTimer</a>);</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Auto frame   : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a9ecbee7d82db73b24aee3afb66128388">autoFrameSkip</a>);</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Video option : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">videoOption</a>);</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Render type  : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ae31026d8986a7658f3aaa46fba9de663">renderMethod</a>);</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Color depth  : %d\r\n&quot;</span>, <a class="code" href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a>);</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Red shift    : %08x\r\n&quot;</span>, <a class="code" href="system_8cpp.html#a85b93b8fc1532633063574112af2de18">systemRedShift</a>);</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Green shift  : %08x\r\n&quot;</span>, <a class="code" href="system_8cpp.html#a6ae69465c0e8ab78f44b7f31b4967f9a">systemGreenShift</a>);</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Blue shift   : %08x\r\n&quot;</span>, <a class="code" href="system_8cpp.html#a3e43ed3bb6f846123ce7da1b003b6679">systemBlueShift</a>);</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Layer setting: %04X\r\n&quot;</span>, <a class="code" href="_globals_8cpp.html#aab45842fd405c5c9c24494c026a4441f">layerSettings</a>);</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Mirroring    : %d\r\n&quot;</span>, <a class="code" href="_globals_8cpp.html#ad928dd37445541ba904a576eb50c70ff">mirroringEnable</a>);</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Save type    : %d (%d)\r\n&quot;</span>, </div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;               <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a70060f88010280739406c87ef66d036a">winSaveType</a>, <a class="code" href="_globals_8cpp.html#a8a45d318e0d21c0ab6ab1a54b5be74ea">cpuSaveType</a>);</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Flash size   : %08X (%08x)\r\n&quot;</span>, </div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;               <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a5c99844bc4d1e5556434afaa75ae91e5">winFlashSize</a>, <a class="code" href="_flash_8cpp.html#a6cc360d6cd58f7c4ea981de97c808179">flashSize</a>);</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;RTC          : %d (%d)\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ae289fc4c9e951e0844900c522c151170">winRtcEnable</a>,</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;               <a class="code" href="_r_t_c_8cpp.html#ac4f1fa25d2f9812a2337aba1f69cea9f">rtcIsEnabled</a>());</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;AGBPrint     : %d\r\n&quot;</span>, <a class="code" href="agbprint_8cpp.html#ab6b9c9b8eb5e971359941e3b4923ced9">agbPrintIsEnabled</a>());</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Speed toggle : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aab299545104f6df869bf8f7abee6ef0a">speedupToggle</a>);</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Synchronize  : %d\r\n&quot;</span>, <a class="code" href="_globals_8cpp.html#ac7839c270877c700179f026cb3217a6b">synchronize</a>);</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Sound OFF    : %d\r\n&quot;</span>, <a class="code" href="gb_sound_8cpp.html#a2ff51b8fba1a4efea2d3d72f93210375">soundOffFlag</a>);</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Channels     : %04x\r\n&quot;</span>, <a class="code" href="_sound_8cpp.html#a3d1f6129176583804274bb162c3428a8">soundGetEnable</a>() &amp; 0x30f);</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Old Sync     : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a8a4b36a4e6259df18baf03360aacad4b">useOldSync</a>);</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Priority     : %d\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acde3a2cf1f42d8222850f9e8b5b28316">threadPriority</a>);</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Filters      : %d (%d)\r\n&quot;</span>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a835f54f74420b21459e0f3ce0eacc20d">filterType</a>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a4349741c5cec8852f8914093484418e8">ifbType</a>);</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;Cheats       : %d\r\n&quot;</span>, <a class="code" href="_cheats_8cpp.html#a97676efb8863eda358e0afca7c8a567c">cheatsNumber</a>);</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;GB Cheats    : %d\r\n&quot;</span>, <a class="code" href="gb_cheats_8cpp.html#ad4eaf570112fe7a400edc3c9eeae5d4c">gbCheatNumber</a>);</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  AppendFormat(report, <span class="stringliteral">&quot;GB Emu Type  : %d\r\n&quot;</span>, <a class="code" href="gb_globals_8cpp.html#aab449ed6ecf2bd502928a3d5aa5c54c4">gbEmulatorType</a>);</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  <span class="keywordflow">return</span> report;</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;}</div><div class="ttc" id="agbprint_8cpp_html_ab6b9c9b8eb5e971359941e3b4923ced9"><div class="ttname"><a href="agbprint_8cpp.html#ab6b9c9b8eb5e971359941e3b4923ced9">agbPrintIsEnabled</a></div><div class="ttdeci">bool agbPrintIsEnabled()</div><div class="ttdef"><b>Definition:</b> <a href="agbprint_8cpp_source.html#l00065">agbprint.cpp:65</a></div></div>
+<div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="_flash_8cpp_html_a6cc360d6cd58f7c4ea981de97c808179"><div class="ttname"><a href="_flash_8cpp.html#a6cc360d6cd58f7c4ea981de97c808179">flashSize</a></div><div class="ttdeci">int flashSize</div><div class="ttdef"><b>Definition:</b> <a href="_flash_8cpp_source.html#l00041">Flash.cpp:41</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ac85720ef4e00c5455be15266b7119045"><div class="ttname"><a href="class_v_b_a.html#ac85720ef4e00c5455be15266b7119045">VBA::szFile</a></div><div class="ttdeci">CString szFile</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00203">VBA.h:203</a></div></div>
+<div class="ttc" id="system_8cpp_html_adaf454a4617a00b5cfed14c203ab6efa"><div class="ttname"><a href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a></div><div class="ttdeci">int systemColorDepth</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00040">system.cpp:40</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_aab449ed6ecf2bd502928a3d5aa5c54c4"><div class="ttname"><a href="gb_globals_8cpp.html#aab449ed6ecf2bd502928a3d5aa5c54c4">gbEmulatorType</a></div><div class="ttdeci">int gbEmulatorType</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00049">gbGlobals.cpp:49</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_a71b9f49fb3c59657da7fa489a52b615e"><div class="ttname"><a href="_globals_8cpp.html#a71b9f49fb3c59657da7fa489a52b615e">cpuDisableSfx</a></div><div class="ttdeci">bool cpuDisableSfx</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00044">Globals.cpp:44</a></div></div>
+<div class="ttc" id="class_v_b_a_html_aab299545104f6df869bf8f7abee6ef0a"><div class="ttname"><a href="class_v_b_a.html#aab299545104f6df869bf8f7abee6ef0a">VBA::speedupToggle</a></div><div class="ttdeci">bool speedupToggle</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00152">VBA.h:152</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a0ad579388cd52cc4df5fadc560f27a37"><div class="ttname"><a href="class_v_b_a.html#a0ad579388cd52cc4df5fadc560f27a37">VBA::useBiosFile</a></div><div class="ttdeci">bool useBiosFile</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00104">VBA.h:104</a></div></div>
+<div class="ttc" id="_port_8h_html_adc768b10d187a6d70e6b927d589c948d"><div class="ttname"><a href="_port_8h.html#adc768b10d187a6d70e6b927d589c948d">READ32LE</a></div><div class="ttdeci">#define READ32LE(x)</div><div class="ttdef"><b>Definition:</b> <a href="_port_8h_source.html#l00067">Port.h:67</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a682a6a9633f41038b23a2bdcdbde844e"><div class="ttname"><a href="class_v_b_a.html#a682a6a9633f41038b23a2bdcdbde844e">VBA::rewindTimer</a></div><div class="ttdeci">int rewindTimer</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00126">VBA.h:126</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a70060f88010280739406c87ef66d036a"><div class="ttname"><a href="class_v_b_a.html#a70060f88010280739406c87ef66d036a">VBA::winSaveType</a></div><div class="ttdeci">int winSaveType</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00119">VBA.h:119</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_ae4f6bd8162474dbcfdbc54c36d7f5695"><div class="ttname"><a href="gb_globals_8cpp.html#ae4f6bd8162474dbcfdbc54c36d7f5695">gbRom</a></div><div class="ttdeci">u8 * gbRom</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00031">gbGlobals.cpp:31</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a835f54f74420b21459e0f3ce0eacc20d"><div class="ttname"><a href="class_v_b_a.html#a835f54f74420b21459e0f3ce0eacc20d">VBA::filterType</a></div><div class="ttdeci">int filterType</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00077">VBA.h:77</a></div></div>
+<div class="ttc" id="gb_globals_8h_html_af9cc36078b1b311753963297ae7f2a74"><div class="ttname"><a href="gb_globals_8h.html#af9cc36078b1b311753963297ae7f2a74">emulating</a></div><div class="ttdeci">int emulating</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00050">system.cpp:50</a></div></div>
+<div class="ttc" id="class_v_b_a_html_acde3a2cf1f42d8222850f9e8b5b28316"><div class="ttname"><a href="class_v_b_a.html#acde3a2cf1f42d8222850f9e8b5b28316">VBA::threadPriority</a></div><div class="ttdeci">int threadPriority</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00155">VBA.h:155</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5cb340a521f9f53bf082a63b26fbda25"><div class="ttname"><a href="class_v_b_a.html#a5cb340a521f9f53bf082a63b26fbda25">VBA::skipBiosFile</a></div><div class="ttdeci">bool skipBiosFile</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00105">VBA.h:105</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a17dac073149c897f770c00ed7098ad32"><div class="ttname"><a href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">VBA::videoOption</a></div><div class="ttdeci">int videoOption</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00090">VBA.h:90</a></div></div>
+<div class="ttc" id="_sound_8cpp_html_a3d1f6129176583804274bb162c3428a8"><div class="ttname"><a href="_sound_8cpp.html#a3d1f6129176583804274bb162c3428a8">soundGetEnable</a></div><div class="ttdeci">int soundGetEnable()</div><div class="ttdef"><b>Definition:</b> <a href="_sound_8cpp_source.html#l01174">Sound.cpp:1174</a></div></div>
+<div class="ttc" id="_cheats_8cpp_html_a97676efb8863eda358e0afca7c8a567c"><div class="ttname"><a href="_cheats_8cpp.html#a97676efb8863eda358e0afca7c8a567c">cheatsNumber</a></div><div class="ttdeci">int cheatsNumber</div><div class="ttdef"><b>Definition:</b> <a href="_cheats_8cpp_source.html#l00200">Cheats.cpp:200</a></div></div>
+<div class="ttc" id="gb_cheats_8cpp_html_ad4eaf570112fe7a400edc3c9eeae5d4c"><div class="ttname"><a href="gb_cheats_8cpp.html#ad4eaf570112fe7a400edc3c9eeae5d4c">gbCheatNumber</a></div><div class="ttdeci">int gbCheatNumber</div><div class="ttdef"><b>Definition:</b> <a href="gb_cheats_8cpp_source.html#l00033">gbCheats.cpp:33</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_a8a45d318e0d21c0ab6ab1a54b5be74ea"><div class="ttname"><a href="_globals_8cpp.html#a8a45d318e0d21c0ab6ab1a54b5be74ea">cpuSaveType</a></div><div class="ttdeci">int cpuSaveType</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00050">Globals.cpp:50</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a4349741c5cec8852f8914093484418e8"><div class="ttname"><a href="class_v_b_a.html#a4349741c5cec8852f8914093484418e8">VBA::ifbType</a></div><div class="ttdeci">int ifbType</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00076">VBA.h:76</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_adafc6ed627110c42f3893c9783f55320"><div class="ttname"><a href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a></div><div class="ttdeci">u8 * rom</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00055">Globals.cpp:55</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a9ecbee7d82db73b24aee3afb66128388"><div class="ttname"><a href="class_v_b_a.html#a9ecbee7d82db73b24aee3afb66128388">VBA::autoFrameSkip</a></div><div class="ttdeci">bool autoFrameSkip</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00133">VBA.h:133</a></div></div>
+<div class="ttc" id="_r_t_c_8cpp_html_ac4f1fa25d2f9812a2337aba1f69cea9f"><div class="ttname"><a href="_r_t_c_8cpp.html#ac4f1fa25d2f9812a2337aba1f69cea9f">rtcIsEnabled</a></div><div class="ttdeci">bool rtcIsEnabled()</div><div class="ttdef"><b>Definition:</b> <a href="_r_t_c_8cpp_source.html#l00054">RTC.cpp:54</a></div></div>
+<div class="ttc" id="system_8cpp_html_a85b93b8fc1532633063574112af2de18"><div class="ttname"><a href="system_8cpp.html#a85b93b8fc1532633063574112af2de18">systemRedShift</a></div><div class="ttdeci">int systemRedShift</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00037">system.cpp:37</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ab7d47241ad4bc8c0e6717770797e6d57"><div class="ttname"><a href="class_v_b_a.html#ab7d47241ad4bc8c0e6717770797e6d57">VBA::romSize</a></div><div class="ttdeci">int romSize</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00190">VBA.h:190</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_ac7839c270877c700179f026cb3217a6b"><div class="ttname"><a href="_globals_8cpp.html#ac7839c270877c700179f026cb3217a6b">synchronize</a></div><div class="ttdeci">bool synchronize</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00043">Globals.cpp:43</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_aab45842fd405c5c9c24494c026a4441f"><div class="ttname"><a href="_globals_8cpp.html#aab45842fd405c5c9c24494c026a4441f">layerSettings</a></div><div class="ttdeci">int layerSettings</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00047">Globals.cpp:47</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ae289fc4c9e951e0844900c522c151170"><div class="ttname"><a href="class_v_b_a.html#ae289fc4c9e951e0844900c522c151170">VBA::winRtcEnable</a></div><div class="ttdeci">bool winRtcEnable</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00117">VBA.h:117</a></div></div>
+<div class="ttc" id="_auto_build_8h_html_a1c6d5de492ac61ad29aec7aa9a436bbf"><div class="ttname"><a href="_auto_build_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a></div><div class="ttdeci">#define VERSION</div><div class="ttdef"><b>Definition:</b> <a href="_auto_build_8h_source.html#l00023">AutoBuild.h:23</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a8a4b36a4e6259df18baf03360aacad4b"><div class="ttname"><a href="class_v_b_a.html#a8a4b36a4e6259df18baf03360aacad4b">VBA::useOldSync</a></div><div class="ttdeci">bool useOldSync</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00153">VBA.h:153</a></div></div>
+<div class="ttc" id="gb_globals_8h_html_aec268401eba88422e56ca0a7a86cb991"><div class="ttname"><a href="gb_globals_8h.html#aec268401eba88422e56ca0a7a86cb991">bios</a></div><div class="ttdeci">u8 * bios</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00054">Globals.cpp:54</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01392">expr-lex.cpp:1392</a></div></div>
+<div class="ttc" id="system_8cpp_html_a6ae69465c0e8ab78f44b7f31b4967f9a"><div class="ttname"><a href="system_8cpp.html#a6ae69465c0e8ab78f44b7f31b4967f9a">systemGreenShift</a></div><div class="ttdeci">int systemGreenShift</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00038">system.cpp:38</a></div></div>
+<div class="ttc" id="system_8cpp_html_a3e43ed3bb6f846123ce7da1b003b6679"><div class="ttname"><a href="system_8cpp.html#a3e43ed3bb6f846123ce7da1b003b6679">systemBlueShift</a></div><div class="ttdeci">int systemBlueShift</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00039">system.cpp:39</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_ad928dd37445541ba904a576eb50c70ff"><div class="ttname"><a href="_globals_8cpp.html#ad928dd37445541ba904a576eb50c70ff">mirroringEnable</a></div><div class="ttdeci">bool mirroringEnable</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00052">Globals.cpp:52</a></div></div>
+<div class="ttc" id="class_v_b_a_html_af300759fcbc7eeb00ce73f956fc5ddb7"><div class="ttname"><a href="class_v_b_a.html#af300759fcbc7eeb00ce73f956fc5ddb7">VBA::cartridgeType</a></div><div class="ttdeci">IMAGE_TYPE cartridgeType</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00102">VBA.h:102</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+<div class="ttc" id="class_v_b_a_html_af21b98509a2589b38e4787f065b40a2b"><div class="ttname"><a href="class_v_b_a.html#af21b98509a2589b38e4787f065b40a2b">VBA::throttle</a></div><div class="ttdeci">int throttle</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00130">VBA.h:130</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a340eaeeb7fcfc242f08ac3442d991a96"><div class="ttname"><a href="class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96">VBA::winCheckFullscreen</a></div><div class="ttdeci">void winCheckFullscreen()</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l01808">VBA.cpp:1808</a></div></div>
+<div class="ttc" id="gb_sound_8cpp_html_a2ff51b8fba1a4efea2d3d72f93210375"><div class="ttname"><a href="gb_sound_8cpp.html#a2ff51b8fba1a4efea2d3d72f93210375">soundOffFlag</a></div><div class="ttdeci">bool soundOffFlag</div><div class="ttdef"><b>Definition:</b> <a href="_sound_8cpp_source.html#l00121">Sound.cpp:121</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ae31026d8986a7658f3aaa46fba9de663"><div class="ttname"><a href="class_v_b_a.html#ae31026d8986a7658f3aaa46fba9de663">VBA::renderMethod</a></div><div class="ttdeci">DISPLAY_TYPE renderMethod</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00138">VBA.h:138</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5c99844bc4d1e5556434afaa75ae91e5"><div class="ttname"><a href="class_v_b_a.html#a5c99844bc4d1e5556434afaa75ae91e5">VBA::winFlashSize</a></div><div class="ttdeci">int winFlashSize</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00116">VBA.h:116</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bug_report_afe00e8dd3efa190199d8d645cb702e07_cgraph.png" border="0" usemap="#class_bug_report_afe00e8dd3efa190199d8d645cb702e07_cgraph" alt=""/></div>
+<map name="class_bug_report_afe00e8dd3efa190199d8d645cb702e07_cgraph" id="class_bug_report_afe00e8dd3efa190199d8d645cb702e07_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="219,5,392,32"/>
+<area shape="rect" id="node3" href="class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="440,5,613,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bug_report_afe00e8dd3efa190199d8d645cb702e07_icgraph.png" border="0" usemap="#class_bug_report_afe00e8dd3efa190199d8d645cb702e07_icgraph" alt=""/></div>
+<map name="class_bug_report_afe00e8dd3efa190199d8d645cb702e07_icgraph" id="class_bug_report_afe00e8dd3efa190199d8d645cb702e07_icgraph">
+<area shape="rect" id="node2" href="class_bug_report.html#abcfc2e192747272d1708a1d479bfd45b" title="BugReport::OnInitDialog" alt="" coords="219,5,380,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5b019306aeca9497b7b6efd438a44558"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b019306aeca9497b7b6efd438a44558">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BugReport::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_bug_report_8cpp_source.html">BugReport.cpp</a> 파일의 <a class="el" href="_bug_report_8cpp_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(BugReport)</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a310a95d5f9724c0a5ab90008316fe541">IDC_BUG_REPORT</a>, <a class="code" href="class_bug_report.html#aef6dd887fcfe40d98d0fa1c6cf2d2466">m_report</a>);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div><div class="ttc" id="class_bug_report_html_aef6dd887fcfe40d98d0fa1c6cf2d2466"><div class="ttname"><a href="class_bug_report.html#aef6dd887fcfe40d98d0fa1c6cf2d2466">BugReport::m_report</a></div><div class="ttdeci">CEdit m_report</div><div class="ttdef"><b>Definition:</b> <a href="_bug_report_8h_source.html#l00041">BugReport.h:41</a></div></div>
+<div class="ttc" id="resource_8h_html_a310a95d5f9724c0a5ab90008316fe541"><div class="ttname"><a href="resource_8h.html#a310a95d5f9724c0a5ab90008316fe541">IDC_BUG_REPORT</a></div><div class="ttdeci">#define IDC_BUG_REPORT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00489">resource.h:489</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6b74689c7cf7ed6daeaaf2dc8f1498ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b74689c7cf7ed6daeaaf2dc8f1498ab">&#9670;&nbsp;</a></span>OnCopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BugReport::OnCopy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_bug_report_8cpp_source.html">BugReport.cpp</a> 파일의 <a class="el" href="_bug_report_8cpp_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  OpenClipboard();</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  EmptyClipboard();</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  CString report;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <a class="code" href="class_bug_report.html#aef6dd887fcfe40d98d0fa1c6cf2d2466">m_report</a>.GetWindowText(report);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  HGLOBAL hglbCopy = GlobalAlloc(GMEM_MOVEABLE, </div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                 (report.GetLength() + 1) * <span class="keyword">sizeof</span>(CHAR)); </div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordflow">if</span> (hglbCopy == <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) { </div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    CloseClipboard(); </div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  } </div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="comment">// Lock the handle and copy the text to the buffer. </span></div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  LPSTR lptstrCopy = (LPSTR)GlobalLock(hglbCopy); </div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  memcpy(lptstrCopy, (<span class="keyword">const</span> <span class="keywordtype">char</span> *)report, </div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;         report.GetLength() * <span class="keyword">sizeof</span>(CHAR)); </div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  lptstrCopy[report.GetLength()] = (TCHAR) 0;    <span class="comment">// null character </span></div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  GlobalUnlock(hglbCopy); </div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="comment">// Place the handle on the clipboard. </span></div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  </div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  SetClipboardData(CF_TEXT, hglbCopy);   </div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  CloseClipboard();</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="resource_8h.html#aba09749704e101c4a9d2b4fc7353b802">IDS_BUG_REPORT</a>, <span class="stringliteral">&quot;Bug report has been copied to the Clipboard&quot;</span>);</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div><div class="ttc" id="class_bug_report_html_aef6dd887fcfe40d98d0fa1c6cf2d2466"><div class="ttname"><a href="class_bug_report.html#aef6dd887fcfe40d98d0fa1c6cf2d2466">BugReport::m_report</a></div><div class="ttdeci">CEdit m_report</div><div class="ttdef"><b>Definition:</b> <a href="_bug_report_8h_source.html#l00041">BugReport.h:41</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="resource_8h_html_aba09749704e101c4a9d2b4fc7353b802"><div class="ttname"><a href="resource_8h.html#aba09749704e101c4a9d2b4fc7353b802">IDS_BUG_REPORT</a></div><div class="ttdeci">#define IDS_BUG_REPORT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00371">resource.h:371</a></div></div>
+<div class="ttc" id="system_8cpp_html_a747a9cb8e015a3d45cca636b5bd0fc69"><div class="ttname"><a href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a></div><div class="ttdeci">void systemMessage(int _iId, const char *_csFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00073">system.cpp:73</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bug_report_a6b74689c7cf7ed6daeaaf2dc8f1498ab_cgraph.png" border="0" usemap="#class_bug_report_a6b74689c7cf7ed6daeaaf2dc8f1498ab_cgraph" alt=""/></div>
+<map name="class_bug_report_a6b74689c7cf7ed6daeaaf2dc8f1498ab_cgraph" id="class_bug_report_a6b74689c7cf7ed6daeaaf2dc8f1498ab_cgraph">
+<area shape="rect" id="node2" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="192,5,311,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abcfc2e192747272d1708a1d479bfd45b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcfc2e192747272d1708a1d479bfd45b">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL BugReport::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_bug_report_8cpp_source.html">BugReport.cpp</a> 파일의 <a class="el" href="_bug_report_8cpp_source.html#l00110">110</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    </div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  CenterWindow();</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  CString report = <a class="code" href="class_bug_report.html#afe00e8dd3efa190199d8d645cb702e07">createReport</a>();</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <a class="code" href="class_bug_report.html#aef6dd887fcfe40d98d0fa1c6cf2d2466">m_report</a>.SetFont(CFont::FromHandle((HFONT)GetStockObject(SYSTEM_FIXED_FONT)));</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="class_bug_report.html#aef6dd887fcfe40d98d0fa1c6cf2d2466">m_report</a>.SetWindowText(report);</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    </div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div><div class="ttc" id="class_bug_report_html_aef6dd887fcfe40d98d0fa1c6cf2d2466"><div class="ttname"><a href="class_bug_report.html#aef6dd887fcfe40d98d0fa1c6cf2d2466">BugReport::m_report</a></div><div class="ttdeci">CEdit m_report</div><div class="ttdef"><b>Definition:</b> <a href="_bug_report_8h_source.html#l00041">BugReport.h:41</a></div></div>
+<div class="ttc" id="class_bug_report_html_afe00e8dd3efa190199d8d645cb702e07"><div class="ttname"><a href="class_bug_report.html#afe00e8dd3efa190199d8d645cb702e07">BugReport::createReport</a></div><div class="ttdeci">CString createReport()</div><div class="ttdef"><b>Definition:</b> <a href="_bug_report_8cpp_source.html#l00138">BugReport.cpp:138</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bug_report_abcfc2e192747272d1708a1d479bfd45b_cgraph.png" border="0" usemap="#class_bug_report_abcfc2e192747272d1708a1d479bfd45b_cgraph" alt=""/></div>
+<map name="class_bug_report_abcfc2e192747272d1708a1d479bfd45b_cgraph" id="class_bug_report_abcfc2e192747272d1708a1d479bfd45b_cgraph">
+<area shape="rect" id="node2" href="class_bug_report.html#afe00e8dd3efa190199d8d645cb702e07" title="BugReport::createReport" alt="" coords="215,5,380,32"/>
+<area shape="rect" id="node3" href="class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="428,5,601,32"/>
+<area shape="rect" id="node4" href="class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="649,5,823,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2c9a7f1da33a46ca97f0ecd821e701e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c9a7f1da33a46ca97f0ecd821e701e9">&#9670;&nbsp;</a></span>OnOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void BugReport::OnOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_bug_report_8cpp_source.html">BugReport.cpp</a> 파일의 <a class="el" href="_bug_report_8cpp_source.html#l00105">105</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  EndDialog(TRUE);</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="aef6dd887fcfe40d98d0fa1c6cf2d2466"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6dd887fcfe40d98d0fa1c6cf2d2466">&#9670;&nbsp;</a></span>m_report</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CEdit BugReport::m_report</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_bug_report_8h_source.html">BugReport.h</a> 파일의 <a class="el" href="_bug_report_8h_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_bug_report_8h_source.html">BugReport.h</a></li>
-<li>src/win32/BugReport.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_bug_report_8h_source.html">BugReport.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_bug_report_8cpp_source.html">BugReport.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_bug_report.html">BugReport</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

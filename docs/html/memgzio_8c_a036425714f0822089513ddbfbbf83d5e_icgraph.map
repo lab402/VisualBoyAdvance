@@ -1,0 +1,8 @@
+<map id="getLong" name="getLong">
+<area shape="rect" id="node2" href="$memgzio_8h.html#a1c97265d5bc68977d1af82f30b82427c" title="memgzread" alt="" coords="121,81,212,108"/>
+<area shape="rect" id="node3" href="$_util_8h.html#a02e6a64e4965d9911ebe6cf6b43fd192" title="utilMemGzOpen" alt="" coords="260,81,376,108"/>
+<area shape="rect" id="node4" href="$_g_b_8h.html#abf83eaea4927776c4d4e4e70720515eb" title="gbWriteMemSaveState" alt="" coords="424,5,579,32"/>
+<area shape="rect" id="node5" href="$_g_b_8h.html#a0da167f7d0a43c90028ac9e39527c6f0" title="gbReadMemSaveState" alt="" coords="424,56,579,83"/>
+<area shape="rect" id="node6" href="$_g_b_a_8h.html#a628cef443f29863442488c47d2b97cef" title="CPUWriteMemState" alt="" coords="431,107,571,133"/>
+<area shape="rect" id="node7" href="$_g_b_a_8h.html#a2ca5fcf7a3c5f4fa8c4b4c185fdda98c" title="CPUReadMemState" alt="" coords="432,157,571,184"/>
+</map>

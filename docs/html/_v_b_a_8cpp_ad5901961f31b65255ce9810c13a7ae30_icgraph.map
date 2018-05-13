@@ -1,0 +1,6 @@
+<map id="Simple2x" name="Simple2x">
+<area shape="rect" id="node2" href="$class_v_b_a.html#afbe0e6f9458f25adb848516537a91747" title="VBA::updateFilter" alt="" coords="129,56,255,83"/>
+<area shape="rect" id="node3" href="$class_direct3_d_display.html#a8b8dfd84005816382396677e23d38879" title="Direct3DDisplay::initialize" alt="" coords="305,5,476,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#adfab8994e984c069ace4f06dafcbfbd1" title="MainWnd::OnOptionsFilter" alt="" coords="303,56,479,83"/>
+<area shape="rect" id="node5" href="$class_open_g_l_display.html#af0db619c7083f43e9bc61f1705843b53" title="OpenGLDisplay::initialize" alt="" coords="307,107,475,133"/>
+</map>

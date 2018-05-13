@@ -1,0 +1,9 @@
+<map id="TileView::OnCharbase1" name="TileView::OnCharbase1">
+<area shape="rect" id="node2" href="$class_tile_view.html#a4341071a0cab0d5a8b6dfa7318230636" title="TileView::paint" alt="" coords="211,107,317,133"/>
+<area shape="rect" id="node3" href="$class_tile_view.html#a4b8f6e14f8ee7d4abea3a751cb5f7d74" title="TileView::render" alt="" coords="383,81,498,108"/>
+<area shape="rect" id="node8" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="365,132,516,159"/>
+<area shape="rect" id="node4" href="$class_tile_view.html#a1232e131b9ef993edea4390809c41814" title="TileView::renderTile256" alt="" coords="573,5,727,32"/>
+<area shape="rect" id="node5" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="572,56,728,83"/>
+<area shape="rect" id="node6" href="$class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="564,107,736,133"/>
+<area shape="rect" id="node7" href="$class_tile_view.html#abc4f9051fc3c2bfad76a6b11787460f8" title="TileView::renderTile16" alt="" coords="576,157,724,184"/>
+</map>

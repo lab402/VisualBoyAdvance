@@ -1,0 +1,10 @@
+<map id="VBA::updateFrameSkip" name="VBA::updateFrameSkip">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="251,107,381,133"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#aafb7bdce8ddf0dbe3420c1f5fcd9fd62" title="MainWnd::OnOptionsFrameskip\lAutomatic" alt="" coords="212,158,420,199"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#a753174cb5893b2a20c004f9431d1f7aa" title="MainWnd::OnOptionsFrameskip" alt="" coords="212,224,420,251"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="511,5,668,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="512,56,667,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="497,107,682,133"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="486,157,693,184"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="468,208,711,235"/>
+</map>

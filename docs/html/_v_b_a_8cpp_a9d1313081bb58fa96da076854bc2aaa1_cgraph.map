@@ -1,0 +1,6 @@
+<map id="systemReadJoypad" name="systemReadJoypad">
+<area shape="rect" id="node2" href="$system_8cpp.html#aab0541660bed0f14fdc8e9ccf6e08d53" title="GUI" alt="" coords="263,5,307,32"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_window.html#ad5768e6fccecbcc761de003ae915684b" title="VBA::Window::uiReadJoypad" alt="" coords="189,56,381,83"/>
+<area shape="rect" id="node5" href="$class_input.html#a57a47977bda8fcf6de237401b4c2e0dd" title="Input::readDevice" alt="" coords="225,107,346,133"/>
+<area shape="rect" id="node3" href="$class_v_b_a_1_1_window.html#a8e084a0514c78b2c93013c3fb9e2e6e9" title="VBA::Window::poGetInstance" alt="" coords="429,5,624,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="memtell" name="memtell">
+<area shape="rect" id="node2" href="$_util_8h.html#a99f60350d1f02a32e39fda2978830191" title="utilGzMemTell" alt="" coords="121,31,227,57"/>
+<area shape="rect" id="node3" href="$_g_b_8h.html#abf83eaea4927776c4d4e4e70720515eb" title="gbWriteMemSaveState" alt="" coords="275,5,429,32"/>
+<area shape="rect" id="node4" href="$_g_b_a_8h.html#a628cef443f29863442488c47d2b97cef" title="CPUWriteMemState" alt="" coords="282,56,422,83"/>
+</map>

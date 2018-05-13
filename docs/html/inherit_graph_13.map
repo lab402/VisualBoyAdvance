@@ -1,0 +1,12 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="node2" href="$class_color_control.html" title="ColorControl" alt="" coords="131,5,225,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html" title="MainWnd" alt="" coords="139,56,217,83"/>
+<area shape="rect" id="node4" href="$class_memory_viewer.html" title="MemoryViewer" alt="" coords="124,107,232,133"/>
+<area shape="rect" id="node7" href="$class_palette_view_control.html" title="PaletteViewControl" alt="" coords="112,157,244,184"/>
+<area shape="rect" id="node10" href="$class_skin_button.html" title="SkinButton" alt="" coords="135,208,221,235"/>
+<area shape="rect" id="node11" href="$class_zoom_control.html" title="ZoomControl" alt="" coords="131,259,225,285"/>
+<area shape="rect" id="node5" href="$class_g_b_a_memory_viewer.html" title="GBAMemoryViewer" alt="" coords="304,56,440,83"/>
+<area shape="rect" id="node6" href="$class_g_b_memory_viewer.html" title="GBMemoryViewer" alt="" coords="309,107,435,133"/>
+<area shape="rect" id="node8" href="$class_g_b_a_palette_view_control.html" title="GBAPaletteViewControl" alt="" coords="292,157,452,184"/>
+<area shape="rect" id="node9" href="$class_g_b_palette_view_control.html" title="GBPaletteViewControl" alt="" coords="297,208,447,235"/>
+</map>

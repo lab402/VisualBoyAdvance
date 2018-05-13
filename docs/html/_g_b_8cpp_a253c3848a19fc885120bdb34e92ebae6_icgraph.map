@@ -1,0 +1,7 @@
+<map id="gbWriteSaveMBC3" name="gbWriteSaveMBC3">
+<area shape="rect" id="node2" href="$_g_b_8h.html#a9389fdc85e3522a778e41a7004490282" title="gbWriteBatteryFile" alt="" coords="184,56,315,83"/>
+<area shape="rect" id="node3" href="$_g_b_8h.html#aad488d5639e18bd991669476a3a7d71a" title="gbWriteBatteryFile" alt="" coords="415,5,545,32"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_window.html#a26d233092dd624a0bd3734ec0cdc0d7c" title="VBA::Window::vOnExportBatteryFile" alt="" coords="363,56,597,83"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a0da8957d2bcd55859914b0013c6d21f7" title="MainWnd::OnFileExportBatteryfile" alt="" coords="371,107,589,133"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="645,56,803,83"/>
+</map>

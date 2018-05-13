@@ -1,0 +1,26 @@
+var class_directories =
+[
+    [ "IDD", "class_directories.html#af0d05207ae8fd4572edf7950c207d6c0a6b2cbc79bd35885c2f543f480aa0b2e6", null ],
+    [ "Directories", "class_directories.html#a03ef542d611759b1b619742e0bde92e7", null ],
+    [ "browseForDir", "class_directories.html#a7e24bf265fe6af9c01e0939952c337e1", null ],
+    [ "DoDataExchange", "class_directories.html#a1c9309bbbbd233e7d5916f868f1f2671", null ],
+    [ "OnBatteryDir", "class_directories.html#a31c9021298d9f3a3ea1beabe73ab7685", null ],
+    [ "OnBatteryDirReset", "class_directories.html#a9479f79772b934344110acfccd64a064", null ],
+    [ "OnCancel", "class_directories.html#a139df4e3666356c21c7e5f02ae268193", null ],
+    [ "OnCaptureDir", "class_directories.html#a01d34b2ff1d1c0a2a3e638e0cfdd7db7", null ],
+    [ "OnCaptureDirReset", "class_directories.html#a2e98e0696392fcd819f48ac56012c35d", null ],
+    [ "OnGbromDir", "class_directories.html#acb13ecb0add4c5e10ed47d40d6a8605c", null ],
+    [ "OnGbromDirReset", "class_directories.html#aa323eb09c0caba8b8e5ff7984fd8e2e6", null ],
+    [ "OnInitDialog", "class_directories.html#a53964c598a5541b1d65cfee62e5d8587", null ],
+    [ "OnOK", "class_directories.html#aabe175a096e8718818d7bca6bd6cd455", null ],
+    [ "OnRomDir", "class_directories.html#a0ed6f361bde84a4a6a37c41582a929ec", null ],
+    [ "OnRomDirReset", "class_directories.html#a944a8a843ab8f0cdec54bf8aaba7d8a5", null ],
+    [ "OnSaveDir", "class_directories.html#a0951489dd35ed7af5fb7ea27c95fbe8e", null ],
+    [ "OnSaveDirReset", "class_directories.html#aeb85866cbd498c057e9bf66b58a78959", null ],
+    [ "initialFolderDir", "class_directories.html#a5f307fd959af44c194c520b5452cafba", null ],
+    [ "m_batteryPath", "class_directories.html#af8f18fc9d1fbcd0df0cba4ec6fb862de", null ],
+    [ "m_capturePath", "class_directories.html#a4010cf261f54e1477c6587395fd055d4", null ],
+    [ "m_gbromPath", "class_directories.html#adffa22cb6f6be3c0b7327670dd885f83", null ],
+    [ "m_romPath", "class_directories.html#a2d5fa2646d8216ec7f2093073174ab38", null ],
+    [ "m_savePath", "class_directories.html#a9293c8e99ad84e8a78d127ff09534d6c", null ]
+];

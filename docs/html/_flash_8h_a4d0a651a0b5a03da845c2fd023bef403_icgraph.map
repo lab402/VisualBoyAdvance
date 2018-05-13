@@ -1,0 +1,14 @@
+<map id="flashSetSize" name="flashSetSize">
+<area shape="rect" id="node2" href="$_g_b_a_8h.html#af1ecaa63e2f31ba73133cb9ca8ed7c41" title="CPUReadBatteryFile" alt="" coords="176,5,319,32"/>
+<area shape="rect" id="node3" href="$class_v_b_a_1_1_window.html#a592d046d6e85921562d26285387cc45a" title="VBA::Window::vOnFlashSize\lToggled" alt="" coords="152,57,343,98"/>
+<area shape="rect" id="node5" href="$_util_8h.html#a29f118c8c6fb8be1f4d2128d6ddd084d" title="utilGBAFindSave" alt="" coords="187,123,307,149"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="183,173,312,200"/>
+<area shape="rect" id="node12" href="$class_main_wnd.html#a10c98fcb234998c2d621585d4b244451" title="MainWnd::OnOptionsEmulator\lSavetypeFlash512k" alt="" coords="148,225,347,266"/>
+<area shape="rect" id="node13" href="$class_main_wnd.html#ac70aeadfab0e7ed9120a03f11564f56c" title="MainWnd::OnOptionsEmulator\lSavetypeFlash1m" alt="" coords="148,290,347,331"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="437,43,595,69"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="437,93,595,120"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="439,144,593,171"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="423,195,609,221"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="413,245,619,272"/>
+<area shape="rect" id="node11" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="395,296,637,323"/>
+</map>

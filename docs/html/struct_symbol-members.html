@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_symbol.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Symbol 멤버 목록</div>  </div>
@@ -68,18 +92,21 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="struct_symbol.html">Symbol</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>address</b> (다음에서 정의됨 : <a class="el" href="struct_symbol.html">Symbol</a>)</td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>binding</b> (다음에서 정의됨 : <a class="el" href="struct_symbol.html">Symbol</a>)</td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>name</b> (다음에서 정의됨 : <a class="el" href="struct_symbol.html">Symbol</a>)</td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>size</b> (다음에서 정의됨 : <a class="el" href="struct_symbol.html">Symbol</a>)</td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>type</b> (다음에서 정의됨 : <a class="el" href="struct_symbol.html">Symbol</a>)</td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>value</b> (다음에서 정의됨 : <a class="el" href="struct_symbol.html">Symbol</a>)</td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_symbol.html#a410b524fa23be6c41b1de68c9b620226">address</a></td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_symbol.html#a7b846956436c2911e3b316bf06b080fd">binding</a></td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_symbol.html#aa9ba617cd9de17ed73148893a6c14606">name</a></td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_symbol.html#a1ce0cce2939edefe73195657c6371f56">size</a></td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_symbol.html#a3a8a7698da2e96f2fd77296b5191ce6f">type</a></td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_symbol.html#aefbe563b4964a3cc4ee85c3efaccb7d2">value</a></td><td class="entry"><a class="el" href="struct_symbol.html">Symbol</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

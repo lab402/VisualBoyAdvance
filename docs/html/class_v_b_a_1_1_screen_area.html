@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_v_b_a_1_1_screen_area.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>VBA</b></li><li class="navelem"><a class="el" href="class_v_b_a_1_1_screen_area.html">ScreenArea</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -73,67 +93,475 @@ $(function() {
 <div class="title">VBA::ScreenArea 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="screenarea_8h_source.html">screenarea.h</a>&gt;</code></p>
 <div class="dynheader">
 VBA::ScreenArea에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_v_b_a_1_1_screen_area.png" usemap="#VBA::ScreenArea_map" alt=""/>
-  <map id="VBA::ScreenArea_map" name="VBA::ScreenArea_map">
-</map>
- </div></div>
+<div class="center"><img src="class_v_b_a_1_1_screen_area__inherit__graph.png" border="0" usemap="#_v_b_a_1_1_screen_area_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+VBA::ScreenArea에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_screen_area__coll__graph.png" border="0" usemap="#_v_b_a_1_1_screen_area_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a5bc7bd5f6077d82a7affa8527d3112c9"><td class="memItemLeft" align="right" valign="top"><a id="a5bc7bd5f6077d82a7affa8527d3112c9"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenArea</b> (int _iWidth, int _iHeight, int _iScale=1)</td></tr>
+<tr class="memitem:a5bc7bd5f6077d82a7affa8527d3112c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#a5bc7bd5f6077d82a7affa8527d3112c9">ScreenArea</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> _iWidth, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> _iHeight, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> _iScale=1)</td></tr>
 <tr class="separator:a5bc7bd5f6077d82a7affa8527d3112c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67e85578c2affd30bfe40b8768900d83"><td class="memItemLeft" align="right" valign="top"><a id="a67e85578c2affd30bfe40b8768900d83"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vSetSize</b> (int _iWidth, int _iHeight)</td></tr>
+<tr class="memitem:a3256c9d53615bdf68d84b11e29f725cd"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#a3256c9d53615bdf68d84b11e29f725cd">~ScreenArea</a> ()</td></tr>
+<tr class="separator:a3256c9d53615bdf68d84b11e29f725cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e85578c2affd30bfe40b8768900d83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#a67e85578c2affd30bfe40b8768900d83">vSetSize</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> _iWidth, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> _iHeight)</td></tr>
 <tr class="separator:a67e85578c2affd30bfe40b8768900d83"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39182c21dfcc5c1f58171986f9c6305f"><td class="memItemLeft" align="right" valign="top"><a id="a39182c21dfcc5c1f58171986f9c6305f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vSetScale</b> (int _iScale)</td></tr>
+<tr class="memitem:a39182c21dfcc5c1f58171986f9c6305f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#a39182c21dfcc5c1f58171986f9c6305f">vSetScale</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> _iScale)</td></tr>
 <tr class="separator:a39182c21dfcc5c1f58171986f9c6305f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad42090409e7ddec2c1cd9d715a38f8d9"><td class="memItemLeft" align="right" valign="top"><a id="ad42090409e7ddec2c1cd9d715a38f8d9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vSetFilter2x</b> (EFilter2x _eFilter2x)</td></tr>
+<tr class="memitem:ad42090409e7ddec2c1cd9d715a38f8d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#ad42090409e7ddec2c1cd9d715a38f8d9">vSetFilter2x</a> (<a class="el" href="class_v_b_a.html#a1683020d7324daf3bda627d0d3658e3e">EFilter2x</a> _eFilter2x)</td></tr>
 <tr class="separator:ad42090409e7ddec2c1cd9d715a38f8d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a23a673843050e232e83588cfab81ce"><td class="memItemLeft" align="right" valign="top"><a id="a7a23a673843050e232e83588cfab81ce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vSetFilterIB</b> (EFilterIB _eFilterIB)</td></tr>
+<tr class="memitem:a7a23a673843050e232e83588cfab81ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#a7a23a673843050e232e83588cfab81ce">vSetFilterIB</a> (<a class="el" href="class_v_b_a.html#a304ffeb9f4a8b26e7fa4e2eb620d780f">EFilterIB</a> _eFilterIB)</td></tr>
 <tr class="separator:a7a23a673843050e232e83588cfab81ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7b6579afb665abf3b6a5004f03b63f8"><td class="memItemLeft" align="right" valign="top"><a id="ad7b6579afb665abf3b6a5004f03b63f8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vDrawPixels</b> (u8 *_puiData)</td></tr>
+<tr class="memitem:ad7b6579afb665abf3b6a5004f03b63f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#ad7b6579afb665abf3b6a5004f03b63f8">vDrawPixels</a> (<a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *_puiData)</td></tr>
 <tr class="separator:ad7b6579afb665abf3b6a5004f03b63f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaefba8f2cfd6d3c759df0b38f9edd1bd"><td class="memItemLeft" align="right" valign="top"><a id="aaefba8f2cfd6d3c759df0b38f9edd1bd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vDrawColor</b> (u32 _uiColor)</td></tr>
+<tr class="memitem:aaefba8f2cfd6d3c759df0b38f9edd1bd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#aaefba8f2cfd6d3c759df0b38f9edd1bd">vDrawColor</a> (<a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> _uiColor)</td></tr>
 <tr class="separator:aaefba8f2cfd6d3c759df0b38f9edd1bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:ab800ac1ff230ac9cf33ac144e614160e"><td class="memItemLeft" align="right" valign="top"><a id="ab800ac1ff230ac9cf33ac144e614160e"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>on_expose_event</b> (GdkEventExpose *_pstEvent)</td></tr>
+<tr class="memitem:ab800ac1ff230ac9cf33ac144e614160e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#ab800ac1ff230ac9cf33ac144e614160e">on_expose_event</a> (GdkEventExpose *_pstEvent)</td></tr>
 <tr class="separator:ab800ac1ff230ac9cf33ac144e614160e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a341c2aa9a29f33e16923073b43e3e6"><td class="memItemLeft" align="right" valign="top"><a id="a3a341c2aa9a29f33e16923073b43e3e6"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>on_motion_notify_event</b> (GdkEventMotion *_pstEvent)</td></tr>
+<tr class="memitem:a3a341c2aa9a29f33e16923073b43e3e6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#a3a341c2aa9a29f33e16923073b43e3e6">on_motion_notify_event</a> (GdkEventMotion *_pstEvent)</td></tr>
 <tr class="separator:a3a341c2aa9a29f33e16923073b43e3e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0bb4110528b060c4fb9a01ad868e4b5"><td class="memItemLeft" align="right" valign="top"><a id="aa0bb4110528b060c4fb9a01ad868e4b5"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>on_enter_notify_event</b> (GdkEventCrossing *_pstEvent)</td></tr>
+<tr class="memitem:aa0bb4110528b060c4fb9a01ad868e4b5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#aa0bb4110528b060c4fb9a01ad868e4b5">on_enter_notify_event</a> (GdkEventCrossing *_pstEvent)</td></tr>
 <tr class="separator:aa0bb4110528b060c4fb9a01ad868e4b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15325a7cba813d00e8b2638a6abf651f"><td class="memItemLeft" align="right" valign="top"><a id="a15325a7cba813d00e8b2638a6abf651f"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>on_leave_notify_event</b> (GdkEventCrossing *_pstEvent)</td></tr>
+<tr class="memitem:a15325a7cba813d00e8b2638a6abf651f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#a15325a7cba813d00e8b2638a6abf651f">on_leave_notify_event</a> (GdkEventCrossing *_pstEvent)</td></tr>
 <tr class="separator:a15325a7cba813d00e8b2638a6abf651f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27266c7186e0d854759430c400d3e48a"><td class="memItemLeft" align="right" valign="top"><a id="a27266c7186e0d854759430c400d3e48a"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>bOnCursorTimeout</b> ()</td></tr>
+<tr class="memitem:a27266c7186e0d854759430c400d3e48a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_screen_area.html#a27266c7186e0d854759430c400d3e48a">bOnCursorTimeout</a> ()</td></tr>
 <tr class="separator:a27266c7186e0d854759430c400d3e48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="screenarea_8h_source.html">screenarea.h</a> 파일의 <a class="el" href="screenarea_8h_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a5bc7bd5f6077d82a7affa8527d3112c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bc7bd5f6077d82a7affa8527d3112c9">&#9670;&nbsp;</a></span>ScreenArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VBA::ScreenArea::ScreenArea </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>_iWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>_iHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>_iScale</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                                                             :</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  m_puiPixels(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>),</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  m_puiDelta(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>),</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  m_vFilter2x(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>),</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  m_vFilterIB(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>),</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  m_bShowCursor(<span class="keyword">true</span>)</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  g_assert(_iWidth &gt;= 1 &amp;&amp; _iHeight &gt;= 1 &amp;&amp; _iScale &gt;= 1);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  m_iWidth  = _iWidth;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  m_iHeight = _iHeight;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  m_iScale  = _iScale;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  vUpdateSize();</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  set_events(Gdk::EXPOSURE_MASK</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;             | Gdk::POINTER_MOTION_MASK</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;             | Gdk::ENTER_NOTIFY_MASK</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;             | Gdk::LEAVE_NOTIFY_MASK);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">char</span> aiEmptyData[8];</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  memset(aiEmptyData, 0, <span class="keyword">sizeof</span>(aiEmptyData));</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  Glib::RefPtr&lt;Gdk::Bitmap&gt; poSource = Gdk::Bitmap::create(aiEmptyData, 8, 8);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  Glib::RefPtr&lt;Gdk::Bitmap&gt; poMask = Gdk::Bitmap::create(aiEmptyData, 8, 8);</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  Gdk::Color oFg;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  Gdk::Color oBg;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  oFg.set_rgb(0, 0, 0);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  oBg.set_rgb(0, 0, 0);</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  m_poEmptyCursor = <span class="keyword">new</span> Gdk::Cursor(poSource, poMask, oFg, oBg, 0, 0);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3256c9d53615bdf68d84b11e29f725cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3256c9d53615bdf68d84b11e29f725cd">&#9670;&nbsp;</a></span>~ScreenArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">VBA::ScreenArea::~ScreenArea </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keywordflow">if</span> (m_puiPixels != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  {</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keyword">delete</span>[] m_puiPixels;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">if</span> (m_puiDelta != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  {</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">delete</span>[] m_puiDelta;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordflow">if</span> (m_poEmptyCursor != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  {</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">delete</span> m_poEmptyCursor;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a27266c7186e0d854759430c400d3e48a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27266c7186e0d854759430c400d3e48a">&#9670;&nbsp;</a></span>bOnCursorTimeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VBA::ScreenArea::bOnCursorTimeout </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00287">287</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;{</div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;  vHideCursor();</div><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aa0bb4110528b060c4fb9a01ad868e4b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0bb4110528b060c4fb9a01ad868e4b5">&#9670;&nbsp;</a></span>on_enter_notify_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VBA::ScreenArea::on_enter_notify_event </td>
+          <td>(</td>
+          <td class="paramtype">GdkEventCrossing *&#160;</td>
+          <td class="paramname"><em>_pstEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00271">271</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  vStartCursorTimeout();</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ab800ac1ff230ac9cf33ac144e614160e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab800ac1ff230ac9cf33ac144e614160e">&#9670;&nbsp;</a></span>on_expose_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VBA::ScreenArea::on_expose_event </td>
+          <td>(</td>
+          <td class="paramtype">GdkEventExpose *&#160;</td>
+          <td class="paramname"><em>_pstEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00230">230</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;{</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <span class="keywordflow">if</span> (_pstEvent-&gt;area.x + _pstEvent-&gt;area.width &gt; m_iAreaWidth</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;      || _pstEvent-&gt;area.y + _pstEvent-&gt;area.height &gt; m_iAreaHeight)</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;  {</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  }</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  guchar * puiAreaPixels = (guchar *)m_puiPixels;</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordflow">if</span> (_pstEvent-&gt;area.x != 0)</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;  {</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    puiAreaPixels += _pstEvent-&gt;area.x &lt;&lt; 2;</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  }</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;  <span class="keywordflow">if</span> (_pstEvent-&gt;area.y != 0)</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;  {</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    puiAreaPixels += _pstEvent-&gt;area.y * m_iRowStride;</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;  }</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  get_window()-&gt;draw_rgb_32_image(get_style()-&gt;get_fg_gc(get_state()),</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;                                  _pstEvent-&gt;area.x,</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;                                  _pstEvent-&gt;area.y,</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                                  _pstEvent-&gt;area.width,</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                                  _pstEvent-&gt;area.height,</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                                  Gdk::RGB_DITHER_MAX,</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                                  puiAreaPixels,</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                                  m_iRowStride);</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a15325a7cba813d00e8b2638a6abf651f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15325a7cba813d00e8b2638a6abf651f">&#9670;&nbsp;</a></span>on_leave_notify_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VBA::ScreenArea::on_leave_notify_event </td>
+          <td>(</td>
+          <td class="paramtype">GdkEventCrossing *&#160;</td>
+          <td class="paramname"><em>_pstEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00277">277</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;{</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  vStopCursorTimeout();</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;  <span class="keywordflow">if</span> (! m_bShowCursor)</div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  {</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    vShowCursor();</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  }</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a3a341c2aa9a29f33e16923073b43e3e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a341c2aa9a29f33e16923073b43e3e6">&#9670;&nbsp;</a></span>on_motion_notify_event()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool VBA::ScreenArea::on_motion_notify_event </td>
+          <td>(</td>
+          <td class="paramtype">GdkEventMotion *&#160;</td>
+          <td class="paramname"><em>_pstEvent</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00261">261</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">if</span> (! m_bShowCursor)</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  {</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    vShowCursor();</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  }</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  vStartCursorTimeout();</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aaefba8f2cfd6d3c759df0b38f9edd1bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaefba8f2cfd6d3c759df0b38f9edd1bd">&#9670;&nbsp;</a></span>vDrawColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::ScreenArea::vDrawColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td>
+          <td class="paramname"><em>_uiColor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00167">167</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;{</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  _uiColor = GUINT32_TO_BE(_uiColor) &lt;&lt; 8;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> * puiPixel = m_puiPixels;</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;  <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> * puiEnd   = m_puiPixels + m_iAreaWidth * m_iAreaHeight;</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="keywordflow">while</span> (puiPixel != puiEnd)</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  {</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    *puiPixel++ = _uiColor;</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  }</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;  queue_draw_area(0, 0, m_iAreaWidth, m_iAreaHeight);</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;}</div><div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad7b6579afb665abf3b6a5004f03b63f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b6579afb665abf3b6a5004f03b63f8">&#9670;&nbsp;</a></span>vDrawPixels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::ScreenArea::vDrawPixels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>_puiData</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00108">108</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordflow">if</span> (m_vFilterIB != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  {</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    m_vFilterIB(_puiData + m_iAreaWidth * 2 + 4,</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                m_iAreaWidth * 2 + 4,</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                m_iWidth,</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                m_iHeight);</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="keywordflow">if</span> (m_iScale == 1)</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  {</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> * puiSrc = (<a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> *)_puiData + m_iWidth + 1;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> * puiPixel = m_puiPixels;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; m_iHeight; y++)</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; m_iWidth; x++)</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      {</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        *puiPixel++ = *puiSrc++;</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      }</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      puiSrc++;</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  }</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (m_iScale == 2 &amp;&amp; m_vFilter2x != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  {</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    m_vFilter2x(_puiData + m_iAreaWidth * 2 + 4,</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                m_iAreaWidth * 2 + 4,</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                m_puiDelta,</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                (<a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)m_puiPixels,</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                m_iRowStride,</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                m_iWidth,</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                m_iHeight);</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;  }</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  {</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> * puiSrc = (<a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> *)_puiData + m_iWidth + 1;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> * puiSrc2;</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> * puiPixel = m_puiPixels;</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> y = 0; y &lt; m_iHeight; y++)</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    {</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; m_iScale; j++)</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      {</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        puiSrc2 = puiSrc;</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; m_iWidth; x++)</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        {</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; m_iScale; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;          {</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            *puiPixel++ = *puiSrc2;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;          }</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;          puiSrc2++;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;      }</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;      puiSrc = puiSrc2 + 1;</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  }</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  queue_draw_area(0, 0, m_iAreaWidth, m_iAreaHeight);</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div><div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01392">expr-lex.cpp:1392</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_screen_area_ad7b6579afb665abf3b6a5004f03b63f8_icgraph.png" border="0" usemap="#class_v_b_a_1_1_screen_area_ad7b6579afb665abf3b6a5004f03b63f8_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_screen_area_ad7b6579afb665abf3b6a5004f03b63f8_icgraph" id="class_v_b_a_1_1_screen_area_ad7b6579afb665abf3b6a5004f03b63f8_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_window.html#af82e47600303a15b2aa4fdffb90df394" title="VBA::Window::vDrawScreen" alt="" coords="256,301,443,328"/>
+<area shape="rect" id="node3" href="_system_8h.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="533,183,667,209"/>
+<area shape="rect" id="node20" href="class_v_b_a_1_1_window.html#ad73fe13a9e4c8b40fbe6f0726210cc5c" title="VBA::Window::vOnFilter2x\lToggled" alt="" coords="512,294,688,335"/>
+<area shape="rect" id="node22" href="class_v_b_a_1_1_window.html#afddc93921e9561601104184bb16941e5" title="VBA::Window::vOnFilterIBToggled" alt="" coords="491,360,709,387"/>
+<area shape="rect" id="node4" href="_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="803,5,887,32"/>
+<area shape="rect" id="node6" href="_s_d_l_8cpp.html#a50d948bf474caba7bfedd641bd5f4e2c" title="sdlWriteState" alt="" coords="794,56,895,83"/>
+<area shape="rect" id="node7" href="_s_d_l_8cpp.html#a915c860581a6f2a7fa3f0d3ae784e21c" title="sdlReadState" alt="" coords="795,107,895,133"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#a0c100c54d2e6d48fa3f68d2da1609e65" title="MainWnd::OnPaint" alt="" coords="779,157,911,184"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#a13b06fced945b76eb11328fb66f70123" title="MainWnd::OnActivate" alt="" coords="771,208,919,235"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a84c4154350bd26b393fcd82948d342e1" title="MainWnd::OnFileLoadSlot" alt="" coords="757,259,932,285"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#aa10e0e321035d0cd1e1e953529df5f19" title="MainWnd::OnFileSaveSlot" alt="" coords="757,309,932,336"/>
+<area shape="rect" id="node5" href="class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="1020,5,1188,32"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#aafa7776c35ba50c4244cb22650f15337" title="MainWnd::OnFileLoadgameMostrecent" alt="" coords="980,259,1228,285"/>
+<area shape="rect" id="node12" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1276,259,1405,285"/>
+<area shape="rect" id="node13" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1496,157,1653,184"/>
+<area shape="rect" id="node14" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1497,208,1652,235"/>
+<area shape="rect" id="node15" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1482,259,1667,285"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1471,309,1678,336"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1453,360,1696,387"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#a946615293a97e8d381bb34bee4d7ff24" title="MainWnd::OnFileSavegameOldestslot" alt="" coords="983,309,1225,336"/>
+<area shape="rect" id="node21" href="class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="766,360,923,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad42090409e7ddec2c1cd9d715a38f8d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42090409e7ddec2c1cd9d715a38f8d9">&#9670;&nbsp;</a></span>vSetFilter2x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::ScreenArea::vSetFilter2x </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_v_b_a.html#a1683020d7324daf3bda627d0d3658e3e">EFilter2x</a>&#160;</td>
+          <td class="paramname"><em>_eFilter2x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00098">98</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;{</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  m_vFilter2x = <a class="code" href="namespace_v_b_a.html#a2a6c0188179e4ee017369e21d8e6f268">pvGetFilter2x</a>(_eFilter2x, <a class="code" href="class_v_b_a.html#a6ec41ea038b4ea42eb8d9ea59d3eb4c5a5f5e047b6fb2c818c71882c4b3f3fc0c">FilterDepth32</a>);</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div><div class="ttc" id="namespace_v_b_a_html_a2a6c0188179e4ee017369e21d8e6f268"><div class="ttname"><a href="namespace_v_b_a.html#a2a6c0188179e4ee017369e21d8e6f268">VBA::pvGetFilter2x</a></div><div class="ttdeci">Filter2x pvGetFilter2x(EFilter2x _eFilter2x, EFilterDepth _eDepth)</div><div class="ttdef"><b>Definition:</b> <a href="filters_8cpp_source.html#l00049">filters.cpp:49</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a6ec41ea038b4ea42eb8d9ea59d3eb4c5a5f5e047b6fb2c818c71882c4b3f3fc0c"><div class="ttname"><a href="class_v_b_a.html#a6ec41ea038b4ea42eb8d9ea59d3eb4c5a5f5e047b6fb2c818c71882c4b3f3fc0c">VBA::FilterDepth32</a></div><div class="ttdef"><b>Definition:</b> <a href="filters_8h_source.html#l00097">filters.h:97</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9_cgraph.png" border="0" usemap="#class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9_cgraph" id="class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9_cgraph">
+<area shape="rect" id="node2" href="namespace_v_b_a.html#a2a6c0188179e4ee017369e21d8e6f268" title="VBA::pvGetFilter2x" alt="" coords="255,5,388,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9_icgraph.png" border="0" usemap="#class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9_icgraph" id="class_v_b_a_1_1_screen_area_ad42090409e7ddec2c1cd9d715a38f8d9_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_window.html#ad73fe13a9e4c8b40fbe6f0726210cc5c" title="VBA::Window::vOnFilter2x\lToggled" alt="" coords="255,5,431,47"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="479,13,636,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7a23a673843050e232e83588cfab81ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a23a673843050e232e83588cfab81ce">&#9670;&nbsp;</a></span>vSetFilterIB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::ScreenArea::vSetFilterIB </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_v_b_a.html#a304ffeb9f4a8b26e7fa4e2eb620d780f">EFilterIB</a>&#160;</td>
+          <td class="paramname"><em>_eFilterIB</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00103">103</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;{</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  m_vFilterIB = <a class="code" href="namespace_v_b_a.html#ad5980a2981a7b766dce52ebc49a987bb">pvGetFilterIB</a>(_eFilterIB, <a class="code" href="class_v_b_a.html#a6ec41ea038b4ea42eb8d9ea59d3eb4c5a5f5e047b6fb2c818c71882c4b3f3fc0c">FilterDepth32</a>);</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div><div class="ttc" id="namespace_v_b_a_html_ad5980a2981a7b766dce52ebc49a987bb"><div class="ttname"><a href="namespace_v_b_a.html#ad5980a2981a7b766dce52ebc49a987bb">VBA::pvGetFilterIB</a></div><div class="ttdeci">FilterIB pvGetFilterIB(EFilterIB _eFilterIB, EFilterDepth _eDepth)</div><div class="ttdef"><b>Definition:</b> <a href="filters_8cpp_source.html#l00054">filters.cpp:54</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a6ec41ea038b4ea42eb8d9ea59d3eb4c5a5f5e047b6fb2c818c71882c4b3f3fc0c"><div class="ttname"><a href="class_v_b_a.html#a6ec41ea038b4ea42eb8d9ea59d3eb4c5a5f5e047b6fb2c818c71882c4b3f3fc0c">VBA::FilterDepth32</a></div><div class="ttdef"><b>Definition:</b> <a href="filters_8h_source.html#l00097">filters.h:97</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce_cgraph.png" border="0" usemap="#class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce_cgraph" id="class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce_cgraph">
+<area shape="rect" id="node2" href="namespace_v_b_a.html#ad5980a2981a7b766dce52ebc49a987bb" title="VBA::pvGetFilterIB" alt="" coords="252,5,383,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce_icgraph.png" border="0" usemap="#class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce_icgraph" id="class_v_b_a_1_1_screen_area_a7a23a673843050e232e83588cfab81ce_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_window.html#afddc93921e9561601104184bb16941e5" title="VBA::Window::vOnFilterIBToggled" alt="" coords="252,5,471,32"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="519,5,676,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a39182c21dfcc5c1f58171986f9c6305f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39182c21dfcc5c1f58171986f9c6305f">&#9670;&nbsp;</a></span>vSetScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::ScreenArea::vSetScale </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>_iScale</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  g_return_if_fail(_iScale &gt;= 1);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">if</span> (_iScale != m_iScale)</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  {</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    m_iScale = _iScale;</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    vUpdateSize();</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a67e85578c2affd30bfe40b8768900d83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e85578c2affd30bfe40b8768900d83">&#9670;&nbsp;</a></span>vSetSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::ScreenArea::vSetSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>_iWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>_iHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a> 파일의 <a class="el" href="screenarea_8cpp_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  g_return_if_fail(_iWidth &gt;= 1 &amp;&amp; _iHeight &gt;= 1);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span> (_iWidth != m_iWidth || _iHeight != m_iHeight)</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    m_iWidth  = _iWidth;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    m_iHeight = _iHeight;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    vUpdateSize();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/gtk/<a class="el" href="screenarea_8h_source.html">screenarea.h</a></li>
-<li>src/gtk/screenarea.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/<a class="el" href="screenarea_8h_source.html">screenarea.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/<a class="el" href="screenarea_8cpp_source.html">screenarea.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_v_b_a.html">VBA</a></li><li class="navelem"><a class="el" href="class_v_b_a_1_1_screen_area.html">ScreenArea</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

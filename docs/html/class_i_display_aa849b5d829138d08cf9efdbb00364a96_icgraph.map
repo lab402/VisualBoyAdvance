@@ -1,0 +1,30 @@
+<map id="IDisplay::initialize" name="IDisplay::initialize">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="176,275,363,301"/>
+<area shape="rect" id="node3" href="$class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="411,195,591,221"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="641,5,925,32"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="651,57,915,98"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="651,122,915,163"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="651,187,915,229"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="639,253,928,280"/>
+<area shape="rect" id="node9" href="$class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="725,304,842,331"/>
+<area shape="rect" id="node10" href="$class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="999,304,1121,331"/>
+<area shape="rect" id="node11" href="$class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="976,355,1144,381"/>
+<area shape="rect" id="node12" href="$class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1278,212,1407,239"/>
+<area shape="rect" id="node18" href="$class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1192,263,1493,289"/>
+<area shape="rect" id="node19" href="$class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1241,314,1444,355"/>
+<area shape="rect" id="node20" href="$class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1241,379,1444,421"/>
+<area shape="rect" id="node21" href="$_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1274,445,1411,472"/>
+<area shape="rect" id="node22" href="$class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1265,496,1420,523"/>
+<area shape="rect" id="node13" href="$class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1584,111,1741,137"/>
+<area shape="rect" id="node14" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1585,161,1740,188"/>
+<area shape="rect" id="node15" href="$class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1570,212,1755,239"/>
+<area shape="rect" id="node16" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1559,263,1766,289"/>
+<area shape="rect" id="node17" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1541,313,1784,340"/>
+<area shape="rect" id="node23" href="$class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="1563,445,1762,472"/>
+<area shape="rect" id="node27" href="$class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="1543,496,1783,523"/>
+<area shape="rect" id="node28" href="$class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="1573,547,1753,573"/>
+<area shape="rect" id="node24" href="$class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="1832,395,2121,421"/>
+<area shape="rect" id="node25" href="$class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="1832,445,2121,472"/>
+<area shape="rect" id="node26" href="$class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="1832,496,2121,523"/>
+<area shape="rect" id="node29" href="$class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="1887,547,2066,573"/>
+</map>

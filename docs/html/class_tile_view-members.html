@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_tile_view.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">TileView 멤버 목록</div>  </div>
@@ -68,48 +92,51 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_tile_view.html">TileView</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>AddDialogData</b>() (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_charBase</b> (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_colors</b> (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_slider</b> (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_stretch</b> (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>On16Colors</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>On256Colors</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnAutoUpdate</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnCharbase0</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnCharbase1</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnCharbase2</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnCharbase3</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnCharbase4</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnClose</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnColInfo</b>(WPARAM wParam, LPARAM lParam) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnHScroll</b>(UINT nSBCode, UINT nPos, CScrollBar *pScrollBar) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnMapInfo</b>(WPARAM wParam, LPARAM lParam) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnSave</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnStretch</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnWndMsg</b>(UINT, WPARAM, LPARAM, LRESULT *) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>paint</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PostNcDestroy</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>render</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>renderTile16</b>(int tile, int x, int y, u8 *charBase, u16 *palette) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>renderTile256</b>(int tile, int x, int y, u8 *charBase, u16 *palette) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>ResizeDlg</b>(UINT id, CWnd *parent=NULL) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>saveBMP</b>(const char *name) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>savePNG</b>(const char *name) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>SetData</b>(const DialogSizerSizingItem *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>TileView</b>(CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>update</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>UpdateWindowSize</b>(const int cx, const int cy, HWND) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~TileView</b>() (다음에서 정의됨 : <a class="el" href="class_tile_view.html">TileView</a>)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc">AddDialogData</a>()</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a6c10f973f1ebbb7169bd6440572a9328">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#a845736b4060c250e1714163c078d1bc3a890e8d0680375a9b21dea40f16c9a8aa">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a1fd549925ae533d9ce7215b8d5de4c63">m_charBase</a></td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#ad61048a17d2a93f3b8cb413d17a1533a">m_colors</a></td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a3423f8bf0fe4b1bd0273d9ffbd3fb390">m_slider</a></td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#a21a8f1dc56ad2e1107719d64fb206d2e">m_stretch</a></td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a482139c5bc655015ba0700db5c04ec91">On16Colors</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#a021f1139dccc2ec023a315ed1f4619e1">On256Colors</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#ab51dcedc72c43cf57133d4adcd264c10">OnAutoUpdate</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#a5b1b1e61396178f21ee28c6c7a779142">OnCharbase0</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a4c2151cc553eabc4d08f8a8b6954aa72">OnCharbase1</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#ab50f2c2c7575222ee7e4bb72161bbda7">OnCharbase2</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#af0ec3a1a2c7e142612fe13d85c4faa63">OnCharbase3</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#abfd5f9562f84ae4903db87425788d410">OnCharbase4</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a88e865b649c2a32c403670cca70ed55c">OnClose</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#ad01d09783bbe107d9837d6847938e564">OnColInfo</a>(WPARAM wParam, LPARAM lParam)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a8ca2f73ad6c372183494c0870905b9ac">OnHScroll</a>(UINT nSBCode, UINT nPos, CScrollBar *pScrollBar)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#a597e32fa09187fe6ea909cca947bfbc1">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#ae4ba4c47c672fb6e856fbe3921e3667e">OnMapInfo</a>(WPARAM wParam, LPARAM lParam)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#ae318b9ed3c7567dcbc897c77d063a0eb">OnSave</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#afe0a1c444008b7e76d4669ffdda2e0bd">OnStretch</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#a9d3f421da2488db11224b0508be654fd">OnWndMsg</a>(UINT, WPARAM, LPARAM, LRESULT *)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a4341071a0cab0d5a8b6dfa7318230636">paint</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#a83fee9256658f418f7562c0ff098eb22">PostNcDestroy</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a4b8f6e14f8ee7d4abea3a751cb5f7d74">render</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#abc4f9051fc3c2bfad76a6b11787460f8">renderTile16</a>(int tile, int x, int y, u8 *charBase, u16 *palette)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a1232e131b9ef993edea4390809c41814">renderTile256</a>(int tile, int x, int y, u8 *charBase, u16 *palette)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg</a>(UINT id, CWnd *parent=NULL)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#aaea86e952981c5622d400ffb57b30480">saveBMP</a>(const char *name)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#a43f168cd426f0e9215f55c742b6826e7">savePNG</a>(const char *name)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">SetData</a>(const DialogSizerSizingItem *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_tile_view.html#a870ab4767d06b82a3537dd5aaf7697c1">TileView</a>(CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a09b04d6b0135ef2b6da3c08796c1d354">update</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#ae2d0d2b44dd32f668c6d9091b14bfc00">UpdateWindowSize</a>(const int cx, const int cy, HWND)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_tile_view.html#a8ecd586e7186c5f85e34aab4fe2a2351">~TileView</a>()</td><td class="entry"><a class="el" href="class_tile_view.html">TileView</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

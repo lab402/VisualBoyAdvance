@@ -1,0 +1,9 @@
+<map id="soundShutdown" name="soundShutdown">
+<area shape="rect" id="node2" href="$gb_sound_8h.html#a86ed9a5e6bb5230a501d753280690618" title="gbSoundSetQuality" alt="" coords="205,5,339,32"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_window.html#af883be4dc5fbd611a2b5610aa26cfff7" title="VBA::Window::vOnSoundStatus\lToggled" alt="" coords="168,57,376,98"/>
+<area shape="rect" id="node6" href="$_test_emu_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="247,123,297,149"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a4d0172fc524e4d24d039ac5050acf160" title="MainWnd::OnOptionsSoundOff" alt="" coords="172,173,372,200"/>
+<area shape="rect" id="node8" href="$class_v_b_a.html#a601b4d3c159fde6e6232749e47af58b1" title="VBA::~VBA" alt="" coords="226,224,318,251"/>
+<area shape="rect" id="node3" href="$gb_sound_8h.html#a67af7c9aeabcd4c0138c3010eed0ce16" title="gbSoundReadGame" alt="" coords="433,5,572,32"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="424,64,581,91"/>
+</map>

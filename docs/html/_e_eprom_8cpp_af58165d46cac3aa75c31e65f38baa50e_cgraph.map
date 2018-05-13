@@ -1,0 +1,5 @@
+<map id="eepromSaveGame" name="eepromSaveGame">
+<area shape="rect" id="node2" href="$_util_8cpp.html#ae9ff7acc232044470d15bd8d920d32b6" title="utilWriteData" alt="" coords="181,5,279,32"/>
+<area shape="rect" id="node3" href="$_util_8cpp.html#a0c984fb94b8626c6a105fa293fa73d0e" title="utilGzWrite" alt="" coords="327,56,413,83"/>
+<area shape="rect" id="node4" href="$_util_8cpp.html#aec53c916edfced4af7302919f3efb92b" title="utilWriteInt" alt="" coords="188,107,272,133"/>
+</map>

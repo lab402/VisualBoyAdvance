@@ -1,0 +1,10 @@
+<map id="gbWriteBatteryFile" name="gbWriteBatteryFile">
+<area shape="rect" id="node2" href="$_g_b_8cpp.html#aea9834252fc8ce2518078fcba98c185b" title="gbWriteSaveMBC1" alt="" coords="190,5,321,32"/>
+<area shape="rect" id="node4" href="$_g_b_8cpp.html#a0dd1813f39ff6b94a0b3c9fa69054a68" title="gbWriteSaveMBC2" alt="" coords="190,56,321,83"/>
+<area shape="rect" id="node5" href="$_g_b_8cpp.html#aa8dccd6e9714a0aea7738c39792cd0e2" title="gbWriteSaveMMM01" alt="" coords="184,107,327,133"/>
+<area shape="rect" id="node6" href="$_g_b_8cpp.html#a253c3848a19fc885120bdb34e92ebae6" title="gbWriteSaveMBC3" alt="" coords="190,157,321,184"/>
+<area shape="rect" id="node7" href="$_g_b_8cpp.html#abf4ec8c57024ccf887cf9eb91846b151" title="gbWriteSaveMBC5" alt="" coords="190,208,321,235"/>
+<area shape="rect" id="node8" href="$_g_b_8cpp.html#ad2237c5d509ab172b012a56e9dc1e39d" title="gbWriteSaveMBC7" alt="" coords="190,259,321,285"/>
+<area shape="rect" id="node9" href="$_g_b_8cpp.html#ac1b06ebcb3fd13e8b527a902d7fa4645" title="gbWriteSaveTAMA5" alt="" coords="186,309,325,336"/>
+<area shape="rect" id="node3" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="375,157,493,184"/>
+</map>

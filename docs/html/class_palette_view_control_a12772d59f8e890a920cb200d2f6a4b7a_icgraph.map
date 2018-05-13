@@ -1,0 +1,7 @@
+<map id="PaletteViewControl::updatePalette" name="PaletteViewControl::updatePalette">
+<area shape="rect" id="node2" href="$class_palette_view_control.html#aace3ab97afe8216b3873159ee852779f" title="PaletteViewControl\l::refresh" alt="" coords="185,23,317,65"/>
+<area shape="rect" id="node3" href="$class_g_b_palette_view.html#a15d94f40712405e466296772b7087f3f" title="GBPaletteView::OnRefresh2" alt="" coords="365,5,552,32"/>
+<area shape="rect" id="node5" href="$class_palette_view.html#ae5eaa6866be56bc87f8fe73033947c7d" title="PaletteView::OnRefresh2" alt="" coords="375,56,542,83"/>
+<area shape="rect" id="node4" href="$class_g_b_palette_view.html#a43a43edd82e080e860aeb6a82ec106fc" title="GBPaletteView::update" alt="" coords="600,5,757,32"/>
+<area shape="rect" id="node6" href="$class_palette_view.html#a94549cb400d23e790497c4263bf1e09b" title="PaletteView::update" alt="" coords="609,56,748,83"/>
+</map>

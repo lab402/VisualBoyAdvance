@@ -1,0 +1,9 @@
+<map id="MainWnd::OnToolsCustomize" name="MainWnd::OnToolsCustomize">
+<area shape="rect" id="node2" href="$class_c_accelerator_manager.html#a3fa9c8e4f44acc76cc40fc7382e597d8" title="CAcceleratorManager\l::UpdateWndTable" alt="" coords="248,109,395,150"/>
+<area shape="rect" id="node4" href="$class_c_accelerator_manager.html#a6ddd05a54ab0e66bc6ca8a7af3742e61" title="CAcceleratorManager\l::Write" alt="" coords="248,43,395,85"/>
+<area shape="rect" id="node7" href="$class_c_accelerator_manager.html#ac7411d20f413ea0ec3bd65705b564adf" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="248,174,395,215"/>
+<area shape="rect" id="node3" href="$class_c_accelerator_manager.html#ac854ec5263a7bab961bf63aec3938984" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="445,113,591,154"/>
+<area shape="rect" id="node5" href="$class_c_accels_ob.html#abbbdc5e93061f67ade785c9e4f07b918" title="CAccelsOb::GetData" alt="" coords="446,56,590,83"/>
+<area shape="rect" id="node6" href="$_reg_8cpp.html#a353479c95a247e54f069cc5eb4cd3536" title="regSetBinaryValue" alt="" coords="453,5,583,32"/>
+<area shape="rect" id="node8" href="$class_c_accels_ob.html#afaf7510fa1e0707863f6bd469f190de6" title="CAccelsOb::GetString" alt="" coords="443,181,593,208"/>
+</map>

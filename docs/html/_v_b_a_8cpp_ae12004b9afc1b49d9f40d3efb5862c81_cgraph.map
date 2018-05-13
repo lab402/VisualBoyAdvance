@@ -1,0 +1,11 @@
+<map id="remoteSetProtocol" name="remoteSetProtocol">
+<area shape="rect" id="node2" href="$remote_8cpp.html#acd199a54f4a8761ea81a181ebc1086d8" title="remoteTcpSend" alt="" coords="196,5,309,32"/>
+<area shape="rect" id="node3" href="$remote_8cpp.html#a67adc9ae86fefaa9026c97a35a175b61" title="remoteTcpRecv" alt="" coords="197,56,308,83"/>
+<area shape="rect" id="node4" href="$remote_8cpp.html#a1a2754237d66e4d85d1223a4f2e806e5" title="remoteTcpInit" alt="" coords="203,107,303,133"/>
+<area shape="rect" id="node6" href="$remote_8cpp.html#ac32da3e5706a2aec3cdaa3e05d939234" title="remoteTcpCleanUp" alt="" coords="187,157,319,184"/>
+<area shape="rect" id="node7" href="$remote_8cpp.html#a52093b8cfb3b5128f0442a478f6c7b73" title="remotePipeSend" alt="" coords="193,208,312,235"/>
+<area shape="rect" id="node8" href="$remote_8cpp.html#a388eaec68932978af9249b3f8f2c5111" title="remotePipeRecv" alt="" coords="195,259,311,285"/>
+<area shape="rect" id="node9" href="$remote_8cpp.html#a6d202e08314e8abe6b842ef95e9af1a9" title="remotePipeInit" alt="" coords="200,309,305,336"/>
+<area shape="rect" id="node10" href="$remote_8cpp.html#a35ea11a64d6aa80068edaec71efd4bfb" title="remotePipeCleanUp" alt="" coords="184,360,321,387"/>
+<area shape="rect" id="node5" href="$expr-lex_8cpp.html#a6d2c3c030982c7aa276480da4522ae0f" title="exit" alt="" coords="369,208,412,235"/>
+</map>

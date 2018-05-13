@@ -1,0 +1,6 @@
+<map id="AccelEditor::OnReset" name="AccelEditor::OnReset">
+<area shape="rect" id="node2" href="$class_c_accelerator_manager.html#aa510a36964ed209de5f7325efa713bf6" title="CAcceleratorManager\l::Default" alt="" coords="218,5,365,47"/>
+<area shape="rect" id="node3" href="$class_accel_editor.html#a3c882fb85c72711e26cfe800fb11ccfa" title="AccelEditor::InitCommands" alt="" coords="201,71,381,98"/>
+<area shape="rect" id="node4" href="$class_accel_editor.html#a16cb5c73f55199115c5a4f35268ff3fa" title="AccelEditor::OnSelchange\lCommands" alt="" coords="429,64,604,105"/>
+<area shape="rect" id="node5" href="$class_c_accels_ob.html#afaf7510fa1e0707863f6bd469f190de6" title="CAccelsOb::GetString" alt="" coords="652,71,803,98"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_disassemble.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">Disassemble 멤버 목록</div>  </div>
@@ -68,47 +92,50 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_disassemble.html">Disassemble</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>AddDialogData</b>() (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>address</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>autoUpdate</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>count</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>Disassemble</b>(CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_address</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_c</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_f</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_i</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_list</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_n</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_t</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_v</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_z</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mode</b> (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnArm</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnAutomatic</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnAutoUpdate</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnClose</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnGo</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnGopc</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnNext</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnRefresh</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnThumb</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnVScroll</b>(UINT nSBCode, UINT nPos, CScrollBar *pScrollBar) (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnWndMsg</b>(UINT, WPARAM, LPARAM, LRESULT *) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>PostNcDestroy</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>refresh</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>ResizeDlg</b>(UINT id, CWnd *parent=NULL) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>SetData</b>(const DialogSizerSizingItem *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>update</b>() (다음에서 정의됨 : <a class="el" href="class_disassemble.html">Disassemble</a>)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>UpdateWindowSize</b>(const int cx, const int cy, HWND) (다음에서 정의됨 : <a class="el" href="class_resize_dlg.html">ResizeDlg</a>)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc">AddDialogData</a>()</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#a347234b8c8fa03c0bc21e39c03efc36d">autoUpdate</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#ac3db9bf735a8a836c5250bf1d5886fce">Disassemble</a>(CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a41d0930174f47e08037b1ea675d03ba0">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a74582f94dacc9f2eac347fd59b2a906b">m_address</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#aa38e1a7ec55e3fbe47d067e3a46df422">m_c</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#aca528eed73b34340d601b725dd688b07">m_f</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#a6b51f716f8d8513da506a1d7875ca500">m_i</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#ae8c58060e32c1b456fea8c047052a746">m_n</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a477510b19843360a883717917f387412">m_t</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#ac8fad0495b1da26907516e83c876ec08">m_v</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#ac4b4e68b91013731333b3019bbc16f1d">m_z</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a></td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a11695fe0ce9003a5cfcd58e86ad6047e">OnArm</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#a713e75749b5c7c79927075b57431a298">OnAutomatic</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a5423cb1c85c1e4bb05b3d4018c804826">OnAutoUpdate</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#a8f239c5117018f44ee0847b530a9eee1">OnClose</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#add1cb356f3605cc46f9c83f29473db24">OnGo</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63">OnGopc</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a23e74e8f32758c5b6ff63914633e2ab5">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#a9d25720f4d6c7a31281301b93b0ae02a">OnNext</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a9b66d72bb746fe9df6bbcb4831dbf8ad">OnRefresh</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#a480844a650f1a7ab4a396ff1ffdd5655">OnThumb</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a96149abe6cfe456c0d799dfe59b19826">OnVScroll</a>(UINT nSBCode, UINT nPos, CScrollBar *pScrollBar)</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#a9d3f421da2488db11224b0508be654fd">OnWndMsg</a>(UINT, WPARAM, LPARAM, LRESULT *)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a2ff6c6b502de3f37aaff6c2f188157a8">PostNcDestroy</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg</a>(UINT id, CWnd *parent=NULL)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">SetData</a>(const DialogSizerSizingItem *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_disassemble.html#a30fc26e4204bd886f7cd8eb0c6c22e88">update</a>()</td><td class="entry"><a class="el" href="class_disassemble.html">Disassemble</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_resize_dlg.html#ae2d0d2b44dd32f668c6d9091b14bfc00">UpdateWindowSize</a>(const int cx, const int cy, HWND)</td><td class="entry"><a class="el" href="class_resize_dlg.html">ResizeDlg</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

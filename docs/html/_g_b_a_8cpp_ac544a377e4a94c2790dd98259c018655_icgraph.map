@@ -1,0 +1,7 @@
+<map id="CPUSwitchMode" name="CPUSwitchMode">
+<area shape="rect" id="node2" href="$_g_b_a_8cpp.html#afbe92b822ae91ce7e91203b04b79a29c" title="CPUSwitchMode" alt="" coords="195,5,315,32"/>
+<area shape="rect" id="node3" href="$_g_b_a_8cpp.html#a0c1ccd82efa373de9d6e7ac710c23816" title="CPUUndefinedException" alt="" coords="173,56,337,83"/>
+<area shape="rect" id="node4" href="$_g_b_a_8cpp.html#ad78e06fc9665345813c5233414be1f55" title="CPUSoftwareInterrupt" alt="" coords="182,107,329,133"/>
+<area shape="rect" id="node6" href="$_g_b_a_8cpp.html#a279947e1a87d59dfa6a328757bfdb003" title="CPUInterrupt" alt="" coords="207,157,303,184"/>
+<area shape="rect" id="node5" href="$_g_b_a_8cpp.html#adce18287afcd9e76ceeb6d628967f568" title="CPUSoftwareInterrupt" alt="" coords="385,107,532,133"/>
+</map>

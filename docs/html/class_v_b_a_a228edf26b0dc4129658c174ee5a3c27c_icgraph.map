@@ -1,0 +1,23 @@
+<map id="VBA::winLoadFilter" name="VBA::winLoadFilter">
+<area shape="rect" id="node2" href="$class_g_b_map_view.html#a667f0f830b816e2ec34519d75a5ad488" title="GBMapView::OnSave" alt="" coords="257,5,404,32"/>
+<area shape="rect" id="node3" href="$class_g_b_memory_viewer_dlg.html#abea90b70d9579272367ed561fe796b01" title="GBMemoryViewerDlg::\lOnSave" alt="" coords="253,57,408,98"/>
+<area shape="rect" id="node4" href="$class_g_b_memory_viewer_dlg.html#ac81a1ae7e069e1db594879cddbd7b6d8" title="GBMemoryViewerDlg::\lOnLoad" alt="" coords="253,122,408,163"/>
+<area shape="rect" id="node5" href="$class_g_b_oam_view.html#a04f7a345e1f9d71b149b9df3b2db30d4" title="GBOamView::save" alt="" coords="265,188,396,215"/>
+<area shape="rect" id="node6" href="$class_g_b_palette_view.html#a90cca0ba09442c669f7403d31e8ab0ee" title="GBPaletteView::save" alt="" coords="259,239,403,265"/>
+<area shape="rect" id="node9" href="$class_g_b_printer_dlg.html#a3cfa1c22a60df868b53c9e9d52094963" title="GBPrinterDlg::OnSave" alt="" coords="255,289,406,316"/>
+<area shape="rect" id="node10" href="$class_g_b_tile_view.html#a97f989bc4a5f5872258b5d8d47ae60d0" title="GBTileView::OnSave" alt="" coords="259,340,402,367"/>
+<area shape="rect" id="node11" href="$class_main_wnd.html#a61b3657a1df45da0e444c99fa5b298c5" title="MainWnd::OnOptionsSoundStartrecording" alt="" coords="198,391,463,417"/>
+<area shape="rect" id="node12" href="$class_main_wnd.html#ae512a86963451914ea7eee95c85d6280" title="MainWnd::OnToolsRecordStartavirecording" alt="" coords="195,441,466,468"/>
+<area shape="rect" id="node13" href="$class_main_wnd.html#af473a4d7ccfadb980b92de352ea6a4ae" title="MainWnd::OnToolsRecordStartmovierecording" alt="" coords="187,492,475,519"/>
+<area shape="rect" id="node14" href="$class_main_wnd.html#a96ea89975374d5b7a434070d58e9c260" title="MainWnd::OnToolsPlayStartmovieplaying" alt="" coords="200,543,461,569"/>
+<area shape="rect" id="node15" href="$class_map_view.html#a3fc9d61706da44e2fd3e8762805d9f0b" title="MapView::OnSave" alt="" coords="267,593,395,620"/>
+<area shape="rect" id="node16" href="$class_memory_viewer_dlg.html#aaa3651f618355f6d1d3bf3158cb9c812" title="MemoryViewerDlg::OnSave" alt="" coords="241,644,421,671"/>
+<area shape="rect" id="node17" href="$class_memory_viewer_dlg.html#adfc256215ade1d48a24a3eb72b3ecfed" title="MemoryViewerDlg::OnLoad" alt="" coords="241,695,421,721"/>
+<area shape="rect" id="node18" href="$class_oam_view.html#adb535d2f90a5c8edce8cb900e64a5854" title="OamView::OnSave" alt="" coords="265,745,396,772"/>
+<area shape="rect" id="node19" href="$class_palette_view.html#a107b71060221c9d44bdf0d38ca77c689" title="PaletteView::save" alt="" coords="268,796,393,823"/>
+<area shape="rect" id="node22" href="$class_tile_view.html#ae318b9ed3c7567dcbc897c77d063a0eb" title="TileView::OnSave" alt="" coords="269,847,392,873"/>
+<area shape="rect" id="node7" href="$class_g_b_palette_view.html#a0186b41f6db460271256f36800ffa980" title="GBPaletteView::OnSaveBg" alt="" coords="525,213,703,240"/>
+<area shape="rect" id="node8" href="$class_g_b_palette_view.html#a20eb0c24604804e9c33db15f3ff394f0" title="GBPaletteView::OnSaveObj" alt="" coords="523,264,705,291"/>
+<area shape="rect" id="node20" href="$class_palette_view.html#a4e11f19e5535efcd1b34d38899f18482" title="PaletteView::OnSaveBg" alt="" coords="534,771,694,797"/>
+<area shape="rect" id="node21" href="$class_palette_view.html#a1a09199a2ab1045bbbcef736d05296c1" title="PaletteView::OnSaveObj" alt="" coords="532,821,696,848"/>
+</map>

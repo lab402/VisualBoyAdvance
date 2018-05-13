@@ -1,0 +1,1270 @@
+\hypertarget{memgzio_8c}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/memgzio.c 파일 참조}
+\label{memgzio_8c}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/memgzio.\+c@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/memgzio.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}memgzio.\+h\char`\"{}}\newline
+memgzio.\+c에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct___mem_file}{\+\_\+\+Mem\+File}}
+\item 
+struct \mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\+\_\+\+B\+U\+F\+S\+I\+ZE}}~16384
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_adb69caa8684234b7c63f24d64b7659db}{Z\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+B\+U\+F\+S\+I\+ZE}}~4096
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_ac5c822e3692a95451e8f70a5916f05a3}{A\+L\+L\+OC}}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})~malloc(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_a5fb23c00a00f3856832e660edc2ab03d}{T\+R\+Y\+F\+R\+EE}}(p)~\{\mbox{\hyperlink{thumb_8h_ace94b9910dcb92506fbb8144edb58af8}{if}} (p) free(p);\}
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_aa3c005b88b9e5ba0660df7eba43832cb}{A\+S\+C\+I\+I\+\_\+\+F\+L\+AG}}~0x01 /$\ast$ bit 0 set\+: file probably ascii text $\ast$/
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_a552e6306aac9df122ffc3ca089b4663b}{H\+E\+A\+D\+\_\+\+C\+RC}}~0x02 /$\ast$ bit 1 set\+: header C\+R\+C present $\ast$/
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_a50beca0e4608c1ee356a8ced2497db75}{E\+X\+T\+R\+A\+\_\+\+F\+I\+E\+LD}}~0x04 /$\ast$ bit 2 set\+: extra field present $\ast$/
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_ab16f7d2a15f2ef64ffa109a7cda5e65b}{O\+R\+I\+G\+\_\+\+N\+A\+ME}}~0x08 /$\ast$ bit 3 set\+: original file name present $\ast$/
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_a180f5b3835bdbfc11b353fd2af5c8659}{C\+O\+M\+M\+E\+NT}}~0x10 /$\ast$ bit 4 set\+: file comment present $\ast$/
+\item 
+\#define \mbox{\hyperlink{memgzio_8c_a56701f18aaad537f7fc0e9be309503c3}{R\+E\+S\+E\+R\+V\+ED}}~0x\+E0 /$\ast$ bits 5..\+7\+: reserved $\ast$/
+\end{DoxyCompactItemize}
+\subsection*{타입정의}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct___mem_file}{\+\_\+\+Mem\+File}} \mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}}
+\item 
+typedef struct \mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} \mbox{\hyperlink{memgzio_8c_a8525d893f42f0f71d4141e0db953aea1}{mem\+\_\+stream}}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} gz\+File \mbox{\hyperlink{memgzio_8c_a372853e45fc83777b428200cdcc816cf}{gz\+\_\+open}} \mbox{\hyperlink{memgzio_8c_a85eec04e1c2227d6f8094aef9572bdd7}{OF}} ((char $\ast$memory, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} available, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$mode))
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_afafc4bbc6787281ae67c082cb529787d}{do\+\_\+flush}} \mbox{\hyperlink{memgzio_8c_ad9d32d51a7704cda2575925132ea97d0}{OF}} ((gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} flush))
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\+\_\+byte}} \mbox{\hyperlink{memgzio_8c_af6631a8f48d8c2334eabbc3778bfc6a3}{OF}} ((\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$s))
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} void \mbox{\hyperlink{memgzio_8c_a3c5218d0289a398320570f747214d6e7}{put\+Long}} \mbox{\hyperlink{memgzio_8c_acd751d63679c766cc504c404eccf1c26}{OF}} ((\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, u\+Long x))
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$ \mbox{\hyperlink{memgzio_8c_a15d81d7981e2b633cd92650b7620ecfc}{mem\+Open}} (char $\ast$memory, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} available, char mode)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} size\+\_\+t \mbox{\hyperlink{memgzio_8c_a4f5b925f19d47679ebf054169c2dd280}{mem\+Write}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} void $\ast$\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, size\+\_\+t \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}, size\+\_\+t \mbox{\hyperlink{_g_b_a_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}, \mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} size\+\_\+t \mbox{\hyperlink{memgzio_8c_a310d9bfe85da4847120b7ef7fa0a42f7}{mem\+Read}} (void $\ast$\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, size\+\_\+t \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}, size\+\_\+t \mbox{\hyperlink{_g_b_a_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}, \mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_aaa6a487486283b987d88e4b713a21c4f}{mem\+Putc}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} c, \mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} long \mbox{\hyperlink{memgzio_8c_a9e7eccde306d563673b6da9561a3d3bb}{mem\+Tell}} (\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$f)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_a7b687ab934b380056eb66d6a8fb83a36}{mem\+Error}} (\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$f)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_a8334e22cc510313665b4930c00d97cae}{mem\+Close}} (\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$f)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_aafe8c3e74955de5641833affee004142}{mem\+Printf}} (\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$f, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$format,...)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} gz\+File \mbox{\hyperlink{memgzio_8c_a372853e45fc83777b428200cdcc816cf}{gz\+\_\+open}} (char $\ast$memory, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} available, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$mode)
+\item 
+gz\+File Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{memgzio_8c_abd908bca32c36fd032ba69adaaa12523}{memgzopen}} (char $\ast$memory, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} available, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$mode)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\+\_\+byte}} (\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$s)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} void \mbox{\hyperlink{memgzio_8c_a5746c7ec7e8460e3005db20119179882}{check\+\_\+header}} (\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$s)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}{destroy}} (\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$s)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{memgzio_8c_a653313e703474c7629c7fee014b91931}{memgzread}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}} \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, unsigned \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{memgzio_8c_ab3c39dfe0bb80fc7f76e21b586dd0b97}{memgzwrite}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}} \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, unsigned \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_afafc4bbc6787281ae67c082cb529787d}{do\+\_\+flush}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} flush)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} void \mbox{\hyperlink{memgzio_8c_a3c5218d0289a398320570f747214d6e7}{put\+Long}} (\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, u\+Long x)
+\item 
+\mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} u\+Long \mbox{\hyperlink{memgzio_8c_a036425714f0822089513ddbfbbf83d5e}{get\+Long}} (\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$s)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{memgzio_8c_add4b49c11836bf9d6d900a3e53780243}{memgzclose}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+long Z\+E\+X\+P\+O\+RT \mbox{\hyperlink{memgzio_8c_ae7b3619f3d6ea142c60284f78af3fe4b}{memtell}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{memgzio_8c_ac5c822e3692a95451e8f70a5916f05a3}\label{memgzio_8c_ac5c822e3692a95451e8f70a5916f05a3}} 
+\index{memgzio.\+c@{memgzio.\+c}!A\+L\+L\+OC@{A\+L\+L\+OC}}
+\index{A\+L\+L\+OC@{A\+L\+L\+OC}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{A\+L\+L\+OC}{ALLOC}}
+{\footnotesize\ttfamily \#define A\+L\+L\+OC(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} }\end{DoxyParamCaption})~malloc(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})}
+
+
+
+memgzio.\+c 파일의 33 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_aa3c005b88b9e5ba0660df7eba43832cb}\label{memgzio_8c_aa3c005b88b9e5ba0660df7eba43832cb}} 
+\index{memgzio.\+c@{memgzio.\+c}!A\+S\+C\+I\+I\+\_\+\+F\+L\+AG@{A\+S\+C\+I\+I\+\_\+\+F\+L\+AG}}
+\index{A\+S\+C\+I\+I\+\_\+\+F\+L\+AG@{A\+S\+C\+I\+I\+\_\+\+F\+L\+AG}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{A\+S\+C\+I\+I\+\_\+\+F\+L\+AG}{ASCII\_FLAG}}
+{\footnotesize\ttfamily \#define A\+S\+C\+I\+I\+\_\+\+F\+L\+AG~0x01 /$\ast$ bit 0 set\+: file probably ascii text $\ast$/}
+
+
+
+memgzio.\+c 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_a180f5b3835bdbfc11b353fd2af5c8659}\label{memgzio_8c_a180f5b3835bdbfc11b353fd2af5c8659}} 
+\index{memgzio.\+c@{memgzio.\+c}!C\+O\+M\+M\+E\+NT@{C\+O\+M\+M\+E\+NT}}
+\index{C\+O\+M\+M\+E\+NT@{C\+O\+M\+M\+E\+NT}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{C\+O\+M\+M\+E\+NT}{COMMENT}}
+{\footnotesize\ttfamily \#define C\+O\+M\+M\+E\+NT~0x10 /$\ast$ bit 4 set\+: file comment present $\ast$/}
+
+
+
+memgzio.\+c 파일의 43 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_a50beca0e4608c1ee356a8ced2497db75}\label{memgzio_8c_a50beca0e4608c1ee356a8ced2497db75}} 
+\index{memgzio.\+c@{memgzio.\+c}!E\+X\+T\+R\+A\+\_\+\+F\+I\+E\+LD@{E\+X\+T\+R\+A\+\_\+\+F\+I\+E\+LD}}
+\index{E\+X\+T\+R\+A\+\_\+\+F\+I\+E\+LD@{E\+X\+T\+R\+A\+\_\+\+F\+I\+E\+LD}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{E\+X\+T\+R\+A\+\_\+\+F\+I\+E\+LD}{EXTRA\_FIELD}}
+{\footnotesize\ttfamily \#define E\+X\+T\+R\+A\+\_\+\+F\+I\+E\+LD~0x04 /$\ast$ bit 2 set\+: extra field present $\ast$/}
+
+
+
+memgzio.\+c 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_a552e6306aac9df122ffc3ca089b4663b}\label{memgzio_8c_a552e6306aac9df122ffc3ca089b4663b}} 
+\index{memgzio.\+c@{memgzio.\+c}!H\+E\+A\+D\+\_\+\+C\+RC@{H\+E\+A\+D\+\_\+\+C\+RC}}
+\index{H\+E\+A\+D\+\_\+\+C\+RC@{H\+E\+A\+D\+\_\+\+C\+RC}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{H\+E\+A\+D\+\_\+\+C\+RC}{HEAD\_CRC}}
+{\footnotesize\ttfamily \#define H\+E\+A\+D\+\_\+\+C\+RC~0x02 /$\ast$ bit 1 set\+: header C\+R\+C present $\ast$/}
+
+
+
+memgzio.\+c 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_ab16f7d2a15f2ef64ffa109a7cda5e65b}\label{memgzio_8c_ab16f7d2a15f2ef64ffa109a7cda5e65b}} 
+\index{memgzio.\+c@{memgzio.\+c}!O\+R\+I\+G\+\_\+\+N\+A\+ME@{O\+R\+I\+G\+\_\+\+N\+A\+ME}}
+\index{O\+R\+I\+G\+\_\+\+N\+A\+ME@{O\+R\+I\+G\+\_\+\+N\+A\+ME}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{O\+R\+I\+G\+\_\+\+N\+A\+ME}{ORIG\_NAME}}
+{\footnotesize\ttfamily \#define O\+R\+I\+G\+\_\+\+N\+A\+ME~0x08 /$\ast$ bit 3 set\+: original file name present $\ast$/}
+
+
+
+memgzio.\+c 파일의 42 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_a56701f18aaad537f7fc0e9be309503c3}\label{memgzio_8c_a56701f18aaad537f7fc0e9be309503c3}} 
+\index{memgzio.\+c@{memgzio.\+c}!R\+E\+S\+E\+R\+V\+ED@{R\+E\+S\+E\+R\+V\+ED}}
+\index{R\+E\+S\+E\+R\+V\+ED@{R\+E\+S\+E\+R\+V\+ED}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{R\+E\+S\+E\+R\+V\+ED}{RESERVED}}
+{\footnotesize\ttfamily \#define R\+E\+S\+E\+R\+V\+ED~0x\+E0 /$\ast$ bits 5..\+7\+: reserved $\ast$/}
+
+
+
+memgzio.\+c 파일의 44 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_a5fb23c00a00f3856832e660edc2ab03d}\label{memgzio_8c_a5fb23c00a00f3856832e660edc2ab03d}} 
+\index{memgzio.\+c@{memgzio.\+c}!T\+R\+Y\+F\+R\+EE@{T\+R\+Y\+F\+R\+EE}}
+\index{T\+R\+Y\+F\+R\+EE@{T\+R\+Y\+F\+R\+EE}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{T\+R\+Y\+F\+R\+EE}{TRYFREE}}
+{\footnotesize\ttfamily \#define T\+R\+Y\+F\+R\+EE(\begin{DoxyParamCaption}\item[{}]{p }\end{DoxyParamCaption})~\{\mbox{\hyperlink{thumb_8h_ace94b9910dcb92506fbb8144edb58af8}{if}} (p) free(p);\}}
+
+
+
+memgzio.\+c 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}\label{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}} 
+\index{memgzio.\+c@{memgzio.\+c}!Z\+\_\+\+B\+U\+F\+S\+I\+ZE@{Z\+\_\+\+B\+U\+F\+S\+I\+ZE}}
+\index{Z\+\_\+\+B\+U\+F\+S\+I\+ZE@{Z\+\_\+\+B\+U\+F\+S\+I\+ZE}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{Z\+\_\+\+B\+U\+F\+S\+I\+ZE}{Z\_BUFSIZE}}
+{\footnotesize\ttfamily \#define Z\+\_\+\+B\+U\+F\+S\+I\+ZE~16384}
+
+
+
+memgzio.\+c 파일의 26 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{memgzio_8c_adb69caa8684234b7c63f24d64b7659db}\label{memgzio_8c_adb69caa8684234b7c63f24d64b7659db}} 
+\index{memgzio.\+c@{memgzio.\+c}!Z\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+B\+U\+F\+S\+I\+ZE@{Z\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+B\+U\+F\+S\+I\+ZE}}
+\index{Z\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+B\+U\+F\+S\+I\+ZE@{Z\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+B\+U\+F\+S\+I\+ZE}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{Z\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+B\+U\+F\+S\+I\+ZE}{Z\_PRINTF\_BUFSIZE}}
+{\footnotesize\ttfamily \#define Z\+\_\+\+P\+R\+I\+N\+T\+F\+\_\+\+B\+U\+F\+S\+I\+ZE~4096}
+
+
+
+memgzio.\+c 파일의 30 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{타입정의 문서화}
+\mbox{\Hypertarget{memgzio_8c_a8525d893f42f0f71d4141e0db953aea1}\label{memgzio_8c_a8525d893f42f0f71d4141e0db953aea1}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+\_\+stream@{mem\+\_\+stream}}
+\index{mem\+\_\+stream@{mem\+\_\+stream}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+\_\+stream}{mem\_stream}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}}  \mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}}}
+
+\mbox{\Hypertarget{memgzio_8c_aebbc1e519147882ded18ad14979fe817}\label{memgzio_8c_aebbc1e519147882ded18ad14979fe817}} 
+\index{memgzio.\+c@{memgzio.\+c}!M\+E\+M\+F\+I\+LE@{M\+E\+M\+F\+I\+LE}}
+\index{M\+E\+M\+F\+I\+LE@{M\+E\+M\+F\+I\+LE}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{M\+E\+M\+F\+I\+LE}{MEMFILE}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{struct___mem_file}{\+\_\+\+Mem\+File}}  \mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}}}
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{memgzio_8c_a5746c7ec7e8460e3005db20119179882}\label{memgzio_8c_a5746c7ec7e8460e3005db20119179882}} 
+\index{memgzio.\+c@{memgzio.\+c}!check\+\_\+header@{check\+\_\+header}}
+\index{check\+\_\+header@{check\+\_\+header}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{check\+\_\+header()}{check\_header()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} void check\+\_\+header (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 355 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+357 \{
+358     \textcolor{keywordtype}{int} method; \textcolor{comment}{/* method byte */}
+359     \textcolor{keywordtype}{int} flags;  \textcolor{comment}{/* flags byte */}
+360     uInt \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+361     \textcolor{keywordtype}{int} c;
+362 
+363     \textcolor{comment}{/* Check the gzip magic header */}
+364     \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = 0; \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} < 2; \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}++) \{
+365     c = \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s);
+366     \textcolor{keywordflow}{if} (c != gz\_magic[\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}]) \{
+367         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 0) s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in++, s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in--;
+368         \textcolor{keywordflow}{if} (c != EOF) \{
+369         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in++, s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in--;
+370         s->\mbox{\hyperlink{structmem__stream_ad970d09fe4cbcc6595b2d08b39d50db1}{transparent}} = 1;
+371         \}
+372         s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in != 0 ? Z\_OK : Z\_STREAM\_END;
+373         \textcolor{keywordflow}{return};
+374     \}
+375     \}
+376     method = \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s);
+377     flags = \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s);
+378     \textcolor{keywordflow}{if} (method != Z\_DEFLATED || (flags & \mbox{\hyperlink{memgzio_8c_a56701f18aaad537f7fc0e9be309503c3}{RESERVED}}) != 0) \{
+379     s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_DATA\_ERROR;
+380     \textcolor{keywordflow}{return};
+381     \}
+382 
+383     \textcolor{comment}{/* Discard time, xflags and OS code: */}
+384     \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = 0; \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} < 6; \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}++) (\textcolor{keywordtype}{void})\mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s);
+385 
+386     \textcolor{keywordflow}{if} ((flags & \mbox{\hyperlink{memgzio_8c_a50beca0e4608c1ee356a8ced2497db75}{EXTRA\_FIELD}}) != 0) \{ \textcolor{comment}{/* skip the extra field */}
+387     \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}  =  (uInt)\mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s);
+388     \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} += ((uInt)\mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s))<<8;
+389     \textcolor{comment}{/* len is garbage if EOF but the loop below will quit anyway */}
+390     \textcolor{keywordflow}{while} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}-- != 0 && \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s) != EOF) ;
+391     \}
+392     \textcolor{keywordflow}{if} ((flags & \mbox{\hyperlink{memgzio_8c_ab16f7d2a15f2ef64ffa109a7cda5e65b}{ORIG\_NAME}}) != 0) \{ \textcolor{comment}{/* skip the original file name */}
+393     \textcolor{keywordflow}{while} ((c = \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s)) != 0 && c != EOF) ;
+394     \}
+395     \textcolor{keywordflow}{if} ((flags & \mbox{\hyperlink{memgzio_8c_a180f5b3835bdbfc11b353fd2af5c8659}{COMMENT}}) != 0) \{   \textcolor{comment}{/* skip the .gz file comment */}
+396     \textcolor{keywordflow}{while} ((c = \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s)) != 0 && c != EOF) ;
+397     \}
+398     \textcolor{keywordflow}{if} ((flags & \mbox{\hyperlink{memgzio_8c_a552e6306aac9df122ffc3ca089b4663b}{HEAD\_CRC}}) != 0) \{  \textcolor{comment}{/* skip the header crc */}
+399     \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = 0; \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} < 2; \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}++) (\textcolor{keywordtype}{void})\mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s);
+400     \}
+401     s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = s->\mbox{\hyperlink{structmem__stream_ac41bfcdbcada66bebb9709e8638f6b80}{z\_eof}} ? Z\_DATA\_ERROR : Z\_OK;
+402 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{memgzio_8c_a5746c7ec7e8460e3005db20119179882_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a5746c7ec7e8460e3005db20119179882_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}\label{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}} 
+\index{memgzio.\+c@{memgzio.\+c}!destroy@{destroy}}
+\index{destroy@{destroy}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} destroy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 408 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+410 \{
+411     \textcolor{keywordtype}{int} err = Z\_OK;
+412 
+413     \textcolor{keywordflow}{if} (!s) \textcolor{keywordflow}{return} Z\_STREAM\_ERROR;
+414 
+415     \mbox{\hyperlink{memgzio_8c_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(s->\mbox{\hyperlink{structmem__stream_a8b64f897dff31431aaf6608e32996e26}{msg}});
+416 
+417     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.state != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+418     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} == \textcolor{charliteral}{'w'}) \{
+419 \textcolor{preprocessor}{#ifdef NO\_DEFLATE}
+420         err = Z\_STREAM\_ERROR;
+421 \textcolor{preprocessor}{#else}
+422         err = deflateEnd(&(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}));
+423 \textcolor{preprocessor}{#endif}
+424     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} == \textcolor{charliteral}{'r'}) \{
+425         err = inflateEnd(&(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}));
+426     \}
+427     \}
+428     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}} != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} && \mbox{\hyperlink{memgzio_8c_a8334e22cc510313665b4930c00d97cae}{memClose}}(s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}})) \{
+429 \textcolor{preprocessor}{#ifdef ESPIPE}
+430     \textcolor{keywordflow}{if} (errno != ESPIPE) \textcolor{comment}{/* fclose is broken for pipes in HP/UX */}
+431 \textcolor{preprocessor}{#endif}
+432         err = Z\_ERRNO;
+433     \}
+434     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} < 0) err = s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}};
+435 
+436     \mbox{\hyperlink{memgzio_8c_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(s->\mbox{\hyperlink{structmem__stream_ad151b26e8ac236612276193c515b6e67}{inbuf}});
+437     \mbox{\hyperlink{memgzio_8c_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(s->\mbox{\hyperlink{structmem__stream_a3c4eae5484fee4862306c274407f3d13}{outbuf}});
+438     \mbox{\hyperlink{memgzio_8c_a5fb23c00a00f3856832e660edc2ab03d}{TRYFREE}}(s);
+439     \textcolor{keywordflow}{return} err;
+440 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=317pt]{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_afafc4bbc6787281ae67c082cb529787d}\label{memgzio_8c_afafc4bbc6787281ae67c082cb529787d}} 
+\index{memgzio.\+c@{memgzio.\+c}!do\+\_\+flush@{do\+\_\+flush}}
+\index{do\+\_\+flush@{do\+\_\+flush}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{do\+\_\+flush()}{do\_flush()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} do\+\_\+flush (\begin{DoxyParamCaption}\item[{gz\+File}]{file,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{flush }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 575 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+578 \{
+579     uInt \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+580     \textcolor{keywordtype}{int} done = 0;
+581     \mbox{\hyperlink{structmem__stream}{mem\_stream}} *s = (\mbox{\hyperlink{structmem__stream}{mem\_stream}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+582 
+583     \textcolor{keywordflow}{if} (s == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} || s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} != \textcolor{charliteral}{'w'}) \textcolor{keywordflow}{return} Z\_STREAM\_ERROR;
+584 
+585     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in = 0; \textcolor{comment}{/* should be zero already anyway */}
+586 
+587     \textcolor{keywordflow}{for} (;;) \{
+588         \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}} - s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out;
+589 
+590         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} != 0) \{
+591             \textcolor{keywordflow}{if} ((uInt)\mbox{\hyperlink{memgzio_8c_a4f5b925f19d47679ebf054169c2dd280}{memWrite}}(s->\mbox{\hyperlink{structmem__stream_a3c4eae5484fee4862306c274407f3d13}{outbuf}}, 1, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}, s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}}) != 
+      \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}) \{
+592                 s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_ERRNO;
+593                 \textcolor{keywordflow}{return} Z\_ERRNO;
+594             \}
+595             s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out = s->\mbox{\hyperlink{structmem__stream_a3c4eae5484fee4862306c274407f3d13}{outbuf}};
+596             s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out = \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}};
+597         \}
+598         \textcolor{keywordflow}{if} (done) \textcolor{keywordflow}{break};
+599         s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = deflate(&(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}), flush);
+600 
+601     \textcolor{comment}{/* Ignore the second of two consecutive flushes: */}
+602     \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} == 0 && s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} == Z\_BUF\_ERROR) s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_OK;
+603 
+604         \textcolor{comment}{/* deflate has finished flushing only when it hasn't used up}
+605 \textcolor{comment}{         * all the available space in the output buffer: }
+606 \textcolor{comment}{         */}
+607         done = (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out != 0 || s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} == Z\_STREAM\_END);
+608  
+609         \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} != Z\_OK && s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} != Z\_STREAM\_END) \textcolor{keywordflow}{break};
+610     \}
+611     \textcolor{keywordflow}{return}  s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} == Z\_STREAM\_END ? Z\_OK : s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}};
+612 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{memgzio_8c_afafc4bbc6787281ae67c082cb529787d_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_afafc4bbc6787281ae67c082cb529787d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a7574884f7e141fa1303addf4290797d3}\label{memgzio_8c_a7574884f7e141fa1303addf4290797d3}} 
+\index{memgzio.\+c@{memgzio.\+c}!get\+\_\+byte@{get\+\_\+byte}}
+\index{get\+\_\+byte@{get\+\_\+byte}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{get\+\_\+byte()}{get\_byte()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} get\+\_\+byte (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 328 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+330 \{
+331     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_ac41bfcdbcada66bebb9709e8638f6b80}{z\_eof}}) \textcolor{keywordflow}{return} EOF;
+332     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in == 0) \{
+333     errno = 0;
+334     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in = (uInt)\mbox{\hyperlink{memgzio_8c_a310d9bfe85da4847120b7ef7fa0a42f7}{memRead}}(s->\mbox{\hyperlink{structmem__stream_ad151b26e8ac236612276193c515b6e67}{inbuf}}, 1, \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}}, s->
+      \mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}});
+335     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in == 0) \{
+336         s->\mbox{\hyperlink{structmem__stream_ac41bfcdbcada66bebb9709e8638f6b80}{z\_eof}} = 1;
+337         \textcolor{keywordflow}{if} (\mbox{\hyperlink{memgzio_8c_a7b687ab934b380056eb66d6a8fb83a36}{memError}}(s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}})) s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_ERRNO;
+338         \textcolor{keywordflow}{return} EOF;
+339     \}
+340     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in = s->\mbox{\hyperlink{structmem__stream_ad151b26e8ac236612276193c515b6e67}{inbuf}};
+341     \}
+342     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in--;
+343     \textcolor{keywordflow}{return} *(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in)++;
+344 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{memgzio_8c_a7574884f7e141fa1303addf4290797d3_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a7574884f7e141fa1303addf4290797d3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a036425714f0822089513ddbfbbf83d5e}\label{memgzio_8c_a036425714f0822089513ddbfbbf83d5e}} 
+\index{memgzio.\+c@{memgzio.\+c}!get\+Long@{get\+Long}}
+\index{get\+Long@{get\+Long}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{get\+Long()}{getLong()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} u\+Long get\+Long (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 632 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+634 \{
+635     uLong x = (uLong)\mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s);
+636     \textcolor{keywordtype}{int} c;
+637 
+638     x += ((uLong)\mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s))<<8;
+639     x += ((uLong)\mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s))<<16;
+640     c = \mbox{\hyperlink{memgzio_8c_a7574884f7e141fa1303addf4290797d3}{get\_byte}}(s);
+641     \textcolor{keywordflow}{if} (c == EOF) s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_DATA\_ERROR;
+642     x += ((uLong)c)<<24;
+643     \textcolor{keywordflow}{return} x;
+644 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{memgzio_8c_a036425714f0822089513ddbfbbf83d5e_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a036425714f0822089513ddbfbbf83d5e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a372853e45fc83777b428200cdcc816cf}\label{memgzio_8c_a372853e45fc83777b428200cdcc816cf}} 
+\index{memgzio.\+c@{memgzio.\+c}!gz\+\_\+open@{gz\+\_\+open}}
+\index{gz\+\_\+open@{gz\+\_\+open}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{gz\+\_\+open()}{gz\_open()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} gz\+File gz\+\_\+open (\begin{DoxyParamCaption}\item[{char $\ast$}]{memory,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{available,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{mode }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 212 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+216 \{
+217     \textcolor{keywordtype}{int} err;
+218     \textcolor{keywordtype}{int} level = Z\_DEFAULT\_COMPRESSION; \textcolor{comment}{/* compression level */}
+219     \textcolor{keywordtype}{int} strategy = Z\_DEFAULT\_STRATEGY; \textcolor{comment}{/* compression strategy */}
+220     \textcolor{keywordtype}{char} *p = (\textcolor{keywordtype}{char}*)mode;
+221     \mbox{\hyperlink{structmem__stream}{mem\_stream}} *s;
+222     \textcolor{keywordtype}{char} fmode[80]; \textcolor{comment}{/* copy of mode, without the compression level */}
+223     \textcolor{keywordtype}{char} *m = fmode;
+224 
+225     s = (\mbox{\hyperlink{structmem__stream}{mem\_stream}} *)\mbox{\hyperlink{memgzio_8c_ac5c822e3692a95451e8f70a5916f05a3}{ALLOC}}(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structmem__stream}{mem\_stream}}));
+226     \textcolor{keywordflow}{if} (!s) \textcolor{keywordflow}{return} Z\_NULL;
+227 
+228     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.zalloc = (alloc\_func)0;
+229     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.zfree = (free\_func)0;
+230     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.opaque = (voidpf)0;
+231     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in = s->\mbox{\hyperlink{structmem__stream_ad151b26e8ac236612276193c515b6e67}{inbuf}} = Z\_NULL;
+232     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out = s->\mbox{\hyperlink{structmem__stream_a3c4eae5484fee4862306c274407f3d13}{outbuf}} = Z\_NULL;
+233     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in = s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out = 0;
+234     s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_OK;
+235     s->\mbox{\hyperlink{structmem__stream_ac41bfcdbcada66bebb9709e8638f6b80}{z\_eof}} = 0;
+236     s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}} = crc32(0L, Z\_NULL, 0);
+237     s->\mbox{\hyperlink{structmem__stream_a8b64f897dff31431aaf6608e32996e26}{msg}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+238     s->\mbox{\hyperlink{structmem__stream_ad970d09fe4cbcc6595b2d08b39d50db1}{transparent}} = 0;
+239     s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+240 
+241     s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} = \textcolor{charliteral}{'\(\backslash\)0'};
+242     \textcolor{keywordflow}{do} \{
+243         \textcolor{keywordflow}{if} (*p == \textcolor{charliteral}{'r'}) s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} = \textcolor{charliteral}{'r'};
+244         \textcolor{keywordflow}{if} (*p == \textcolor{charliteral}{'w'} || *p == \textcolor{charliteral}{'a'}) s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} = \textcolor{charliteral}{'w'};
+245         \textcolor{keywordflow}{if} (*p >= \textcolor{charliteral}{'0'} && *p <= \textcolor{charliteral}{'9'}) \{
+246         level = *p - \textcolor{charliteral}{'0'};
+247     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*p == \textcolor{charliteral}{'f'}) \{
+248       strategy = Z\_FILTERED;
+249     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (*p == \textcolor{charliteral}{'h'}) \{
+250       strategy = Z\_HUFFMAN\_ONLY;
+251     \} \textcolor{keywordflow}{else} \{
+252         *m++ = *p; \textcolor{comment}{/* copy the mode */}
+253     \}
+254     \} \textcolor{keywordflow}{while} (*p++ && m != fmode + \textcolor{keyword}{sizeof}(fmode));
+255     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} == \textcolor{charliteral}{'\(\backslash\)0'}) \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}{destroy}}(s), (gzFile)Z\_NULL;
+256     
+257     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} == \textcolor{charliteral}{'w'}) \{
+258 \textcolor{preprocessor}{#ifdef NO\_DEFLATE}
+259         err = Z\_STREAM\_ERROR;
+260 \textcolor{preprocessor}{#else}
+261         err = deflateInit2(&(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}), level,
+262                            Z\_DEFLATED, -MAX\_WBITS, DEF\_MEM\_LEVEL, strategy);
+263         \textcolor{comment}{/* windowBits is passed < 0 to suppress zlib header */}
+264 
+265         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out = s->\mbox{\hyperlink{structmem__stream_a3c4eae5484fee4862306c274407f3d13}{outbuf}} = (Byte*)\mbox{\hyperlink{memgzio_8c_ac5c822e3692a95451e8f70a5916f05a3}{ALLOC}}(\mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}});
+266 \textcolor{preprocessor}{#endif}
+267         \textcolor{keywordflow}{if} (err != Z\_OK || s->\mbox{\hyperlink{structmem__stream_a3c4eae5484fee4862306c274407f3d13}{outbuf}} == Z\_NULL) \{
+268             \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}{destroy}}(s), (gzFile)Z\_NULL;
+269         \}
+270     \} \textcolor{keywordflow}{else} \{
+271         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in  = s->\mbox{\hyperlink{structmem__stream_ad151b26e8ac236612276193c515b6e67}{inbuf}} = (Byte*)\mbox{\hyperlink{memgzio_8c_ac5c822e3692a95451e8f70a5916f05a3}{ALLOC}}(\mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}});
+272 
+273         err = inflateInit2(&(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}), -MAX\_WBITS);
+274         \textcolor{comment}{/* windowBits is passed < 0 to tell that there is no zlib header.}
+275 \textcolor{comment}{         * Note that in this case inflate *requires* an extra "dummy" byte}
+276 \textcolor{comment}{         * after the compressed stream in order to complete decompression and}
+277 \textcolor{comment}{         * return Z\_STREAM\_END. Here the gzip CRC32 ensures that 4 bytes are}
+278 \textcolor{comment}{         * present after the compressed stream.}
+279 \textcolor{comment}{         */}
+280         \textcolor{keywordflow}{if} (err != Z\_OK || s->\mbox{\hyperlink{structmem__stream_ad151b26e8ac236612276193c515b6e67}{inbuf}} == Z\_NULL) \{
+281             \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}{destroy}}(s), (gzFile)Z\_NULL;
+282         \}
+283     \}
+284     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out = \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}};
+285 
+286     errno = 0;
+287     s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}} = \mbox{\hyperlink{memgzio_8c_a15d81d7981e2b633cd92650b7620ecfc}{memOpen}}(memory, available, s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}});
+288 
+289     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}} == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+290         \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}{destroy}}(s), (gzFile)Z\_NULL;
+291     \}
+292 
+293     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} == \textcolor{charliteral}{'w'}) \{
+294         \textcolor{comment}{/* Write a very simple .gz header:}
+295 \textcolor{comment}{         */}
+296         \mbox{\hyperlink{memgzio_8c_aafe8c3e74955de5641833affee004142}{memPrintf}}(s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}}, \textcolor{stringliteral}{"%c%c%c%c%c%c%c%c%c%c"}, gz\_magic[0], gz\_magic[1],
+297              Z\_DEFLATED, 0 \textcolor{comment}{/*flags*/}, 0,0,0,0 \textcolor{comment}{/*time*/}, 0 \textcolor{comment}{/*xflags*/}, OS\_CODE);
+298     s->\mbox{\hyperlink{structmem__stream_a50cada517a32582e93025846359ddec7}{startpos}} = 10L;
+299     \textcolor{comment}{/* We use 10L instead of ftell(s->file) to because ftell causes an}
+300 \textcolor{comment}{         * fflush on some systems. This version of the library doesn't use}
+301 \textcolor{comment}{         * startpos anyway in write mode, so this initialization is not}
+302 \textcolor{comment}{         * necessary.}
+303 \textcolor{comment}{         */}
+304     \} \textcolor{keywordflow}{else} \{
+305     \mbox{\hyperlink{memgzio_8c_a5746c7ec7e8460e3005db20119179882}{check\_header}}(s); \textcolor{comment}{/* skip the .gz header */}
+306     s->\mbox{\hyperlink{structmem__stream_a50cada517a32582e93025846359ddec7}{startpos}} = (\mbox{\hyperlink{memgzio_8c_a9e7eccde306d563673b6da9561a3d3bb}{memTell}}(s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}}) - s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in);
+307     \}
+308     
+309     \textcolor{keywordflow}{return} (gzFile)s;
+310 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a372853e45fc83777b428200cdcc816cf_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a372853e45fc83777b428200cdcc816cf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a8334e22cc510313665b4930c00d97cae}\label{memgzio_8c_a8334e22cc510313665b4930c00d97cae}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+Close@{mem\+Close}}
+\index{mem\+Close@{mem\+Close}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+Close()}{memClose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} mem\+Close (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 181 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+182 \{
+183   \textcolor{keywordflow}{if}(f->\mbox{\hyperlink{struct___mem_file_a88cb51a4419fad64ebfd304b5d0cfe36}{mode}} == \textcolor{charliteral}{'w'}) \{
+184     *((\textcolor{keywordtype}{int} *)(f->\mbox{\hyperlink{struct___mem_file_a62a96f96df82e23ef6dace974e19b18c}{memory}}+4)) = \mbox{\hyperlink{memgzio_8c_a9e7eccde306d563673b6da9561a3d3bb}{memTell}}(f);
+185   \}
+186   free(f);
+187   \textcolor{keywordflow}{return} 0;
+188 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{memgzio_8c_a8334e22cc510313665b4930c00d97cae_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a8334e22cc510313665b4930c00d97cae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a7b687ab934b380056eb66d6a8fb83a36}\label{memgzio_8c_a7b687ab934b380056eb66d6a8fb83a36}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+Error@{mem\+Error}}
+\index{mem\+Error@{mem\+Error}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+Error()}{memError()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} mem\+Error (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 176 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+177 \{
+178   \textcolor{keywordflow}{return} f->\mbox{\hyperlink{struct___mem_file_a63100edd8050f287d8dc7070d92a55cb}{error}};
+179 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a7b687ab934b380056eb66d6a8fb83a36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_add4b49c11836bf9d6d900a3e53780243}\label{memgzio_8c_add4b49c11836bf9d6d900a3e53780243}} 
+\index{memgzio.\+c@{memgzio.\+c}!memgzclose@{memgzclose}}
+\index{memgzclose@{memgzclose}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{memgzclose()}{memgzclose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT memgzclose (\begin{DoxyParamCaption}\item[{gz\+File}]{file }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 650 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+652 \{
+653     \textcolor{keywordtype}{int} err;
+654     \mbox{\hyperlink{structmem__stream}{mem\_stream}} *s = (\mbox{\hyperlink{structmem__stream}{mem\_stream}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+655 
+656     \textcolor{keywordflow}{if} (s == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \textcolor{keywordflow}{return} Z\_STREAM\_ERROR;
+657 
+658     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} == \textcolor{charliteral}{'w'}) \{
+659 \textcolor{preprocessor}{#ifdef NO\_DEFLATE}
+660     \textcolor{keywordflow}{return} Z\_STREAM\_ERROR;
+661 \textcolor{preprocessor}{#else}
+662         err = \mbox{\hyperlink{memgzio_8c_afafc4bbc6787281ae67c082cb529787d}{do\_flush}} (\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, Z\_FINISH);
+663         \textcolor{keywordflow}{if} (err != Z\_OK) \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}{destroy}}((\mbox{\hyperlink{structmem__stream}{mem\_stream}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+664 
+665         \mbox{\hyperlink{memgzio_8c_a3c5218d0289a398320570f747214d6e7}{putLong}} (s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}}, s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}});
+666         \mbox{\hyperlink{memgzio_8c_a3c5218d0289a398320570f747214d6e7}{putLong}} (s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}}, s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.total\_in);
+667 \textcolor{preprocessor}{#endif}
+668     \}
+669     \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_a36e2f236693ef941a3bcd8e4cb6bc0e7}{destroy}}((\mbox{\hyperlink{structmem__stream}{mem\_stream}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+670 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_add4b49c11836bf9d6d900a3e53780243_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_add4b49c11836bf9d6d900a3e53780243_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_abd908bca32c36fd032ba69adaaa12523}\label{memgzio_8c_abd908bca32c36fd032ba69adaaa12523}} 
+\index{memgzio.\+c@{memgzio.\+c}!memgzopen@{memgzopen}}
+\index{memgzopen@{memgzopen}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{memgzopen()}{memgzopen()}}
+{\footnotesize\ttfamily gz\+File Z\+E\+X\+P\+O\+RT memgzopen (\begin{DoxyParamCaption}\item[{char $\ast$}]{memory,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{available,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{mode }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 315 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+319 \{
+320     \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_a372853e45fc83777b428200cdcc816cf}{gz\_open}} (memory, available, mode);
+321 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_abd908bca32c36fd032ba69adaaa12523_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_abd908bca32c36fd032ba69adaaa12523_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a653313e703474c7629c7fee014b91931}\label{memgzio_8c_a653313e703474c7629c7fee014b91931}} 
+\index{memgzio.\+c@{memgzio.\+c}!memgzread@{memgzread}}
+\index{memgzread@{memgzread}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{memgzread()}{memgzread()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT memgzread (\begin{DoxyParamCaption}\item[{gz\+File}]{file,  }\item[{\mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}}}]{buf,  }\item[{unsigned}]{len }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 446 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+450 \{
+451     \mbox{\hyperlink{structmem__stream}{mem\_stream}} *s = (\mbox{\hyperlink{structmem__stream}{mem\_stream}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+452     Bytef *start = (Bytef*)\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}; \textcolor{comment}{/* starting point for crc computation */}
+453     Byte  *next\_out; \textcolor{comment}{/* == stream.next\_out but not forced far (for MSDOS) */}
+454 
+455     \textcolor{keywordflow}{if} (s == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} || s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} != \textcolor{charliteral}{'r'}) \textcolor{keywordflow}{return} Z\_STREAM\_ERROR;
+456 
+457     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} == Z\_DATA\_ERROR || s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} == Z\_ERRNO) \textcolor{keywordflow}{return} -1;
+458     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} == Z\_STREAM\_END) \textcolor{keywordflow}{return} 0;  \textcolor{comment}{/* EOF */}
+459 
+460     next\_out = (Byte*)\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}};
+461     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out = (Bytef*)\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}};
+462     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out = \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+463 
+464     \textcolor{keywordflow}{while} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out != 0) \{
+465 
+466     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_ad970d09fe4cbcc6595b2d08b39d50db1}{transparent}}) \{
+467         \textcolor{comment}{/* Copy first the lookahead bytes: */}
+468         uInt \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in;
+469         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} > s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out) \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out;
+470         \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} > 0) \{
+471         zmemcpy(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out, s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+472         next\_out += \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+473         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out = next\_out;
+474         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in   += \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+475         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out -= \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+476         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in  -= \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+477         \}
+478         \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out > 0) \{
+479         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out -= (uInt)\mbox{\hyperlink{memgzio_8c_a310d9bfe85da4847120b7ef7fa0a42f7}{memRead}}(next\_out, 1, s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out, s->
+      \mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}});
+480         \}
+481         \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} -= s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out;
+482         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.total\_in  += (uLong)\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+483         s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.total\_out += (uLong)\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+484             \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} == 0) s->\mbox{\hyperlink{structmem__stream_ac41bfcdbcada66bebb9709e8638f6b80}{z\_eof}} = 1;
+485         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+486     \}
+487         \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in == 0 && !s->\mbox{\hyperlink{structmem__stream_ac41bfcdbcada66bebb9709e8638f6b80}{z\_eof}}) \{
+488 
+489             errno = 0;
+490             s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in = (uInt)\mbox{\hyperlink{memgzio_8c_a310d9bfe85da4847120b7ef7fa0a42f7}{memRead}}(s->\mbox{\hyperlink{structmem__stream_ad151b26e8ac236612276193c515b6e67}{inbuf}}, 1, 
+      \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}}, s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}});
+491             \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in == 0) \{
+492                 s->\mbox{\hyperlink{structmem__stream_ac41bfcdbcada66bebb9709e8638f6b80}{z\_eof}} = 1;
+493         \textcolor{keywordflow}{if} (\mbox{\hyperlink{memgzio_8c_a7b687ab934b380056eb66d6a8fb83a36}{memError}}(s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}})) \{
+494             s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_ERRNO;
+495             \textcolor{keywordflow}{break};
+496         \}
+497             \}
+498             s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in = s->\mbox{\hyperlink{structmem__stream_ad151b26e8ac236612276193c515b6e67}{inbuf}};
+499         \}
+500         s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = inflate(&(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}), Z\_NO\_FLUSH);
+501 
+502     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} == Z\_STREAM\_END) \{
+503         \textcolor{comment}{/* Check CRC and original size */}
+504         s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}} = crc32(s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}}, start, (uInt)(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out - start));
+505         start = s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out;
+506 
+507         \textcolor{keywordflow}{if} (\mbox{\hyperlink{memgzio_8c_a036425714f0822089513ddbfbbf83d5e}{getLong}}(s) != s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}}) \{
+508         s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_DATA\_ERROR;
+509         \} \textcolor{keywordflow}{else} \{
+510             (void)\mbox{\hyperlink{memgzio_8c_a036425714f0822089513ddbfbbf83d5e}{getLong}}(s);
+511                 \textcolor{comment}{/* The uncompressed length returned by above getlong() may}
+512 \textcolor{comment}{                 * be different from s->stream.total\_out) in case of}
+513 \textcolor{comment}{         * concatenated .gz files. Check for such files:}
+514 \textcolor{comment}{         */}
+515         \mbox{\hyperlink{memgzio_8c_a5746c7ec7e8460e3005db20119179882}{check\_header}}(s);
+516         \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} == Z\_OK) \{
+517             uLong total\_in = s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.total\_in;
+518             uLong total\_out = s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.total\_out;
+519 
+520             inflateReset(&(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}));
+521             s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.total\_in = total\_in;
+522             s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.total\_out = total\_out;
+523             s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}} = crc32(0L, Z\_NULL, 0);
+524         \}
+525         \}
+526     \}
+527     \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} != Z\_OK || s->\mbox{\hyperlink{structmem__stream_ac41bfcdbcada66bebb9709e8638f6b80}{z\_eof}}) \textcolor{keywordflow}{break};
+528     \}
+529     s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}} = crc32(s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}}, start, (uInt)(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out - start));
+530 
+531     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} - s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out);
+532 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a653313e703474c7629c7fee014b91931_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a653313e703474c7629c7fee014b91931_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_ab3c39dfe0bb80fc7f76e21b586dd0b97}\label{memgzio_8c_ab3c39dfe0bb80fc7f76e21b586dd0b97}} 
+\index{memgzio.\+c@{memgzio.\+c}!memgzwrite@{memgzwrite}}
+\index{memgzwrite@{memgzwrite}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{memgzwrite()}{memgzwrite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} Z\+E\+X\+P\+O\+RT memgzwrite (\begin{DoxyParamCaption}\item[{gz\+File}]{file,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}}}]{buf,  }\item[{unsigned}]{len }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 540 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+544 \{
+545     \mbox{\hyperlink{structmem__stream}{mem\_stream}} *s = (\mbox{\hyperlink{structmem__stream}{mem\_stream}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+546 
+547     \textcolor{keywordflow}{if} (s == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} || s->\mbox{\hyperlink{structmem__stream_a30a6ad1cea6962847c45dd540d702f6f}{mode}} != \textcolor{charliteral}{'w'}) \textcolor{keywordflow}{return} Z\_STREAM\_ERROR;
+548 
+549     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_in = (Bytef*)\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}};
+550     s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in = \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+551 
+552     \textcolor{keywordflow}{while} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in != 0) \{
+553 
+554         \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out == 0) \{
+555 
+556             s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.next\_out = s->\mbox{\hyperlink{structmem__stream_a3c4eae5484fee4862306c274407f3d13}{outbuf}};
+557             \textcolor{keywordflow}{if} (\mbox{\hyperlink{memgzio_8c_a4f5b925f19d47679ebf054169c2dd280}{memWrite}}(s->\mbox{\hyperlink{structmem__stream_a3c4eae5484fee4862306c274407f3d13}{outbuf}}, 1, \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}}, s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}}) != 
+      \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}}) \{
+558                 s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = Z\_ERRNO;
+559                 \textcolor{keywordflow}{break};
+560             \}
+561             s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_out = \mbox{\hyperlink{memgzio_8c_a1491823e6cf52e751120f367bdc68a00}{Z\_BUFSIZE}};
+562         \}
+563         s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} = deflate(&(s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}), Z\_NO\_FLUSH);
+564         \textcolor{keywordflow}{if} (s->\mbox{\hyperlink{structmem__stream_a0049d60995cda5d1638ebce2a4eb3155}{z\_err}} != Z\_OK) \textcolor{keywordflow}{break};
+565     \}
+566     s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}} = crc32(s->\mbox{\hyperlink{structmem__stream_a51276ceb0be94f2201a059c8697dc853}{crc}}, (\textcolor{keyword}{const} Bytef *)\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}});
+567 
+568     \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} - s->\mbox{\hyperlink{structmem__stream_a8e95715455ffbde3f8bf840180eabd37}{stream}}.avail\_in);
+569 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{memgzio_8c_ab3c39dfe0bb80fc7f76e21b586dd0b97_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_ab3c39dfe0bb80fc7f76e21b586dd0b97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a15d81d7981e2b633cd92650b7620ecfc}\label{memgzio_8c_a15d81d7981e2b633cd92650b7620ecfc}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+Open@{mem\+Open}}
+\index{mem\+Open@{mem\+Open}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+Open()}{memOpen()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}}$\ast$ mem\+Open (\begin{DoxyParamCaption}\item[{char $\ast$}]{memory,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{available,  }\item[{char}]{mode }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 77 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+78 \{
+79   \mbox{\hyperlink{struct___mem_file}{MEMFILE}} *f;
+80 
+81   \textcolor{keywordflow}{if}(available <= 8)
+82     \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+83 
+84   \textcolor{keywordflow}{if}(mode != \textcolor{charliteral}{'w'} && mode != \textcolor{charliteral}{'r'})
+85     \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+86 
+87   f = (\mbox{\hyperlink{struct___mem_file}{MEMFILE}} *)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct___mem_file}{MEMFILE}}));
+88 
+89   f->\mbox{\hyperlink{struct___mem_file_a62a96f96df82e23ef6dace974e19b18c}{memory}} = memory;
+90   f->\mbox{\hyperlink{struct___mem_file_a88cb51a4419fad64ebfd304b5d0cfe36}{mode}} = mode;
+91   f->\mbox{\hyperlink{struct___mem_file_a63100edd8050f287d8dc7070d92a55cb}{error}} = 0;
+92 
+93   \textcolor{keywordflow}{if}(mode == \textcolor{charliteral}{'w'}) \{
+94     f->\mbox{\hyperlink{struct___mem_file_a1f48066353e37cf16c9a0065abecf238}{available}} = available - 8;
+95     f->\mbox{\hyperlink{struct___mem_file_aa15859f66ae2eb41245e4ba88486d67f}{next}} = memory + 8;
+96     memory[0] = \textcolor{charliteral}{'V'};
+97     memory[1] = \textcolor{charliteral}{'B'};
+98     memory[2] = \textcolor{charliteral}{'A'};
+99     memory[3] = \textcolor{charliteral}{' '};
+100     *((\textcolor{keywordtype}{int} *)(memory+4)) = 0;
+101   \} \textcolor{keywordflow}{else} \{
+102     \textcolor{keywordflow}{if}(memory[0] != \textcolor{charliteral}{'V'} || memory[1] != \textcolor{charliteral}{'B'} || memory[2] != \textcolor{charliteral}{'A'} || 
+103        memory[3] != \textcolor{charliteral}{' '}) \{
+104       free(f);
+105       \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+106     \}
+107     f->\mbox{\hyperlink{struct___mem_file_a1f48066353e37cf16c9a0065abecf238}{available}} = *((\textcolor{keywordtype}{int} *)(memory+4));
+108     f->\mbox{\hyperlink{struct___mem_file_aa15859f66ae2eb41245e4ba88486d67f}{next}} = memory+8;
+109   \}
+110 
+111   \textcolor{keywordflow}{return} f;
+112 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a15d81d7981e2b633cd92650b7620ecfc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_aafe8c3e74955de5641833affee004142}\label{memgzio_8c_aafe8c3e74955de5641833affee004142}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+Printf@{mem\+Printf}}
+\index{mem\+Printf@{mem\+Printf}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+Printf()}{memPrintf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} mem\+Printf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 190 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+191 \{
+192   \textcolor{keywordtype}{char} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}[80];
+193   va\_list list;
+194   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+195   
+196   va\_start(list, format);
+197   \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = vsprintf(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, format, list);
+198   va\_end(list);
+199 
+200   \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})\mbox{\hyperlink{memgzio_8c_a4f5b925f19d47679ebf054169c2dd280}{memWrite}}(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, 1, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}, f);
+201 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{memgzio_8c_aafe8c3e74955de5641833affee004142_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_aafe8c3e74955de5641833affee004142_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_aaa6a487486283b987d88e4b713a21c4f}\label{memgzio_8c_aaa6a487486283b987d88e4b713a21c4f}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+Putc@{mem\+Putc}}
+\index{mem\+Putc@{mem\+Putc}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+Putc()}{memPutc()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} mem\+Putc (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{c,  }\item[{\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 155 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+156 \{
+157   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->mode != \textcolor{charliteral}{'w'}) \{
+158     \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->error = 1;
+159     \textcolor{keywordflow}{return} -1;
+160   \}
+161 
+162   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available >= 1) \{
+163     *\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->next++ = c;
+164     \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available--;
+165   \} \textcolor{keywordflow}{else}
+166     \textcolor{keywordflow}{return} -1;
+167 
+168   \textcolor{keywordflow}{return} c;
+169 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_aaa6a487486283b987d88e4b713a21c4f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a310d9bfe85da4847120b7ef7fa0a42f7}\label{memgzio_8c_a310d9bfe85da4847120b7ef7fa0a42f7}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+Read@{mem\+Read}}
+\index{mem\+Read@{mem\+Read}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+Read()}{memRead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} size\+\_\+t mem\+Read (\begin{DoxyParamCaption}\item[{void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{count,  }\item[{\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 133 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+135 \{
+136   \textcolor{keywordtype}{size\_t} total = \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}*\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+137   
+138   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->mode != \textcolor{charliteral}{'r'}) \{
+139     \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->error = 1;
+140     \textcolor{keywordflow}{return} 0;
+141   \}
+142 
+143   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available == 0)
+144     \textcolor{keywordflow}{return} -1;
+145 
+146   \textcolor{keywordflow}{if}(total > (\textcolor{keywordtype}{size\_t})\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available) \{
+147     total = \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available;
+148   \}
+149   memcpy(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->next, total);
+150   \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available -= (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})total;
+151   \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->next += total;
+152   \textcolor{keywordflow}{return} total;
+153 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a310d9bfe85da4847120b7ef7fa0a42f7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a9e7eccde306d563673b6da9561a3d3bb}\label{memgzio_8c_a9e7eccde306d563673b6da9561a3d3bb}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+Tell@{mem\+Tell}}
+\index{mem\+Tell@{mem\+Tell}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+Tell()}{memTell()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} long mem\+Tell (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 171 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+172 \{
+173   \textcolor{keywordflow}{return} (\textcolor{keywordtype}{long})(f->\mbox{\hyperlink{struct___mem_file_aa15859f66ae2eb41245e4ba88486d67f}{next}} - f->\mbox{\hyperlink{struct___mem_file_a62a96f96df82e23ef6dace974e19b18c}{memory}}) - 8;
+174 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a9e7eccde306d563673b6da9561a3d3bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_ae7b3619f3d6ea142c60284f78af3fe4b}\label{memgzio_8c_ae7b3619f3d6ea142c60284f78af3fe4b}} 
+\index{memgzio.\+c@{memgzio.\+c}!memtell@{memtell}}
+\index{memtell@{memtell}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{memtell()}{memtell()}}
+{\footnotesize\ttfamily long Z\+E\+X\+P\+O\+RT memtell (\begin{DoxyParamCaption}\item[{gz\+File}]{file }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 672 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+674 \{
+675     \mbox{\hyperlink{structmem__stream}{mem\_stream}} *s = (\mbox{\hyperlink{structmem__stream}{mem\_stream}}*)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}};
+676 
+677     \textcolor{keywordflow}{if} (s == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \textcolor{keywordflow}{return} Z\_STREAM\_ERROR;
+678     
+679     \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_a9e7eccde306d563673b6da9561a3d3bb}{memTell}}(s->\mbox{\hyperlink{structmem__stream_a3bba5271c2ba53db444ce0b70d1c6fe1}{file}});
+680 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{memgzio_8c_ae7b3619f3d6ea142c60284f78af3fe4b_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_ae7b3619f3d6ea142c60284f78af3fe4b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a4f5b925f19d47679ebf054169c2dd280}\label{memgzio_8c_a4f5b925f19d47679ebf054169c2dd280}} 
+\index{memgzio.\+c@{memgzio.\+c}!mem\+Write@{mem\+Write}}
+\index{mem\+Write@{mem\+Write}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{mem\+Write()}{memWrite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} size\+\_\+t mem\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} void $\ast$}]{buffer,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{count,  }\item[{\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$}]{file }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 114 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+116 \{
+117   \textcolor{keywordtype}{size\_t} total = \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}*\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+118   
+119   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->mode != \textcolor{charliteral}{'w'}) \{
+120     \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->error = 1;
+121     \textcolor{keywordflow}{return} 0;
+122   \}
+123 
+124   \textcolor{keywordflow}{if}(total > (\textcolor{keywordtype}{size\_t})\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available) \{
+125     total = \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available;
+126   \}
+127   memcpy(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->next, \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, total);
+128   \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->available -= (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})total;
+129   \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}->next += total;
+130   \textcolor{keywordflow}{return} total;
+131 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a4f5b925f19d47679ebf054169c2dd280_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{memgzio_8c_a85eec04e1c2227d6f8094aef9572bdd7}\label{memgzio_8c_a85eec04e1c2227d6f8094aef9572bdd7}} 
+\index{memgzio.\+c@{memgzio.\+c}!OF@{OF}}
+\index{OF@{OF}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{O\+F()}{OF()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} gz\+File \mbox{\hyperlink{memgzio_8c_a372853e45fc83777b428200cdcc816cf}{gz\+\_\+open}} OF (\begin{DoxyParamCaption}\item[{(char $\ast$memory, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} available, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$mode)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memgzio_8c_ad9d32d51a7704cda2575925132ea97d0}\label{memgzio_8c_ad9d32d51a7704cda2575925132ea97d0}} 
+\index{memgzio.\+c@{memgzio.\+c}!OF@{OF}}
+\index{OF@{OF}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{O\+F()}{OF()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{memgzio_8c_afafc4bbc6787281ae67c082cb529787d}{do\+\_\+flush}} OF (\begin{DoxyParamCaption}\item[{(gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} flush)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memgzio_8c_af6631a8f48d8c2334eabbc3778bfc6a3}\label{memgzio_8c_af6631a8f48d8c2334eabbc3778bfc6a3}} 
+\index{memgzio.\+c@{memgzio.\+c}!OF@{OF}}
+\index{OF@{OF}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{O\+F()}{OF()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} u\+Long \mbox{\hyperlink{memgzio_8c_a036425714f0822089513ddbfbbf83d5e}{get\+Long}} OF (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{structmem__stream}{mem\+\_\+stream}} $\ast$s)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memgzio_8c_acd751d63679c766cc504c404eccf1c26}\label{memgzio_8c_acd751d63679c766cc504c404eccf1c26}} 
+\index{memgzio.\+c@{memgzio.\+c}!OF@{OF}}
+\index{OF@{OF}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{O\+F()}{OF()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} void \mbox{\hyperlink{memgzio_8c_a3c5218d0289a398320570f747214d6e7}{put\+Long}} OF (\begin{DoxyParamCaption}\item[{(\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, u\+Long x)}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{memgzio_8c_a3c5218d0289a398320570f747214d6e7}\label{memgzio_8c_a3c5218d0289a398320570f747214d6e7}} 
+\index{memgzio.\+c@{memgzio.\+c}!put\+Long@{put\+Long}}
+\index{put\+Long@{put\+Long}!memgzio.\+c@{memgzio.\+c}}
+\subsubsection{\texorpdfstring{put\+Long()}{putLong()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{unzip_8cpp_a08023ea6765c99d60a6a3840cd07156e}{local}} void put\+Long (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{memgzio_8c_aebbc1e519147882ded18ad14979fe817}{M\+E\+M\+F\+I\+LE}} $\ast$}]{file,  }\item[{u\+Long}]{x }\end{DoxyParamCaption})}
+
+
+
+memgzio.\+c 파일의 617 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+620 \{
+621     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+622     \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = 0; \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} < 4; \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}++) \{
+623         \mbox{\hyperlink{memgzio_8c_aaa6a487486283b987d88e4b713a21c4f}{memPutc}}((\textcolor{keywordtype}{int})(x & 0xff), \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+624         x >>= 8;
+625     \}
+626 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{memgzio_8c_a3c5218d0289a398320570f747214d6e7_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{memgzio_8c_a3c5218d0289a398320570f747214d6e7_icgraph}
+\end{center}
+\end{figure}

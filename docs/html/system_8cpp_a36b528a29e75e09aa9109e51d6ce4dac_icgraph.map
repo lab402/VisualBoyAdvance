@@ -1,0 +1,11 @@
+<map id="systemGbPrint" name="systemGbPrint">
+<area shape="rect" id="node2" href="$gb_printer_8cpp.html#a8dd92155e15bc774868bb536a3b7ada3" title="gbPrinterShowData" alt="" coords="163,111,296,138"/>
+<area shape="rect" id="node3" href="$gb_printer_8cpp.html#acb19ed22c056fded1dab564831804a2c" title="gbPrinterCommand" alt="" coords="344,111,477,138"/>
+<area shape="rect" id="node4" href="$gb_printer_8h.html#ad92e246f72a463f50f3c0856418e087e" title="gbPrinterSend" alt="" coords="525,111,629,138"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_window.html#a2d6e4c0bd7467305b02bd6f5b0343f26" title="VBA::Window::vOnGBPrinter\lToggled" alt="" coords="683,5,874,47"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a5909d22b4cea6315004fc60b0f997b23" title="MainWnd::OnOptionsGameboy\lPrinter" alt="" coords="677,71,880,112"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#ab7257fc8414b9a73639c04106ecd1765" title="MainWnd::OnUpdateOptions\lGameboyPrinter" alt="" coords="685,136,873,177"/>
+<area shape="rect" id="node9" href="$class_v_b_a.html#aed48a7db8cc5b65a1e495661f6040915" title="VBA::loadSettings" alt="" coords="714,202,843,229"/>
+<area shape="rect" id="node6" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="928,13,1085,39"/>
+<area shape="rect" id="node10" href="$class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="945,202,1068,229"/>
+</map>

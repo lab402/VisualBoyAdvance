@@ -1,0 +1,15 @@
+<map id="FileDlg::getFilterIndex" name="FileDlg::getFilterIndex">
+<area shape="rect" id="node2" href="$class_g_b_map_view.html#a667f0f830b816e2ec34519d75a5ad488" title="GBMapView::OnSave" alt="" coords="231,5,378,32"/>
+<area shape="rect" id="node3" href="$class_g_b_oam_view.html#a04f7a345e1f9d71b149b9df3b2db30d4" title="GBOamView::save" alt="" coords="239,56,370,83"/>
+<area shape="rect" id="node4" href="$class_g_b_palette_view.html#a90cca0ba09442c669f7403d31e8ab0ee" title="GBPaletteView::save" alt="" coords="233,107,377,133"/>
+<area shape="rect" id="node7" href="$class_g_b_printer_dlg.html#a3cfa1c22a60df868b53c9e9d52094963" title="GBPrinterDlg::OnSave" alt="" coords="229,157,380,184"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#a869b47c3aae70c534109b9a8310e1faf" title="MainWnd::OnFileScreencapture" alt="" coords="201,208,408,235"/>
+<area shape="rect" id="node9" href="$class_map_view.html#a3fc9d61706da44e2fd3e8762805d9f0b" title="MapView::OnSave" alt="" coords="241,259,369,285"/>
+<area shape="rect" id="node10" href="$class_oam_view.html#adb535d2f90a5c8edce8cb900e64a5854" title="OamView::OnSave" alt="" coords="239,309,370,336"/>
+<area shape="rect" id="node11" href="$class_palette_view.html#a107b71060221c9d44bdf0d38ca77c689" title="PaletteView::save" alt="" coords="242,360,367,387"/>
+<area shape="rect" id="node14" href="$class_tile_view.html#ae318b9ed3c7567dcbc897c77d063a0eb" title="TileView::OnSave" alt="" coords="243,411,366,437"/>
+<area shape="rect" id="node5" href="$class_g_b_palette_view.html#a0186b41f6db460271256f36800ffa980" title="GBPaletteView::OnSaveBg" alt="" coords="458,81,637,108"/>
+<area shape="rect" id="node6" href="$class_g_b_palette_view.html#a20eb0c24604804e9c33db15f3ff394f0" title="GBPaletteView::OnSaveObj" alt="" coords="456,132,639,159"/>
+<area shape="rect" id="node12" href="$class_palette_view.html#a4e11f19e5535efcd1b34d38899f18482" title="PaletteView::OnSaveBg" alt="" coords="467,335,627,361"/>
+<area shape="rect" id="node13" href="$class_palette_view.html#a1a09199a2ab1045bbbcef736d05296c1" title="PaletteView::OnSaveObj" alt="" coords="465,385,629,412"/>
+</map>

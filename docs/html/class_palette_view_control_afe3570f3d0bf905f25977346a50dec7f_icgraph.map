@@ -1,0 +1,5 @@
+<map id="PaletteViewControl::setSelected" name="PaletteViewControl::setSelected">
+<area shape="rect" id="node2" href="$class_g_b_palette_view.html#a01960a28d93aef1873f5d5256fa11c79" title="GBPaletteView::OnPalInfo" alt="" coords="185,5,360,32"/>
+<area shape="rect" id="node3" href="$class_palette_view.html#a458786a4c3317411b5cd818c544ea50a" title="PaletteView::OnPalInfo" alt="" coords="195,56,350,83"/>
+<area shape="rect" id="node4" href="$class_palette_view_control.html#a766a44e9b018fc6c87f81f3c0fdd6c6e" title="PaletteViewControl\l::OnLButtonDown" alt="" coords="207,107,339,149"/>
+</map>

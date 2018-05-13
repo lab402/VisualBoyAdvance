@@ -1,0 +1,9 @@
+<map id="MainWnd::OnOptionsSound11khz" name="MainWnd::OnOptionsSound11khz">
+<area shape="rect" id="node2" href="$_sound_8cpp.html#a46bef5048521e8000f3850e686e7eb22" title="soundSetQuality" alt="" coords="280,56,399,83"/>
+<area shape="rect" id="node8" href="$_g_b_8h.html#a86ed9a5e6bb5230a501d753280690618" title="gbSoundSetQuality" alt="" coords="272,107,407,133"/>
+<area shape="rect" id="node3" href="$system_8cpp.html#a98f45c601382b0dee2729693bc8720c7" title="systemCanChangeSoundQuality" alt="" coords="455,5,665,32"/>
+<area shape="rect" id="node4" href="$_sound_8cpp.html#a2f94fcc352d566069ad4cee1e9a62a39" title="soundShutdown" alt="" coords="503,56,617,83"/>
+<area shape="rect" id="node6" href="$_sound_8cpp.html#a48aac7ccc2439587be697d3f15fcd2e7" title="soundInit" alt="" coords="523,107,597,133"/>
+<area shape="rect" id="node5" href="$system_8cpp.html#ada306cd4177ec7d296668534b0c377d0" title="systemSoundShutdown" alt="" coords="713,56,872,83"/>
+<area shape="rect" id="node7" href="$system_8cpp.html#a46a394ba020dc0fc499bb8481c21325b" title="systemSoundInit" alt="" coords="733,107,852,133"/>
+</map>

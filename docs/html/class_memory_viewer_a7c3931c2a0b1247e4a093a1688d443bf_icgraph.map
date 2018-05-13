@@ -1,0 +1,6 @@
+<map id="MemoryViewer::getCurrentAddress" name="MemoryViewer::getCurrentAddress">
+<area shape="rect" id="node2" href="$class_g_b_memory_viewer_dlg.html#abea90b70d9579272367ed561fe796b01" title="GBMemoryViewerDlg::\lOnSave" alt="" coords="242,5,397,47"/>
+<area shape="rect" id="node3" href="$class_g_b_memory_viewer_dlg.html#ac81a1ae7e069e1db594879cddbd7b6d8" title="GBMemoryViewerDlg::\lOnLoad" alt="" coords="242,71,397,112"/>
+<area shape="rect" id="node4" href="$class_memory_viewer_dlg.html#aaa3651f618355f6d1d3bf3158cb9c812" title="MemoryViewerDlg::OnSave" alt="" coords="229,137,409,163"/>
+<area shape="rect" id="node5" href="$class_memory_viewer_dlg.html#adfc256215ade1d48a24a3eb72b3ecfed" title="MemoryViewerDlg::OnLoad" alt="" coords="229,187,409,214"/>
+</map>

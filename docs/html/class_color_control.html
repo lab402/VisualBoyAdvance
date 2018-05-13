@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_color_control.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -71,52 +95,246 @@ $(function() {
 <div class="title">ColorControl 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_color_control_8h_source.html">ColorControl.h</a>&gt;</code></p>
 <div class="dynheader">
 ColorControl에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_color_control.png" usemap="#ColorControl_map" alt=""/>
-  <map id="ColorControl_map" name="ColorControl_map">
-</map>
- </div></div>
+<div class="center"><img src="class_color_control__inherit__graph.png" border="0" usemap="#_color_control_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+ColorControl에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_color_control__coll__graph.png" border="0" usemap="#_color_control_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:ad4f5b637e57ab4e7c4ed718e66e491eb"><td class="memItemLeft" align="right" valign="top"><a id="ad4f5b637e57ab4e7c4ed718e66e491eb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (u16 c)</td></tr>
+<tr class="memitem:aa3a2f4bc5ea3e434a6a8698a0a9ec20b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_control.html#aa3a2f4bc5ea3e434a6a8698a0a9ec20b">ColorControl</a> ()</td></tr>
+<tr class="separator:aa3a2f4bc5ea3e434a6a8698a0a9ec20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4f5b637e57ab4e7c4ed718e66e491eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_control.html#ad4f5b637e57ab4e7c4ed718e66e491eb">setColor</a> (<a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> c)</td></tr>
 <tr class="separator:ad4f5b637e57ab4e7c4ed718e66e491eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64019379e271bec02b8402c18ff7397f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_control.html#a64019379e271bec02b8402c18ff7397f">~ColorControl</a> ()</td></tr>
+<tr class="separator:a64019379e271bec02b8402c18ff7397f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:adda78267113753c247e7edcaae47f927"><td class="memItemLeft" align="right" valign="top"><a id="adda78267113753c247e7edcaae47f927"></a>
-u16&#160;</td><td class="memItemRight" valign="bottom"><b>color</b></td></tr>
+<tr class="memitem:adda78267113753c247e7edcaae47f927"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_control.html#adda78267113753c247e7edcaae47f927">color</a></td></tr>
 <tr class="separator:adda78267113753c247e7edcaae47f927"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 정적 Public 속성</h2></td></tr>
-<tr class="memitem:a844b865ffc83cf76b50a3f7b0793619e"><td class="memItemLeft" align="right" valign="top"><a id="a844b865ffc83cf76b50a3f7b0793619e"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRegistered</b> = false</td></tr>
+<tr class="memitem:a844b865ffc83cf76b50a3f7b0793619e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_control.html#a844b865ffc83cf76b50a3f7b0793619e">isRegistered</a> = false</td></tr>
 <tr class="separator:a844b865ffc83cf76b50a3f7b0793619e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a63bcd96ef7044bf702632cab0fc41eba"><td class="memItemLeft" align="right" valign="top"><a id="a63bcd96ef7044bf702632cab0fc41eba"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPaint</b> ()</td></tr>
+<tr class="memitem:a63bcd96ef7044bf702632cab0fc41eba"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_control.html#a63bcd96ef7044bf702632cab0fc41eba">OnPaint</a> ()</td></tr>
 <tr class="separator:a63bcd96ef7044bf702632cab0fc41eba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06b4b2fd6e06aab248c7e63859ea4f11"><td class="memItemLeft" align="right" valign="top"><a id="a06b4b2fd6e06aab248c7e63859ea4f11"></a>
-afx_msg BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEraseBkgnd</b> (CDC *pDC)</td></tr>
+<tr class="memitem:a06b4b2fd6e06aab248c7e63859ea4f11"><td class="memItemLeft" align="right" valign="top">afx_msg BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_control.html#a06b4b2fd6e06aab248c7e63859ea4f11">OnEraseBkgnd</a> (CDC *pDC)</td></tr>
 <tr class="separator:a06b4b2fd6e06aab248c7e63859ea4f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_color_control_8h_source.html">ColorControl.h</a> 파일의 <a class="el" href="_color_control_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="aa3a2f4bc5ea3e434a6a8698a0a9ec20b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a2f4bc5ea3e434a6a8698a0a9ec20b">&#9670;&nbsp;</a></span>ColorControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColorControl::ColorControl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_control_8cpp_source.html">ColorControl.cpp</a> 파일의 <a class="el" href="_color_control_8cpp_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_color_control.html#adda78267113753c247e7edcaae47f927">color</a> = 0;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  registerClass();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="class_color_control_html_adda78267113753c247e7edcaae47f927"><div class="ttname"><a href="class_color_control.html#adda78267113753c247e7edcaae47f927">ColorControl::color</a></div><div class="ttdeci">u16 color</div><div class="ttdef"><b>Definition:</b> <a href="_color_control_8h_source.html#l00055">ColorControl.h:55</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a64019379e271bec02b8402c18ff7397f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64019379e271bec02b8402c18ff7397f">&#9670;&nbsp;</a></span>~ColorControl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColorControl::~ColorControl </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_control_8cpp_source.html">ColorControl.cpp</a> 파일의 <a class="el" href="_color_control_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a06b4b2fd6e06aab248c7e63859ea4f11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06b4b2fd6e06aab248c7e63859ea4f11">&#9670;&nbsp;</a></span>OnEraseBkgnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL ColorControl::OnEraseBkgnd </td>
+          <td>(</td>
+          <td class="paramtype">CDC *&#160;</td>
+          <td class="paramname"><em>pDC</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_control_8cpp_source.html">ColorControl.cpp</a> 파일의 <a class="el" href="_color_control_8cpp_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;{</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">int</span> r = (<a class="code" href="class_color_control.html#adda78267113753c247e7edcaae47f927">color</a> &amp; 0x1f) &lt;&lt; 3;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">int</span> g = (<a class="code" href="class_color_control.html#adda78267113753c247e7edcaae47f927">color</a> &amp; 0x3e0) &gt;&gt; 2;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a> = (<a class="code" href="class_color_control.html#adda78267113753c247e7edcaae47f927">color</a> &amp; 0x7c00) &gt;&gt; 7;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  CBrush br;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  br.CreateSolidBrush(<a class="code" href="bilinear_8cpp.html#a4a118ad3ee36468a3fa616977a64864e">RGB</a>(r,g,<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>));</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  RECT rect;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  GetClientRect(&amp;rect);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  pDC-&gt;FillRect(&amp;rect,&amp;br);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  pDC-&gt;DrawEdge(&amp;rect, EDGE_SUNKEN, BF_RECT);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  br.DeleteObject();</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">return</span> TRUE;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div><div class="ttc" id="class_color_control_html_adda78267113753c247e7edcaae47f927"><div class="ttname"><a href="class_color_control.html#adda78267113753c247e7edcaae47f927">ColorControl::color</a></div><div class="ttdeci">u16 color</div><div class="ttdef"><b>Definition:</b> <a href="_color_control_8h_source.html#l00055">ColorControl.h:55</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_a91b64995742fd30063314f12340b4b5a"><div class="ttname"><a href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a></div><div class="ttdeci">b</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01226">expr-lex.cpp:1226</a></div></div>
+<div class="ttc" id="bilinear_8cpp_html_a4a118ad3ee36468a3fa616977a64864e"><div class="ttname"><a href="bilinear_8cpp.html#a4a118ad3ee36468a3fa616977a64864e">RGB</a></div><div class="ttdeci">#define RGB(r, g, b)</div><div class="ttdef"><b>Definition:</b> <a href="bilinear_8cpp_source.html#l00033">bilinear.cpp:33</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a63bcd96ef7044bf702632cab0fc41eba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63bcd96ef7044bf702632cab0fc41eba">&#9670;&nbsp;</a></span>OnPaint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColorControl::OnPaint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_control_8cpp_source.html">ColorControl.cpp</a> 파일의 <a class="el" href="_color_control_8cpp_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  CPaintDC dc(<span class="keyword">this</span>); <span class="comment">// device context for painting</span></div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="ad4f5b637e57ab4e7c4ed718e66e491eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4f5b637e57ab4e7c4ed718e66e491eb">&#9670;&nbsp;</a></span>setColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColorControl::setColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_control_8cpp_source.html">ColorControl.cpp</a> 파일의 <a class="el" href="_color_control_8cpp_source.html#l00081">81</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <a class="code" href="class_color_control.html#adda78267113753c247e7edcaae47f927">color</a> = c;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  Invalidate();</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;}</div><div class="ttc" id="class_color_control_html_adda78267113753c247e7edcaae47f927"><div class="ttname"><a href="class_color_control.html#adda78267113753c247e7edcaae47f927">ColorControl::color</a></div><div class="ttdeci">u16 color</div><div class="ttdef"><b>Definition:</b> <a href="_color_control_8h_source.html#l00055">ColorControl.h:55</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_color_control_ad4f5b637e57ab4e7c4ed718e66e491eb_icgraph.png" border="0" usemap="#class_color_control_ad4f5b637e57ab4e7c4ed718e66e491eb_icgraph" alt=""/></div>
+<map name="class_color_control_ad4f5b637e57ab4e7c4ed718e66e491eb_icgraph" id="class_color_control_ad4f5b637e57ab4e7c4ed718e66e491eb_icgraph">
+<area shape="rect" id="node2" href="class_g_b_map_view.html#a6a6842be36789566f8fc918ded572bbe" title="GBMapView::OnColInfo" alt="" coords="211,5,369,32"/>
+<area shape="rect" id="node3" href="class_g_b_oam_view.html#a3b0623e23cfd8b04d576baed34f4d12d" title="GBOamView::OnColInfo" alt="" coords="209,56,371,83"/>
+<area shape="rect" id="node4" href="class_g_b_palette_view.html#a01960a28d93aef1873f5d5256fa11c79" title="GBPaletteView::OnPalInfo" alt="" coords="203,107,377,133"/>
+<area shape="rect" id="node5" href="class_g_b_tile_view.html#a6d47aa6bfc46f3d698272efb7da79dc4" title="GBTileView::OnColInfo" alt="" coords="213,157,367,184"/>
+<area shape="rect" id="node6" href="class_map_view.html#ae6fd15cfd77671946d4ad08f901bde3c" title="MapView::OnColInfo" alt="" coords="221,208,359,235"/>
+<area shape="rect" id="node7" href="class_oam_view.html#a5b910cf923020f054165c52c01d0181f" title="OamView::OnColInfo" alt="" coords="219,259,361,285"/>
+<area shape="rect" id="node8" href="class_palette_view.html#a458786a4c3317411b5cd818c544ea50a" title="PaletteView::OnPalInfo" alt="" coords="213,309,367,336"/>
+<area shape="rect" id="node9" href="class_tile_view.html#ad01d09783bbe107d9837d6847938e564" title="TileView::OnColInfo" alt="" coords="223,360,357,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="adda78267113753c247e7edcaae47f927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda78267113753c247e7edcaae47f927">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> ColorControl::color</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_control_8h_source.html">ColorControl.h</a> 파일의 <a class="el" href="_color_control_8h_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a844b865ffc83cf76b50a3f7b0793619e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a844b865ffc83cf76b50a3f7b0793619e">&#9670;&nbsp;</a></span>isRegistered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ColorControl::isRegistered = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_control_8h_source.html">ColorControl.h</a> 파일의 <a class="el" href="_color_control_8h_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_color_control_8h_source.html">ColorControl.h</a></li>
-<li>src/win32/ColorControl.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_color_control_8h_source.html">ColorControl.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_color_control_8cpp_source.html">ColorControl.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_color_control.html">ColorControl</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

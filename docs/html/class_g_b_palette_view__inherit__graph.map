@@ -1,0 +1,4 @@
+<map id="GBPaletteView" name="GBPaletteView">
+<area shape="rect" id="node2" href="$class_resize_dlg.html" title="{ResizeDlg\n||+ ResizeDlg()\l+ AddDialogData()\l+ SetData()\l+ UpdateWindowSize()\l+ OnWndMsg()\l}" alt="" coords="5,131,160,267"/>
+<area shape="rect" id="node4" href="$class_i_update_listener.html" title="{IUpdateListener\n||+ update()\l}" alt="" coords="184,160,296,237"/>
+</map>

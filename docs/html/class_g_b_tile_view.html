@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_g_b_tile_view.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,133 +95,1213 @@ $(function() {
 <div class="title">GBTileView 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a>&gt;</code></p>
 <div class="dynheader">
 GBTileView에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_g_b_tile_view.png" usemap="#GBTileView_map" alt=""/>
-  <map id="GBTileView_map" name="GBTileView_map">
-<area href="class_resize_dlg.html" alt="ResizeDlg" shape="rect" coords="0,56,99,80"/>
-<area href="class_i_update_listener.html" alt="IUpdateListener" shape="rect" coords="109,56,208,80"/>
+<div class="center"><img src="class_g_b_tile_view__inherit__graph.png" border="0" usemap="#_g_b_tile_view_inherit__map" alt="Inheritance graph"/></div>
+<map name="_g_b_tile_view_inherit__map" id="_g_b_tile_view_inherit__map">
+<area shape="rect" id="node2" href="class_resize_dlg.html" title="{ResizeDlg\n||+ ResizeDlg()\l+ AddDialogData()\l+ SetData()\l+ UpdateWindowSize()\l+ OnWndMsg()\l}" alt="" coords="5,131,160,267"/>
+<area shape="rect" id="node4" href="class_i_update_listener.html" title="{IUpdateListener\n||+ update()\l}" alt="" coords="184,160,296,237"/>
 </map>
- </div></div>
+</div>
+<div class="dynheader">
+GBTileView에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view__coll__graph.png" border="0" usemap="#_g_b_tile_view_coll__map" alt="Collaboration graph"/></div>
+<map name="_g_b_tile_view_coll__map" id="_g_b_tile_view_coll__map">
+<area shape="rect" id="node2" href="class_resize_dlg.html" title="{ResizeDlg\n||+ ResizeDlg()\l+ AddDialogData()\l+ SetData()\l+ UpdateWindowSize()\l+ OnWndMsg()\l}" alt="" coords="5,131,160,267"/>
+<area shape="rect" id="node4" href="class_i_update_listener.html" title="{IUpdateListener\n||+ update()\l}" alt="" coords="184,160,296,237"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:a827f593cb0979d00c2e51aab7eecc619"><td class="memItemLeft" align="right" valign="top"><a id="a827f593cb0979d00c2e51aab7eecc619"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_GB_TILE_VIEWER
+<tr class="memitem:a827f593cb0979d00c2e51aab7eecc619"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_g_b_tile_view.html#a827f593cb0979d00c2e51aab7eecc619abaee2c28dc1c6835365ec6a66fccc5da">IDD</a> = IDD_GB_TILE_VIEWER
  }</td></tr>
 <tr class="separator:a827f593cb0979d00c2e51aab7eecc619"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:aa78a471956e777509644a0a04bab2c4d"><td class="memItemLeft" align="right" valign="top"><a id="aa78a471956e777509644a0a04bab2c4d"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>paint</b> ()</td></tr>
+<tr class="memitem:aa78a471956e777509644a0a04bab2c4d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a> ()</td></tr>
 <tr class="separator:aa78a471956e777509644a0a04bab2c4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1012b77fed7304d7b27b9d619472e6a7"><td class="memItemLeft" align="right" valign="top"><a id="a1012b77fed7304d7b27b9d619472e6a7"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
+<tr class="memitem:a1012b77fed7304d7b27b9d619472e6a7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7">render</a> ()</td></tr>
 <tr class="separator:a1012b77fed7304d7b27b9d619472e6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade04081b3b047c110f6ae5673c7154ee"><td class="memItemLeft" align="right" valign="top"><a id="ade04081b3b047c110f6ae5673c7154ee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>renderTile</b> (int tile, int x, int y, u8 *charBase)</td></tr>
+<tr class="memitem:ade04081b3b047c110f6ae5673c7154ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee">renderTile</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> tile, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> x, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> y, <a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *charBase)</td></tr>
 <tr class="separator:ade04081b3b047c110f6ae5673c7154ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d48513402a49269828c3111bc153d46"><td class="memItemLeft" align="right" valign="top"><a id="a7d48513402a49269828c3111bc153d46"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>savePNG</b> (const char *name)</td></tr>
+<tr class="memitem:a7d48513402a49269828c3111bc153d46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a7d48513402a49269828c3111bc153d46">savePNG</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *name)</td></tr>
 <tr class="separator:a7d48513402a49269828c3111bc153d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac61ccd982b57db14794e1f9febc67c16"><td class="memItemLeft" align="right" valign="top"><a id="ac61ccd982b57db14794e1f9febc67c16"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>saveBMP</b> (const char *name)</td></tr>
+<tr class="memitem:ac61ccd982b57db14794e1f9febc67c16"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#ac61ccd982b57db14794e1f9febc67c16">saveBMP</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *name)</td></tr>
 <tr class="separator:ac61ccd982b57db14794e1f9febc67c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16e732a5dfc802bca970d5cf667386df"><td class="memItemLeft" align="right" valign="top"><a id="a16e732a5dfc802bca970d5cf667386df"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GBTileView</b> (CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:a16e732a5dfc802bca970d5cf667386df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a16e732a5dfc802bca970d5cf667386df">GBTileView</a> (CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:a16e732a5dfc802bca970d5cf667386df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b36c27b43fea0e457a26860b2476b9d"><td class="memItemLeft" align="right" valign="top"><a id="a0b36c27b43fea0e457a26860b2476b9d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="memitem:a9ae36f3d54d161d2b98723e377569634"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a9ae36f3d54d161d2b98723e377569634">~GBTileView</a> ()</td></tr>
+<tr class="separator:a9ae36f3d54d161d2b98723e377569634"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b36c27b43fea0e457a26860b2476b9d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a0b36c27b43fea0e457a26860b2476b9d">update</a> ()</td></tr>
 <tr class="separator:a0b36c27b43fea0e457a26860b2476b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_resize_dlg"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_resize_dlg')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_resize_dlg.html">ResizeDlg</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:a87bab778e9312f274ebe750d4c3a67ee inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="a87bab778e9312f274ebe750d4c3a67ee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ResizeDlg</b> (UINT id, CWnd *parent=NULL)</td></tr>
+<tr class="memitem:a87bab778e9312f274ebe750d4c3a67ee inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg</a> (UINT <a class="el" href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a>, CWnd *parent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:a87bab778e9312f274ebe750d4c3a67ee inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5657ce3f83f261aceaf138cd1c69f0fc inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="a5657ce3f83f261aceaf138cd1c69f0fc"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>AddDialogData</b> ()</td></tr>
+<tr class="memitem:a5657ce3f83f261aceaf138cd1c69f0fc inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc">AddDialogData</a> ()</td></tr>
 <tr class="separator:a5657ce3f83f261aceaf138cd1c69f0fc inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a3965f44a0c2f5ba9aaa798a9a81df5 inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="a6a3965f44a0c2f5ba9aaa798a9a81df5"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>SetData</b> (const <a class="el" href="struct_dialog_sizer_sizing_item.html">DialogSizerSizingItem</a> *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</td></tr>
+<tr class="memitem:a6a3965f44a0c2f5ba9aaa798a9a81df5 inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">SetData</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="struct_dialog_sizer_sizing_item.html">DialogSizerSizingItem</a> *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</td></tr>
 <tr class="separator:a6a3965f44a0c2f5ba9aaa798a9a81df5 inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d0d2b44dd32f668c6d9091b14bfc00 inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="ae2d0d2b44dd32f668c6d9091b14bfc00"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWindowSize</b> (const int cx, const int cy, HWND)</td></tr>
+<tr class="memitem:ae2d0d2b44dd32f668c6d9091b14bfc00 inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#ae2d0d2b44dd32f668c6d9091b14bfc00">UpdateWindowSize</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cx, <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cy, HWND)</td></tr>
 <tr class="separator:ae2d0d2b44dd32f668c6d9091b14bfc00 inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d3f421da2488db11224b0508be654fd inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="a9d3f421da2488db11224b0508be654fd"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnWndMsg</b> (UINT, WPARAM, LPARAM, LRESULT *)</td></tr>
+<tr class="memitem:a9d3f421da2488db11224b0508be654fd inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#a9d3f421da2488db11224b0508be654fd">OnWndMsg</a> (UINT, WPARAM, LPARAM, LRESULT *)</td></tr>
 <tr class="separator:a9d3f421da2488db11224b0508be654fd inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:ace72ce81e68876fe62cb85b09405e296"><td class="memItemLeft" align="right" valign="top"><a id="ace72ce81e68876fe62cb85b09405e296"></a>
-CSliderCtrl&#160;</td><td class="memItemRight" valign="bottom"><b>m_slider</b></td></tr>
+<tr class="memitem:ace72ce81e68876fe62cb85b09405e296"><td class="memItemLeft" align="right" valign="top">CSliderCtrl&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">m_slider</a></td></tr>
 <tr class="separator:ace72ce81e68876fe62cb85b09405e296"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ad19c822952ef98ced0a46d051cb87e"><td class="memItemLeft" align="right" valign="top"><a id="a0ad19c822952ef98ced0a46d051cb87e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_charBase</b></td></tr>
+<tr class="memitem:a0ad19c822952ef98ced0a46d051cb87e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a0ad19c822952ef98ced0a46d051cb87e">m_charBase</a></td></tr>
 <tr class="separator:a0ad19c822952ef98ced0a46d051cb87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a765264072397d9630d2f3ae8e58c414e"><td class="memItemLeft" align="right" valign="top"><a id="a765264072397d9630d2f3ae8e58c414e"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>m_bank</b></td></tr>
+<tr class="memitem:a765264072397d9630d2f3ae8e58c414e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a765264072397d9630d2f3ae8e58c414e">m_bank</a></td></tr>
 <tr class="separator:a765264072397d9630d2f3ae8e58c414e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaaee0263ecf447f8c628d0bbf1ff76f"><td class="memItemLeft" align="right" valign="top"><a id="afaaee0263ecf447f8c628d0bbf1ff76f"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_stretch</b></td></tr>
+<tr class="memitem:afaaee0263ecf447f8c628d0bbf1ff76f"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#afaaee0263ecf447f8c628d0bbf1ff76f">m_stretch</a></td></tr>
 <tr class="separator:afaaee0263ecf447f8c628d0bbf1ff76f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a6f6a323365040d7675c035b26fdecd9f"><td class="memItemLeft" align="right" valign="top"><a id="a6f6a323365040d7675c035b26fdecd9f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a6f6a323365040d7675c035b26fdecd9f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a6f6a323365040d7675c035b26fdecd9f">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a6f6a323365040d7675c035b26fdecd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2bc3fcd50b001a8c3ed3a592772eeb8b"><td class="memItemLeft" align="right" valign="top"><a id="a2bc3fcd50b001a8c3ed3a592772eeb8b"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PostNcDestroy</b> ()</td></tr>
+<tr class="memitem:a2bc3fcd50b001a8c3ed3a592772eeb8b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a2bc3fcd50b001a8c3ed3a592772eeb8b">PostNcDestroy</a> ()</td></tr>
 <tr class="separator:a2bc3fcd50b001a8c3ed3a592772eeb8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a865e1fe72caf57cc6d55700bfdac0a84"><td class="memItemLeft" align="right" valign="top"><a id="a865e1fe72caf57cc6d55700bfdac0a84"></a>
-virtual afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>OnMapInfo</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memitem:a865e1fe72caf57cc6d55700bfdac0a84"><td class="memItemLeft" align="right" valign="top">virtual afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a865e1fe72caf57cc6d55700bfdac0a84">OnMapInfo</a> (WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="separator:a865e1fe72caf57cc6d55700bfdac0a84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d47aa6bfc46f3d698272efb7da79dc4"><td class="memItemLeft" align="right" valign="top"><a id="a6d47aa6bfc46f3d698272efb7da79dc4"></a>
-virtual afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><b>OnColInfo</b> (WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memitem:a6d47aa6bfc46f3d698272efb7da79dc4"><td class="memItemLeft" align="right" valign="top">virtual afx_msg LRESULT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a6d47aa6bfc46f3d698272efb7da79dc4">OnColInfo</a> (WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="separator:a6d47aa6bfc46f3d698272efb7da79dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97f989bc4a5f5872258b5d8d47ae60d0"><td class="memItemLeft" align="right" valign="top"><a id="a97f989bc4a5f5872258b5d8d47ae60d0"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSave</b> ()</td></tr>
+<tr class="memitem:a97f989bc4a5f5872258b5d8d47ae60d0"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a97f989bc4a5f5872258b5d8d47ae60d0">OnSave</a> ()</td></tr>
 <tr class="separator:a97f989bc4a5f5872258b5d8d47ae60d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4d97fe7dcfd863756d993834548d2ca6"><td class="memItemLeft" align="right" valign="top"><a id="a4d97fe7dcfd863756d993834548d2ca6"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:a4d97fe7dcfd863756d993834548d2ca6"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a4d97fe7dcfd863756d993834548d2ca6">OnInitDialog</a> ()</td></tr>
 <tr class="separator:a4d97fe7dcfd863756d993834548d2ca6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59304e229d01ff07e7e232389d19017b"><td class="memItemLeft" align="right" valign="top"><a id="a59304e229d01ff07e7e232389d19017b"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnClose</b> ()</td></tr>
+<tr class="memitem:a59304e229d01ff07e7e232389d19017b"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a59304e229d01ff07e7e232389d19017b">OnClose</a> ()</td></tr>
 <tr class="separator:a59304e229d01ff07e7e232389d19017b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad31fb32f27279e00c296717013144d33"><td class="memItemLeft" align="right" valign="top"><a id="ad31fb32f27279e00c296717013144d33"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAutoUpdate</b> ()</td></tr>
+<tr class="memitem:ad31fb32f27279e00c296717013144d33"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#ad31fb32f27279e00c296717013144d33">OnAutoUpdate</a> ()</td></tr>
 <tr class="separator:ad31fb32f27279e00c296717013144d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb45c55e706bed1468f547510490fa2a"><td class="memItemLeft" align="right" valign="top"><a id="afb45c55e706bed1468f547510490fa2a"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCharbase0</b> ()</td></tr>
+<tr class="memitem:afb45c55e706bed1468f547510490fa2a"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#afb45c55e706bed1468f547510490fa2a">OnCharbase0</a> ()</td></tr>
 <tr class="separator:afb45c55e706bed1468f547510490fa2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d5c6de9e7d359cf221b164f51cb6a18"><td class="memItemLeft" align="right" valign="top"><a id="a9d5c6de9e7d359cf221b164f51cb6a18"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCharbase1</b> ()</td></tr>
+<tr class="memitem:a9d5c6de9e7d359cf221b164f51cb6a18"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a9d5c6de9e7d359cf221b164f51cb6a18">OnCharbase1</a> ()</td></tr>
 <tr class="separator:a9d5c6de9e7d359cf221b164f51cb6a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35e281e40e9fd8867f04a01595f54ef2"><td class="memItemLeft" align="right" valign="top"><a id="a35e281e40e9fd8867f04a01595f54ef2"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnBank0</b> ()</td></tr>
+<tr class="memitem:a35e281e40e9fd8867f04a01595f54ef2"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a35e281e40e9fd8867f04a01595f54ef2">OnBank0</a> ()</td></tr>
 <tr class="separator:a35e281e40e9fd8867f04a01595f54ef2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c1db6a1066d8e37b743ca2407652b7d"><td class="memItemLeft" align="right" valign="top"><a id="a5c1db6a1066d8e37b743ca2407652b7d"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnBank1</b> ()</td></tr>
+<tr class="memitem:a5c1db6a1066d8e37b743ca2407652b7d"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a5c1db6a1066d8e37b743ca2407652b7d">OnBank1</a> ()</td></tr>
 <tr class="separator:a5c1db6a1066d8e37b743ca2407652b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7386c9ed9651610461d4342ebd492bf9"><td class="memItemLeft" align="right" valign="top"><a id="a7386c9ed9651610461d4342ebd492bf9"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnStretch</b> ()</td></tr>
+<tr class="memitem:a7386c9ed9651610461d4342ebd492bf9"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a7386c9ed9651610461d4342ebd492bf9">OnStretch</a> ()</td></tr>
 <tr class="separator:a7386c9ed9651610461d4342ebd492bf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0b2b262f47b7d6c3f53270eaf80a24a1"><td class="memItemLeft" align="right" valign="top"><a id="a0b2b262f47b7d6c3f53270eaf80a24a1"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnHScroll</b> (UINT nSBCode, UINT nPos, CScrollBar *pScrollBar)</td></tr>
+<tr class="memitem:a0b2b262f47b7d6c3f53270eaf80a24a1"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_tile_view.html#a0b2b262f47b7d6c3f53270eaf80a24a1">OnHScroll</a> (UINT nSBCode, UINT nPos, CScrollBar *pScrollBar)</td></tr>
 <tr class="separator:a0b2b262f47b7d6c3f53270eaf80a24a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a> 파일의 <a class="el" href="_g_b_tile_view_8h_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a827f593cb0979d00c2e51aab7eecc619"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827f593cb0979d00c2e51aab7eecc619">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a827f593cb0979d00c2e51aab7eecc619abaee2c28dc1c6835365ec6a66fccc5da"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a> 파일의 <a class="el" href="_g_b_tile_view_8h_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{ <a class="code" href="class_g_b_tile_view.html#a827f593cb0979d00c2e51aab7eecc619abaee2c28dc1c6835365ec6a66fccc5da">IDD</a> = <a class="code" href="resource_8h.html#a28c41ac1212f846fd89d9d038a701c30">IDD_GB_TILE_VIEWER</a> };</div><div class="ttc" id="resource_8h_html_a28c41ac1212f846fd89d9d038a701c30"><div class="ttname"><a href="resource_8h.html#a28c41ac1212f846fd89d9d038a701c30">IDD_GB_TILE_VIEWER</a></div><div class="ttdeci">#define IDD_GB_TILE_VIEWER</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00090">resource.h:90</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a827f593cb0979d00c2e51aab7eecc619abaee2c28dc1c6835365ec6a66fccc5da"><div class="ttname"><a href="class_g_b_tile_view.html#a827f593cb0979d00c2e51aab7eecc619abaee2c28dc1c6835365ec6a66fccc5da">GBTileView::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00064">GBTileView.h:64</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a16e732a5dfc802bca970d5cf667386df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16e732a5dfc802bca970d5cf667386df">&#9670;&nbsp;</a></span>GBTileView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GBTileView::GBTileView </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  : <a class="code" href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg</a>(<a class="code" href="class_g_b_tile_view.html#a827f593cb0979d00c2e51aab7eecc619abaee2c28dc1c6835365ec6a66fccc5da">GBTileView::IDD</a>, pParent)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(GBTileView)</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_g_b_tile_view.html#a0ad19c822952ef98ced0a46d051cb87e">m_charBase</a> = -1;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="class_g_b_tile_view.html#a765264072397d9630d2f3ae8e58c414e">m_bank</a> = -1;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="class_g_b_tile_view.html#afaaee0263ecf447f8c628d0bbf1ff76f">m_stretch</a> = FALSE;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  autoUpdate = <span class="keyword">false</span>;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  </div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  memset(&amp;bmpInfo, 0, <span class="keyword">sizeof</span>(bmpInfo));</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  bmpInfo.bmiHeader.biSize = <span class="keyword">sizeof</span>(bmpInfo.bmiHeader);</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  bmpInfo.bmiHeader.biWidth = 32*8;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  bmpInfo.bmiHeader.biHeight = 32*8;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  bmpInfo.bmiHeader.biPlanes = 1;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  bmpInfo.bmiHeader.biBitCount = 24;</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  bmpInfo.bmiHeader.biCompression = BI_RGB;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  data = (<a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)calloc(1, 3 * 32*32 * 64);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  tileView.<a class="code" href="class_bitmap_control.html#aa6206183896caf192a37709fa5d7b8d2">setData</a>(data);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  tileView.<a class="code" href="class_bitmap_control.html#a301c52fc62de4368fccdcdc93cefad0b">setBmpInfo</a>(&amp;bmpInfo);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  charBase = 0;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  palette = 0;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  bank = 0;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  w = h = 0;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="class_resize_dlg_html_a87bab778e9312f274ebe750d4c3a67ee"><div class="ttname"><a href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg::ResizeDlg</a></div><div class="ttdeci">ResizeDlg(UINT id, CWnd *parent=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8cpp_source.html#l00311">ResizeDlg.cpp:311</a></div></div>
+<div class="ttc" id="class_bitmap_control_html_aa6206183896caf192a37709fa5d7b8d2"><div class="ttname"><a href="class_bitmap_control.html#aa6206183896caf192a37709fa5d7b8d2">BitmapControl::setData</a></div><div class="ttdeci">void setData(u8 *d)</div><div class="ttdef"><b>Definition:</b> <a href="_bitmap_control_8cpp_source.html#l00231">BitmapControl.cpp:231</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a765264072397d9630d2f3ae8e58c414e"><div class="ttname"><a href="class_g_b_tile_view.html#a765264072397d9630d2f3ae8e58c414e">GBTileView::m_bank</a></div><div class="ttdeci">int m_bank</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00067">GBTileView.h:67</a></div></div>
+<div class="ttc" id="class_bitmap_control_html_a301c52fc62de4368fccdcdc93cefad0b"><div class="ttname"><a href="class_bitmap_control.html#a301c52fc62de4368fccdcdc93cefad0b">BitmapControl::setBmpInfo</a></div><div class="ttdeci">void setBmpInfo(BITMAPINFO *info)</div><div class="ttdef"><b>Definition:</b> <a href="_bitmap_control_8cpp_source.html#l00226">BitmapControl.cpp:226</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a0ad19c822952ef98ced0a46d051cb87e"><div class="ttname"><a href="class_g_b_tile_view.html#a0ad19c822952ef98ced0a46d051cb87e">GBTileView::m_charBase</a></div><div class="ttdeci">int m_charBase</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00066">GBTileView.h:66</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a827f593cb0979d00c2e51aab7eecc619abaee2c28dc1c6835365ec6a66fccc5da"><div class="ttname"><a href="class_g_b_tile_view.html#a827f593cb0979d00c2e51aab7eecc619abaee2c28dc1c6835365ec6a66fccc5da">GBTileView::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00064">GBTileView.h:64</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_afaaee0263ecf447f8c628d0bbf1ff76f"><div class="ttname"><a href="class_g_b_tile_view.html#afaaee0263ecf447f8c628d0bbf1ff76f">GBTileView::m_stretch</a></div><div class="ttdeci">BOOL m_stretch</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00068">GBTileView.h:68</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a16e732a5dfc802bca970d5cf667386df_cgraph.png" border="0" usemap="#class_g_b_tile_view_a16e732a5dfc802bca970d5cf667386df_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a16e732a5dfc802bca970d5cf667386df_cgraph" id="class_g_b_tile_view_a16e732a5dfc802bca970d5cf667386df_cgraph">
+<area shape="rect" id="node2" href="class_bitmap_control.html#aa6206183896caf192a37709fa5d7b8d2" title="BitmapControl::setData" alt="" coords="227,5,385,32"/>
+<area shape="rect" id="node3" href="class_bitmap_control.html#a301c52fc62de4368fccdcdc93cefad0b" title="BitmapControl::setBmpInfo" alt="" coords="217,56,395,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ae36f3d54d161d2b98723e377569634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae36f3d54d161d2b98723e377569634">&#9670;&nbsp;</a></span>~GBTileView()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GBTileView::~GBTileView </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00077">77</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  free(data);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  data = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a6f6a323365040d7675c035b26fdecd9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f6a323365040d7675c035b26fdecd9f">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00083">83</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;{</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(GBTileView)</span></div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#ae398a4a3d20d01692ce6aa2e9ad41c76">IDC_PALETTE_SLIDER</a>, <a class="code" href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">m_slider</a>);</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  DDX_Radio(pDX, <a class="code" href="resource_8h.html#ae2dd08d4db99bfdb3e6aa9513a5e0790">IDC_CHARBASE_0</a>, <a class="code" href="class_g_b_tile_view.html#a0ad19c822952ef98ced0a46d051cb87e">m_charBase</a>);</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  DDX_Radio(pDX, <a class="code" href="resource_8h.html#a190a3b55c16d4bfa4df4bc4334a82568">IDC_BANK_0</a>, <a class="code" href="class_g_b_tile_view.html#a765264072397d9630d2f3ae8e58c414e">m_bank</a>);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  DDX_Check(pDX, <a class="code" href="resource_8h.html#a639d2318d8892c6f42b323500aae50f0">IDC_STRETCH</a>, <a class="code" href="class_g_b_tile_view.html#afaaee0263ecf447f8c628d0bbf1ff76f">m_stretch</a>);</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a091df1e8af92b702472240d05fafd9cc">IDC_TILE_VIEW</a>, tileView);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a623597a58dcab206815a2c2fc7de0d91">IDC_MAP_VIEW_ZOOM</a>, zoom);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a611975b03b6d7ce68b2de260b97086d0">IDC_COLOR</a>, color);</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div><div class="ttc" id="resource_8h_html_a611975b03b6d7ce68b2de260b97086d0"><div class="ttname"><a href="resource_8h.html#a611975b03b6d7ce68b2de260b97086d0">IDC_COLOR</a></div><div class="ttdeci">#define IDC_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00374">resource.h:374</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_ace72ce81e68876fe62cb85b09405e296"><div class="ttname"><a href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">GBTileView::m_slider</a></div><div class="ttdeci">CSliderCtrl m_slider</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00065">GBTileView.h:65</a></div></div>
+<div class="ttc" id="resource_8h_html_ae398a4a3d20d01692ce6aa2e9ad41c76"><div class="ttname"><a href="resource_8h.html#ae398a4a3d20d01692ce6aa2e9ad41c76">IDC_PALETTE_SLIDER</a></div><div class="ttdeci">#define IDC_PALETTE_SLIDER</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00421">resource.h:421</a></div></div>
+<div class="ttc" id="resource_8h_html_a091df1e8af92b702472240d05fafd9cc"><div class="ttname"><a href="resource_8h.html#a091df1e8af92b702472240d05fafd9cc">IDC_TILE_VIEW</a></div><div class="ttdeci">#define IDC_TILE_VIEW</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00414">resource.h:414</a></div></div>
+<div class="ttc" id="resource_8h_html_a623597a58dcab206815a2c2fc7de0d91"><div class="ttname"><a href="resource_8h.html#a623597a58dcab206815a2c2fc7de0d91">IDC_MAP_VIEW_ZOOM</a></div><div class="ttdeci">#define IDC_MAP_VIEW_ZOOM</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00379">resource.h:379</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a765264072397d9630d2f3ae8e58c414e"><div class="ttname"><a href="class_g_b_tile_view.html#a765264072397d9630d2f3ae8e58c414e">GBTileView::m_bank</a></div><div class="ttdeci">int m_bank</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00067">GBTileView.h:67</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a0ad19c822952ef98ced0a46d051cb87e"><div class="ttname"><a href="class_g_b_tile_view.html#a0ad19c822952ef98ced0a46d051cb87e">GBTileView::m_charBase</a></div><div class="ttdeci">int m_charBase</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00066">GBTileView.h:66</a></div></div>
+<div class="ttc" id="resource_8h_html_a639d2318d8892c6f42b323500aae50f0"><div class="ttname"><a href="resource_8h.html#a639d2318d8892c6f42b323500aae50f0">IDC_STRETCH</a></div><div class="ttdeci">#define IDC_STRETCH</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00427">resource.h:427</a></div></div>
+<div class="ttc" id="resource_8h_html_a190a3b55c16d4bfa4df4bc4334a82568"><div class="ttname"><a href="resource_8h.html#a190a3b55c16d4bfa4df4bc4334a82568">IDC_BANK_0</a></div><div class="ttdeci">#define IDC_BANK_0</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00481">resource.h:481</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_afaaee0263ecf447f8c628d0bbf1ff76f"><div class="ttname"><a href="class_g_b_tile_view.html#afaaee0263ecf447f8c628d0bbf1ff76f">GBTileView::m_stretch</a></div><div class="ttdeci">BOOL m_stretch</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00068">GBTileView.h:68</a></div></div>
+<div class="ttc" id="resource_8h_html_ae2dd08d4db99bfdb3e6aa9513a5e0790"><div class="ttname"><a href="resource_8h.html#ae2dd08d4db99bfdb3e6aa9513a5e0790">IDC_CHARBASE_0</a></div><div class="ttdeci">#define IDC_CHARBASE_0</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00417">resource.h:417</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad31fb32f27279e00c296717013144d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad31fb32f27279e00c296717013144d33">&#9670;&nbsp;</a></span>OnAutoUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnAutoUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00408">408</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;{</div><div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  autoUpdate = !autoUpdate;</div><div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;  <span class="keywordflow">if</span>(autoUpdate) {</div><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#af0712f70a90d023ab8327a366be08174">winAddUpdateListener</a>(<span class="keyword">this</span>);</div><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3">winRemoveUpdateListener</a>(<span class="keyword">this</span>);    </div><div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  }  </div><div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_af0712f70a90d023ab8327a366be08174"><div class="ttname"><a href="class_v_b_a.html#af0712f70a90d023ab8327a366be08174">VBA::winAddUpdateListener</a></div><div class="ttdeci">void winAddUpdateListener(IUpdateListener *l)</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l02059">VBA.cpp:2059</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a2d31a0656df2230310aa8dc9e3a735d3"><div class="ttname"><a href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3">VBA::winRemoveUpdateListener</a></div><div class="ttdeci">void winRemoveUpdateListener(IUpdateListener *l)</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l02065">VBA.cpp:2065</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_ad31fb32f27279e00c296717013144d33_cgraph.png" border="0" usemap="#class_g_b_tile_view_ad31fb32f27279e00c296717013144d33_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_ad31fb32f27279e00c296717013144d33_cgraph" id="class_g_b_tile_view_ad31fb32f27279e00c296717013144d33_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#af0712f70a90d023ab8327a366be08174" title="VBA::winAddUpdateListener" alt="" coords="247,5,434,32"/>
+<area shape="rect" id="node3" href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3" title="VBA::winRemoveUpdateListener" alt="" coords="236,56,445,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35e281e40e9fd8867f04a01595f54ef2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35e281e40e9fd8867f04a01595f54ef2">&#9670;&nbsp;</a></span>OnBank0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnBank0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00438">438</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;{</div><div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;  bank = 0;</div><div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;  <a class="code" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a>();</div><div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;}</div><div class="ttc" id="class_g_b_tile_view_html_aa78a471956e777509644a0a04bab2c4d"><div class="ttname"><a href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">GBTileView::paint</a></div><div class="ttdeci">void paint()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00418">GBTileView.cpp:418</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a35e281e40e9fd8867f04a01595f54ef2_cgraph.png" border="0" usemap="#class_g_b_tile_view_a35e281e40e9fd8867f04a01595f54ef2_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a35e281e40e9fd8867f04a01595f54ef2_cgraph" id="class_g_b_tile_view_a35e281e40e9fd8867f04a01595f54ef2_cgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="204,81,329,108"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="386,56,519,83"/>
+<area shape="rect" id="node7" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="377,107,528,133"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="585,5,739,32"/>
+<area shape="rect" id="node5" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="584,56,740,83"/>
+<area shape="rect" id="node6" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="576,107,748,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5c1db6a1066d8e37b743ca2407652b7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c1db6a1066d8e37b743ca2407652b7d">&#9670;&nbsp;</a></span>OnBank1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnBank1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00444">444</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;{</div><div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;  bank = 1;</div><div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;  <a class="code" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a>();</div><div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;}</div><div class="ttc" id="class_g_b_tile_view_html_aa78a471956e777509644a0a04bab2c4d"><div class="ttname"><a href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">GBTileView::paint</a></div><div class="ttdeci">void paint()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00418">GBTileView.cpp:418</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a5c1db6a1066d8e37b743ca2407652b7d_cgraph.png" border="0" usemap="#class_g_b_tile_view_a5c1db6a1066d8e37b743ca2407652b7d_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a5c1db6a1066d8e37b743ca2407652b7d_cgraph" id="class_g_b_tile_view_a5c1db6a1066d8e37b743ca2407652b7d_cgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="204,81,329,108"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="386,56,519,83"/>
+<area shape="rect" id="node7" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="377,107,528,133"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="585,5,739,32"/>
+<area shape="rect" id="node5" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="584,56,740,83"/>
+<area shape="rect" id="node6" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="576,107,748,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afb45c55e706bed1468f547510490fa2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb45c55e706bed1468f547510490fa2a">&#9670;&nbsp;</a></span>OnCharbase0()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnCharbase0 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00426">426</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;{</div><div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;  charBase = 0;</div><div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;  <a class="code" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a>();</div><div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;}</div><div class="ttc" id="class_g_b_tile_view_html_aa78a471956e777509644a0a04bab2c4d"><div class="ttname"><a href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">GBTileView::paint</a></div><div class="ttdeci">void paint()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00418">GBTileView.cpp:418</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_afb45c55e706bed1468f547510490fa2a_cgraph.png" border="0" usemap="#class_g_b_tile_view_afb45c55e706bed1468f547510490fa2a_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_afb45c55e706bed1468f547510490fa2a_cgraph" id="class_g_b_tile_view_afb45c55e706bed1468f547510490fa2a_cgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="229,81,355,108"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="411,56,545,83"/>
+<area shape="rect" id="node7" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="403,107,553,133"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="611,5,764,32"/>
+<area shape="rect" id="node5" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="609,56,765,83"/>
+<area shape="rect" id="node6" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="601,107,773,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d5c6de9e7d359cf221b164f51cb6a18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5c6de9e7d359cf221b164f51cb6a18">&#9670;&nbsp;</a></span>OnCharbase1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnCharbase1 </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00432">432</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;{</div><div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;  charBase = 1;</div><div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;  <a class="code" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a>();</div><div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;}</div><div class="ttc" id="class_g_b_tile_view_html_aa78a471956e777509644a0a04bab2c4d"><div class="ttname"><a href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">GBTileView::paint</a></div><div class="ttdeci">void paint()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00418">GBTileView.cpp:418</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a9d5c6de9e7d359cf221b164f51cb6a18_cgraph.png" border="0" usemap="#class_g_b_tile_view_a9d5c6de9e7d359cf221b164f51cb6a18_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a9d5c6de9e7d359cf221b164f51cb6a18_cgraph" id="class_g_b_tile_view_a9d5c6de9e7d359cf221b164f51cb6a18_cgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="229,81,355,108"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="411,56,545,83"/>
+<area shape="rect" id="node7" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="403,107,553,133"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="611,5,764,32"/>
+<area shape="rect" id="node5" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="609,56,765,83"/>
+<area shape="rect" id="node6" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="601,107,773,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a59304e229d01ff07e7e232389d19017b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59304e229d01ff07e7e232389d19017b">&#9670;&nbsp;</a></span>OnClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnClose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00400">400</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;{</div><div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3">winRemoveUpdateListener</a>(<span class="keyword">this</span>);</div><div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;  </div><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;  DestroyWindow();</div><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a2d31a0656df2230310aa8dc9e3a735d3"><div class="ttname"><a href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3">VBA::winRemoveUpdateListener</a></div><div class="ttdeci">void winRemoveUpdateListener(IUpdateListener *l)</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l02065">VBA.cpp:2065</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a59304e229d01ff07e7e232389d19017b_cgraph.png" border="0" usemap="#class_g_b_tile_view_a59304e229d01ff07e7e232389d19017b_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a59304e229d01ff07e7e232389d19017b_cgraph" id="class_g_b_tile_view_a59304e229d01ff07e7e232389d19017b_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3" title="VBA::winRemoveUpdateListener" alt="" coords="200,5,409,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6d47aa6bfc46f3d698272efb7da79dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d47aa6bfc46f3d698272efb7da79dc4">&#9670;&nbsp;</a></span>OnColInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT GBTileView::OnColInfo </td>
+          <td>(</td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00484">484</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;{</div><div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;  <a class="code" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> c = (<a class="code" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>)wParam;</div><div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;</div><div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;  color.<a class="code" href="class_color_control.html#ad4f5b637e57ab4e7c4ed718e66e491eb">setColor</a>(c);  </div><div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;</div><div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;  <span class="keywordtype">int</span> r = (c &amp; 0x1f);</div><div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;  <span class="keywordtype">int</span> g = (c &amp; 0x3e0) &gt;&gt; 5;</div><div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a> = (c &amp; 0x7c00) &gt;&gt; 10;</div><div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;</div><div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;  CString <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>;</div><div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;  <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>.Format(<span class="stringliteral">&quot;R: %d&quot;</span>, r);</div><div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#ab801af70383175ec71fd14d356bf9c9d">IDC_R</a>)-&gt;SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;</div><div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;  <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>.Format(<span class="stringliteral">&quot;G: %d&quot;</span>, g);</div><div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#a35ca279082796c6a98895939aa06826d">IDC_G</a>)-&gt;SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;</div><div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;  <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>.Format(<span class="stringliteral">&quot;B: %d&quot;</span>, <a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>);</div><div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#a96306052e53348b1e760b8dcabf2b0c7">IDC_B</a>)-&gt;SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;</div><div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;  <span class="keywordflow">return</span> TRUE;</div><div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;}</div><div class="ttc" id="expr-lex_8cpp_html_a91b64995742fd30063314f12340b4b5a"><div class="ttname"><a href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a></div><div class="ttdeci">b</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01226">expr-lex.cpp:1226</a></div></div>
+<div class="ttc" id="class_color_control_html_ad4f5b637e57ab4e7c4ed718e66e491eb"><div class="ttname"><a href="class_color_control.html#ad4f5b637e57ab4e7c4ed718e66e491eb">ColorControl::setColor</a></div><div class="ttdeci">void setColor(u16 c)</div><div class="ttdef"><b>Definition:</b> <a href="_color_control_8cpp_source.html#l00081">ColorControl.cpp:81</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="resource_8h_html_a96306052e53348b1e760b8dcabf2b0c7"><div class="ttname"><a href="resource_8h.html#a96306052e53348b1e760b8dcabf2b0c7">IDC_B</a></div><div class="ttdeci">#define IDC_B</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00207">resource.h:207</a></div></div>
+<div class="ttc" id="resource_8h_html_ab801af70383175ec71fd14d356bf9c9d"><div class="ttname"><a href="resource_8h.html#ab801af70383175ec71fd14d356bf9c9d">IDC_R</a></div><div class="ttdeci">#define IDC_R</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00203">resource.h:203</a></div></div>
+<div class="ttc" id="_system_8h_html_a9e6c91d77e24643b888dbd1a1a590054"><div class="ttname"><a href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a></div><div class="ttdeci">unsigned short u16</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00030">System.h:30</a></div></div>
+<div class="ttc" id="resource_8h_html_a35ca279082796c6a98895939aa06826d"><div class="ttname"><a href="resource_8h.html#a35ca279082796c6a98895939aa06826d">IDC_G</a></div><div class="ttdeci">#define IDC_G</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00205">resource.h:205</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a6d47aa6bfc46f3d698272efb7da79dc4_cgraph.png" border="0" usemap="#class_g_b_tile_view_a6d47aa6bfc46f3d698272efb7da79dc4_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a6d47aa6bfc46f3d698272efb7da79dc4_cgraph" id="class_g_b_tile_view_a6d47aa6bfc46f3d698272efb7da79dc4_cgraph">
+<area shape="rect" id="node2" href="class_color_control.html#ad4f5b637e57ab4e7c4ed718e66e491eb" title="ColorControl::setColor" alt="" coords="207,5,356,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0b2b262f47b7d6c3f53270eaf80a24a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b2b262f47b7d6c3f53270eaf80a24a1">&#9670;&nbsp;</a></span>OnHScroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnHScroll </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nSBCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CScrollBar *&#160;</td>
+          <td class="paramname"><em>pScrollBar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00507">507</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;{</div><div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;  <span class="keywordflow">switch</span>(nSBCode) {</div><div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;  <span class="keywordflow">case</span> TB_THUMBPOSITION:</div><div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    palette = nPos;</div><div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;  <span class="keywordflow">default</span>:</div><div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    palette = <a class="code" href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">m_slider</a>.GetPos();</div><div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;  }</div><div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;  <a class="code" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a>();</div><div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;}</div><div class="ttc" id="class_g_b_tile_view_html_ace72ce81e68876fe62cb85b09405e296"><div class="ttname"><a href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">GBTileView::m_slider</a></div><div class="ttdeci">CSliderCtrl m_slider</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00065">GBTileView.h:65</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_aa78a471956e777509644a0a04bab2c4d"><div class="ttname"><a href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">GBTileView::paint</a></div><div class="ttdeci">void paint()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00418">GBTileView.cpp:418</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a0b2b262f47b7d6c3f53270eaf80a24a1_cgraph.png" border="0" usemap="#class_g_b_tile_view_a0b2b262f47b7d6c3f53270eaf80a24a1_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a0b2b262f47b7d6c3f53270eaf80a24a1_cgraph" id="class_g_b_tile_view_a0b2b262f47b7d6c3f53270eaf80a24a1_cgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="209,81,335,108"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="391,56,525,83"/>
+<area shape="rect" id="node7" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="383,107,533,133"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="591,5,744,32"/>
+<area shape="rect" id="node5" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="589,56,745,83"/>
+<area shape="rect" id="node6" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="581,107,753,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4d97fe7dcfd863756d993834548d2ca6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d97fe7dcfd863756d993834548d2ca6">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL GBTileView::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00363">363</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;{</div><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;  </div><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;  <a class="code" href="_resize_dlg_8h.html#acb9d1d22d9838f6dda8a61cfa132997c">DIALOG_SIZER_START</a>( sz )</div><div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a091df1e8af92b702472240d05fafd9cc">IDC_TILE_VIEW</a>, <a class="code" href="_resize_dlg_8h.html#a21713fd373c62604a1ee3d5d831101ad">DS_SizeX</a> | <a class="code" href="_resize_dlg_8h.html#a783821ba6bb984916d55f46cdf90cb2b">DS_SizeY</a> )</div><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a611975b03b6d7ce68b2de260b97086d0">IDC_COLOR</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#ab801af70383175ec71fd14d356bf9c9d">IDC_R</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a35ca279082796c6a98895939aa06826d">IDC_G</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a96306052e53348b1e760b8dcabf2b0c7">IDC_B</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#ab2f366ad34063a7be9de1e2249dc705a">IDC_REFRESH</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a27e7224faecfa4040c695a69107088f9">IDC_CLOSE</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a305f8d6fb810f32b99a97396ac92f9d5">IDC_SAVE</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <a class="code" href="_resize_dlg_8h.html#aeac0c1e32f30e0763df5736e4b3ea50a">DIALOG_SIZER_END</a>()</div><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <a class="code" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">SetData</a>(sz,</div><div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            TRUE,</div><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            HKEY_CURRENT_USER,</div><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            &quot;Software\\Emulators\\VisualBoyAdvance\\Viewer\\<a class="code" href="class_g_b_tile_view.html">GBTileView</a>&quot;,</div><div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div><div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;  <a class="code" href="class_g_b_tile_view.html#a0ad19c822952ef98ced0a46d051cb87e">m_charBase</a> = charBase;</div><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;  <a class="code" href="class_g_b_tile_view.html#a765264072397d9630d2f3ae8e58c414e">m_bank</a> = bank;</div><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;</div><div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;  <a class="code" href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">m_slider</a>.SetRange(0, 7);</div><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;  <a class="code" href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">m_slider</a>.SetPageSize(2);</div><div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;  <a class="code" href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">m_slider</a>.SetTicFreq(1);</div><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;  <a class="code" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a>();</div><div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;</div><div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;  <a class="code" href="class_g_b_tile_view.html#afaaee0263ecf447f8c628d0bbf1ff76f">m_stretch</a> = <a class="code" href="_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3">regQueryDwordValue</a>(&quot;tileViewStretch&quot;, 0);</div><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;  <a class="code" href="arm-new_8h.html#a93120066fd6daa54150af823953378d1">if</a>(<a class="code" href="class_g_b_tile_view.html#afaaee0263ecf447f8c628d0bbf1ff76f">m_stretch</a>)</div><div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;    tileView.setStretch(true);</div><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;  UpdateData(FALSE);</div><div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;  </div><div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;  <a class="code" href="gb_codes_8h.html#a9717e7bbecb906637e86cef6da3d83c2">return</a> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div><div class="ttc" id="_resize_dlg_8h_html_aeac0c1e32f30e0763df5736e4b3ea50a"><div class="ttname"><a href="_resize_dlg_8h.html#aeac0c1e32f30e0763df5736e4b3ea50a">DIALOG_SIZER_END</a></div><div class="ttdeci">#define DIALOG_SIZER_END()</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00042">ResizeDlg.h:42</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_a783821ba6bb984916d55f46cdf90cb2b"><div class="ttname"><a href="_resize_dlg_8h.html#a783821ba6bb984916d55f46cdf90cb2b">DS_SizeY</a></div><div class="ttdeci">#define DS_SizeY</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00032">ResizeDlg.h:32</a></div></div>
+<div class="ttc" id="_reg_8cpp_html_a150640889ffff4851ee26d7b999ec7c3"><div class="ttname"><a href="_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3">regQueryDwordValue</a></div><div class="ttdeci">DWORD regQueryDwordValue(const char *key, DWORD def, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="_reg_8cpp_source.html#l00091">Reg.cpp:91</a></div></div>
+<div class="ttc" id="resource_8h_html_a611975b03b6d7ce68b2de260b97086d0"><div class="ttname"><a href="resource_8h.html#a611975b03b6d7ce68b2de260b97086d0">IDC_COLOR</a></div><div class="ttdeci">#define IDC_COLOR</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00374">resource.h:374</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_ace72ce81e68876fe62cb85b09405e296"><div class="ttname"><a href="class_g_b_tile_view.html#ace72ce81e68876fe62cb85b09405e296">GBTileView::m_slider</a></div><div class="ttdeci">CSliderCtrl m_slider</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00065">GBTileView.h:65</a></div></div>
+<div class="ttc" id="resource_8h_html_a96306052e53348b1e760b8dcabf2b0c7"><div class="ttname"><a href="resource_8h.html#a96306052e53348b1e760b8dcabf2b0c7">IDC_B</a></div><div class="ttdeci">#define IDC_B</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00207">resource.h:207</a></div></div>
+<div class="ttc" id="resource_8h_html_a091df1e8af92b702472240d05fafd9cc"><div class="ttname"><a href="resource_8h.html#a091df1e8af92b702472240d05fafd9cc">IDC_TILE_VIEW</a></div><div class="ttdeci">#define IDC_TILE_VIEW</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00414">resource.h:414</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_a21713fd373c62604a1ee3d5d831101ad"><div class="ttname"><a href="_resize_dlg_8h.html#a21713fd373c62604a1ee3d5d831101ad">DS_SizeX</a></div><div class="ttdeci">#define DS_SizeX</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00031">ResizeDlg.h:31</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a765264072397d9630d2f3ae8e58c414e"><div class="ttname"><a href="class_g_b_tile_view.html#a765264072397d9630d2f3ae8e58c414e">GBTileView::m_bank</a></div><div class="ttdeci">int m_bank</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00067">GBTileView.h:67</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_aa78a471956e777509644a0a04bab2c4d"><div class="ttname"><a href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">GBTileView::paint</a></div><div class="ttdeci">void paint()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00418">GBTileView.cpp:418</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_ae5309071be822a4dae5cb33a131f6180"><div class="ttname"><a href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a></div><div class="ttdeci">#define DS_MoveY</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00030">ResizeDlg.h:30</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a0ad19c822952ef98ced0a46d051cb87e"><div class="ttname"><a href="class_g_b_tile_view.html#a0ad19c822952ef98ced0a46d051cb87e">GBTileView::m_charBase</a></div><div class="ttdeci">int m_charBase</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00066">GBTileView.h:66</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html"><div class="ttname"><a href="class_g_b_tile_view.html">GBTileView</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00037">GBTileView.h:37</a></div></div>
+<div class="ttc" id="arm-new_8h_html_a93120066fd6daa54150af823953378d1"><div class="ttname"><a href="arm-new_8h.html#a93120066fd6daa54150af823953378d1">if</a></div><div class="ttdeci">if(busPrefetchCount &amp;0xFFFFFE00) busPrefetchCount=0x100|(busPrefetchCount &amp;0xFF)</div></div>
+<div class="ttc" id="resource_8h_html_ab2f366ad34063a7be9de1e2249dc705a"><div class="ttname"><a href="resource_8h.html#ab2f366ad34063a7be9de1e2249dc705a">IDC_REFRESH</a></div><div class="ttdeci">#define IDC_REFRESH</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00358">resource.h:358</a></div></div>
+<div class="ttc" id="resource_8h_html_ab801af70383175ec71fd14d356bf9c9d"><div class="ttname"><a href="resource_8h.html#ab801af70383175ec71fd14d356bf9c9d">IDC_R</a></div><div class="ttdeci">#define IDC_R</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00203">resource.h:203</a></div></div>
+<div class="ttc" id="gb_codes_8h_html_a9717e7bbecb906637e86cef6da3d83c2"><div class="ttname"><a href="gb_codes_8h.html#a9717e7bbecb906637e86cef6da3d83c2">return</a></div><div class="ttdeci">return</div><div class="ttdef"><b>Definition:</b> <a href="gb_codes_8h_source.html#l01460">gbCodes.h:1460</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_acb9d1d22d9838f6dda8a61cfa132997c"><div class="ttname"><a href="_resize_dlg_8h.html#acb9d1d22d9838f6dda8a61cfa132997c">DIALOG_SIZER_START</a></div><div class="ttdeci">#define DIALOG_SIZER_START(name)</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00040">ResizeDlg.h:40</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_a0e9ee7a18c54003893895a009f5d79c8"><div class="ttname"><a href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a></div><div class="ttdeci">#define DIALOG_SIZER_ENTRY(controlID, flags)</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00041">ResizeDlg.h:41</a></div></div>
+<div class="ttc" id="resource_8h_html_a35ca279082796c6a98895939aa06826d"><div class="ttname"><a href="resource_8h.html#a35ca279082796c6a98895939aa06826d">IDC_G</a></div><div class="ttdeci">#define IDC_G</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00205">resource.h:205</a></div></div>
+<div class="ttc" id="resource_8h_html_a27e7224faecfa4040c695a69107088f9"><div class="ttname"><a href="resource_8h.html#a27e7224faecfa4040c695a69107088f9">IDC_CLOSE</a></div><div class="ttdeci">#define IDC_CLOSE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00368">resource.h:368</a></div></div>
+<div class="ttc" id="class_resize_dlg_html_a6a3965f44a0c2f5ba9aaa798a9a81df5"><div class="ttname"><a href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">ResizeDlg::SetData</a></div><div class="ttdeci">BOOL SetData(const DialogSizerSizingItem *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8cpp_source.html#l00344">ResizeDlg.cpp:344</a></div></div>
+<div class="ttc" id="resource_8h_html_a305f8d6fb810f32b99a97396ac92f9d5"><div class="ttname"><a href="resource_8h.html#a305f8d6fb810f32b99a97396ac92f9d5">IDC_SAVE</a></div><div class="ttdeci">#define IDC_SAVE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00360">resource.h:360</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_afaaee0263ecf447f8c628d0bbf1ff76f"><div class="ttname"><a href="class_g_b_tile_view.html#afaaee0263ecf447f8c628d0bbf1ff76f">GBTileView::m_stretch</a></div><div class="ttdeci">BOOL m_stretch</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8h_source.html#l00068">GBTileView.h:68</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a4d97fe7dcfd863756d993834548d2ca6_cgraph.png" border="0" usemap="#class_g_b_tile_view_a4d97fe7dcfd863756d993834548d2ca6_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a4d97fe7dcfd863756d993834548d2ca6_cgraph" id="class_g_b_tile_view_a4d97fe7dcfd863756d993834548d2ca6_cgraph">
+<area shape="rect" id="node2" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5" title="ResizeDlg::SetData" alt="" coords="238,107,374,133"/>
+<area shape="rect" id="node9" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="243,220,369,247"/>
+<area shape="rect" id="node15" href="_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3" title="regQueryDwordValue" alt="" coords="234,271,378,297"/>
+<area shape="rect" id="node16" href="class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812" title="BitmapControl::setStretch" alt="" coords="220,321,392,348"/>
+<area shape="rect" id="node3" href="class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc" title="ResizeDlg::AddDialogData" alt="" coords="445,5,620,32"/>
+<area shape="rect" id="node5" href="_resize_dlg_8cpp.html#a42fd95f9181ab52619b7bd3e5d51475b" title="ResizeDlgGetItemCount" alt="" coords="452,56,613,83"/>
+<area shape="rect" id="node6" href="_resize_dlg_8cpp.html#ad4ba4376f50f357ac88b0fd3bfeb1a19" title="ResizeDlgCopyItems" alt="" coords="461,107,604,133"/>
+<area shape="rect" id="node7" href="_resize_dlg_8cpp.html#a74702acf423eaa66851bd656c737b6ba" title="RegQueryValueExRecursive" alt="" coords="440,157,625,184"/>
+<area shape="rect" id="node4" href="_resize_dlg_8cpp.html#af86ee86600de84824a5d7b8b3aaed6e8" title="ResizeDlgUpdateGripperRect" alt="" coords="673,5,864,32"/>
+<area shape="rect" id="node8" href="_resize_dlg_8cpp.html#a37994396c85bf7d224452b133d9e3d6f" title="regGetINIPath" alt="" coords="717,144,820,171"/>
+<area shape="rect" id="node10" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="466,220,599,247"/>
+<area shape="rect" id="node14" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="457,271,608,297"/>
+<area shape="rect" id="node11" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="692,195,845,221"/>
+<area shape="rect" id="node12" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="691,245,847,272"/>
+<area shape="rect" id="node13" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="683,296,855,323"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a865e1fe72caf57cc6d55700bfdac0a84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a865e1fe72caf57cc6d55700bfdac0a84">&#9670;&nbsp;</a></span>OnMapInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT GBTileView::OnMapInfo </td>
+          <td>(</td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00458">458</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;{</div><div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *colors = (<a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)lParam;</div><div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;  zoom.<a class="code" href="class_zoom_control.html#a97501cc16d3068eefa1b5d9d23e9d0d9">setColors</a>(colors);</div><div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;</div><div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;  <span class="keywordtype">int</span> x = (<a class="code" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)((wParam &amp; 0xffff)/8);</div><div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;  <span class="keywordtype">int</span> y = (<a class="code" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)(((wParam &gt;&gt; 16) &amp; 0xFFFF)/8);</div><div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;</div><div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;  <span class="keywordtype">int</span> tiles = 0x0000;</div><div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;  <span class="keywordflow">if</span>(charBase)</div><div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;    tiles = 0x0800;</div><div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;  <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> address = 0x8000 + tiles;</div><div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;  <span class="keywordtype">int</span> tile = 16 * y + x;</div><div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;</div><div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;  address += 16 * tile;</div><div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;</div><div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;  CString <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>;</div><div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;  <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>.Format(<span class="stringliteral">&quot;%d&quot;</span>, tile);</div><div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#a21c99c65af5b356c16c07e73a2746b25">IDC_TILE_NUMBER</a>)-&gt;SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;</div><div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;  <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>.Format(<span class="stringliteral">&quot;%04x&quot;</span>, address);</div><div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#af0726d27cf7b7070867a81fde283a218">IDC_ADDRESS</a>)-&gt;SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;  </div><div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;  <span class="keywordflow">return</span> TRUE;</div><div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;}</div><div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="_util_8cpp_html_a0ef32aa8672df19503a49fab2d0c8071"><div class="ttname"><a href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a></div><div class="ttdeci">static const unsigned int</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00058">Util.cpp:58</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="class_zoom_control_html_a97501cc16d3068eefa1b5d9d23e9d0d9"><div class="ttname"><a href="class_zoom_control.html#a97501cc16d3068eefa1b5d9d23e9d0d9">ZoomControl::setColors</a></div><div class="ttdeci">void setColors(const u8 *c)</div><div class="ttdef"><b>Definition:</b> <a href="_zoom_control_8cpp_source.html#l00185">ZoomControl.cpp:185</a></div></div>
+<div class="ttc" id="resource_8h_html_a21c99c65af5b356c16c07e73a2746b25"><div class="ttname"><a href="resource_8h.html#a21c99c65af5b356c16c07e73a2746b25">IDC_TILE_NUMBER</a></div><div class="ttdeci">#define IDC_TILE_NUMBER</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00464">resource.h:464</a></div></div>
+<div class="ttc" id="resource_8h_html_af0726d27cf7b7070867a81fde283a218"><div class="ttname"><a href="resource_8h.html#af0726d27cf7b7070867a81fde283a218">IDC_ADDRESS</a></div><div class="ttdeci">#define IDC_ADDRESS</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00200">resource.h:200</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a865e1fe72caf57cc6d55700bfdac0a84_cgraph.png" border="0" usemap="#class_g_b_tile_view_a865e1fe72caf57cc6d55700bfdac0a84_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a865e1fe72caf57cc6d55700bfdac0a84_cgraph" id="class_g_b_tile_view_a865e1fe72caf57cc6d55700bfdac0a84_cgraph">
+<area shape="rect" id="node2" href="class_zoom_control.html#a97501cc16d3068eefa1b5d9d23e9d0d9" title="ZoomControl::setColors" alt="" coords="212,5,371,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a97f989bc4a5f5872258b5d8d47ae60d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97f989bc4a5f5872258b5d8d47ae60d0">&#9670;&nbsp;</a></span>OnSave()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnSave </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00262">262</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;{</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;  CString captureBuffer;</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a103f0b25433c57c4458a208a06799cf8">captureFormat</a> == 0)</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    captureBuffer = <span class="stringliteral">&quot;tiles.png&quot;</span>;</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    captureBuffer = <span class="stringliteral">&quot;tiles.bmp&quot;</span>;</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;  LPCTSTR exts[] = {<span class="stringliteral">&quot;.png&quot;</span>, <span class="stringliteral">&quot;.bmp&quot;</span> };</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  CString <a class="code" href="_s_d_l_8cpp.html#af0122ee4312107103b580a98c74a4ea6">filter</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a228edf26b0dc4129658c174ee5a3c27c">winLoadFilter</a>(<a class="code" href="resource_8h.html#a374944c3928d8197bc2bbf9e85207a4d">IDS_FILTER_PNG</a>);</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  CString title = <a class="code" href="_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a">winResLoadString</a>(<a class="code" href="resource_8h.html#a10c24c77703afe57f6e641e939997cd2">IDS_SELECT_CAPTURE_NAME</a>);</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  <a class="code" href="class_file_dlg.html">FileDlg</a> dlg(<span class="keyword">this</span>,</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;              captureBuffer,</div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;              <a class="code" href="_s_d_l_8cpp.html#af0122ee4312107103b580a98c74a4ea6">filter</a>,</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;              <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a103f0b25433c57c4458a208a06799cf8">captureFormat</a> ? 2 : 1,</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;              <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a103f0b25433c57c4458a208a06799cf8">captureFormat</a> ? <span class="stringliteral">&quot;BMP&quot;</span> : <span class="stringliteral">&quot;PNG&quot;</span>,</div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;              exts,</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;              <span class="stringliteral">&quot;&quot;</span>,</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;              title,</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;              <span class="keyword">true</span>);</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;</div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  <span class="keywordflow">if</span>(dlg.DoModal() == IDCANCEL) {</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  }</div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;</div><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;  captureBuffer = dlg.GetPathName();</div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;</div><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a103f0b25433c57c4458a208a06799cf8">captureFormat</a>)</div><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <a class="code" href="class_g_b_tile_view.html#ac61ccd982b57db14794e1f9febc67c16">saveBMP</a>(captureBuffer);</div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    <a class="code" href="class_g_b_tile_view.html#a7d48513402a49269828c3111bc153d46">savePNG</a>(captureBuffer);  </div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a228edf26b0dc4129658c174ee5a3c27c"><div class="ttname"><a href="class_v_b_a.html#a228edf26b0dc4129658c174ee5a3c27c">VBA::winLoadFilter</a></div><div class="ttdeci">CString winLoadFilter(UINT id)</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l02076">VBA.cpp:2076</a></div></div>
+<div class="ttc" id="resource_8h_html_a374944c3928d8197bc2bbf9e85207a4d"><div class="ttname"><a href="resource_8h.html#a374944c3928d8197bc2bbf9e85207a4d">IDS_FILTER_PNG</a></div><div class="ttdeci">#define IDS_FILTER_PNG</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00315">resource.h:315</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_ac61ccd982b57db14794e1f9febc67c16"><div class="ttname"><a href="class_g_b_tile_view.html#ac61ccd982b57db14794e1f9febc67c16">GBTileView::saveBMP</a></div><div class="ttdeci">void saveBMP(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00117">GBTileView.cpp:117</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a103f0b25433c57c4458a208a06799cf8"><div class="ttname"><a href="class_v_b_a.html#a103f0b25433c57c4458a208a06799cf8">VBA::captureFormat</a></div><div class="ttdeci">int captureFormat</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00127">VBA.h:127</a></div></div>
+<div class="ttc" id="resource_8h_html_a10c24c77703afe57f6e641e939997cd2"><div class="ttname"><a href="resource_8h.html#a10c24c77703afe57f6e641e939997cd2">IDS_SELECT_CAPTURE_NAME</a></div><div class="ttdeci">#define IDS_SELECT_CAPTURE_NAME</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00261">resource.h:261</a></div></div>
+<div class="ttc" id="_win_res_util_8cpp_html_a416e85e80ab9b01376e87251c83d1a5a"><div class="ttname"><a href="_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a">winResLoadString</a></div><div class="ttdeci">CString winResLoadString(UINT id)</div><div class="ttdef"><b>Definition:</b> <a href="_win_res_util_8cpp_source.html#l00096">WinResUtil.cpp:96</a></div></div>
+<div class="ttc" id="_s_d_l_8cpp_html_af0122ee4312107103b580a98c74a4ea6"><div class="ttname"><a href="_s_d_l_8cpp.html#af0122ee4312107103b580a98c74a4ea6">filter</a></div><div class="ttdeci">int filter</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00154">SDL.cpp:154</a></div></div>
+<div class="ttc" id="class_file_dlg_html"><div class="ttname"><a href="class_file_dlg.html">FileDlg</a></div><div class="ttdef"><b>Definition:</b> <a href="_file_dlg_8h_source.html#l00041">FileDlg.h:41</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a7d48513402a49269828c3111bc153d46"><div class="ttname"><a href="class_g_b_tile_view.html#a7d48513402a49269828c3111bc153d46">GBTileView::savePNG</a></div><div class="ttdeci">void savePNG(const char *name)</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00185">GBTileView.cpp:185</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a97f989bc4a5f5872258b5d8d47ae60d0_cgraph.png" border="0" usemap="#class_g_b_tile_view_a97f989bc4a5f5872258b5d8d47ae60d0_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a97f989bc4a5f5872258b5d8d47ae60d0_cgraph" id="class_g_b_tile_view_a97f989bc4a5f5872258b5d8d47ae60d0_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#a228edf26b0dc4129658c174ee5a3c27c" title="VBA::winLoadFilter" alt="" coords="205,5,339,32"/>
+<area shape="rect" id="node3" href="_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="396,31,523,57"/>
+<area shape="rect" id="node4" href="class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="211,107,333,133"/>
+<area shape="rect" id="node5" href="class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="196,157,348,184"/>
+<area shape="rect" id="node6" href="class_g_b_tile_view.html#ac61ccd982b57db14794e1f9febc67c16" title="GBTileView::saveBMP" alt="" coords="196,259,348,285"/>
+<area shape="rect" id="node9" href="class_g_b_tile_view.html#a7d48513402a49269828c3111bc153d46" title="GBTileView::savePNG" alt="" coords="197,208,347,235"/>
+<area shape="rect" id="node7" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="400,208,519,235"/>
+<area shape="rect" id="node8" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7" title="utilPutDword" alt="" coords="412,259,507,285"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7386c9ed9651610461d4342ebd492bf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7386c9ed9651610461d4342ebd492bf9">&#9670;&nbsp;</a></span>OnStretch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::OnStretch </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00451">451</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;{</div><div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;  tileView.<a class="code" href="class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812">setStretch</a>(!tileView.<a class="code" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c">getStretch</a>());</div><div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;  <a class="code" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a>();</div><div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;  <a class="code" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a>(<span class="stringliteral">&quot;tileViewStretch&quot;</span>, tileView.<a class="code" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c">getStretch</a>());  </div><div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;}</div><div class="ttc" id="class_bitmap_control_html_ab545e15ea3edda9f0d80c0b8b0b7c812"><div class="ttname"><a href="class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812">BitmapControl::setStretch</a></div><div class="ttdeci">void setStretch(bool b)</div><div class="ttdef"><b>Definition:</b> <a href="_bitmap_control_8cpp_source.html#l00272">BitmapControl.cpp:272</a></div></div>
+<div class="ttc" id="_reg_8cpp_html_a758e775489a3fb5c3cc7071fdd5af87e"><div class="ttname"><a href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a></div><div class="ttdeci">void regSetDwordValue(const char *key, DWORD value, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="_reg_8cpp_source.html#l00169">Reg.cpp:169</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_aa78a471956e777509644a0a04bab2c4d"><div class="ttname"><a href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">GBTileView::paint</a></div><div class="ttdeci">void paint()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00418">GBTileView.cpp:418</a></div></div>
+<div class="ttc" id="class_bitmap_control_html_a1d3cff9a3b57dd7558d678177dcf4b5c"><div class="ttname"><a href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c">BitmapControl::getStretch</a></div><div class="ttdeci">bool getStretch()</div><div class="ttdef"><b>Definition:</b> <a href="_bitmap_control_8cpp_source.html#l00280">BitmapControl.cpp:280</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a7386c9ed9651610461d4342ebd492bf9_cgraph.png" border="0" usemap="#class_g_b_tile_view_a7386c9ed9651610461d4342ebd492bf9_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a7386c9ed9651610461d4342ebd492bf9_cgraph" id="class_g_b_tile_view_a7386c9ed9651610461d4342ebd492bf9_cgraph">
+<area shape="rect" id="node2" href="class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812" title="BitmapControl::setStretch" alt="" coords="209,5,381,32"/>
+<area shape="rect" id="node3" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="628,56,800,83"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="233,107,358,133"/>
+<area shape="rect" id="node9" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e" title="regSetDwordValue" alt="" coords="231,157,360,184"/>
+<area shape="rect" id="node5" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="438,107,571,133"/>
+<area shape="rect" id="node8" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="429,157,580,184"/>
+<area shape="rect" id="node6" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="637,107,791,133"/>
+<area shape="rect" id="node7" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="636,157,792,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa78a471956e777509644a0a04bab2c4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa78a471956e777509644a0a04bab2c4d">&#9670;&nbsp;</a></span>paint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::paint </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00418">418</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;{</div><div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="gb_globals_8cpp.html#ae4f6bd8162474dbcfdbc54c36d7f5695">gbRom</a> != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div><div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;    <a class="code" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7">render</a>();</div><div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    tileView.<a class="code" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2">refresh</a>();</div><div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;  }</div><div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;}</div><div class="ttc" id="class_bitmap_control_html_acf061a1e9a4cad90ad2827c14f79caa2"><div class="ttname"><a href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2">BitmapControl::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_bitmap_control_8cpp_source.html#l00248">BitmapControl.cpp:248</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_ae4f6bd8162474dbcfdbc54c36d7f5695"><div class="ttname"><a href="gb_globals_8cpp.html#ae4f6bd8162474dbcfdbc54c36d7f5695">gbRom</a></div><div class="ttdeci">u8 * gbRom</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00031">gbGlobals.cpp:31</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_a1012b77fed7304d7b27b9d619472e6a7"><div class="ttname"><a href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7">GBTileView::render</a></div><div class="ttdeci">void render()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00330">GBTileView.cpp:330</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_aa78a471956e777509644a0a04bab2c4d_cgraph.png" border="0" usemap="#class_g_b_tile_view_aa78a471956e777509644a0a04bab2c4d_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_aa78a471956e777509644a0a04bab2c4d_cgraph" id="class_g_b_tile_view_aa78a471956e777509644a0a04bab2c4d_cgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="187,56,321,83"/>
+<area shape="rect" id="node6" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="179,107,329,133"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="387,5,540,32"/>
+<area shape="rect" id="node4" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="385,56,541,83"/>
+<area shape="rect" id="node5" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="377,107,549,133"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_aa78a471956e777509644a0a04bab2c4d_icgraph.png" border="0" usemap="#class_g_b_tile_view_aa78a471956e777509644a0a04bab2c4d_icgraph" alt=""/></div>
+<map name="class_g_b_tile_view_aa78a471956e777509644a0a04bab2c4d_icgraph" id="class_g_b_tile_view_aa78a471956e777509644a0a04bab2c4d_icgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#a0b36c27b43fea0e457a26860b2476b9d" title="GBTileView::update" alt="" coords="199,5,335,32"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#a4d97fe7dcfd863756d993834548d2ca6" title="GBTileView::OnInitDialog" alt="" coords="183,56,350,83"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#afb45c55e706bed1468f547510490fa2a" title="GBTileView::OnCharbase0" alt="" coords="179,107,355,133"/>
+<area shape="rect" id="node5" href="class_g_b_tile_view.html#a9d5c6de9e7d359cf221b164f51cb6a18" title="GBTileView::OnCharbase1" alt="" coords="179,157,355,184"/>
+<area shape="rect" id="node6" href="class_g_b_tile_view.html#a35e281e40e9fd8867f04a01595f54ef2" title="GBTileView::OnBank0" alt="" coords="191,208,342,235"/>
+<area shape="rect" id="node7" href="class_g_b_tile_view.html#a5c1db6a1066d8e37b743ca2407652b7d" title="GBTileView::OnBank1" alt="" coords="191,259,342,285"/>
+<area shape="rect" id="node8" href="class_g_b_tile_view.html#a7386c9ed9651610461d4342ebd492bf9" title="GBTileView::OnStretch" alt="" coords="189,309,345,336"/>
+<area shape="rect" id="node9" href="class_g_b_tile_view.html#a0b2b262f47b7d6c3f53270eaf80a24a1" title="GBTileView::OnHScroll" alt="" coords="189,360,345,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2bc3fcd50b001a8c3ed3a592772eeb8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bc3fcd50b001a8c3ed3a592772eeb8b">&#9670;&nbsp;</a></span>PostNcDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::PostNcDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00521">521</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;{</div><div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;  <span class="keyword">delete</span> <span class="keyword">this</span>;</div><div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a1012b77fed7304d7b27b9d619472e6a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1012b77fed7304d7b27b9d619472e6a7">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00330">330</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;{</div><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="keywordtype">int</span> tiles = 0x0000;</div><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;  <span class="keywordflow">if</span>(charBase)</div><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    tiles = 0x0800;</div><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *charBase = (<a class="code" href="gb_globals_8cpp.html#acc4cae98f0f9473610870333741081e9">gbVram</a> != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) ?</div><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    (bank ? &amp;<a class="code" href="gb_globals_8cpp.html#acc4cae98f0f9473610870333741081e9">gbVram</a>[0x2000+tiles] : &amp;<a class="code" href="gb_globals_8cpp.html#acc4cae98f0f9473610870333741081e9">gbVram</a>[tiles]) :</div><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    &amp;<a class="code" href="gb_globals_8cpp.html#a43f07d3a5fcb2301e2662188e888c5a1">gbMemory</a>[0x8000+tiles];</div><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <span class="keywordtype">int</span> tile = 0;</div><div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; 16; y++) {</div><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; 16; x++) {</div><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      <a class="code" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee">renderTile</a>(tile, x, y, charBase);</div><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      tile++;</div><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;    }</div><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  }</div><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;  tileView.<a class="code" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f">setSize</a>(16*8, 16*8);</div><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  w = 16*8;</div><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  h = 16*8;</div><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  SIZE s;</div><div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;  s.cx = s.cy = 16*8;</div><div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;  <span class="keywordflow">if</span>(tileView.<a class="code" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c">getStretch</a>()) {</div><div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    s.cx = s.cy = 1;</div><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;  }</div><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  tileView.SetScrollSizes(MM_TEXT, s);</div><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;}</div><div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="class_bitmap_control_html_a421004fe6ba01329dd69259396592d1f"><div class="ttname"><a href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f">BitmapControl::setSize</a></div><div class="ttdeci">void setSize(int w1, int h1)</div><div class="ttdef"><b>Definition:</b> <a href="_bitmap_control_8cpp_source.html#l00236">BitmapControl.cpp:236</a></div></div>
+<div class="ttc" id="class_g_b_tile_view_html_ade04081b3b047c110f6ae5673c7154ee"><div class="ttname"><a href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee">GBTileView::renderTile</a></div><div class="ttdeci">void renderTile(int tile, int x, int y, u8 *charBase)</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00298">GBTileView.cpp:298</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_acc4cae98f0f9473610870333741081e9"><div class="ttname"><a href="gb_globals_8cpp.html#acc4cae98f0f9473610870333741081e9">gbVram</a></div><div class="ttdeci">u8 * gbVram</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00030">gbGlobals.cpp:30</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_a43f07d3a5fcb2301e2662188e888c5a1"><div class="ttname"><a href="gb_globals_8cpp.html#a43f07d3a5fcb2301e2662188e888c5a1">gbMemory</a></div><div class="ttdeci">u8 * gbMemory</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00029">gbGlobals.cpp:29</a></div></div>
+<div class="ttc" id="class_bitmap_control_html_a1d3cff9a3b57dd7558d678177dcf4b5c"><div class="ttname"><a href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c">BitmapControl::getStretch</a></div><div class="ttdeci">bool getStretch()</div><div class="ttdef"><b>Definition:</b> <a href="_bitmap_control_8cpp_source.html#l00280">BitmapControl.cpp:280</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a1012b77fed7304d7b27b9d619472e6a7_cgraph.png" border="0" usemap="#class_g_b_tile_view_a1012b77fed7304d7b27b9d619472e6a7_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a1012b77fed7304d7b27b9d619472e6a7_cgraph" id="class_g_b_tile_view_a1012b77fed7304d7b27b9d619472e6a7_cgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="196,5,349,32"/>
+<area shape="rect" id="node3" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="195,56,351,83"/>
+<area shape="rect" id="node4" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="187,107,359,133"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a1012b77fed7304d7b27b9d619472e6a7_icgraph.png" border="0" usemap="#class_g_b_tile_view_a1012b77fed7304d7b27b9d619472e6a7_icgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a1012b77fed7304d7b27b9d619472e6a7_icgraph" id="class_g_b_tile_view_a1012b77fed7304d7b27b9d619472e6a7_icgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="187,183,312,209"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#a0b36c27b43fea0e457a26860b2476b9d" title="GBTileView::update" alt="" coords="380,5,516,32"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#a4d97fe7dcfd863756d993834548d2ca6" title="GBTileView::OnInitDialog" alt="" coords="365,56,531,83"/>
+<area shape="rect" id="node5" href="class_g_b_tile_view.html#afb45c55e706bed1468f547510490fa2a" title="GBTileView::OnCharbase0" alt="" coords="360,107,536,133"/>
+<area shape="rect" id="node6" href="class_g_b_tile_view.html#a9d5c6de9e7d359cf221b164f51cb6a18" title="GBTileView::OnCharbase1" alt="" coords="360,157,536,184"/>
+<area shape="rect" id="node7" href="class_g_b_tile_view.html#a35e281e40e9fd8867f04a01595f54ef2" title="GBTileView::OnBank0" alt="" coords="373,208,523,235"/>
+<area shape="rect" id="node8" href="class_g_b_tile_view.html#a5c1db6a1066d8e37b743ca2407652b7d" title="GBTileView::OnBank1" alt="" coords="373,259,523,285"/>
+<area shape="rect" id="node9" href="class_g_b_tile_view.html#a7386c9ed9651610461d4342ebd492bf9" title="GBTileView::OnStretch" alt="" coords="370,309,526,336"/>
+<area shape="rect" id="node10" href="class_g_b_tile_view.html#a0b2b262f47b7d6c3f53270eaf80a24a1" title="GBTileView::OnHScroll" alt="" coords="370,360,526,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ade04081b3b047c110f6ae5673c7154ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade04081b3b047c110f6ae5673c7154ee">&#9670;&nbsp;</a></span>renderTile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::renderTile </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>tile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td>
+          <td class="paramname"><em>charBase</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00298">298</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;{</div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *bmp = &amp;data[24*x + 8*16*24*y];</div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j = 0; j &lt; 8; j++) {</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> mask = 0x80;</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> tile_a = charBase[tile*16+j*2];</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> tile_b = charBase[tile*16+j*2+1];</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    </div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; 8; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>++) {</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> c = (tile_a &amp; mask) ? 1 : 0;</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      c += ((tile_b &amp; mask) ? 2 : 0);</div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      </div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="gb_globals_8cpp.html#aa3e3449c9ba4db2eeb687d6facfca761">gbCgbMode</a>) {</div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        c = c + palette*4;</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        c = <a class="code" href="gb_globals_8cpp.html#af4aecde48e53c8b3aa9c7241443e5ef7">gbBgp</a>[c];</div><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      }</div><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;</div><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      <a class="code" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> color = <a class="code" href="gb_globals_8cpp.html#a7c46bfb4d71e64d27d5aec543ba85b9a">gbPalette</a>[c];</div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      *bmp++ = ((color &gt;&gt; 10) &amp; 0x1f) &lt;&lt; 3;</div><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      *bmp++ = ((color &gt;&gt; 5) &amp; 0x1f) &lt;&lt; 3;</div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      *bmp++ = (color &amp; 0x1f) &lt;&lt; 3;</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;</div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      mask &gt;&gt;= 1;</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    bmp += 15*24; <span class="comment">// advance line</span></div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  }</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}</div><div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_a7c46bfb4d71e64d27d5aec543ba85b9a"><div class="ttname"><a href="gb_globals_8cpp.html#a7c46bfb4d71e64d27d5aec543ba85b9a">gbPalette</a></div><div class="ttdeci">u16 gbPalette[128]</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00037">gbGlobals.cpp:37</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_af4aecde48e53c8b3aa9c7241443e5ef7"><div class="ttname"><a href="gb_globals_8cpp.html#af4aecde48e53c8b3aa9c7241443e5ef7">gbBgp</a></div><div class="ttdeci">u8 gbBgp[4]</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00038">gbGlobals.cpp:38</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_aa3e3449c9ba4db2eeb687d6facfca761"><div class="ttname"><a href="gb_globals_8cpp.html#aa3e3449c9ba4db2eeb687d6facfca761">gbCgbMode</a></div><div class="ttdeci">int gbCgbMode</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00044">gbGlobals.cpp:44</a></div></div>
+<div class="ttc" id="_system_8h_html_a9e6c91d77e24643b888dbd1a1a590054"><div class="ttname"><a href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a></div><div class="ttdeci">unsigned short u16</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00030">System.h:30</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01392">expr-lex.cpp:1392</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_ade04081b3b047c110f6ae5673c7154ee_icgraph.png" border="0" usemap="#class_g_b_tile_view_ade04081b3b047c110f6ae5673c7154ee_icgraph" alt=""/></div>
+<map name="class_g_b_tile_view_ade04081b3b047c110f6ae5673c7154ee_icgraph" id="class_g_b_tile_view_ade04081b3b047c110f6ae5673c7154ee_icgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="207,183,340,209"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="388,183,513,209"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#a0b36c27b43fea0e457a26860b2476b9d" title="GBTileView::update" alt="" coords="581,5,717,32"/>
+<area shape="rect" id="node5" href="class_g_b_tile_view.html#a4d97fe7dcfd863756d993834548d2ca6" title="GBTileView::OnInitDialog" alt="" coords="566,56,733,83"/>
+<area shape="rect" id="node6" href="class_g_b_tile_view.html#afb45c55e706bed1468f547510490fa2a" title="GBTileView::OnCharbase0" alt="" coords="561,107,737,133"/>
+<area shape="rect" id="node7" href="class_g_b_tile_view.html#a9d5c6de9e7d359cf221b164f51cb6a18" title="GBTileView::OnCharbase1" alt="" coords="561,157,737,184"/>
+<area shape="rect" id="node8" href="class_g_b_tile_view.html#a35e281e40e9fd8867f04a01595f54ef2" title="GBTileView::OnBank0" alt="" coords="574,208,725,235"/>
+<area shape="rect" id="node9" href="class_g_b_tile_view.html#a5c1db6a1066d8e37b743ca2407652b7d" title="GBTileView::OnBank1" alt="" coords="574,259,725,285"/>
+<area shape="rect" id="node10" href="class_g_b_tile_view.html#a7386c9ed9651610461d4342ebd492bf9" title="GBTileView::OnStretch" alt="" coords="571,309,727,336"/>
+<area shape="rect" id="node11" href="class_g_b_tile_view.html#a0b2b262f47b7d6c3f53270eaf80a24a1" title="GBTileView::OnHScroll" alt="" coords="571,360,727,387"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac61ccd982b57db14794e1f9febc67c16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac61ccd982b57db14794e1f9febc67c16">&#9670;&nbsp;</a></span>saveBMP()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::saveBMP </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00117">117</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> writeBuffer[1024 * 3];</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  </div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  FILE *fp = fopen(name,<span class="stringliteral">&quot;wb&quot;</span>);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">if</span>(!fp) {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="_n_l_s_8h.html#a165f1f2539e202f0a24e6e9583c63475">MSG_ERROR_CREATING_FILE</a>, <span class="stringliteral">&quot;Error creating file %s&quot;</span>, name);</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  }</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  <span class="keyword">struct </span>{</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> ident[2];</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> filesize[4];</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> reserved[4];</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> dataoffset[4];</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> headersize[4];</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> width[4];</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> height[4];</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> planes[2];</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> bitsperpixel[2];</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> compression[4];</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> datasize[4];</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> hres[4];</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> vres[4];</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> colors[4];</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> importantcolors[4];</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> pad[2];</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  } bmpheader;</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  memset(&amp;bmpheader, 0, <span class="keyword">sizeof</span>(bmpheader));</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  bmpheader.ident[0] = <span class="charliteral">&#39;B&#39;</span>;</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  bmpheader.ident[1] = <span class="charliteral">&#39;M&#39;</span>;</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> fsz = <span class="keyword">sizeof</span>(bmpheader) + w*h*3;</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(bmpheader.filesize, fsz);</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(bmpheader.dataoffset, 0x38);</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(bmpheader.headersize, 0x28);</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(bmpheader.width, w);</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(bmpheader.height, h);</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(bmpheader.planes, 1);</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(bmpheader.bitsperpixel, 24);</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <a class="code" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a>(bmpheader.datasize, 3*w*h);</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  fwrite(&amp;bmpheader, 1, <span class="keyword">sizeof</span>(bmpheader), fp);</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a> = writeBuffer;</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  <span class="keywordtype">int</span> sizeX = w;</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordtype">int</span> sizeY = h;</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *pixU8 = (<a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)data+3*w*(h-1);</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; sizeY; y++) {</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; sizeX; x++) {</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      *<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>++ = *pixU8++; <span class="comment">// B</span></div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      *<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>++ = *pixU8++; <span class="comment">// G</span></div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;      *<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>++ = *pixU8++; <span class="comment">// R</span></div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    pixU8 -= 2*3*w;</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    fwrite(writeBuffer, 1, 3*w, fp);</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    </div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a> = writeBuffer;</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  }</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  fclose(fp);</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div><div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_a91b64995742fd30063314f12340b4b5a"><div class="ttname"><a href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a></div><div class="ttdeci">b</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01226">expr-lex.cpp:1226</a></div></div>
+<div class="ttc" id="_util_8cpp_html_a61ef2cbdb9d8b5c50004ebd1557439c7"><div class="ttname"><a href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7">utilPutDword</a></div><div class="ttdeci">void utilPutDword(u8 *p, u32 value)</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00190">Util.cpp:190</a></div></div>
+<div class="ttc" id="system_8cpp_html_a747a9cb8e015a3d45cca636b5bd0fc69"><div class="ttname"><a href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a></div><div class="ttdeci">void systemMessage(int _iId, const char *_csFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00073">system.cpp:73</a></div></div>
+<div class="ttc" id="_n_l_s_8h_html_a165f1f2539e202f0a24e6e9583c63475"><div class="ttname"><a href="_n_l_s_8h.html#a165f1f2539e202f0a24e6e9583c63475">MSG_ERROR_CREATING_FILE</a></div><div class="ttdeci">#define MSG_ERROR_CREATING_FILE</div><div class="ttdef"><b>Definition:</b> <a href="_n_l_s_8h_source.html#l00037">NLS.h:37</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_ac61ccd982b57db14794e1f9febc67c16_cgraph.png" border="0" usemap="#class_g_b_tile_view_ac61ccd982b57db14794e1f9febc67c16_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_ac61ccd982b57db14794e1f9febc67c16_cgraph" id="class_g_b_tile_view_ac61ccd982b57db14794e1f9febc67c16_cgraph">
+<area shape="rect" id="node2" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="205,5,324,32"/>
+<area shape="rect" id="node3" href="_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7" title="utilPutDword" alt="" coords="217,56,312,83"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_ac61ccd982b57db14794e1f9febc67c16_icgraph.png" border="0" usemap="#class_g_b_tile_view_ac61ccd982b57db14794e1f9febc67c16_icgraph" alt=""/></div>
+<map name="class_g_b_tile_view_ac61ccd982b57db14794e1f9febc67c16_icgraph" id="class_g_b_tile_view_ac61ccd982b57db14794e1f9febc67c16_icgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#a97f989bc4a5f5872258b5d8d47ae60d0" title="GBTileView::OnSave" alt="" coords="205,5,348,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7d48513402a49269828c3111bc153d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d48513402a49269828c3111bc153d46">&#9670;&nbsp;</a></span>savePNG()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::savePNG </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00185">185</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> writeBuffer[1024 * 3];</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  </div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  FILE *fp = fopen(name,<span class="stringliteral">&quot;wb&quot;</span>);</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="keywordflow">if</span>(!fp) {</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="_n_l_s_8h.html#a165f1f2539e202f0a24e6e9583c63475">MSG_ERROR_CREATING_FILE</a>, <span class="stringliteral">&quot;Error creating file %s&quot;</span>, name);</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  }</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  </div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;  png_structp png_ptr = png_create_write_struct(PNG_LIBPNG_VER_STRING,</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                                                <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                                                <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                                                <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;  <span class="keywordflow">if</span>(!png_ptr) {</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    fclose(fp);</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;  }</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  png_infop info_ptr = png_create_info_struct(png_ptr);</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;  <span class="keywordflow">if</span>(!info_ptr) {</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    png_destroy_write_struct(&amp;png_ptr,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    fclose(fp);</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  }</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  <span class="keywordflow">if</span>(setjmp(png_ptr-&gt;jmpbuf)) {</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    png_destroy_write_struct(&amp;png_ptr,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    fclose(fp);</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  }</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  png_init_io(png_ptr,fp);</div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  png_set_IHDR(png_ptr,</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;               info_ptr,</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;               w,</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;               h,</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;               8,</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;               PNG_COLOR_TYPE_RGB,</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;               PNG_INTERLACE_NONE,</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;               PNG_COMPRESSION_TYPE_DEFAULT,</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;               PNG_FILTER_TYPE_DEFAULT);</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  png_write_info(png_ptr,info_ptr);</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a> = writeBuffer;</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;  <span class="keywordtype">int</span> sizeX = w;</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordtype">int</span> sizeY = h;</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *pixU8 = (<a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *)data;</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> y = 0; y &lt; sizeY; y++) {</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> x = 0; x &lt; sizeX; x++) {</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordtype">int</span> blue = *pixU8++;</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;      <span class="keywordtype">int</span> green = *pixU8++;</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keywordtype">int</span> red = *pixU8++;</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;      </div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;      *<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>++ = red;</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      *<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>++ = green;</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;      *<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>++ = blue;</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    }</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    png_write_row(png_ptr,writeBuffer);</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    </div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a> = writeBuffer;</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;  }</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  </div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;  png_write_end(png_ptr, info_ptr);</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;  png_destroy_write_struct(&amp;png_ptr, &amp;info_ptr);</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;  fclose(fp);</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;}</div><div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_a91b64995742fd30063314f12340b4b5a"><div class="ttname"><a href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a></div><div class="ttdeci">b</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01226">expr-lex.cpp:1226</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="system_8cpp_html_a747a9cb8e015a3d45cca636b5bd0fc69"><div class="ttname"><a href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a></div><div class="ttdeci">void systemMessage(int _iId, const char *_csFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00073">system.cpp:73</a></div></div>
+<div class="ttc" id="_n_l_s_8h_html_a165f1f2539e202f0a24e6e9583c63475"><div class="ttname"><a href="_n_l_s_8h.html#a165f1f2539e202f0a24e6e9583c63475">MSG_ERROR_CREATING_FILE</a></div><div class="ttdeci">#define MSG_ERROR_CREATING_FILE</div><div class="ttdef"><b>Definition:</b> <a href="_n_l_s_8h_source.html#l00037">NLS.h:37</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a7d48513402a49269828c3111bc153d46_cgraph.png" border="0" usemap="#class_g_b_tile_view_a7d48513402a49269828c3111bc153d46_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a7d48513402a49269828c3111bc153d46_cgraph" id="class_g_b_tile_view_a7d48513402a49269828c3111bc153d46_cgraph">
+<area shape="rect" id="node2" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="204,5,323,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a7d48513402a49269828c3111bc153d46_icgraph.png" border="0" usemap="#class_g_b_tile_view_a7d48513402a49269828c3111bc153d46_icgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a7d48513402a49269828c3111bc153d46_icgraph" id="class_g_b_tile_view_a7d48513402a49269828c3111bc153d46_icgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#a97f989bc4a5f5872258b5d8d47ae60d0" title="GBTileView::OnSave" alt="" coords="204,5,347,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0b36c27b43fea0e457a26860b2476b9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b36c27b43fea0e457a26860b2476b9d">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBTileView::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_update_listener.html#ac03b85f52e858d0bbd08a4984b2cb929">IUpdateListener</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a> 파일의 <a class="el" href="_g_b_tile_view_8cpp_source.html#l00357">357</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;{</div><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  <a class="code" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">paint</a>();</div><div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;}</div><div class="ttc" id="class_g_b_tile_view_html_aa78a471956e777509644a0a04bab2c4d"><div class="ttname"><a href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d">GBTileView::paint</a></div><div class="ttdeci">void paint()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_tile_view_8cpp_source.html#l00418">GBTileView.cpp:418</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_tile_view_a0b36c27b43fea0e457a26860b2476b9d_cgraph.png" border="0" usemap="#class_g_b_tile_view_a0b36c27b43fea0e457a26860b2476b9d_cgraph" alt=""/></div>
+<map name="class_g_b_tile_view_a0b36c27b43fea0e457a26860b2476b9d_cgraph" id="class_g_b_tile_view_a0b36c27b43fea0e457a26860b2476b9d_cgraph">
+<area shape="rect" id="node2" href="class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="189,81,315,108"/>
+<area shape="rect" id="node3" href="class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="371,56,505,83"/>
+<area shape="rect" id="node7" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="363,107,513,133"/>
+<area shape="rect" id="node4" href="class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="571,5,724,32"/>
+<area shape="rect" id="node5" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="569,56,725,83"/>
+<area shape="rect" id="node6" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="561,107,733,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a765264072397d9630d2f3ae8e58c414e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a765264072397d9630d2f3ae8e58c414e">&#9670;&nbsp;</a></span>m_bank</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> GBTileView::m_bank</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a> 파일의 <a class="el" href="_g_b_tile_view_8h_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0ad19c822952ef98ced0a46d051cb87e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ad19c822952ef98ced0a46d051cb87e">&#9670;&nbsp;</a></span>m_charBase</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> GBTileView::m_charBase</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a> 파일의 <a class="el" href="_g_b_tile_view_8h_source.html#l00066">66</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ace72ce81e68876fe62cb85b09405e296"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace72ce81e68876fe62cb85b09405e296">&#9670;&nbsp;</a></span>m_slider</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSliderCtrl GBTileView::m_slider</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a> 파일의 <a class="el" href="_g_b_tile_view_8h_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="afaaee0263ecf447f8c628d0bbf1ff76f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaaee0263ecf447f8c628d0bbf1ff76f">&#9670;&nbsp;</a></span>m_stretch</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL GBTileView::m_stretch</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a> 파일의 <a class="el" href="_g_b_tile_view_8h_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a></li>
-<li>src/win32/GBTileView.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_b_tile_view_8h_source.html">GBTileView.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_b_tile_view_8cpp_source.html">GBTileView.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_g_b_tile_view.html">GBTileView</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

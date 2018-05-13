@@ -1,0 +1,18 @@
+<map id="MainWnd::winLoadFilter" name="MainWnd::winLoadFilter">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a872b497a88ca77012694cc909c62e6e4" title="MainWnd::fileOpenSelect" alt="" coords="271,56,440,83"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a576e72b77e11a1e9f92b00279023b755" title="MainWnd::OnCheatsLoadcheatlist" alt="" coords="245,107,465,133"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a460ab90b938c269df34be6d15777eb14" title="MainWnd::OnCheatsSavecheatlist" alt="" coords="245,157,465,184"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#a50801b3ffe4aa323fdd654dc56e71d32" title="MainWnd::OnFileLoad" alt="" coords="280,208,431,235"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#a962abbb99f5b6bba3f05ba043358584e" title="MainWnd::OnFileSave" alt="" coords="280,259,431,285"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#abea55fe16d21636d4c8704dd1fdfcfe9" title="MainWnd::OnFileImportBatteryfile" alt="" coords="247,309,464,336"/>
+<area shape="rect" id="node11" href="$class_main_wnd.html#a3e7abf73687cb0dbf61c3707de5e10f4" title="MainWnd::OnFileImportGamesharkcodefile" alt="" coords="220,360,491,387"/>
+<area shape="rect" id="node12" href="$class_main_wnd.html#a1ba9d10fce306e309613d8e06097219c" title="MainWnd::OnFileImportGamesharksnapshot" alt="" coords="216,411,495,437"/>
+<area shape="rect" id="node13" href="$class_main_wnd.html#a0da8957d2bcd55859914b0013c6d21f7" title="MainWnd::OnFileExportBatteryfile" alt="" coords="246,461,465,488"/>
+<area shape="rect" id="node14" href="$class_main_wnd.html#ae567674cd79ab30eb420af2f91f5688c" title="MainWnd::OnFileExportGamesharksnapshot" alt="" coords="215,512,496,539"/>
+<area shape="rect" id="node15" href="$class_main_wnd.html#a869b47c3aae70c534109b9a8310e1faf" title="MainWnd::OnFileScreencapture" alt="" coords="252,563,459,589"/>
+<area shape="rect" id="node16" href="$class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="224,614,487,655"/>
+<area shape="rect" id="node17" href="$class_main_wnd.html#a7a3ee694ccb8d2fd21066b71d93cef22" title="MainWnd::OnOptionsEmulator\lSelectbiosfile" alt="" coords="256,679,455,721"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="588,5,743,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="562,56,769,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="544,107,787,133"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structoption.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,31 +92,106 @@ $(function() {
 <div class="title">option 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="getopt_8h_source.html">getopt.h</a>&gt;</code></p>
+<div class="dynheader">
+option에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="structoption__coll__graph.png" border="0" usemap="#option_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a92c850a23c7828c1dba453bf8d15e1f0"><td class="memItemLeft" align="right" valign="top"><a id="a92c850a23c7828c1dba453bf8d15e1f0"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a92c850a23c7828c1dba453bf8d15e1f0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structoption.html#a92c850a23c7828c1dba453bf8d15e1f0">name</a></td></tr>
 <tr class="separator:a92c850a23c7828c1dba453bf8d15e1f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90d7ee9a51eea5c002682dbd0af149e4"><td class="memItemLeft" align="right" valign="top"><a id="a90d7ee9a51eea5c002682dbd0af149e4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>has_arg</b></td></tr>
+<tr class="memitem:a90d7ee9a51eea5c002682dbd0af149e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structoption.html#a90d7ee9a51eea5c002682dbd0af149e4">has_arg</a></td></tr>
 <tr class="separator:a90d7ee9a51eea5c002682dbd0af149e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab366eea5fe7be25c1928328ba715e353"><td class="memItemLeft" align="right" valign="top"><a id="ab366eea5fe7be25c1928328ba715e353"></a>
-int *&#160;</td><td class="memItemRight" valign="bottom"><b>flag</b></td></tr>
+<tr class="memitem:ab366eea5fe7be25c1928328ba715e353"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structoption.html#ab366eea5fe7be25c1928328ba715e353">flag</a></td></tr>
 <tr class="separator:ab366eea5fe7be25c1928328ba715e353"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13bd155ec3b405d29c41ab8d0793be11"><td class="memItemLeft" align="right" valign="top"><a id="a13bd155ec3b405d29c41ab8d0793be11"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>val</b></td></tr>
+<tr class="memitem:a13bd155ec3b405d29c41ab8d0793be11"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structoption.html#a13bd155ec3b405d29c41ab8d0793be11">val</a></td></tr>
 <tr class="separator:a13bd155ec3b405d29c41ab8d0793be11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="getopt_8h_source.html">getopt.h</a> 파일의 <a class="el" href="getopt_8h_source.html#l00082">82</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="ab366eea5fe7be25c1928328ba715e353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab366eea5fe7be25c1928328ba715e353">&#9670;&nbsp;</a></span>flag</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>* option::flag</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="getopt_8h_source.html">getopt.h</a> 파일의 <a class="el" href="getopt_8h_source.html#l00092">92</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a90d7ee9a51eea5c002682dbd0af149e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a90d7ee9a51eea5c002682dbd0af149e4">&#9670;&nbsp;</a></span>has_arg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> option::has_arg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="getopt_8h_source.html">getopt.h</a> 파일의 <a class="el" href="getopt_8h_source.html#l00091">91</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a92c850a23c7828c1dba453bf8d15e1f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92c850a23c7828c1dba453bf8d15e1f0">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* option::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="getopt_8h_source.html">getopt.h</a> 파일의 <a class="el" href="getopt_8h_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a13bd155ec3b405d29c41ab8d0793be11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13bd155ec3b405d29c41ab8d0793be11">&#9670;&nbsp;</a></span>val</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> option::val</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="getopt_8h_source.html">getopt.h</a> 파일의 <a class="el" href="getopt_8h_source.html#l00093">93</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/<a class="el" href="getopt_8h_source.html">getopt.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="getopt_8h_source.html">getopt.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structoption.html">option</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

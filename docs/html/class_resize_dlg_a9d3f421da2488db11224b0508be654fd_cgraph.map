@@ -1,0 +1,8 @@
+<map id="ResizeDlg::OnWndMsg" name="ResizeDlg::OnWndMsg">
+<area shape="rect" id="node2" href="$class_resize_dlg.html#ae2d0d2b44dd32f668c6d9091b14bfc00" title="ResizeDlg::UpdateWindowSize" alt="" coords="212,71,415,98"/>
+<area shape="rect" id="node6" href="$_resize_dlg_8cpp.html#a6e2db8b85e2460acfe66d5d3183d3cd7" title="RegSetValueExRecursive" alt="" coords="228,122,399,149"/>
+<area shape="rect" id="node3" href="$class_win_helper_1_1_c_defer_window_pos.html#a50e9a5dfc382996381a506d66f94efd6" title="WinHelper::CDeferWindowPos\l::DeferWindowPos" alt="" coords="463,5,661,47"/>
+<area shape="rect" id="node4" href="$_resize_dlg_8cpp.html#a1de1329cfe834f6067987ae67b4db837" title="ResizeDlgUpdateGripper" alt="" coords="480,71,644,98"/>
+<area shape="rect" id="node5" href="$_resize_dlg_8cpp.html#af86ee86600de84824a5d7b8b3aaed6e8" title="ResizeDlgUpdateGripperRect" alt="" coords="709,71,900,98"/>
+<area shape="rect" id="node7" href="$_resize_dlg_8cpp.html#a37994396c85bf7d224452b133d9e3d6f" title="regGetINIPath" alt="" coords="511,122,613,149"/>
+</map>

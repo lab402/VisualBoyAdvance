@@ -1,0 +1,14 @@
+<map id="MainWnd::OnCheatsSavecheatlist" name="MainWnd::OnCheatsSavecheatlist">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="280,5,453,32"/>
+<area shape="rect" id="node4" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="295,56,438,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="281,107,452,133"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="291,157,442,184"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a7adc4aa2a10246fa13637e9d0870843d" title="MainWnd::winLoadFilter" alt="" coords="286,208,447,235"/>
+<area shape="rect" id="node8" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="531,233,658,260"/>
+<area shape="rect" id="node9" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="306,309,427,336"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#ab71924a5be91bd6193c6ea19ddd3d483" title="MainWnd::winSaveCheatList" alt="" coords="273,360,460,387"/>
+<area shape="rect" id="node13" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="291,411,443,437"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="508,5,681,32"/>
+<area shape="rect" id="node11" href="$_cheats_8cpp.html#a516d83ca6755018dadf8d3ca0c1f24d0" title="cheatsSaveCheatList" alt="" coords="523,335,667,361"/>
+<area shape="rect" id="node12" href="$gb_cheats_8cpp.html#ab5f68ce87fbfb28074c6681a50637c0e" title="gbCheatsSaveCheatList" alt="" coords="515,385,675,412"/>
+</map>

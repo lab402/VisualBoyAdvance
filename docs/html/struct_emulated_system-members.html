@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_emulated_system.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">EmulatedSystem 멤버 목록</div>  </div>
@@ -68,26 +92,29 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>emuCleanUp</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>emuCount</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>emuHasDebugger</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>emuMain</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>emuReadBattery</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>emuReadMemState</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>emuReadState</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>emuReset</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>emuUpdateCPSR</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>emuWriteBattery</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>emuWriteBMP</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>emuWriteMemState</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>emuWritePNG</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>emuWriteState</b> (다음에서 정의됨 : <a class="el" href="struct_emulated_system.html">EmulatedSystem</a>)</td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_emulated_system.html#ad85b1185af3fdc35c666eb4d0eb1a431">emuCleanUp</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_emulated_system.html#a4241c0057d935ae757508f26be9b37ad">emuCount</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_emulated_system.html#a3c90818d1108c9f7370a388419344362">emuHasDebugger</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_emulated_system.html#a7ff4d7f593baf3463709ea72a6c4a20b">emuMain</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_emulated_system.html#a8cf069af2706aff38ac0ec1f5ae91a69">emuReadBattery</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_emulated_system.html#aeb808d20d5ba0fe3ffa5ec59c798105f">emuReadMemState</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_emulated_system.html#a1ad8780083ad23c2cbe474fc570745ea">emuReadState</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_emulated_system.html#ae79a9b5e75ec8b74ededbbaceac2d630">emuReset</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_emulated_system.html#a68f7f4e7c67eede19c75eb85ebe805c2">emuUpdateCPSR</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_emulated_system.html#a95f2eb865a1b7866d8eeeb802d36434c">emuWriteBattery</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_emulated_system.html#a3196ed548c01811a8c482294d68ec56b">emuWriteBMP</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_emulated_system.html#a91e29689742db5aa32a73c2f5698605a">emuWriteMemState</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_emulated_system.html#a741364ed335ac65cc30c6749896274bc">emuWritePNG</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_emulated_system.html#a649c6ceaabee941f263a32fa8a73a9c5">emuWriteState</a></td><td class="entry"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

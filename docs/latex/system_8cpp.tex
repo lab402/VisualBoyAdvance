@@ -1,0 +1,1134 @@
+\hypertarget{system_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gtk/system.cpp 파일 참조}
+\label{system_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gtk/system.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/gtk/system.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L.\+h$>$}\newline
+{\ttfamily \#include $<$S\+D\+L\+\_\+thread.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}../\+G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gb/\+G\+B.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../gb/gb\+Globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Sound.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}window.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}intl.\+h\char`\"{}}\newline
+system.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_v_b_a_1_1_window}{V\+B\+A\+::\+Window}} $\ast$ \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{G\+UI}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{system\+Message}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+i\+Id, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$\+\_\+cs\+Format,...)
+\item 
+void \mbox{\hyperlink{system_8cpp_a14942622916d869491ac62211b9db1b6}{system\+Draw\+Screen}} ()
+\item 
+bool \mbox{\hyperlink{system_8cpp_a24194cb2b20ad5c912f4998dffe67bc0}{system\+Read\+Joypads}} ()
+\item 
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{system_8cpp_a95200b1574e59363888f15c9e724437b}{system\+Read\+Joypad}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+void \mbox{\hyperlink{system_8cpp_a7f5b427698bb5f4198e325e22021f1a1}{system\+Show\+Speed}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+i\+Speed)
+\item 
+void \mbox{\hyperlink{system_8cpp_ac658787d3f292b27ed85ce4b4a2f9ac9}{system10\+Frames}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+i\+Rate)
+\item 
+void \mbox{\hyperlink{system_8cpp_ac40580c7050aa16b156c1f788d163101}{system\+Frame}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_a154a393a2a25c1681855dc5fe4545b68}{system\+Set\+Title}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$\+\_\+cs\+Title)
+\item 
+void \mbox{\hyperlink{system_8cpp_a986dcfd32a3d6836f2d4a1b718130d45}{system\+Screen\+Capture}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+i\+Num)
+\item 
+void \mbox{\hyperlink{system_8cpp_a7ab73f7c29f519cb0ff00210bb140eb1}{system\+Write\+Data\+To\+Sound\+Buffer}} ()
+\item 
+bool \mbox{\hyperlink{system_8cpp_a46a394ba020dc0fc499bb8481c21325b}{system\+Sound\+Init}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_ada306cd4177ec7d296668534b0c377d0}{system\+Sound\+Shutdown}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_a247faeeb98d9b2a720aa9ceec44712ee}{system\+Sound\+Pause}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_acca67094c690baad0ce9832028d0660e}{system\+Sound\+Resume}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_ae02e1ebe20b79b3e86e97ec475905fef}{system\+Sound\+Reset}} ()
+\item 
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{system_8cpp_a49fda3252b87be83c1bc235b1c217f35}{system\+Get\+Clock}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_aa9261eefa083d6e37e2f6ce4a84d882c}{system\+Update\+Motion\+Sensor}} ()
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a98be40d27b2b488b73b0344ee7a5c4a7}{system\+Get\+SensorX}} ()
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a5499890640c80f44388c4dce21d7d69a}{system\+Get\+SensorY}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_a36b528a29e75e09aa9109e51d6ce4dac}{system\+Gb\+Print}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$\+\_\+pui\+Data, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+i\+Pages, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+i\+Feed, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+i\+Palette, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \+\_\+i\+Contrast)
+\item 
+void \mbox{\hyperlink{system_8cpp_a0412545bfaba2004bf7a42d779ea5659}{system\+Screen\+Message}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$\+\_\+cs\+Msg)
+\item 
+bool \mbox{\hyperlink{system_8cpp_a98f45c601382b0dee2729693bc8720c7}{system\+Can\+Change\+Sound\+Quality}} ()
+\item 
+bool \mbox{\hyperlink{system_8cpp_a968758c207a1826b39fad6b87ea8ee53}{system\+Pause\+On\+Frame}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_acbe11d528f9aa5dca34dbcaa5866173c}{system\+Gb\+Border\+On}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_a1070cb2c9d3d47b8d468cd78d3433468}{debugger\+Main}} ()
+\item 
+void \mbox{\hyperlink{system_8cpp_a03f1aa69b417ab50a498a95738d2eeb5}{debugger\+Signal}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+void \mbox{\hyperlink{system_8cpp_a5cd254093010a9bd61a37fb61b9b7bc6}{debugger\+Output}} (char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})
+\item 
+void \mbox{\hyperlink{system_8cpp_ac188cac2d5045fda57e6c1662b33cb46}{debugger\+Break\+On\+Write}} (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} address, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} oldvalue, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} value, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}})
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a85b93b8fc1532633063574112af2de18}{system\+Red\+Shift}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{system\+Green\+Shift}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{system\+Blue\+Shift}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{system\+Color\+Depth}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_afa60dd2422feecb4839acdc9648ed783}{system\+Debug}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a67739df6b2271a8b807f01c50a610478}{system\+Verbose}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a2f706b3379eaffa6beb045c711a2102c}{system\+Save\+Update\+Counter}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_ac88aa402d015fda6917b150c22a28968}{system\+Frame\+Skip}}
+\item 
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{system_8cpp_a6b26bbc05fe4abed7788e2ad283fed11}{system\+Color\+Map32}} \mbox{[}0x10000\mbox{]}
+\item 
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{system_8cpp_a185e030efe12f16a3cdf8e461bb9163b}{system\+Color\+Map16}} \mbox{[}0x10000\mbox{]}
+\item 
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{system_8cpp_a0ba4f8654ea47591cc8a66df33d6d3c9}{system\+Gb\+Palette}} \mbox{[}24\mbox{]}
+\item 
+bool \mbox{\hyperlink{system_8cpp_a3530cb4502bfecb40d4720c1bd4d83f0}{system\+Sound\+On}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_af9cc36078b1b311753963297ae7f2a74}{emulating}}
+\item 
+bool \mbox{\hyperlink{system_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_adc95249f4e7f061627835e49b2cf5210}{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}{system\+Rendered\+Frames}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a1ab370d42d7c840823753c8d6ff0717e}{system\+F\+PS}}
+\item 
+\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_af2571bd764f2e1ed95533ea924468edd}{i\+Sound\+Samples}} = 2048
+\item 
+\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{system_8cpp_a8e85f726b9f3cb6c3c87ebd39e6c3e23}{i\+Sound\+Total\+Len}} = \mbox{\hyperlink{system_8cpp_af2571bd764f2e1ed95533ea924468edd}{i\+Sound\+Samples}} $\ast$ 4
+\item 
+void($\ast$ \mbox{\hyperlink{system_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}{dbg\+Main}} )() = \mbox{\hyperlink{debugger_8h_a1070cb2c9d3d47b8d468cd78d3433468}{debugger\+Main}}
+\item 
+void($\ast$ \mbox{\hyperlink{system_8cpp_aaa0130c668d61033a5012af849b1fead}{dbg\+Signal}} )(\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) = \mbox{\hyperlink{_test_emu_8cpp_a03f1aa69b417ab50a498a95738d2eeb5}{debugger\+Signal}}
+\item 
+void($\ast$ \mbox{\hyperlink{system_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}{dbg\+Output}} )(char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}) = \mbox{\hyperlink{_test_emu_8cpp_a5cd254093010a9bd61a37fb61b9b7bc6}{debugger\+Output}}
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{system_8cpp_ac188cac2d5045fda57e6c1662b33cb46}\label{system_8cpp_ac188cac2d5045fda57e6c1662b33cb46}} 
+\index{system.\+cpp@{system.\+cpp}!debugger\+Break\+On\+Write@{debugger\+Break\+On\+Write}}
+\index{debugger\+Break\+On\+Write@{debugger\+Break\+On\+Write}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{debugger\+Break\+On\+Write()}{debuggerBreakOnWrite()}}
+{\footnotesize\ttfamily void debugger\+Break\+On\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{address,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{oldvalue,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{value,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{size,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{t }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 341 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+342 \{
+343 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8cpp_a1070cb2c9d3d47b8d468cd78d3433468}\label{system_8cpp_a1070cb2c9d3d47b8d468cd78d3433468}} 
+\index{system.\+cpp@{system.\+cpp}!debugger\+Main@{debugger\+Main}}
+\index{debugger\+Main@{debugger\+Main}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{debugger\+Main()}{debuggerMain()}}
+{\footnotesize\ttfamily void debugger\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 329 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+330 \{
+331 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a1070cb2c9d3d47b8d468cd78d3433468_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a5cd254093010a9bd61a37fb61b9b7bc6}\label{system_8cpp_a5cd254093010a9bd61a37fb61b9b7bc6}} 
+\index{system.\+cpp@{system.\+cpp}!debugger\+Output@{debugger\+Output}}
+\index{debugger\+Output@{debugger\+Output}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{debugger\+Output()}{debuggerOutput()}}
+{\footnotesize\ttfamily void debugger\+Output (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 337 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+338 \{
+339 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8cpp_a03f1aa69b417ab50a498a95738d2eeb5}\label{system_8cpp_a03f1aa69b417ab50a498a95738d2eeb5}} 
+\index{system.\+cpp@{system.\+cpp}!debugger\+Signal@{debugger\+Signal}}
+\index{debugger\+Signal@{debugger\+Signal}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{debugger\+Signal()}{debuggerSignal()}}
+{\footnotesize\ttfamily void debugger\+Signal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 333 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+334 \{
+335 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a03f1aa69b417ab50a498a95738d2eeb5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}\label{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}} 
+\index{system.\+cpp@{system.\+cpp}!G\+UI@{G\+UI}}
+\index{G\+UI@{G\+UI}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{G\+U\+I()}{GUI()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_v_b_a_1_1_window}{V\+B\+A\+::\+Window}}$\ast$ G\+UI (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+system.\+cpp 파일의 68 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+69 \{
+70   \textcolor{keywordflow}{return} \mbox{\hyperlink{class_v_b_a_1_1_window_a8e084a0514c78b2c93013c3fb9e2e6e9}{VBA::Window::poGetInstance}}();
+71 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_ac658787d3f292b27ed85ce4b4a2f9ac9}\label{system_8cpp_ac658787d3f292b27ed85ce4b4a2f9ac9}} 
+\index{system.\+cpp@{system.\+cpp}!system10\+Frames@{system10\+Frames}}
+\index{system10\+Frames@{system10\+Frames}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system10\+Frames()}{system10Frames()}}
+{\footnotesize\ttfamily void system10\+Frames (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{\+\_\+i\+Rate }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 107 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+108 \{
+109   \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->\mbox{\hyperlink{class_v_b_a_1_1_window_abcfa3555126b7804609a8438ece3266e}{vComputeFrameskip}}(\_iRate);
+110 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_ac658787d3f292b27ed85ce4b4a2f9ac9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a98f45c601382b0dee2729693bc8720c7}\label{system_8cpp_a98f45c601382b0dee2729693bc8720c7}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Can\+Change\+Sound\+Quality@{system\+Can\+Change\+Sound\+Quality}}
+\index{system\+Can\+Change\+Sound\+Quality@{system\+Can\+Change\+Sound\+Quality}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Can\+Change\+Sound\+Quality()}{systemCanChangeSoundQuality()}}
+{\footnotesize\ttfamily bool system\+Can\+Change\+Sound\+Quality (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 315 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+316 \{
+317   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+318 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a98f45c601382b0dee2729693bc8720c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a14942622916d869491ac62211b9db1b6}\label{system_8cpp_a14942622916d869491ac62211b9db1b6}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Draw\+Screen@{system\+Draw\+Screen}}
+\index{system\+Draw\+Screen@{system\+Draw\+Screen}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Draw\+Screen()}{systemDrawScreen()}}
+{\footnotesize\ttfamily void system\+Draw\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 83 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+84 \{
+85   \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->\mbox{\hyperlink{class_v_b_a_1_1_window_af82e47600303a15b2aa4fdffb90df394}{vDrawScreen}}();
+86   \mbox{\hyperlink{system_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}{systemRenderedFrames}}++;
+87 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a14942622916d869491ac62211b9db1b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_ac40580c7050aa16b156c1f788d163101}\label{system_8cpp_ac40580c7050aa16b156c1f788d163101}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Frame@{system\+Frame}}
+\index{system\+Frame@{system\+Frame}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Frame()}{systemFrame()}}
+{\footnotesize\ttfamily void system\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 112 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+113 \{
+114 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_ac40580c7050aa16b156c1f788d163101_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_acbe11d528f9aa5dca34dbcaa5866173c}\label{system_8cpp_acbe11d528f9aa5dca34dbcaa5866173c}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Gb\+Border\+On@{system\+Gb\+Border\+On}}
+\index{system\+Gb\+Border\+On@{system\+Gb\+Border\+On}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Gb\+Border\+On()}{systemGbBorderOn()}}
+{\footnotesize\ttfamily void system\+Gb\+Border\+On (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 325 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+326 \{
+327 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_acbe11d528f9aa5dca34dbcaa5866173c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a36b528a29e75e09aa9109e51d6ce4dac}\label{system_8cpp_a36b528a29e75e09aa9109e51d6ce4dac}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Gb\+Print@{system\+Gb\+Print}}
+\index{system\+Gb\+Print@{system\+Gb\+Print}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Gb\+Print()}{systemGbPrint()}}
+{\footnotesize\ttfamily void system\+Gb\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{\+\_\+pui\+Data,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{\+\_\+i\+Pages,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{\+\_\+i\+Feed,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{\+\_\+i\+Palette,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{\+\_\+i\+Contrast }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 303 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+308 \{
+309 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a36b528a29e75e09aa9109e51d6ce4dac_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a49fda3252b87be83c1bc235b1c217f35}\label{system_8cpp_a49fda3252b87be83c1bc235b1c217f35}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Get\+Clock@{system\+Get\+Clock}}
+\index{system\+Get\+Clock@{system\+Get\+Clock}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Get\+Clock()}{systemGetClock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} system\+Get\+Clock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 284 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+285 \{
+286   \textcolor{keywordflow}{return} SDL\_GetTicks();
+287 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a49fda3252b87be83c1bc235b1c217f35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a98be40d27b2b488b73b0344ee7a5c4a7}\label{system_8cpp_a98be40d27b2b488b73b0344ee7a5c4a7}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Get\+SensorX@{system\+Get\+SensorX}}
+\index{system\+Get\+SensorX@{system\+Get\+SensorX}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Get\+Sensor\+X()}{systemGetSensorX()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Get\+SensorX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 293 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+294 \{
+295   \textcolor{keywordflow}{return} 0;
+296 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a98be40d27b2b488b73b0344ee7a5c4a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a5499890640c80f44388c4dce21d7d69a}\label{system_8cpp_a5499890640c80f44388c4dce21d7d69a}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Get\+SensorY@{system\+Get\+SensorY}}
+\index{system\+Get\+SensorY@{system\+Get\+SensorY}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Get\+Sensor\+Y()}{systemGetSensorY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Get\+SensorY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 298 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+299 \{
+300   \textcolor{keywordflow}{return} 0;
+301 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a5499890640c80f44388c4dce21d7d69a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}\label{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Message@{system\+Message}}
+\index{system\+Message@{system\+Message}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Message()}{systemMessage()}}
+{\footnotesize\ttfamily void system\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{\+\_\+i\+Id,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{\+\_\+cs\+Format,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 73 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+74 \{
+75   va\_list args;
+76   va\_start(args, \_csFormat);
+77 
+78   \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->\mbox{\hyperlink{class_v_b_a_1_1_window_a1f89a108839ea022393c56782dde0f60}{vPopupErrorV}}(\mbox{\hyperlink{getopt_8c_a86a239addea586602343007a370bf8ad}{\_}}(\_csFormat), args);
+79 
+80   va\_end(args);
+81 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8cpp_a968758c207a1826b39fad6b87ea8ee53}\label{system_8cpp_a968758c207a1826b39fad6b87ea8ee53}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Pause\+On\+Frame@{system\+Pause\+On\+Frame}}
+\index{system\+Pause\+On\+Frame@{system\+Pause\+On\+Frame}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Pause\+On\+Frame()}{systemPauseOnFrame()}}
+{\footnotesize\ttfamily bool system\+Pause\+On\+Frame (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 320 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+321 \{
+322   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+323 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{system_8cpp_a95200b1574e59363888f15c9e724437b}\label{system_8cpp_a95200b1574e59363888f15c9e724437b}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Read\+Joypad@{system\+Read\+Joypad}}
+\index{system\+Read\+Joypad@{system\+Read\+Joypad}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Read\+Joypad()}{systemReadJoypad()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} system\+Read\+Joypad (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 94 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+95 \{
+96   \textcolor{keywordflow}{return} \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->\mbox{\hyperlink{class_v_b_a_1_1_window_ad5768e6fccecbcc761de003ae915684b}{uiReadJoypad}}();
+97 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a95200b1574e59363888f15c9e724437b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a24194cb2b20ad5c912f4998dffe67bc0}\label{system_8cpp_a24194cb2b20ad5c912f4998dffe67bc0}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Read\+Joypads@{system\+Read\+Joypads}}
+\index{system\+Read\+Joypads@{system\+Read\+Joypads}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Read\+Joypads()}{systemReadJoypads()}}
+{\footnotesize\ttfamily bool system\+Read\+Joypads (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 89 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+90 \{
+91   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+92 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a24194cb2b20ad5c912f4998dffe67bc0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a986dcfd32a3d6836f2d4a1b718130d45}\label{system_8cpp_a986dcfd32a3d6836f2d4a1b718130d45}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Screen\+Capture@{system\+Screen\+Capture}}
+\index{system\+Screen\+Capture@{system\+Screen\+Capture}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Screen\+Capture()}{systemScreenCapture()}}
+{\footnotesize\ttfamily void system\+Screen\+Capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{\+\_\+i\+Num }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 121 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+122 \{
+123   \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->\mbox{\hyperlink{class_v_b_a_1_1_window_a68341ae65a5ec41c6e6269d6f579aa08}{vCaptureScreen}}(\_iNum);
+124 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a986dcfd32a3d6836f2d4a1b718130d45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a0412545bfaba2004bf7a42d779ea5659}\label{system_8cpp_a0412545bfaba2004bf7a42d779ea5659}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Screen\+Message@{system\+Screen\+Message}}
+\index{system\+Screen\+Message@{system\+Screen\+Message}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Screen\+Message()}{systemScreenMessage()}}
+{\footnotesize\ttfamily void system\+Screen\+Message (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{\+\_\+cs\+Msg }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 311 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+312 \{
+313 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a0412545bfaba2004bf7a42d779ea5659_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a154a393a2a25c1681855dc5fe4545b68}\label{system_8cpp_a154a393a2a25c1681855dc5fe4545b68}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Set\+Title@{system\+Set\+Title}}
+\index{system\+Set\+Title@{system\+Set\+Title}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Set\+Title()}{systemSetTitle()}}
+{\footnotesize\ttfamily void system\+Set\+Title (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{\+\_\+cs\+Title }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 116 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+117 \{
+118   \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->set\_title(\_csTitle);
+119 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a154a393a2a25c1681855dc5fe4545b68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a7f5b427698bb5f4198e325e22021f1a1}\label{system_8cpp_a7f5b427698bb5f4198e325e22021f1a1}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Show\+Speed@{system\+Show\+Speed}}
+\index{system\+Show\+Speed@{system\+Show\+Speed}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Show\+Speed()}{systemShowSpeed()}}
+{\footnotesize\ttfamily void system\+Show\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{\+\_\+i\+Speed }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 99 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+100 \{
+101   \mbox{\hyperlink{system_8cpp_a1ab370d42d7c840823753c8d6ff0717e}{systemFPS}} = \mbox{\hyperlink{system_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}{systemRenderedFrames}};
+102   \mbox{\hyperlink{system_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}{systemRenderedFrames}} = 0;
+103 
+104   \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->\mbox{\hyperlink{class_v_b_a_1_1_window_acf7f6aac9ae790353c5c61e7afa3515e}{vShowSpeed}}(\_iSpeed);
+105 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a7f5b427698bb5f4198e325e22021f1a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a46a394ba020dc0fc499bb8481c21325b}\label{system_8cpp_a46a394ba020dc0fc499bb8481c21325b}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Sound\+Init@{system\+Sound\+Init}}
+\index{system\+Sound\+Init@{system\+Sound\+Init}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Sound\+Init()}{systemSoundInit()}}
+{\footnotesize\ttfamily bool system\+Sound\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 208 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+209 \{
+210   SDL\_AudioSpec stAudio;
+211 
+212   \textcolor{keywordflow}{switch} (\mbox{\hyperlink{gb_sound_8cpp_aaeaa156dcc7083863fa6554b8e14854a}{soundQuality}})
+213   \{
+214   \textcolor{keywordflow}{case} 1:
+215     stAudio.freq = 44100;
+216     \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}} = 1470 * 2;
+217     \textcolor{keywordflow}{break};
+218   \textcolor{keywordflow}{case} 2:
+219     stAudio.freq = 22050;
+220     \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}} = 736 * 2;
+221     \textcolor{keywordflow}{break};
+222   \textcolor{keywordflow}{case} 4:
+223     stAudio.freq = 11025;
+224     \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}} = 368 * 2;
+225     \textcolor{keywordflow}{break};
+226   \}
+227 
+228   stAudio.format   = AUDIO\_S16SYS;
+229   stAudio.channels = 2;
+230   stAudio.samples  = \mbox{\hyperlink{system_8cpp_af2571bd764f2e1ed95533ea924468edd}{iSoundSamples}};
+231   stAudio.callback = vSoundCallback;
+232   stAudio.userdata = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+233 
+234   \textcolor{keywordflow}{if} (SDL\_OpenAudio(&stAudio, \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) < 0)
+235   \{
+236     fprintf(stderr, \textcolor{stringliteral}{"Failed to open audio: %s\(\backslash\)n"}, SDL\_GetError());
+237     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+238   \}
+239 
+240   pstSoundCond  = SDL\_CreateCond();
+241   pstSoundMutex = SDL\_CreateMutex();
+242 
+243   \mbox{\hyperlink{gb_sound_8cpp_ad35876ee81c2c65072ae9de971b907b8}{soundBufferTotalLen}} = \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}} * 10;
+244   iSoundLen = 0;
+245   \mbox{\hyperlink{system_8cpp_a3530cb4502bfecb40d4720c1bd4d83f0}{systemSoundOn}} = \textcolor{keyword}{true};
+246 
+247   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+248 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a46a394ba020dc0fc499bb8481c21325b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a247faeeb98d9b2a720aa9ceec44712ee}\label{system_8cpp_a247faeeb98d9b2a720aa9ceec44712ee}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Sound\+Pause@{system\+Sound\+Pause}}
+\index{system\+Sound\+Pause@{system\+Sound\+Pause}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Sound\+Pause()}{systemSoundPause()}}
+{\footnotesize\ttfamily void system\+Sound\+Pause (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 270 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+271 \{
+272   SDL\_PauseAudio(1);
+273 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a247faeeb98d9b2a720aa9ceec44712ee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_ae02e1ebe20b79b3e86e97ec475905fef}\label{system_8cpp_ae02e1ebe20b79b3e86e97ec475905fef}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Sound\+Reset@{system\+Sound\+Reset}}
+\index{system\+Sound\+Reset@{system\+Sound\+Reset}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Sound\+Reset()}{systemSoundReset()}}
+{\footnotesize\ttfamily void system\+Sound\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 280 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+281 \{
+282 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_ae02e1ebe20b79b3e86e97ec475905fef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_acca67094c690baad0ce9832028d0660e}\label{system_8cpp_acca67094c690baad0ce9832028d0660e}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Sound\+Resume@{system\+Sound\+Resume}}
+\index{system\+Sound\+Resume@{system\+Sound\+Resume}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Sound\+Resume()}{systemSoundResume()}}
+{\footnotesize\ttfamily void system\+Sound\+Resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 275 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+276 \{
+277   SDL\_PauseAudio(0);
+278 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_acca67094c690baad0ce9832028d0660e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_ada306cd4177ec7d296668534b0c377d0}\label{system_8cpp_ada306cd4177ec7d296668534b0c377d0}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Sound\+Shutdown@{system\+Sound\+Shutdown}}
+\index{system\+Sound\+Shutdown@{system\+Sound\+Shutdown}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Sound\+Shutdown()}{systemSoundShutdown()}}
+{\footnotesize\ttfamily void system\+Sound\+Shutdown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 250 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+251 \{
+252   SDL\_mutexP(pstSoundMutex);
+253   \textcolor{keywordtype}{int} iSave = \mbox{\hyperlink{system_8cpp_af9cc36078b1b311753963297ae7f2a74}{emulating}};
+254   \mbox{\hyperlink{system_8cpp_af9cc36078b1b311753963297ae7f2a74}{emulating}} = 0;
+255   SDL\_CondSignal(pstSoundCond);
+256   SDL\_mutexV(pstSoundMutex);
+257 
+258   SDL\_DestroyCond(pstSoundCond);
+259   pstSoundCond = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+260 
+261   SDL\_DestroyMutex(pstSoundMutex);
+262   pstSoundMutex = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+263 
+264   SDL\_CloseAudio();
+265 
+266   \mbox{\hyperlink{system_8cpp_af9cc36078b1b311753963297ae7f2a74}{emulating}} = iSave;
+267   \mbox{\hyperlink{system_8cpp_a3530cb4502bfecb40d4720c1bd4d83f0}{systemSoundOn}} = \textcolor{keyword}{false};
+268 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_ada306cd4177ec7d296668534b0c377d0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_aa9261eefa083d6e37e2f6ce4a84d882c}\label{system_8cpp_aa9261eefa083d6e37e2f6ce4a84d882c}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Update\+Motion\+Sensor@{system\+Update\+Motion\+Sensor}}
+\index{system\+Update\+Motion\+Sensor@{system\+Update\+Motion\+Sensor}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Update\+Motion\+Sensor()}{systemUpdateMotionSensor()}}
+{\footnotesize\ttfamily void system\+Update\+Motion\+Sensor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 289 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+290 \{
+291 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_aa9261eefa083d6e37e2f6ce4a84d882c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{system_8cpp_a7ab73f7c29f519cb0ff00210bb140eb1}\label{system_8cpp_a7ab73f7c29f519cb0ff00210bb140eb1}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Write\+Data\+To\+Sound\+Buffer@{system\+Write\+Data\+To\+Sound\+Buffer}}
+\index{system\+Write\+Data\+To\+Sound\+Buffer@{system\+Write\+Data\+To\+Sound\+Buffer}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Write\+Data\+To\+Sound\+Buffer()}{systemWriteDataToSoundBuffer()}}
+{\footnotesize\ttfamily void system\+Write\+Data\+To\+Sound\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+system.\+cpp 파일의 126 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+127 \{
+128   \textcolor{keywordflow}{if} (SDL\_GetAudioStatus() != SDL\_AUDIO\_PLAYING)
+129   \{
+130     SDL\_PauseAudio(0);
+131   \}
+132 
+133   \textcolor{keywordtype}{bool} bWait = \textcolor{keyword}{true};
+134   \textcolor{keywordflow}{while} (bWait && ! \mbox{\hyperlink{_g_b_8cpp_a20b0a3180ffba5989d1414a438ea11dc}{speedup}} && \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->iGetThrottle() == 0)
+135   \{
+136     SDL\_mutexP(pstSoundMutex);
+137     \textcolor{keywordflow}{if} (iSoundLen < \mbox{\hyperlink{system_8cpp_a8e85f726b9f3cb6c3c87ebd39e6c3e23}{iSoundTotalLen}})
+138     \{
+139       bWait = \textcolor{keyword}{false};
+140     \}
+141     SDL\_mutexV(pstSoundMutex);
+142   \}
+143 
+144   \textcolor{keywordtype}{int} iLen = \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}};
+145   \textcolor{keywordtype}{int} iCopied = 0;
+146   \textcolor{keywordflow}{if} (iSoundLen + iLen >= \mbox{\hyperlink{system_8cpp_a8e85f726b9f3cb6c3c87ebd39e6c3e23}{iSoundTotalLen}})
+147   \{
+148     iCopied = \mbox{\hyperlink{system_8cpp_a8e85f726b9f3cb6c3c87ebd39e6c3e23}{iSoundTotalLen}} - iSoundLen;
+149     memcpy(&auiSoundBuffer[iSoundLen], \mbox{\hyperlink{gb_sound_8cpp_aaaeebaacfff2cb98c4e68a6f89c1c8fc}{soundFinalWave}}, iCopied);
+150 
+151     iSoundLen = \mbox{\hyperlink{system_8cpp_a8e85f726b9f3cb6c3c87ebd39e6c3e23}{iSoundTotalLen}};
+152     SDL\_CondSignal(pstSoundCond);
+153 
+154     bWait = \textcolor{keyword}{true};
+155     \textcolor{keywordflow}{if} (! \mbox{\hyperlink{_g_b_8cpp_a20b0a3180ffba5989d1414a438ea11dc}{speedup}} && \mbox{\hyperlink{system_8cpp_aab0541660bed0f14fdc8e9ccf6e08d53}{GUI}}()->iGetThrottle() == 0)
+156     \{
+157       \textcolor{keywordflow}{while}(bWait)
+158       \{
+159         SDL\_mutexP(pstSoundMutex);
+160         \textcolor{keywordflow}{if} (iSoundLen < \mbox{\hyperlink{system_8cpp_a8e85f726b9f3cb6c3c87ebd39e6c3e23}{iSoundTotalLen}})
+161         \{
+162           bWait = \textcolor{keyword}{false};
+163         \}
+164         SDL\_mutexV(pstSoundMutex);
+165       \}
+166 
+167       memcpy(auiSoundBuffer, ((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)\mbox{\hyperlink{gb_sound_8cpp_aaaeebaacfff2cb98c4e68a6f89c1c8fc}{soundFinalWave}}) + iCopied,
+168              \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}} - iCopied);
+169 
+170       iSoundLen = \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}} - iCopied;
+171     \}
+172     \textcolor{keywordflow}{else}
+173     \{
+174       memcpy(auiSoundBuffer, ((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)\mbox{\hyperlink{gb_sound_8cpp_aaaeebaacfff2cb98c4e68a6f89c1c8fc}{soundFinalWave}}) + iCopied,
+175              \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}});
+176     \}
+177   \}
+178   \textcolor{keywordflow}{else}
+179   \{
+180     memcpy(&auiSoundBuffer[iSoundLen], \mbox{\hyperlink{gb_sound_8cpp_aaaeebaacfff2cb98c4e68a6f89c1c8fc}{soundFinalWave}}, 
+      \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}});
+181     iSoundLen += \mbox{\hyperlink{gb_sound_8cpp_aae9aa4cd368679872bfcb1d851f33019}{soundBufferLen}};
+182   \}
+183 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{system_8cpp_a7ab73f7c29f519cb0ff00210bb140eb1_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{system_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}\label{system_8cpp_a2a73601d4d24ff6d902f4e6b4c7b06fe}} 
+\index{system.\+cpp@{system.\+cpp}!dbg\+Main@{dbg\+Main}}
+\index{dbg\+Main@{dbg\+Main}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{dbg\+Main}{dbgMain}}
+{\footnotesize\ttfamily void($\ast$ dbg\+Main) () = \mbox{\hyperlink{debugger_8h_a1070cb2c9d3d47b8d468cd78d3433468}{debugger\+Main}}}
+
+
+
+system.\+cpp 파일의 345 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}\label{system_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}} 
+\index{system.\+cpp@{system.\+cpp}!dbg\+Output@{dbg\+Output}}
+\index{dbg\+Output@{dbg\+Output}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{dbg\+Output}{dbgOutput}}
+{\footnotesize\ttfamily void($\ast$ dbg\+Output) (char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}) = \mbox{\hyperlink{_test_emu_8cpp_a5cd254093010a9bd61a37fb61b9b7bc6}{debugger\+Output}}}
+
+
+
+system.\+cpp 파일의 347 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_aaa0130c668d61033a5012af849b1fead}\label{system_8cpp_aaa0130c668d61033a5012af849b1fead}} 
+\index{system.\+cpp@{system.\+cpp}!dbg\+Signal@{dbg\+Signal}}
+\index{dbg\+Signal@{dbg\+Signal}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{dbg\+Signal}{dbgSignal}}
+{\footnotesize\ttfamily void($\ast$ dbg\+Signal) (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}) = \mbox{\hyperlink{_test_emu_8cpp_a03f1aa69b417ab50a498a95738d2eeb5}{debugger\+Signal}}}
+
+
+
+system.\+cpp 파일의 346 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_af67e2df4c66ef114f4edb85c06810007}\label{system_8cpp_af67e2df4c66ef114f4edb85c06810007}} 
+\index{system.\+cpp@{system.\+cpp}!debugger@{debugger}}
+\index{debugger@{debugger}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{debugger}{debugger}}
+{\footnotesize\ttfamily bool debugger}
+
+
+
+system.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_af9cc36078b1b311753963297ae7f2a74}\label{system_8cpp_af9cc36078b1b311753963297ae7f2a74}} 
+\index{system.\+cpp@{system.\+cpp}!emulating@{emulating}}
+\index{emulating@{emulating}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{emulating}{emulating}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} emulating}
+
+
+
+system.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_af2571bd764f2e1ed95533ea924468edd}\label{system_8cpp_af2571bd764f2e1ed95533ea924468edd}} 
+\index{system.\+cpp@{system.\+cpp}!i\+Sound\+Samples@{i\+Sound\+Samples}}
+\index{i\+Sound\+Samples@{i\+Sound\+Samples}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{i\+Sound\+Samples}{iSoundSamples}}
+{\footnotesize\ttfamily \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} i\+Sound\+Samples = 2048}
+
+
+
+system.\+cpp 파일의 61 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a8e85f726b9f3cb6c3c87ebd39e6c3e23}\label{system_8cpp_a8e85f726b9f3cb6c3c87ebd39e6c3e23}} 
+\index{system.\+cpp@{system.\+cpp}!i\+Sound\+Total\+Len@{i\+Sound\+Total\+Len}}
+\index{i\+Sound\+Total\+Len@{i\+Sound\+Total\+Len}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{i\+Sound\+Total\+Len}{iSoundTotalLen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} i\+Sound\+Total\+Len = \mbox{\hyperlink{system_8cpp_af2571bd764f2e1ed95533ea924468edd}{i\+Sound\+Samples}} $\ast$ 4}
+
+
+
+system.\+cpp 파일의 62 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_adc95249f4e7f061627835e49b2cf5210}\label{system_8cpp_adc95249f4e7f061627835e49b2cf5210}} 
+\index{system.\+cpp@{system.\+cpp}!R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK@{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}}
+\index{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK@{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}{RGB\_LOW\_BITS\_MASK}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} R\+G\+B\+\_\+\+L\+O\+W\+\_\+\+B\+I\+T\+S\+\_\+\+M\+A\+SK}
+
+
+
+system.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}\label{system_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Blue\+Shift@{system\+Blue\+Shift}}
+\index{system\+Blue\+Shift@{system\+Blue\+Shift}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Blue\+Shift}{systemBlueShift}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Blue\+Shift}
+
+
+
+system.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}\label{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Color\+Depth@{system\+Color\+Depth}}
+\index{system\+Color\+Depth@{system\+Color\+Depth}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Color\+Depth}{systemColorDepth}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Color\+Depth}
+
+
+
+system.\+cpp 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a185e030efe12f16a3cdf8e461bb9163b}\label{system_8cpp_a185e030efe12f16a3cdf8e461bb9163b}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Color\+Map16@{system\+Color\+Map16}}
+\index{system\+Color\+Map16@{system\+Color\+Map16}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Color\+Map16}{systemColorMap16}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} system\+Color\+Map16\mbox{[}0x10000\mbox{]}}
+
+
+
+system.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a6b26bbc05fe4abed7788e2ad283fed11}\label{system_8cpp_a6b26bbc05fe4abed7788e2ad283fed11}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Color\+Map32@{system\+Color\+Map32}}
+\index{system\+Color\+Map32@{system\+Color\+Map32}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Color\+Map32}{systemColorMap32}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} system\+Color\+Map32\mbox{[}0x10000\mbox{]}}
+
+
+
+system.\+cpp 파일의 45 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_afa60dd2422feecb4839acdc9648ed783}\label{system_8cpp_afa60dd2422feecb4839acdc9648ed783}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Debug@{system\+Debug}}
+\index{system\+Debug@{system\+Debug}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Debug}{systemDebug}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Debug}
+
+
+
+system.\+cpp 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a1ab370d42d7c840823753c8d6ff0717e}\label{system_8cpp_a1ab370d42d7c840823753c8d6ff0717e}} 
+\index{system.\+cpp@{system.\+cpp}!system\+F\+PS@{system\+F\+PS}}
+\index{system\+F\+PS@{system\+F\+PS}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+F\+PS}{systemFPS}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+F\+PS}
+
+
+
+system.\+cpp 파일의 57 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_ac88aa402d015fda6917b150c22a28968}\label{system_8cpp_ac88aa402d015fda6917b150c22a28968}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Frame\+Skip@{system\+Frame\+Skip}}
+\index{system\+Frame\+Skip@{system\+Frame\+Skip}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Frame\+Skip}{systemFrameSkip}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Frame\+Skip}
+
+
+
+system.\+cpp 파일의 44 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a0ba4f8654ea47591cc8a66df33d6d3c9}\label{system_8cpp_a0ba4f8654ea47591cc8a66df33d6d3c9}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Gb\+Palette@{system\+Gb\+Palette}}
+\index{system\+Gb\+Palette@{system\+Gb\+Palette}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Gb\+Palette}{systemGbPalette}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} system\+Gb\+Palette\mbox{[}24\mbox{]}}
+
+
+
+system.\+cpp 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}\label{system_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Green\+Shift@{system\+Green\+Shift}}
+\index{system\+Green\+Shift@{system\+Green\+Shift}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Green\+Shift}{systemGreenShift}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Green\+Shift}
+
+
+
+system.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a85b93b8fc1532633063574112af2de18}\label{system_8cpp_a85b93b8fc1532633063574112af2de18}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Red\+Shift@{system\+Red\+Shift}}
+\index{system\+Red\+Shift@{system\+Red\+Shift}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Red\+Shift}{systemRedShift}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Red\+Shift}
+
+
+
+system.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}\label{system_8cpp_a204ef1a289cd5589d3a0afeafd2694eb}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Rendered\+Frames@{system\+Rendered\+Frames}}
+\index{system\+Rendered\+Frames@{system\+Rendered\+Frames}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Rendered\+Frames}{systemRenderedFrames}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Rendered\+Frames}
+
+
+
+system.\+cpp 파일의 56 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a2f706b3379eaffa6beb045c711a2102c}\label{system_8cpp_a2f706b3379eaffa6beb045c711a2102c}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Save\+Update\+Counter@{system\+Save\+Update\+Counter}}
+\index{system\+Save\+Update\+Counter@{system\+Save\+Update\+Counter}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Save\+Update\+Counter}{systemSaveUpdateCounter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Save\+Update\+Counter}
+
+
+
+system.\+cpp 파일의 43 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a3530cb4502bfecb40d4720c1bd4d83f0}\label{system_8cpp_a3530cb4502bfecb40d4720c1bd4d83f0}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Sound\+On@{system\+Sound\+On}}
+\index{system\+Sound\+On@{system\+Sound\+On}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Sound\+On}{systemSoundOn}}
+{\footnotesize\ttfamily bool system\+Sound\+On}
+
+
+
+system.\+cpp 파일의 48 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{system_8cpp_a67739df6b2271a8b807f01c50a610478}\label{system_8cpp_a67739df6b2271a8b807f01c50a610478}} 
+\index{system.\+cpp@{system.\+cpp}!system\+Verbose@{system\+Verbose}}
+\index{system\+Verbose@{system\+Verbose}!system.\+cpp@{system.\+cpp}}
+\subsubsection{\texorpdfstring{system\+Verbose}{systemVerbose}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} system\+Verbose}
+
+
+
+system.\+cpp 파일의 42 번째 라인에서 정의되었습니다.
+

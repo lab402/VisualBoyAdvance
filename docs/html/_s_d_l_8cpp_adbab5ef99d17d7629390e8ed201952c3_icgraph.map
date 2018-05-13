@@ -1,0 +1,8 @@
+<map id="systemScreenMessage" name="systemScreenMessage">
+<area shape="rect" id="node2" href="$_s_d_l_8cpp.html#a50d948bf474caba7bfedd641bd5f4e2c" title="sdlWriteState" alt="" coords="237,5,338,32"/>
+<area shape="rect" id="node3" href="$_s_d_l_8cpp.html#a915c860581a6f2a7fa3f0d3ae784e21c" title="sdlReadState" alt="" coords="237,56,337,83"/>
+<area shape="rect" id="node4" href="$_s_d_l_8cpp.html#ac8c8abc99e2caff7181e0a355ae50d1b" title="sdlWriteBattery" alt="" coords="231,107,343,133"/>
+<area shape="rect" id="node5" href="$_s_d_l_8cpp.html#a3aa71ec750df4608f6afc4bdeff955b0" title="sdlReadBattery" alt="" coords="232,157,343,184"/>
+<area shape="rect" id="node6" href="$_s_d_l_8cpp.html#a04a498e69a02118c023da5fb46dd3bb9" title="sdlPollEvents" alt="" coords="237,208,337,235"/>
+<area shape="rect" id="node7" href="$_s_d_l_8cpp.html#ab3f1069dac144485748c3c01c336f239" title="systemScreenCapture" alt="" coords="212,259,363,285"/>
+</map>

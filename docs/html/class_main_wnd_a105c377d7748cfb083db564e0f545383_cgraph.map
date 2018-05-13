@@ -1,0 +1,5 @@
+<map id="MainWnd::OnUpdateFileRecentFreeze" name="MainWnd::OnUpdateFileRecentFreeze">
+<area shape="rect" id="node2" href="$class_c_accelerator_manager.html#ac7411d20f413ea0ec3bd65705b564adf" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="259,35,405,76"/>
+<area shape="rect" id="node3" href="$class_c_accelerator_manager.html#ac854ec5263a7bab961bf63aec3938984" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="455,5,602,47"/>
+<area shape="rect" id="node4" href="$class_c_accels_ob.html#afaf7510fa1e0707863f6bd469f190de6" title="CAccelsOb::GetString" alt="" coords="453,71,604,98"/>
+</map>

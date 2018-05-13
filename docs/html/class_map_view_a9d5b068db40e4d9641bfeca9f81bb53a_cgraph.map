@@ -1,0 +1,5 @@
+<map id="MapView::OnMapInfo" name="MapView::OnMapInfo">
+<area shape="rect" id="node2" href="$class_zoom_control.html#a97501cc16d3068eefa1b5d9d23e9d0d9" title="ZoomControl::setColors" alt="" coords="210,5,369,32"/>
+<area shape="rect" id="node3" href="$class_map_view.html#ad05aa1227f5a62d8e9477eeeec37115c" title="MapView::GetClickAddress" alt="" coords="199,56,380,83"/>
+<area shape="rect" id="node4" href="$class_map_view.html#a30bef411235a6b8666f34991c2b90619" title="MapView::GetTextClickAddress" alt="" coords="428,56,635,83"/>
+</map>

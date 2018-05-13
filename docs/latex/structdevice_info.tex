@@ -1,51 +1,201 @@
 \hypertarget{structdevice_info}{}\section{device\+Info 구조체 참조}
 \label{structdevice_info}\index{device\+Info@{device\+Info}}
+
+
+device\+Info에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{structdevice_info__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{structdevice_info_a4e2b017b67b850eb267097f95776273f}\label{structdevice_info_a4e2b017b67b850eb267097f95776273f}} 
-L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T\+D\+E\+V\+I\+C\+E8 {\bfseries device}
+L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T\+D\+E\+V\+I\+C\+E8 \mbox{\hyperlink{structdevice_info_a4e2b017b67b850eb267097f95776273f}{device}}
 \item 
-\mbox{\Hypertarget{structdevice_info_a405fccb036e90884fb822c59433c2490}\label{structdevice_info_a405fccb036e90884fb822c59433c2490}} 
-B\+O\+OL {\bfseries is\+Polled}
+B\+O\+OL \mbox{\hyperlink{structdevice_info_a405fccb036e90884fb822c59433c2490}{is\+Polled}}
 \item 
-\mbox{\Hypertarget{structdevice_info_ad88fd10c7065c35ea68687b9871ebed0}\label{structdevice_info_ad88fd10c7065c35ea68687b9871ebed0}} 
-int {\bfseries n\+Buttons}
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{structdevice_info_ad88fd10c7065c35ea68687b9871ebed0}{n\+Buttons}}
 \item 
-\mbox{\Hypertarget{structdevice_info_a5ceef6ccdfa5c12661b77e036ba91682}\label{structdevice_info_a5ceef6ccdfa5c12661b77e036ba91682}} 
-int {\bfseries n\+Axes}
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{structdevice_info_a5ceef6ccdfa5c12661b77e036ba91682}{n\+Axes}}
 \item 
-\mbox{\Hypertarget{structdevice_info_a5554d019728b7dace75256a64411417c}\label{structdevice_info_a5554d019728b7dace75256a64411417c}} 
-int {\bfseries n\+Povs}
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{structdevice_info_a5554d019728b7dace75256a64411417c}{n\+Povs}}
 \item 
-\mbox{\Hypertarget{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}\label{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}} 
-B\+O\+OL {\bfseries first}
+B\+O\+OL \mbox{\hyperlink{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}{first}}
 \item 
-\mbox{\Hypertarget{structdevice_info_aa3139c27b267c0ec8b6f4d96629ee0e2}\label{structdevice_info_aa3139c27b267c0ec8b6f4d96629ee0e2}} 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 struct \{\\
-\>DWORD {\bfseries offset}\\
-\>LONG {\bfseries center}\\
-\>LONG {\bfseries negative}\\
-\>LONG {\bfseries positive}\\
-\} {\bfseries axis} \mbox{[}8\mbox{]}\\
+\>DWORD \mbox{\hyperlink{structdevice_info_a224f64e679eb41aa2c894856d693d57d}{offset}}\\
+\>LONG \mbox{\hyperlink{structdevice_info_a06a2e7b32ae7d9ca107f65b56920da72}{center}}\\
+\>LONG \mbox{\hyperlink{structdevice_info_a8131c05a7b3332b266af2aa8f2e6528a}{negative}}\\
+\>LONG \mbox{\hyperlink{structdevice_info_ae4cfa5b3fb76573fdf1e3936373ae47a}{positive}}\\
+\} \mbox{\hyperlink{structdevice_info_aa3139c27b267c0ec8b6f4d96629ee0e2}{axis}} \mbox{[}8\mbox{]}\\
 
 \end{tabbing}\item 
-\mbox{\Hypertarget{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}\label{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}} 
-int {\bfseries needed}
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}{needed}}
 \item 
-\mbox{\Hypertarget{structdevice_info_a44f2f54c2a9ac5917b0bb1dce46b15aa}\label{structdevice_info_a44f2f54c2a9ac5917b0bb1dce46b15aa}} 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 union \{\\
-\>UCHAR {\bfseries data} \mbox{[}256\mbox{]}\\
-\>DIJOYSTATE {\bfseries state}\\
+\>UCHAR \mbox{\hyperlink{structdevice_info_a24db93457c0c8b0c0461e3db1c55ad48}{data}} \mbox{[}256\mbox{]}\\
+\>DIJOYSTATE \mbox{\hyperlink{structdevice_info_a32e5855cac9794767be03c67be242c01}{state}}\\
 \}; \\
 
 \end{tabbing}\end{DoxyCompactItemize}
 
 
+\subsection{상세한 설명}
+
+
+Direct\+Input.\+cpp 파일의 66 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{structdevice_info_a44f2f54c2a9ac5917b0bb1dce46b15aa}\label{structdevice_info_a44f2f54c2a9ac5917b0bb1dce46b15aa}} 
+\subsubsection{\texorpdfstring{"@19}{@19}}
+{\footnotesize\ttfamily union \{ ... \} }
+
+\mbox{\Hypertarget{structdevice_info_aa3139c27b267c0ec8b6f4d96629ee0e2}\label{structdevice_info_aa3139c27b267c0ec8b6f4d96629ee0e2}} 
+\index{device\+Info@{device\+Info}!axis@{axis}}
+\index{axis@{axis}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{axis}{axis}}
+{\footnotesize\ttfamily struct \{ ... \}   device\+Info\+::axis\mbox{[}8\mbox{]}}
+
+\mbox{\Hypertarget{structdevice_info_a06a2e7b32ae7d9ca107f65b56920da72}\label{structdevice_info_a06a2e7b32ae7d9ca107f65b56920da72}} 
+\index{device\+Info@{device\+Info}!center@{center}}
+\index{center@{center}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{center}{center}}
+{\footnotesize\ttfamily L\+O\+NG device\+Info\+::center}
+
+
+
+Direct\+Input.\+cpp 파일의 75 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a24db93457c0c8b0c0461e3db1c55ad48}\label{structdevice_info_a24db93457c0c8b0c0461e3db1c55ad48}} 
+\index{device\+Info@{device\+Info}!data@{data}}
+\index{data@{data}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily U\+C\+H\+AR device\+Info\+::data\mbox{[}256\mbox{]}}
+
+
+
+Direct\+Input.\+cpp 파일의 81 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a4e2b017b67b850eb267097f95776273f}\label{structdevice_info_a4e2b017b67b850eb267097f95776273f}} 
+\index{device\+Info@{device\+Info}!device@{device}}
+\index{device@{device}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{device}{device}}
+{\footnotesize\ttfamily L\+P\+D\+I\+R\+E\+C\+T\+I\+N\+P\+U\+T\+D\+E\+V\+I\+C\+E8 device\+Info\+::device}
+
+
+
+Direct\+Input.\+cpp 파일의 67 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}\label{structdevice_info_a0bc40134953f30c68ccf0d2d69e67f17}} 
+\index{device\+Info@{device\+Info}!first@{first}}
+\index{first@{first}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{first}{first}}
+{\footnotesize\ttfamily B\+O\+OL device\+Info\+::first}
+
+
+
+Direct\+Input.\+cpp 파일의 72 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a405fccb036e90884fb822c59433c2490}\label{structdevice_info_a405fccb036e90884fb822c59433c2490}} 
+\index{device\+Info@{device\+Info}!is\+Polled@{is\+Polled}}
+\index{is\+Polled@{is\+Polled}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{is\+Polled}{isPolled}}
+{\footnotesize\ttfamily B\+O\+OL device\+Info\+::is\+Polled}
+
+
+
+Direct\+Input.\+cpp 파일의 68 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a5ceef6ccdfa5c12661b77e036ba91682}\label{structdevice_info_a5ceef6ccdfa5c12661b77e036ba91682}} 
+\index{device\+Info@{device\+Info}!n\+Axes@{n\+Axes}}
+\index{n\+Axes@{n\+Axes}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{n\+Axes}{nAxes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} device\+Info\+::n\+Axes}
+
+
+
+Direct\+Input.\+cpp 파일의 70 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_ad88fd10c7065c35ea68687b9871ebed0}\label{structdevice_info_ad88fd10c7065c35ea68687b9871ebed0}} 
+\index{device\+Info@{device\+Info}!n\+Buttons@{n\+Buttons}}
+\index{n\+Buttons@{n\+Buttons}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{n\+Buttons}{nButtons}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} device\+Info\+::n\+Buttons}
+
+
+
+Direct\+Input.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}\label{structdevice_info_a3e85cef35fcad73f9f5fcd75a627ec80}} 
+\index{device\+Info@{device\+Info}!needed@{needed}}
+\index{needed@{needed}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{needed}{needed}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} device\+Info\+::needed}
+
+
+
+Direct\+Input.\+cpp 파일의 79 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a8131c05a7b3332b266af2aa8f2e6528a}\label{structdevice_info_a8131c05a7b3332b266af2aa8f2e6528a}} 
+\index{device\+Info@{device\+Info}!negative@{negative}}
+\index{negative@{negative}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{negative}{negative}}
+{\footnotesize\ttfamily L\+O\+NG device\+Info\+::negative}
+
+
+
+Direct\+Input.\+cpp 파일의 76 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a5554d019728b7dace75256a64411417c}\label{structdevice_info_a5554d019728b7dace75256a64411417c}} 
+\index{device\+Info@{device\+Info}!n\+Povs@{n\+Povs}}
+\index{n\+Povs@{n\+Povs}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{n\+Povs}{nPovs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} device\+Info\+::n\+Povs}
+
+
+
+Direct\+Input.\+cpp 파일의 71 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a224f64e679eb41aa2c894856d693d57d}\label{structdevice_info_a224f64e679eb41aa2c894856d693d57d}} 
+\index{device\+Info@{device\+Info}!offset@{offset}}
+\index{offset@{offset}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{offset}{offset}}
+{\footnotesize\ttfamily D\+W\+O\+RD device\+Info\+::offset}
+
+
+
+Direct\+Input.\+cpp 파일의 74 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_ae4cfa5b3fb76573fdf1e3936373ae47a}\label{structdevice_info_ae4cfa5b3fb76573fdf1e3936373ae47a}} 
+\index{device\+Info@{device\+Info}!positive@{positive}}
+\index{positive@{positive}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{positive}{positive}}
+{\footnotesize\ttfamily L\+O\+NG device\+Info\+::positive}
+
+
+
+Direct\+Input.\+cpp 파일의 77 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{structdevice_info_a32e5855cac9794767be03c67be242c01}\label{structdevice_info_a32e5855cac9794767be03c67be242c01}} 
+\index{device\+Info@{device\+Info}!state@{state}}
+\index{state@{state}!device\+Info@{device\+Info}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily D\+I\+J\+O\+Y\+S\+T\+A\+TE device\+Info\+::state}
+
+
+
+Direct\+Input.\+cpp 파일의 82 번째 라인에서 정의되었습니다.
+
+
+
 이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/win32/Direct\+Input.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{_direct_input_8cpp}{Direct\+Input.\+cpp}}\end{DoxyCompactItemize}

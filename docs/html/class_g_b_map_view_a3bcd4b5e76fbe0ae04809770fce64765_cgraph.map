@@ -1,0 +1,16 @@
+<map id="GBMapView::OnInitDialog" name="GBMapView::OnInitDialog">
+<area shape="rect" id="node2" href="$class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5" title="ResizeDlg::SetData" alt="" coords="243,107,379,133"/>
+<area shape="rect" id="node9" href="$_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3" title="regQueryDwordValue" alt="" coords="239,157,383,184"/>
+<area shape="rect" id="node10" href="$class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812" title="BitmapControl::setStretch" alt="" coords="225,208,397,235"/>
+<area shape="rect" id="node11" href="$class_g_b_map_view.html#a42de669273417186b01ca6f8d06eb347" title="GBMapView::paint" alt="" coords="246,259,377,285"/>
+<area shape="rect" id="node3" href="$class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc" title="ResizeDlg::AddDialogData" alt="" coords="451,5,625,32"/>
+<area shape="rect" id="node5" href="$_resize_dlg_8cpp.html#a42fd95f9181ab52619b7bd3e5d51475b" title="ResizeDlgGetItemCount" alt="" coords="457,56,619,83"/>
+<area shape="rect" id="node6" href="$_resize_dlg_8cpp.html#ad4ba4376f50f357ac88b0fd3bfeb1a19" title="ResizeDlgCopyItems" alt="" coords="467,107,609,133"/>
+<area shape="rect" id="node7" href="$_resize_dlg_8cpp.html#a74702acf423eaa66851bd656c737b6ba" title="RegQueryValueExRecursive" alt="" coords="445,157,631,184"/>
+<area shape="rect" id="node4" href="$_resize_dlg_8cpp.html#af86ee86600de84824a5d7b8b3aaed6e8" title="ResizeDlgUpdateGripperRect" alt="" coords="679,5,869,32"/>
+<area shape="rect" id="node8" href="$_resize_dlg_8cpp.html#a37994396c85bf7d224452b133d9e3d6f" title="regGetINIPath" alt="" coords="723,157,825,184"/>
+<area shape="rect" id="node12" href="$class_g_b_map_view.html#a48aeac68f689682206749e933513b98e" title="GBMapView::render" alt="" coords="469,208,607,235"/>
+<area shape="rect" id="node13" href="$class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="452,259,624,285"/>
+<area shape="rect" id="node14" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="460,309,616,336"/>
+<area shape="rect" id="node15" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="463,360,613,387"/>
+</map>

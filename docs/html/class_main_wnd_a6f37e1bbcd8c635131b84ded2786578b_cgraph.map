@@ -1,0 +1,7 @@
+<map id="MainWnd::readBatteryFile" name="MainWnd::readBatteryFile">
+<area shape="rect" id="node2" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="241,5,383,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="227,56,397,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="237,107,387,133"/>
+<area shape="rect" id="node5" href="$system_8cpp.html#a0412545bfaba2004bf7a42d779ea5659" title="systemScreenMessage" alt="" coords="233,157,391,184"/>
+<area shape="rect" id="node6" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="249,208,375,235"/>
+</map>

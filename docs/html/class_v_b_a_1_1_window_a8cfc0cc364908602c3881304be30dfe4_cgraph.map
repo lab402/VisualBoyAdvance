@@ -1,0 +1,5 @@
+<map id="VBA::Window::vOnFilePauseToggled" name="VBA::Window::vOnFilePauseToggled">
+<area shape="rect" id="node2" href="$_sound_8cpp.html#a0716e7957671de324eeaa4ac1729d6b7" title="soundPause" alt="" coords="249,5,344,32"/>
+<area shape="rect" id="node4" href="$gb_sound_8cpp.html#af13240822604abd91b4e2370062f195e" title="soundResume" alt="" coords="244,56,349,83"/>
+<area shape="rect" id="node3" href="$system_8cpp.html#a247faeeb98d9b2a720aa9ceec44712ee" title="systemSoundPause" alt="" coords="397,5,536,32"/>
+</map>

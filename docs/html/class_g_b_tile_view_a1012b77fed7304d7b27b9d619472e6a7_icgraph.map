@@ -1,0 +1,11 @@
+<map id="GBTileView::render" name="GBTileView::render">
+<area shape="rect" id="node2" href="$class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="187,183,312,209"/>
+<area shape="rect" id="node3" href="$class_g_b_tile_view.html#a0b36c27b43fea0e457a26860b2476b9d" title="GBTileView::update" alt="" coords="380,5,516,32"/>
+<area shape="rect" id="node4" href="$class_g_b_tile_view.html#a4d97fe7dcfd863756d993834548d2ca6" title="GBTileView::OnInitDialog" alt="" coords="365,56,531,83"/>
+<area shape="rect" id="node5" href="$class_g_b_tile_view.html#afb45c55e706bed1468f547510490fa2a" title="GBTileView::OnCharbase0" alt="" coords="360,107,536,133"/>
+<area shape="rect" id="node6" href="$class_g_b_tile_view.html#a9d5c6de9e7d359cf221b164f51cb6a18" title="GBTileView::OnCharbase1" alt="" coords="360,157,536,184"/>
+<area shape="rect" id="node7" href="$class_g_b_tile_view.html#a35e281e40e9fd8867f04a01595f54ef2" title="GBTileView::OnBank0" alt="" coords="373,208,523,235"/>
+<area shape="rect" id="node8" href="$class_g_b_tile_view.html#a5c1db6a1066d8e37b743ca2407652b7d" title="GBTileView::OnBank1" alt="" coords="373,259,523,285"/>
+<area shape="rect" id="node9" href="$class_g_b_tile_view.html#a7386c9ed9651610461d4342ebd492bf9" title="GBTileView::OnStretch" alt="" coords="370,309,526,336"/>
+<area shape="rect" id="node10" href="$class_g_b_tile_view.html#a0b2b262f47b7d6c3f53270eaf80a24a1" title="GBTileView::OnHScroll" alt="" coords="370,360,526,387"/>
+</map>

@@ -1,0 +1,116 @@
+\hypertarget{_memory_viewer_dlg_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Memory\+Viewer\+Dlg.cpp 파일 참조}
+\label{_memory_viewer_dlg_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Memory\+Viewer\+Dlg.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Memory\+Viewer\+Dlg.\+cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vba.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}File\+Dlg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Memory\+Viewer\+Address\+Size.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Memory\+Viewer\+Dlg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Reg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Win\+Res\+Util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+System.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Globals.\+h\char`\"{}}\newline
+Memory\+Viewer\+Dlg.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_memory_viewer_dlg_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_memory_viewer_dlg_8cpp_ab9d417f7a58507a4fd4a574eb00d7106}{C\+P\+U\+Read\+Byte\+Quick}}(addr)~\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}
+\item 
+\#define \mbox{\hyperlink{_memory_viewer_dlg_8cpp_ae5009afd14501c6882caf998a3bb72c5}{C\+P\+U\+Write\+Byte\+Quick}}(addr,  \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})~\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]} = (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})
+\item 
+\#define \mbox{\hyperlink{_memory_viewer_dlg_8cpp_a61e2bc29faecc87495deda27757cc7af}{C\+P\+U\+Read\+Half\+Word\+Quick}}(addr)~$\ast$((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} $\ast$)\&\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]})
+\item 
+\#define \mbox{\hyperlink{_memory_viewer_dlg_8cpp_afd04f96dfbfca0c6a8f90b77e4870446}{C\+P\+U\+Write\+Half\+Word\+Quick}}(addr,  \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})~$\ast$((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} $\ast$)\&\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}) = (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})
+\item 
+\#define \mbox{\hyperlink{_memory_viewer_dlg_8cpp_ae45f9b4e317620550878e8cd94d3e823}{C\+P\+U\+Read\+Memory\+Quick}}(addr)~$\ast$((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$)\&\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]})
+\item 
+\#define \mbox{\hyperlink{_memory_viewer_dlg_8cpp_acec74b80f73371b76dfb1f90ff1c25d4}{C\+P\+U\+Write\+Memory\+Quick}}(addr,  \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})~$\ast$((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$)\&\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}) = (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_memory_viewer_dlg_8cpp_af9cc36078b1b311753963297ae7f2a74}{emulating}}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{_memory_viewer_dlg_8cpp_ab9d417f7a58507a4fd4a574eb00d7106}\label{_memory_viewer_dlg_8cpp_ab9d417f7a58507a4fd4a574eb00d7106}} 
+\index{Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}!C\+P\+U\+Read\+Byte\+Quick@{C\+P\+U\+Read\+Byte\+Quick}}
+\index{C\+P\+U\+Read\+Byte\+Quick@{C\+P\+U\+Read\+Byte\+Quick}!Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}}
+\subsubsection{\texorpdfstring{C\+P\+U\+Read\+Byte\+Quick}{CPUReadByteQuick}}
+{\footnotesize\ttfamily \#define C\+P\+U\+Read\+Byte\+Quick(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}}
+
+
+
+Memory\+Viewer\+Dlg.\+cpp 파일의 42 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_memory_viewer_dlg_8cpp_a61e2bc29faecc87495deda27757cc7af}\label{_memory_viewer_dlg_8cpp_a61e2bc29faecc87495deda27757cc7af}} 
+\index{Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}!C\+P\+U\+Read\+Half\+Word\+Quick@{C\+P\+U\+Read\+Half\+Word\+Quick}}
+\index{C\+P\+U\+Read\+Half\+Word\+Quick@{C\+P\+U\+Read\+Half\+Word\+Quick}!Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}}
+\subsubsection{\texorpdfstring{C\+P\+U\+Read\+Half\+Word\+Quick}{CPUReadHalfWordQuick}}
+{\footnotesize\ttfamily \#define C\+P\+U\+Read\+Half\+Word\+Quick(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~$\ast$((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} $\ast$)\&\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]})}
+
+
+
+Memory\+Viewer\+Dlg.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_memory_viewer_dlg_8cpp_ae45f9b4e317620550878e8cd94d3e823}\label{_memory_viewer_dlg_8cpp_ae45f9b4e317620550878e8cd94d3e823}} 
+\index{Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}!C\+P\+U\+Read\+Memory\+Quick@{C\+P\+U\+Read\+Memory\+Quick}}
+\index{C\+P\+U\+Read\+Memory\+Quick@{C\+P\+U\+Read\+Memory\+Quick}!Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}}
+\subsubsection{\texorpdfstring{C\+P\+U\+Read\+Memory\+Quick}{CPUReadMemoryQuick}}
+{\footnotesize\ttfamily \#define C\+P\+U\+Read\+Memory\+Quick(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~$\ast$((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$)\&\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]})}
+
+
+
+Memory\+Viewer\+Dlg.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_memory_viewer_dlg_8cpp_ae5009afd14501c6882caf998a3bb72c5}\label{_memory_viewer_dlg_8cpp_ae5009afd14501c6882caf998a3bb72c5}} 
+\index{Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}!C\+P\+U\+Write\+Byte\+Quick@{C\+P\+U\+Write\+Byte\+Quick}}
+\index{C\+P\+U\+Write\+Byte\+Quick@{C\+P\+U\+Write\+Byte\+Quick}!Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}}
+\subsubsection{\texorpdfstring{C\+P\+U\+Write\+Byte\+Quick}{CPUWriteByteQuick}}
+{\footnotesize\ttfamily \#define C\+P\+U\+Write\+Byte\+Quick(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} }\end{DoxyParamCaption})~\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]} = (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})}
+
+
+
+Memory\+Viewer\+Dlg.\+cpp 파일의 44 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_memory_viewer_dlg_8cpp_afd04f96dfbfca0c6a8f90b77e4870446}\label{_memory_viewer_dlg_8cpp_afd04f96dfbfca0c6a8f90b77e4870446}} 
+\index{Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}!C\+P\+U\+Write\+Half\+Word\+Quick@{C\+P\+U\+Write\+Half\+Word\+Quick}}
+\index{C\+P\+U\+Write\+Half\+Word\+Quick@{C\+P\+U\+Write\+Half\+Word\+Quick}!Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}}
+\subsubsection{\texorpdfstring{C\+P\+U\+Write\+Half\+Word\+Quick}{CPUWriteHalfWordQuick}}
+{\footnotesize\ttfamily \#define C\+P\+U\+Write\+Half\+Word\+Quick(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} }\end{DoxyParamCaption})~$\ast$((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} $\ast$)\&\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}) = (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})}
+
+
+
+Memory\+Viewer\+Dlg.\+cpp 파일의 48 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_memory_viewer_dlg_8cpp_acec74b80f73371b76dfb1f90ff1c25d4}\label{_memory_viewer_dlg_8cpp_acec74b80f73371b76dfb1f90ff1c25d4}} 
+\index{Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}!C\+P\+U\+Write\+Memory\+Quick@{C\+P\+U\+Write\+Memory\+Quick}}
+\index{C\+P\+U\+Write\+Memory\+Quick@{C\+P\+U\+Write\+Memory\+Quick}!Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}}
+\subsubsection{\texorpdfstring{C\+P\+U\+Write\+Memory\+Quick}{CPUWriteMemoryQuick}}
+{\footnotesize\ttfamily \#define C\+P\+U\+Write\+Memory\+Quick(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} }\end{DoxyParamCaption})~$\ast$((\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$)\&\+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \+::\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}) = (\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})}
+
+
+
+Memory\+Viewer\+Dlg.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{_memory_viewer_dlg_8cpp_af9cc36078b1b311753963297ae7f2a74}\label{_memory_viewer_dlg_8cpp_af9cc36078b1b311753963297ae7f2a74}} 
+\index{Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}!emulating@{emulating}}
+\index{emulating@{emulating}!Memory\+Viewer\+Dlg.\+cpp@{Memory\+Viewer\+Dlg.\+cpp}}
+\subsubsection{\texorpdfstring{emulating}{emulating}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} emulating}
+
+
+
+system.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+

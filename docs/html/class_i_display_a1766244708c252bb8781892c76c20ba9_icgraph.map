@@ -1,0 +1,14 @@
+<map id="IDisplay::setOption" name="IDisplay::setOption">
+<area shape="rect" id="node2" href="$class_main_wnd.html#ad539bc63bc7704f4aa66e3a75a39826b" title="MainWnd::OnOptionsVideoVsync" alt="" coords="233,5,451,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="191,56,493,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a3d08e3bf2be9dee73c57674e4a6d890e" title="MainWnd::OnOptionsVideoTriplebuffering" alt="" coords="213,107,471,133"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a69c7fd2297cf789a4d25ffd6099776e6" title="MainWnd::OnOptionsVideoDdrawemulationonly" alt="" coords="194,157,490,184"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a1ba5ef62512a0cdef95369a411bb3c0d" title="MainWnd::OnOptionsVideoDdrawusevideomemory" alt="" coords="185,208,499,235"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#add9253b241396c29c979ef81199b7fb3" title="MainWnd::OnOptionsVideoRenderoptions\lD3dnofilter" alt="" coords="211,259,473,301"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#abc93855509cbfc4d8c063d7be9d765d4" title="MainWnd::OnOptionsVideoRenderoptions\lD3dbilinear" alt="" coords="211,325,473,366"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#a02eb06936ef0d4723a0bf743db3d929b" title="MainWnd::OnOptionsVideoRenderoptions\lGlnearest" alt="" coords="211,390,473,431"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#afff6d21ce58320731fae2b0f38390640" title="MainWnd::OnOptionsVideoRenderoptions\lGlbilinear" alt="" coords="211,455,473,497"/>
+<area shape="rect" id="node11" href="$class_main_wnd.html#a80f5fb3891f417bc919adc26f5773a08" title="MainWnd::OnOptionsVideoRenderoptions\lGltriangle" alt="" coords="211,521,473,562"/>
+<area shape="rect" id="node12" href="$class_main_wnd.html#adc9d14bd286462fdf5f04111352de799" title="MainWnd::OnOptionsVideoRenderoptions\lGlquads" alt="" coords="211,586,473,627"/>
+<area shape="rect" id="node13" href="$class_main_wnd.html#a31678f98dfdc982e2f4e242293fc85e0" title="MainWnd::OnOptionsVideoFullscreenmaxscale" alt="" coords="194,652,490,679"/>
+</map>

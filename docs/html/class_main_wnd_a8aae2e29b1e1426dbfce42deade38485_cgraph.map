@@ -1,0 +1,8 @@
+<map id="MainWnd::OnSize" name="MainWnd::OnSize">
+<area shape="rect" id="node2" href="$gb_sound_8cpp.html#af13240822604abd91b4e2370062f195e" title="soundResume" alt="" coords="202,5,307,32"/>
+<area shape="rect" id="node3" href="$class_v_b_a.html#acb822065cba8b15810c5a61fd05ca831" title="VBA::adjustDestRect" alt="" coords="181,56,328,83"/>
+<area shape="rect" id="node5" href="$class_i_display.html#ad0b4ba99f59edd7a6857e3b3941b3ba2" title="IDisplay::resize" alt="" coords="199,107,310,133"/>
+<area shape="rect" id="node6" href="$_sound_8cpp.html#a0716e7957671de324eeaa4ac1729d6b7" title="soundPause" alt="" coords="207,157,302,184"/>
+<area shape="rect" id="node4" href="$class_c_skin.html#a8fe20ca67965deec6e5e29a2bf467933" title="CSkin::GetBlitRect" alt="" coords="379,56,511,83"/>
+<area shape="rect" id="node7" href="$system_8cpp.html#a247faeeb98d9b2a720aa9ceec44712ee" title="systemSoundPause" alt="" coords="376,157,515,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="MainWnd::OnOptionVideoSize" name="MainWnd::OnOptionVideoSize">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="252,5,541,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="252,56,541,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="252,107,541,133"/>
+</map>

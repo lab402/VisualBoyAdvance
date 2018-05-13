@@ -1,0 +1,5 @@
+<map id="GBACheatList::OnInitDialog" name="GBACheatList::OnInitDialog">
+<area shape="rect" id="node2" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="249,5,375,32"/>
+<area shape="rect" id="node3" href="$_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3" title="regQueryDwordValue" alt="" coords="240,56,384,83"/>
+<area shape="rect" id="node4" href="$class_g_b_a_cheat_list.html#a12928bb674926ae02d5a3ceb156a3b53" title="GBACheatList::refresh" alt="" coords="236,107,388,133"/>
+</map>

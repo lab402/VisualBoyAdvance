@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['v1_5fdeadtable1',['v1_deadtable1',['../_cheats_8cpp.html#aa6ffe97bc144e707e881803e13477ea4',1,'Cheats.cpp']]],
+  ['v1_5fdeadtable2',['v1_deadtable2',['../_cheats_8cpp.html#ac6c07319eaf31133425e4067be5ace27',1,'Cheats.cpp']]],
+  ['v3_5fdeadtable1',['v3_deadtable1',['../_cheats_8cpp.html#a625e19651666560fec6219b458c8f2b7',1,'Cheats.cpp']]],
+  ['v3_5fdeadtable2',['v3_deadtable2',['../_cheats_8cpp.html#a924729a7aa14f94c1052dd7355adf386',1,'Cheats.cpp']]],
+  ['v_5fflag',['V_FLAG',['../_g_b_a_8h.html#a11a0e7b14a93be5eb2720b0151900919',1,'V_FLAG():&#160;Globals.cpp'],['../_globals_8cpp.html#a11a0e7b14a93be5eb2720b0151900919',1,'V_FLAG():&#160;Globals.cpp'],['../_globals_8h.html#a11a0e7b14a93be5eb2720b0151900919',1,'V_FLAG():&#160;Globals.cpp']]],
+  ['vaddr',['vaddr',['../struct_e_l_f_program_header.html#a7185e6711867b15d2d2dd04666d8838f',1,'ELFProgramHeader']]],
+  ['val',['val',['../structoption.html#a13bd155ec3b405d29c41ab8d0793be11',1,'option']]],
+  ['value',['value',['../struct_cheats_data.html#ab0df909850861e6314b1abb13c6305d1',1,'CheatsData::value()'],['../struct_e_l_f_symbol.html#ab2da134d25fef0ac7b83c49a5d0ada6c',1,'ELFSymbol::value()'],['../struct_e_l_f_attr.html#ace26325a106d1a8616f1ecb2e0a209af',1,'ELFAttr::value()'],['../struct_enum_member.html#a087360a6d98032f07a743435e3c19b43',1,'EnumMember::value()'],['../struct_symbol.html#aefbe563b4964a3cc4ee85c3efaccb7d2',1,'Symbol::value()'],['../struct_node.html#aaa0cd30d78a90c5a6ab64eb3d58b8f87',1,'Node::value()'],['../structgb_cheat.html#acabb64808f69357b955b5c9f464c9cc1',1,'gbCheat::value()'],['../struct_g_b_o_p_c_o_d_e.html#a7a595245e5b9550b3ad680a89e5f010d',1,'GBOPCODE::value()'],['../structmapper_m_b_c7.html#a2f07066b9e31c4e36abca0844e53e3dc',1,'mapperMBC7::value()'],['../structbreakpoint_info.html#a10cf821e6c0c5b11b921baafa0144448',1,'breakpointInfo::value()']]],
+  ['valuetype',['valueType',['../class_g_b_a_cheat_search.html#a633f5b523a814d3f1e4cb06b1799b798',1,'GBACheatSearch::valueType()'],['../class_g_b_cheat_search.html#a86a4834163ee6a13a5bb8531a7c67c1d',1,'GBCheatSearch::valueType()']]],
+  ['variables',['variables',['../struct_function.html#af68017d9a2b267a45154499c26ee981d',1,'Function::variables()'],['../struct_compile_unit.html#a88643bd86eef23198ee9e03070ed26cb',1,'CompileUnit::variables()']]],
+  ['vcount',['VCOUNT',['../_globals_8cpp.html#a615fafd40925e6ffafb0bd4319b109bf',1,'VCOUNT():&#160;Globals.cpp'],['../_globals_8h.html#a615fafd40925e6ffafb0bd4319b109bf',1,'VCOUNT():&#160;Globals.cpp']]],
+  ['version',['version',['../struct_e_l_f_header.html#aadac9bc05322252d95cff920e133ca15',1,'ELFHeader::version()'],['../structgmon__hdr.html#a7c55998776369522f545c4d74889d92e',1,'gmon_hdr::version()'],['../structunz__file__info__s.html#a635f933b26b636d8314cef61af62fcef',1,'unz_file_info_s::version()']]],
+  ['version_5fneeded',['version_needed',['../structunz__file__info__s.html#a1578aca2bb7fed658f9f94c78d00288e',1,'unz_file_info_s']]],
+  ['videodriverguid',['videoDriverGUID',['../class_v_b_a.html#a797f633003e17035a87922e9f76f8a6d',1,'VBA']]],
+  ['videooption',['videoOption',['../class_v_b_a.html#a17dac073149c897f770c00ed7098ad32',1,'VBA']]],
+  ['voidp',['voidp',['../_util_8cpp.html#a4d2be85cccbbff059d2c924a70f76c4b',1,'Util.cpp']]],
+  ['vram',['vram',['../_globals_8cpp.html#a983f8cd19ae66ea98e180c2e13bee5b9',1,'vram():&#160;Globals.cpp'],['../_globals_8h.html#a983f8cd19ae66ea98e180c2e13bee5b9',1,'vram():&#160;Globals.cpp']]],
+  ['vsync',['vsync',['../class_v_b_a.html#a84075b77df64f3dc2100159064b79fba',1,'VBA']]]
+];

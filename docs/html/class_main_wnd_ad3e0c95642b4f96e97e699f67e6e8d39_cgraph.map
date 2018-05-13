@@ -1,0 +1,6 @@
+<map id="MainWnd::OnContextMenu" name="MainWnd::OnContextMenu">
+<area shape="rect" id="node2" href="$class_main_wnd.html#aadc325bab367045adb1258609f8f2c9e" title="MainWnd::winMouseOn" alt="" coords="232,5,392,32"/>
+<area shape="rect" id="node3" href="$class_c_accelerator_manager.html#ac7411d20f413ea0ec3bd65705b564adf" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="239,57,385,98"/>
+<area shape="rect" id="node4" href="$class_c_accelerator_manager.html#ac854ec5263a7bab961bf63aec3938984" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="442,27,589,69"/>
+<area shape="rect" id="node5" href="$class_c_accels_ob.html#afaf7510fa1e0707863f6bd469f190de6" title="CAccelsOb::GetString" alt="" coords="440,93,591,120"/>
+</map>

@@ -1,0 +1,16 @@
+<map id="VBA::winUpdateSkin" name="VBA::winUpdateSkin">
+<area shape="rect" id="node2" href="$class_i_display.html#ad717007b624f0a8e7c830ab803cd8a92" title="IDisplay::isSkinSupported" alt="" coords="196,63,367,89"/>
+<area shape="rect" id="node3" href="$class_c_skin.html#ac9b8048b8c4a853574cc4c0f8b29827d" title="CSkin::Initialize" alt="" coords="225,113,337,140"/>
+<area shape="rect" id="node5" href="$class_c_skin.html#a4897349a9944fe2e2ee9cfdc4f0baf47" title="CSkin::Hook" alt="" coords="234,164,329,191"/>
+<area shape="rect" id="node10" href="$class_c_skin.html#ad6adaa12dbedc193c907d4a1b2c2445b" title="CSkin::Enable" alt="" coords="229,240,334,267"/>
+<area shape="rect" id="node11" href="$class_v_b_a.html#acb822065cba8b15810c5a61fd05ca831" title="VBA::adjustDestRect" alt="" coords="208,303,355,329"/>
+<area shape="rect" id="node13" href="$class_v_b_a.html#accf3451bad473b90400193636cd27c96" title="VBA::updateMenuBar" alt="" coords="207,360,355,387"/>
+<area shape="rect" id="node4" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="441,5,559,32"/>
+<area shape="rect" id="node6" href="$class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9" title="CSkin::Hooked" alt="" coords="649,107,758,133"/>
+<area shape="rect" id="node7" href="$class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3" title="CSkin::UnHook" alt="" coords="445,107,555,133"/>
+<area shape="rect" id="node8" href="$class_skin_button.html#aef7f1ced23d060545eabd5b57175143a" title="SkinButton::GetRect" alt="" coords="429,157,571,184"/>
+<area shape="rect" id="node9" href="$class_skin_button.html#ad70dc6ed236a2274028c32744e3690bb" title="SkinButton::CreateButton" alt="" coords="415,208,585,235"/>
+<area shape="rect" id="node12" href="$class_c_skin.html#a8fe20ca67965deec6e5e29a2bf467933" title="CSkin::GetBlitRect" alt="" coords="434,309,566,336"/>
+<area shape="rect" id="node14" href="$_win_res_util_8cpp.html#a455bea54e4ebdd67b568795f019b8d30" title="winResLoadMenu" alt="" coords="438,360,562,387"/>
+<area shape="rect" id="node15" href="$_win_res_util_8cpp.html#aef09e649be3760e91ac176df7a0f4473" title="winResGetResource" alt="" coords="633,360,773,387"/>
+</map>

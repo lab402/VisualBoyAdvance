@@ -1,0 +1,6 @@
+<map id="MainWnd::OnOptionsSoundChannel4" name="MainWnd::OnOptionsSoundChannel4">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a30b67d9db53d79122684a81e549ebd1c" title="MainWnd::updateSoundChannels" alt="" coords="292,56,507,83"/>
+<area shape="rect" id="node3" href="$_sound_8cpp.html#a3d1f6129176583804274bb162c3428a8" title="soundGetEnable" alt="" coords="555,5,673,32"/>
+<area shape="rect" id="node4" href="$_sound_8cpp.html#aa3562ee185ac50bb560c6a034475bd18" title="soundEnable" alt="" coords="565,56,663,83"/>
+<area shape="rect" id="node5" href="$_sound_8cpp.html#ac659f56970310e671066599c629618b5" title="soundDisable" alt="" coords="564,107,664,133"/>
+</map>

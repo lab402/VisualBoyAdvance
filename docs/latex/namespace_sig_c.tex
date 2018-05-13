@@ -1,0 +1,70 @@
+\hypertarget{namespace_sig_c}{}\section{SigC 네임스페이스 참조}
+\label{namespace_sig_c}\index{SigC@{SigC}}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T\+\_\+return , class T\+\_\+obj1 , class T\+\_\+obj2 $>$ }\\Slot0$<$ T\+\_\+return $>$ \mbox{\hyperlink{namespace_sig_c_a92e4f19202b77e78ac1db05f5a62f6b6}{slot}} (T\+\_\+obj1 \&\+\_\+\+A\+\_\+obj, T\+\_\+return(T\+\_\+obj2\+::$\ast$\+\_\+\+A\+\_\+func)())
+\item 
+{\footnotesize template$<$class T\+\_\+return , class T\+\_\+arg1 , class T\+\_\+obj1 , class T\+\_\+obj2 $>$ }\\Slot1$<$ T\+\_\+return, T\+\_\+arg1 $>$ \mbox{\hyperlink{namespace_sig_c_a593d0d3f9fec3996bcdb781f14bff628}{slot}} (T\+\_\+obj1 \&\+\_\+\+A\+\_\+obj, T\+\_\+return(T\+\_\+obj2\+::$\ast$\+\_\+\+A\+\_\+func)(T\+\_\+arg1))
+\item 
+{\footnotesize template$<$class T\+\_\+return , class T\+\_\+arg1 , class T\+\_\+arg2 , class T\+\_\+obj1 , class T\+\_\+obj2 $>$ }\\Slot2$<$ T\+\_\+return, T\+\_\+arg1, T\+\_\+arg2 $>$ \mbox{\hyperlink{namespace_sig_c_a894ae71a244ee5c71e891342ab536db1}{slot}} (T\+\_\+obj1 \&\+\_\+\+A\+\_\+obj, T\+\_\+return(T\+\_\+obj2\+::$\ast$\+\_\+\+A\+\_\+func)(T\+\_\+arg1, T\+\_\+arg2))
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{namespace_sig_c_a92e4f19202b77e78ac1db05f5a62f6b6}\label{namespace_sig_c_a92e4f19202b77e78ac1db05f5a62f6b6}} 
+\index{SigC@{SigC}!slot@{slot}}
+\index{slot@{slot}!SigC@{SigC}}
+\subsubsection{\texorpdfstring{slot()}{slot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$class T\+\_\+return , class T\+\_\+obj1 , class T\+\_\+obj2 $>$ \\
+Slot0$<$T\+\_\+return$>$ Sig\+C\+::slot (\begin{DoxyParamCaption}\item[{T\+\_\+obj1 \&}]{\+\_\+\+A\+\_\+obj,  }\item[{T\+\_\+return(T\+\_\+obj2\+::$\ast$)()}]{\+\_\+\+A\+\_\+func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sigccompat.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+37 \{ return ::sigc::bound\_mem\_functor0<T\_return, T\_obj2>
+38              (\textcolor{keyword}{dynamic\_cast<} T\_obj1&\textcolor{keyword}{>}(\_A\_obj), \_A\_func); \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespace_sig_c_a92e4f19202b77e78ac1db05f5a62f6b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespace_sig_c_a593d0d3f9fec3996bcdb781f14bff628}\label{namespace_sig_c_a593d0d3f9fec3996bcdb781f14bff628}} 
+\index{SigC@{SigC}!slot@{slot}}
+\index{slot@{slot}!SigC@{SigC}}
+\subsubsection{\texorpdfstring{slot()}{slot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$class T\+\_\+return , class T\+\_\+arg1 , class T\+\_\+obj1 , class T\+\_\+obj2 $>$ \\
+Slot1$<$T\+\_\+return, T\+\_\+arg1$>$ Sig\+C\+::slot (\begin{DoxyParamCaption}\item[{T\+\_\+obj1 \&}]{\+\_\+\+A\+\_\+obj,  }\item[{T\+\_\+return(T\+\_\+obj2\+::$\ast$)(T\+\_\+arg1)}]{\+\_\+\+A\+\_\+func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sigccompat.\+h 파일의 42 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+43 \{ return ::sigc::bound\_mem\_functor1<T\_return, T\_obj2, T\_arg1>
+44              (\textcolor{keyword}{dynamic\_cast<} T\_obj1&\textcolor{keyword}{>}(\_A\_obj), \_A\_func); \}
+\end{DoxyCode}
+\mbox{\Hypertarget{namespace_sig_c_a894ae71a244ee5c71e891342ab536db1}\label{namespace_sig_c_a894ae71a244ee5c71e891342ab536db1}} 
+\index{SigC@{SigC}!slot@{slot}}
+\index{slot@{slot}!SigC@{SigC}}
+\subsubsection{\texorpdfstring{slot()}{slot()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$class T\+\_\+return , class T\+\_\+arg1 , class T\+\_\+arg2 , class T\+\_\+obj1 , class T\+\_\+obj2 $>$ \\
+Slot2$<$T\+\_\+return, T\+\_\+arg1,T\+\_\+arg2$>$ Sig\+C\+::slot (\begin{DoxyParamCaption}\item[{T\+\_\+obj1 \&}]{\+\_\+\+A\+\_\+obj,  }\item[{T\+\_\+return(T\+\_\+obj2\+::$\ast$)(T\+\_\+arg1, T\+\_\+arg2)}]{\+\_\+\+A\+\_\+func }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sigccompat.\+h 파일의 48 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+49 \{ return ::sigc::bound\_mem\_functor2<T\_return, T\_obj2, T\_arg1,T\_arg2>
+50              (\textcolor{keyword}{dynamic\_cast<} T\_obj1&\textcolor{keyword}{>}(\_A\_obj), \_A\_func); \}
+\end{DoxyCode}

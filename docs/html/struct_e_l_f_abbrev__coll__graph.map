@@ -1,0 +1,4 @@
+<map id="ELFAbbrev" name="ELFAbbrev">
+<area shape="rect" id="node2" href="$struct_e_l_f_attr.html" title="{ELFAttr\n|+ name\l+ form\l+ value\l+ string\l+ data\l+ flag\l+ @3\l|}" alt="" coords="23,160,90,325"/>
+<area shape="rect" id="node3" href="$struct_e_l_f_block.html" title="{ELFBlock\n|+ length\l+ data\l|}" alt="" coords="17,5,96,97"/>
+</map>

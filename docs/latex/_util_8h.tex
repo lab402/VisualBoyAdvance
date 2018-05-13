@@ -1,0 +1,1475 @@
+\hypertarget{_util_8h}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Util.h 파일 참조}
+\label{_util_8h}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Util.\+h@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Util.\+h}}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structvariable__desc}{variable\+\_\+desc}}
+\end{DoxyCompactItemize}
+\subsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8}{I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE}} \{ \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{I\+M\+A\+G\+E\+\_\+\+U\+N\+K\+N\+O\+WN}} = -\/1, 
+\mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb}{I\+M\+A\+G\+E\+\_\+\+G\+BA}} = 0, 
+\mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed}{I\+M\+A\+G\+E\+\_\+\+GB}} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_util_8h_a04911fef03366718b828d8a296b3f43a}{util\+Write\+P\+N\+G\+File}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$)
+\item 
+bool \mbox{\hyperlink{_util_8h_af02cd604d272a2ba0a44d0363f3cab66}{util\+Write\+B\+M\+P\+File}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$)
+\item 
+void \mbox{\hyperlink{_util_8h_a884404e568aa2a909bfd7e268866e697}{util\+Apply\+I\+PS}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$ips, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$$\ast$\mbox{\hyperlink{_globals_8h_adafc6ed627110c42f3893c9783f55320}{rom}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}})
+\item 
+void \mbox{\hyperlink{_util_8h_a86a28c32bd0af05bf0bfe6751384e124}{util\+Write\+B\+MP}} (char $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$)
+\item 
+bool \mbox{\hyperlink{_util_8h_afd15fdc98d04bd3ebc1a707c21c9a1f0}{util\+Is\+G\+B\+A\+Image}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$)
+\item 
+bool \mbox{\hyperlink{_util_8h_a475390e214d531ed1e247f1b9f1d1e8a}{util\+Is\+G\+B\+Image}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$)
+\item 
+bool \mbox{\hyperlink{_util_8h_a523b23cf0d600dd7a4bd28be50125ec3}{util\+Is\+Zip\+File}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$)
+\item 
+bool \mbox{\hyperlink{_util_8h_a57a149550d3c90300a59dcc6a6bfc0fd}{util\+Is\+Gzip\+File}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$)
+\item 
+bool \mbox{\hyperlink{_util_8h_aaceb2f8756701b5b7b0bf9e7e5c52027}{util\+Is\+Rar\+File}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$)
+\item 
+void \mbox{\hyperlink{_util_8h_adf38da3dcfc7b09b213a9a3a530d5b1c}{util\+Get\+Base\+Name}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$, char $\ast$)
+\item 
+\mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8}{I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{_util_8h_aba08a34addc438babafe21597d94051d}{util\+Find\+Type}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$)
+\item 
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$ \mbox{\hyperlink{_util_8h_aa5476c6efd178f9749b3d69378d71b78}{util\+Load}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$, bool($\ast$)(\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$), \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \&)
+\item 
+void \mbox{\hyperlink{_util_8h_a68ad8f99ee5d4b1c900c8611b9ea1720}{util\+Put\+Dword}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})
+\item 
+void \mbox{\hyperlink{_util_8h_ac254d0565afa11c8f95d0efd442e5d6d}{util\+Put\+Word}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}})
+\item 
+void \mbox{\hyperlink{_util_8h_a0c9f222455d76a6b24a371922106934e}{util\+Write\+Data}} (gz\+File, \mbox{\hyperlink{structvariable__desc}{variable\+\_\+desc}} $\ast$)
+\item 
+void \mbox{\hyperlink{_util_8h_a0470a6ff27a6e11e39454beda01b8f8c}{util\+Read\+Data}} (gz\+File, \mbox{\hyperlink{structvariable__desc}{variable\+\_\+desc}} $\ast$)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_util_8h_a7e12c3b92f76a948e194da25a2a12348}{util\+Read\+Int}} (gz\+File)
+\item 
+void \mbox{\hyperlink{_util_8h_ad7383f3cbe45a6e4848e55cd7ac3c9af}{util\+Write\+Int}} (gz\+File, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+gz\+File \mbox{\hyperlink{_util_8h_a4030eff11c2659e960204acd8e8fdbd4}{util\+Gz\+Open}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$mode)
+\item 
+gz\+File \mbox{\hyperlink{_util_8h_a02e6a64e4965d9911ebe6cf6b43fd192}{util\+Mem\+Gz\+Open}} (char $\ast$memory, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} available, char $\ast$mode)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_util_8h_a0c984fb94b8626c6a105fa293fa73d0e}{util\+Gz\+Write}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_util_8h_a7c3497694953dfa7b0170b41e4b6ce93}{util\+Gz\+Read}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_util_8h_ae27f61ca2a7be5ae312a177b9b7eca78}{util\+Gz\+Close}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+long \mbox{\hyperlink{_util_8h_a99f60350d1f02a32e39fda2978830191}{util\+Gz\+Mem\+Tell}} (gz\+File \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})
+\item 
+void \mbox{\hyperlink{_util_8h_a29f118c8c6fb8be1f4d2128d6ddd084d}{util\+G\+B\+A\+Find\+Save}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+void \mbox{\hyperlink{_util_8h_a5d5317ea1bb74f382ceeffba7eeaa797}{util\+Update\+System\+Color\+Maps}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{열거형 타입 문서화}
+\mbox{\Hypertarget{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8}\label{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8}} 
+\index{Util.\+h@{Util.\+h}!I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE@{I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE}}
+\index{I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE@{I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE}{IMAGE\_TYPE}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8}{I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+M\+A\+G\+E\+\_\+\+U\+N\+K\+N\+O\+WN@{I\+M\+A\+G\+E\+\_\+\+U\+N\+K\+N\+O\+WN}!Util.\+h@{Util.\+h}}\index{Util.\+h@{Util.\+h}!I\+M\+A\+G\+E\+\_\+\+U\+N\+K\+N\+O\+WN@{I\+M\+A\+G\+E\+\_\+\+U\+N\+K\+N\+O\+WN}}}\mbox{\Hypertarget{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}\label{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}} 
+I\+M\+A\+G\+E\+\_\+\+U\+N\+K\+N\+O\+WN&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+M\+A\+G\+E\+\_\+\+G\+BA@{I\+M\+A\+G\+E\+\_\+\+G\+BA}!Util.\+h@{Util.\+h}}\index{Util.\+h@{Util.\+h}!I\+M\+A\+G\+E\+\_\+\+G\+BA@{I\+M\+A\+G\+E\+\_\+\+G\+BA}}}\mbox{\Hypertarget{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb}\label{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb}} 
+I\+M\+A\+G\+E\+\_\+\+G\+BA&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+M\+A\+G\+E\+\_\+\+GB@{I\+M\+A\+G\+E\+\_\+\+GB}!Util.\+h@{Util.\+h}}\index{Util.\+h@{Util.\+h}!I\+M\+A\+G\+E\+\_\+\+GB@{I\+M\+A\+G\+E\+\_\+\+GB}}}\mbox{\Hypertarget{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed}\label{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed}} 
+I\+M\+A\+G\+E\+\_\+\+GB&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Util.\+h 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+22                 \{
+23   \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{IMAGE\_UNKNOWN}} = -1,
+24   \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb}{IMAGE\_GBA}}     = 0,
+25   \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed}{IMAGE\_GB}}      = 1
+26 \};
+\end{DoxyCode}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{_util_8h_a884404e568aa2a909bfd7e268866e697}\label{_util_8h_a884404e568aa2a909bfd7e268866e697}} 
+\index{Util.\+h@{Util.\+h}!util\+Apply\+I\+PS@{util\+Apply\+I\+PS}}
+\index{util\+Apply\+I\+PS@{util\+Apply\+I\+PS}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Apply\+I\+P\+S()}{utilApplyIPS()}}
+{\footnotesize\ttfamily void util\+Apply\+I\+PS (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{ips,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$$\ast$}]{rom,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$}]{size }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 426 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+427 \{
+428   \textcolor{comment}{// from the IPS spec at http://zerosoft.zophar.net/ips.htm}
+429   FILE *f = fopen(ips, \textcolor{stringliteral}{"rb"});
+430   \textcolor{keywordflow}{if}(!f)
+431     \textcolor{keywordflow}{return};
+432   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *\mbox{\hyperlink{_globals_8cpp_adafc6ed627110c42f3893c9783f55320}{rom}} = *r;
+433   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = *s;
+434   \textcolor{keywordflow}{if}(fgetc(f) == \textcolor{charliteral}{'P'} &&
+435      fgetc(f) == \textcolor{charliteral}{'A'} &&
+436      fgetc(f) == \textcolor{charliteral}{'T'} &&
+437      fgetc(f) == \textcolor{charliteral}{'C'} &&
+438      fgetc(f) == \textcolor{charliteral}{'H'}) \{
+439     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+440     \textcolor{keywordtype}{int} offset;
+441     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}};
+442     \textcolor{keywordflow}{for}(;;) \{
+443       \textcolor{comment}{// read offset}
+444       offset = utilReadInt3(f);
+445       \textcolor{comment}{// if offset == EOF, end of patch}
+446       \textcolor{keywordflow}{if}(offset == 0x454f46)
+447         \textcolor{keywordflow}{break};
+448       \textcolor{comment}{// read length}
+449       \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = utilReadInt2(f);
+450       \textcolor{keywordflow}{if}(!\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}) \{
+451         \textcolor{comment}{// len == 0, RLE block}
+452         \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}} = utilReadInt2(f);
+453         \textcolor{comment}{// byte to fill}
+454         \textcolor{keywordtype}{int} c = fgetc(f);
+455         \textcolor{keywordflow}{if}(c == -1)
+456           \textcolor{keywordflow}{break};
+457         \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})c;
+458       \} \textcolor{keywordflow}{else}
+459         \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}= -1;
+460       \textcolor{comment}{// check if we need to reallocate our ROM}
+461       \textcolor{keywordflow}{if}((offset + \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}) >= \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}) \{
+462         \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} *= 2;
+463         \mbox{\hyperlink{_globals_8cpp_adafc6ed627110c42f3893c9783f55320}{rom}} = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)realloc(\mbox{\hyperlink{_globals_8cpp_adafc6ed627110c42f3893c9783f55320}{rom}}, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+464         *r = \mbox{\hyperlink{_globals_8cpp_adafc6ed627110c42f3893c9783f55320}{rom}};
+465         *s = \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}};
+466       \}      
+467       \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} == -1) \{
+468         \textcolor{comment}{// normal block, just read the data}
+469         \textcolor{keywordflow}{if}(fread(&\mbox{\hyperlink{_globals_8cpp_adafc6ed627110c42f3893c9783f55320}{rom}}[offset], 1, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}, f) != (size\_t)\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}})
+470           \textcolor{keywordflow}{break};
+471       \} \textcolor{keywordflow}{else} \{
+472         \textcolor{comment}{// fill the region with the given byte}
+473         \textcolor{keywordflow}{while}(\mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}}--) \{
+474           \mbox{\hyperlink{_globals_8cpp_adafc6ed627110c42f3893c9783f55320}{rom}}[offset++] = \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+475         \}
+476       \}
+477     \}
+478   \}
+479   \textcolor{comment}{// close the file}
+480   fclose(f);
+481 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a884404e568aa2a909bfd7e268866e697_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_aba08a34addc438babafe21597d94051d}\label{_util_8h_aba08a34addc438babafe21597d94051d}} 
+\index{Util.\+h@{Util.\+h}!util\+Find\+Type@{util\+Find\+Type}}
+\index{util\+Find\+Type@{util\+Find\+Type}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Find\+Type()}{utilFindType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8}{I\+M\+A\+G\+E\+\_\+\+T\+Y\+PE}} util\+Find\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 588 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+589 \{
+590   \textcolor{keywordtype}{char} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}[2048];
+591   
+592   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a2cf6ebd02ebede1a7d167ef8658fc670}{utilIsZipFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})) \{
+593     \mbox{\hyperlink{unzip_8h_ad578db1d36691a2a244482a3b2360ca3}{unzFile}} unz = \mbox{\hyperlink{unzip_8cpp_a4efe7bf26960a0a0c66122788b175f97}{unzOpen}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+594     
+595     \textcolor{keywordflow}{if}(unz == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+596       \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a92eb477b404441aeb32e495e32f34ee5}{MSG\_CANNOT\_OPEN\_FILE}}, \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Cannot open file %s"}), 
+      \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+597       \textcolor{keywordflow}{return} \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{IMAGE\_UNKNOWN}};
+598     \}
+599     
+600     \textcolor{keywordtype}{int} r = \mbox{\hyperlink{unzip_8cpp_a54821c0b6da683800164a56f2ae14f33}{unzGoToFirstFile}}(unz);
+601     
+602     \textcolor{keywordflow}{if}(r != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) \{
+603       \mbox{\hyperlink{unzip_8cpp_af6ab0ba88ab5da62747df8f9336f1bb3}{unzClose}}(unz);
+604       \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a35af323216038a8d9cc25b4372d25217}{MSG\_BAD\_ZIP\_FILE}}, \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Bad ZIP file %s"}), 
+      \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+605       \textcolor{keywordflow}{return} \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{IMAGE\_UNKNOWN}};
+606     \}
+607     
+608     \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8}{IMAGE\_TYPE}} found = \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{IMAGE\_UNKNOWN}};
+609     
+610     \mbox{\hyperlink{structunz__file__info__s}{unz\_file\_info}} info;
+611     
+612     \textcolor{keywordflow}{while}(\textcolor{keyword}{true}) \{
+613       r = \mbox{\hyperlink{unzip_8cpp_ac99166540260b60340f4787af0a90029}{unzGetCurrentFileInfo}}(unz,
+614                                 &info,
+615                                 \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}},
+616                                 \textcolor{keyword}{sizeof}(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}),
+617                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+618                                 0,
+619                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+620                                 0);
+621       
+622       \textcolor{keywordflow}{if}(r != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}}) \{
+623         \mbox{\hyperlink{unzip_8cpp_af6ab0ba88ab5da62747df8f9336f1bb3}{unzClose}}(unz);
+624         \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a35af323216038a8d9cc25b4372d25217}{MSG\_BAD\_ZIP\_FILE}}, \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Bad ZIP file %s"}), 
+      \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+625         \textcolor{keywordflow}{return} \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{IMAGE\_UNKNOWN}};
+626       \}
+627       
+628       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a0fc5abd46f404548b4ae1b363fd1451e}{utilIsGBAImage}}(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}})) \{
+629         found = \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb}{IMAGE\_GBA}};
+630         \textcolor{keywordflow}{break};
+631       \}
+632 
+633       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a1b9e4b09709f171cf6265d86d9b78929}{utilIsGBImage}}(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}})) \{
+634         found = \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed}{IMAGE\_GB}};
+635         \textcolor{keywordflow}{break};
+636       \}
+637         
+638       r = \mbox{\hyperlink{unzip_8cpp_acb457ebeaee7cb850c11a4a3d4b58201}{unzGoToNextFile}}(unz);
+639       
+640       \textcolor{keywordflow}{if}(r != \mbox{\hyperlink{unzip_8h_ada043545f95ccd4dae93fa44d95e39a8}{UNZ\_OK}})
+641         \textcolor{keywordflow}{break};
+642     \}
+643     \mbox{\hyperlink{unzip_8cpp_af6ab0ba88ab5da62747df8f9336f1bb3}{unzClose}}(unz);
+644     
+645     \textcolor{keywordflow}{if}(found == \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{IMAGE\_UNKNOWN}}) \{
+646       \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a24961de151b3a960d0495cc1b310574f}{MSG\_NO\_IMAGE\_ON\_ZIP}},
+647                     \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"No image found on ZIP file %s"}), \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+648       \textcolor{keywordflow}{return} found;
+649     \}
+650     \textcolor{keywordflow}{return} found;
+651 \textcolor{preprocessor}{#if 0}
+652   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8h_aaceb2f8756701b5b7b0bf9e7e5c52027}{utilIsRarFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})) \{
+653     \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8}{IMAGE\_TYPE}} found = \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{IMAGE\_UNKNOWN}};
+654     
+655     ArchiveList\_struct *rarList = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+656     \textcolor{keywordflow}{if}(urarlib\_list((\textcolor{keywordtype}{void} *)\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, (ArchiveList\_struct *)&rarList)) \{
+657       ArchiveList\_struct *p = rarList;
+658 
+659       \textcolor{keywordflow}{while}(p) \{
+660         \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a0fc5abd46f404548b4ae1b363fd1451e}{utilIsGBAImage}}(p->item.Name)) \{
+661           found = \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb}{IMAGE\_GBA}};
+662           \textcolor{keywordflow}{break};
+663         \}
+664 
+665         \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a1b9e4b09709f171cf6265d86d9b78929}{utilIsGBImage}}(p->item.Name)) \{
+666           found = \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed}{IMAGE\_GB}};
+667           \textcolor{keywordflow}{break};
+668         \}
+669         p = p->next;
+670       \}
+671       
+672       urarlib\_freelist(rarList);
+673     \}
+674     \textcolor{keywordflow}{return} found;
+675 \textcolor{preprocessor}{#endif}
+676   \} \textcolor{keywordflow}{else} \{
+677     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a5fef6fff21dbd64547bc61c66bc6aec8}{utilIsGzipFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}))
+678       \mbox{\hyperlink{_util_8cpp_a63362588317262f46bb80a2ebc63cd67}{utilGetBaseName}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+679     \textcolor{keywordflow}{else}
+680       strcpy(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+681     
+682     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a0fc5abd46f404548b4ae1b363fd1451e}{utilIsGBAImage}}(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}))
+683       \textcolor{keywordflow}{return} \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb}{IMAGE\_GBA}};
+684     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a1b9e4b09709f171cf6265d86d9b78929}{utilIsGBImage}}(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}))
+685       \textcolor{keywordflow}{return} \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed}{IMAGE\_GB}};
+686   \}
+687   \textcolor{keywordflow}{return} \mbox{\hyperlink{_util_8h_aef8b88d56fdf9a25f990a68d80c014d8ac9e52255f1b44bcb0257383d948c3153}{IMAGE\_UNKNOWN}};  
+688 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_aba08a34addc438babafe21597d94051d_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_aba08a34addc438babafe21597d94051d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a29f118c8c6fb8be1f4d2128d6ddd084d}\label{_util_8h_a29f118c8c6fb8be1f4d2128d6ddd084d}} 
+\index{Util.\+h@{Util.\+h}!util\+G\+B\+A\+Find\+Save@{util\+G\+B\+A\+Find\+Save}}
+\index{util\+G\+B\+A\+Find\+Save@{util\+G\+B\+A\+Find\+Save}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+G\+B\+A\+Find\+Save()}{utilGBAFindSave()}}
+{\footnotesize\ttfamily void util\+G\+B\+A\+Find\+Save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 1031 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1032 \{
+1033   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *p = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *)data;
+1034   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *end = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *)(data + \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+1035   \textcolor{keywordtype}{int} \mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} = 0;
+1036   \textcolor{keywordtype}{int} \mbox{\hyperlink{_flash_8cpp_a6cc360d6cd58f7c4ea981de97c808179}{flashSize}} = 0x10000;
+1037   \textcolor{keywordtype}{bool} rtcFound = \textcolor{keyword}{false};
+1038 
+1039   \textcolor{keywordflow}{while}(p  < end) \{
+1040     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} d = \mbox{\hyperlink{_port_8h_adc768b10d187a6d70e6b927d589c948d}{READ32LE}}(p);
+1041     
+1042     \textcolor{keywordflow}{if}(d == 0x52504545) \{
+1043       \textcolor{keywordflow}{if}(memcmp(p, \textcolor{stringliteral}{"EEPROM\_"}, 7) == 0) \{
+1044         \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} == 0)
+1045           \mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} = 3;
+1046       \}
+1047     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (d == 0x4D415253) \{
+1048       \textcolor{keywordflow}{if}(memcmp(p, \textcolor{stringliteral}{"SRAM\_"}, 5) == 0) \{
+1049         \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} == 0)
+1050           \mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} = 1;
+1051       \}
+1052     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (d == 0x53414C46) \{
+1053       \textcolor{keywordflow}{if}(memcmp(p, \textcolor{stringliteral}{"FLASH1M\_"}, 8) == 0) \{
+1054         \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} == 0) \{
+1055           \mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} = 2;
+1056           \mbox{\hyperlink{_flash_8cpp_a6cc360d6cd58f7c4ea981de97c808179}{flashSize}} = 0x20000;
+1057         \}
+1058       \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(memcmp(p, \textcolor{stringliteral}{"FLASH"}, 5) == 0) \{
+1059         \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} == 0) \{
+1060           \mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} = 2;
+1061           \mbox{\hyperlink{_flash_8cpp_a6cc360d6cd58f7c4ea981de97c808179}{flashSize}} = 0x10000;
+1062         \}
+1063       \}
+1064     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (d == 0x52494953) \{
+1065       \textcolor{keywordflow}{if}(memcmp(p, \textcolor{stringliteral}{"SIIRTC\_V"}, 8) == 0)
+1066         rtcFound = \textcolor{keyword}{true};
+1067     \}
+1068     p++;
+1069   \} 
+1070   \textcolor{comment}{// if no matches found, then set it to NONE}
+1071   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} == 0) \{
+1072     \mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}} = 5;
+1073   \}
+1074   \mbox{\hyperlink{_r_t_c_8cpp_adeda2e1885e236dfefcf2be3760e6ac1}{rtcEnable}}(rtcFound);
+1075   \mbox{\hyperlink{_globals_8cpp_a8a45d318e0d21c0ab6ab1a54b5be74ea}{cpuSaveType}} = \mbox{\hyperlink{_globals_8cpp_a0e28641550a04c2868ebe031e273e9ac}{saveType}};
+1076   \mbox{\hyperlink{_flash_8cpp_a4d0a651a0b5a03da845c2fd023bef403}{flashSetSize}}(\mbox{\hyperlink{_flash_8cpp_a6cc360d6cd58f7c4ea981de97c808179}{flashSize}});
+1077 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{_util_8h_a29f118c8c6fb8be1f4d2128d6ddd084d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_adf38da3dcfc7b09b213a9a3a530d5b1c}\label{_util_8h_adf38da3dcfc7b09b213a9a3a530d5b1c}} 
+\index{Util.\+h@{Util.\+h}!util\+Get\+Base\+Name@{util\+Get\+Base\+Name}}
+\index{util\+Get\+Base\+Name@{util\+Get\+Base\+Name}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Get\+Base\+Name()}{utilGetBaseName()}}
+{\footnotesize\ttfamily void util\+Get\+Base\+Name (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{,  }\item[{char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 576 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+577 \{
+578   strcpy(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+579 
+580   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a5fef6fff21dbd64547bc61c66bc6aec8}{utilIsGzipFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})) \{
+581     \textcolor{keywordtype}{char} *p = strrchr(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \textcolor{charliteral}{'.'});
+582 
+583     \textcolor{keywordflow}{if}(p)
+584       *p = 0;
+585   \}
+586 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{_util_8h_adf38da3dcfc7b09b213a9a3a530d5b1c_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_adf38da3dcfc7b09b213a9a3a530d5b1c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_ae27f61ca2a7be5ae312a177b9b7eca78}\label{_util_8h_ae27f61ca2a7be5ae312a177b9b7eca78}} 
+\index{Util.\+h@{Util.\+h}!util\+Gz\+Close@{util\+Gz\+Close}}
+\index{util\+Gz\+Close@{util\+Gz\+Close}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Gz\+Close()}{utilGzClose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} util\+Gz\+Close (\begin{DoxyParamCaption}\item[{gz\+File}]{file }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 1021 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1022 \{
+1023   \textcolor{keywordflow}{return} utilGzCloseFunc(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+1024 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_ae27f61ca2a7be5ae312a177b9b7eca78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a99f60350d1f02a32e39fda2978830191}\label{_util_8h_a99f60350d1f02a32e39fda2978830191}} 
+\index{Util.\+h@{Util.\+h}!util\+Gz\+Mem\+Tell@{util\+Gz\+Mem\+Tell}}
+\index{util\+Gz\+Mem\+Tell@{util\+Gz\+Mem\+Tell}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Gz\+Mem\+Tell()}{utilGzMemTell()}}
+{\footnotesize\ttfamily long util\+Gz\+Mem\+Tell (\begin{DoxyParamCaption}\item[{gz\+File}]{file }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 1026 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1027 \{
+1028   \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_ae7b3619f3d6ea142c60284f78af3fe4b}{memtell}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+1029 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{_util_8h_a99f60350d1f02a32e39fda2978830191_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{_util_8h_a99f60350d1f02a32e39fda2978830191_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a4030eff11c2659e960204acd8e8fdbd4}\label{_util_8h_a4030eff11c2659e960204acd8e8fdbd4}} 
+\index{Util.\+h@{Util.\+h}!util\+Gz\+Open@{util\+Gz\+Open}}
+\index{util\+Gz\+Open@{util\+Gz\+Open}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Gz\+Open()}{utilGzOpen()}}
+{\footnotesize\ttfamily gz\+File util\+Gz\+Open (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{file,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{mode }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 993 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+994 \{
+995   utilGzWriteFunc = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} (ZEXPORT *)(\textcolor{keywordtype}{void} *,\textcolor{keywordtype}{void} * \textcolor{keyword}{const}, \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}))gzwrite;
+996   utilGzReadFunc = gzread;
+997   utilGzCloseFunc = gzclose;
+998 
+999   \textcolor{keywordflow}{return} gzopen(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, mode);
+1000 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a4030eff11c2659e960204acd8e8fdbd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a7c3497694953dfa7b0170b41e4b6ce93}\label{_util_8h_a7c3497694953dfa7b0170b41e4b6ce93}} 
+\index{Util.\+h@{Util.\+h}!util\+Gz\+Read@{util\+Gz\+Read}}
+\index{util\+Gz\+Read@{util\+Gz\+Read}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Gz\+Read()}{utilGzRead()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} util\+Gz\+Read (\begin{DoxyParamCaption}\item[{gz\+File}]{file,  }\item[{\mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}}}]{buffer,  }\item[{unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{len }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 1016 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1017 \{
+1018   \textcolor{keywordflow}{return} utilGzReadFunc(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}});
+1019 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a7c3497694953dfa7b0170b41e4b6ce93_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a0c984fb94b8626c6a105fa293fa73d0e}\label{_util_8h_a0c984fb94b8626c6a105fa293fa73d0e}} 
+\index{Util.\+h@{Util.\+h}!util\+Gz\+Write@{util\+Gz\+Write}}
+\index{util\+Gz\+Write@{util\+Gz\+Write}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Gz\+Write()}{utilGzWrite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} util\+Gz\+Write (\begin{DoxyParamCaption}\item[{gz\+File}]{file,  }\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} \mbox{\hyperlink{_util_8cpp_a4d2be85cccbbff059d2c924a70f76c4b}{voidp}}}]{buffer,  }\item[{unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{len }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 1011 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1012 \{
+1013   \textcolor{keywordflow}{return} utilGzWriteFunc(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \mbox{\hyperlink{expr-lex_8cpp_afed088663f8704004425cdae2120b9b3}{len}});
+1014 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a0c984fb94b8626c6a105fa293fa73d0e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_afd15fdc98d04bd3ebc1a707c21c9a1f0}\label{_util_8h_afd15fdc98d04bd3ebc1a707c21c9a1f0}} 
+\index{Util.\+h@{Util.\+h}!util\+Is\+G\+B\+A\+Image@{util\+Is\+G\+B\+A\+Image}}
+\index{util\+Is\+G\+B\+A\+Image@{util\+Is\+G\+B\+A\+Image}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Is\+G\+B\+A\+Image()}{utilIsGBAImage()}}
+{\footnotesize\ttfamily bool util\+Is\+G\+B\+A\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 485 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+486 \{
+487   \mbox{\hyperlink{_util_8cpp_af49b03d3575f207bec7100c3318617c1}{cpuIsMultiBoot}} = \textcolor{keyword}{false};
+488   \textcolor{keywordflow}{if}(strlen(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}) > 4) \{
+489     \textcolor{keyword}{const} \textcolor{keywordtype}{char} * p = strrchr(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{charliteral}{'.'});
+490 
+491     \textcolor{keywordflow}{if}(p != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+492       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".gba"}) == 0)
+493         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+494       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".agb"}) == 0)
+495         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+496       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".bin"}) == 0)
+497         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+498       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".elf"}) == 0)
+499         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+500       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".mb"}) == 0) \{
+501         \mbox{\hyperlink{_util_8cpp_af49b03d3575f207bec7100c3318617c1}{cpuIsMultiBoot}} = \textcolor{keyword}{true};
+502         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+503       \}
+504     \}
+505   \}
+506 
+507   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+508 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_afd15fdc98d04bd3ebc1a707c21c9a1f0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a475390e214d531ed1e247f1b9f1d1e8a}\label{_util_8h_a475390e214d531ed1e247f1b9f1d1e8a}} 
+\index{Util.\+h@{Util.\+h}!util\+Is\+G\+B\+Image@{util\+Is\+G\+B\+Image}}
+\index{util\+Is\+G\+B\+Image@{util\+Is\+G\+B\+Image}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Is\+G\+B\+Image()}{utilIsGBImage()}}
+{\footnotesize\ttfamily bool util\+Is\+G\+B\+Image (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 510 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+511 \{
+512   \textcolor{keywordflow}{if}(strlen(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}) > 4) \{
+513     \textcolor{keyword}{const} \textcolor{keywordtype}{char} * p = strrchr(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{charliteral}{'.'});
+514 
+515     \textcolor{keywordflow}{if}(p != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+516       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".gb"}) == 0)
+517         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+518       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".gbc"}) == 0)
+519         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+520       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".cgb"}) == 0)
+521         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+522       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".sgb"}) == 0)
+523         \textcolor{keywordflow}{return} \textcolor{keyword}{true};      
+524     \}
+525   \}
+526 
+527   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+528 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a475390e214d531ed1e247f1b9f1d1e8a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a57a149550d3c90300a59dcc6a6bfc0fd}\label{_util_8h_a57a149550d3c90300a59dcc6a6bfc0fd}} 
+\index{Util.\+h@{Util.\+h}!util\+Is\+Gzip\+File@{util\+Is\+Gzip\+File}}
+\index{util\+Is\+Gzip\+File@{util\+Is\+Gzip\+File}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Is\+Gzip\+File()}{utilIsGzipFile()}}
+{\footnotesize\ttfamily bool util\+Is\+Gzip\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 560 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+561 \{
+562   \textcolor{keywordflow}{if}(strlen(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}) > 3) \{
+563     \textcolor{keyword}{const} \textcolor{keywordtype}{char} * p = strrchr(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{charliteral}{'.'});
+564 
+565     \textcolor{keywordflow}{if}(p != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+566       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".gz"}) == 0)
+567         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+568       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".z"}) == 0)
+569         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+570     \}
+571   \}
+572 
+573   \textcolor{keywordflow}{return} \textcolor{keyword}{false};  
+574 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a57a149550d3c90300a59dcc6a6bfc0fd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_aaceb2f8756701b5b7b0bf9e7e5c52027}\label{_util_8h_aaceb2f8756701b5b7b0bf9e7e5c52027}} 
+\index{Util.\+h@{Util.\+h}!util\+Is\+Rar\+File@{util\+Is\+Rar\+File}}
+\index{util\+Is\+Rar\+File@{util\+Is\+Rar\+File}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Is\+Rar\+File()}{utilIsRarFile()}}
+{\footnotesize\ttfamily bool util\+Is\+Rar\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{ }\end{DoxyParamCaption})}
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_aaceb2f8756701b5b7b0bf9e7e5c52027_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a523b23cf0d600dd7a4bd28be50125ec3}\label{_util_8h_a523b23cf0d600dd7a4bd28be50125ec3}} 
+\index{Util.\+h@{Util.\+h}!util\+Is\+Zip\+File@{util\+Is\+Zip\+File}}
+\index{util\+Is\+Zip\+File@{util\+Is\+Zip\+File}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Is\+Zip\+File()}{utilIsZipFile()}}
+{\footnotesize\ttfamily bool util\+Is\+Zip\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 530 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+531 \{
+532   \textcolor{keywordflow}{if}(strlen(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}) > 4) \{
+533     \textcolor{keyword}{const} \textcolor{keywordtype}{char} * p = strrchr(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}},\textcolor{charliteral}{'.'});
+534 
+535     \textcolor{keywordflow}{if}(p != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+536       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a3a35e08b2dedf0975d11794eb8de4805}{\_stricmp}}(p, \textcolor{stringliteral}{".zip"}) == 0)
+537         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+538     \}
+539   \}
+540 
+541   \textcolor{keywordflow}{return} \textcolor{keyword}{false};  
+542 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a523b23cf0d600dd7a4bd28be50125ec3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_aa5476c6efd178f9749b3d69378d71b78}\label{_util_8h_aa5476c6efd178f9749b3d69378d71b78}} 
+\index{Util.\+h@{Util.\+h}!util\+Load@{util\+Load}}
+\index{util\+Load@{util\+Load}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Load()}{utilLoad()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}$\ast$ util\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{,  }\item[{bool($\ast$)(\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$)}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 906 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+910 \{
+911   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a2cf6ebd02ebede1a7d167ef8658fc670}{utilIsZipFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})) \{
+912     \textcolor{keywordflow}{return} utilLoadFromZip(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, accept, data, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+913   \}
+914   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a5fef6fff21dbd64547bc61c66bc6aec8}{utilIsGzipFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})) \{
+915     \textcolor{keywordflow}{return} utilLoadGzipFile(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, accept, data, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+916   \}
+917 \textcolor{preprocessor}{#if 0}
+918   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8h_aaceb2f8756701b5b7b0bf9e7e5c52027}{utilIsRarFile}}(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}})) \{
+919     \textcolor{keywordflow}{return} utilLoadRarFile(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, accept, data, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+920   \}
+921 \textcolor{preprocessor}{#endif}
+922   
+923   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *image = data;
+924 
+925   FILE *f = fopen(\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}}, \textcolor{stringliteral}{"rb"});
+926 
+927   \textcolor{keywordflow}{if}(!f) \{
+928     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_acee0c24cbd7878e386b6d6840514c839}{MSG\_ERROR\_OPENING\_IMAGE}}, 
+      \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Error opening image %s"}), \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+929     \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+930   \}
+931 
+932   fseek(f,0,\mbox{\hyperlink{unzip_8cpp_ad2a2e6c114780c3071efd24f16c7f7d8}{SEEK\_END}});
+933   \textcolor{keywordtype}{int} fileSize = ftell(f);
+934   fseek(f,0,\mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}});
+935   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} == 0)
+936     \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = fileSize;
+937 
+938   \textcolor{keywordflow}{if}(image == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+939     image = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)malloc(utilGetSize(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}));
+940     \textcolor{keywordflow}{if}(image == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+941       \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a75bd9db69f45d4539f9d23b149cad1bd}{MSG\_OUT\_OF\_MEMORY}}, \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Failed to allocate memory for %s
+      "}),
+942                     \textcolor{stringliteral}{"data"});
+943       fclose(f);
+944       \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+945     \}
+946     \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = fileSize;
+947   \}
+948   \textcolor{keywordtype}{size\_t} read = fileSize <= \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} ? fileSize : \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}};
+949   \textcolor{keywordtype}{size\_t} r = fread(image, 1, read, f);
+950   fclose(f);
+951 
+952   \textcolor{keywordflow}{if}(r != read) \{
+953     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a2756e12f4c549cbbb4975dfa08c68b40}{MSG\_ERROR\_READING\_IMAGE}},
+954                   \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Error reading image %s"}), \mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}});
+955     \textcolor{keywordflow}{if}(data == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+956       free(image);
+957     \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+958   \}  
+959 
+960   \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = fileSize;
+961   
+962   \textcolor{keywordflow}{return} image;
+963 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{_util_8h_aa5476c6efd178f9749b3d69378d71b78_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_aa5476c6efd178f9749b3d69378d71b78_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a02e6a64e4965d9911ebe6cf6b43fd192}\label{_util_8h_a02e6a64e4965d9911ebe6cf6b43fd192}} 
+\index{Util.\+h@{Util.\+h}!util\+Mem\+Gz\+Open@{util\+Mem\+Gz\+Open}}
+\index{util\+Mem\+Gz\+Open@{util\+Mem\+Gz\+Open}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Mem\+Gz\+Open()}{utilMemGzOpen()}}
+{\footnotesize\ttfamily gz\+File util\+Mem\+Gz\+Open (\begin{DoxyParamCaption}\item[{char $\ast$}]{memory,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{available,  }\item[{char $\ast$}]{mode }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 1002 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1003 \{
+1004   utilGzWriteFunc = \mbox{\hyperlink{memgzio_8c_ab3c39dfe0bb80fc7f76e21b586dd0b97}{memgzwrite}};
+1005   utilGzReadFunc = \mbox{\hyperlink{memgzio_8c_a653313e703474c7629c7fee014b91931}{memgzread}};
+1006   utilGzCloseFunc = \mbox{\hyperlink{memgzio_8c_add4b49c11836bf9d6d900a3e53780243}{memgzclose}};
+1007 
+1008   \textcolor{keywordflow}{return} \mbox{\hyperlink{memgzio_8c_abd908bca32c36fd032ba69adaaa12523}{memgzopen}}(memory, available, mode);  
+1009 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a02e6a64e4965d9911ebe6cf6b43fd192_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{_util_8h_a02e6a64e4965d9911ebe6cf6b43fd192_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a68ad8f99ee5d4b1c900c8611b9ea1720}\label{_util_8h_a68ad8f99ee5d4b1c900c8611b9ea1720}} 
+\index{Util.\+h@{Util.\+h}!util\+Put\+Dword@{util\+Put\+Dword}}
+\index{util\+Put\+Dword@{util\+Put\+Dword}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Put\+Dword()}{utilPutDword()}}
+{\footnotesize\ttfamily void util\+Put\+Dword (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 190 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+191 \{
+192   *p++ = value & 255;
+193   *p++ = (value >> 8) & 255;
+194   *p++ = (value >> 16) & 255;
+195   *p = (value >> 24) & 255;
+196 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a68ad8f99ee5d4b1c900c8611b9ea1720_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_ac254d0565afa11c8f95d0efd442e5d6d}\label{_util_8h_ac254d0565afa11c8f95d0efd442e5d6d}} 
+\index{Util.\+h@{Util.\+h}!util\+Put\+Word@{util\+Put\+Word}}
+\index{util\+Put\+Word@{util\+Put\+Word}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Put\+Word()}{utilPutWord()}}
+{\footnotesize\ttfamily void util\+Put\+Word (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 198 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+199 \{
+200   *p++ = value & 255;
+201   *p = (value >> 8) & 255;
+202 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_ac254d0565afa11c8f95d0efd442e5d6d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a0470a6ff27a6e11e39454beda01b8f8c}\label{_util_8h_a0470a6ff27a6e11e39454beda01b8f8c}} 
+\index{Util.\+h@{Util.\+h}!util\+Read\+Data@{util\+Read\+Data}}
+\index{util\+Read\+Data@{util\+Read\+Data}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Read\+Data()}{utilReadData()}}
+{\footnotesize\ttfamily void util\+Read\+Data (\begin{DoxyParamCaption}\item[{gz\+File}]{,  }\item[{\mbox{\hyperlink{structvariable__desc}{variable\+\_\+desc}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 977 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+978 \{
+979   \textcolor{keywordflow}{while}(data->address) \{
+980     \mbox{\hyperlink{_util_8cpp_a7c3497694953dfa7b0170b41e4b6ce93}{utilGzRead}}(gzFile, data->address, data->size);
+981     data++;
+982   \}
+983 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{_util_8h_a0470a6ff27a6e11e39454beda01b8f8c_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{_util_8h_a0470a6ff27a6e11e39454beda01b8f8c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a7e12c3b92f76a948e194da25a2a12348}\label{_util_8h_a7e12c3b92f76a948e194da25a2a12348}} 
+\index{Util.\+h@{Util.\+h}!util\+Read\+Int@{util\+Read\+Int}}
+\index{util\+Read\+Int@{util\+Read\+Int}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Read\+Int()}{utilReadInt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} util\+Read\+Int (\begin{DoxyParamCaption}\item[{gz\+File}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 970 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+971 \{
+972   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0;
+973   \mbox{\hyperlink{_util_8cpp_a7c3497694953dfa7b0170b41e4b6ce93}{utilGzRead}}(gzFile, &\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+974   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+975 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=243pt]{_util_8h_a7e12c3b92f76a948e194da25a2a12348_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{_util_8h_a7e12c3b92f76a948e194da25a2a12348_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a5d5317ea1bb74f382ceeffba7eeaa797}\label{_util_8h_a5d5317ea1bb74f382ceeffba7eeaa797}} 
+\index{Util.\+h@{Util.\+h}!util\+Update\+System\+Color\+Maps@{util\+Update\+System\+Color\+Maps}}
+\index{util\+Update\+System\+Color\+Maps@{util\+Update\+System\+Color\+Maps}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Update\+System\+Color\+Maps()}{utilUpdateSystemColorMaps()}}
+{\footnotesize\ttfamily void util\+Update\+System\+Color\+Maps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 1079 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1080 \{
+1081   \textcolor{keywordflow}{switch}(\mbox{\hyperlink{_util_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}}) \{
+1082   \textcolor{keywordflow}{case} 16: 
+1083     \{
+1084       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < 0x10000; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+1085         \mbox{\hyperlink{_util_8cpp_a185e030efe12f16a3cdf8e461bb9163b}{systemColorMap16}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}] = ((\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} & 0x1f) << \mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}}) |
+1086           (((\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} & 0x3e0) >> 5) << \mbox{\hyperlink{_util_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}}) |
+1087           (((\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} & 0x7c00) >> 10) << \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}});
+1088       \}
+1089     \}
+1090     \textcolor{keywordflow}{break};
+1091   \textcolor{keywordflow}{case} 24:
+1092   \textcolor{keywordflow}{case} 32:
+1093     \{
+1094       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < 0x10000; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+1095         \mbox{\hyperlink{_util_8cpp_a6b26bbc05fe4abed7788e2ad283fed11}{systemColorMap32}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}] = ((\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} & 0x1f) << \mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}}) |
+1096           (((\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} & 0x3e0) >> 5) << \mbox{\hyperlink{_util_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}}) |
+1097           (((\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} & 0x7c00) >> 10) << \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}});
+1098       \}
+1099     \}
+1100     \textcolor{keywordflow}{break};
+1101   \}
+1102 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_util_8h_a5d5317ea1bb74f382ceeffba7eeaa797_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a86a28c32bd0af05bf0bfe6751384e124}\label{_util_8h_a86a28c32bd0af05bf0bfe6751384e124}} 
+\index{Util.\+h@{Util.\+h}!util\+Write\+B\+MP@{util\+Write\+B\+MP}}
+\index{util\+Write\+B\+MP@{util\+Write\+B\+MP}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Write\+B\+M\+P()}{utilWriteBMP()}}
+{\footnotesize\ttfamily void util\+Write\+B\+MP (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 204 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+205 \{
+206   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}};
+207 
+208   \textcolor{keywordtype}{int} sizeX = w;
+209   \textcolor{keywordtype}{int} sizeY = h;
+210 
+211   \textcolor{keywordflow}{switch}(\mbox{\hyperlink{_util_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}}) \{
+212   \textcolor{keywordflow}{case} 16:
+213     \{
+214       \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *p = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)(\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+(w+2)*(h)*2); \textcolor{comment}{// skip first black line}
+215       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+216         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+217           \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} v = *p++;
+218 
+219           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) & 0x01f) << 3; \textcolor{comment}{// B      }
+220           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}}) & 0x001f) << 3; \textcolor{comment}{// G }
+221           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}}) & 0x001f) << 3; \textcolor{comment}{// R}
+222         \}
+223         p++; \textcolor{comment}{// skip black pixel for filters}
+224         p++; \textcolor{comment}{// skip black pixel for filters}
+225         p -= 2*(w+2);
+226       \}
+227     \}
+228     \textcolor{keywordflow}{break};
+229   \textcolor{keywordflow}{case} 24:
+230     \{
+231       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *pixU8 = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+3*w*(h-1);
+232       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+233         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+234           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}} > \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) \{
+235             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// B}
+236             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// G}
+237             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// R           }
+238           \} \textcolor{keywordflow}{else} \{
+239             \textcolor{keywordtype}{int} red = *pixU8++;
+240             \textcolor{keywordtype}{int} green = *pixU8++;
+241             \textcolor{keywordtype}{int} blue = *pixU8++;
+242             
+243             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = blue;
+244             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = green;
+245             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = red;
+246           \}
+247         \}
+248         pixU8 -= 2*3*w;
+249       \}
+250     \}
+251     \textcolor{keywordflow}{break};
+252   \textcolor{keywordflow}{case} 32:
+253     \{
+254       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *pixU32 = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *)(\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+4*(w+1)*(h));
+255       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+256         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+257           \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} v = *pixU32++;
+258 
+259           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) & 0x001f) << 3; \textcolor{comment}{// B     }
+260           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}}) & 0x001f) << 3; \textcolor{comment}{// G}
+261           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}}) & 0x001f) << 3; \textcolor{comment}{// R}
+262         \}
+263         pixU32++;
+264         pixU32 -= 2*(w+1);
+265       \}
+266     \}
+267     \textcolor{keywordflow}{break};
+268   \}  
+269 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{_util_8h_a86a28c32bd0af05bf0bfe6751384e124_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_af02cd604d272a2ba0a44d0363f3cab66}\label{_util_8h_af02cd604d272a2ba0a44d0363f3cab66}} 
+\index{Util.\+h@{Util.\+h}!util\+Write\+B\+M\+P\+File@{util\+Write\+B\+M\+P\+File}}
+\index{util\+Write\+B\+M\+P\+File@{util\+Write\+B\+M\+P\+File}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Write\+B\+M\+P\+File()}{utilWriteBMPFile()}}
+{\footnotesize\ttfamily bool util\+Write\+B\+M\+P\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 271 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+272 \{
+273   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} writeBuffer[512 * 3];
+274   
+275   FILE *fp = fopen(fileName,\textcolor{stringliteral}{"wb"});
+276 
+277   \textcolor{keywordflow}{if}(!fp) \{
+278     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a165f1f2539e202f0a24e6e9583c63475}{MSG\_ERROR\_CREATING\_FILE}}, 
+      \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Error creating file %s"}), fileName);
+279     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+280   \}
+281 
+282   \textcolor{keyword}{struct }\{
+283     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} ident[2];
+284     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} filesize[4];
+285     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} reserved[4];
+286     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} dataoffset[4];
+287     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} headersize[4];
+288     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} width[4];
+289     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} height[4];
+290     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} planes[2];
+291     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} bitsperpixel[2];
+292     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} compression[4];
+293     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} datasize[4];
+294     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} hres[4];
+295     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} vres[4];
+296     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} colors[4];
+297     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} importantcolors[4];
+298     \textcolor{comment}{//    u8 pad[2];}
+299   \} bmpheader;
+300   memset(&bmpheader, 0, \textcolor{keyword}{sizeof}(bmpheader));
+301 
+302   bmpheader.ident[0] = \textcolor{charliteral}{'B'};
+303   bmpheader.ident[1] = \textcolor{charliteral}{'M'};
+304 
+305   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} fsz = \textcolor{keyword}{sizeof}(bmpheader) + w*h*3;
+306   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.filesize, fsz);
+307   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.dataoffset, 0x36);
+308   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.headersize, 0x28);
+309   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.width, w);
+310   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.height, h);
+311   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.planes, 1);
+312   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.bitsperpixel, 24);
+313   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.datasize, 3*w*h);
+314 
+315   fwrite(&bmpheader, 1, \textcolor{keyword}{sizeof}(bmpheader), fp);
+316 
+317   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+318 
+319   \textcolor{keywordtype}{int} sizeX = w;
+320   \textcolor{keywordtype}{int} sizeY = h;
+321 
+322   \textcolor{keywordflow}{switch}(\mbox{\hyperlink{_util_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}}) \{
+323   \textcolor{keywordflow}{case} 16:
+324     \{
+325       \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *p = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)(\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+(w+2)*(h)*2); \textcolor{comment}{// skip first black line}
+326       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+327         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+328           \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} v = *p++;
+329 
+330           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) & 0x01f) << 3; \textcolor{comment}{// B      }
+331           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}}) & 0x001f) << 3; \textcolor{comment}{// G }
+332           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}}) & 0x001f) << 3; \textcolor{comment}{// R}
+333         \}
+334         p++; \textcolor{comment}{// skip black pixel for filters}
+335         p++; \textcolor{comment}{// skip black pixel for filters}
+336         p -= 2*(w+2);
+337         fwrite(writeBuffer, 1, 3*w, fp);
+338         
+339         \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+340       \}
+341     \}
+342     \textcolor{keywordflow}{break};
+343   \textcolor{keywordflow}{case} 24:
+344     \{
+345       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *pixU8 = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+3*w*(h-1);
+346       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+347         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+348           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}} > \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) \{
+349             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// B}
+350             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// G}
+351             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// R           }
+352           \} \textcolor{keywordflow}{else} \{
+353             \textcolor{keywordtype}{int} red = *pixU8++;
+354             \textcolor{keywordtype}{int} green = *pixU8++;
+355             \textcolor{keywordtype}{int} blue = *pixU8++;
+356             
+357             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = blue;
+358             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = green;
+359             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = red;
+360           \}
+361         \}
+362         pixU8 -= 2*3*w;
+363         fwrite(writeBuffer, 1, 3*w, fp);
+364         
+365         \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+366       \}
+367     \}
+368     \textcolor{keywordflow}{break};
+369   \textcolor{keywordflow}{case} 32:
+370     \{
+371       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *pixU32 = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *)(\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+4*(w+1)*(h));
+372       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+373         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+374           \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} v = *pixU32++;
+375 
+376           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) & 0x001f) << 3; \textcolor{comment}{// B     }
+377           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}}) & 0x001f) << 3; \textcolor{comment}{// G}
+378           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}}) & 0x001f) << 3; \textcolor{comment}{// R}
+379         \}
+380         pixU32++;
+381         pixU32 -= 2*(w+1);
+382         
+383         fwrite(writeBuffer, 1, 3*w, fp);
+384         
+385         \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+386       \}
+387     \}
+388     \textcolor{keywordflow}{break};
+389   \}
+390 
+391   fclose(fp);
+392 
+393   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+394 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{_util_8h_af02cd604d272a2ba0a44d0363f3cab66_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{_util_8h_af02cd604d272a2ba0a44d0363f3cab66_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a0c9f222455d76a6b24a371922106934e}\label{_util_8h_a0c9f222455d76a6b24a371922106934e}} 
+\index{Util.\+h@{Util.\+h}!util\+Write\+Data@{util\+Write\+Data}}
+\index{util\+Write\+Data@{util\+Write\+Data}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Write\+Data()}{utilWriteData()}}
+{\footnotesize\ttfamily void util\+Write\+Data (\begin{DoxyParamCaption}\item[{gz\+File}]{,  }\item[{\mbox{\hyperlink{structvariable__desc}{variable\+\_\+desc}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 985 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+986 \{
+987   \textcolor{keywordflow}{while}(data->address) \{
+988     \mbox{\hyperlink{_util_8cpp_a0c984fb94b8626c6a105fa293fa73d0e}{utilGzWrite}}(gzFile, data->address, data->size);
+989     data++;
+990   \}
+991 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{_util_8h_a0c9f222455d76a6b24a371922106934e_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=291pt]{_util_8h_a0c9f222455d76a6b24a371922106934e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_ad7383f3cbe45a6e4848e55cd7ac3c9af}\label{_util_8h_ad7383f3cbe45a6e4848e55cd7ac3c9af}} 
+\index{Util.\+h@{Util.\+h}!util\+Write\+Int@{util\+Write\+Int}}
+\index{util\+Write\+Int@{util\+Write\+Int}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Write\+Int()}{utilWriteInt()}}
+{\footnotesize\ttfamily void util\+Write\+Int (\begin{DoxyParamCaption}\item[{gz\+File}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 965 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+966 \{
+967   \mbox{\hyperlink{_util_8cpp_a0c984fb94b8626c6a105fa293fa73d0e}{utilGzWrite}}(gzFile, &\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}, \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));
+968 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{_util_8h_ad7383f3cbe45a6e4848e55cd7ac3c9af_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{_util_8h_ad7383f3cbe45a6e4848e55cd7ac3c9af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_util_8h_a04911fef03366718b828d8a296b3f43a}\label{_util_8h_a04911fef03366718b828d8a296b3f43a}} 
+\index{Util.\+h@{Util.\+h}!util\+Write\+P\+N\+G\+File@{util\+Write\+P\+N\+G\+File}}
+\index{util\+Write\+P\+N\+G\+File@{util\+Write\+P\+N\+G\+File}!Util.\+h@{Util.\+h}}
+\subsubsection{\texorpdfstring{util\+Write\+P\+N\+G\+File()}{utilWritePNGFile()}}
+{\footnotesize\ttfamily bool util\+Write\+P\+N\+G\+File (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+Util.\+cpp 파일의 62 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+63 \{
+64   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} writeBuffer[512 * 3];
+65   
+66   FILE *fp = fopen(fileName,\textcolor{stringliteral}{"wb"});
+67 
+68   \textcolor{keywordflow}{if}(!fp) \{
+69     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a165f1f2539e202f0a24e6e9583c63475}{MSG\_ERROR\_CREATING\_FILE}}, 
+      \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Error creating file %s"}), fileName);
+70     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+71   \}
+72   
+73   png\_structp png\_ptr = png\_create\_write\_struct(PNG\_LIBPNG\_VER\_STRING,
+74                                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+75                                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+76                                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+77   \textcolor{keywordflow}{if}(!png\_ptr) \{
+78     fclose(fp);
+79     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+80   \}
+81 
+82   png\_infop info\_ptr = png\_create\_info\_struct(png\_ptr);
+83 
+84   \textcolor{keywordflow}{if}(!info\_ptr) \{
+85     png\_destroy\_write\_struct(&png\_ptr,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+86     fclose(fp);
+87     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+88   \}
+89 
+90   \textcolor{keywordflow}{if}(setjmp(png\_ptr->jmpbuf)) \{
+91     png\_destroy\_write\_struct(&png\_ptr,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+92     fclose(fp);
+93     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+94   \}
+95 
+96   png\_init\_io(png\_ptr,fp);
+97 
+98   png\_set\_IHDR(png\_ptr,
+99                info\_ptr,
+100                w,
+101                h,
+102                8,
+103                PNG\_COLOR\_TYPE\_RGB,
+104                PNG\_INTERLACE\_NONE,
+105                PNG\_COMPRESSION\_TYPE\_DEFAULT,
+106                PNG\_FILTER\_TYPE\_DEFAULT);
+107 
+108   png\_write\_info(png\_ptr,info\_ptr);
+109 
+110   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+111 
+112   \textcolor{keywordtype}{int} sizeX = w;
+113   \textcolor{keywordtype}{int} sizeY = h;
+114 
+115   \textcolor{keywordflow}{switch}(\mbox{\hyperlink{_util_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}}) \{
+116   \textcolor{keywordflow}{case} 16:
+117     \{
+118       \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *p = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)(\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+(w+2)*2); \textcolor{comment}{// skip first black line}
+119       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+120          \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+121           \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} v = *p++;
+122           
+123           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}}) & 0x001f) << 3; \textcolor{comment}{// R}
+124           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}}) & 0x001f) << 3; \textcolor{comment}{// G }
+125           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) & 0x01f) << 3; \textcolor{comment}{// B}
+126         \}
+127         p++; \textcolor{comment}{// skip black pixel for filters}
+128         p++; \textcolor{comment}{// skip black pixel for filters}
+129         png\_write\_row(png\_ptr,writeBuffer);
+130         
+131         \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+132       \}
+133     \}
+134     \textcolor{keywordflow}{break};
+135   \textcolor{keywordflow}{case} 24:
+136     \{
+137       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *pixU8 = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}};
+138       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+139         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+140           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}} < \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) \{
+141             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// R}
+142             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// G}
+143             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// B}
+144           \} \textcolor{keywordflow}{else} \{
+145             \textcolor{keywordtype}{int} blue = *pixU8++;
+146             \textcolor{keywordtype}{int} green = *pixU8++;
+147             \textcolor{keywordtype}{int} red = *pixU8++;
+148             
+149             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = red;
+150             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = green;
+151             *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = blue;
+152           \}
+153         \}
+154         png\_write\_row(png\_ptr,writeBuffer);
+155         
+156         \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+157       \}
+158     \}
+159     \textcolor{keywordflow}{break};
+160   \textcolor{keywordflow}{case} 32:
+161     \{
+162       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *pixU32 = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *)(\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+4*(w+1));
+163       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+164         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+165           \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} v = *pixU32++;
+166           
+167           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}}) & 0x001f) << 3; \textcolor{comment}{// R}
+168           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}}) & 0x001f) << 3; \textcolor{comment}{// G}
+169           *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = ((v >> \mbox{\hyperlink{_util_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}}) & 0x001f) << 3; \textcolor{comment}{// B}
+170         \}
+171         pixU32++;
+172         
+173         png\_write\_row(png\_ptr,writeBuffer);
+174         
+175         \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+176       \}
+177     \}
+178     \textcolor{keywordflow}{break};
+179   \}
+180   
+181   png\_write\_end(png\_ptr, info\_ptr);
+182 
+183   png\_destroy\_write\_struct(&png\_ptr, &info\_ptr);
+184 
+185   fclose(fp);
+186 
+187   \textcolor{keywordflow}{return} \textcolor{keyword}{true};  
+188 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{_util_8h_a04911fef03366718b828d8a296b3f43a_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{_util_8h_a04911fef03366718b828d8a296b3f43a_icgraph}
+\end{center}
+\end{figure}

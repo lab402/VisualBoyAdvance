@@ -1,0 +1,10 @@
+<map id="elfGetObjectAttributes" name="elfGetObjectAttributes">
+<area shape="rect" id="node2" href="$elf_8cpp.html#a3ddc707814bbb91b3c6123af5841f725" title="elfParseObject" alt="" coords="204,62,311,88"/>
+<area shape="rect" id="node3" href="$elf_8cpp.html#a9c17e9ba51ae96a7fdc57c61c3146899" title="elfParseType" alt="" coords="721,11,818,38"/>
+<area shape="rect" id="node4" href="$elf_8cpp.html#a4e6431f5f20e1aad45627cc0f2dbc53a" title="elfParseBlock" alt="" coords="359,36,461,63"/>
+<area shape="rect" id="node5" href="$elf_8cpp.html#a2a3d342ad0ad1bc1db05265d4d580951" title="elfParseFunction" alt="" coords="509,36,628,63"/>
+<area shape="rect" id="node6" href="$elf_8cpp.html#ac7fb301207eb827ea83c833094d908eb" title="elfParseCompileUnitChildren" alt="" coords="676,87,863,114"/>
+<area shape="rect" id="node7" href="$elf_8cpp.html#a064cb5f206feeeb74557c95d0c3c45e2" title="elfParseCompUnit" alt="" coords="911,87,1037,114"/>
+<area shape="rect" id="node8" href="$elf_8cpp.html#ae737de6c729da6007beee92d616221ce" title="elfReadProgram" alt="" coords="1085,87,1200,114"/>
+<area shape="rect" id="node9" href="$elf_8h.html#a435d491e508bb34a0ffe91a8f4491b3c" title="elfRead" alt="" coords="1248,87,1313,114"/>
+</map>

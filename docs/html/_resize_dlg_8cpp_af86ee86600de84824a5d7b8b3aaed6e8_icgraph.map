@@ -1,0 +1,17 @@
+<map id="ResizeDlgUpdateGripperRect" name="ResizeDlgUpdateGripperRect">
+<area shape="rect" id="node2" href="$_resize_dlg_8cpp.html#a1de1329cfe834f6067987ae67b4db837" title="ResizeDlgUpdateGripper" alt="" coords="249,132,413,159"/>
+<area shape="rect" id="node5" href="$class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc" title="ResizeDlg::AddDialogData" alt="" coords="244,233,419,260"/>
+<area shape="rect" id="node3" href="$class_resize_dlg.html#ae2d0d2b44dd32f668c6d9091b14bfc00" title="ResizeDlg::UpdateWindowSize" alt="" coords="467,31,669,57"/>
+<area shape="rect" id="node4" href="$class_resize_dlg.html#a9d3f421da2488db11224b0508be654fd" title="ResizeDlg::OnWndMsg" alt="" coords="735,5,894,32"/>
+<area shape="rect" id="node6" href="$class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5" title="ResizeDlg::SetData" alt="" coords="500,259,636,285"/>
+<area shape="rect" id="node7" href="$class_disassemble.html#a23e74e8f32758c5b6ff63914633e2ab5" title="Disassemble::OnInitDialog" alt="" coords="727,56,902,83"/>
+<area shape="rect" id="node8" href="$class_g_b_disassemble.html#a62b06166477944c21edeeda699fcdba5" title="GBDisassemble::OnInitDialog" alt="" coords="717,107,912,133"/>
+<area shape="rect" id="node9" href="$class_g_b_map_view.html#a3bcd4b5e76fbe0ae04809770fce64765" title="GBMapView::OnInitDialog" alt="" coords="729,157,901,184"/>
+<area shape="rect" id="node10" href="$class_g_b_oam_view.html#a633fdb700275a8a8ce96978472c643b5" title="GBOamView::OnInitDialog" alt="" coords="727,208,902,235"/>
+<area shape="rect" id="node11" href="$class_g_b_tile_view.html#a4d97fe7dcfd863756d993834548d2ca6" title="GBTileView::OnInitDialog" alt="" coords="731,259,898,285"/>
+<area shape="rect" id="node12" href="$class_i_o_viewer.html#a4d36007016944a2ed21ee72323204f00" title="IOViewer::OnInitDialog" alt="" coords="739,309,891,336"/>
+<area shape="rect" id="node13" href="$class_logging.html#a5a0a6200a3d55702597a73f7fe8794f5" title="Logging::OnInitDialog" alt="" coords="742,360,887,387"/>
+<area shape="rect" id="node14" href="$class_map_view.html#a10c4f05b5c4289dfc08c6501de3cf40c" title="MapView::OnInitDialog" alt="" coords="738,411,891,437"/>
+<area shape="rect" id="node15" href="$class_oam_view.html#a925c72977181efd7be81b302af7ed071" title="OamView::OnInitDialog" alt="" coords="737,461,893,488"/>
+<area shape="rect" id="node16" href="$class_tile_view.html#a597e32fa09187fe6ea909cca947bfbc1" title="TileView::OnInitDialog" alt="" coords="741,512,889,539"/>
+</map>

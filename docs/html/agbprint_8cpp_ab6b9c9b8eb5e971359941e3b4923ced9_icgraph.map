@@ -1,0 +1,6 @@
+<map id="agbPrintIsEnabled" name="agbPrintIsEnabled">
+<area shape="rect" id="node2" href="$class_main_wnd.html#ac4ff3f77ecc063505ba2565d5f54277b" title="MainWnd::OnOptionsEmulator\lAgbprint" alt="" coords="180,5,379,47"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#aad1f7f9bff514babc68d81e52bdfdd92" title="MainWnd::OnUpdateOptions\lEmulatorAgbprint" alt="" coords="185,71,373,112"/>
+<area shape="rect" id="node4" href="$class_v_b_a.html#aa09989acc3edb3991dc98a88655dabdb" title="VBA::saveSettings" alt="" coords="214,137,345,163"/>
+<area shape="rect" id="node5" href="$class_v_b_a.html#a601b4d3c159fde6e6232749e47af58b1" title="VBA::~VBA" alt="" coords="427,137,519,163"/>
+</map>

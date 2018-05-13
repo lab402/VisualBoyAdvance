@@ -1,0 +1,8 @@
+<map id="CCmdAccelOb::Add" name="CCmdAccelOb::Add">
+<area shape="rect" id="node2" href="$class_c_accelerator_manager.html#ac9e0e988625c9687666a9f582f9b3536" title="CAcceleratorManager\l::AddAccel" alt="" coords="192,71,339,112"/>
+<area shape="rect" id="node7" href="$class_c_accelerator_manager.html#a8e87ae6f5464a4fa052c91c0ee361b6d" title="CAcceleratorManager\l::Load" alt="" coords="589,129,736,171"/>
+<area shape="rect" id="node3" href="$class_c_accelerator_manager.html#a96957fd8ed0a15d0dbc508359824db3c" title="CAcceleratorManager\l::SetAccel" alt="" coords="387,5,533,47"/>
+<area shape="rect" id="node4" href="$class_c_accelerator_manager.html#a05227e733c2c5d4a4d8074bf28a4f333" title="CAcceleratorManager\l::AddCommandAccel" alt="" coords="387,71,533,112"/>
+<area shape="rect" id="node5" href="$_commands_8cpp.html#aa8445924009cdf4d2629c07e555ede0f" title="winAccelAddCommands" alt="" coords="581,78,744,105"/>
+<area shape="rect" id="node6" href="$class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="792,107,915,134"/>
+</map>

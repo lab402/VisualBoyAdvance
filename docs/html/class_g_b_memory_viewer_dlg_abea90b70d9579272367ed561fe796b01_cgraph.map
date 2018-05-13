@@ -1,0 +1,9 @@
+<map id="GBMemoryViewerDlg::OnSave" name="GBMemoryViewerDlg::OnSave">
+<area shape="rect" id="node2" href="$class_memory_viewer_address_size.html#adb284f02039e70a6b0c44e0bacf9feff" title="MemoryViewerAddressSize\l::setAddress" alt="" coords="208,5,391,47"/>
+<area shape="rect" id="node3" href="$class_memory_viewer.html#a7c3931c2a0b1247e4a093a1688d443bf" title="MemoryViewer::getCurrent\lAddress" alt="" coords="211,71,387,112"/>
+<area shape="rect" id="node4" href="$class_v_b_a.html#a228edf26b0dc4129658c174ee5a3c27c" title="VBA::winLoadFilter" alt="" coords="233,137,366,163"/>
+<area shape="rect" id="node5" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="439,162,565,189"/>
+<area shape="rect" id="node6" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="240,238,359,265"/>
+<area shape="rect" id="node7" href="$class_memory_viewer_address_size.html#ade3cfceb89cd35954e57d10dba882eb1" title="MemoryViewerAddressSize\l::getSize" alt="" coords="208,289,391,331"/>
+<area shape="rect" id="node8" href="$class_memory_viewer_address_size.html#a3d31492056e5b255aa882f7732671c4c" title="MemoryViewerAddressSize\l::getAddress" alt="" coords="208,355,391,396"/>
+</map>

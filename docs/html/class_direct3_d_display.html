@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_direct3_d_display.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -71,62 +95,624 @@ $(function() {
 <div class="dynheader">
 Direct3DDisplay에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_direct3_d_display.png" usemap="#Direct3DDisplay_map" alt=""/>
-  <map id="Direct3DDisplay_map" name="Direct3DDisplay_map">
-<area href="class_i_display.html" alt="IDisplay" shape="rect" coords="0,0,104,24"/>
+<div class="center"><img src="class_direct3_d_display__inherit__graph.png" border="0" usemap="#_direct3_d_display_inherit__map" alt="Inheritance graph"/></div>
+<map name="_direct3_d_display_inherit__map" id="_direct3_d_display_inherit__map">
+<area shape="rect" id="node2" href="class_i_display.html" title="{IDisplay\n||+ IDisplay()\l+ ~IDisplay()\l+ initialize()\l+ cleanup()\l+ render()\l+ checkFullScreen()\l+ renderMenu()\l+ clear()\l+ changeRenderSize()\l+ resize()\l+ setOption()\l+ getType()\l+ isSkinSupported()\l+ selectFullScreenMode()\l}" alt="" coords="5,5,176,273"/>
 </map>
- </div></div>
+</div>
+<div class="dynheader">
+Direct3DDisplay에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_direct3_d_display__coll__graph.png" border="0" usemap="#_direct3_d_display_coll__map" alt="Collaboration graph"/></div>
+<map name="_direct3_d_display_coll__map" id="_direct3_d_display_coll__map">
+<area shape="rect" id="node2" href="class_i_display.html" title="{IDisplay\n||+ IDisplay()\l+ ~IDisplay()\l+ initialize()\l+ cleanup()\l+ render()\l+ checkFullScreen()\l+ renderMenu()\l+ clear()\l+ changeRenderSize()\l+ resize()\l+ setOption()\l+ getType()\l+ isSkinSupported()\l+ selectFullScreenMode()\l}" alt="" coords="5,5,176,273"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a517a805d2a5ebb732671851162920868"><td class="memItemLeft" align="right" valign="top"><a id="a517a805d2a5ebb732671851162920868"></a>
-virtual DISPLAY_TYPE&#160;</td><td class="memItemRight" valign="bottom"><b>getType</b> ()</td></tr>
+<tr class="memitem:affbd75238a993397fd512e42e7299bc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#affbd75238a993397fd512e42e7299bc0">Direct3DDisplay</a> ()</td></tr>
+<tr class="separator:affbd75238a993397fd512e42e7299bc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11987c1fc63954e5cdf7efa717631554"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a11987c1fc63954e5cdf7efa717631554">~Direct3DDisplay</a> ()</td></tr>
+<tr class="separator:a11987c1fc63954e5cdf7efa717631554"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a517a805d2a5ebb732671851162920868"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_display_8h.html#aa50f63b0688d0250e0be64d8401d09a0">DISPLAY_TYPE</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a517a805d2a5ebb732671851162920868">getType</a> ()</td></tr>
 <tr class="separator:a517a805d2a5ebb732671851162920868"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b8dfd84005816382396677e23d38879"><td class="memItemLeft" align="right" valign="top"><a id="a8b8dfd84005816382396677e23d38879"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> ()</td></tr>
+<tr class="memitem:a8b8dfd84005816382396677e23d38879"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a8b8dfd84005816382396677e23d38879">initialize</a> ()</td></tr>
 <tr class="separator:a8b8dfd84005816382396677e23d38879"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabdde19c435c484db2e334eca28a8147"><td class="memItemLeft" align="right" valign="top"><a id="aabdde19c435c484db2e334eca28a8147"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>cleanup</b> ()</td></tr>
+<tr class="memitem:aabdde19c435c484db2e334eca28a8147"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#aabdde19c435c484db2e334eca28a8147">cleanup</a> ()</td></tr>
 <tr class="separator:aabdde19c435c484db2e334eca28a8147"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67b8e31e5bb726cb82efbfb0be90935f"><td class="memItemLeft" align="right" valign="top"><a id="a67b8e31e5bb726cb82efbfb0be90935f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>clear</b> ()</td></tr>
+<tr class="memitem:a67b8e31e5bb726cb82efbfb0be90935f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a67b8e31e5bb726cb82efbfb0be90935f">clear</a> ()</td></tr>
 <tr class="separator:a67b8e31e5bb726cb82efbfb0be90935f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c789bf663cfd32bb2827b9a0f0429c7"><td class="memItemLeft" align="right" valign="top"><a id="a1c789bf663cfd32bb2827b9a0f0429c7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> ()</td></tr>
+<tr class="memitem:a1c789bf663cfd32bb2827b9a0f0429c7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a1c789bf663cfd32bb2827b9a0f0429c7">render</a> ()</td></tr>
 <tr class="separator:a1c789bf663cfd32bb2827b9a0f0429c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a099bbef2eaaf90efb3ecb00c68103fe7"><td class="memItemLeft" align="right" valign="top"><a id="a099bbef2eaaf90efb3ecb00c68103fe7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>renderMenu</b> ()</td></tr>
+<tr class="memitem:a099bbef2eaaf90efb3ecb00c68103fe7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a099bbef2eaaf90efb3ecb00c68103fe7">renderMenu</a> ()</td></tr>
 <tr class="separator:a099bbef2eaaf90efb3ecb00c68103fe7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74e1d9129809bda1014bac928cd0fe52"><td class="memItemLeft" align="right" valign="top"><a id="a74e1d9129809bda1014bac928cd0fe52"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>changeRenderSize</b> (int w, int h)</td></tr>
+<tr class="memitem:a74e1d9129809bda1014bac928cd0fe52"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a74e1d9129809bda1014bac928cd0fe52">changeRenderSize</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> w, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> h)</td></tr>
 <tr class="separator:a74e1d9129809bda1014bac928cd0fe52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e6e22fc78ec40c164ec7943581bcf7f"><td class="memItemLeft" align="right" valign="top"><a id="a0e6e22fc78ec40c164ec7943581bcf7f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resize</b> (int w, int h)</td></tr>
+<tr class="memitem:a0e6e22fc78ec40c164ec7943581bcf7f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a0e6e22fc78ec40c164ec7943581bcf7f">resize</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> w, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> h)</td></tr>
 <tr class="separator:a0e6e22fc78ec40c164ec7943581bcf7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fb19225514b70c7178aa871c9852936"><td class="memItemLeft" align="right" valign="top"><a id="a9fb19225514b70c7178aa871c9852936"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>setOption</b> (const char *<a class="el" href="structoption.html">option</a>, int value)</td></tr>
+<tr class="memitem:a9fb19225514b70c7178aa871c9852936"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a9fb19225514b70c7178aa871c9852936">setOption</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *<a class="el" href="structoption.html">option</a>, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> value)</td></tr>
 <tr class="separator:a9fb19225514b70c7178aa871c9852936"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46be4b83a670d9d29cef2e7131ed46ae"><td class="memItemLeft" align="right" valign="top"><a id="a46be4b83a670d9d29cef2e7131ed46ae"></a>
-virtual int&#160;</td><td class="memItemRight" valign="bottom"><b>selectFullScreenMode</b> (GUID **)</td></tr>
+<tr class="memitem:a46be4b83a670d9d29cef2e7131ed46ae"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_direct3_d_display.html#a46be4b83a670d9d29cef2e7131ed46ae">selectFullScreenMode</a> (GUID **)</td></tr>
 <tr class="separator:a46be4b83a670d9d29cef2e7131ed46ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_i_display"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_i_display')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_i_display.html">IDisplay</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:afcb9df4a4949d13491f9a07a2ce24eb0 inherit pub_methods_class_i_display"><td class="memItemLeft" align="right" valign="top"><a id="afcb9df4a4949d13491f9a07a2ce24eb0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>checkFullScreen</b> ()</td></tr>
+<tr class="memitem:a97aa6c259f01df9a808ba12381bb496e inherit pub_methods_class_i_display"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_display.html#a97aa6c259f01df9a808ba12381bb496e">IDisplay</a> ()</td></tr>
+<tr class="separator:a97aa6c259f01df9a808ba12381bb496e inherit pub_methods_class_i_display"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1565628adf40731374c6ea2c76afb1fb inherit pub_methods_class_i_display"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_display.html#a1565628adf40731374c6ea2c76afb1fb">~IDisplay</a> ()</td></tr>
+<tr class="separator:a1565628adf40731374c6ea2c76afb1fb inherit pub_methods_class_i_display"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb9df4a4949d13491f9a07a2ce24eb0 inherit pub_methods_class_i_display"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0">checkFullScreen</a> ()</td></tr>
 <tr class="separator:afcb9df4a4949d13491f9a07a2ce24eb0 inherit pub_methods_class_i_display"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad717007b624f0a8e7c830ab803cd8a92 inherit pub_methods_class_i_display"><td class="memItemLeft" align="right" valign="top"><a id="ad717007b624f0a8e7c830ab803cd8a92"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSkinSupported</b> ()</td></tr>
+<tr class="memitem:ad717007b624f0a8e7c830ab803cd8a92 inherit pub_methods_class_i_display"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_display.html#ad717007b624f0a8e7c830ab803cd8a92">isSkinSupported</a> ()</td></tr>
 <tr class="separator:ad717007b624f0a8e7c830ab803cd8a92 inherit pub_methods_class_i_display"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="affbd75238a993397fd512e42e7299bc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affbd75238a993397fd512e42e7299bc0">&#9670;&nbsp;</a></span>Direct3DDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Direct3DDisplay::Direct3DDisplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00093">93</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    pD3D = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;  </div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    pDevice = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    screenFormat = D3DFMT_X8R8G8B8;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    width = 0;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    height = 0;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    failed = <span class="keyword">false</span>;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    pFont = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    emulatedImage = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    filter = D3DTEXF_POINT;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a11987c1fc63954e5cdf7efa717631554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11987c1fc63954e5cdf7efa717631554">&#9670;&nbsp;</a></span>~Direct3DDisplay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Direct3DDisplay::~Direct3DDisplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00107">107</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;{</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="class_direct3_d_display.html#aabdde19c435c484db2e334eca28a8147">cleanup</a>();</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div><div class="ttc" id="class_direct3_d_display_html_aabdde19c435c484db2e334eca28a8147"><div class="ttname"><a href="class_direct3_d_display.html#aabdde19c435c484db2e334eca28a8147">Direct3DDisplay::cleanup</a></div><div class="ttdeci">virtual void cleanup()</div><div class="ttdef"><b>Definition:</b> <a href="_direct3_d_8cpp_source.html#l00113">Direct3D.cpp:113</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_direct3_d_display_a11987c1fc63954e5cdf7efa717631554_cgraph.png" border="0" usemap="#class_direct3_d_display_a11987c1fc63954e5cdf7efa717631554_cgraph" alt=""/></div>
+<map name="class_direct3_d_display_a11987c1fc63954e5cdf7efa717631554_cgraph" id="class_direct3_d_display_a11987c1fc63954e5cdf7efa717631554_cgraph">
+<area shape="rect" id="node2" href="class_direct3_d_display.html#aabdde19c435c484db2e334eca28a8147" title="Direct3DDisplay::cleanup" alt="" coords="225,13,393,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a74e1d9129809bda1014bac928cd0fe52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74e1d9129809bda1014bac928cd0fe52">&#9670;&nbsp;</a></span>changeRenderSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Direct3DDisplay::changeRenderSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#ab6e4355da026afb85710ae3e12329176">IDisplay</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00449">449</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;{</div><div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordflow">if</span>( (w != width) || (h != height) ) {</div><div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;        width = w; height = h;</div><div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <span class="keywordflow">if</span>( pDevice ) {</div><div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;            destroySurface();</div><div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            createSurface();</div><div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            calculateDestRect();</div><div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        }</div><div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;    }</div><div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aabdde19c435c484db2e334eca28a8147"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabdde19c435c484db2e334eca28a8147">&#9670;&nbsp;</a></span>cleanup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Direct3DDisplay::cleanup </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#a039e8c6b3f8fbee485fb895ef70e72c0">IDisplay</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00113">113</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;{</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    destroyFont();</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    destroySurface();</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordflow">if</span>( pDevice ) {</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        pDevice-&gt;Release();</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        pDevice = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordflow">if</span>( pD3D ) {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        pD3D-&gt;Release();</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        pD3D = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_direct3_d_display_aabdde19c435c484db2e334eca28a8147_icgraph.png" border="0" usemap="#class_direct3_d_display_aabdde19c435c484db2e334eca28a8147_icgraph" alt=""/></div>
+<map name="class_direct3_d_display_aabdde19c435c484db2e334eca28a8147_icgraph" id="class_direct3_d_display_aabdde19c435c484db2e334eca28a8147_icgraph">
+<area shape="rect" id="node2" href="class_direct3_d_display.html#a11987c1fc63954e5cdf7efa717631554" title="Direct3DDisplay::~Direct3\lDDisplay" alt="" coords="221,5,393,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a67b8e31e5bb726cb82efbfb0be90935f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67b8e31e5bb726cb82efbfb0be90935f">&#9670;&nbsp;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Direct3DDisplay::clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#affb8a8b5651d138058cdbd088ff3968d">IDisplay</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00360">360</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;{</div><div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keywordflow">if</span>( pDevice ) {</div><div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        pDevice-&gt;Clear( 0, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, D3DCLEAR_TARGET, D3DCOLOR_XRGB(0x00,0x00,0x00), 0.0f, 0 );</div><div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    }</div><div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_direct3_d_display_a67b8e31e5bb726cb82efbfb0be90935f_icgraph.png" border="0" usemap="#class_direct3_d_display_a67b8e31e5bb726cb82efbfb0be90935f_icgraph" alt=""/></div>
+<map name="class_direct3_d_display_a67b8e31e5bb726cb82efbfb0be90935f_icgraph" id="class_direct3_d_display_a67b8e31e5bb726cb82efbfb0be90935f_icgraph">
+<area shape="rect" id="node2" href="class_direct3_d_display.html#a1c789bf663cfd32bb2827b9a0f0429c7" title="Direct3DDisplay::render" alt="" coords="204,5,363,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a517a805d2a5ebb732671851162920868"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a517a805d2a5ebb732671851162920868">&#9670;&nbsp;</a></span>getType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="_display_8h.html#aa50f63b0688d0250e0be64d8401d09a0">DISPLAY_TYPE</a> Direct3DDisplay::getType </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#a2c7fd4c6721dd8a6992b78f0c588f6f9">IDisplay</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00078">78</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="_display_8h.html#aa50f63b0688d0250e0be64d8401d09a0acff887f7ebbcc7cd915719b8b594a56b">DIRECT_3D</a>; };</div><div class="ttc" id="_display_8h_html_aa50f63b0688d0250e0be64d8401d09a0acff887f7ebbcc7cd915719b8b594a56b"><div class="ttname"><a href="_display_8h.html#aa50f63b0688d0250e0be64d8401d09a0acff887f7ebbcc7cd915719b8b594a56b">DIRECT_3D</a></div><div class="ttdef"><b>Definition:</b> <a href="_display_8h_source.html#l00025">Display.h:25</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8b8dfd84005816382396677e23d38879"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b8dfd84005816382396677e23d38879">&#9670;&nbsp;</a></span>initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Direct3DDisplay::initialize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#aa849b5d829138d08cf9efdbb00364a96">IDisplay</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00130">130</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;{</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="keywordflow">switch</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#af300759fcbc7eeb00ce73f956fc5ddb7">cartridgeType</a>)</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    {</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_util_8h.html#aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb">IMAGE_GBA</a>:</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a> = 240;</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a> = 160;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_util_8h.html#aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed">IMAGE_GB</a>:</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="gb_globals_8cpp.html#a4700c36a68a6b63f7c2e91756a250cd2">gbBorderOn</a>)</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        {</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a> = 256;</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a> = 224;</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        }</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">else</span></div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        {</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a> = 160;</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a> = 144;</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        }</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    }</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordflow">switch</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">videoOption</a>)</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    {</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a3730d0de76011ce1f8af8b173ba948b1">VIDEO_1X</a>:</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a14ab3c3ab83f07d70e2a40090e37deea">surfaceSizeX</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a>;</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a63dc67ff3aa9347f32f583fee92cf609">surfaceSizeY</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a>;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a27e88963372725d01e5bff4aec1acd55">VIDEO_2X</a>:</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a14ab3c3ab83f07d70e2a40090e37deea">surfaceSizeX</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a> * 2;</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a63dc67ff3aa9347f32f583fee92cf609">surfaceSizeY</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a> * 2;</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493afa53ae70520cab28e97f53de9bf2eabd">VIDEO_3X</a>:</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a14ab3c3ab83f07d70e2a40090e37deea">surfaceSizeX</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a> * 3;</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a63dc67ff3aa9347f32f583fee92cf609">surfaceSizeY</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a> * 3;</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d">VIDEO_4X</a>:</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a14ab3c3ab83f07d70e2a40090e37deea">surfaceSizeX</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a> * 4;</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a63dc67ff3aa9347f32f583fee92cf609">surfaceSizeY</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a> * 4;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a658665cfbdbd908bdb77babe125d0341">VIDEO_320x240</a>:</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a7ff44ba2030715f2e2b337033b5ad85e">VIDEO_640x480</a>:</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a1849e033b4567855b2eaba899ed43c17">VIDEO_800x600</a>:</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordflow">case</span> <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493acab4f90135b50a88563541e679dd6cee">VIDEO_OTHER</a>:</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <span class="keywordtype">float</span> scaleX = ((float)<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a92ef1c149914189da4d110d6dada54bb">fsWidth</a> / <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a>);</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <span class="keywordtype">float</span> scaleY = ((float)<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1e59d9254f1cb6420502c537c35dd5ec">fsHeight</a> / <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a>);</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keywordtype">float</span> min = (scaleX &lt; scaleY) ? scaleX : scaleY;</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a00bd5b85110bd763ad39eb4a9fb403a1">fullScreenStretch</a>) {</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a14ab3c3ab83f07d70e2a40090e37deea">surfaceSizeX</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a92ef1c149914189da4d110d6dada54bb">fsWidth</a>;</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a63dc67ff3aa9347f32f583fee92cf609">surfaceSizeY</a> = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1e59d9254f1cb6420502c537c35dd5ec">fsHeight</a>;</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a14ab3c3ab83f07d70e2a40090e37deea">surfaceSizeX</a> = (<a class="code" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a> * min);</div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a63dc67ff3aa9347f32f583fee92cf609">surfaceSizeY</a> = (<a class="code" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a> * min);</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    }</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    </div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">rect</a>.left = 0;</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">rect</a>.top = 0;</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">rect</a>.right = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a>;</div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">rect</a>.bottom = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a>;</div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>.left = 0;</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>.top = 0;</div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>.right = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a14ab3c3ab83f07d70e2a40090e37deea">surfaceSizeX</a>;</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>.bottom = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a63dc67ff3aa9347f32f583fee92cf609">surfaceSizeY</a>;</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    </div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    DWORD style = WS_POPUP | WS_VISIBLE;</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    DWORD styleEx = 0;</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    </div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">videoOption</a> &lt;= <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d">VIDEO_4X</a>) {</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        style |= WS_OVERLAPPEDWINDOW;</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        styleEx = 0;</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    </div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">videoOption</a> &lt;= <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d">VIDEO_4X</a>) {</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        AdjustWindowRectEx(&amp;<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>, style, TRUE, styleEx);</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        AdjustWindowRectEx(&amp;<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>, style, FALSE, styleEx);    </div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    }</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    </div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">int</span> winSizeX = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>.right-<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>.left;</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">int</span> winSizeY = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>.bottom-<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">dest</a>.top;</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    </div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">videoOption</a> &gt; <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d">VIDEO_4X</a>) {</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        winSizeX = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a92ef1c149914189da4d110d6dada54bb">fsWidth</a>;</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        winSizeY = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1e59d9254f1cb6420502c537c35dd5ec">fsHeight</a>;</div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    }</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">int</span> x = 0, y = 0;</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    </div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">videoOption</a> &lt;= <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d">VIDEO_4X</a>) {</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        x = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a5f9fb2744603deedbe9f8a77a7a2cf91">windowPositionX</a>;</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        y = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a79b40ebb7ccfd4390eb0747168d07cad">windowPositionY</a>;</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    }</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    </div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    </div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    <span class="comment">// Create a window</span></div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="class_main_wnd.html">MainWnd</a> *pWnd = <span class="keyword">new</span> <a class="code" href="class_main_wnd.html">MainWnd</a>;</div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.m_pMainWnd = pWnd;</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    pWnd-&gt;CreateEx(styleEx,</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acd3b584c09c85ec31168b1f7d1d8505e">wndClass</a>,</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        _T(<span class="stringliteral">&quot;VisualBoyAdvance&quot;</span>),</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        style,</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;        x,y,winSizeX,winSizeY,</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        0);</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordflow">if</span> (!(HWND)*pWnd) {</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        DXTRACE_ERR_MSGBOX( _T(<span class="stringliteral">&quot;Error creating window&quot;</span>), 0 );</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordflow">return</span> FALSE;</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    }</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    pWnd-&gt;DragAcceptFiles(TRUE);</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#accf3451bad473b90400193636cd27c96">updateMenuBar</a>();</div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb822065cba8b15810c5a61fd05ca831">adjustDestRect</a>();</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="comment">// load Direct3D v9</span></div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    pD3D = Direct3DCreate9( D3D_SDK_VERSION );</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="keywordflow">if</span>(pD3D == <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>) {</div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        DXTRACE_ERR_MSGBOX( _T(<span class="stringliteral">&quot;Error creating Direct3D object&quot;</span>), 0 );</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keywordflow">return</span> FALSE;</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    }</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#adcefc742bdb15ddb902bcb2df896d298">mode320Available</a> = FALSE;</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#adc44d61208b927bde7ea49c25a2e30bc">mode640Available</a> = FALSE;</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a3e2e940c6531daba73473c51a9916574">mode800Available</a> = FALSE;</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    D3DDISPLAYMODE mode;</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    pD3D-&gt;GetAdapterDisplayMode(D3DADAPTER_DEFAULT, &amp;mode);</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    screenFormat = mode.Format;</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keywordflow">switch</span>(mode.Format) {</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="keywordflow">case</span> D3DFMT_R8G8B8:</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;      <a class="code" href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a> = 24;</div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      <a class="code" href="system_8cpp.html#a85b93b8fc1532633063574112af2de18">systemRedShift</a> = 19;</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;      <a class="code" href="system_8cpp.html#a6ae69465c0e8ab78f44b7f31b4967f9a">systemGreenShift</a> = 11;</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;      <a class="code" href="system_8cpp.html#a3e43ed3bb6f846123ce7da1b003b6679">systemBlueShift</a> = 3;</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;      <span class="keywordflow">break</span>;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;  <span class="keywordflow">case</span> D3DFMT_X8R8G8B8:</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      <a class="code" href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a> = 32;</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <a class="code" href="system_8cpp.html#a85b93b8fc1532633063574112af2de18">systemRedShift</a> = 19;</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <a class="code" href="system_8cpp.html#a6ae69465c0e8ab78f44b7f31b4967f9a">systemGreenShift</a> = 11;</div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      <a class="code" href="system_8cpp.html#a3e43ed3bb6f846123ce7da1b003b6679">systemBlueShift</a> = 3;</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      <a class="code" href="_direct3_d_8cpp.html#ab579c0c6efc95a3920d5e26196161306">Init_2xSaI</a>(32);</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;      <span class="keywordflow">break</span>;</div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;  <span class="keywordflow">case</span> D3DFMT_R5G6B5:</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;      <a class="code" href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a> = 16;</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;      <a class="code" href="system_8cpp.html#a85b93b8fc1532633063574112af2de18">systemRedShift</a> = 11;</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;      <a class="code" href="system_8cpp.html#a6ae69465c0e8ab78f44b7f31b4967f9a">systemGreenShift</a> = 6;</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      <a class="code" href="system_8cpp.html#a3e43ed3bb6f846123ce7da1b003b6679">systemBlueShift</a> = 0;    </div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;      <a class="code" href="_direct3_d_8cpp.html#ab579c0c6efc95a3920d5e26196161306">Init_2xSaI</a>(565);</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">break</span>;</div><div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;  <span class="keywordflow">case</span> D3DFMT_X1R5G5B5:</div><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;      <a class="code" href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a> = 16;</div><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;      <a class="code" href="system_8cpp.html#a85b93b8fc1532633063574112af2de18">systemRedShift</a> = 10;</div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <a class="code" href="system_8cpp.html#a6ae69465c0e8ab78f44b7f31b4967f9a">systemGreenShift</a> = 5;</div><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <a class="code" href="system_8cpp.html#a3e43ed3bb6f846123ce7da1b003b6679">systemBlueShift</a> = 0;</div><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      <a class="code" href="_direct3_d_8cpp.html#ab579c0c6efc95a3920d5e26196161306">Init_2xSaI</a>(555);</div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      <span class="keywordflow">break</span>;</div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  <span class="keywordflow">default</span>:</div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      DXTRACE_ERR_MSGBOX( _T(<span class="stringliteral">&quot;Unsupport D3D format&quot;</span>), 0 );</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    }</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1baf02b3f4ad129bfd713f1a132e96b9">fsColorDepth</a> = <a class="code" href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a>;</div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <a class="code" href="_util_8cpp.html#a5d5317ea1bb74f382ceeffba7eeaa797">utilUpdateSystemColorMaps</a>();</div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;<span class="preprocessor">#ifdef MMX</span></div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keywordflow">if</span>(!<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ac417f46c467d0fcf095731620ca7de71">disableMMX</a>) {</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        cpu_mmx = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.detectMMX();</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        cpu_mmx = 0;</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;</div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#afbe0e6f9458f25adb848516537a91747">updateFilter</a>();</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ab1caa25635cd40fc3b49b5d325cc65ef">updateIFB</a>();</div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;</div><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;</div><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    <span class="comment">// create device</span></div><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    ZeroMemory(&amp;dpp, <span class="keyword">sizeof</span>(dpp));</div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    dpp.Windowed = TRUE;</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    dpp.BackBufferFormat = mode.Format;</div><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    dpp.BackBufferCount = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#af597e2c2466efdc6365a5d725651b855">tripleBuffering</a> ? 2 : 1;</div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    dpp.BackBufferWidth = 0; <span class="comment">// use width of hDeviceWindow</span></div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    dpp.BackBufferHeight = 0; <span class="comment">// use height of hDeviceWindow</span></div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    dpp.Flags = D3DPRESENTFLAG_LOCKABLE_BACKBUFFER;</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    dpp.PresentationInterval = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a84075b77df64f3dc2100159064b79fba">vsync</a> ? D3DPRESENT_INTERVAL_ONE : D3DPRESENT_INTERVAL_IMMEDIATE;</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    HRESULT hret = pD3D-&gt;CreateDevice(</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        D3DADAPTER_DEFAULT,</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        D3DDEVTYPE_HAL,</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        pWnd-&gt;GetSafeHwnd(),</div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        D3DCREATE_SOFTWARE_VERTEXPROCESSING,</div><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        &amp;dpp,</div><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        &amp;pDevice);</div><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">if</span>( FAILED( hret ) ) {</div><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        DXTRACE_ERR_MSGBOX( _T(<span class="stringliteral">&quot;Error creating Direct3D device&quot;</span>), hret );</div><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    }</div><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;</div><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    createFont();</div><div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    createSurface();</div><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    calculateDestRect();</div><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;</div><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    <a class="code" href="class_direct3_d_display.html#a9fb19225514b70c7178aa871c9852936">setOption</a>( _T(<span class="stringliteral">&quot;d3dFilter&quot;</span>), <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a8563e53b73a28a011e656f6fc8a4e5ff">d3dFilter</a> );</div><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keywordflow">if</span>(failed) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keywordflow">return</span> TRUE;  </div><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a84075b77df64f3dc2100159064b79fba"><div class="ttname"><a href="class_v_b_a.html#a84075b77df64f3dc2100159064b79fba">VBA::vsync</a></div><div class="ttdeci">bool vsync</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00134">VBA.h:134</a></div></div>
+<div class="ttc" id="class_v_b_a_html_aed77fc82f818810cc87c470768c75e05"><div class="ttname"><a href="class_v_b_a.html#aed77fc82f818810cc87c470768c75e05">VBA::dest</a></div><div class="ttdeci">RECT dest</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00199">VBA.h:199</a></div></div>
+<div class="ttc" id="class_v_b_a_html_acb822065cba8b15810c5a61fd05ca831"><div class="ttname"><a href="class_v_b_a.html#acb822065cba8b15810c5a61fd05ca831">VBA::adjustDestRect</a></div><div class="ttdeci">void adjustDestRect()</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00533">VBA.cpp:533</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a1303c6cf4f955c31d828de3fe77355f1"><div class="ttname"><a href="class_v_b_a.html#a1303c6cf4f955c31d828de3fe77355f1">VBA::rect</a></div><div class="ttdeci">RECT rect</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00198">VBA.h:198</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d">VIDEO_4X</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00050">VBA.h:50</a></div></div>
+<div class="ttc" id="system_8cpp_html_adaf454a4617a00b5cfed14c203ab6efa"><div class="ttname"><a href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a></div><div class="ttdeci">int systemColorDepth</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00040">system.cpp:40</a></div></div>
+<div class="ttc" id="class_v_b_a_html_acb2e7221985fd0355f105cd1ec42e52e"><div class="ttname"><a href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">VBA::sizeY</a></div><div class="ttdeci">int sizeY</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00087">VBA.h:87</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a8563e53b73a28a011e656f6fc8a4e5ff"><div class="ttname"><a href="class_v_b_a.html#a8563e53b73a28a011e656f6fc8a4e5ff">VBA::d3dFilter</a></div><div class="ttdeci">int d3dFilter</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00144">VBA.h:144</a></div></div>
+<div class="ttc" id="_util_8cpp_html_a0ef32aa8672df19503a49fab2d0c8071"><div class="ttname"><a href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a></div><div class="ttdeci">static const unsigned int</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l00058">Util.cpp:58</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493a658665cfbdbd908bdb77babe125d0341"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a658665cfbdbd908bdb77babe125d0341">VIDEO_320x240</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00051">VBA.h:51</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_v_b_a_html_acd3b584c09c85ec31168b1f7d1d8505e"><div class="ttname"><a href="class_v_b_a.html#acd3b584c09c85ec31168b1f7d1d8505e">VBA::wndClass</a></div><div class="ttdeci">CString wndClass</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00207">VBA.h:207</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a14ab3c3ab83f07d70e2a40090e37deea"><div class="ttname"><a href="class_v_b_a.html#a14ab3c3ab83f07d70e2a40090e37deea">VBA::surfaceSizeX</a></div><div class="ttdeci">int surfaceSizeX</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00088">VBA.h:88</a></div></div>
+<div class="ttc" id="class_v_b_a_html_adcefc742bdb15ddb902bcb2df896d298"><div class="ttname"><a href="class_v_b_a.html#adcefc742bdb15ddb902bcb2df896d298">VBA::mode320Available</a></div><div class="ttdeci">bool mode320Available</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00069">VBA.h:69</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a63dc67ff3aa9347f32f583fee92cf609"><div class="ttname"><a href="class_v_b_a.html#a63dc67ff3aa9347f32f583fee92cf609">VBA::surfaceSizeY</a></div><div class="ttdeci">int surfaceSizeY</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00089">VBA.h:89</a></div></div>
+<div class="ttc" id="_util_8h_html_aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb"><div class="ttname"><a href="_util_8h.html#aef8b88d56fdf9a25f990a68d80c014d8a25f0ac1f3a37d568346fedece32e4bfb">IMAGE_GBA</a></div><div class="ttdef"><b>Definition:</b> <a href="_util_8h_source.html#l00024">Util.h:24</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a79b40ebb7ccfd4390eb0747168d07cad"><div class="ttname"><a href="class_v_b_a.html#a79b40ebb7ccfd4390eb0747168d07cad">VBA::windowPositionY</a></div><div class="ttdeci">int windowPositionY</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00073">VBA.h:73</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a3e2e940c6531daba73473c51a9916574"><div class="ttname"><a href="class_v_b_a.html#a3e2e940c6531daba73473c51a9916574">VBA::mode800Available</a></div><div class="ttdeci">bool mode800Available</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00071">VBA.h:71</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a7b711f29fd088fa6611d240277a24e9e"><div class="ttname"><a href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">VBA::sizeX</a></div><div class="ttdeci">int sizeX</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00086">VBA.h:86</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a17dac073149c897f770c00ed7098ad32"><div class="ttname"><a href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">VBA::videoOption</a></div><div class="ttdeci">int videoOption</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00090">VBA.h:90</a></div></div>
+<div class="ttc" id="class_v_b_a_html_accf3451bad473b90400193636cd27c96"><div class="ttname"><a href="class_v_b_a.html#accf3451bad473b90400193636cd27c96">VBA::updateMenuBar</a></div><div class="ttdeci">void updateMenuBar()</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00757">VBA.cpp:757</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493acab4f90135b50a88563541e679dd6cee"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493acab4f90135b50a88563541e679dd6cee">VIDEO_OTHER</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00054">VBA.h:54</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_a4700c36a68a6b63f7c2e91756a250cd2"><div class="ttname"><a href="gb_globals_8cpp.html#a4700c36a68a6b63f7c2e91756a250cd2">gbBorderOn</a></div><div class="ttdeci">int gbBorderOn</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00050">gbGlobals.cpp:50</a></div></div>
+<div class="ttc" id="class_v_b_a_html_afbe0e6f9458f25adb848516537a91747"><div class="ttname"><a href="class_v_b_a.html#afbe0e6f9458f25adb848516537a91747">VBA::updateFilter</a></div><div class="ttdeci">void updateFilter()</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00632">VBA.cpp:632</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ac417f46c467d0fcf095731620ca7de71"><div class="ttname"><a href="class_v_b_a.html#ac417f46c467d0fcf095731620ca7de71">VBA::disableMMX</a></div><div class="ttdeci">bool disableMMX</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00156">VBA.h:156</a></div></div>
+<div class="ttc" id="class_direct3_d_display_html_a9fb19225514b70c7178aa871c9852936"><div class="ttname"><a href="class_direct3_d_display.html#a9fb19225514b70c7178aa871c9852936">Direct3DDisplay::setOption</a></div><div class="ttdeci">virtual void setOption(const char *option, int value)</div><div class="ttdef"><b>Definition:</b> <a href="_direct3_d_8cpp_source.html#l00582">Direct3D.cpp:582</a></div></div>
+<div class="ttc" id="class_v_b_a_html_adc44d61208b927bde7ea49c25a2e30bc"><div class="ttname"><a href="class_v_b_a.html#adc44d61208b927bde7ea49c25a2e30bc">VBA::mode640Available</a></div><div class="ttdeci">bool mode640Available</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00070">VBA.h:70</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a00bd5b85110bd763ad39eb4a9fb403a1"><div class="ttname"><a href="class_v_b_a.html#a00bd5b85110bd763ad39eb4a9fb403a1">VBA::fullScreenStretch</a></div><div class="ttdeci">bool fullScreenStretch</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00091">VBA.h:91</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a1e59d9254f1cb6420502c537c35dd5ec"><div class="ttname"><a href="class_v_b_a.html#a1e59d9254f1cb6420502c537c35dd5ec">VBA::fsHeight</a></div><div class="ttdeci">int fsHeight</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00082">VBA.h:82</a></div></div>
+<div class="ttc" id="system_8cpp_html_a85b93b8fc1532633063574112af2de18"><div class="ttname"><a href="system_8cpp.html#a85b93b8fc1532633063574112af2de18">systemRedShift</a></div><div class="ttdeci">int systemRedShift</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00037">system.cpp:37</a></div></div>
+<div class="ttc" id="class_main_wnd_html"><div class="ttname"><a href="class_main_wnd.html">MainWnd</a></div><div class="ttdef"><b>Definition:</b> <a href="_main_wnd_8h_source.html#l00032">MainWnd.h:32</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493a7ff44ba2030715f2e2b337033b5ad85e"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a7ff44ba2030715f2e2b337033b5ad85e">VIDEO_640x480</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00052">VBA.h:52</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493afa53ae70520cab28e97f53de9bf2eabd"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493afa53ae70520cab28e97f53de9bf2eabd">VIDEO_3X</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00049">VBA.h:49</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ab1caa25635cd40fc3b49b5d325cc65ef"><div class="ttname"><a href="class_v_b_a.html#ab1caa25635cd40fc3b49b5d325cc65ef">VBA::updateIFB</a></div><div class="ttdeci">void updateIFB()</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00600">VBA.cpp:600</a></div></div>
+<div class="ttc" id="_util_8cpp_html_a5d5317ea1bb74f382ceeffba7eeaa797"><div class="ttname"><a href="_util_8cpp.html#a5d5317ea1bb74f382ceeffba7eeaa797">utilUpdateSystemColorMaps</a></div><div class="ttdeci">void utilUpdateSystemColorMaps()</div><div class="ttdef"><b>Definition:</b> <a href="_util_8cpp_source.html#l01079">Util.cpp:1079</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5f9fb2744603deedbe9f8a77a7a2cf91"><div class="ttname"><a href="class_v_b_a.html#a5f9fb2744603deedbe9f8a77a7a2cf91">VBA::windowPositionX</a></div><div class="ttdeci">int windowPositionX</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00072">VBA.h:72</a></div></div>
+<div class="ttc" id="_direct3_d_8cpp_html_ab579c0c6efc95a3920d5e26196161306"><div class="ttname"><a href="_direct3_d_8cpp.html#ab579c0c6efc95a3920d5e26196161306">Init_2xSaI</a></div><div class="ttdeci">int Init_2xSaI(u32)</div><div class="ttdef"><b>Definition:</b> <a href="2x_sa_i_8cpp_source.html#l00041">2xSaI.cpp:41</a></div></div>
+<div class="ttc" id="class_v_b_a_html_af597e2c2466efdc6365a5d725651b855"><div class="ttname"><a href="class_v_b_a.html#af597e2c2466efdc6365a5d725651b855">VBA::tripleBuffering</a></div><div class="ttdeci">bool tripleBuffering</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00128">VBA.h:128</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493a3730d0de76011ce1f8af8b173ba948b1"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a3730d0de76011ce1f8af8b173ba948b1">VIDEO_1X</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00047">VBA.h:47</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493a27e88963372725d01e5bff4aec1acd55"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a27e88963372725d01e5bff4aec1acd55">VIDEO_2X</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00048">VBA.h:48</a></div></div>
+<div class="ttc" id="system_8cpp_html_a6ae69465c0e8ab78f44b7f31b4967f9a"><div class="ttname"><a href="system_8cpp.html#a6ae69465c0e8ab78f44b7f31b4967f9a">systemGreenShift</a></div><div class="ttdeci">int systemGreenShift</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00038">system.cpp:38</a></div></div>
+<div class="ttc" id="system_8cpp_html_a3e43ed3bb6f846123ce7da1b003b6679"><div class="ttname"><a href="system_8cpp.html#a3e43ed3bb6f846123ce7da1b003b6679">systemBlueShift</a></div><div class="ttdeci">int systemBlueShift</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00039">system.cpp:39</a></div></div>
+<div class="ttc" id="class_v_b_a_html_af300759fcbc7eeb00ce73f956fc5ddb7"><div class="ttname"><a href="class_v_b_a.html#af300759fcbc7eeb00ce73f956fc5ddb7">VBA::cartridgeType</a></div><div class="ttdeci">IMAGE_TYPE cartridgeType</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00102">VBA.h:102</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a1baf02b3f4ad129bfd713f1a132e96b9"><div class="ttname"><a href="class_v_b_a.html#a1baf02b3f4ad129bfd713f1a132e96b9">VBA::fsColorDepth</a></div><div class="ttdeci">int fsColorDepth</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00083">VBA.h:83</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a92ef1c149914189da4d110d6dada54bb"><div class="ttname"><a href="class_v_b_a.html#a92ef1c149914189da4d110d6dada54bb">VBA::fsWidth</a></div><div class="ttdeci">int fsWidth</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00081">VBA.h:81</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493a1849e033b4567855b2eaba899ed43c17"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a1849e033b4567855b2eaba899ed43c17">VIDEO_800x600</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00053">VBA.h:53</a></div></div>
+<div class="ttc" id="_util_8h_html_aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed"><div class="ttname"><a href="_util_8h.html#aef8b88d56fdf9a25f990a68d80c014d8a72281d361ec2edaf47e3a93b136dd4ed">IMAGE_GB</a></div><div class="ttdef"><b>Definition:</b> <a href="_util_8h_source.html#l00025">Util.h:25</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_direct3_d_display_a8b8dfd84005816382396677e23d38879_cgraph.png" border="0" usemap="#class_direct3_d_display_a8b8dfd84005816382396677e23d38879_cgraph" alt=""/></div>
+<map name="class_direct3_d_display_a8b8dfd84005816382396677e23d38879_cgraph" id="class_direct3_d_display_a8b8dfd84005816382396677e23d38879_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#accf3451bad473b90400193636cd27c96" title="VBA::updateMenuBar" alt="" coords="243,145,391,172"/>
+<area shape="rect" id="node5" href="class_v_b_a.html#acb822065cba8b15810c5a61fd05ca831" title="VBA::adjustDestRect" alt="" coords="244,335,391,361"/>
+<area shape="rect" id="node7" href="_direct3_d_8cpp.html#ab579c0c6efc95a3920d5e26196161306" title="Init_2xSaI" alt="" coords="278,664,357,691"/>
+<area shape="rect" id="node8" href="_util_8cpp.html#a5d5317ea1bb74f382ceeffba7eeaa797" title="utilUpdateSystemColorMaps" alt="" coords="224,715,411,741"/>
+<area shape="rect" id="node9" href="class_v_b_a.html#afbe0e6f9458f25adb848516537a91747" title="VBA::updateFilter" alt="" coords="255,765,380,792"/>
+<area shape="rect" id="node37" href="class_v_b_a.html#ab1caa25635cd40fc3b49b5d325cc65ef" title="VBA::updateIFB" alt="" coords="259,1500,375,1527"/>
+<area shape="rect" id="node42" href="class_direct3_d_display.html#a9fb19225514b70c7178aa871c9852936" title="Direct3DDisplay::setOption" alt="" coords="228,1551,407,1577"/>
+<area shape="rect" id="node3" href="_win_res_util_8cpp.html#a455bea54e4ebdd67b568795f019b8d30" title="winResLoadMenu" alt="" coords="489,5,613,32"/>
+<area shape="rect" id="node4" href="_win_res_util_8cpp.html#aef09e649be3760e91ac176df7a0f4473" title="winResGetResource" alt="" coords="692,5,832,32"/>
+<area shape="rect" id="node6" href="class_c_skin.html#a8fe20ca67965deec6e5e29a2bf467933" title="CSkin::GetBlitRect" alt="" coords="485,56,617,83"/>
+<area shape="rect" id="node10" href="_v_b_a_8cpp.html#a7ccc02429549a515a99becf81560b55e" title="ScanlinesTV" alt="" coords="504,107,599,133"/>
+<area shape="rect" id="node11" href="_v_b_a_8cpp.html#a91c01cd7f76003cb2139cf1e475f91c8" title="_2xSaI" alt="" coords="520,157,583,184"/>
+<area shape="rect" id="node12" href="_v_b_a_8cpp.html#a547bc7cb76e394fad839924b59bca105" title="Super2xSaI" alt="" coords="507,208,596,235"/>
+<area shape="rect" id="node13" href="_v_b_a_8cpp.html#a3a4d5d262bc1f4f089e9a2574f3e4982" title="SuperEagle" alt="" coords="507,259,596,285"/>
+<area shape="rect" id="node14" href="_v_b_a_8cpp.html#a5976d745d1ee86ef56b01b59536033f6" title="Pixelate" alt="" coords="517,309,586,336"/>
+<area shape="rect" id="node15" href="_v_b_a_8cpp.html#abf96336ef83b7da41f0fc99c42c028c6" title="MotionBlur" alt="" coords="509,360,593,387"/>
+<area shape="rect" id="node16" href="_v_b_a_8cpp.html#af9268d3b5e77c08c6c6e4bab867af8ee" title="AdMame2x" alt="" coords="507,411,595,437"/>
+<area shape="rect" id="node17" href="_v_b_a_8cpp.html#ad5901961f31b65255ce9810c13a7ae30" title="Simple2x" alt="" coords="513,461,589,488"/>
+<area shape="rect" id="node18" href="_v_b_a_8cpp.html#a5e8fb00e9c944812c2096c24b9e3b1c1" title="Bilinear" alt="" coords="519,512,584,539"/>
+<area shape="rect" id="node19" href="_v_b_a_8cpp.html#a000d1d1c028ef9067127e8d15f9bc15b" title="BilinearPlus" alt="" coords="506,563,597,589"/>
+<area shape="rect" id="node20" href="_v_b_a_8cpp.html#a77497048e927836885cdeac94ee417e8" title="Scanlines" alt="" coords="512,613,591,640"/>
+<area shape="rect" id="node21" href="_v_b_a_8cpp.html#a7fff6fa245097d0c1ab64d72544eedfa" title="hq2x" alt="" coords="526,664,577,691"/>
+<area shape="rect" id="node22" href="_v_b_a_8cpp.html#a11e1c292bb0d3d688d982986c2a9cdf8" title="lq2x" alt="" coords="528,715,575,741"/>
+<area shape="rect" id="node23" href="_v_b_a_8cpp.html#adaae5dfb40ebe04a6ec4ff93ffffe21d" title="ScanlinesTV32" alt="" coords="497,765,606,792"/>
+<area shape="rect" id="node24" href="_v_b_a_8cpp.html#aa8a2ada93833020ec06c45ff6e3853a7" title="_2xSaI32" alt="" coords="513,816,589,843"/>
+<area shape="rect" id="node25" href="_v_b_a_8cpp.html#a9b048abfe59f30be2a702b57e41d2177" title="Super2xSaI32" alt="" coords="500,867,603,893"/>
+<area shape="rect" id="node26" href="_v_b_a_8cpp.html#aaadabe6bcbfb63ed4749737c48c69b5e" title="SuperEagle32" alt="" coords="500,917,603,944"/>
+<area shape="rect" id="node27" href="_v_b_a_8cpp.html#a59b5b0909af17b6d5be3ddf8d251f901" title="Pixelate32" alt="" coords="510,968,593,995"/>
+<area shape="rect" id="node28" href="_v_b_a_8cpp.html#aac683c3401932b9411406f16da529d75" title="MotionBlur32" alt="" coords="502,1019,601,1045"/>
+<area shape="rect" id="node29" href="_v_b_a_8cpp.html#a6196695cf899256cf83acecc9a4917b1" title="AdMame2x32" alt="" coords="500,1069,603,1096"/>
+<area shape="rect" id="node30" href="_v_b_a_8cpp.html#a0584d938db5bca266b5117e65f8af19e" title="Simple2x32" alt="" coords="506,1120,597,1147"/>
+<area shape="rect" id="node31" href="_v_b_a_8cpp.html#a4b56cf1a238f727c3d073b98baaf240e" title="Bilinear32" alt="" coords="512,1171,591,1197"/>
+<area shape="rect" id="node32" href="_v_b_a_8cpp.html#a2069f0c1028bff49fddfbf84723729f5" title="BilinearPlus32" alt="" coords="499,1221,604,1248"/>
+<area shape="rect" id="node33" href="_v_b_a_8cpp.html#a951b7124d232f62e67a2e24d13be6a9d" title="Scanlines32" alt="" coords="505,1272,598,1299"/>
+<area shape="rect" id="node34" href="_v_b_a_8cpp.html#a812201c81a7ddfd83fb65dbddfc6fa85" title="hq2x32" alt="" coords="519,1323,583,1349"/>
+<area shape="rect" id="node35" href="_v_b_a_8cpp.html#a23204552d2088b2cb241e772027b849f" title="lq2x32" alt="" coords="521,1373,581,1400"/>
+<area shape="rect" id="node36" href="class_i_display.html#ab6e4355da026afb85710ae3e12329176" title="IDisplay::changeRenderSize" alt="" coords="459,1424,644,1451"/>
+<area shape="rect" id="node38" href="_v_b_a_8cpp.html#a4b388a2f01620e0bf2e9a1c10c189866" title="MotionBlurIB" alt="" coords="503,1475,599,1501"/>
+<area shape="rect" id="node39" href="_v_b_a_8cpp.html#a9f004c820bb4707dd9a43c2c3e9c851d" title="SmartIB" alt="" coords="517,1525,586,1552"/>
+<area shape="rect" id="node40" href="_v_b_a_8cpp.html#afd60c9159e817571e02d1958b27b7f76" title="MotionBlurIB32" alt="" coords="496,1576,607,1603"/>
+<area shape="rect" id="node41" href="_v_b_a_8cpp.html#a408385952d763c13c6be333f2989f7fb" title="SmartIB32" alt="" coords="510,1627,593,1653"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1c789bf663cfd32bb2827b9a0f0429c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c789bf663cfd32bb2827b9a0f0429c7">&#9670;&nbsp;</a></span>render()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Direct3DDisplay::render </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#af61c440b97da313a502e86346a729b03">IDisplay</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00368">368</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;{</div><div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    <span class="keywordflow">if</span>( failed ) <span class="keywordflow">return</span>;</div><div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keywordflow">if</span>(!pDevice) <span class="keywordflow">return</span>;</div><div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">if</span>( FAILED( pDevice-&gt;TestCooperativeLevel() ) ) <span class="keywordflow">return</span>;</div><div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    </div><div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="class_direct3_d_display.html#a67b8e31e5bb726cb82efbfb0be90935f">clear</a>();</div><div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    </div><div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    pDevice-&gt;BeginScene();</div><div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    </div><div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="comment">// copy pix to emulatedImage and apply pixel filter if selected</span></div><div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    HRESULT hr;</div><div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    D3DLOCKED_RECT lr;</div><div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    <span class="keywordflow">if</span>( FAILED( hr = emulatedImage-&gt;LockRect( &amp;lr, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, D3DLOCK_DISCARD ) ) ) {</div><div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        DXTRACE_ERR_MSGBOX( _T(<span class="stringliteral">&quot;Can not lock back buffer&quot;</span>), hr );</div><div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        <span class="keywordflow">return</span>;</div><div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        <span class="keywordflow">if</span>( !<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a8267ca41247e8d752776b57a3f8af011">filterFunction</a> ) {</div><div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;            <a class="code" href="display_8cpp.html#af067251fbfac32e8e783daa9587befd8">copyImage</a>( <a class="code" href="_g_b_8cpp.html#a5ee6554b606dcde59ac92578b33776d0">pix</a>, lr.pBits, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">sizeX</a>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">sizeY</a>, lr.Pitch, <a class="code" href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a> );</div><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> pitch = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1ae8b3a4ed9fd2a3783868ae5d38c3bc">filterWidth</a> * (<a class="code" href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a>&gt;&gt;3) + 4;</div><div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a8267ca41247e8d752776b57a3f8af011">filterFunction</a>( <a class="code" href="_g_b_8cpp.html#a5ee6554b606dcde59ac92578b33776d0">pix</a> + pitch,</div><div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                pitch,</div><div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                (<a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>*)<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ae53d4a6574bd47657fa6bd76eabd8543">delta</a>,</div><div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                (<a class="code" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>*)lr.pBits,</div><div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                lr.Pitch,</div><div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1ae8b3a4ed9fd2a3783868ae5d38c3bc">filterWidth</a>,</div><div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a1c5e3ef2e69bfe2a6a877606fbb4de9c">filterHeight</a>);</div><div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        }</div><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        emulatedImage-&gt;UnlockRect();</div><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;    }</div><div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;</div><div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    <span class="comment">// copy emulatedImage to pBackBuffer and scale with or without aspect ratio</span></div><div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    LPDIRECT3DSURFACE9 pBackBuffer;</div><div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    pDevice-&gt;GetBackBuffer( 0, 0, D3DBACKBUFFER_TYPE_MONO, &amp;pBackBuffer );</div><div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a00bd5b85110bd763ad39eb4a9fb403a1">fullScreenStretch</a> ) {</div><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;        pDevice-&gt;StretchRect( emulatedImage, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, pBackBuffer, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, filter );</div><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        pDevice-&gt;StretchRect( emulatedImage, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, pBackBuffer, &amp;destRect, filter );</div><div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    }</div><div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;    pBackBuffer-&gt;Release();</div><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    pBackBuffer = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;</div><div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    D3DCOLOR color;</div><div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    RECT r;</div><div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    r.left = 4;</div><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    r.right = dpp.BackBufferWidth - 4;</div><div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;</div><div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a204d14d33aebd442db9affee1cc4f3a8">screenMessage</a> ) {</div><div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        color = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a0a2ca5a7091f9c79b39ea0916dd88a05">showSpeedTransparent</a> ? D3DCOLOR_ARGB(0x7F, 0xFF, 0x00, 0x00) : D3DCOLOR_ARGB(0xFF, 0xFF, 0x00, 0x00);</div><div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        <span class="keywordflow">if</span>( ( ( GetTickCount() - <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a27f8c0f4add5a8242470289874dd601c">screenMessageTime</a> ) &lt; 3000 ) &amp;&amp; !<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a7bfea5ab60b19d26053b22ce070e2248">disableStatusMessage</a> &amp;&amp; pFont ) {</div><div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            r.top = dpp.BackBufferHeight - 20;</div><div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            r.bottom = dpp.BackBufferHeight - 4;</div><div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            pFont-&gt;DrawText( <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ab9551bfe042a30531aeb47a7b2ac2038">screenMessageBuffer</a>, -1, &amp;r, 0, color );</div><div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a204d14d33aebd442db9affee1cc4f3a8">screenMessage</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;        }</div><div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;    }</div><div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;</div><div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ad86589d0d03fceef36d35c0b2e928e9e">showSpeed</a> &amp;&amp; ( <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">videoOption</a> &gt; <a class="code" href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d">VIDEO_4X</a> ) ) {</div><div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;        color = <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a0a2ca5a7091f9c79b39ea0916dd88a05">showSpeedTransparent</a> ? D3DCOLOR_ARGB(0x7F, 0x00, 0x00, 0xFF) : D3DCOLOR_ARGB(0xFF, 0x00, 0x00, 0xFF);</div><div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;        <span class="keywordtype">char</span> <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>[30];</div><div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keywordflow">if</span>( <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#ad86589d0d03fceef36d35c0b2e928e9e">showSpeed</a> == 1 ) {</div><div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            sprintf( <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, <span class="stringliteral">&quot;%3d%%&quot;</span>, <a class="code" href="_direct3_d_8cpp.html#a0421cd0a68e3a61f63e546af26cbc786">systemSpeed</a> );</div><div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            sprintf( <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, <span class="stringliteral">&quot;%3d%%(%d, %d fps)&quot;</span>, <a class="code" href="_direct3_d_8cpp.html#a0421cd0a68e3a61f63e546af26cbc786">systemSpeed</a>, <a class="code" href="system_8cpp.html#ac88aa402d015fda6917b150c22a28968">systemFrameSkip</a>, <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a2d041dae40bdb47cd6bd28463cc484d9">showRenderedFrames</a> );</div><div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        }</div><div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        </div><div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;        r.top = 4;</div><div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;        r.bottom = 20;</div><div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;        pFont-&gt;DrawText( <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, -1, &amp;r, 0, color );</div><div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    }</div><div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;</div><div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;    pDevice-&gt;EndScene();</div><div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;</div><div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;    pDevice-&gt;Present( <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a> );</div><div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;</div><div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a204d14d33aebd442db9affee1cc4f3a8"><div class="ttname"><a href="class_v_b_a.html#a204d14d33aebd442db9affee1cc4f3a8">VBA::screenMessage</a></div><div class="ttdeci">bool screenMessage</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00096">VBA.h:96</a></div></div>
+<div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ab9551bfe042a30531aeb47a7b2ac2038"><div class="ttname"><a href="class_v_b_a.html#ab9551bfe042a30531aeb47a7b2ac2038">VBA::screenMessageBuffer</a></div><div class="ttdeci">CString screenMessageBuffer</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00097">VBA.h:97</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a1c5e3ef2e69bfe2a6a877606fbb4de9c"><div class="ttname"><a href="class_v_b_a.html#a1c5e3ef2e69bfe2a6a877606fbb4de9c">VBA::filterHeight</a></div><div class="ttdeci">int filterHeight</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00079">VBA.h:79</a></div></div>
+<div class="ttc" id="_system_8h_html_aed742c436da53c1080638ce6ef7d13de"><div class="ttname"><a href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a></div><div class="ttdeci">unsigned char u8</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00029">System.h:29</a></div></div>
+<div class="ttc" id="_v_b_a_8h_html_a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d"><div class="ttname"><a href="_v_b_a_8h.html#a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d">VIDEO_4X</a></div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00050">VBA.h:50</a></div></div>
+<div class="ttc" id="system_8cpp_html_adaf454a4617a00b5cfed14c203ab6efa"><div class="ttname"><a href="system_8cpp.html#adaf454a4617a00b5cfed14c203ab6efa">systemColorDepth</a></div><div class="ttdeci">int systemColorDepth</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00040">system.cpp:40</a></div></div>
+<div class="ttc" id="class_v_b_a_html_acb2e7221985fd0355f105cd1ec42e52e"><div class="ttname"><a href="class_v_b_a.html#acb2e7221985fd0355f105cd1ec42e52e">VBA::sizeY</a></div><div class="ttdeci">int sizeY</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00087">VBA.h:87</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ad86589d0d03fceef36d35c0b2e928e9e"><div class="ttname"><a href="class_v_b_a.html#ad86589d0d03fceef36d35c0b2e928e9e">VBA::showSpeed</a></div><div class="ttdeci">int showSpeed</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00093">VBA.h:93</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a8267ca41247e8d752776b57a3f8af011"><div class="ttname"><a href="class_v_b_a.html#a8267ca41247e8d752776b57a3f8af011">VBA::filterFunction</a></div><div class="ttdeci">void(* filterFunction)(u8 *, u32, u8 *, u8 *, u32, int, int)</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00074">VBA.h:74</a></div></div>
+<div class="ttc" id="class_direct3_d_display_html_a67b8e31e5bb726cb82efbfb0be90935f"><div class="ttname"><a href="class_direct3_d_display.html#a67b8e31e5bb726cb82efbfb0be90935f">Direct3DDisplay::clear</a></div><div class="ttdeci">virtual void clear()</div><div class="ttdef"><b>Definition:</b> <a href="_direct3_d_8cpp_source.html#l00360">Direct3D.cpp:360</a></div></div>
+<div class="ttc" id="_direct3_d_8cpp_html_a0421cd0a68e3a61f63e546af26cbc786"><div class="ttname"><a href="_direct3_d_8cpp.html#a0421cd0a68e3a61f63e546af26cbc786">systemSpeed</a></div><div class="ttdeci">int systemSpeed</div><div class="ttdef"><b>Definition:</b> <a href="_s_d_l_8cpp_source.html#l00135">SDL.cpp:135</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a1ae8b3a4ed9fd2a3783868ae5d38c3bc"><div class="ttname"><a href="class_v_b_a.html#a1ae8b3a4ed9fd2a3783868ae5d38c3bc">VBA::filterWidth</a></div><div class="ttdeci">int filterWidth</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00078">VBA.h:78</a></div></div>
+<div class="ttc" id="display_8cpp_html_af067251fbfac32e8e783daa9587befd8"><div class="ttname"><a href="display_8cpp.html#af067251fbfac32e8e783daa9587befd8">copyImage</a></div><div class="ttdeci">void copyImage(void *source, void *destination, unsigned int width, unsigned int height, unsigned int destinationPitch, unsigned int colorDepth)</div><div class="ttdef"><b>Definition:</b> <a href="display_8cpp_source.html#l00022">display.cpp:22</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a7bfea5ab60b19d26053b22ce070e2248"><div class="ttname"><a href="class_v_b_a.html#a7bfea5ab60b19d26053b22ce070e2248">VBA::disableStatusMessage</a></div><div class="ttdeci">bool disableStatusMessage</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00092">VBA.h:92</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a7b711f29fd088fa6611d240277a24e9e"><div class="ttname"><a href="class_v_b_a.html#a7b711f29fd088fa6611d240277a24e9e">VBA::sizeX</a></div><div class="ttdeci">int sizeX</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00086">VBA.h:86</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a17dac073149c897f770c00ed7098ad32"><div class="ttname"><a href="class_v_b_a.html#a17dac073149c897f770c00ed7098ad32">VBA::videoOption</a></div><div class="ttdeci">int videoOption</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00090">VBA.h:90</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a00bd5b85110bd763ad39eb4a9fb403a1"><div class="ttname"><a href="class_v_b_a.html#a00bd5b85110bd763ad39eb4a9fb403a1">VBA::fullScreenStretch</a></div><div class="ttdeci">bool fullScreenStretch</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00091">VBA.h:91</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a27f8c0f4add5a8242470289874dd601c"><div class="ttname"><a href="class_v_b_a.html#a27f8c0f4add5a8242470289874dd601c">VBA::screenMessageTime</a></div><div class="ttdeci">DWORD screenMessageTime</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00098">VBA.h:98</a></div></div>
+<div class="ttc" id="system_8cpp_html_ac88aa402d015fda6917b150c22a28968"><div class="ttname"><a href="system_8cpp.html#ac88aa402d015fda6917b150c22a28968">systemFrameSkip</a></div><div class="ttdeci">int systemFrameSkip</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00044">system.cpp:44</a></div></div>
+<div class="ttc" id="_g_b_8cpp_html_a5ee6554b606dcde59ac92578b33776d0"><div class="ttname"><a href="_g_b_8cpp.html#a5ee6554b606dcde59ac92578b33776d0">pix</a></div><div class="ttdeci">u8 * pix</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00060">Globals.cpp:60</a></div></div>
+<div class="ttc" id="class_v_b_a_html_ae53d4a6574bd47657fa6bd76eabd8543"><div class="ttname"><a href="class_v_b_a.html#ae53d4a6574bd47657fa6bd76eabd8543">VBA::delta</a></div><div class="ttdeci">u8 * delta[257 *244 *4]</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00099">VBA.h:99</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a0a2ca5a7091f9c79b39ea0916dd88a05"><div class="ttname"><a href="class_v_b_a.html#a0a2ca5a7091f9c79b39ea0916dd88a05">VBA::showSpeedTransparent</a></div><div class="ttdeci">BOOL showSpeedTransparent</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00094">VBA.h:94</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a2d041dae40bdb47cd6bd28463cc484d9"><div class="ttname"><a href="class_v_b_a.html#a2d041dae40bdb47cd6bd28463cc484d9">VBA::showRenderedFrames</a></div><div class="ttdeci">int showRenderedFrames</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00095">VBA.h:95</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_direct3_d_display_a1c789bf663cfd32bb2827b9a0f0429c7_cgraph.png" border="0" usemap="#class_direct3_d_display_a1c789bf663cfd32bb2827b9a0f0429c7_cgraph" alt=""/></div>
+<map name="class_direct3_d_display_a1c789bf663cfd32bb2827b9a0f0429c7_cgraph" id="class_direct3_d_display_a1c789bf663cfd32bb2827b9a0f0429c7_cgraph">
+<area shape="rect" id="node2" href="class_direct3_d_display.html#a67b8e31e5bb726cb82efbfb0be90935f" title="Direct3DDisplay::clear" alt="" coords="212,5,363,32"/>
+<area shape="rect" id="node3" href="display_8cpp.html#af067251fbfac32e8e783daa9587befd8" title="copyImage" alt="" coords="245,56,330,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a099bbef2eaaf90efb3ecb00c68103fe7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a099bbef2eaaf90efb3ecb00c68103fe7">&#9670;&nbsp;</a></span>renderMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Direct3DDisplay::renderMenu </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#ad6fc199a615635440ca01485c1283d41">IDisplay</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00351">351</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;{</div><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    <a class="code" href="class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0">checkFullScreen</a>();</div><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.m_pMainWnd) {</div><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.m_pMainWnd-&gt;DrawMenuBar();</div><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;    }</div><div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;}</div><div class="ttc" id="class_i_display_html_afcb9df4a4949d13491f9a07a2ce24eb0"><div class="ttname"><a href="class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0">IDisplay::checkFullScreen</a></div><div class="ttdeci">virtual void checkFullScreen()</div><div class="ttdef"><b>Definition:</b> <a href="_display_8h_source.html#l00037">Display.h:37</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_direct3_d_display_a099bbef2eaaf90efb3ecb00c68103fe7_cgraph.png" border="0" usemap="#class_direct3_d_display_a099bbef2eaaf90efb3ecb00c68103fe7_cgraph" alt=""/></div>
+<map name="class_direct3_d_display_a099bbef2eaaf90efb3ecb00c68103fe7_cgraph" id="class_direct3_d_display_a099bbef2eaaf90efb3ecb00c68103fe7_cgraph">
+<area shape="rect" id="node2" href="class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="244,5,417,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0e6e22fc78ec40c164ec7943581bcf7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e6e22fc78ec40c164ec7943581bcf7f">&#9670;&nbsp;</a></span>resize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Direct3DDisplay::resize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>w</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#ad0b4ba99f59edd7a6857e3b3941b3ba2">IDisplay</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00463">463</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;{</div><div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;    <span class="keywordflow">if</span>( (w != dpp.BackBufferWidth) || (h != dpp.BackBufferHeight) ) {</div><div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        dpp.BackBufferWidth = (UINT)w;</div><div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        dpp.BackBufferHeight = (UINT)h;</div><div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        resetDevice();</div><div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        calculateDestRect();</div><div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;    }</div><div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a46be4b83a670d9d29cef2e7131ed46ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46be4b83a670d9d29cef2e7131ed46ae">&#9670;&nbsp;</a></span>selectFullScreenMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> Direct3DDisplay::selectFullScreenMode </td>
+          <td>(</td>
+          <td class="paramtype">GUID **&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#a2f7a55f63c5e4b24245aa88228afab68">IDisplay</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00474">474</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;{</div><div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;    HRESULT hr;</div><div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    D3DDISPLAYMODE dm;</div><div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;    <span class="keywordflow">if</span>( FAILED( hr = pDevice-&gt;GetDisplayMode( 0, &amp;dm ) ) ) {</div><div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        DXTRACE_ERR_MSGBOX( _T(<span class="stringliteral">&quot;pDevice-&gt;GetDisplayMode failed&quot;</span>), hr );</div><div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;    }</div><div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;</div><div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;    UINT bitsPerPixel;</div><div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;    <span class="keywordflow">switch</span>( dm.Format )</div><div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;    {</div><div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keywordflow">case</span> D3DFMT_A2R10G10B10:</div><div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;    <span class="keywordflow">case</span> D3DFMT_X8R8G8B8:</div><div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        bitsPerPixel = 32;</div><div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;    <span class="keywordflow">case</span> D3DFMT_X1R5G5B5:</div><div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keywordflow">case</span> D3DFMT_R5G6B5:</div><div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        bitsPerPixel = 16;</div><div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;    }</div><div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;</div><div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    <span class="keywordflow">return</span> (bitsPerPixel &lt;&lt; 24) | (dm.Width &lt;&lt; 12) | dm.Height;</div><div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a9fb19225514b70c7178aa871c9852936"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb19225514b70c7178aa871c9852936">&#9670;&nbsp;</a></span>setOption()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Direct3DDisplay::setOption </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>option</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_display.html#a1766244708c252bb8781892c76c20ba9">IDisplay</a>(으)로부터 재구현되었습니다.</p>
+
+<p class="definition"><a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a> 파일의 <a class="el" href="_direct3_d_8cpp_source.html#l00582">582</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;{</div><div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;    <span class="keywordflow">if</span>( !_tcscmp( <a class="code" href="structoption.html">option</a>, _T(<span class="stringliteral">&quot;vsync&quot;</span>) ) ) {</div><div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        dpp.PresentationInterval = value ? D3DPRESENT_INTERVAL_ONE : D3DPRESENT_INTERVAL_IMMEDIATE;</div><div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;        resetDevice();</div><div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    }</div><div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;</div><div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    <span class="keywordflow">if</span>( !_tcscmp( <a class="code" href="structoption.html">option</a>, _T(<span class="stringliteral">&quot;tripleBuffering&quot;</span>) ) ) {</div><div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        dpp.BackBufferCount = value ? 2 : 1;</div><div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        resetDevice();</div><div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;    }</div><div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;</div><div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    <span class="keywordflow">if</span>( !_tcscmp( <a class="code" href="structoption.html">option</a>, _T(<span class="stringliteral">&quot;d3dFilter&quot;</span>) ) ) {</div><div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        <span class="keywordflow">switch</span>( value )</div><div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;        {</div><div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <span class="keywordflow">case</span> 0: <span class="comment">//point</span></div><div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;            filter = D3DTEXF_POINT;</div><div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;        <span class="keywordflow">case</span> 1: <span class="comment">//linear</span></div><div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;            filter = D3DTEXF_LINEAR;</div><div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;            <span class="keywordflow">break</span>;</div><div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;        }</div><div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;    }</div><div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;</div><div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;    <span class="keywordflow">if</span>( !_tcscmp( <a class="code" href="structoption.html">option</a>, _T(<span class="stringliteral">&quot;maxScale&quot;</span>) ) ) {</div><div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        calculateDestRect();</div><div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    }</div><div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;}</div><div class="ttc" id="structoption_html"><div class="ttname"><a href="structoption.html">option</a></div><div class="ttdef"><b>Definition:</b> <a href="getopt_8h_source.html#l00082">getopt.h:82</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_direct3_d_display_a9fb19225514b70c7178aa871c9852936_icgraph.png" border="0" usemap="#class_direct3_d_display_a9fb19225514b70c7178aa871c9852936_icgraph" alt=""/></div>
+<map name="class_direct3_d_display_a9fb19225514b70c7178aa871c9852936_icgraph" id="class_direct3_d_display_a9fb19225514b70c7178aa871c9852936_icgraph">
+<area shape="rect" id="node2" href="class_direct3_d_display.html#a8b8dfd84005816382396677e23d38879" title="Direct3DDisplay::initialize" alt="" coords="232,5,403,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/Direct3D.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_direct3_d_8cpp_source.html">Direct3D.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_direct3_d_display.html">Direct3DDisplay</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

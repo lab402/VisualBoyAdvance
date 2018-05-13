@@ -1,0 +1,10 @@
+<map id="GBTileView::OnStretch" name="GBTileView::OnStretch">
+<area shape="rect" id="node2" href="$class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812" title="BitmapControl::setStretch" alt="" coords="209,5,381,32"/>
+<area shape="rect" id="node3" href="$class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="628,56,800,83"/>
+<area shape="rect" id="node4" href="$class_g_b_tile_view.html#aa78a471956e777509644a0a04bab2c4d" title="GBTileView::paint" alt="" coords="233,107,358,133"/>
+<area shape="rect" id="node9" href="$_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e" title="regSetDwordValue" alt="" coords="231,157,360,184"/>
+<area shape="rect" id="node5" href="$class_g_b_tile_view.html#a1012b77fed7304d7b27b9d619472e6a7" title="GBTileView::render" alt="" coords="438,107,571,133"/>
+<area shape="rect" id="node8" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="429,157,580,184"/>
+<area shape="rect" id="node6" href="$class_g_b_tile_view.html#ade04081b3b047c110f6ae5673c7154ee" title="GBTileView::renderTile" alt="" coords="637,107,791,133"/>
+<area shape="rect" id="node7" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="636,157,792,184"/>
+</map>

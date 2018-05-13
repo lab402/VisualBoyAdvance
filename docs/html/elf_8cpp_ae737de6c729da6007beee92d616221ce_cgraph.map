@@ -1,0 +1,32 @@
+<map id="elfReadProgram" name="elfReadProgram">
+<area shape="rect" id="node2" href="$elf_8cpp.html#aee6fe5b821d3fa4fe3b64f2c17a45113" title="elfReadSection" alt="" coords="1457,99,1566,126"/>
+<area shape="rect" id="node3" href="$elf_8cpp.html#a60f3a32d9157d4cd333c209a63735989" title="elfGetSectionByName" alt="" coords="1436,150,1587,176"/>
+<area shape="rect" id="node4" href="$elf_8cpp.html#a064cb5f206feeeb74557c95d0c3c45e2" title="elfParseCompUnit" alt="" coords="168,428,295,455"/>
+<area shape="rect" id="node25" href="$elf_8cpp.html#a586476492edf86adf126f1e6669d777b" title="elfParseLineInfo" alt="" coords="1262,302,1375,328"/>
+<area shape="rect" id="node28" href="$elf_8cpp.html#a1ba19db2dca6b0a87ab73b1f510208df" title="elfParseAranges" alt="" coords="1260,99,1377,126"/>
+<area shape="rect" id="node29" href="$elf_8cpp.html#ad770db6fce1f2332d8c958d29bb09464" title="elfParseCFA" alt="" coords="1271,200,1366,227"/>
+<area shape="rect" id="node30" href="$elf_8cpp.html#a366513cf1fad1cb9a3623fb671f22175" title="elfReadSymtab" alt="" coords="1263,48,1374,75"/>
+<area shape="rect" id="node5" href="$elf_8cpp.html#a395fe2be4e79a03b5c3cf5c6fd687f57" title="elfRead4Bytes" alt="" coords="1458,251,1565,278"/>
+<area shape="rect" id="node6" href="$elf_8cpp.html#a014a0877cd8698680117bace5792dc2b" title="elfRead2Bytes" alt="" coords="1458,504,1565,531"/>
+<area shape="rect" id="node7" href="$elf_8cpp.html#afc9d641a5c6084574c90390bf42c9270" title="elfReadAbbrevs" alt="" coords="1263,1264,1374,1291"/>
+<area shape="rect" id="node8" href="$elf_8cpp.html#a077048bafa33fbb0e59622ac73a94cd4" title="elfReadLEB128" alt="" coords="1456,707,1567,734"/>
+<area shape="rect" id="node9" href="$elf_8cpp.html#a36c4f27091700f64c84b8581856c104d" title="elfGetAbbrev" alt="" coords="1464,1112,1559,1139"/>
+<area shape="rect" id="node10" href="$elf_8cpp.html#a3bba79b400ce1115c4c8c7b961fdb101" title="elfReadAttribute" alt="" coords="1261,555,1376,582"/>
+<area shape="rect" id="node14" href="$elf_8cpp.html#ac7fb301207eb827ea83c833094d908eb" title="elfParseCompileUnitChildren" alt="" coords="343,910,529,936"/>
+<area shape="rect" id="node11" href="$elf_8cpp.html#ac8c5826c204074fc3e24982fa9bdbae9" title="elfReadSignedLEB128" alt="" coords="1436,302,1587,328"/>
+<area shape="rect" id="node12" href="$elf_8cpp.html#a01d365faa9744064e832d40a7ddc3bc1" title="elfGetCompileUnitForData" alt="" coords="1425,555,1597,582"/>
+<area shape="rect" id="node13" href="$expr-lex_8cpp.html#a6d2c3c030982c7aa276480da4522ae0f" title="exit" alt="" coords="1645,454,1688,480"/>
+<area shape="rect" id="node15" href="$elf_8cpp.html#a2a3d342ad0ad1bc1db05265d4d580951" title="elfParseFunction" alt="" coords="577,910,696,936"/>
+<area shape="rect" id="node20" href="$elf_8cpp.html#a5086d7d47689f577d3020c886d636bc2" title="elfSkipData" alt="" coords="904,808,992,835"/>
+<area shape="rect" id="node22" href="$elf_8cpp.html#a3ddc707814bbb91b3c6123af5841f725" title="elfParseObject" alt="" coords="895,1062,1001,1088"/>
+<area shape="rect" id="node24" href="$elf_8cpp.html#abf61a588d65b13ffb24081888eb1e08c" title="elfParseUnknownData" alt="" coords="1056,707,1205,734"/>
+<area shape="rect" id="node16" href="$elf_8cpp.html#acc450efe0f184a23df06327631cad6c9" title="elfParseType" alt="" coords="1270,1163,1367,1190"/>
+<area shape="rect" id="node18" href="$elf_8cpp.html#a859fe654dda33d29ac38088284a942a7" title="elfGetFunctionAttributes" alt="" coords="1049,1011,1212,1038"/>
+<area shape="rect" id="node19" href="$elf_8cpp.html#a440b2371f7d8875ebab725d61441ad8d" title="elfCleanUp" alt="" coords="753,707,837,734"/>
+<area shape="rect" id="node21" href="$elf_8cpp.html#a4e6431f5f20e1aad45627cc0f2dbc53a" title="elfParseBlock" alt="" coords="744,910,847,936"/>
+<area shape="rect" id="node17" href="$elf_8cpp.html#aca32b49b109ec3487bdf1a42fc030c26" title="elfAddType" alt="" coords="1468,1163,1555,1190"/>
+<area shape="rect" id="node23" href="$elf_8cpp.html#a97d7ccacc1b1397bd5f8b02ee7a5ebae" title="elfGetObjectAttributes" alt="" coords="1055,1062,1206,1088"/>
+<area shape="rect" id="node26" href="$elf_8cpp.html#aa55f7e2a9b48f002f0dd15fd1955b671" title="elfReadString" alt="" coords="1462,403,1561,430"/>
+<area shape="rect" id="node27" href="$elf_8cpp.html#a0411725048d253890c406962f3f5ebec" title="elfAddLine" alt="" coords="1470,454,1553,480"/>
+<area shape="rect" id="node31" href="$elf_8cpp.html#a96c6999fda9d5cf11cf9ff10e141a708" title="elfGetSectionByNumber" alt="" coords="1431,48,1592,75"/>
+</map>

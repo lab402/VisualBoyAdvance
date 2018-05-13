@@ -1,0 +1,22 @@
+<map id="regQueryDwordValue" name="regQueryDwordValue">
+<area shape="rect" id="node2" href="$class_g_b_a_cheat_search.html#a29ff71ddc116276ad183d91e93d69426" title="GBACheatSearch::OnInitDialog" alt="" coords="199,5,401,32"/>
+<area shape="rect" id="node3" href="$class_add_cheat.html#a92017eb0efe50e09e7c3e5e4980a18cb" title="AddCheat::OnInitDialog" alt="" coords="221,56,379,83"/>
+<area shape="rect" id="node4" href="$class_g_b_a_cheat_list.html#ae6cfd528dfdae4f9e7f64df50a0771ed" title="GBACheatList::OnInitDialog" alt="" coords="209,107,391,133"/>
+<area shape="rect" id="node5" href="$class_g_b_cheat_search.html#a8aba3602d876fba97b2ef5195dc0b648" title="GBCheatSearch::OnInitDialog" alt="" coords="203,157,397,184"/>
+<area shape="rect" id="node6" href="$class_add_g_b_cheat.html#a97210ad566b117af4994adac5d954e94" title="AddGBCheat::OnInitDialog" alt="" coords="212,208,388,235"/>
+<area shape="rect" id="node7" href="$class_g_b_map_view.html#a3bcd4b5e76fbe0ae04809770fce64765" title="GBMapView::OnInitDialog" alt="" coords="214,259,386,285"/>
+<area shape="rect" id="node8" href="$class_g_b_memory_viewer_dlg.html#a17f1561370d3e56e71044555399dc8de" title="GBMemoryViewerDlg::\lOnInitDialog" alt="" coords="223,310,377,351"/>
+<area shape="rect" id="node9" href="$class_g_b_oam_view.html#a633fdb700275a8a8ce96978472c643b5" title="GBOamView::OnInitDialog" alt="" coords="213,376,387,403"/>
+<area shape="rect" id="node10" href="$class_g_b_printer_dlg.html#a0e1d0d5e238e3133e088bd1be4711755" title="GBPrinterDlg::OnInitDialog" alt="" coords="212,427,388,453"/>
+<area shape="rect" id="node11" href="$class_g_b_tile_view.html#a4d97fe7dcfd863756d993834548d2ca6" title="GBTileView::OnInitDialog" alt="" coords="217,477,383,504"/>
+<area shape="rect" id="node12" href="$class_main_wnd.html#a872b497a88ca77012694cc909c62e6e4" title="MainWnd::fileOpenSelect" alt="" coords="215,528,385,555"/>
+<area shape="rect" id="node16" href="$class_map_view.html#a10c4f05b5c4289dfc08c6501de3cf40c" title="MapView::OnInitDialog" alt="" coords="223,579,377,605"/>
+<area shape="rect" id="node17" href="$class_memory_viewer_dlg.html#a2061415e67d04b0c157ba2bd50a8c56c" title="MemoryViewerDlg::OnInitDialog" alt="" coords="197,629,403,656"/>
+<area shape="rect" id="node18" href="$class_oam_view.html#a925c72977181efd7be81b302af7ed071" title="OamView::OnInitDialog" alt="" coords="222,680,378,707"/>
+<area shape="rect" id="node19" href="$class_tile_view.html#a597e32fa09187fe6ea909cca947bfbc1" title="TileView::OnInitDialog" alt="" coords="226,731,374,757"/>
+<area shape="rect" id="node20" href="$class_v_b_a.html#aed48a7db8cc5b65a1e495661f6040915" title="VBA::loadSettings" alt="" coords="235,781,365,808"/>
+<area shape="rect" id="node13" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="495,477,649,504"/>
+<area shape="rect" id="node14" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="469,528,675,555"/>
+<area shape="rect" id="node15" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="451,579,693,605"/>
+<area shape="rect" id="node21" href="$class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="511,781,633,808"/>
+</map>

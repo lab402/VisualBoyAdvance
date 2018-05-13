@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_g_d_b_port_dlg.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,67 +95,359 @@ $(function() {
 <div class="title">GDBPortDlg 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_g_d_b_connection_8h_source.html">GDBConnection.h</a>&gt;</code></p>
 <div class="dynheader">
 GDBPortDlg에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_g_d_b_port_dlg.png" usemap="#GDBPortDlg_map" alt=""/>
-  <map id="GDBPortDlg_map" name="GDBPortDlg_map">
-</map>
- </div></div>
+<div class="center"><img src="class_g_d_b_port_dlg__inherit__graph.png" border="0" usemap="#_g_d_b_port_dlg_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+GDBPortDlg에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_d_b_port_dlg__coll__graph.png" border="0" usemap="#_g_d_b_port_dlg_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:a04b7310ce182cc037cf3e74852d61ebb"><td class="memItemLeft" align="right" valign="top"><a id="a04b7310ce182cc037cf3e74852d61ebb"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_GDB_PORT
+<tr class="memitem:a04b7310ce182cc037cf3e74852d61ebb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_g_d_b_port_dlg.html#a04b7310ce182cc037cf3e74852d61ebba59167ee2b7092de6e5cacd6ef77f3cff">IDD</a> = IDD_GDB_PORT
  }</td></tr>
 <tr class="separator:a04b7310ce182cc037cf3e74852d61ebb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a6319081133e78827d9dfb6c287d88068"><td class="memItemLeft" align="right" valign="top"><a id="a6319081133e78827d9dfb6c287d88068"></a>
-SOCKET&#160;</td><td class="memItemRight" valign="bottom"><b>getSocket</b> ()</td></tr>
+<tr class="memitem:a6319081133e78827d9dfb6c287d88068"><td class="memItemLeft" align="right" valign="top"><a class="el" href="remote_8cpp.html#aff55fe551a9992a54ec54621c524d0a4">SOCKET</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#a6319081133e78827d9dfb6c287d88068">getSocket</a> ()</td></tr>
 <tr class="separator:a6319081133e78827d9dfb6c287d88068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aedb1de0b6ce4cf403b6be05f2a6d9668"><td class="memItemLeft" align="right" valign="top"><a id="aedb1de0b6ce4cf403b6be05f2a6d9668"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getPort</b> ()</td></tr>
+<tr class="memitem:aedb1de0b6ce4cf403b6be05f2a6d9668"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#aedb1de0b6ce4cf403b6be05f2a6d9668">getPort</a> ()</td></tr>
 <tr class="separator:aedb1de0b6ce4cf403b6be05f2a6d9668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaae63af104a2adb206c99bcb33e22794"><td class="memItemLeft" align="right" valign="top"><a id="aaae63af104a2adb206c99bcb33e22794"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>GDBPortDlg</b> (CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:aaae63af104a2adb206c99bcb33e22794"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#aaae63af104a2adb206c99bcb33e22794">GDBPortDlg</a> (CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:aaae63af104a2adb206c99bcb33e22794"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a243e7307371feed3fe058cbf822c3cb0"><td class="memItemLeft" align="right" valign="top"><a id="a243e7307371feed3fe058cbf822c3cb0"></a>
-CEdit&#160;</td><td class="memItemRight" valign="bottom"><b>m_port</b></td></tr>
+<tr class="memitem:a243e7307371feed3fe058cbf822c3cb0"><td class="memItemLeft" align="right" valign="top">CEdit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#a243e7307371feed3fe058cbf822c3cb0">m_port</a></td></tr>
 <tr class="separator:a243e7307371feed3fe058cbf822c3cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a05547373a733d6038a8b1091e3f94d71"><td class="memItemLeft" align="right" valign="top"><a id="a05547373a733d6038a8b1091e3f94d71"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a05547373a733d6038a8b1091e3f94d71"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#a05547373a733d6038a8b1091e3f94d71">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a05547373a733d6038a8b1091e3f94d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7abe221ad56b1aedf9f3dad6e03a031"><td class="memItemLeft" align="right" valign="top"><a id="af7abe221ad56b1aedf9f3dad6e03a031"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:af7abe221ad56b1aedf9f3dad6e03a031"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#af7abe221ad56b1aedf9f3dad6e03a031">OnInitDialog</a> ()</td></tr>
 <tr class="separator:af7abe221ad56b1aedf9f3dad6e03a031"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f6d1611b04e5e1803b4d2faf1a117f2"><td class="memItemLeft" align="right" valign="top"><a id="a1f6d1611b04e5e1803b4d2faf1a117f2"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOk</b> ()</td></tr>
+<tr class="memitem:a1f6d1611b04e5e1803b4d2faf1a117f2"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#a1f6d1611b04e5e1803b4d2faf1a117f2">OnOk</a> ()</td></tr>
 <tr class="separator:a1f6d1611b04e5e1803b4d2faf1a117f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec825d9c81585a57a4951fe68940293d"><td class="memItemLeft" align="right" valign="top"><a id="aec825d9c81585a57a4951fe68940293d"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCancel</b> ()</td></tr>
+<tr class="memitem:aec825d9c81585a57a4951fe68940293d"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#aec825d9c81585a57a4951fe68940293d">OnCancel</a> ()</td></tr>
 <tr class="separator:aec825d9c81585a57a4951fe68940293d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a77f1b200ffbe8a3d0cc555baec9c36ce"><td class="memItemLeft" align="right" valign="top"><a id="a77f1b200ffbe8a3d0cc555baec9c36ce"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnClose</b> ()</td></tr>
+<tr class="memitem:a77f1b200ffbe8a3d0cc555baec9c36ce"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_d_b_port_dlg.html#a77f1b200ffbe8a3d0cc555baec9c36ce">OnClose</a> ()</td></tr>
 <tr class="separator:a77f1b200ffbe8a3d0cc555baec9c36ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_g_d_b_connection_8h_source.html">GDBConnection.h</a> 파일의 <a class="el" href="_g_d_b_connection_8h_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a04b7310ce182cc037cf3e74852d61ebb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04b7310ce182cc037cf3e74852d61ebb">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a04b7310ce182cc037cf3e74852d61ebba59167ee2b7092de6e5cacd6ef77f3cff"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8h_source.html">GDBConnection.h</a> 파일의 <a class="el" href="_g_d_b_connection_8h_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{ <a class="code" href="class_g_d_b_port_dlg.html#a04b7310ce182cc037cf3e74852d61ebba59167ee2b7092de6e5cacd6ef77f3cff">IDD</a> = <a class="code" href="resource_8h.html#a9efb93f51b799811ab66236dfd7684b8">IDD_GDB_PORT</a> };</div><div class="ttc" id="class_g_d_b_port_dlg_html_a04b7310ce182cc037cf3e74852d61ebba59167ee2b7092de6e5cacd6ef77f3cff"><div class="ttname"><a href="class_g_d_b_port_dlg.html#a04b7310ce182cc037cf3e74852d61ebba59167ee2b7092de6e5cacd6ef77f3cff">GDBPortDlg::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_d_b_connection_8h_source.html#l00046">GDBConnection.h:46</a></div></div>
+<div class="ttc" id="resource_8h_html_a9efb93f51b799811ab66236dfd7684b8"><div class="ttname"><a href="resource_8h.html#a9efb93f51b799811ab66236dfd7684b8">IDD_GDB_PORT</a></div><div class="ttdeci">#define IDD_GDB_PORT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00080">resource.h:80</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="aaae63af104a2adb206c99bcb33e22794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae63af104a2adb206c99bcb33e22794">&#9670;&nbsp;</a></span>GDBPortDlg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">GDBPortDlg::GDBPortDlg </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a> 파일의 <a class="el" href="_g_d_b_connection_8cpp_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  : CDialog(<a class="code" href="class_g_d_b_port_dlg.html#a04b7310ce182cc037cf3e74852d61ebba59167ee2b7092de6e5cacd6ef77f3cff">GDBPortDlg::IDD</a>, pParent)</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(GDBPortDlg)</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="comment">// NOTE: the ClassWizard will add member initialization here</span></div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  port = 55555;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  sock = INVALID_SOCKET;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  </div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordflow">if</span>(!initialized) {</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    WSADATA wsaData;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">int</span> error = WSAStartup(MAKEWORD(1,1), &amp;wsaData);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    initialized = <span class="keyword">true</span>;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div><div class="ttc" id="class_g_d_b_port_dlg_html_a04b7310ce182cc037cf3e74852d61ebba59167ee2b7092de6e5cacd6ef77f3cff"><div class="ttname"><a href="class_g_d_b_port_dlg.html#a04b7310ce182cc037cf3e74852d61ebba59167ee2b7092de6e5cacd6ef77f3cff">GDBPortDlg::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_d_b_connection_8h_source.html#l00046">GDBConnection.h:46</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a05547373a733d6038a8b1091e3f94d71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05547373a733d6038a8b1091e3f94d71">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GDBPortDlg::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a> 파일의 <a class="el" href="_g_d_b_connection_8cpp_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;{</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(GDBPortDlg)</span></div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a574f1300495ff98df6df2d9fa6aee8c3">IDC_PORT</a>, <a class="code" href="class_g_d_b_port_dlg.html#a243e7307371feed3fe058cbf822c3cb0">m_port</a>);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;}</div><div class="ttc" id="resource_8h_html_a574f1300495ff98df6df2d9fa6aee8c3"><div class="ttname"><a href="resource_8h.html#a574f1300495ff98df6df2d9fa6aee8c3">IDC_PORT</a></div><div class="ttdeci">#define IDC_PORT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00453">resource.h:453</a></div></div>
+<div class="ttc" id="class_g_d_b_port_dlg_html_a243e7307371feed3fe058cbf822c3cb0"><div class="ttname"><a href="class_g_d_b_port_dlg.html#a243e7307371feed3fe058cbf822c3cb0">GDBPortDlg::m_port</a></div><div class="ttdeci">CEdit m_port</div><div class="ttdef"><b>Definition:</b> <a href="_g_d_b_connection_8h_source.html#l00047">GDBConnection.h:47</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aedb1de0b6ce4cf403b6be05f2a6d9668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedb1de0b6ce4cf403b6be05f2a6d9668">&#9670;&nbsp;</a></span>getPort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> GDBPortDlg::getPort </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a> 파일의 <a class="el" href="_g_d_b_connection_8cpp_source.html#l00081">81</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;{</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordflow">return</span> port;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_d_b_port_dlg_aedb1de0b6ce4cf403b6be05f2a6d9668_icgraph.png" border="0" usemap="#class_g_d_b_port_dlg_aedb1de0b6ce4cf403b6be05f2a6d9668_icgraph" alt=""/></div>
+<map name="class_g_d_b_port_dlg_aedb1de0b6ce4cf403b6be05f2a6d9668_icgraph" id="class_g_d_b_port_dlg_aedb1de0b6ce4cf403b6be05f2a6d9668_icgraph">
+<area shape="rect" id="node2" href="class_main_wnd.html#afd978409fe7d362576094249789ea364" title="MainWnd::OnToolsDebugGdb" alt="" coords="220,5,415,32"/>
+<area shape="rect" id="node3" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="196,56,439,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6319081133e78827d9dfb6c287d88068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6319081133e78827d9dfb6c287d88068">&#9670;&nbsp;</a></span>getSocket()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="remote_8cpp.html#aff55fe551a9992a54ec54621c524d0a4">SOCKET</a> GDBPortDlg::getSocket </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a> 파일의 <a class="el" href="_g_d_b_connection_8cpp_source.html#l00087">87</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;{</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordflow">return</span> sock;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_d_b_port_dlg_a6319081133e78827d9dfb6c287d88068_icgraph.png" border="0" usemap="#class_g_d_b_port_dlg_a6319081133e78827d9dfb6c287d88068_icgraph" alt=""/></div>
+<map name="class_g_d_b_port_dlg_a6319081133e78827d9dfb6c287d88068_icgraph" id="class_g_d_b_port_dlg_a6319081133e78827d9dfb6c287d88068_icgraph">
+<area shape="rect" id="node2" href="class_main_wnd.html#afd978409fe7d362576094249789ea364" title="MainWnd::OnToolsDebugGdb" alt="" coords="237,5,432,32"/>
+<area shape="rect" id="node3" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="213,56,456,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aec825d9c81585a57a4951fe68940293d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec825d9c81585a57a4951fe68940293d">&#9670;&nbsp;</a></span>OnCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GDBPortDlg::OnCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a> 파일의 <a class="el" href="_g_d_b_connection_8cpp_source.html#l00147">147</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;{</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <a class="code" href="class_g_d_b_port_dlg.html#a77f1b200ffbe8a3d0cc555baec9c36ce">OnClose</a>();</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;}</div><div class="ttc" id="class_g_d_b_port_dlg_html_a77f1b200ffbe8a3d0cc555baec9c36ce"><div class="ttname"><a href="class_g_d_b_port_dlg.html#a77f1b200ffbe8a3d0cc555baec9c36ce">GDBPortDlg::OnClose</a></div><div class="ttdeci">afx_msg void OnClose()</div><div class="ttdef"><b>Definition:</b> <a href="_g_d_b_connection_8cpp_source.html#l00152">GDBConnection.cpp:152</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_d_b_port_dlg_aec825d9c81585a57a4951fe68940293d_cgraph.png" border="0" usemap="#class_g_d_b_port_dlg_aec825d9c81585a57a4951fe68940293d_cgraph" alt=""/></div>
+<map name="class_g_d_b_port_dlg_aec825d9c81585a57a4951fe68940293d_cgraph" id="class_g_d_b_port_dlg_aec825d9c81585a57a4951fe68940293d_cgraph">
+<area shape="rect" id="node2" href="class_g_d_b_port_dlg.html#a77f1b200ffbe8a3d0cc555baec9c36ce" title="GDBPortDlg::OnClose" alt="" coords="212,5,363,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a77f1b200ffbe8a3d0cc555baec9c36ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77f1b200ffbe8a3d0cc555baec9c36ce">&#9670;&nbsp;</a></span>OnClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GDBPortDlg::OnClose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a> 파일의 <a class="el" href="_g_d_b_connection_8cpp_source.html#l00152">152</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  EndDialog(FALSE);</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_d_b_port_dlg_a77f1b200ffbe8a3d0cc555baec9c36ce_icgraph.png" border="0" usemap="#class_g_d_b_port_dlg_a77f1b200ffbe8a3d0cc555baec9c36ce_icgraph" alt=""/></div>
+<map name="class_g_d_b_port_dlg_a77f1b200ffbe8a3d0cc555baec9c36ce_icgraph" id="class_g_d_b_port_dlg_a77f1b200ffbe8a3d0cc555baec9c36ce_icgraph">
+<area shape="rect" id="node2" href="class_g_d_b_port_dlg.html#aec825d9c81585a57a4951fe68940293d" title="GDBPortDlg::OnCancel" alt="" coords="204,5,363,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af7abe221ad56b1aedf9f3dad6e03a031"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7abe221ad56b1aedf9f3dad6e03a031">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL GDBPortDlg::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a> 파일의 <a class="el" href="_g_d_b_connection_8cpp_source.html#l00093">93</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;{</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  </div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  CString <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;  <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>.Format(<span class="stringliteral">&quot;%d&quot;</span>, port);</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="class_g_d_b_port_dlg.html#a243e7307371feed3fe058cbf822c3cb0">m_port</a>.SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  CenterWindow();</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  </div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div><div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="class_g_d_b_port_dlg_html_a243e7307371feed3fe058cbf822c3cb0"><div class="ttname"><a href="class_g_d_b_port_dlg.html#a243e7307371feed3fe058cbf822c3cb0">GDBPortDlg::m_port</a></div><div class="ttdeci">CEdit m_port</div><div class="ttdef"><b>Definition:</b> <a href="_g_d_b_connection_8h_source.html#l00047">GDBConnection.h:47</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1f6d1611b04e5e1803b4d2faf1a117f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f6d1611b04e5e1803b4d2faf1a117f2">&#9670;&nbsp;</a></span>OnOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GDBPortDlg::OnOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a> 파일의 <a class="el" href="_g_d_b_connection_8cpp_source.html#l00109">109</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;{</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;  CString <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <a class="code" href="class_g_d_b_port_dlg.html#a243e7307371feed3fe058cbf822c3cb0">m_port</a>.GetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  </div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  sockaddr_in address;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  address.sin_family = AF_INET;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  address.sin_addr.s_addr = inet_addr(<span class="stringliteral">&quot;0.0.0.0&quot;</span>);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  address.sin_port = htons(atoi(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>));</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  port = ntohs(address.sin_port);</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="remote_8cpp.html#aff55fe551a9992a54ec54621c524d0a4">SOCKET</a> s = socket(AF_INET, SOCK_STREAM, 0);</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordflow">if</span>(s != INVALID_SOCKET) {</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">int</span> error = bind(s, (sockaddr *)&amp;address, <span class="keyword">sizeof</span>(address));</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordflow">if</span>(error) {</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="resource_8h.html#ad710ade624efbb97bed024bf6b875329">IDS_ERROR_BINDING</a>, <span class="stringliteral">&quot;Error binding socket. Port probably in use.&quot;</span>);</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      error = closesocket(s);</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      EndDialog(FALSE);</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      error = listen(s, 1);</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      <span class="keywordflow">if</span>(!error) {</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        sock = s;</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        EndDialog(TRUE);</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="resource_8h.html#ace2af83a097a2520aa7926b8a58692d8">IDS_ERROR_LISTENING</a>, <span class="stringliteral">&quot;Error listening on socket.&quot;</span>);</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        closesocket(s);</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        EndDialog(FALSE);</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      }</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="resource_8h.html#acdf73ecabb0bc22c704c5e4f5adbdee0">IDS_ERROR_CREATING_SOCKET</a>, <span class="stringliteral">&quot;Error creating socket.&quot;</span>);</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    EndDialog(FALSE);</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  }</div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div><div class="ttc" id="resource_8h_html_ad710ade624efbb97bed024bf6b875329"><div class="ttname"><a href="resource_8h.html#ad710ade624efbb97bed024bf6b875329">IDS_ERROR_BINDING</a></div><div class="ttdeci">#define IDS_ERROR_BINDING</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00347">resource.h:347</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="resource_8h_html_ace2af83a097a2520aa7926b8a58692d8"><div class="ttname"><a href="resource_8h.html#ace2af83a097a2520aa7926b8a58692d8">IDS_ERROR_LISTENING</a></div><div class="ttdeci">#define IDS_ERROR_LISTENING</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00348">resource.h:348</a></div></div>
+<div class="ttc" id="class_g_d_b_port_dlg_html_a243e7307371feed3fe058cbf822c3cb0"><div class="ttname"><a href="class_g_d_b_port_dlg.html#a243e7307371feed3fe058cbf822c3cb0">GDBPortDlg::m_port</a></div><div class="ttdeci">CEdit m_port</div><div class="ttdef"><b>Definition:</b> <a href="_g_d_b_connection_8h_source.html#l00047">GDBConnection.h:47</a></div></div>
+<div class="ttc" id="resource_8h_html_acdf73ecabb0bc22c704c5e4f5adbdee0"><div class="ttname"><a href="resource_8h.html#acdf73ecabb0bc22c704c5e4f5adbdee0">IDS_ERROR_CREATING_SOCKET</a></div><div class="ttdeci">#define IDS_ERROR_CREATING_SOCKET</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00349">resource.h:349</a></div></div>
+<div class="ttc" id="remote_8cpp_html_aff55fe551a9992a54ec54621c524d0a4"><div class="ttname"><a href="remote_8cpp.html#aff55fe551a9992a54ec54621c524d0a4">SOCKET</a></div><div class="ttdeci">#define SOCKET</div><div class="ttdef"><b>Definition:</b> <a href="remote_8cpp_source.html#l00035">remote.cpp:35</a></div></div>
+<div class="ttc" id="system_8cpp_html_a747a9cb8e015a3d45cca636b5bd0fc69"><div class="ttname"><a href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a></div><div class="ttdeci">void systemMessage(int _iId, const char *_csFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00073">system.cpp:73</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_d_b_port_dlg_a1f6d1611b04e5e1803b4d2faf1a117f2_cgraph.png" border="0" usemap="#class_g_d_b_port_dlg_a1f6d1611b04e5e1803b4d2faf1a117f2_cgraph" alt=""/></div>
+<map name="class_g_d_b_port_dlg_a1f6d1611b04e5e1803b4d2faf1a117f2_cgraph" id="class_g_d_b_port_dlg_a1f6d1611b04e5e1803b4d2faf1a117f2_cgraph">
+<area shape="rect" id="node2" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="188,5,307,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a243e7307371feed3fe058cbf822c3cb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a243e7307371feed3fe058cbf822c3cb0">&#9670;&nbsp;</a></span>m_port</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CEdit GDBPortDlg::m_port</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_d_b_connection_8h_source.html">GDBConnection.h</a> 파일의 <a class="el" href="_g_d_b_connection_8h_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_g_d_b_connection_8h_source.html">GDBConnection.h</a></li>
-<li>src/win32/GDBConnection.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_d_b_connection_8h_source.html">GDBConnection.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_d_b_connection_8cpp_source.html">GDBConnection.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_g_d_b_port_dlg.html">GDBPortDlg</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

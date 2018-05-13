@@ -1,0 +1,5 @@
+<map id="Input::getKeyName" name="Input::getKeyName">
+<area shape="rect" id="node2" href="$class_joypad_edit_control.html#a26c5c6132fe22f6947adc741c930504e" title="JoypadEditControl::\lOnJoyConfig" alt="" coords="208,5,343,47"/>
+<area shape="rect" id="node3" href="$class_joypad_config.html#afc8d09942cc5d7ff9e69e27a98ff2430" title="JoypadConfig::OnInitDialog" alt="" coords="187,71,364,98"/>
+<area shape="rect" id="node4" href="$class_motion_config.html#ac1e282a94d14b433764eeae95b4cab6b" title="MotionConfig::OnInitDialog" alt="" coords="188,122,363,149"/>
+</map>

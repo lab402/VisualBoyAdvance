@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structunz__global__info__s.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,25 +92,70 @@ $(function() {
 <div class="title">unz_global_info_s 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="unzip_8h_source.html">unzip.h</a>&gt;</code></p>
+<div class="dynheader">
+unz_global_info_s에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="structunz__global__info__s__coll__graph.png" border="0" usemap="#unz__global__info__s_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a827d1cd1d09f12acd6c2ee12494cb320"><td class="memItemLeft" align="right" valign="top"><a id="a827d1cd1d09f12acd6c2ee12494cb320"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>number_entry</b></td></tr>
+<tr class="memitem:a827d1cd1d09f12acd6c2ee12494cb320"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__global__info__s.html#a827d1cd1d09f12acd6c2ee12494cb320">number_entry</a></td></tr>
 <tr class="separator:a827d1cd1d09f12acd6c2ee12494cb320"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10b58ab57b62301de813ecac0e974363"><td class="memItemLeft" align="right" valign="top"><a id="a10b58ab57b62301de813ecac0e974363"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>size_comment</b></td></tr>
+<tr class="memitem:a10b58ab57b62301de813ecac0e974363"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__global__info__s.html#a10b58ab57b62301de813ecac0e974363">size_comment</a></td></tr>
 <tr class="separator:a10b58ab57b62301de813ecac0e974363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="unzip_8h_source.html">unzip.h</a> 파일의 <a class="el" href="unzip_8h_source.html#l00103">103</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a827d1cd1d09f12acd6c2ee12494cb320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a827d1cd1d09f12acd6c2ee12494cb320">&#9670;&nbsp;</a></span>number_entry</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_global_info_s::number_entry</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8h_source.html">unzip.h</a> 파일의 <a class="el" href="unzip_8h_source.html#l00105">105</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a10b58ab57b62301de813ecac0e974363"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10b58ab57b62301de813ecac0e974363">&#9670;&nbsp;</a></span>size_comment</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_global_info_s::size_comment</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8h_source.html">unzip.h</a> 파일의 <a class="el" href="unzip_8h_source.html#l00107">107</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/<a class="el" href="unzip_8h_source.html">unzip.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="unzip_8h_source.html">unzip.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structunz__global__info__s.html">unz_global_info_s</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

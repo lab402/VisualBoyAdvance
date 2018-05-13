@@ -1,0 +1,27 @@
+var class_g_b_a_cheat_search =
+[
+    [ "IDD", "class_g_b_a_cheat_search.html#aad94fa4948a9a182e3d5a15c5d0bf02fa210cc376f2b661862a7031b55a0e5ceb", null ],
+    [ "GBACheatSearch", "class_g_b_a_cheat_search.html#aa59bfbdaba09776ce59a01770bb4e756", null ],
+    [ "~GBACheatSearch", "class_g_b_a_cheat_search.html#a3c856e36f9d3fae6e11d53705132e177", null ],
+    [ "addChange", "class_g_b_a_cheat_search.html#afefabf8fcfe952b062d260152c595415", null ],
+    [ "DoDataExchange", "class_g_b_a_cheat_search.html#aa72724b88600ea8391dba6f6cf085282", null ],
+    [ "OnAddCheat", "class_g_b_a_cheat_search.html#ae1797b0166163a717a3f3dfa873c13e6", null ],
+    [ "OnGetdispinfoCheatList", "class_g_b_a_cheat_search.html#a6ad35822df234eb7d2db23435381577e", null ],
+    [ "OnInitDialog", "class_g_b_a_cheat_search.html#a29ff71ddc116276ad183d91e93d69426", null ],
+    [ "OnItemchangedCheatList", "class_g_b_a_cheat_search.html#aa46092b07e72e992913262bc29546b2a", null ],
+    [ "OnNumberType", "class_g_b_a_cheat_search.html#ad75552e2edb79b66761e42965221268c", null ],
+    [ "OnOk", "class_g_b_a_cheat_search.html#a6e17bbbf43d2a744853abfb00fa791ec", null ],
+    [ "OnSearch", "class_g_b_a_cheat_search.html#a2b933c2b548983257f7e92da9bbb1695", null ],
+    [ "OnSearchType", "class_g_b_a_cheat_search.html#a58e09cf82509ff9b68f35d3e3e780c0a", null ],
+    [ "OnSizeType", "class_g_b_a_cheat_search.html#a3a8aab04dae339242636eaa50b5c3bff", null ],
+    [ "OnStart", "class_g_b_a_cheat_search.html#a7c1882cbc31a995d42b02017af188353", null ],
+    [ "OnUpdate", "class_g_b_a_cheat_search.html#ac38fa782e7bb20f90f40e6605808f9fe", null ],
+    [ "OnValueType", "class_g_b_a_cheat_search.html#a6cafcf45420b6af926e47a70f0f9da02", null ],
+    [ "m_list", "class_g_b_a_cheat_search.html#aab4be5c0e3c3436c738a43f466be0902", null ],
+    [ "m_value", "class_g_b_a_cheat_search.html#aaff3a33037e3561aadfdfe905c66148f", null ],
+    [ "numberType", "class_g_b_a_cheat_search.html#a5f4137be5a232d58a5cf4e03c72b008c", null ],
+    [ "searchType", "class_g_b_a_cheat_search.html#a708b5bbf00916b2ff173eb07273b1db5", null ],
+    [ "sizeType", "class_g_b_a_cheat_search.html#a9fc543b94f045d8c778cf921c06cc2c3", null ],
+    [ "updateValues", "class_g_b_a_cheat_search.html#a1b8eec1d7b81c1e297b71c4de071550f", null ],
+    [ "valueType", "class_g_b_a_cheat_search.html#a633f5b523a814d3f1e4cb06b1799b798", null ]
+];

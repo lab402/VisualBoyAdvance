@@ -1,0 +1,6 @@
+<map id="CKeyboardEdit::ResetKey" name="CKeyboardEdit::ResetKey">
+<area shape="rect" id="node2" href="$class_accel_editor.html#ad33ae69dcc262dd73595cb33d82c209e" title="AccelEditor::OnAssign" alt="" coords="253,5,407,32"/>
+<area shape="rect" id="node3" href="$class_accel_editor.html#a40b74b67b95694245502b15ceedd278c" title="AccelEditor::OnRemove" alt="" coords="250,56,410,83"/>
+<area shape="rect" id="node4" href="$class_c_keyboard_edit.html#a1a1165204f7f3bbfbd997c8cc94c97f8" title="CKeyboardEdit::CKeyboardEdit" alt="" coords="228,107,432,133"/>
+<area shape="rect" id="node5" href="$class_c_keyboard_edit.html#a7700247028b07400adf5056c6627e19a" title="CKeyboardEdit::PreTranslate\lMessage" alt="" coords="235,158,425,199"/>
+</map>

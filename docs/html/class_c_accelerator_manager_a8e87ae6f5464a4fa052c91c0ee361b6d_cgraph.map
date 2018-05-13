@@ -1,0 +1,8 @@
+<map id="CAcceleratorManager::Load" name="CAcceleratorManager::Load">
+<area shape="rect" id="node2" href="$_reg_8cpp.html#a5a8a3c049a214600cf436451fe8d184e" title="regQueryBinaryValue" alt="" coords="237,5,383,32"/>
+<area shape="rect" id="node3" href="$class_c_cmd_accel_ob.html#a7040471adc76f057a1d79c9fdfb84fe8" title="CCmdAccelOb::DeleteUserAccels" alt="" coords="200,56,420,83"/>
+<area shape="rect" id="node4" href="$class_c_accels_ob.html#a47a1e7e047807b7a36553aa351768096" title="CAccelsOb::SetData" alt="" coords="239,107,381,133"/>
+<area shape="rect" id="node5" href="$class_c_cmd_accel_ob.html#a519f8c7ac935b0d06531589e5427b656" title="CCmdAccelOb::Add" alt="" coords="241,157,379,184"/>
+<area shape="rect" id="node6" href="$class_c_accelerator_manager.html#a3fa9c8e4f44acc76cc40fc7382e597d8" title="CAcceleratorManager\l::UpdateWndTable" alt="" coords="237,209,383,250"/>
+<area shape="rect" id="node7" href="$class_c_accelerator_manager.html#ac854ec5263a7bab961bf63aec3938984" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="468,209,615,250"/>
+</map>

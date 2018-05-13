@@ -1,0 +1,7 @@
+<map id="VBA::saveSettings" name="VBA::saveSettings">
+<area shape="rect" id="node2" href="$_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e" title="regSetDwordValue" alt="" coords="185,5,314,32"/>
+<area shape="rect" id="node3" href="$_reg_8cpp.html#a37fa244e34332f058ba14f206dc7e0ea" title="regSetStringValue" alt="" coords="186,56,313,83"/>
+<area shape="rect" id="node4" href="$_reg_8cpp.html#a353479c95a247e54f069cc5eb4cd3536" title="regSetBinaryValue" alt="" coords="184,107,315,133"/>
+<area shape="rect" id="node5" href="$_sound_8cpp.html#a3d1f6129176583804274bb162c3428a8" title="soundGetEnable" alt="" coords="190,157,309,184"/>
+<area shape="rect" id="node6" href="$agbprint_8cpp.html#ab6b9c9b8eb5e971359941e3b4923ced9" title="agbPrintIsEnabled" alt="" coords="186,208,313,235"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="GBOamView::paint" name="GBOamView::paint">
+<area shape="rect" id="node2" href="$class_g_b_oam_view.html#a4e4dc00c48996d9fb2dc1169b65b4cc8" title="GBOamView::update" alt="" coords="215,5,359,32"/>
+<area shape="rect" id="node3" href="$class_g_b_oam_view.html#a633fdb700275a8a8ce96978472c643b5" title="GBOamView::OnInitDialog" alt="" coords="199,56,374,83"/>
+<area shape="rect" id="node4" href="$class_g_b_oam_view.html#a580f292889a2fd21ab0bbf217d6abaa3" title="GBOamView::OnStretch" alt="" coords="205,107,369,133"/>
+<area shape="rect" id="node5" href="$class_g_b_oam_view.html#aabd5dcff93f2d91fbc979853123cd30f" title="GBOamView::OnChangeSprite" alt="" coords="187,157,387,184"/>
+<area shape="rect" id="node6" href="$class_g_b_oam_view.html#a06667c6c7951c82b8a222b6663d2e999" title="GBOamView::OnHScroll" alt="" coords="205,208,369,235"/>
+</map>

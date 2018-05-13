@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['unknown_5fcode',['UNKNOWN_CODE',['../_cheats_8cpp.html#aacd03d8a55c3e6a754cbbcd972d421c3',1,'Cheats.cpp']]],
+  ['unput',['unput',['../expr-lex_8cpp.html#a448a4e9041a09588332733c6846c770c',1,'expr-lex.cpp']]],
+  ['unref',['UNREF',['../_win_helper_8h.html#a756193a2a3df1d242539427a26ba2929',1,'WinHelper.h']]],
+  ['unz_5fbadzipfile',['UNZ_BADZIPFILE',['../unzip_8h.html#a3fcc1d41cbea304ce10286ce99577625',1,'unzip.h']]],
+  ['unz_5fbufsize',['UNZ_BUFSIZE',['../unzip_8cpp.html#ac88907609a3408a8ee6544287b6c9880',1,'unzip.cpp']]],
+  ['unz_5fcrcerror',['UNZ_CRCERROR',['../unzip_8h.html#ae9155f504a5db40587b390f9e487c303',1,'unzip.h']]],
+  ['unz_5fend_5fof_5flist_5fof_5ffile',['UNZ_END_OF_LIST_OF_FILE',['../unzip_8h.html#ac55ed190d07021ce9bc1bf34b91dcae9',1,'unzip.h']]],
+  ['unz_5feof',['UNZ_EOF',['../unzip_8h.html#a0438887aea4e1c58e1b3955838a907f3',1,'unzip.h']]],
+  ['unz_5ferrno',['UNZ_ERRNO',['../unzip_8h.html#aae99fb3e34ea9f78ca8ba4a716f86e68',1,'unzip.h']]],
+  ['unz_5finternalerror',['UNZ_INTERNALERROR',['../unzip_8h.html#a813da146afcb179d57e948bf6871799b',1,'unzip.h']]],
+  ['unz_5fmaxfilenameinzip',['UNZ_MAXFILENAMEINZIP',['../unzip_8cpp.html#a97ef86322b25dcc3d0fc5eb50d386b54',1,'unzip.cpp']]],
+  ['unz_5fok',['UNZ_OK',['../unzip_8h.html#ada043545f95ccd4dae93fa44d95e39a8',1,'unzip.h']]],
+  ['unz_5fparamerror',['UNZ_PARAMERROR',['../unzip_8h.html#aca983831f4d25e504d544eb07f48e39b',1,'unzip.h']]],
+  ['update_5fold_5freg',['UPDATE_OLD_REG',['../_g_b_a_8cpp.html#ac79e70ed027af983236e5a5cbeb859df',1,'UPDATE_OLD_REG():&#160;GBA.cpp'],['../thumb_8h.html#ac79e70ed027af983236e5a5cbeb859df',1,'UPDATE_OLD_REG():&#160;thumb.h']]],
+  ['update_5freg',['UPDATE_REG',['../_g_b_a_8cpp.html#a0f80e3caebb7fd6ac948eb0a2094fdc3',1,'GBA.cpp']]],
+  ['use_5fticks_5fas',['USE_TICKS_AS',['../_sound_8cpp.html#ac7801ef8e16865216d04842837c71b31',1,'Sound.cpp']]],
+  ['user_5faccel',['USER_ACCEL',['../_cmd_accel_ob_8cpp.html#a9997452be9ddc00acb200a6f3157c796',1,'CmdAccelOb.cpp']]]
+];

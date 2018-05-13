@@ -1,0 +1,12 @@
+<map id="MapView::paint" name="MapView::paint">
+<area shape="rect" id="node2" href="$class_map_view.html#aecebb6b2f85810fad29d3e26e125036f" title="MapView::OnRefresh" alt="" coords="169,5,313,32"/>
+<area shape="rect" id="node3" href="$class_map_view.html#a10c4f05b5c4289dfc08c6501de3cf40c" title="MapView::OnInitDialog" alt="" coords="164,56,317,83"/>
+<area shape="rect" id="node4" href="$class_map_view.html#a40f869c5b6d3c5b93d46a0b0167cdbd8" title="MapView::OnFrame0" alt="" coords="169,107,313,133"/>
+<area shape="rect" id="node5" href="$class_map_view.html#ad8ca5cae3a97cb68c733a993317ce695" title="MapView::OnFrame1" alt="" coords="169,157,313,184"/>
+<area shape="rect" id="node6" href="$class_map_view.html#a63d587842197ce259cfcf9cfd29d0771" title="MapView::OnBg0" alt="" coords="179,208,302,235"/>
+<area shape="rect" id="node7" href="$class_map_view.html#a67a49b3a77fa0205f7729a391d45f26c" title="MapView::OnBg1" alt="" coords="179,259,302,285"/>
+<area shape="rect" id="node8" href="$class_map_view.html#a886ec2fa23dba5da34cdbc6f004c1bea" title="MapView::OnBg2" alt="" coords="179,309,302,336"/>
+<area shape="rect" id="node9" href="$class_map_view.html#a1d3dab96b11cbe494f45f4d1bc86331f" title="MapView::OnBg3" alt="" coords="179,360,302,387"/>
+<area shape="rect" id="node10" href="$class_map_view.html#a835d1f2f38753ace4840b69e4eaafcaf" title="MapView::OnStretch" alt="" coords="169,411,312,437"/>
+<area shape="rect" id="node11" href="$class_map_view.html#ac41eb53f60bccbfe4f5601f1a997c51e" title="MapView::update" alt="" coords="179,461,302,488"/>
+</map>

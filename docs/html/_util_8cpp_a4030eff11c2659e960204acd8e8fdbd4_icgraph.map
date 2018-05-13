@@ -1,0 +1,10 @@
+<map id="utilGzOpen" name="utilGzOpen">
+<area shape="rect" id="node2" href="$_g_b_8h.html#a16f5ced9f16fed81202b78f8b6ec0874" title="gbWriteSaveState" alt="" coords="140,29,267,56"/>
+<area shape="rect" id="node4" href="$_g_b_8h.html#a98ecfffcfe8ea60c1dd0f8a8342f90fd" title="gbReadSaveState" alt="" coords="141,104,266,131"/>
+<area shape="rect" id="node6" href="$_g_b_a_8h.html#a12193cec65e1822a5db422e00c840cb0" title="CPUWriteState" alt="" coords="148,179,259,205"/>
+<area shape="rect" id="node8" href="$_g_b_a_8h.html#ae8fb7cfb07fd016cffc3baa206ebbb27" title="CPUReadState" alt="" coords="148,253,259,280"/>
+<area shape="rect" id="node3" href="$_g_b_8h.html#abf83eaea4927776c4d4e4e70720515eb" title="gbWriteMemSaveState" alt="" coords="315,29,469,56"/>
+<area shape="rect" id="node5" href="$_g_b_8h.html#a0da167f7d0a43c90028ac9e39527c6f0" title="gbReadMemSaveState" alt="" coords="315,104,469,131"/>
+<area shape="rect" id="node7" href="$_g_b_a_8h.html#a628cef443f29863442488c47d2b97cef" title="CPUWriteMemState" alt="" coords="322,179,462,205"/>
+<area shape="rect" id="node9" href="$_g_b_a_8h.html#a2ca5fcf7a3c5f4fa8c4b4c185fdda98c" title="CPUReadMemState" alt="" coords="323,253,461,280"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="memgzclose" name="memgzclose">
+<area shape="rect" id="node2" href="$memgzio_8c.html#afafc4bbc6787281ae67c082cb529787d" title="do_flush" alt="" coords="149,5,220,32"/>
+<area shape="rect" id="node4" href="$memgzio_8c.html#a36e2f236693ef941a3bcd8e4cb6bc0e7" title="destroy" alt="" coords="152,56,217,83"/>
+<area shape="rect" id="node7" href="$memgzio_8c.html#a3c5218d0289a398320570f747214d6e7" title="putLong" alt="" coords="151,107,219,133"/>
+<area shape="rect" id="node3" href="$memgzio_8c.html#a4f5b925f19d47679ebf054169c2dd280" title="memWrite" alt="" coords="269,5,351,32"/>
+<area shape="rect" id="node5" href="$memgzio_8c.html#a8334e22cc510313665b4930c00d97cae" title="memClose" alt="" coords="268,56,352,83"/>
+<area shape="rect" id="node6" href="$memgzio_8c.html#a9e7eccde306d563673b6da9561a3d3bb" title="memTell" alt="" coords="400,56,471,83"/>
+<area shape="rect" id="node8" href="$memgzio_8c.html#aaa6a487486283b987d88e4b713a21c4f" title="memPutc" alt="" coords="271,107,349,133"/>
+</map>

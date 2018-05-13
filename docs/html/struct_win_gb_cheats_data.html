@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_win_gb_cheats_data.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,34 +92,124 @@ $(function() {
 <div class="title">WinGbCheatsData 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a>&gt;</code></p>
+<div class="dynheader">
+WinGbCheatsData에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_win_gb_cheats_data__coll__graph.png" border="0" usemap="#_win_gb_cheats_data_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a3cbfcdcf0184d58e83261e2238385480"><td class="memItemLeft" align="right" valign="top"><a id="a3cbfcdcf0184d58e83261e2238385480"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bank</b></td></tr>
+<tr class="memitem:a3cbfcdcf0184d58e83261e2238385480"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_win_gb_cheats_data.html#a3cbfcdcf0184d58e83261e2238385480">bank</a></td></tr>
 <tr class="separator:a3cbfcdcf0184d58e83261e2238385480"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a80015100674ee2f689deb0f182ba6ca8"><td class="memItemLeft" align="right" valign="top"><a id="a80015100674ee2f689deb0f182ba6ca8"></a>
-u16&#160;</td><td class="memItemRight" valign="bottom"><b>addr</b></td></tr>
+<tr class="memitem:a80015100674ee2f689deb0f182ba6ca8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_win_gb_cheats_data.html#a80015100674ee2f689deb0f182ba6ca8">addr</a></td></tr>
 <tr class="separator:a80015100674ee2f689deb0f182ba6ca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d260c5c47f95346767df3da6838221c"><td class="memItemLeft" align="right" valign="top"><a id="a7d260c5c47f95346767df3da6838221c"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>address</b> [9]</td></tr>
+<tr class="memitem:a7d260c5c47f95346767df3da6838221c"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_win_gb_cheats_data.html#a7d260c5c47f95346767df3da6838221c">address</a> [9]</td></tr>
 <tr class="separator:a7d260c5c47f95346767df3da6838221c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe8e108df6ab1b40209bdc2e3e490c8a"><td class="memItemLeft" align="right" valign="top"><a id="abe8e108df6ab1b40209bdc2e3e490c8a"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>oldValue</b> [12]</td></tr>
+<tr class="memitem:abe8e108df6ab1b40209bdc2e3e490c8a"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_win_gb_cheats_data.html#abe8e108df6ab1b40209bdc2e3e490c8a">oldValue</a> [12]</td></tr>
 <tr class="separator:abe8e108df6ab1b40209bdc2e3e490c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6fc49b4d1e4bb935624c98a337091eb9"><td class="memItemLeft" align="right" valign="top"><a id="a6fc49b4d1e4bb935624c98a337091eb9"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>newValue</b> [12]</td></tr>
+<tr class="memitem:a6fc49b4d1e4bb935624c98a337091eb9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_win_gb_cheats_data.html#a6fc49b4d1e4bb935624c98a337091eb9">newValue</a> [12]</td></tr>
 <tr class="separator:a6fc49b4d1e4bb935624c98a337091eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a80015100674ee2f689deb0f182ba6ca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80015100674ee2f689deb0f182ba6ca8">&#9670;&nbsp;</a></span>addr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> WinGbCheatsData::addr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a7d260c5c47f95346767df3da6838221c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d260c5c47f95346767df3da6838221c">&#9670;&nbsp;</a></span>address</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char WinGbCheatsData::address[9]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3cbfcdcf0184d58e83261e2238385480"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cbfcdcf0184d58e83261e2238385480">&#9670;&nbsp;</a></span>bank</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> WinGbCheatsData::bank</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6fc49b4d1e4bb935624c98a337091eb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fc49b4d1e4bb935624c98a337091eb9">&#9670;&nbsp;</a></span>newValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char WinGbCheatsData::newValue[12]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="abe8e108df6ab1b40209bdc2e3e490c8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe8e108df6ab1b40209bdc2e3e490c8a">&#9670;&nbsp;</a></span>oldValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char WinGbCheatsData::oldValue[12]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_win_gb_cheats_data.html">WinGbCheatsData</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

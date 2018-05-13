@@ -1,0 +1,9 @@
+<map id="utilPutWord" name="utilPutWord">
+<area shape="rect" id="node2" href="$class_palette_view_control.html#a0e2249bb157bf7fb36b128a83bf108b5" title="PaletteViewControl\l::saveMSPAL" alt="" coords="144,74,276,115"/>
+<area shape="rect" id="node3" href="$class_g_b_palette_view.html#a90cca0ba09442c669f7403d31e8ab0ee" title="GBPaletteView::save" alt="" coords="324,56,468,83"/>
+<area shape="rect" id="node6" href="$class_palette_view.html#a107b71060221c9d44bdf0d38ca77c689" title="PaletteView::save" alt="" coords="333,107,459,133"/>
+<area shape="rect" id="node4" href="$class_g_b_palette_view.html#a0186b41f6db460271256f36800ffa980" title="GBPaletteView::OnSaveBg" alt="" coords="518,5,697,32"/>
+<area shape="rect" id="node5" href="$class_g_b_palette_view.html#a20eb0c24604804e9c33db15f3ff394f0" title="GBPaletteView::OnSaveObj" alt="" coords="516,56,699,83"/>
+<area shape="rect" id="node7" href="$class_palette_view.html#a4e11f19e5535efcd1b34d38899f18482" title="PaletteView::OnSaveBg" alt="" coords="527,107,687,133"/>
+<area shape="rect" id="node8" href="$class_palette_view.html#a1a09199a2ab1045bbbcef736d05296c1" title="PaletteView::OnSaveObj" alt="" coords="525,157,689,184"/>
+</map>

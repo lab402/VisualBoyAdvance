@@ -1,0 +1,12 @@
+<map id="MainWnd::loadSaveGame" name="MainWnd::loadSaveGame">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a50801b3ffe4aa323fdd654dc56e71d32" title="MainWnd::OnFileLoad" alt="" coords="281,56,431,83"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a84c4154350bd26b393fcd82948d342e1" title="MainWnd::OnFileLoadSlot" alt="" coords="269,107,443,133"/>
+<area shape="rect" id="node11" href="$class_main_wnd.html#a96ea89975374d5b7a434070d58e9c260" title="MainWnd::OnToolsPlayStartmovieplaying" alt="" coords="225,157,487,184"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#aafa7776c35ba50c4244cb22650f15337" title="MainWnd::OnFileLoadgameMostrecent" alt="" coords="535,107,783,133"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="831,107,960,133"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1051,5,1208,32"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1052,56,1207,83"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1037,107,1222,133"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1026,157,1233,184"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1008,208,1251,235"/>
+</map>

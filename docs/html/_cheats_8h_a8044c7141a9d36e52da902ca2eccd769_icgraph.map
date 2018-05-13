@@ -1,0 +1,5 @@
+<map id="cheatsEnable" name="cheatsEnable">
+<area shape="rect" id="node2" href="$_cheats_8h.html#aeb57276ef7881a84ab0c06cdd5d9976b" title="cheatsReadGame" alt="" coords="193,5,320,32"/>
+<area shape="rect" id="node3" href="$class_g_b_a_cheat_list.html#a22de639a60de7c74ffd176281df51b14" title="GBACheatList::OnEnable" alt="" coords="171,56,342,83"/>
+<area shape="rect" id="node4" href="$class_g_b_a_cheat_list.html#a64182036127e2c73d0c79706cc1f2d1e" title="GBACheatList::OnItemchanged\lCheatList" alt="" coords="155,107,359,149"/>
+</map>

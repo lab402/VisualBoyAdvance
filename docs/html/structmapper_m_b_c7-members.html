@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structmapper_m_b_c7.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">mapperMBC7 멤버 목록</div>  </div>
@@ -68,26 +92,29 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>address</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>buffer</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>code</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>count</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>cs</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>idle</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mapperRAMAddress</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>mapperRAMBank</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>mapperRAMEnable</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>mapperROMBank</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>sk</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>state</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>value</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>writeEnable</b> (다음에서 정의됨 : <a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a>)</td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a23b1a5a0926bb85d8e6d1fd3998914be">address</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a2a78696abc5026b581f7d9b560f9957e">buffer</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structmapper_m_b_c7.html#ad7fc3ef605f742be9754778297982441">code</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structmapper_m_b_c7.html#aaad1e70e16b8915cdef583baca91402f">count</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structmapper_m_b_c7.html#ac60ec6543e31662a5fe47333b56e1153">cs</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a7b67228ff9c824cc833cf6c4fe692526">idle</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a57b352ae322a433431c93993b978b5f8">mapperRAMAddress</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a079931b2d99b6a11fa4634c51d220a4b">mapperRAMBank</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a308dbc9dd64faa04d2e95f61491c468e">mapperRAMEnable</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a4b98c0c2af73da2d2ed5b61309ad20f4">mapperROMBank</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a088e6d513db11995a4c0be5471e6eb1e">sk</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a10cd38456a7b38fd215213deca812b43">state</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a2f07066b9e31c4e36abca0844e53e3dc">value</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="structmapper_m_b_c7.html#a8885a4983e918c11894d242c623ee4ad">writeEnable</a></td><td class="entry"><a class="el" href="structmapper_m_b_c7.html">mapperMBC7</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

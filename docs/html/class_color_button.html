@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_color_button.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -70,52 +94,266 @@ $(function() {
 <div class="title">ColorButton 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_color_button_8h_source.html">ColorButton.h</a>&gt;</code></p>
 <div class="dynheader">
 ColorButton에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_color_button.png" usemap="#ColorButton_map" alt=""/>
-  <map id="ColorButton_map" name="ColorButton_map">
-</map>
- </div></div>
+<div class="center"><img src="class_color_button__inherit__graph.png" border="0" usemap="#_color_button_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+ColorButton에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_color_button__coll__graph.png" border="0" usemap="#_color_button_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a2252acea0c111e198cc5bcc914e2cfeb"><td class="memItemLeft" align="right" valign="top"><a id="a2252acea0c111e198cc5bcc914e2cfeb"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>PreSubclassWindow</b> ()</td></tr>
+<tr class="memitem:a4b8e318941c5c69efd5a610fd7edb51e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_button.html#a4b8e318941c5c69efd5a610fd7edb51e">ColorButton</a> ()</td></tr>
+<tr class="separator:a4b8e318941c5c69efd5a610fd7edb51e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2252acea0c111e198cc5bcc914e2cfeb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_button.html#a2252acea0c111e198cc5bcc914e2cfeb">PreSubclassWindow</a> ()</td></tr>
 <tr class="separator:a2252acea0c111e198cc5bcc914e2cfeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48b973ebb6644f474f64ff1e8fbb1adf"><td class="memItemLeft" align="right" valign="top"><a id="a48b973ebb6644f474f64ff1e8fbb1adf"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>DrawItem</b> (LPDRAWITEMSTRUCT lpDrawItemStruct)</td></tr>
+<tr class="memitem:a48b973ebb6644f474f64ff1e8fbb1adf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_button.html#a48b973ebb6644f474f64ff1e8fbb1adf">DrawItem</a> (LPDRAWITEMSTRUCT lpDrawItemStruct)</td></tr>
 <tr class="separator:a48b973ebb6644f474f64ff1e8fbb1adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ff5dc144a4acd5e2551ab94506b3bb0"><td class="memItemLeft" align="right" valign="top"><a id="a9ff5dc144a4acd5e2551ab94506b3bb0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setColor</b> (u16 c)</td></tr>
+<tr class="memitem:a9ff5dc144a4acd5e2551ab94506b3bb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_button.html#a9ff5dc144a4acd5e2551ab94506b3bb0">setColor</a> (<a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> c)</td></tr>
 <tr class="separator:a9ff5dc144a4acd5e2551ab94506b3bb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabbc7306d4354479e0315b2a15026571"><td class="memItemLeft" align="right" valign="top"><a id="aabbc7306d4354479e0315b2a15026571"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registerClass</b> ()</td></tr>
+<tr class="memitem:a992ff40e28cd869985afcf02ef338797"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_button.html#a992ff40e28cd869985afcf02ef338797">~ColorButton</a> ()</td></tr>
+<tr class="separator:a992ff40e28cd869985afcf02ef338797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabbc7306d4354479e0315b2a15026571"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_button.html#aabbc7306d4354479e0315b2a15026571">registerClass</a> ()</td></tr>
 <tr class="separator:aabbc7306d4354479e0315b2a15026571"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:ac2e59577aba7413fbf40c97f21df4835"><td class="memItemLeft" align="right" valign="top"><a id="ac2e59577aba7413fbf40c97f21df4835"></a>
-u16&#160;</td><td class="memItemRight" valign="bottom"><b>color</b></td></tr>
+<tr class="memitem:ac2e59577aba7413fbf40c97f21df4835"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">color</a></td></tr>
 <tr class="separator:ac2e59577aba7413fbf40c97f21df4835"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 정적 Public 속성</h2></td></tr>
-<tr class="memitem:a77e2fa25affb19cac1c18594d5bc478f"><td class="memItemLeft" align="right" valign="top"><a id="a77e2fa25affb19cac1c18594d5bc478f"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>isRegistered</b> = false</td></tr>
+<tr class="memitem:a77e2fa25affb19cac1c18594d5bc478f"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_color_button.html#a77e2fa25affb19cac1c18594d5bc478f">isRegistered</a> = false</td></tr>
 <tr class="separator:a77e2fa25affb19cac1c18594d5bc478f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_color_button_8h_source.html">ColorButton.h</a> 파일의 <a class="el" href="_color_button_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a4b8e318941c5c69efd5a610fd7edb51e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b8e318941c5c69efd5a610fd7edb51e">&#9670;&nbsp;</a></span>ColorButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColorButton::ColorButton </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_button_8cpp_source.html">ColorButton.cpp</a> 파일의 <a class="el" href="_color_button_8cpp_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <a class="code" href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">color</a> = 0;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_color_button.html#aabbc7306d4354479e0315b2a15026571">registerClass</a>();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div><div class="ttc" id="class_color_button_html_aabbc7306d4354479e0315b2a15026571"><div class="ttname"><a href="class_color_button.html#aabbc7306d4354479e0315b2a15026571">ColorButton::registerClass</a></div><div class="ttdeci">void registerClass()</div><div class="ttdef"><b>Definition:</b> <a href="_color_button_8cpp_source.html#l00105">ColorButton.cpp:105</a></div></div>
+<div class="ttc" id="class_color_button_html_ac2e59577aba7413fbf40c97f21df4835"><div class="ttname"><a href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">ColorButton::color</a></div><div class="ttdeci">u16 color</div><div class="ttdef"><b>Definition:</b> <a href="_color_button_8h_source.html#l00055">ColorButton.h:55</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_color_button_a4b8e318941c5c69efd5a610fd7edb51e_cgraph.png" border="0" usemap="#class_color_button_a4b8e318941c5c69efd5a610fd7edb51e_cgraph" alt=""/></div>
+<map name="class_color_button_a4b8e318941c5c69efd5a610fd7edb51e_cgraph" id="class_color_button_a4b8e318941c5c69efd5a610fd7edb51e_cgraph">
+<area shape="rect" id="node2" href="class_color_button.html#aabbc7306d4354479e0315b2a15026571" title="ColorButton::registerClass" alt="" coords="220,5,395,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a992ff40e28cd869985afcf02ef338797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a992ff40e28cd869985afcf02ef338797">&#9670;&nbsp;</a></span>~ColorButton()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ColorButton::~ColorButton </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_button_8cpp_source.html">ColorButton.cpp</a> 파일의 <a class="el" href="_color_button_8cpp_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a48b973ebb6644f474f64ff1e8fbb1adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48b973ebb6644f474f64ff1e8fbb1adf">&#9670;&nbsp;</a></span>DrawItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColorButton::DrawItem </td>
+          <td>(</td>
+          <td class="paramtype">LPDRAWITEMSTRUCT&#160;</td>
+          <td class="paramname"><em>lpDrawItemStruct</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_button_8cpp_source.html">ColorButton.cpp</a> 파일의 <a class="el" href="_color_button_8cpp_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  ASSERT(lpDrawItemStruct);</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">int</span> r = (<a class="code" href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">color</a> &amp; 0x1f) &lt;&lt; 3;</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordtype">int</span> g = (<a class="code" href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">color</a> &amp; 0x3e0) &gt;&gt; 2;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a> = (<a class="code" href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">color</a> &amp; 0x7c00) &gt;&gt; 7;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  HDC dc = lpDrawItemStruct-&gt;hDC;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  UINT state = lpDrawItemStruct-&gt;itemState;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  RECT rect = lpDrawItemStruct-&gt;rcItem;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  SIZE margins;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  margins.cx = ::GetSystemMetrics(SM_CXEDGE);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  margins.cy = ::GetSystemMetrics(SM_CYEDGE);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">if</span>(GetState() &amp; BST_PUSHED)</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    DrawEdge(dc, &amp;rect, EDGE_SUNKEN, BF_RECT);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    DrawEdge(dc, &amp;rect, EDGE_RAISED, BF_RECT);</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  InflateRect(&amp;rect, -margins.cx, -margins.cy);</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  </div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  HBRUSH br = CreateSolidBrush((state &amp; ODS_DISABLED) ? </div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                               ::GetSysColor(COLOR_3DFACE) : <a class="code" href="bilinear_8cpp.html#a4a118ad3ee36468a3fa616977a64864e">RGB</a>(r,g,<a class="code" href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a>));</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  FillRect(dc, &amp;rect, br);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  <span class="keywordflow">if</span>(state &amp; ODS_FOCUS) {</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    InflateRect(&amp;rect, -1, -1);</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    DrawFocusRect(dc, &amp;rect);</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  </div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  DeleteObject(br);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div><div class="ttc" id="expr-lex_8cpp_html_a91b64995742fd30063314f12340b4b5a"><div class="ttname"><a href="expr-lex_8cpp.html#a91b64995742fd30063314f12340b4b5a">b</a></div><div class="ttdeci">b</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01226">expr-lex.cpp:1226</a></div></div>
+<div class="ttc" id="bilinear_8cpp_html_a4a118ad3ee36468a3fa616977a64864e"><div class="ttname"><a href="bilinear_8cpp.html#a4a118ad3ee36468a3fa616977a64864e">RGB</a></div><div class="ttdeci">#define RGB(r, g, b)</div><div class="ttdef"><b>Definition:</b> <a href="bilinear_8cpp_source.html#l00033">bilinear.cpp:33</a></div></div>
+<div class="ttc" id="class_color_button_html_ac2e59577aba7413fbf40c97f21df4835"><div class="ttname"><a href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">ColorButton::color</a></div><div class="ttdeci">u16 color</div><div class="ttdef"><b>Definition:</b> <a href="_color_button_8h_source.html#l00055">ColorButton.h:55</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2252acea0c111e198cc5bcc914e2cfeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2252acea0c111e198cc5bcc914e2cfeb">&#9670;&nbsp;</a></span>PreSubclassWindow()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColorButton::PreSubclassWindow </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_button_8cpp_source.html">ColorButton.cpp</a> 파일의 <a class="el" href="_color_button_8cpp_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  SetWindowLong(m_hWnd, GWL_STYLE, GetStyle() | BS_OWNERDRAW);</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  CWnd::PreSubclassWindow();</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="aabbc7306d4354479e0315b2a15026571"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabbc7306d4354479e0315b2a15026571">&#9670;&nbsp;</a></span>registerClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColorButton::registerClass </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_button_8cpp_source.html">ColorButton.cpp</a> 파일의 <a class="el" href="_color_button_8cpp_source.html#l00105">105</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="class_color_button.html#a77e2fa25affb19cac1c18594d5bc478f">isRegistered</a>) {</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    WNDCLASS wc;</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    ZeroMemory(&amp;wc, <span class="keyword">sizeof</span>(wc));</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    wc.style = CS_HREDRAW | CS_VREDRAW | CS_GLOBALCLASS;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    wc.lpfnWndProc = (WNDPROC)::DefWindowProc;</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    wc.hInstance = AfxGetInstanceHandle();</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    wc.hIcon = LoadCursor(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, IDC_ARROW);</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    wc.hbrBackground = (HBRUSH )GetStockObject(BLACK_BRUSH);</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    wc.lpszMenuName = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    wc.lpszClassName = <span class="stringliteral">&quot;VbaColorButton&quot;</span>;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    AfxRegisterClass(&amp;wc);</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <a class="code" href="class_color_button.html#a77e2fa25affb19cac1c18594d5bc478f">isRegistered</a> = <span class="keyword">true</span>;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  }</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_color_button_html_a77e2fa25affb19cac1c18594d5bc478f"><div class="ttname"><a href="class_color_button.html#a77e2fa25affb19cac1c18594d5bc478f">ColorButton::isRegistered</a></div><div class="ttdeci">static bool isRegistered</div><div class="ttdef"><b>Definition:</b> <a href="_color_button_8h_source.html#l00042">ColorButton.h:42</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_color_button_aabbc7306d4354479e0315b2a15026571_icgraph.png" border="0" usemap="#class_color_button_aabbc7306d4354479e0315b2a15026571_icgraph" alt=""/></div>
+<map name="class_color_button_aabbc7306d4354479e0315b2a15026571_icgraph" id="class_color_button_aabbc7306d4354479e0315b2a15026571_icgraph">
+<area shape="rect" id="node2" href="class_color_button.html#a4b8e318941c5c69efd5a610fd7edb51e" title="ColorButton::ColorButton" alt="" coords="228,5,395,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ff5dc144a4acd5e2551ab94506b3bb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff5dc144a4acd5e2551ab94506b3bb0">&#9670;&nbsp;</a></span>setColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ColorButton::setColor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_button_8cpp_source.html">ColorButton.cpp</a> 파일의 <a class="el" href="_color_button_8cpp_source.html#l00099">99</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;{</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <a class="code" href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">color</a> = c;</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  Invalidate();</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div><div class="ttc" id="class_color_button_html_ac2e59577aba7413fbf40c97f21df4835"><div class="ttname"><a href="class_color_button.html#ac2e59577aba7413fbf40c97f21df4835">ColorButton::color</a></div><div class="ttdeci">u16 color</div><div class="ttdef"><b>Definition:</b> <a href="_color_button_8h_source.html#l00055">ColorButton.h:55</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_color_button_a9ff5dc144a4acd5e2551ab94506b3bb0_icgraph.png" border="0" usemap="#class_color_button_a9ff5dc144a4acd5e2551ab94506b3bb0_icgraph" alt=""/></div>
+<map name="class_color_button_a9ff5dc144a4acd5e2551ab94506b3bb0_icgraph" id="class_color_button_a9ff5dc144a4acd5e2551ab94506b3bb0_icgraph">
+<area shape="rect" id="node2" href="class_g_b_color_dlg.html#a1e00eaaeaf344a830f1dd5692e26af1d" title="GBColorDlg::setWhich" alt="" coords="242,81,395,108"/>
+<area shape="rect" id="node7" href="class_g_b_color_dlg.html#a244aa29f38fa1e813aca166ba63982c6" title="GBColorDlg::OnColorClicked" alt="" coords="225,132,413,159"/>
+<area shape="rect" id="node8" href="class_g_b_color_dlg.html#aa2227421c4564023d2ded8198b2194d3" title="GBColorDlg::OnSelchangePredefined" alt="" coords="200,183,437,209"/>
+<area shape="rect" id="node3" href="class_g_b_color_dlg.html#adab1ec84eb5ffdf0489cfe025d01ea7b" title="GBColorDlg::OnReset" alt="" coords="495,5,644,32"/>
+<area shape="rect" id="node4" href="class_g_b_color_dlg.html#a2648ec830505581e9268be52c4136df6" title="GBColorDlg::OnUser1" alt="" coords="495,56,644,83"/>
+<area shape="rect" id="node5" href="class_g_b_color_dlg.html#a932281a7e5ed6c1e816dff7403d1ee2e" title="GBColorDlg::OnUser2" alt="" coords="495,107,644,133"/>
+<area shape="rect" id="node6" href="class_g_b_color_dlg.html#a376d61164a4ef4b8a60a0a3297e5470e" title="GBColorDlg::OnInitDialog" alt="" coords="485,157,653,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="ac2e59577aba7413fbf40c97f21df4835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2e59577aba7413fbf40c97f21df4835">&#9670;&nbsp;</a></span>color</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> ColorButton::color</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_button_8h_source.html">ColorButton.h</a> 파일의 <a class="el" href="_color_button_8h_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a77e2fa25affb19cac1c18594d5bc478f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77e2fa25affb19cac1c18594d5bc478f">&#9670;&nbsp;</a></span>isRegistered</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ColorButton::isRegistered = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_color_button_8h_source.html">ColorButton.h</a> 파일의 <a class="el" href="_color_button_8h_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_color_button_8h_source.html">ColorButton.h</a></li>
-<li>src/win32/ColorButton.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_color_button_8h_source.html">ColorButton.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_color_button_8cpp_source.html">ColorButton.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_color_button.html">ColorButton</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,924 @@
+\hypertarget{elf_8h}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/elf.h 파일 참조}
+\label{elf_8h}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/elf.\+h@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/elf.\+h}}
+이 그래프는 이 파일을 직/간접적으로 include 하는 파일들을 보여줍니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{elf_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{클래스}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_e_l_f_header}{E\+L\+F\+Header}}
+\item 
+struct \mbox{\hyperlink{struct_e_l_f_program_header}{E\+L\+F\+Program\+Header}}
+\item 
+struct \mbox{\hyperlink{struct_e_l_f_section_header}{E\+L\+F\+Section\+Header}}
+\item 
+struct \mbox{\hyperlink{struct_e_l_f_symbol}{E\+L\+F\+Symbol}}
+\item 
+struct \mbox{\hyperlink{struct_e_l_f_block}{E\+L\+F\+Block}}
+\item 
+struct \mbox{\hyperlink{struct_e_l_f_attr}{E\+L\+F\+Attr}}
+\item 
+struct \mbox{\hyperlink{struct_e_l_f_abbrev}{E\+L\+F\+Abbrev}}
+\item 
+struct \mbox{\hyperlink{struct_function_type}{Function\+Type}}
+\item 
+struct \mbox{\hyperlink{struct_member}{Member}}
+\item 
+struct \mbox{\hyperlink{struct_struct}{Struct}}
+\item 
+struct \mbox{\hyperlink{struct_array}{Array}}
+\item 
+struct \mbox{\hyperlink{struct_enum_member}{Enum\+Member}}
+\item 
+struct \mbox{\hyperlink{struct_enum}{Enum}}
+\item 
+struct \mbox{\hyperlink{struct_type}{Type}}
+\item 
+struct \mbox{\hyperlink{struct_object}{Object}}
+\item 
+struct \mbox{\hyperlink{struct_function}{Function}}
+\item 
+struct \mbox{\hyperlink{struct_line_info_item}{Line\+Info\+Item}}
+\item 
+struct \mbox{\hyperlink{struct_line_info}{Line\+Info}}
+\item 
+struct \mbox{\hyperlink{struct_a_range}{A\+Range}}
+\item 
+struct \mbox{\hyperlink{struct_a_ranges}{A\+Ranges}}
+\item 
+struct \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}}
+\item 
+struct \mbox{\hyperlink{struct_debug_info}{Debug\+Info}}
+\item 
+struct \mbox{\hyperlink{struct_symbol}{Symbol}}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{elf_8h_a5dccc0822d2f765327b39898cf8505d6}{D\+W\+\_\+\+A\+T\+E\+\_\+boolean}}~0x02
+\item 
+\#define \mbox{\hyperlink{elf_8h_a99f9ea18219e94955ff6ebe479f139a5}{D\+W\+\_\+\+A\+T\+E\+\_\+signed}}~0x05
+\item 
+\#define \mbox{\hyperlink{elf_8h_a26eeb06907a64e3f354b2485ece63c06}{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned}}~0x07
+\item 
+\#define \mbox{\hyperlink{elf_8h_a7122929698755a816874ceab7983634b}{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned\+\_\+char}}~0x08
+\end{DoxyCompactItemize}
+\subsection*{열거형 타입}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630d}{Location\+Type}} \{ \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da78f690fdda043de78067d4ec6f25bf39}{L\+O\+C\+A\+T\+I\+O\+N\+\_\+register}}, 
+\mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{L\+O\+C\+A\+T\+I\+O\+N\+\_\+memory}}, 
+\mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da2c98b9d1b72f1159175953e2f08a87f8}{L\+O\+C\+A\+T\+I\+O\+N\+\_\+value}}
+ \}
+\item 
+enum \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70}{Type\+Enum}} \{ \newline
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a6c675feb4de749ba8aae449fee018515}{T\+Y\+P\+E\+\_\+base}}, 
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a38041b485628711420e122067d651090}{T\+Y\+P\+E\+\_\+pointer}}, 
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a886d105ff63d61c7ce0064656b69a9c3}{T\+Y\+P\+E\+\_\+function}}, 
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a9e1a64607a0f0b8ec8322c69652a9e5b}{T\+Y\+P\+E\+\_\+void}}, 
+\newline
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70aed7927d456e33336408f3b71c9e421e9}{T\+Y\+P\+E\+\_\+array}}, 
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70ad27ab306f779133c8682a3537c43b471}{T\+Y\+P\+E\+\_\+struct}}, 
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70aecf2adb431b5d2b4ac726cd6bc33974a}{T\+Y\+P\+E\+\_\+reference}}, 
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a10be5808255258a5b4fa200d0c183913}{T\+Y\+P\+E\+\_\+enum}}, 
+\newline
+\mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a662fec25af2a430b991c709bb52cc2b2}{T\+Y\+P\+E\+\_\+union}}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{elf_8h_ac411efd6e288e1a6dfc83795d4329dc5}{elf\+Read\+L\+E\+B128}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$)
+\item 
+\mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} \mbox{\hyperlink{elf_8h_abaa0b82b0e4656e07602b44ab67d8ea4}{elf\+Read\+Signed\+L\+E\+B128}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$)
+\item 
+bool \mbox{\hyperlink{elf_8h_a435d491e508bb34a0ffe91a8f4491b3c}{elf\+Read}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \&, F\+I\+LE $\ast$f)
+\item 
+bool \mbox{\hyperlink{elf_8h_a8ef636f89b2432335a8360221fe829d9}{elf\+Get\+Symbol\+Address}} (char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$)
+\item 
+char $\ast$ \mbox{\hyperlink{elf_8h_aeca4505a542616169bea79dc248c69d8}{elf\+Get\+Address\+Symbol}} (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})
+\item 
+char $\ast$ \mbox{\hyperlink{elf_8h_a4b3bf51614d8d2f825d217cd1d42535f}{elf\+Get\+Symbol}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$)
+\item 
+void \mbox{\hyperlink{elf_8h_aeee09d5581ff933e08f6185cae15d0ec}{elf\+Clean\+Up}} ()
+\item 
+bool \mbox{\hyperlink{elf_8h_a934256ee546dc042ccee36d31d787a61}{elf\+Get\+Current\+Function}} (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$$\ast$, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$$\ast$c)
+\item 
+bool \mbox{\hyperlink{elf_8h_a6fb160430fa05a816263d777870dc9af}{elf\+Get\+Object}} (char $\ast$, \mbox{\hyperlink{struct_function}{Function}} $\ast$, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$, \mbox{\hyperlink{struct_object}{Object}} $\ast$$\ast$)
+\item 
+bool \mbox{\hyperlink{elf_8h_adeeb31652d234014309591b4e4a91e05}{elf\+Find\+Line\+In\+Unit}} (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+bool \mbox{\hyperlink{elf_8h_afc7afa3ed0276a833df18d3729457dbb}{elf\+Find\+Line\+In\+Module}} (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$, char $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{elf_8h_ab0e4df7ed4e63a28e5648336e8cdd27b}{elf\+Decode\+Location}} (\mbox{\hyperlink{struct_function}{Function}} $\ast$, \mbox{\hyperlink{struct_e_l_f_block}{E\+L\+F\+Block}} $\ast$, \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630d}{Location\+Type}} $\ast$)
+\item 
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{elf_8h_a5751eac92ea4b61fc6fafcfed5138598}{elf\+Decode\+Location}} (\mbox{\hyperlink{struct_function}{Function}} $\ast$, \mbox{\hyperlink{struct_e_l_f_block}{E\+L\+F\+Block}} $\ast$, \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630d}{Location\+Type}} $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{elf_8h_a1e504ce5fe345b4436da32851ac6f2d3}{elf\+Find\+Line}} (\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$unit, \mbox{\hyperlink{struct_function}{Function}} $\ast$func, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} addr, char $\ast$$\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{elf_8h_a5dccc0822d2f765327b39898cf8505d6}\label{elf_8h_a5dccc0822d2f765327b39898cf8505d6}} 
+\index{elf.\+h@{elf.\+h}!D\+W\+\_\+\+A\+T\+E\+\_\+boolean@{D\+W\+\_\+\+A\+T\+E\+\_\+boolean}}
+\index{D\+W\+\_\+\+A\+T\+E\+\_\+boolean@{D\+W\+\_\+\+A\+T\+E\+\_\+boolean}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{D\+W\+\_\+\+A\+T\+E\+\_\+boolean}{DW\_ATE\_boolean}}
+{\footnotesize\ttfamily \#define D\+W\+\_\+\+A\+T\+E\+\_\+boolean~0x02}
+
+
+
+elf.\+h 파일의 29 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{elf_8h_a99f9ea18219e94955ff6ebe479f139a5}\label{elf_8h_a99f9ea18219e94955ff6ebe479f139a5}} 
+\index{elf.\+h@{elf.\+h}!D\+W\+\_\+\+A\+T\+E\+\_\+signed@{D\+W\+\_\+\+A\+T\+E\+\_\+signed}}
+\index{D\+W\+\_\+\+A\+T\+E\+\_\+signed@{D\+W\+\_\+\+A\+T\+E\+\_\+signed}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{D\+W\+\_\+\+A\+T\+E\+\_\+signed}{DW\_ATE\_signed}}
+{\footnotesize\ttfamily \#define D\+W\+\_\+\+A\+T\+E\+\_\+signed~0x05}
+
+
+
+elf.\+h 파일의 30 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{elf_8h_a26eeb06907a64e3f354b2485ece63c06}\label{elf_8h_a26eeb06907a64e3f354b2485ece63c06}} 
+\index{elf.\+h@{elf.\+h}!D\+W\+\_\+\+A\+T\+E\+\_\+unsigned@{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned}}
+\index{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned@{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned}{DW\_ATE\_unsigned}}
+{\footnotesize\ttfamily \#define D\+W\+\_\+\+A\+T\+E\+\_\+unsigned~0x07}
+
+
+
+elf.\+h 파일의 31 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{elf_8h_a7122929698755a816874ceab7983634b}\label{elf_8h_a7122929698755a816874ceab7983634b}} 
+\index{elf.\+h@{elf.\+h}!D\+W\+\_\+\+A\+T\+E\+\_\+unsigned\+\_\+char@{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned\+\_\+char}}
+\index{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned\+\_\+char@{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned\+\_\+char}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{D\+W\+\_\+\+A\+T\+E\+\_\+unsigned\+\_\+char}{DW\_ATE\_unsigned\_char}}
+{\footnotesize\ttfamily \#define D\+W\+\_\+\+A\+T\+E\+\_\+unsigned\+\_\+char~0x08}
+
+
+
+elf.\+h 파일의 32 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{열거형 타입 문서화}
+\mbox{\Hypertarget{elf_8h_af2e75a10adf1443b5204c7856bbf630d}\label{elf_8h_af2e75a10adf1443b5204c7856bbf630d}} 
+\index{elf.\+h@{elf.\+h}!Location\+Type@{Location\+Type}}
+\index{Location\+Type@{Location\+Type}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{Location\+Type}{LocationType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630d}{Location\+Type}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+O\+C\+A\+T\+I\+O\+N\+\_\+register@{L\+O\+C\+A\+T\+I\+O\+N\+\_\+register}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!L\+O\+C\+A\+T\+I\+O\+N\+\_\+register@{L\+O\+C\+A\+T\+I\+O\+N\+\_\+register}}}\mbox{\Hypertarget{elf_8h_af2e75a10adf1443b5204c7856bbf630da78f690fdda043de78067d4ec6f25bf39}\label{elf_8h_af2e75a10adf1443b5204c7856bbf630da78f690fdda043de78067d4ec6f25bf39}} 
+L\+O\+C\+A\+T\+I\+O\+N\+\_\+register&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+O\+C\+A\+T\+I\+O\+N\+\_\+memory@{L\+O\+C\+A\+T\+I\+O\+N\+\_\+memory}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!L\+O\+C\+A\+T\+I\+O\+N\+\_\+memory@{L\+O\+C\+A\+T\+I\+O\+N\+\_\+memory}}}\mbox{\Hypertarget{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}\label{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}} 
+L\+O\+C\+A\+T\+I\+O\+N\+\_\+memory&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+O\+C\+A\+T\+I\+O\+N\+\_\+value@{L\+O\+C\+A\+T\+I\+O\+N\+\_\+value}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!L\+O\+C\+A\+T\+I\+O\+N\+\_\+value@{L\+O\+C\+A\+T\+I\+O\+N\+\_\+value}}}\mbox{\Hypertarget{elf_8h_af2e75a10adf1443b5204c7856bbf630da2c98b9d1b72f1159175953e2f08a87f8}\label{elf_8h_af2e75a10adf1443b5204c7856bbf630da2c98b9d1b72f1159175953e2f08a87f8}} 
+L\+O\+C\+A\+T\+I\+O\+N\+\_\+value&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+elf.\+h 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+23                   \{
+24   \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da78f690fdda043de78067d4ec6f25bf39}{LOCATION\_register}},
+25   \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}},
+26   \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da2c98b9d1b72f1159175953e2f08a87f8}{LOCATION\_value}}
+27 \};
+\end{DoxyCode}
+\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70}} 
+\index{elf.\+h@{elf.\+h}!Type\+Enum@{Type\+Enum}}
+\index{Type\+Enum@{Type\+Enum}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{Type\+Enum}{TypeEnum}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70}{Type\+Enum}}}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+base@{T\+Y\+P\+E\+\_\+base}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+base@{T\+Y\+P\+E\+\_\+base}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70a6c675feb4de749ba8aae449fee018515}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70a6c675feb4de749ba8aae449fee018515}} 
+T\+Y\+P\+E\+\_\+base&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+pointer@{T\+Y\+P\+E\+\_\+pointer}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+pointer@{T\+Y\+P\+E\+\_\+pointer}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70a38041b485628711420e122067d651090}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70a38041b485628711420e122067d651090}} 
+T\+Y\+P\+E\+\_\+pointer&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+function@{T\+Y\+P\+E\+\_\+function}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+function@{T\+Y\+P\+E\+\_\+function}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70a886d105ff63d61c7ce0064656b69a9c3}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70a886d105ff63d61c7ce0064656b69a9c3}} 
+T\+Y\+P\+E\+\_\+function&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+void@{T\+Y\+P\+E\+\_\+void}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+void@{T\+Y\+P\+E\+\_\+void}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70a9e1a64607a0f0b8ec8322c69652a9e5b}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70a9e1a64607a0f0b8ec8322c69652a9e5b}} 
+T\+Y\+P\+E\+\_\+void&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+array@{T\+Y\+P\+E\+\_\+array}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+array@{T\+Y\+P\+E\+\_\+array}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70aed7927d456e33336408f3b71c9e421e9}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70aed7927d456e33336408f3b71c9e421e9}} 
+T\+Y\+P\+E\+\_\+array&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+struct@{T\+Y\+P\+E\+\_\+struct}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+struct@{T\+Y\+P\+E\+\_\+struct}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70ad27ab306f779133c8682a3537c43b471}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70ad27ab306f779133c8682a3537c43b471}} 
+T\+Y\+P\+E\+\_\+struct&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+reference@{T\+Y\+P\+E\+\_\+reference}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+reference@{T\+Y\+P\+E\+\_\+reference}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70aecf2adb431b5d2b4ac726cd6bc33974a}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70aecf2adb431b5d2b4ac726cd6bc33974a}} 
+T\+Y\+P\+E\+\_\+reference&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+enum@{T\+Y\+P\+E\+\_\+enum}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+enum@{T\+Y\+P\+E\+\_\+enum}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70a10be5808255258a5b4fa200d0c183913}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70a10be5808255258a5b4fa200d0c183913}} 
+T\+Y\+P\+E\+\_\+enum&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{T\+Y\+P\+E\+\_\+union@{T\+Y\+P\+E\+\_\+union}!elf.\+h@{elf.\+h}}\index{elf.\+h@{elf.\+h}!T\+Y\+P\+E\+\_\+union@{T\+Y\+P\+E\+\_\+union}}}\mbox{\Hypertarget{elf_8h_a600075cb26e64fe549c214f4c5b16b70a662fec25af2a430b991c709bb52cc2b2}\label{elf_8h_a600075cb26e64fe549c214f4c5b16b70a662fec25af2a430b991c709bb52cc2b2}} 
+T\+Y\+P\+E\+\_\+union&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+elf.\+h 파일의 114 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+114               \{
+115   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a6c675feb4de749ba8aae449fee018515}{TYPE\_base}},
+116   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a38041b485628711420e122067d651090}{TYPE\_pointer}},
+117   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a886d105ff63d61c7ce0064656b69a9c3}{TYPE\_function}},
+118   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a9e1a64607a0f0b8ec8322c69652a9e5b}{TYPE\_void}},
+119   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70aed7927d456e33336408f3b71c9e421e9}{TYPE\_array}},
+120   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70ad27ab306f779133c8682a3537c43b471}{TYPE\_struct}},
+121   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70aecf2adb431b5d2b4ac726cd6bc33974a}{TYPE\_reference}},
+122   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a10be5808255258a5b4fa200d0c183913}{TYPE\_enum}},
+123   \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a662fec25af2a430b991c709bb52cc2b2}{TYPE\_union}}
+124 \};
+\end{DoxyCode}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{elf_8h_aeee09d5581ff933e08f6185cae15d0ec}\label{elf_8h_aeee09d5581ff933e08f6185cae15d0ec}} 
+\index{elf.\+h@{elf.\+h}!elf\+Clean\+Up@{elf\+Clean\+Up}}
+\index{elf\+Clean\+Up@{elf\+Clean\+Up}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Clean\+Up()}{elfCleanUp()}}
+{\footnotesize\ttfamily void elf\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 2943 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2944 \{
+2945   \mbox{\hyperlink{struct_compile_unit}{CompileUnit}} *comp = \mbox{\hyperlink{elf_8cpp_a2f03f59647ef621a00a382cdd47f9b6f}{elfCompileUnits}};
+2946 
+2947   \textcolor{keywordflow}{while}(comp) \{
+2948     \mbox{\hyperlink{elf_8cpp_a440b2371f7d8875ebab725d61441ad8d}{elfCleanUp}}(comp);
+2949     \mbox{\hyperlink{struct_compile_unit}{CompileUnit}} *next = comp->\mbox{\hyperlink{struct_compile_unit_ada8fe7f00de2bd5b1808782e1baecf5f}{next}};
+2950     free(comp);
+2951     comp = next;
+2952   \}
+2953   \mbox{\hyperlink{elf_8cpp_a2f03f59647ef621a00a382cdd47f9b6f}{elfCompileUnits}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2954   free(\mbox{\hyperlink{elf_8cpp_aa0ac6c065ad24afb995c1deebd8842a1}{elfSymbols}});
+2955   \mbox{\hyperlink{elf_8cpp_aa0ac6c065ad24afb995c1deebd8842a1}{elfSymbols}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2956   \textcolor{comment}{//  free(elfSymbolsStrTab);}
+2957   \mbox{\hyperlink{elf_8cpp_a33beb96d825644dd4c94f8fdb0906d7a}{elfSymbolsStrTab}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2958 
+2959   \mbox{\hyperlink{elf_8cpp_ab5c6cc5a18021b8d77e44fff0c1f42e8}{elfDebugStrings}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2960   \textcolor{keywordflow}{if}(\mbox{\hyperlink{elf_8cpp_a48ca1af0f6774d890f89ecfc39906a33}{elfDebugInfo}}) \{
+2961     \textcolor{keywordtype}{int} num = \mbox{\hyperlink{elf_8cpp_a48ca1af0f6774d890f89ecfc39906a33}{elfDebugInfo}}->\mbox{\hyperlink{struct_debug_info_adcb1491b1a4434a104942115f82b820c}{numRanges}};
+2962     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+2963     \textcolor{keywordflow}{for}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < num; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+2964       free(\mbox{\hyperlink{elf_8cpp_a48ca1af0f6774d890f89ecfc39906a33}{elfDebugInfo}}->\mbox{\hyperlink{struct_debug_info_ad048748b52971c0564054f85a1ed6093}{ranges}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{struct_a_ranges_a2eb62f0d43045767640b1d0c4dd8191e}{ranges}});
+2965     \}
+2966     free(\mbox{\hyperlink{elf_8cpp_a48ca1af0f6774d890f89ecfc39906a33}{elfDebugInfo}}->\mbox{\hyperlink{struct_debug_info_ad048748b52971c0564054f85a1ed6093}{ranges}});
+2967     free(\mbox{\hyperlink{elf_8cpp_a48ca1af0f6774d890f89ecfc39906a33}{elfDebugInfo}});
+2968     \mbox{\hyperlink{elf_8cpp_a48ca1af0f6774d890f89ecfc39906a33}{elfDebugInfo}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2969   \}
+2970 
+2971   \textcolor{keywordflow}{if}(\mbox{\hyperlink{elf_8cpp_af7fdbf7741ef5b6e7c37e627106bd6fa}{elfFdes}}) \{
+2972     \textcolor{keywordflow}{if}(\mbox{\hyperlink{elf_8cpp_a7ac6728936ae2f875098fd2ab2fca23d}{elfFdeCount}}) \{
+2973       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{elf_8cpp_a7ac6728936ae2f875098fd2ab2fca23d}{elfFdeCount}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++)
+2974         free(\mbox{\hyperlink{elf_8cpp_af7fdbf7741ef5b6e7c37e627106bd6fa}{elfFdes}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}]);
+2975     \}
+2976     free(\mbox{\hyperlink{elf_8cpp_af7fdbf7741ef5b6e7c37e627106bd6fa}{elfFdes}});
+2977     
+2978     \mbox{\hyperlink{elf_8cpp_af7fdbf7741ef5b6e7c37e627106bd6fa}{elfFdes}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2979     \mbox{\hyperlink{elf_8cpp_a7ac6728936ae2f875098fd2ab2fca23d}{elfFdeCount}} = 0;
+2980   \}
+2981 
+2982   \mbox{\hyperlink{struct_e_l_fcie}{ELFcie}} *cie = \mbox{\hyperlink{elf_8cpp_abd48ca9a5fad835b3db52c79dc0d4bd0}{elfCies}};
+2983   \textcolor{keywordflow}{while}(cie) \{
+2984     \mbox{\hyperlink{struct_e_l_fcie}{ELFcie}} *next = cie->\mbox{\hyperlink{struct_e_l_fcie_a478060c105cc829f5b800d20d05d4901}{next}};
+2985     free(cie);
+2986     cie = next;
+2987   \}
+2988   \mbox{\hyperlink{elf_8cpp_abd48ca9a5fad835b3db52c79dc0d4bd0}{elfCies}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2989 
+2990   \textcolor{keywordflow}{if}(\mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}}) \{
+2991     free(\mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}});
+2992     \mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2993   \}
+2994 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{elf_8h_aeee09d5581ff933e08f6185cae15d0ec_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{elf_8h_ab0e4df7ed4e63a28e5648336e8cdd27b}\label{elf_8h_ab0e4df7ed4e63a28e5648336e8cdd27b}} 
+\index{elf.\+h@{elf.\+h}!elf\+Decode\+Location@{elf\+Decode\+Location}}
+\index{elf\+Decode\+Location@{elf\+Decode\+Location}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Decode\+Location()}{elfDecodeLocation()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} elf\+Decode\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_e_l_f_block}{E\+L\+F\+Block}} $\ast$}]{,  }\item[{\mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630d}{Location\+Type}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 794 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+795 \{
+796   \textcolor{keywordflow}{return} \mbox{\hyperlink{elf_8cpp_afba3a87c27017a62777b14b46a2f2e42}{elfDecodeLocation}}(f, o, type, 0);
+797 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{elf_8h_ab0e4df7ed4e63a28e5648336e8cdd27b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{elf_8h_a5751eac92ea4b61fc6fafcfed5138598}\label{elf_8h_a5751eac92ea4b61fc6fafcfed5138598}} 
+\index{elf.\+h@{elf.\+h}!elf\+Decode\+Location@{elf\+Decode\+Location}}
+\index{elf\+Decode\+Location@{elf\+Decode\+Location}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Decode\+Location()}{elfDecodeLocation()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} elf\+Decode\+Location (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_e_l_f_block}{E\+L\+F\+Block}} $\ast$}]{,  }\item[{\mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630d}{Location\+Type}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 716 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+717 \{
+718   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} framebase = 0;
+719   \textcolor{keywordflow}{if}(f && f->frameBase) \{
+720     \mbox{\hyperlink{struct_e_l_f_block}{ELFBlock}} *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = f->frameBase;
+721     \textcolor{keywordflow}{switch}(*\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}->data) \{
+722     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a40f0564b84a29f299d16dc27907143a6}{DW\_OP\_reg0}}:
+723     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a158b0498c4e355a555ce4627bfe92962}{DW\_OP\_reg1}}:
+724     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a8f429be5c85f158620e18071702d71a8}{DW\_OP\_reg2}}:
+725     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a946f42f60d952e86b5fa7f33650a2f81}{DW\_OP\_reg3}}:
+726     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a4d9f47588ce48e7c7631176fb977d4a2}{DW\_OP\_reg4}}:
+727     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a3482d7fe9aea3cc2ad24c437d47305cb}{DW\_OP\_reg5}}:
+728     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a18c2f84562f36a3f057d16181a0cf55d}{DW\_OP\_reg6}}:
+729     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a1471d234114eeae3c75fc89022a3ea52}{DW\_OP\_reg7}}:
+730     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a89f946a7c65cc869cb5371e87d35c853}{DW\_OP\_reg8}}:
+731     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a99c83832dcde98270fde2c0f71008710}{DW\_OP\_reg9}}:
+732     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_ac7e1b3c2ccc9e3cd42152a97adaef865}{DW\_OP\_reg10}}:
+733     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a2672c16a38d9d537298d03dca1a8c66a}{DW\_OP\_reg11}}:
+734     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_ae81851e6d39b2ace91da187bf20cb7f6}{DW\_OP\_reg12}}:
+735     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a4a2f1bfc0c73664e9cd7e2b037127f3a}{DW\_OP\_reg13}}:
+736     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a96b7a68330b37b9a5d3e47968fe1f94a}{DW\_OP\_reg14}}:
+737     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a9d24be02b95463f0f72d96861127dd75}{DW\_OP\_reg15}}:
+738       framebase = \mbox{\hyperlink{_g_b_a_8h_ae29faba89509024ffd1a292badcedf2d}{reg}}[*\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}->data-0x50].\mbox{\hyperlink{unionreg__pair_a9f6a42d56c07829d7013571eda998252}{I}};
+739       \textcolor{keywordflow}{break};
+740     \textcolor{keywordflow}{default}:
+741       fprintf(stderr, \textcolor{stringliteral}{"Unknown frameBase %02x\(\backslash\)n"}, *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}->data);
+742       \textcolor{keywordflow}{break};
+743     \}
+744   \}
+745   
+746   \mbox{\hyperlink{struct_e_l_f_block}{ELFBlock}} *loc = o;
+747   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} location = 0;
+748   \textcolor{keywordtype}{int} bytes = 0;
+749   \textcolor{keywordflow}{if}(loc) \{
+750     \textcolor{keywordflow}{switch}(*loc->\mbox{\hyperlink{struct_e_l_f_block_a04ec3cb9c21f5e2b3f720733cb892d21}{data}}) \{
+751     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a4ee945dd6328ad04923718bd27c64c89}{DW\_OP\_addr}}:
+752       location = \mbox{\hyperlink{elf_8cpp_a395fe2be4e79a03b5c3cf5c6fd687f57}{elfRead4Bytes}}(loc->\mbox{\hyperlink{struct_e_l_f_block_a04ec3cb9c21f5e2b3f720733cb892d21}{data}}+1);
+753       *type = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}};
+754       \textcolor{keywordflow}{break};
+755     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a23c34268a38715639de36168e79c75ba}{DW\_OP\_plus\_uconst}}:
+756       location = base + \mbox{\hyperlink{elf_8cpp_a077048bafa33fbb0e59622ac73a94cd4}{elfReadLEB128}}(loc->\mbox{\hyperlink{struct_e_l_f_block_a04ec3cb9c21f5e2b3f720733cb892d21}{data}}+1, &bytes);
+757       *type = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}};
+758       \textcolor{keywordflow}{break};
+759     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a40f0564b84a29f299d16dc27907143a6}{DW\_OP\_reg0}}:
+760     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a158b0498c4e355a555ce4627bfe92962}{DW\_OP\_reg1}}:
+761     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a8f429be5c85f158620e18071702d71a8}{DW\_OP\_reg2}}:
+762     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a946f42f60d952e86b5fa7f33650a2f81}{DW\_OP\_reg3}}:
+763     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a4d9f47588ce48e7c7631176fb977d4a2}{DW\_OP\_reg4}}:
+764     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a3482d7fe9aea3cc2ad24c437d47305cb}{DW\_OP\_reg5}}:
+765     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a18c2f84562f36a3f057d16181a0cf55d}{DW\_OP\_reg6}}:
+766     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a1471d234114eeae3c75fc89022a3ea52}{DW\_OP\_reg7}}:
+767     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a89f946a7c65cc869cb5371e87d35c853}{DW\_OP\_reg8}}:
+768     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a99c83832dcde98270fde2c0f71008710}{DW\_OP\_reg9}}:
+769     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_ac7e1b3c2ccc9e3cd42152a97adaef865}{DW\_OP\_reg10}}:
+770     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a2672c16a38d9d537298d03dca1a8c66a}{DW\_OP\_reg11}}:
+771     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_ae81851e6d39b2ace91da187bf20cb7f6}{DW\_OP\_reg12}}:
+772     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a4a2f1bfc0c73664e9cd7e2b037127f3a}{DW\_OP\_reg13}}:
+773     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a96b7a68330b37b9a5d3e47968fe1f94a}{DW\_OP\_reg14}}:
+774     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a9d24be02b95463f0f72d96861127dd75}{DW\_OP\_reg15}}:      
+775       location = *loc->\mbox{\hyperlink{struct_e_l_f_block_a04ec3cb9c21f5e2b3f720733cb892d21}{data}} - 0x50;
+776       *type = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da78f690fdda043de78067d4ec6f25bf39}{LOCATION\_register}};
+777       \textcolor{keywordflow}{break};
+778     \textcolor{keywordflow}{case} \mbox{\hyperlink{elf_8cpp_a629f40d75867a733983b9e737e83884e}{DW\_OP\_fbreg}}:
+779       \{
+780         \textcolor{keywordtype}{int} bytes;
+781         \mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} off = \mbox{\hyperlink{elf_8cpp_ac8c5826c204074fc3e24982fa9bdbae9}{elfReadSignedLEB128}}(loc->\mbox{\hyperlink{struct_e_l_f_block_a04ec3cb9c21f5e2b3f720733cb892d21}{data}}+1, &bytes);
+782         location = framebase + off;
+783         *type = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}};
+784       \}
+785       \textcolor{keywordflow}{break};
+786     \textcolor{keywordflow}{default}:
+787       fprintf(stderr, \textcolor{stringliteral}{"Unknown location %02x\(\backslash\)n"}, *loc->\mbox{\hyperlink{struct_e_l_f_block_a04ec3cb9c21f5e2b3f720733cb892d21}{data}});
+788       \textcolor{keywordflow}{break};
+789     \}
+790   \}
+791   \textcolor{keywordflow}{return} location;
+792 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{elf_8h_a5751eac92ea4b61fc6fafcfed5138598_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{elf_8h_a5751eac92ea4b61fc6fafcfed5138598_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{elf_8h_a1e504ce5fe345b4436da32851ac6f2d3}\label{elf_8h_a1e504ce5fe345b4436da32851ac6f2d3}} 
+\index{elf.\+h@{elf.\+h}!elf\+Find\+Line@{elf\+Find\+Line}}
+\index{elf\+Find\+Line@{elf\+Find\+Line}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Find\+Line()}{elfFindLine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} elf\+Find\+Line (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{unit,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{func,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{addr,  }\item[{char $\ast$$\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 369 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+370 \{
+371   \textcolor{keywordtype}{int} currentLine = -1;
+372   \textcolor{keywordflow}{if}(unit->\mbox{\hyperlink{struct_compile_unit_a378d867eb23538702956763f72e000f3}{hasLineInfo}}) \{
+373     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = unit->\mbox{\hyperlink{struct_compile_unit_a96d38056c5c5e5e723b16980d6c34641}{lineInfoTable}}->\mbox{\hyperlink{struct_line_info_a5f3cdc8f3a9dceeb63412d3c1e468069}{number}};
+374     \mbox{\hyperlink{struct_line_info_item}{LineInfoItem}} *table = unit->\mbox{\hyperlink{struct_compile_unit_a96d38056c5c5e5e723b16980d6c34641}{lineInfoTable}}->\mbox{\hyperlink{struct_line_info_a774f0940e01fa7dd5a07dfa19acc81c6}{lines}};
+375     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+376     \textcolor{keywordflow}{for}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+377       \textcolor{keywordflow}{if}(addr <= table[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].address)
+378         \textcolor{keywordflow}{break};
+379     \}
+380     \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} == \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}})
+381       \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}--;
+382     *f = table[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{struct_line_info_item_a61a140c862884d34fbf8e13e16ee17af}{file}};
+383     currentLine = table[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{struct_line_info_item_aa1c188f0239f74291b066489d1bc86c2}{line}};
+384   \}
+385   \textcolor{keywordflow}{return} currentLine;
+386 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{elf_8h_afc7afa3ed0276a833df18d3729457dbb}\label{elf_8h_afc7afa3ed0276a833df18d3729457dbb}} 
+\index{elf.\+h@{elf.\+h}!elf\+Find\+Line\+In\+Module@{elf\+Find\+Line\+In\+Module}}
+\index{elf\+Find\+Line\+In\+Module@{elf\+Find\+Line\+In\+Module}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Find\+Line\+In\+Module()}{elfFindLineInModule()}}
+{\footnotesize\ttfamily bool elf\+Find\+Line\+In\+Module (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$}]{,  }\item[{char $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 335 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+336 \{
+337   \mbox{\hyperlink{struct_compile_unit}{CompileUnit}} *unit = \mbox{\hyperlink{elf_8cpp_a2f03f59647ef621a00a382cdd47f9b6f}{elfCompileUnits}};
+338 
+339   \textcolor{keywordflow}{while}(unit) \{
+340     \textcolor{keywordflow}{if}(unit->\mbox{\hyperlink{struct_compile_unit_a96d38056c5c5e5e723b16980d6c34641}{lineInfoTable}}) \{
+341       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+342       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = unit->\mbox{\hyperlink{struct_compile_unit_a96d38056c5c5e5e723b16980d6c34641}{lineInfoTable}}->\mbox{\hyperlink{struct_line_info_a360dc53764f78411604eb10087a4218c}{fileCount}};
+343       \textcolor{keywordtype}{char} *found = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+344       \textcolor{keywordflow}{for}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+345         \textcolor{keywordflow}{if}(strcmp(name, unit->\mbox{\hyperlink{struct_compile_unit_a96d38056c5c5e5e723b16980d6c34641}{lineInfoTable}}->\mbox{\hyperlink{struct_line_info_ac6a6675bb12eb9ae43556403a8f98f21}{files}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}]) == 0) \{
+346           found = unit->\mbox{\hyperlink{struct_compile_unit_a96d38056c5c5e5e723b16980d6c34641}{lineInfoTable}}->\mbox{\hyperlink{struct_line_info_ac6a6675bb12eb9ae43556403a8f98f21}{files}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+347           \textcolor{keywordflow}{break};
+348         \}
+349       \}
+350       \textcolor{comment}{// found a matching filename... try to find line now}
+351       \textcolor{keywordflow}{if}(found) \{
+352         \mbox{\hyperlink{struct_line_info_item}{LineInfoItem}} *table = unit->\mbox{\hyperlink{struct_compile_unit_a96d38056c5c5e5e723b16980d6c34641}{lineInfoTable}}->
+      \mbox{\hyperlink{struct_line_info_a774f0940e01fa7dd5a07dfa19acc81c6}{lines}};
+353         \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = unit->\mbox{\hyperlink{struct_compile_unit_a96d38056c5c5e5e723b16980d6c34641}{lineInfoTable}}->\mbox{\hyperlink{struct_line_info_a5f3cdc8f3a9dceeb63412d3c1e468069}{number}};
+354         \textcolor{keywordflow}{for}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+355           \textcolor{keywordflow}{if}(table[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{expr-lex_8cpp_a702945180aa732857b380a007a7e2a21}{file}} == found && table[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].line == line) \{
+356             *addr = table[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{struct_line_info_item_aa5147adab5d2634bec7965619b5773ab}{address}};
+357             \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+358           \}
+359         \}
+360         \textcolor{comment}{// we can only find a single match}
+361         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+362       \}
+363     \}
+364     unit = unit->\mbox{\hyperlink{struct_compile_unit_ada8fe7f00de2bd5b1808782e1baecf5f}{next}};
+365   \}
+366   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+367 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{elf_8h_adeeb31652d234014309591b4e4a91e05}\label{elf_8h_adeeb31652d234014309591b4e4a91e05}} 
+\index{elf.\+h@{elf.\+h}!elf\+Find\+Line\+In\+Unit@{elf\+Find\+Line\+In\+Unit}}
+\index{elf\+Find\+Line\+In\+Unit@{elf\+Find\+Line\+In\+Unit}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Find\+Line\+In\+Unit()}{elfFindLineInUnit()}}
+{\footnotesize\ttfamily bool elf\+Find\+Line\+In\+Unit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 388 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+389 \{
+390   \textcolor{keywordflow}{if}(unit->hasLineInfo) \{
+391     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = unit->lineInfoTable->number;
+392     \mbox{\hyperlink{struct_line_info_item}{LineInfoItem}} *table = unit->lineInfoTable->lines;
+393     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+394     \textcolor{keywordflow}{for}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+395       \textcolor{keywordflow}{if}(line == table[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].line) \{
+396         *addr = table[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}].\mbox{\hyperlink{struct_line_info_item_aa5147adab5d2634bec7965619b5773ab}{address}};
+397         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+398       \}
+399     \}
+400   \}
+401   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+402 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{elf_8h_aeca4505a542616169bea79dc248c69d8}\label{elf_8h_aeca4505a542616169bea79dc248c69d8}} 
+\index{elf.\+h@{elf.\+h}!elf\+Get\+Address\+Symbol@{elf\+Get\+Address\+Symbol}}
+\index{elf\+Get\+Address\+Symbol@{elf\+Get\+Address\+Symbol}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Get\+Address\+Symbol()}{elfGetAddressSymbol()}}
+{\footnotesize\ttfamily char$\ast$ elf\+Get\+Address\+Symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 285 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+286 \{
+287   \textcolor{keyword}{static} \textcolor{keywordtype}{char} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}[256];
+288 
+289   \mbox{\hyperlink{struct_compile_unit}{CompileUnit}} *unit = \mbox{\hyperlink{elf_8cpp_a00c4d54af2a13bd9e147f2635c9a43f7}{elfGetCompileUnit}}(addr);
+290   \textcolor{comment}{// found unit, need to find function}
+291   \textcolor{keywordflow}{if}(unit) \{
+292     \mbox{\hyperlink{struct_function}{Function}} *func = unit->\mbox{\hyperlink{struct_compile_unit_ac105dc0b8c92a401f8dd14f7a537e533}{functions}};
+293     \textcolor{keywordflow}{while}(func) \{
+294       \textcolor{keywordflow}{if}(addr >= func->\mbox{\hyperlink{struct_function_acfcfc3e0b585bafa5690e3edf8936d87}{lowPC}} && addr < func->highPC) \{
+295         \textcolor{keywordtype}{int} offset = addr - func->\mbox{\hyperlink{struct_function_acfcfc3e0b585bafa5690e3edf8936d87}{lowPC}};
+296         \textcolor{keywordtype}{char} *name = func->\mbox{\hyperlink{struct_function_afc3b67aebc6b6c91044c6b09d7279eb0}{name}};
+297         \textcolor{keywordflow}{if}(!name)
+298           name = \textcolor{stringliteral}{""};
+299         \textcolor{keywordflow}{if}(offset)
+300           sprintf(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \textcolor{stringliteral}{"%s+%d"}, name, offset);
+301         \textcolor{keywordflow}{else}
+302           strcpy(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, name);
+303         \textcolor{keywordflow}{return} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+304       \}
+305       func = func->\mbox{\hyperlink{struct_function_a20ace60d6eba6736e143166b0137b87f}{next}};
+306     \}
+307   \}
+308 
+309   \textcolor{keywordflow}{if}(\mbox{\hyperlink{elf_8cpp_acd6849cd60d52534f1f585e7c3e99caf}{elfSymbolsCount}}) \{
+310     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{elf_8cpp_acd6849cd60d52534f1f585e7c3e99caf}{elfSymbolsCount}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+311       \mbox{\hyperlink{struct_symbol}{Symbol}} *s = &\mbox{\hyperlink{elf_8cpp_aa0ac6c065ad24afb995c1deebd8842a1}{elfSymbols}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+312       \textcolor{keywordflow}{if}((addr >= s->\mbox{\hyperlink{struct_symbol_aefbe563b4964a3cc4ee85c3efaccb7d2}{value}})  && addr < (s->\mbox{\hyperlink{struct_symbol_aefbe563b4964a3cc4ee85c3efaccb7d2}{value}}+s->\mbox{\hyperlink{struct_symbol_a1ce0cce2939edefe73195657c6371f56}{size}})) \{
+313         \textcolor{keywordtype}{int} offset = addr-s->\mbox{\hyperlink{struct_symbol_aefbe563b4964a3cc4ee85c3efaccb7d2}{value}};
+314         \textcolor{keywordtype}{char} *name = s->\mbox{\hyperlink{struct_symbol_aa9ba617cd9de17ed73148893a6c14606}{name}};
+315         \textcolor{keywordflow}{if}(name == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+316           name = \textcolor{stringliteral}{""};
+317         \textcolor{keywordflow}{if}(offset)
+318           sprintf(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \textcolor{stringliteral}{"%s+%d"}, name, addr-s->\mbox{\hyperlink{struct_symbol_aefbe563b4964a3cc4ee85c3efaccb7d2}{value}});
+319         \textcolor{keywordflow}{else}
+320           strcpy(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, name);
+321         \textcolor{keywordflow}{return} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+322       \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(addr == s->\mbox{\hyperlink{struct_symbol_aefbe563b4964a3cc4ee85c3efaccb7d2}{value}}) \{
+323         \textcolor{keywordflow}{if}(s->\mbox{\hyperlink{struct_symbol_aa9ba617cd9de17ed73148893a6c14606}{name}})
+324           strcpy(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, s->\mbox{\hyperlink{struct_symbol_aa9ba617cd9de17ed73148893a6c14606}{name}});
+325         \textcolor{keywordflow}{else}
+326           strcpy(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \textcolor{stringliteral}{""});
+327         \textcolor{keywordflow}{return} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+328       \}
+329     \}
+330   \}
+331   
+332   \textcolor{keywordflow}{return} \textcolor{stringliteral}{""};
+333 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{elf_8h_aeca4505a542616169bea79dc248c69d8_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{elf_8h_aeca4505a542616169bea79dc248c69d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{elf_8h_a934256ee546dc042ccee36d31d787a61}\label{elf_8h_a934256ee546dc042ccee36d31d787a61}} 
+\index{elf.\+h@{elf.\+h}!elf\+Get\+Current\+Function@{elf\+Get\+Current\+Function}}
+\index{elf\+Get\+Current\+Function@{elf\+Get\+Current\+Function}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Get\+Current\+Function()}{elfGetCurrentFunction()}}
+{\footnotesize\ttfamily bool elf\+Get\+Current\+Function (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$$\ast$}]{,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$$\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 404 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+405 \{
+406   \mbox{\hyperlink{struct_compile_unit}{CompileUnit}} *unit = \mbox{\hyperlink{elf_8cpp_a00c4d54af2a13bd9e147f2635c9a43f7}{elfGetCompileUnit}}(addr);
+407   \textcolor{comment}{// found unit, need to find function}
+408   \textcolor{keywordflow}{if}(unit) \{
+409     \mbox{\hyperlink{struct_function}{Function}} *func = unit->\mbox{\hyperlink{struct_compile_unit_ac105dc0b8c92a401f8dd14f7a537e533}{functions}};
+410     \textcolor{keywordflow}{while}(func) \{
+411       \textcolor{keywordflow}{if}(addr >= func->\mbox{\hyperlink{struct_function_acfcfc3e0b585bafa5690e3edf8936d87}{lowPC}} && addr < func->highPC) \{
+412         *f = func;
+413         *u = unit;
+414         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+415       \}
+416       func = func->\mbox{\hyperlink{struct_function_a20ace60d6eba6736e143166b0137b87f}{next}};
+417     \}
+418   \}
+419   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+420 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{elf_8h_a934256ee546dc042ccee36d31d787a61_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{elf_8h_a6fb160430fa05a816263d777870dc9af}\label{elf_8h_a6fb160430fa05a816263d777870dc9af}} 
+\index{elf.\+h@{elf.\+h}!elf\+Get\+Object@{elf\+Get\+Object}}
+\index{elf\+Get\+Object@{elf\+Get\+Object}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Get\+Object()}{elfGetObject()}}
+{\footnotesize\ttfamily bool elf\+Get\+Object (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{,  }\item[{\mbox{\hyperlink{struct_object}{Object}} $\ast$$\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 422 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+423 \{
+424   \textcolor{keywordflow}{if}(f && u) \{
+425     \mbox{\hyperlink{struct_object}{Object}} *v = f->variables;
+426 
+427     \textcolor{keywordflow}{while}(v) \{
+428       \textcolor{keywordflow}{if}(strcmp(name, v->\mbox{\hyperlink{struct_object_a1792dbef505e3bb7eab133117b431010}{name}}) == 0) \{
+429         *o = v;
+430         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+431       \}
+432       v = v->\mbox{\hyperlink{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}{next}};
+433     \}
+434     v = f->parameters;
+435     \textcolor{keywordflow}{while}(v) \{
+436       \textcolor{keywordflow}{if}(strcmp(name, v->\mbox{\hyperlink{struct_object_a1792dbef505e3bb7eab133117b431010}{name}}) == 0) \{
+437         *o = v;
+438         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+439       \}
+440       v = v->\mbox{\hyperlink{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}{next}};
+441     \}
+442     v = u->variables;
+443     \textcolor{keywordflow}{while}(v) \{
+444       \textcolor{keywordflow}{if}(strcmp(name, v->\mbox{\hyperlink{struct_object_a1792dbef505e3bb7eab133117b431010}{name}}) == 0) \{
+445         *o = v;
+446         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+447       \}
+448       v = v->\mbox{\hyperlink{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}{next}};
+449     \}
+450   \}
+451   
+452   \mbox{\hyperlink{struct_compile_unit}{CompileUnit}} *c = \mbox{\hyperlink{elf_8cpp_a2f03f59647ef621a00a382cdd47f9b6f}{elfCompileUnits}};
+453   
+454   \textcolor{keywordflow}{while}(c) \{
+455     \textcolor{keywordflow}{if}(c != u) \{
+456       \mbox{\hyperlink{struct_object}{Object}} *v = c->\mbox{\hyperlink{struct_compile_unit_a88643bd86eef23198ee9e03070ed26cb}{variables}};
+457       \textcolor{keywordflow}{while}(v) \{
+458         \textcolor{keywordflow}{if}(strcmp(name, v->\mbox{\hyperlink{struct_object_a1792dbef505e3bb7eab133117b431010}{name}}) == 0) \{
+459           *o = v;
+460           \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+461         \}
+462         v = v->\mbox{\hyperlink{struct_object_a29524055e3b5fe5df2e3c41fa81ff1ff}{next}};
+463       \}
+464     \}
+465     c = c->\mbox{\hyperlink{struct_compile_unit_ada8fe7f00de2bd5b1808782e1baecf5f}{next}};
+466   \}
+467   
+468   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+469 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{elf_8h_a6fb160430fa05a816263d777870dc9af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{elf_8h_a4b3bf51614d8d2f825d217cd1d42535f}\label{elf_8h_a4b3bf51614d8d2f825d217cd1d42535f}} 
+\index{elf.\+h@{elf.\+h}!elf\+Get\+Symbol@{elf\+Get\+Symbol}}
+\index{elf\+Get\+Symbol@{elf\+Get\+Symbol}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Get\+Symbol()}{elfGetSymbol()}}
+{\footnotesize\ttfamily char$\ast$ elf\+Get\+Symbol (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 471 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+472 \{
+473   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{elf_8cpp_acd6849cd60d52534f1f585e7c3e99caf}{elfSymbolsCount}}) \{
+474     \mbox{\hyperlink{struct_symbol}{Symbol}} *s = &\mbox{\hyperlink{elf_8cpp_aa0ac6c065ad24afb995c1deebd8842a1}{elfSymbols}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+475     *value = s->\mbox{\hyperlink{struct_symbol_aefbe563b4964a3cc4ee85c3efaccb7d2}{value}};
+476     *\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = s->\mbox{\hyperlink{struct_symbol_a1ce0cce2939edefe73195657c6371f56}{size}};
+477     *type = s->\mbox{\hyperlink{struct_symbol_a3a8a7698da2e96f2fd77296b5191ce6f}{type}};
+478     \textcolor{keywordflow}{return} s->\mbox{\hyperlink{struct_symbol_aa9ba617cd9de17ed73148893a6c14606}{name}};
+479   \}
+480   \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+481 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{elf_8h_a8ef636f89b2432335a8360221fe829d9}\label{elf_8h_a8ef636f89b2432335a8360221fe829d9}} 
+\index{elf.\+h@{elf.\+h}!elf\+Get\+Symbol\+Address@{elf\+Get\+Symbol\+Address}}
+\index{elf\+Get\+Symbol\+Address@{elf\+Get\+Symbol\+Address}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Get\+Symbol\+Address()}{elfGetSymbolAddress()}}
+{\footnotesize\ttfamily bool elf\+Get\+Symbol\+Address (\begin{DoxyParamCaption}\item[{char $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 483 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+484 \{
+485   \textcolor{keywordflow}{if}(\mbox{\hyperlink{elf_8cpp_acd6849cd60d52534f1f585e7c3e99caf}{elfSymbolsCount}}) \{
+486     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{elf_8cpp_acd6849cd60d52534f1f585e7c3e99caf}{elfSymbolsCount}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+487       \mbox{\hyperlink{struct_symbol}{Symbol}} *s = &\mbox{\hyperlink{elf_8cpp_aa0ac6c065ad24afb995c1deebd8842a1}{elfSymbols}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+488       \textcolor{keywordflow}{if}(strcmp(sym, s->\mbox{\hyperlink{struct_symbol_aa9ba617cd9de17ed73148893a6c14606}{name}}) == 0) \{
+489         *addr = s->\mbox{\hyperlink{struct_symbol_aefbe563b4964a3cc4ee85c3efaccb7d2}{value}};
+490         *\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = s->\mbox{\hyperlink{struct_symbol_a1ce0cce2939edefe73195657c6371f56}{size}};
+491         *type = s->\mbox{\hyperlink{struct_symbol_a3a8a7698da2e96f2fd77296b5191ce6f}{type}};
+492         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+493       \}
+494     \}
+495   \}
+496   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+497 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{elf_8h_a435d491e508bb34a0ffe91a8f4491b3c}\label{elf_8h_a435d491e508bb34a0ffe91a8f4491b3c}} 
+\index{elf.\+h@{elf.\+h}!elf\+Read@{elf\+Read}}
+\index{elf\+Read@{elf\+Read}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Read()}{elfRead()}}
+{\footnotesize\ttfamily bool elf\+Read (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \&}]{,  }\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 2797 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+2798 \{
+2799   fseek(f, 0, \mbox{\hyperlink{unzip_8cpp_ad2a2e6c114780c3071efd24f16c7f7d8}{SEEK\_END}});
+2800   \textcolor{keywordtype}{long} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = ftell(f);
+2801   \mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}} = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)malloc(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+2802   fseek(f, 0, \mbox{\hyperlink{unzip_8cpp_a0d112bae8fd35be772185b6ec6bcbe64}{SEEK\_SET}});
+2803   fread(\mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}}, 1, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}, f);
+2804   fclose(f);
+2805   
+2806   \mbox{\hyperlink{struct_e_l_f_header}{ELFHeader}} *header = (\mbox{\hyperlink{struct_e_l_f_header}{ELFHeader}} *)\mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}};
+2807   
+2808   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_port_8h_adc768b10d187a6d70e6b927d589c948d}{READ32LE}}(&header->\mbox{\hyperlink{struct_e_l_f_header_a5b65dfa66d5f45063e099e1bd8f7d39a}{magic}}) != 0x464C457F ||
+2809      \mbox{\hyperlink{_port_8h_aab2636d96a4fed5ce311260a2f48ca73}{READ16LE}}(&header->\mbox{\hyperlink{struct_e_l_f_header_a15a148d4a49f9e5993698c2096e8c9bd}{e\_machine}}) != 40 ||
+2810      header->\mbox{\hyperlink{struct_e_l_f_header_a0fc22a0f7de5c991bf26ed09f4090b0a}{clazz}} != 1) \{
+2811     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \mbox{\hyperlink{intl_8h_a75278405e7f034d2b1af80bfd94675fe}{N\_}}(\textcolor{stringliteral}{"Not a valid ELF file %s"}), name);
+2812     free(\mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}});
+2813     \mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2814     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+2815   \}
+2816 
+2817   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{elf_8cpp_ae737de6c729da6007beee92d616221ce}{elfReadProgram}}(header, \mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}}, siz, 
+      \mbox{\hyperlink{elf_8cpp_a9e0a5d162a0704381fa6cf1340704d6d}{parseDebug}})) \{
+2818     free(\mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}});
+2819     \mbox{\hyperlink{elf_8cpp_a9877de19d03acaf755d0fd01cdf23715}{elfFileData}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+2820     \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+2821   \}
+2822   
+2823   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+2824 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{elf_8h_a435d491e508bb34a0ffe91a8f4491b3c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{elf_8h_ac411efd6e288e1a6dfc83795d4329dc5}\label{elf_8h_ac411efd6e288e1a6dfc83795d4329dc5}} 
+\index{elf.\+h@{elf.\+h}!elf\+Read\+L\+E\+B128@{elf\+Read\+L\+E\+B128}}
+\index{elf\+Read\+L\+E\+B128@{elf\+Read\+L\+E\+B128}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Read\+L\+E\+B128()}{elfReadLEB128()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} elf\+Read\+L\+E\+B128 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 846 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+847 \{
+848   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}} = 0;
+849   \textcolor{keywordtype}{int} shift = 0;
+850   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = 0;
+851   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} byte;
+852   \textcolor{keywordflow}{do} \{
+853     byte = *data++;
+854     \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}++;
+855     \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}} |= (byte & 0x7f) << shift;
+856     shift += 7;
+857   \} \textcolor{keywordflow}{while}(byte & 0x80);
+858   *bytesRead = \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+859   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}};
+860 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{elf_8h_ac411efd6e288e1a6dfc83795d4329dc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{elf_8h_abaa0b82b0e4656e07602b44ab67d8ea4}\label{elf_8h_abaa0b82b0e4656e07602b44ab67d8ea4}} 
+\index{elf.\+h@{elf.\+h}!elf\+Read\+Signed\+L\+E\+B128@{elf\+Read\+Signed\+L\+E\+B128}}
+\index{elf\+Read\+Signed\+L\+E\+B128@{elf\+Read\+Signed\+L\+E\+B128}!elf.\+h@{elf.\+h}}
+\subsubsection{\texorpdfstring{elf\+Read\+Signed\+L\+E\+B128()}{elfReadSignedLEB128()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} elf\+Read\+Signed\+L\+E\+B128 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} $\ast$}]{ }\end{DoxyParamCaption})}
+
+
+
+elf.\+cpp 파일의 827 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+828 \{
+829   \mbox{\hyperlink{_system_8h_a0ce6887c26c1c49ad3be5710dd42bfd6}{s32}} \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}} = 0;
+830   \textcolor{keywordtype}{int} shift = 0;
+831   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = 0;
+832   
+833   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} byte;
+834   \textcolor{keywordflow}{do} \{
+835     byte = *data++;
+836     \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}++;
+837     \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}} |= (byte & 0x7f) << shift;
+838     shift += 7;
+839   \} \textcolor{keywordflow}{while}(byte & 0x80);
+840   \textcolor{keywordflow}{if}((shift < 32) && (byte & 0x40))
+841     \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}} |= -(1 << shift);
+842   *bytesRead = \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+843   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}};
+844 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{elf_8h_abaa0b82b0e4656e07602b44ab67d8ea4_icgraph}
+\end{center}
+\end{figure}

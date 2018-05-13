@@ -1,0 +1,10 @@
+<map id="MainWnd::OnFileSavegameOldestslot" name="MainWnd::OnFileSavegameOldestslot">
+<area shape="rect" id="node2" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="535,5,677,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="521,56,691,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="531,309,681,336"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#aa10e0e321035d0cd1e1e953529df5f19" title="MainWnd::OnFileSaveSlot" alt="" coords="296,151,471,177"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a2ce340f4f9cfbb4ec41be6ce2e33ed23" title="MainWnd::writeSaveGame" alt="" coords="519,157,693,184"/>
+<area shape="rect" id="node7" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="543,208,669,235"/>
+<area shape="rect" id="node8" href="$system_8cpp.html#a0412545bfaba2004bf7a42d779ea5659" title="systemScreenMessage" alt="" coords="527,259,685,285"/>
+<area shape="rect" id="node9" href="$system_8cpp.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="539,107,673,133"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="DirectSound::write" name="DirectSound::write">
+<area shape="rect" id="node2" href="$class_wav_writer.html#a2033f614c70ac3e59d07fb43ea26577a" title="WavWriter::AddSound" alt="" coords="196,5,347,32"/>
+<area shape="rect" id="node3" href="$class_wav_writer.html#a18a057d0c1901caa6b08f528bd6908a7" title="WavWriter::Open" alt="" coords="211,56,332,83"/>
+<area shape="rect" id="node5" href="$class_wav_writer.html#a04fe7187eebeff2831af0bc85470744d" title="WavWriter::SetFormat" alt="" coords="196,107,347,133"/>
+<area shape="rect" id="node6" href="$class_a_v_i_write.html#a7e14c1640c3c888c2b0a0b042c0d5b8f" title="AVIWrite::IsSoundAdded" alt="" coords="188,157,355,184"/>
+<area shape="rect" id="node7" href="$class_a_v_i_write.html#a8d864e6e2cea4147ffa6f24d69fbe339" title="AVIWrite::SetSoundFormat" alt="" coords="181,208,361,235"/>
+<area shape="rect" id="node8" href="$class_a_v_i_write.html#a63b7d54c048e517bbfad0ae2004d9861" title="AVIWrite::AddSound" alt="" coords="200,259,343,285"/>
+<area shape="rect" id="node9" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="212,309,331,336"/>
+<area shape="rect" id="node4" href="$_util_8cpp.html#a61ef2cbdb9d8b5c50004ebd1557439c7" title="utilPutDword" alt="" coords="409,81,504,108"/>
+</map>

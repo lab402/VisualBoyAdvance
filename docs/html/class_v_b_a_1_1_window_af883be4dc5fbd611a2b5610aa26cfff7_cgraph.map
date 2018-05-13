@@ -1,0 +1,7 @@
+<map id="VBA::Window::vOnSoundStatusToggled" name="VBA::Window::vOnSoundStatusToggled">
+<area shape="rect" id="node2" href="$gb_sound_8cpp.html#a2f94fcc352d566069ad4cee1e9a62a39" title="soundShutdown" alt="" coords="277,5,391,32"/>
+<area shape="rect" id="node3" href="$_sound_8cpp.html#ac659f56970310e671066599c629618b5" title="soundDisable" alt="" coords="284,56,384,83"/>
+<area shape="rect" id="node4" href="$gb_sound_8cpp.html#a48aac7ccc2439587be697d3f15fcd2e7" title="soundInit" alt="" coords="297,107,371,133"/>
+<area shape="rect" id="node5" href="$_sound_8cpp.html#aa3562ee185ac50bb560c6a034475bd18" title="soundEnable" alt="" coords="285,157,383,184"/>
+<area shape="rect" id="node6" href="$class_v_b_a_1_1_config_1_1_section.html#a57e1b95cbea40db71c093381beff4b0e" title="VBA::Config::Section\l::vSetKey" alt="" coords="261,209,407,250"/>
+</map>

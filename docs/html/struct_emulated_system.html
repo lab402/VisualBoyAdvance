@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_emulated_system.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,61 +92,286 @@ $(function() {
 <div class="title">EmulatedSystem 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_system_8h_source.html">System.h</a>&gt;</code></p>
+<div class="dynheader">
+EmulatedSystem에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_emulated_system__coll__graph.png" border="0" usemap="#_emulated_system_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a7ff4d7f593baf3463709ea72a6c4a20b"><td class="memItemLeft" align="right" valign="top"><a id="a7ff4d7f593baf3463709ea72a6c4a20b"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuMain</b> )(int)</td></tr>
+<tr class="memitem:a7ff4d7f593baf3463709ea72a6c4a20b"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a7ff4d7f593baf3463709ea72a6c4a20b">emuMain</a> )(<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)</td></tr>
 <tr class="separator:a7ff4d7f593baf3463709ea72a6c4a20b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae79a9b5e75ec8b74ededbbaceac2d630"><td class="memItemLeft" align="right" valign="top"><a id="ae79a9b5e75ec8b74ededbbaceac2d630"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuReset</b> )()</td></tr>
+<tr class="memitem:ae79a9b5e75ec8b74ededbbaceac2d630"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#ae79a9b5e75ec8b74ededbbaceac2d630">emuReset</a> )()</td></tr>
 <tr class="separator:ae79a9b5e75ec8b74ededbbaceac2d630"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad85b1185af3fdc35c666eb4d0eb1a431"><td class="memItemLeft" align="right" valign="top"><a id="ad85b1185af3fdc35c666eb4d0eb1a431"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuCleanUp</b> )()</td></tr>
+<tr class="memitem:ad85b1185af3fdc35c666eb4d0eb1a431"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#ad85b1185af3fdc35c666eb4d0eb1a431">emuCleanUp</a> )()</td></tr>
 <tr class="separator:ad85b1185af3fdc35c666eb4d0eb1a431"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cf069af2706aff38ac0ec1f5ae91a69"><td class="memItemLeft" align="right" valign="top"><a id="a8cf069af2706aff38ac0ec1f5ae91a69"></a>
-bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuReadBattery</b> )(const char *)</td></tr>
+<tr class="memitem:a8cf069af2706aff38ac0ec1f5ae91a69"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a8cf069af2706aff38ac0ec1f5ae91a69">emuReadBattery</a> )(<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td></tr>
 <tr class="separator:a8cf069af2706aff38ac0ec1f5ae91a69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95f2eb865a1b7866d8eeeb802d36434c"><td class="memItemLeft" align="right" valign="top"><a id="a95f2eb865a1b7866d8eeeb802d36434c"></a>
-bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuWriteBattery</b> )(const char *)</td></tr>
+<tr class="memitem:a95f2eb865a1b7866d8eeeb802d36434c"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a95f2eb865a1b7866d8eeeb802d36434c">emuWriteBattery</a> )(<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td></tr>
 <tr class="separator:a95f2eb865a1b7866d8eeeb802d36434c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ad8780083ad23c2cbe474fc570745ea"><td class="memItemLeft" align="right" valign="top"><a id="a1ad8780083ad23c2cbe474fc570745ea"></a>
-bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuReadState</b> )(const char *)</td></tr>
+<tr class="memitem:a1ad8780083ad23c2cbe474fc570745ea"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a1ad8780083ad23c2cbe474fc570745ea">emuReadState</a> )(<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td></tr>
 <tr class="separator:a1ad8780083ad23c2cbe474fc570745ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a649c6ceaabee941f263a32fa8a73a9c5"><td class="memItemLeft" align="right" valign="top"><a id="a649c6ceaabee941f263a32fa8a73a9c5"></a>
-bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuWriteState</b> )(const char *)</td></tr>
+<tr class="memitem:a649c6ceaabee941f263a32fa8a73a9c5"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a649c6ceaabee941f263a32fa8a73a9c5">emuWriteState</a> )(<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td></tr>
 <tr class="separator:a649c6ceaabee941f263a32fa8a73a9c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb808d20d5ba0fe3ffa5ec59c798105f"><td class="memItemLeft" align="right" valign="top"><a id="aeb808d20d5ba0fe3ffa5ec59c798105f"></a>
-bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuReadMemState</b> )(char *, int)</td></tr>
+<tr class="memitem:aeb808d20d5ba0fe3ffa5ec59c798105f"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#aeb808d20d5ba0fe3ffa5ec59c798105f">emuReadMemState</a> )(char *, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)</td></tr>
 <tr class="separator:aeb808d20d5ba0fe3ffa5ec59c798105f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91e29689742db5aa32a73c2f5698605a"><td class="memItemLeft" align="right" valign="top"><a id="a91e29689742db5aa32a73c2f5698605a"></a>
-bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuWriteMemState</b> )(char *, int)</td></tr>
+<tr class="memitem:a91e29689742db5aa32a73c2f5698605a"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a91e29689742db5aa32a73c2f5698605a">emuWriteMemState</a> )(char *, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)</td></tr>
 <tr class="separator:a91e29689742db5aa32a73c2f5698605a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a741364ed335ac65cc30c6749896274bc"><td class="memItemLeft" align="right" valign="top"><a id="a741364ed335ac65cc30c6749896274bc"></a>
-bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuWritePNG</b> )(const char *)</td></tr>
+<tr class="memitem:a741364ed335ac65cc30c6749896274bc"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a741364ed335ac65cc30c6749896274bc">emuWritePNG</a> )(<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td></tr>
 <tr class="separator:a741364ed335ac65cc30c6749896274bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3196ed548c01811a8c482294d68ec56b"><td class="memItemLeft" align="right" valign="top"><a id="a3196ed548c01811a8c482294d68ec56b"></a>
-bool(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuWriteBMP</b> )(const char *)</td></tr>
+<tr class="memitem:a3196ed548c01811a8c482294d68ec56b"><td class="memItemLeft" align="right" valign="top">bool(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a3196ed548c01811a8c482294d68ec56b">emuWriteBMP</a> )(<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td></tr>
 <tr class="separator:a3196ed548c01811a8c482294d68ec56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68f7f4e7c67eede19c75eb85ebe805c2"><td class="memItemLeft" align="right" valign="top"><a id="a68f7f4e7c67eede19c75eb85ebe805c2"></a>
-void(*&#160;</td><td class="memItemRight" valign="bottom"><b>emuUpdateCPSR</b> )()</td></tr>
+<tr class="memitem:a68f7f4e7c67eede19c75eb85ebe805c2"><td class="memItemLeft" align="right" valign="top">void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a68f7f4e7c67eede19c75eb85ebe805c2">emuUpdateCPSR</a> )()</td></tr>
 <tr class="separator:a68f7f4e7c67eede19c75eb85ebe805c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c90818d1108c9f7370a388419344362"><td class="memItemLeft" align="right" valign="top"><a id="a3c90818d1108c9f7370a388419344362"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>emuHasDebugger</b></td></tr>
+<tr class="memitem:a3c90818d1108c9f7370a388419344362"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a3c90818d1108c9f7370a388419344362">emuHasDebugger</a></td></tr>
 <tr class="separator:a3c90818d1108c9f7370a388419344362"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4241c0057d935ae757508f26be9b37ad"><td class="memItemLeft" align="right" valign="top"><a id="a4241c0057d935ae757508f26be9b37ad"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>emuCount</b></td></tr>
+<tr class="memitem:a4241c0057d935ae757508f26be9b37ad"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_emulated_system.html#a4241c0057d935ae757508f26be9b37ad">emuCount</a></td></tr>
 <tr class="separator:a4241c0057d935ae757508f26be9b37ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="ad85b1185af3fdc35c666eb4d0eb1a431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad85b1185af3fdc35c666eb4d0eb1a431">&#9670;&nbsp;</a></span>emuCleanUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* EmulatedSystem::emuCleanUp) ()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a4241c0057d935ae757508f26be9b37ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4241c0057d935ae757508f26be9b37ad">&#9670;&nbsp;</a></span>emuCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> EmulatedSystem::emuCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00077">77</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3c90818d1108c9f7370a388419344362"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c90818d1108c9f7370a388419344362">&#9670;&nbsp;</a></span>emuHasDebugger</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool EmulatedSystem::emuHasDebugger</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a7ff4d7f593baf3463709ea72a6c4a20b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ff4d7f593baf3463709ea72a6c4a20b">&#9670;&nbsp;</a></span>emuMain</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* EmulatedSystem::emuMain) (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8cf069af2706aff38ac0ec1f5ae91a69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf069af2706aff38ac0ec1f5ae91a69">&#9670;&nbsp;</a></span>emuReadBattery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* EmulatedSystem::emuReadBattery) (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aeb808d20d5ba0fe3ffa5ec59c798105f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb808d20d5ba0fe3ffa5ec59c798105f">&#9670;&nbsp;</a></span>emuReadMemState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* EmulatedSystem::emuReadMemState) (char *, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1ad8780083ad23c2cbe474fc570745ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ad8780083ad23c2cbe474fc570745ea">&#9670;&nbsp;</a></span>emuReadState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* EmulatedSystem::emuReadState) (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae79a9b5e75ec8b74ededbbaceac2d630"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae79a9b5e75ec8b74ededbbaceac2d630">&#9670;&nbsp;</a></span>emuReset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* EmulatedSystem::emuReset) ()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a68f7f4e7c67eede19c75eb85ebe805c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a68f7f4e7c67eede19c75eb85ebe805c2">&#9670;&nbsp;</a></span>emuUpdateCPSR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* EmulatedSystem::emuUpdateCPSR) ()</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a95f2eb865a1b7866d8eeeb802d36434c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95f2eb865a1b7866d8eeeb802d36434c">&#9670;&nbsp;</a></span>emuWriteBattery</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* EmulatedSystem::emuWriteBattery) (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3196ed548c01811a8c482294d68ec56b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3196ed548c01811a8c482294d68ec56b">&#9670;&nbsp;</a></span>emuWriteBMP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* EmulatedSystem::emuWriteBMP) (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a91e29689742db5aa32a73c2f5698605a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91e29689742db5aa32a73c2f5698605a">&#9670;&nbsp;</a></span>emuWriteMemState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* EmulatedSystem::emuWriteMemState) (char *, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a741364ed335ac65cc30c6749896274bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a741364ed335ac65cc30c6749896274bc">&#9670;&nbsp;</a></span>emuWritePNG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* EmulatedSystem::emuWritePNG) (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a649c6ceaabee941f263a32fa8a73a9c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a649c6ceaabee941f263a32fa8a73a9c5">&#9670;&nbsp;</a></span>emuWriteState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool(* EmulatedSystem::emuWriteState) (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_system_8h_source.html">System.h</a> 파일의 <a class="el" href="_system_8h_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/<a class="el" href="_system_8h_source.html">System.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="_system_8h_source.html">System.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_emulated_system.html">EmulatedSystem</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

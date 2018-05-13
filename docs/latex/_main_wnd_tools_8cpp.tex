@@ -1,0 +1,168 @@
+\hypertarget{_main_wnd_tools_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Main\+Wnd\+Tools.cpp 파일 참조}
+\label{_main_wnd_tools_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Main\+Wnd\+Tools.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Main\+Wnd\+Tools.\+cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Main\+Wnd.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Accel\+Editor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}A\+V\+I\+Write.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Disassemble.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}File\+Dlg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+B\+Disassemble.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+B\+Map\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+B\+Memory\+Viewer\+Dlg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+B\+Oam\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+B\+Palette\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+B\+Tile\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}G\+D\+B\+Connection.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}I\+O\+Viewer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Map\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Memory\+Viewer\+Dlg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Oam\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Palette\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Reg.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Tile\+View.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Wav\+Writer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Win\+Res\+Util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Globals.\+h\char`\"{}}\newline
+Main\+Wnd\+Tools.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_main_wnd_tools_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_main_wnd_tools_8cpp_ad472decd8f1a11c276d8bfb3740bd8ec}{remote\+Clean\+Up}} ()
+\item 
+void \mbox{\hyperlink{_main_wnd_tools_8cpp_ad14c1ac8c61f0b3d4bf2921ebe6d497b}{remote\+Set\+Sockets}} (\mbox{\hyperlink{remote_8cpp_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}}, \mbox{\hyperlink{remote_8cpp_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}})
+\item 
+void \mbox{\hyperlink{_main_wnd_tools_8cpp_ad0c87517314e3666bbeec33d320d8354}{tools\+Logging}} ()
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_main_wnd_tools_8cpp_af67e2df4c66ef114f4edb85c06810007}{debugger}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_main_wnd_tools_8cpp_af9cc36078b1b311753963297ae7f2a74}{emulating}}
+\item 
+\mbox{\hyperlink{remote_8cpp_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}} \mbox{\hyperlink{_main_wnd_tools_8cpp_a4fdb1b96f709fc5cdd1d013c1703e484}{remote\+Socket}}
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{_main_wnd_tools_8cpp_ad472decd8f1a11c276d8bfb3740bd8ec}\label{_main_wnd_tools_8cpp_ad472decd8f1a11c276d8bfb3740bd8ec}} 
+\index{Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}!remote\+Clean\+Up@{remote\+Clean\+Up}}
+\index{remote\+Clean\+Up@{remote\+Clean\+Up}!Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Clean\+Up()}{remoteCleanUp()}}
+{\footnotesize\ttfamily void remote\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 695 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+696 \{
+697   \textcolor{keywordflow}{if}(\mbox{\hyperlink{remote_8cpp_a8b47a61ef4a04597c16570307653bfaa}{remoteCleanUpFnc}})
+698     \mbox{\hyperlink{remote_8cpp_a8b47a61ef4a04597c16570307653bfaa}{remoteCleanUpFnc}}();
+699 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_main_wnd_tools_8cpp_ad472decd8f1a11c276d8bfb3740bd8ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_main_wnd_tools_8cpp_ad14c1ac8c61f0b3d4bf2921ebe6d497b}\label{_main_wnd_tools_8cpp_ad14c1ac8c61f0b3d4bf2921ebe6d497b}} 
+\index{Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}!remote\+Set\+Sockets@{remote\+Set\+Sockets}}
+\index{remote\+Set\+Sockets@{remote\+Set\+Sockets}!Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Set\+Sockets()}{remoteSetSockets()}}
+{\footnotesize\ttfamily void remote\+Set\+Sockets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{remote_8cpp_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}}}]{,  }\item[{\mbox{\hyperlink{remote_8cpp_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}}}]{ }\end{DoxyParamCaption})}
+
+
+
+remote.\+cpp 파일의 69 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+70 \{
+71   \mbox{\hyperlink{remote_8cpp_a4fdb1b96f709fc5cdd1d013c1703e484}{remoteSocket}} = r;
+72   \mbox{\hyperlink{remote_8cpp_ae2f4f304a4454ca21eebcde2538c9e25}{remoteListenSocket}} = l;
+73 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_main_wnd_tools_8cpp_ad14c1ac8c61f0b3d4bf2921ebe6d497b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_main_wnd_tools_8cpp_ad0c87517314e3666bbeec33d320d8354}\label{_main_wnd_tools_8cpp_ad0c87517314e3666bbeec33d320d8354}} 
+\index{Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}!tools\+Logging@{tools\+Logging}}
+\index{tools\+Logging@{tools\+Logging}!Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}}
+\subsubsection{\texorpdfstring{tools\+Logging()}{toolsLogging()}}
+{\footnotesize\ttfamily void tools\+Logging (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Logging.\+cpp 파일의 254 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+255 \{
+256   \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_logging_abbc7b283056098e51d9791175abbdc23}{Logging::instance}} == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+257     \mbox{\hyperlink{class_logging_abbc7b283056098e51d9791175abbdc23}{Logging::instance}} = \textcolor{keyword}{new} \mbox{\hyperlink{class_logging}{Logging}}();
+258     \mbox{\hyperlink{class_logging_abbc7b283056098e51d9791175abbdc23}{Logging::instance}}->Create(\mbox{\hyperlink{resource_8h_a22517b14940baee9389bfb8fcb3b0079}{IDD\_LOGGING}}, AfxGetApp()->m\_pMainWnd);
+259     \mbox{\hyperlink{class_logging_abbc7b283056098e51d9791175abbdc23}{Logging::instance}}->ShowWindow(SW\_SHOW);
+260   \} \textcolor{keywordflow}{else} \{
+261     \mbox{\hyperlink{class_logging_abbc7b283056098e51d9791175abbdc23}{Logging::instance}}->SetForegroundWindow();
+262   \}
+263 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{_main_wnd_tools_8cpp_ad0c87517314e3666bbeec33d320d8354_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{_main_wnd_tools_8cpp_af67e2df4c66ef114f4edb85c06810007}\label{_main_wnd_tools_8cpp_af67e2df4c66ef114f4edb85c06810007}} 
+\index{Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}!debugger@{debugger}}
+\index{debugger@{debugger}!Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}}
+\subsubsection{\texorpdfstring{debugger}{debugger}}
+{\footnotesize\ttfamily bool debugger}
+
+
+
+system.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_main_wnd_tools_8cpp_af9cc36078b1b311753963297ae7f2a74}\label{_main_wnd_tools_8cpp_af9cc36078b1b311753963297ae7f2a74}} 
+\index{Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}!emulating@{emulating}}
+\index{emulating@{emulating}!Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}}
+\subsubsection{\texorpdfstring{emulating}{emulating}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} emulating}
+
+
+
+system.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_main_wnd_tools_8cpp_a4fdb1b96f709fc5cdd1d013c1703e484}\label{_main_wnd_tools_8cpp_a4fdb1b96f709fc5cdd1d013c1703e484}} 
+\index{Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}!remote\+Socket@{remote\+Socket}}
+\index{remote\+Socket@{remote\+Socket}!Main\+Wnd\+Tools.\+cpp@{Main\+Wnd\+Tools.\+cpp}}
+\subsubsection{\texorpdfstring{remote\+Socket}{remoteSocket}}
+{\footnotesize\ttfamily \mbox{\hyperlink{remote_8cpp_aff55fe551a9992a54ec54621c524d0a4}{S\+O\+C\+K\+ET}} remote\+Socket}
+
+
+
+remote.\+cpp 파일의 58 번째 라인에서 정의되었습니다.
+

@@ -1,0 +1,14 @@
+<map id="MainWnd::OnFileClose" name="MainWnd::OnFileClose">
+<area shape="rect" id="node2" href="$class_main_wnd.html#afd3b77fc621f2b464369c472262689ab" title="MainWnd::winSaveCheatList\lDefault" alt="" coords="209,103,396,145"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#a653d11c15657ad15c35073eaf892519c" title="MainWnd::writeBatteryFile" alt="" coords="215,52,390,79"/>
+<area shape="rect" id="node10" href="$_sound_8cpp.html#a0716e7957671de324eeaa4ac1729d6b7" title="soundPause" alt="" coords="255,169,350,196"/>
+<area shape="rect" id="node12" href="$_main_wnd_file_8cpp.html#ad472decd8f1a11c276d8bfb3740bd8ec" title="remoteCleanUp" alt="" coords="247,220,358,247"/>
+<area shape="rect" id="node13" href="$system_8cpp.html#a154a393a2a25c1681855dc5fe4545b68" title="systemSetTitle" alt="" coords="248,271,357,297"/>
+<area shape="rect" id="node3" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="466,5,609,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="452,56,623,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="462,107,613,133"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#ab71924a5be91bd6193c6ea19ddd3d483" title="MainWnd::winSaveCheatList" alt="" coords="444,157,631,184"/>
+<area shape="rect" id="node7" href="$_cheats_8cpp.html#a516d83ca6755018dadf8d3ca0c1f24d0" title="cheatsSaveCheatList" alt="" coords="687,132,831,159"/>
+<area shape="rect" id="node8" href="$gb_cheats_8cpp.html#ab5f68ce87fbfb28074c6681a50637c0e" title="gbCheatsSaveCheatList" alt="" coords="679,183,839,209"/>
+<area shape="rect" id="node11" href="$system_8cpp.html#a247faeeb98d9b2a720aa9ceec44712ee" title="systemSoundPause" alt="" coords="468,208,607,235"/>
+</map>

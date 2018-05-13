@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_v_b_a_1_1_joypad_config.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,11 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><b>VBA</b></li><li class="navelem"><a class="el" href="class_v_b_a_1_1_joypad_config.html">JoypadConfig</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -73,71 +93,426 @@ $(function() {
 <div class="title">VBA::JoypadConfig 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a>&gt;</code></p>
+<div class="dynheader">
+VBA::JoypadConfig에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_joypad_config__coll__graph.png" border="0" usemap="#_v_b_a_1_1_joypad_config_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:afa304227fa214176c874619365ffc445"><td class="memItemLeft" align="right" valign="top"><a id="afa304227fa214176c874619365ffc445"></a>
-guint *&#160;</td><td class="memItemRight" valign="bottom"><b>puiAt</b> (int _iIndex)</td></tr>
+<tr class="memitem:afa304227fa214176c874619365ffc445"><td class="memItemLeft" align="right" valign="top">guint *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#afa304227fa214176c874619365ffc445">puiAt</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> _iIndex)</td></tr>
 <tr class="separator:afa304227fa214176c874619365ffc445"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a27d56b77293ce938b1a6437a384d625d"><td class="memItemLeft" align="right" valign="top"><a id="a27d56b77293ce938b1a6437a384d625d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>iFind</b> (guint _uiKeycode)</td></tr>
+<tr class="memitem:a27d56b77293ce938b1a6437a384d625d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#a27d56b77293ce938b1a6437a384d625d">iFind</a> (guint _uiKeycode)</td></tr>
 <tr class="separator:a27d56b77293ce938b1a6437a384d625d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9f282b555d910519ce2fa03d5c66dda"><td class="memItemLeft" align="right" valign="top"><a id="af9f282b555d910519ce2fa03d5c66dda"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>vSetDefault</b> ()</td></tr>
+<tr class="memitem:af9f282b555d910519ce2fa03d5c66dda"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#af9f282b555d910519ce2fa03d5c66dda">vSetDefault</a> ()</td></tr>
 <tr class="separator:af9f282b555d910519ce2fa03d5c66dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a959ba3641c366cf9acae6bf03990fcfb"><td class="memItemLeft" align="right" valign="top"><a id="a959ba3641c366cf9acae6bf03990fcfb"></a>
-<a class="el" href="class_v_b_a_1_1_keymap.html">Keymap</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>poCreateKeymap</b> () const</td></tr>
+<tr class="memitem:a959ba3641c366cf9acae6bf03990fcfb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_v_b_a_1_1_keymap.html">Keymap</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#a959ba3641c366cf9acae6bf03990fcfb">poCreateKeymap</a> () <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a></td></tr>
 <tr class="separator:a959ba3641c366cf9acae6bf03990fcfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a9cd889f0d74de1737b32e81b21a0f78d"><td class="memItemLeft" align="right" valign="top"><a id="a9cd889f0d74de1737b32e81b21a0f78d"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiUp</b></td></tr>
+<tr class="memitem:a9cd889f0d74de1737b32e81b21a0f78d"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#a9cd889f0d74de1737b32e81b21a0f78d">m_uiUp</a></td></tr>
 <tr class="separator:a9cd889f0d74de1737b32e81b21a0f78d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c414798f77a069295c251e9d8805452"><td class="memItemLeft" align="right" valign="top"><a id="a9c414798f77a069295c251e9d8805452"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiDown</b></td></tr>
+<tr class="memitem:a9c414798f77a069295c251e9d8805452"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#a9c414798f77a069295c251e9d8805452">m_uiDown</a></td></tr>
 <tr class="separator:a9c414798f77a069295c251e9d8805452"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af93165db21cb58f3b6df8f315d2471b5"><td class="memItemLeft" align="right" valign="top"><a id="af93165db21cb58f3b6df8f315d2471b5"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiLeft</b></td></tr>
+<tr class="memitem:af93165db21cb58f3b6df8f315d2471b5"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#af93165db21cb58f3b6df8f315d2471b5">m_uiLeft</a></td></tr>
 <tr class="separator:af93165db21cb58f3b6df8f315d2471b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc942773203f5ece2be3e4cb177d543f"><td class="memItemLeft" align="right" valign="top"><a id="abc942773203f5ece2be3e4cb177d543f"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiRight</b></td></tr>
+<tr class="memitem:abc942773203f5ece2be3e4cb177d543f"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#abc942773203f5ece2be3e4cb177d543f">m_uiRight</a></td></tr>
 <tr class="separator:abc942773203f5ece2be3e4cb177d543f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd5a199c5dccb3d838f181a620b1fd33"><td class="memItemLeft" align="right" valign="top"><a id="afd5a199c5dccb3d838f181a620b1fd33"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiA</b></td></tr>
+<tr class="memitem:afd5a199c5dccb3d838f181a620b1fd33"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#afd5a199c5dccb3d838f181a620b1fd33">m_uiA</a></td></tr>
 <tr class="separator:afd5a199c5dccb3d838f181a620b1fd33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08925fb801c679365dc7209cd68f9039"><td class="memItemLeft" align="right" valign="top"><a id="a08925fb801c679365dc7209cd68f9039"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiB</b></td></tr>
+<tr class="memitem:a08925fb801c679365dc7209cd68f9039"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#a08925fb801c679365dc7209cd68f9039">m_uiB</a></td></tr>
 <tr class="separator:a08925fb801c679365dc7209cd68f9039"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a381cc261054c37379e3e558af75f2ade"><td class="memItemLeft" align="right" valign="top"><a id="a381cc261054c37379e3e558af75f2ade"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiL</b></td></tr>
+<tr class="memitem:a381cc261054c37379e3e558af75f2ade"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#a381cc261054c37379e3e558af75f2ade">m_uiL</a></td></tr>
 <tr class="separator:a381cc261054c37379e3e558af75f2ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae78aa1e4661abe1501ae6d1dbc55db25"><td class="memItemLeft" align="right" valign="top"><a id="ae78aa1e4661abe1501ae6d1dbc55db25"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiR</b></td></tr>
+<tr class="memitem:ae78aa1e4661abe1501ae6d1dbc55db25"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#ae78aa1e4661abe1501ae6d1dbc55db25">m_uiR</a></td></tr>
 <tr class="separator:ae78aa1e4661abe1501ae6d1dbc55db25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed4863e16a6c6690449c953190954cd4"><td class="memItemLeft" align="right" valign="top"><a id="aed4863e16a6c6690449c953190954cd4"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiSelect</b></td></tr>
+<tr class="memitem:aed4863e16a6c6690449c953190954cd4"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#aed4863e16a6c6690449c953190954cd4">m_uiSelect</a></td></tr>
 <tr class="separator:aed4863e16a6c6690449c953190954cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67e697cb5ca51bc15837385ea6fdf2b3"><td class="memItemLeft" align="right" valign="top"><a id="a67e697cb5ca51bc15837385ea6fdf2b3"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiStart</b></td></tr>
+<tr class="memitem:a67e697cb5ca51bc15837385ea6fdf2b3"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#a67e697cb5ca51bc15837385ea6fdf2b3">m_uiStart</a></td></tr>
 <tr class="separator:a67e697cb5ca51bc15837385ea6fdf2b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb2ec2357b18f2e259097b8827f37e3e"><td class="memItemLeft" align="right" valign="top"><a id="acb2ec2357b18f2e259097b8827f37e3e"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiSpeed</b></td></tr>
+<tr class="memitem:acb2ec2357b18f2e259097b8827f37e3e"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#acb2ec2357b18f2e259097b8827f37e3e">m_uiSpeed</a></td></tr>
 <tr class="separator:acb2ec2357b18f2e259097b8827f37e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2322b0a1550314bab86db0231d260459"><td class="memItemLeft" align="right" valign="top"><a id="a2322b0a1550314bab86db0231d260459"></a>
-guint&#160;</td><td class="memItemRight" valign="bottom"><b>m_uiCapture</b></td></tr>
+<tr class="memitem:a2322b0a1550314bab86db0231d260459"><td class="memItemLeft" align="right" valign="top">guint&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_v_b_a_1_1_joypad_config.html#a2322b0a1550314bab86db0231d260459">m_uiCapture</a></td></tr>
 <tr class="separator:a2322b0a1550314bab86db0231d260459"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a27d56b77293ce938b1a6437a384d625d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27d56b77293ce938b1a6437a384d625d">&#9670;&nbsp;</a></span>iFind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> VBA::JoypadConfig::iFind </td>
+          <td>(</td>
+          <td class="paramtype">guint&#160;</td>
+          <td class="paramname"><em>_uiKeycode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8cpp_source.html">joypadconfig.cpp</a> 파일의 <a class="el" href="joypadconfig_8cpp_source.html#l00077">77</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;{</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordflow">for</span> (guint <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; 12; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  {</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">if</span> (*<a class="code" href="class_v_b_a_1_1_joypad_config.html#afa304227fa214176c874619365ffc445">puiAt</a>(<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>) == _uiKeycode)</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;  }</div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordflow">return</span> -1;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div><div class="ttc" id="class_v_b_a_1_1_joypad_config_html_afa304227fa214176c874619365ffc445"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#afa304227fa214176c874619365ffc445">VBA::JoypadConfig::puiAt</a></div><div class="ttdeci">guint * puiAt(int _iIndex)</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8cpp_source.html#l00028">joypadconfig.cpp:28</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01392">expr-lex.cpp:1392</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_joypad_config_a27d56b77293ce938b1a6437a384d625d_cgraph.png" border="0" usemap="#class_v_b_a_1_1_joypad_config_a27d56b77293ce938b1a6437a384d625d_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_joypad_config_a27d56b77293ce938b1a6437a384d625d_cgraph" id="class_v_b_a_1_1_joypad_config_a27d56b77293ce938b1a6437a384d625d_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_joypad_config.html#afa304227fa214176c874619365ffc445" title="VBA::JoypadConfig::\lpuiAt" alt="" coords="196,5,339,47"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_joypad_config_a27d56b77293ce938b1a6437a384d625d_icgraph.png" border="0" usemap="#class_v_b_a_1_1_joypad_config_a27d56b77293ce938b1a6437a384d625d_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_joypad_config_a27d56b77293ce938b1a6437a384d625d_icgraph" id="class_v_b_a_1_1_joypad_config_a27d56b77293ce938b1a6437a384d625d_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_joypad_config_dialog.html#afc9f3c90aa8e8f09811c470f97ef3993" title="VBA::JoypadConfigDialog\l::on_key_press_event" alt="" coords="196,5,367,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a959ba3641c366cf9acae6bf03990fcfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a959ba3641c366cf9acae6bf03990fcfb">&#9670;&nbsp;</a></span>poCreateKeymap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_v_b_a_1_1_keymap.html">Keymap</a> * VBA::JoypadConfig::poCreateKeymap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8cpp_source.html">joypadconfig.cpp</a> 파일의 <a class="el" href="joypadconfig_8cpp_source.html#l00120">120</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  Keymap * poKeymap = <span class="keyword">new</span> Keymap();</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#a9cd889f0d74de1737b32e81b21a0f78d">m_uiUp</a>,      <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750ccaf15bb7d949826d0445e598c6f57e892c">KeyUp</a>      );</div><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#a9c414798f77a069295c251e9d8805452">m_uiDown</a>,    <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca147b673477c3629369ea4247f5c0a091">KeyDown</a>    );</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#af93165db21cb58f3b6df8f315d2471b5">m_uiLeft</a>,    <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca2ee0df348225925299f7a29f13eb4407">KeyLeft</a>    );</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#abc942773203f5ece2be3e4cb177d543f">m_uiRight</a>,   <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca618bcf8c40480e6e7182c068cb96f098">KeyRight</a>   );</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#afd5a199c5dccb3d838f181a620b1fd33">m_uiA</a>,       <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca5b4c8a5e9be54212ade9ad3f13be441b">KeyA</a>       );</div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#a08925fb801c679365dc7209cd68f9039">m_uiB</a>,       <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750ccafdef64d5c7454882d4682ac464867600">KeyB</a>       );</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#a381cc261054c37379e3e558af75f2ade">m_uiL</a>,       <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca3748b8c565a3c267316531f7a9f783b4">KeyL</a>       );</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#ae78aa1e4661abe1501ae6d1dbc55db25">m_uiR</a>,       <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca3a8e26b65f48c10474336241f9c546c7">KeyR</a>       );</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#aed4863e16a6c6690449c953190954cd4">m_uiSelect</a>,  <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca0f81c48b83d318b91fbfb66725306366">KeySelect</a>  );</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#a67e697cb5ca51bc15837385ea6fdf2b3">m_uiStart</a>,   <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750ccafe5ae238d7a06f0004d8ae863f67452f">KeyStart</a>   );</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#acb2ec2357b18f2e259097b8827f37e3e">m_uiSpeed</a>,   <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca885e1eaec5c49b6b0390828126f43a1d">KeySpeed</a>   );</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  poKeymap-&gt;vRegister(<a class="code" href="class_v_b_a_1_1_joypad_config.html#a2322b0a1550314bab86db0231d260459">m_uiCapture</a>, <a class="code" href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca526bd10ceb184276281299f7ebcc90c8">KeyCapture</a> );</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">return</span> poKeymap;</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750ccafdef64d5c7454882d4682ac464867600"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750ccafdef64d5c7454882d4682ac464867600">VBA::KeyB</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00033">input.h:33</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca618bcf8c40480e6e7182c068cb96f098"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca618bcf8c40480e6e7182c068cb96f098">VBA::KeyRight</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00036">input.h:36</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_afd5a199c5dccb3d838f181a620b1fd33"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#afd5a199c5dccb3d838f181a620b1fd33">VBA::JoypadConfig::m_uiA</a></div><div class="ttdeci">guint m_uiA</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00044">joypadconfig.h:44</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca147b673477c3629369ea4247f5c0a091"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca147b673477c3629369ea4247f5c0a091">VBA::KeyDown</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00039">input.h:39</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca3748b8c565a3c267316531f7a9f783b4"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca3748b8c565a3c267316531f7a9f783b4">VBA::KeyL</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00041">input.h:41</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a9c414798f77a069295c251e9d8805452"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a9c414798f77a069295c251e9d8805452">VBA::JoypadConfig::m_uiDown</a></div><div class="ttdeci">guint m_uiDown</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00041">joypadconfig.h:41</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca885e1eaec5c49b6b0390828126f43a1d"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca885e1eaec5c49b6b0390828126f43a1d">VBA::KeySpeed</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00043">input.h:43</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca5b4c8a5e9be54212ade9ad3f13be441b"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca5b4c8a5e9be54212ade9ad3f13be441b">VBA::KeyA</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00032">input.h:32</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a381cc261054c37379e3e558af75f2ade"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a381cc261054c37379e3e558af75f2ade">VBA::JoypadConfig::m_uiL</a></div><div class="ttdeci">guint m_uiL</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00046">joypadconfig.h:46</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_ae78aa1e4661abe1501ae6d1dbc55db25"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#ae78aa1e4661abe1501ae6d1dbc55db25">VBA::JoypadConfig::m_uiR</a></div><div class="ttdeci">guint m_uiR</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00047">joypadconfig.h:47</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca3a8e26b65f48c10474336241f9c546c7"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca3a8e26b65f48c10474336241f9c546c7">VBA::KeyR</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00040">input.h:40</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_abc942773203f5ece2be3e4cb177d543f"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#abc942773203f5ece2be3e4cb177d543f">VBA::JoypadConfig::m_uiRight</a></div><div class="ttdeci">guint m_uiRight</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00043">joypadconfig.h:43</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a08925fb801c679365dc7209cd68f9039"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a08925fb801c679365dc7209cd68f9039">VBA::JoypadConfig::m_uiB</a></div><div class="ttdeci">guint m_uiB</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00045">joypadconfig.h:45</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca2ee0df348225925299f7a29f13eb4407"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca2ee0df348225925299f7a29f13eb4407">VBA::KeyLeft</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00037">input.h:37</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a67e697cb5ca51bc15837385ea6fdf2b3"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a67e697cb5ca51bc15837385ea6fdf2b3">VBA::JoypadConfig::m_uiStart</a></div><div class="ttdeci">guint m_uiStart</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00049">joypadconfig.h:49</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750ccaf15bb7d949826d0445e598c6f57e892c"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750ccaf15bb7d949826d0445e598c6f57e892c">VBA::KeyUp</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00038">input.h:38</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca526bd10ceb184276281299f7ebcc90c8"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca526bd10ceb184276281299f7ebcc90c8">VBA::KeyCapture</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00044">input.h:44</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_aed4863e16a6c6690449c953190954cd4"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#aed4863e16a6c6690449c953190954cd4">VBA::JoypadConfig::m_uiSelect</a></div><div class="ttdeci">guint m_uiSelect</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00048">joypadconfig.h:48</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_acb2ec2357b18f2e259097b8827f37e3e"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#acb2ec2357b18f2e259097b8827f37e3e">VBA::JoypadConfig::m_uiSpeed</a></div><div class="ttdeci">guint m_uiSpeed</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00050">joypadconfig.h:50</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_af93165db21cb58f3b6df8f315d2471b5"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#af93165db21cb58f3b6df8f315d2471b5">VBA::JoypadConfig::m_uiLeft</a></div><div class="ttdeci">guint m_uiLeft</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00042">joypadconfig.h:42</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a9cd889f0d74de1737b32e81b21a0f78d"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a9cd889f0d74de1737b32e81b21a0f78d">VBA::JoypadConfig::m_uiUp</a></div><div class="ttdeci">guint m_uiUp</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00040">joypadconfig.h:40</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a2322b0a1550314bab86db0231d260459"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a2322b0a1550314bab86db0231d260459">VBA::JoypadConfig::m_uiCapture</a></div><div class="ttdeci">guint m_uiCapture</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00051">joypadconfig.h:51</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750ccafe5ae238d7a06f0004d8ae863f67452f"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750ccafe5ae238d7a06f0004d8ae863f67452f">VBA::KeyStart</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00035">input.h:35</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a5839ea5408735bd8ce070c4c245750cca0f81c48b83d318b91fbfb66725306366"><div class="ttname"><a href="class_v_b_a.html#a5839ea5408735bd8ce070c4c245750cca0f81c48b83d318b91fbfb66725306366">VBA::KeySelect</a></div><div class="ttdef"><b>Definition:</b> <a href="gtk_2input_8h_source.html#l00034">input.h:34</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_joypad_config_a959ba3641c366cf9acae6bf03990fcfb_cgraph.png" border="0" usemap="#class_v_b_a_1_1_joypad_config_a959ba3641c366cf9acae6bf03990fcfb_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_joypad_config_a959ba3641c366cf9acae6bf03990fcfb_cgraph" id="class_v_b_a_1_1_joypad_config_a959ba3641c366cf9acae6bf03990fcfb_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_keymap.html#a016d13905248b39677f9be0382616d79" title="VBA::Keymap::vRegister" alt="" coords="196,13,363,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="afa304227fa214176c874619365ffc445"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa304227fa214176c874619365ffc445">&#9670;&nbsp;</a></span>puiAt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint * VBA::JoypadConfig::puiAt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td>
+          <td class="paramname"><em>_iIndex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8cpp_source.html">joypadconfig.cpp</a> 파일의 <a class="el" href="joypadconfig_8cpp_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  guint * puiMember;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordflow">switch</span> (_iIndex)</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordflow">case</span> 0:</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#a9cd889f0d74de1737b32e81b21a0f78d">m_uiUp</a>;</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordflow">case</span> 1:</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#a9c414798f77a069295c251e9d8805452">m_uiDown</a>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keywordflow">case</span> 2:</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#af93165db21cb58f3b6df8f315d2471b5">m_uiLeft</a>;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keywordflow">case</span> 3:</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#abc942773203f5ece2be3e4cb177d543f">m_uiRight</a>;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordflow">case</span> 4:</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#afd5a199c5dccb3d838f181a620b1fd33">m_uiA</a>;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordflow">case</span> 5:</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#a08925fb801c679365dc7209cd68f9039">m_uiB</a>;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <span class="keywordflow">case</span> 6:</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#a381cc261054c37379e3e558af75f2ade">m_uiL</a>;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordflow">case</span> 7:</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#ae78aa1e4661abe1501ae6d1dbc55db25">m_uiR</a>;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordflow">case</span> 8:</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#aed4863e16a6c6690449c953190954cd4">m_uiSelect</a>;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordflow">case</span> 9:</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#a67e697cb5ca51bc15837385ea6fdf2b3">m_uiStart</a>;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordflow">case</span> 10:</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#acb2ec2357b18f2e259097b8827f37e3e">m_uiSpeed</a>;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordflow">case</span> 11:</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    puiMember = &amp;<a class="code" href="class_v_b_a_1_1_joypad_config.html#a2322b0a1550314bab86db0231d260459">m_uiCapture</a>;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keywordflow">default</span>:</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    puiMember = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  }</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span> puiMember;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div><div class="ttc" id="class_v_b_a_1_1_joypad_config_html_afd5a199c5dccb3d838f181a620b1fd33"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#afd5a199c5dccb3d838f181a620b1fd33">VBA::JoypadConfig::m_uiA</a></div><div class="ttdeci">guint m_uiA</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00044">joypadconfig.h:44</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a9c414798f77a069295c251e9d8805452"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a9c414798f77a069295c251e9d8805452">VBA::JoypadConfig::m_uiDown</a></div><div class="ttdeci">guint m_uiDown</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00041">joypadconfig.h:41</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a381cc261054c37379e3e558af75f2ade"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a381cc261054c37379e3e558af75f2ade">VBA::JoypadConfig::m_uiL</a></div><div class="ttdeci">guint m_uiL</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00046">joypadconfig.h:46</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_ae78aa1e4661abe1501ae6d1dbc55db25"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#ae78aa1e4661abe1501ae6d1dbc55db25">VBA::JoypadConfig::m_uiR</a></div><div class="ttdeci">guint m_uiR</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00047">joypadconfig.h:47</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_abc942773203f5ece2be3e4cb177d543f"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#abc942773203f5ece2be3e4cb177d543f">VBA::JoypadConfig::m_uiRight</a></div><div class="ttdeci">guint m_uiRight</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00043">joypadconfig.h:43</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a08925fb801c679365dc7209cd68f9039"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a08925fb801c679365dc7209cd68f9039">VBA::JoypadConfig::m_uiB</a></div><div class="ttdeci">guint m_uiB</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00045">joypadconfig.h:45</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a67e697cb5ca51bc15837385ea6fdf2b3"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a67e697cb5ca51bc15837385ea6fdf2b3">VBA::JoypadConfig::m_uiStart</a></div><div class="ttdeci">guint m_uiStart</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00049">joypadconfig.h:49</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_aed4863e16a6c6690449c953190954cd4"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#aed4863e16a6c6690449c953190954cd4">VBA::JoypadConfig::m_uiSelect</a></div><div class="ttdeci">guint m_uiSelect</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00048">joypadconfig.h:48</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_acb2ec2357b18f2e259097b8827f37e3e"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#acb2ec2357b18f2e259097b8827f37e3e">VBA::JoypadConfig::m_uiSpeed</a></div><div class="ttdeci">guint m_uiSpeed</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00050">joypadconfig.h:50</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_af93165db21cb58f3b6df8f315d2471b5"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#af93165db21cb58f3b6df8f315d2471b5">VBA::JoypadConfig::m_uiLeft</a></div><div class="ttdeci">guint m_uiLeft</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00042">joypadconfig.h:42</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a9cd889f0d74de1737b32e81b21a0f78d"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a9cd889f0d74de1737b32e81b21a0f78d">VBA::JoypadConfig::m_uiUp</a></div><div class="ttdeci">guint m_uiUp</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00040">joypadconfig.h:40</a></div></div>
+<div class="ttc" id="class_v_b_a_1_1_joypad_config_html_a2322b0a1550314bab86db0231d260459"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#a2322b0a1550314bab86db0231d260459">VBA::JoypadConfig::m_uiCapture</a></div><div class="ttdeci">guint m_uiCapture</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8h_source.html#l00051">joypadconfig.h:51</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_joypad_config_afa304227fa214176c874619365ffc445_icgraph.png" border="0" usemap="#class_v_b_a_1_1_joypad_config_afa304227fa214176c874619365ffc445_icgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_joypad_config_afa304227fa214176c874619365ffc445_icgraph" id="class_v_b_a_1_1_joypad_config_afa304227fa214176c874619365ffc445_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_joypad_config.html#a27d56b77293ce938b1a6437a384d625d" title="VBA::JoypadConfig::\liFind" alt="" coords="210,5,353,47"/>
+<area shape="rect" id="node3" href="class_v_b_a_1_1_joypad_config_dialog.html#afc9f3c90aa8e8f09811c470f97ef3993" title="VBA::JoypadConfigDialog\l::on_key_press_event" alt="" coords="415,35,585,76"/>
+<area shape="rect" id="node4" href="class_v_b_a_1_1_joypad_config.html#af9f282b555d910519ce2fa03d5c66dda" title="VBA::JoypadConfig::\lvSetDefault" alt="" coords="210,123,353,164"/>
+<area shape="rect" id="node5" href="class_v_b_a_1_1_joypad_config_dialog.html#a8be1420a4a3feee2e71bde31a2d7932d" title="VBA::JoypadConfigDialog\l::bOnEntryFocusIn" alt="" coords="196,188,367,229"/>
+<area shape="rect" id="node6" href="class_v_b_a_1_1_joypad_config_dialog.html#a056ae385dbbaa2eef8e8b8913da72b79" title="VBA::JoypadConfigDialog\l::JoypadConfigDialog" alt="" coords="415,188,585,229"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af9f282b555d910519ce2fa03d5c66dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9f282b555d910519ce2fa03d5c66dda">&#9670;&nbsp;</a></span>vSetDefault()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VBA::JoypadConfig::vSetDefault </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8cpp_source.html">joypadconfig.cpp</a> 파일의 <a class="el" href="joypadconfig_8cpp_source.html#l00090">90</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  guint auiKeyval[] =</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  {</div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    GDK_Up, GDK_Down, GDK_Left, GDK_Right,</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    GDK_z, GDK_x, GDK_a, GDK_s,</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    GDK_BackSpace, GDK_Return,</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    GDK_space, GDK_F12</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  };</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="keywordflow">for</span> (guint <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; G_N_ELEMENTS(auiKeyval); <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  {</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    GdkKeymapKey * pstKeys;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">int</span> iKeys;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordflow">if</span> (gdk_keymap_get_entries_for_keyval(gdk_keymap_get_default(),</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                          auiKeyval[<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>],</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                          &amp;pstKeys,</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                          &amp;iKeys))</div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;      *<a class="code" href="class_v_b_a_1_1_joypad_config.html#afa304227fa214176c874619365ffc445">puiAt</a>(<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>) = pstKeys[0].keycode;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      g_free(pstKeys);</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    {</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      *<a class="code" href="class_v_b_a_1_1_joypad_config.html#afa304227fa214176c874619365ffc445">puiAt</a>(<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>) = 0;</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    }</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;  }</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div><div class="ttc" id="class_v_b_a_1_1_joypad_config_html_afa304227fa214176c874619365ffc445"><div class="ttname"><a href="class_v_b_a_1_1_joypad_config.html#afa304227fa214176c874619365ffc445">VBA::JoypadConfig::puiAt</a></div><div class="ttdeci">guint * puiAt(int _iIndex)</div><div class="ttdef"><b>Definition:</b> <a href="joypadconfig_8cpp_source.html#l00028">joypadconfig.cpp:28</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01392">expr-lex.cpp:1392</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_v_b_a_1_1_joypad_config_af9f282b555d910519ce2fa03d5c66dda_cgraph.png" border="0" usemap="#class_v_b_a_1_1_joypad_config_af9f282b555d910519ce2fa03d5c66dda_cgraph" alt=""/></div>
+<map name="class_v_b_a_1_1_joypad_config_af9f282b555d910519ce2fa03d5c66dda_cgraph" id="class_v_b_a_1_1_joypad_config_af9f282b555d910519ce2fa03d5c66dda_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a_1_1_joypad_config.html#afa304227fa214176c874619365ffc445" title="VBA::JoypadConfig::\lpuiAt" alt="" coords="196,5,339,47"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="afd5a199c5dccb3d838f181a620b1fd33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd5a199c5dccb3d838f181a620b1fd33">&#9670;&nbsp;</a></span>m_uiA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiA</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00044">44</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a08925fb801c679365dc7209cd68f9039"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08925fb801c679365dc7209cd68f9039">&#9670;&nbsp;</a></span>m_uiB</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiB</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a2322b0a1550314bab86db0231d260459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2322b0a1550314bab86db0231d260459">&#9670;&nbsp;</a></span>m_uiCapture</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiCapture</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9c414798f77a069295c251e9d8805452"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c414798f77a069295c251e9d8805452">&#9670;&nbsp;</a></span>m_uiDown</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiDown</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a381cc261054c37379e3e558af75f2ade"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a381cc261054c37379e3e558af75f2ade">&#9670;&nbsp;</a></span>m_uiL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af93165db21cb58f3b6df8f315d2471b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af93165db21cb58f3b6df8f315d2471b5">&#9670;&nbsp;</a></span>m_uiLeft</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiLeft</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae78aa1e4661abe1501ae6d1dbc55db25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78aa1e4661abe1501ae6d1dbc55db25">&#9670;&nbsp;</a></span>m_uiR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiR</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00047">47</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="abc942773203f5ece2be3e4cb177d543f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc942773203f5ece2be3e4cb177d543f">&#9670;&nbsp;</a></span>m_uiRight</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiRight</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aed4863e16a6c6690449c953190954cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed4863e16a6c6690449c953190954cd4">&#9670;&nbsp;</a></span>m_uiSelect</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiSelect</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="acb2ec2357b18f2e259097b8827f37e3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2ec2357b18f2e259097b8827f37e3e">&#9670;&nbsp;</a></span>m_uiSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiSpeed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a67e697cb5ca51bc15837385ea6fdf2b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e697cb5ca51bc15837385ea6fdf2b3">&#9670;&nbsp;</a></span>m_uiStart</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiStart</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9cd889f0d74de1737b32e81b21a0f78d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cd889f0d74de1737b32e81b21a0f78d">&#9670;&nbsp;</a></span>m_uiUp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">guint VBA::JoypadConfig::m_uiUp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a> 파일의 <a class="el" href="joypadconfig_8h_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/gtk/<a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a></li>
-<li>src/gtk/joypadconfig.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/<a class="el" href="joypadconfig_8h_source.html">joypadconfig.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gtk/<a class="el" href="joypadconfig_8cpp_source.html">joypadconfig.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespace_v_b_a.html">VBA</a></li><li class="navelem"><a class="el" href="class_v_b_a_1_1_joypad_config.html">JoypadConfig</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

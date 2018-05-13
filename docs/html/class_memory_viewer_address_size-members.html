@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_memory_viewer_address_size.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">MemoryViewerAddressSize 멤버 목록</div>  </div>
@@ -68,24 +92,27 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getAddress</b>() (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getSize</b>() (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_address</b> (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_size</b> (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>MemoryViewerAddressSize</b>(u32 a=0xffffff, int s=-1, CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnCancel</b>() (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnOk</b>() (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setAddress</b>(u32 a) (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setSize</b>(int s) (다음에서 정의됨 : <a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a>)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#a5b80a5682982a31e25469c1ba9d75ee8">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#a3d31492056e5b255aa882f7732671c4c">getAddress</a>()</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#ade3cfceb89cd35954e57d10dba882eb1">getSize</a>()</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#a20a7438413cb28be1f8a838f6f07dd1aaf952aee8c8eac701dc1be256e60f4753">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#a91998e945a9ebfc2dd2636f75e89d974">m_address</a></td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#a02bf9c56d2fe4c0edb66f6f26323378e">m_size</a></td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#a84ec64f3339841082887f5566ce68d19">MemoryViewerAddressSize</a>(u32 a=0xffffff, int s=-1, CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#af05210504fe10d13c328d7d953da28d8">OnCancel</a>()</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#a986a62d4477f5c2b6d227386803a6b5e">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#acc7b79baafb3ae6fad9b4ca0b12aa34f">OnOk</a>()</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#adb284f02039e70a6b0c44e0bacf9feff">setAddress</a>(u32 a)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_memory_viewer_address_size.html#a20e77ae46d654fc217b381d6d8aac00d">setSize</a>(int s)</td><td class="entry"><a class="el" href="class_memory_viewer_address_size.html">MemoryViewerAddressSize</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

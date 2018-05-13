@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_i_update_listener.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -68,43 +92,91 @@ $(function() {
 <div class="title">IUpdateListener 클래스 참조<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_i_update_8h_source.html">IUpdate.h</a>&gt;</code></p>
 <div class="dynheader">
 IUpdateListener에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_i_update_listener.png" usemap="#IUpdateListener_map" alt=""/>
-  <map id="IUpdateListener_map" name="IUpdateListener_map">
-<area href="class_disassemble.html" alt="Disassemble" shape="rect" coords="144,56,278,80"/>
-<area href="class_g_b_disassemble.html" alt="GBDisassemble" shape="rect" coords="144,112,278,136"/>
-<area href="class_g_b_map_view.html" alt="GBMapView" shape="rect" coords="144,168,278,192"/>
-<area href="class_g_b_memory_viewer_dlg.html" alt="GBMemoryViewerDlg" shape="rect" coords="144,224,278,248"/>
-<area href="class_g_b_oam_view.html" alt="GBOamView" shape="rect" coords="144,280,278,304"/>
-<area href="class_g_b_palette_view.html" alt="GBPaletteView" shape="rect" coords="144,336,278,360"/>
-<area href="class_g_b_tile_view.html" alt="GBTileView" shape="rect" coords="144,392,278,416"/>
-<area href="class_i_o_viewer.html" alt="IOViewer" shape="rect" coords="144,448,278,472"/>
-<area href="class_map_view.html" alt="MapView" shape="rect" coords="144,504,278,528"/>
-<area href="class_memory_viewer_dlg.html" alt="MemoryViewerDlg" shape="rect" coords="144,560,278,584"/>
-<area href="class_oam_view.html" alt="OamView" shape="rect" coords="144,616,278,640"/>
-<area href="class_palette_view.html" alt="PaletteView" shape="rect" coords="144,672,278,696"/>
-<area href="class_tile_view.html" alt="TileView" shape="rect" coords="144,728,278,752"/>
+<div class="center"><img src="class_i_update_listener__inherit__graph.png" border="0" usemap="#_i_update_listener_inherit__map" alt="Inheritance graph"/></div>
+<map name="_i_update_listener_inherit__map" id="_i_update_listener_inherit__map">
+<area shape="rect" id="node2" href="class_disassemble.html" title="{Disassemble\n|+ count\l+ autoUpdate\l+ address\l+ m_address\l+ m_list\l+ m_c\l+ m_f\l+ m_i\l+ m_n\l+ m_t\l+ m_v\l+ m_z\l+ mode\l|+ update()\l+ refresh()\l+ Disassemble()\l# DoDataExchange()\l# PostNcDestroy()\l# OnAutoUpdate()\l# OnAutomatic()\l# OnArm()\l# OnClose()\l# OnGo()\l# OnGopc()\l# OnNext()\l# OnRefresh()\l# OnThumb()\l# OnInitDialog()\l# OnVScroll()\l}" alt="" coords="5,160,148,633"/>
+<area shape="rect" id="node3" href="class_g_b_disassemble.html" title="{GBDisassemble\n|+ lastAddress\l+ count\l+ autoUpdate\l+ address\l+ m_address\l+ m_list\l+ m_c\l+ m_h\l+ m_n\l+ m_z\l|+ refresh()\l+ GBDisassemble()\l+ update()\l# DoDataExchange()\l# PostNcDestroy()\l# OnClose()\l# OnRefresh()\l# OnNext()\l# OnGo()\l# OnGopc()\l# OnAutoUpdate()\l# OnInitDialog()\l# OnVScroll()\l}" alt="" coords="172,204,315,589"/>
+<area shape="rect" id="node4" href="class_g_b_map_view.html" title="{GBMapView\n||+ OnColInfo()\l+ OnMapInfo()\l+ GetClickAddress()\l+ update()\l+ paint()\l+ render()\l+ savePNG()\l+ saveBMP()\l+ ~GBMapView()\l+ GBMapView()\l# DoDataExchange()\l# PostNcDestroy()\l# OnSave()\l# OnRefresh()\l# OnInitDialog()\l# OnBg0()\l# OnBg1()\l# OnBank0()\l# OnBank1()\l# OnStretch()\l# OnAutoUpdate()\l# OnClose()\l}" alt="" coords="339,204,481,589"/>
+<area shape="rect" id="node5" href="class_g_b_memory_viewer_dlg.html" title="{GBMemoryViewerDlg\n|+ m_current\l+ m_address\l+ m_addresses\l+ m_size\l|+ setCurrentAddress()\l+ GBMemoryViewerDlg()\l+ update()\l# DoDataExchange()\l# PostNcDestroy()\l# OnInitDialog()\l# OnClose()\l# OnRefresh()\l# On8Bit()\l# On16Bit()\l# On32Bit()\l# OnAutoUpdate()\l# OnGo()\l# OnSelchangeAddresses()\l# OnSave()\l# OnLoad()\l}" alt="" coords="506,226,687,567"/>
+<area shape="rect" id="node6" href="class_g_b_oam_view.html" title="{GBOamView\n|+ m_sprite\l+ m_stretch\l|+ updateScrollInfo()\l+ save()\l+ savePNG()\l+ saveBMP()\l+ render()\l+ setAttributes()\l+ paint()\l+ ~GBOamView()\l+ GBOamView()\l+ OnColInfo()\l+ OnMapInfo()\l+ update()\l# DoDataExchange()\l# PostNcDestroy()\l# OnInitDialog()\l# OnStretch()\l# OnAutoUpdate()\l# OnChangeSprite()\l# OnClose()\l# OnHScroll()\l}" alt="" coords="712,211,855,582"/>
+<area shape="rect" id="node7" href="class_g_b_palette_view.html" title="{GBPaletteView\n||+ save()\l+ GBPaletteView()\l+ ~GBPaletteView()\l# DoDataExchange()\l# PostNcDestroy()\l# update()\l# OnPalInfo()\l# OnInitDialog()\l# OnSaveBg()\l# OnSaveObj()\l# OnRefresh2()\l# OnAutoUpdate()\l# OnClose()\l}" alt="" coords="879,270,1021,523"/>
+<area shape="rect" id="node8" href="class_g_b_tile_view.html" title="{GBTileView\n|+ m_slider\l+ m_charBase\l+ m_bank\l+ m_stretch\l|+ paint()\l+ render()\l+ renderTile()\l+ savePNG()\l+ saveBMP()\l+ GBTileView()\l+ ~GBTileView()\l+ update()\l# DoDataExchange()\l# PostNcDestroy()\l# OnMapInfo()\l# OnColInfo()\l# OnSave()\l# OnInitDialog()\l# OnClose()\l# OnAutoUpdate()\l# OnCharbase0()\l# OnCharbase1()\l# OnBank0()\l# OnBank1()\l# OnStretch()\l# OnHScroll()\l}" alt="" coords="1045,182,1188,611"/>
+<area shape="rect" id="node9" href="class_i_o_viewer.html" title="{IOViewer\n|+ autoUpdate\l+ selected\l+ m_value\l+ m_address\l|+ update()\l+ bitChange()\l+ IOViewer()\l# DoDataExchange()\l# PostNcDestroy()\l# OnClose()\l# OnRefresh()\l# OnAutoUpdate()\l# OnSelchangeAddresses()\l# OnInitDialog()\l# OnApply()\l}" alt="" coords="1213,263,1394,531"/>
+<area shape="rect" id="node10" href="class_map_view.html" title="{MapView\n|+ m_numcolors\l+ m_mode\l+ m_overflow\l+ m_mosaic\l+ m_priority\l+ m_dim\l+ m_charbase\l+ m_mapbase\l|+ savePNG()\l+ saveBMP()\l+ OnColInfo()\l+ OnMapInfo()\l+ GetClickAddress()\l+ GetTextClickAddress()\l+ update()\l+ enableButtons()\l+ paint()\l+ renderMode5()\l그리고 9개 더...\l# DoDataExchange()\l# PostNcDestroy()\l# OnRefresh()\l# OnInitDialog()\l# OnFrame0()\l# OnFrame1()\l# OnBg0()\l# OnBg1()\l# OnBg2()\l# OnBg3()\l# OnStretch()\l# OnAutoUpdate()\l# OnClose()\l# OnSave()\l}" alt="" coords="1418,131,1583,663"/>
+<area shape="rect" id="node11" href="class_memory_viewer_dlg.html" title="{MemoryViewerDlg\n|+ autoUpdate\l+ m_current\l+ m_address\l+ m_addresses\l+ m_size\l|+ setCurrentAddress()\l+ update()\l+ MemoryViewerDlg()\l# DoDataExchange()\l# PostNcDestroy()\l# OnInitDialog()\l# OnClose()\l# OnRefresh()\l# On8Bit()\l# On16Bit()\l# On32Bit()\l# OnAutoUpdate()\l# OnGo()\l# OnSelchangeAddresses()\l# OnSave()\l# OnLoad()\l}" alt="" coords="1607,219,1789,575"/>
+<area shape="rect" id="node12" href="class_oam_view.html" title="{OamView\n|+ m_sprite\l+ m_stretch\l|+ updateScrollInfo()\l+ OnColInfo()\l+ OnMapInfo()\l+ savePNG()\l+ saveBMP()\l+ render()\l+ setAttributes()\l+ paint()\l+ ~OamView()\l+ OamView()\l+ update()\l# DoDataExchange()\l# PostNcDestroy()\l# OnSave()\l# OnInitDialog()\l# OnStretch()\l# OnAutoUpdate()\l# OnChangeSprite()\l# OnClose()\l# OnHScroll()\l}" alt="" coords="1813,211,1956,582"/>
+<area shape="rect" id="node13" href="class_palette_view.html" title="{PaletteView\n||+ save()\l+ PaletteView()\l+ ~PaletteView()\l+ OnPalInfo()\l# DoDataExchange()\l# PostNcDestroy()\l# update()\l# OnInitDialog()\l# OnSaveBg()\l# OnSaveObj()\l# OnRefresh2()\l# OnAutoUpdate()\l# OnClose()\l}" alt="" coords="1980,270,2123,523"/>
+<area shape="rect" id="node14" href="class_tile_view.html" title="{TileView\n|+ m_slider\l+ m_colors\l+ m_charBase\l+ m_stretch\l|+ paint()\l+ render()\l+ renderTile16()\l+ renderTile256()\l+ savePNG()\l+ saveBMP()\l+ TileView()\l+ ~TileView()\l+ update()\l# DoDataExchange()\l# PostNcDestroy()\l# OnMapInfo()\l# OnColInfo()\l# OnSave()\l# OnInitDialog()\l# OnClose()\l# OnAutoUpdate()\l# On16Colors()\l# On256Colors()\l그리고 7개 더...\l}" alt="" coords="2147,197,2289,597"/>
 </map>
- </div></div>
+</div>
+<div class="dynheader">
+IUpdateListener에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_update_listener__coll__graph.png" border="0" usemap="#_i_update_listener_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:ac03b85f52e858d0bbd08a4984b2cb929"><td class="memItemLeft" align="right" valign="top"><a id="ac03b85f52e858d0bbd08a4984b2cb929"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()=0</td></tr>
+<tr class="memitem:ac03b85f52e858d0bbd08a4984b2cb929"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_update_listener.html#ac03b85f52e858d0bbd08a4984b2cb929">update</a> ()=0</td></tr>
 <tr class="separator:ac03b85f52e858d0bbd08a4984b2cb929"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_i_update_8h_source.html">IUpdate.h</a> 파일의 <a class="el" href="_i_update_8h_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ac03b85f52e858d0bbd08a4984b2cb929"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac03b85f52e858d0bbd08a4984b2cb929">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IUpdateListener::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_g_b_palette_view.html#a43a43edd82e080e860aeb6a82ec106fc">GBPaletteView</a>, <a class="el" href="class_palette_view.html#a94549cb400d23e790497c4263bf1e09b">PaletteView</a>, <a class="el" href="class_g_b_oam_view.html#a4e4dc00c48996d9fb2dc1169b65b4cc8">GBOamView</a>, <a class="el" href="class_oam_view.html#a9a54cb2672c3302524a00b744d09b645">OamView</a>, <a class="el" href="class_map_view.html#ac41eb53f60bccbfe4f5601f1a997c51e">MapView</a>, <a class="el" href="class_tile_view.html#a09b04d6b0135ef2b6da3c08796c1d354">TileView</a>, <a class="el" href="class_g_b_tile_view.html#a0b36c27b43fea0e457a26860b2476b9d">GBTileView</a>, <a class="el" href="class_g_b_map_view.html#af907981b2a105364f52d9fc11030a200">GBMapView</a>, <a class="el" href="class_g_b_memory_viewer_dlg.html#acb02578600a9ecd38ac653306241089b">GBMemoryViewerDlg</a>, <a class="el" href="class_memory_viewer_dlg.html#a0222a6beddfef071bc19b8849dc4ee15">MemoryViewerDlg</a>, <a class="el" href="class_g_b_disassemble.html#a1170fe51e14d0b770f5200bf4e193423">GBDisassemble</a>, <a class="el" href="class_disassemble.html#a30fc26e4204bd886f7cd8eb0c6c22e88">Disassemble</a>, <a class="el" href="class_i_o_viewer.html#a500c8fc593280ff95977fb59293b6ab6">IOViewer</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_update_listener_ac03b85f52e858d0bbd08a4984b2cb929_icgraph.png" border="0" usemap="#class_i_update_listener_ac03b85f52e858d0bbd08a4984b2cb929_icgraph" alt=""/></div>
+<map name="class_i_update_listener_ac03b85f52e858d0bbd08a4984b2cb929_icgraph" id="class_i_update_listener_ac03b85f52e858d0bbd08a4984b2cb929_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="212,5,347,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_i_update_8h_source.html">IUpdate.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_i_update_8h_source.html">IUpdate.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_update_listener.html">IUpdateListener</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

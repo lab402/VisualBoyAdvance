@@ -1,0 +1,1072 @@
+\hypertarget{expr_node_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr\+Node.cpp 파일 참조}
+\label{expr_node_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr\+Node.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr\+Node.\+cpp}}
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Port.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}elf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}expr\+Node.\+h\char`\"{}}\newline
+expr\+Node.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{expr_node_8cpp_a9254b089d435892385cf14d0ab4a7a2d}{strdup}}~\+\_\+strdup
+\item 
+\#define \mbox{\hyperlink{expr_node_8cpp_aa1c49d7b52185d5256b1f848e7802a5e}{debugger\+Read\+Memory}}(addr)~\mbox{\hyperlink{_port_8h_adc768b10d187a6d70e6b927d589c948d}{R\+E\+A\+D32\+LE}}((\&\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}))
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{expr\+Node\+Clean}} (void $\ast$m)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_a1298228dcd1cf3da21647c00908f09f5}{expr\+Node\+Clean\+Up}} ()
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_node_8cpp_ad7a00e4f854419340539bc9b915c9f63}{expr\+Node\+Identifier}} ()
+\item 
+bool \mbox{\hyperlink{expr_node_8cpp_a57082aef25eccfdb6868d1238189dbfa}{expr\+Node\+Identifier\+Resolve}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$f, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$u)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_a63999c3eadd3740219c9b5c8419d179d}{expr\+Node\+Identifier\+Print}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_node_8cpp_a4c3a5088d5f8a76193446258f409174a}{expr\+Node\+Number}} ()
+\item 
+bool \mbox{\hyperlink{expr_node_8cpp_a5e93ea941362f8aead323ff0a1476eae}{expr\+Node\+Number\+Resolve}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$f, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$u)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_ae9a88d0ec961b875a27da142aff6213d}{expr\+Node\+Number\+Print}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_node_8cpp_a3dcb5d0d4b7bf0e46b34a14d37a63b91}{expr\+Node\+Star}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$exp)
+\item 
+bool \mbox{\hyperlink{expr_node_8cpp_a36819552f014f7d4f1f81fa5d3a7e8a7}{expr\+Node\+Star\+Resolve}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$f, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$u)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_adebb38a7cc6f9ff4dcac33f6e7f29af6}{expr\+Node\+Star\+Print}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_node_8cpp_af7ba6fde8111ec596c68254ef68be953}{expr\+Node\+Dot}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$exp, \mbox{\hyperlink{struct_node}{Node}} $\ast$ident)
+\item 
+bool \mbox{\hyperlink{expr_node_8cpp_a317391b36e4ccc1f990ad57296784eba}{expr\+Node\+Dot\+Resolve}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$f, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$u)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_a941f389e431bd1df5924367acd13ac25}{expr\+Node\+Dot\+Print}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_node_8cpp_a2dc9b0661cbb258e1151849b07e08d2f}{expr\+Node\+Arrow}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$exp, \mbox{\hyperlink{struct_node}{Node}} $\ast$ident)
+\item 
+bool \mbox{\hyperlink{expr_node_8cpp_a0a84e5a2e4a2a76505c6dfe9746879fa}{expr\+Node\+Arrow\+Resolve}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$f, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$u)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_a4c6e5752a677ae36c5c97920e1419cee}{expr\+Node\+Arrow\+Print}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_node_8cpp_adad03237d5fd81686b62d26ae3db718c}{expr\+Node\+Addr}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$exp)
+\item 
+bool \mbox{\hyperlink{expr_node_8cpp_aa1356ba7957417face3fc749d879ea6f}{expr\+Node\+Addr\+Resolve}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$f, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$u)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_a0a4805a8b4d111724d7fc71e5e399560}{expr\+Node\+Addr\+Print}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_node_8cpp_ab5572fe7096923bbd710708463787f7a}{expr\+Node\+Sizeof}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$exp)
+\item 
+bool \mbox{\hyperlink{expr_node_8cpp_ad65ba06977a9b569cda9a71fa73d3821}{expr\+Node\+Sizeof\+Resolve}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$f, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$u)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_a6fa0914d76bb222855175af58cdf6b87}{expr\+Node\+Sizeof\+Print}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_node_8cpp_a6de9efbd317d8d2a1ec9b0fca47b6bb9}{expr\+Node\+Array}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$exp, \mbox{\hyperlink{struct_node}{Node}} $\ast$number)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_node_8cpp_afbc4daa1957db3cc274c817f1ab31bdf}{expr\+Node\+Get\+Size}} (\mbox{\hyperlink{struct_array}{Array}} $\ast$a, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} index)
+\item 
+bool \mbox{\hyperlink{expr_node_8cpp_a54d27c21c671c5aeb6041e07e164fff9}{expr\+Node\+Array\+Resolve}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, \mbox{\hyperlink{struct_function}{Function}} $\ast$f, \mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$u)
+\item 
+void \mbox{\hyperlink{expr_node_8cpp_aa56e48037c1c33587d68a73e100ccc80}{expr\+Node\+Array\+Print}} (\mbox{\hyperlink{struct_node}{Node}} $\ast$\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}{yytext}}
+\item 
+void $\ast$ \mbox{\hyperlink{expr_node_8cpp_a87f0ce2594c8cc615d3e4f89a4ea9799}{expr\+Node\+Clean\+Up\+List}} \mbox{[}100\mbox{]}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_node_8cpp_a9619bc3b639ce3cde8ba12877465bdf0}{expr\+Node\+Clean\+Up\+Count}} = 0
+\item 
+\mbox{\hyperlink{struct_type}{Type}} \mbox{\hyperlink{expr_node_8cpp_aa10a65a6175049151b0e338ff74eb389}{expr\+Node\+Type}} = \{ 0, \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a6c675feb4de749ba8aae449fee018515}{T\+Y\+P\+E\+\_\+base}}, \char`\"{}int\char`\"{}, D\+W\+\_\+\+A\+T\+E\+\_\+signed, 4, 0, \{0\}, 0 \}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{expr_node_8cpp_aa1c49d7b52185d5256b1f848e7802a5e}\label{expr_node_8cpp_aa1c49d7b52185d5256b1f848e7802a5e}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!debugger\+Read\+Memory@{debugger\+Read\+Memory}}
+\index{debugger\+Read\+Memory@{debugger\+Read\+Memory}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{debugger\+Read\+Memory}{debuggerReadMemory}}
+{\footnotesize\ttfamily \#define debugger\+Read\+Memory(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~\mbox{\hyperlink{_port_8h_adc768b10d187a6d70e6b927d589c948d}{R\+E\+A\+D32\+LE}}((\&\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}))}
+
+
+
+expr\+Node.\+cpp 파일의 34 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_node_8cpp_a9254b089d435892385cf14d0ab4a7a2d}\label{expr_node_8cpp_a9254b089d435892385cf14d0ab4a7a2d}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!strdup@{strdup}}
+\index{strdup@{strdup}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{strdup}{strdup}}
+{\footnotesize\ttfamily \#define strdup~\+\_\+strdup}
+
+
+
+expr\+Node.\+cpp 파일의 29 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{expr_node_8cpp_adad03237d5fd81686b62d26ae3db718c}\label{expr_node_8cpp_adad03237d5fd81686b62d26ae3db718c}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Addr@{expr\+Node\+Addr}}
+\index{expr\+Node\+Addr@{expr\+Node\+Addr}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Addr()}{exprNodeAddr()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ expr\+Node\+Addr (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{exp }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 267 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+268 \{
+269   \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = (\mbox{\hyperlink{struct_node}{Node}} *)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));
+270   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+271   
+272   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression = exp;
+273   
+274   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->print = \mbox{\hyperlink{expr_node_8cpp_a0a4805a8b4d111724d7fc71e5e399560}{exprNodeAddrPrint}};
+275   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->resolve = \mbox{\hyperlink{expr_node_8cpp_aa1356ba7957417face3fc749d879ea6f}{exprNodeAddrResolve}};
+276   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+277 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{expr_node_8cpp_adad03237d5fd81686b62d26ae3db718c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a0a4805a8b4d111724d7fc71e5e399560}\label{expr_node_8cpp_a0a4805a8b4d111724d7fc71e5e399560}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Addr\+Print@{expr\+Node\+Addr\+Print}}
+\index{expr\+Node\+Addr\+Print@{expr\+Node\+Addr\+Print}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Addr\+Print()}{exprNodeAddrPrint()}}
+{\footnotesize\ttfamily void expr\+Node\+Addr\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 296 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+297 \{
+298   printf(\textcolor{stringliteral}{"*"});
+299   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->print(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression);
+300 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{expr_node_8cpp_a0a4805a8b4d111724d7fc71e5e399560_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_aa1356ba7957417face3fc749d879ea6f}\label{expr_node_8cpp_aa1356ba7957417face3fc749d879ea6f}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Addr\+Resolve@{expr\+Node\+Addr\+Resolve}}
+\index{expr\+Node\+Addr\+Resolve@{expr\+Node\+Addr\+Resolve}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Addr\+Resolve()}{exprNodeAddrResolve()}}
+{\footnotesize\ttfamily bool expr\+Node\+Addr\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 279 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+280 \{
+281   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->resolve(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression, f, u)) \{
+282     \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->locType == \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}}) \{
+283       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location;
+284       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da2c98b9d1b72f1159175953e2f08a87f8}{LOCATION\_value}};
+285       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = &\mbox{\hyperlink{expr_node_8cpp_aa10a65a6175049151b0e338ff74eb389}{exprNodeType}};
+286     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->locType == \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da78f690fdda043de78067d4ec6f25bf39}{LOCATION\_register}}) \{
+287       printf(\textcolor{stringliteral}{"Value is in register %d\(\backslash\)n"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location);
+288     \} \textcolor{keywordflow}{else} \{
+289       printf(\textcolor{stringliteral}{"Direct value is %d\(\backslash\)n"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location);
+290     \}
+291     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+292   \}
+293   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+294 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{expr_node_8cpp_aa1356ba7957417face3fc749d879ea6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a6de9efbd317d8d2a1ec9b0fca47b6bb9}\label{expr_node_8cpp_a6de9efbd317d8d2a1ec9b0fca47b6bb9}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Array@{expr\+Node\+Array}}
+\index{expr\+Node\+Array@{expr\+Node\+Array}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Array()}{exprNodeArray()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ expr\+Node\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{exp,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{number }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 332 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+333 \{
+334   \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = (\mbox{\hyperlink{struct_node}{Node}} *)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));
+335   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+336   
+337   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression = exp;
+338   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->value = number->\mbox{\hyperlink{struct_node_af29d6730c1ae4dfa7a901ae7611b0973}{location}};
+339   
+340   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->print = \mbox{\hyperlink{expr_node_8cpp_aa56e48037c1c33587d68a73e100ccc80}{exprNodeArrayPrint}};
+341   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->resolve = \mbox{\hyperlink{expr_node_8cpp_a54d27c21c671c5aeb6041e07e164fff9}{exprNodeArrayResolve}};
+342   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+343 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp_a6de9efbd317d8d2a1ec9b0fca47b6bb9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_aa56e48037c1c33587d68a73e100ccc80}\label{expr_node_8cpp_aa56e48037c1c33587d68a73e100ccc80}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Array\+Print@{expr\+Node\+Array\+Print}}
+\index{expr\+Node\+Array\+Print@{expr\+Node\+Array\+Print}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Array\+Print()}{exprNodeArrayPrint()}}
+{\footnotesize\ttfamily void expr\+Node\+Array\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 411 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+412 \{
+413   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->print(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression);
+414   printf(\textcolor{stringliteral}{"[%d]"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->value);
+415 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=298pt]{expr_node_8cpp_aa56e48037c1c33587d68a73e100ccc80_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a54d27c21c671c5aeb6041e07e164fff9}\label{expr_node_8cpp_a54d27c21c671c5aeb6041e07e164fff9}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Array\+Resolve@{expr\+Node\+Array\+Resolve}}
+\index{expr\+Node\+Array\+Resolve@{expr\+Node\+Array\+Resolve}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Array\+Resolve()}{exprNodeArrayResolve()}}
+{\footnotesize\ttfamily bool expr\+Node\+Array\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 360 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+361 \{
+362   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->resolve(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression, f, u)) \{
+363     \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70}{TypeEnum}} tt = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->type;
+364     \textcolor{keywordflow}{if}(tt != \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70aed7927d456e33336408f3b71c9e421e9}{TYPE\_array}} &&
+365        tt != \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a38041b485628711420e122067d651090}{TYPE\_pointer}}) \{
+366       printf(\textcolor{stringliteral}{"Object not of array or pointer type\(\backslash\)n"});
+367       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+368     \}
+369 
+370     \textcolor{keywordflow}{if}(tt == \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70aed7927d456e33336408f3b71c9e421e9}{TYPE\_array}}) \{
+371       \mbox{\hyperlink{struct_array}{Array}} *a = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->array;
+372       
+373       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} loc = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location;
+374       \mbox{\hyperlink{struct_type}{Type}} *\mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}} = a->\mbox{\hyperlink{struct_array_aebd7ba43475f7f6461e4343a7ffce0a7}{type}};
+375       \textcolor{keywordflow}{if}(a->\mbox{\hyperlink{struct_array_ac416f8022b0d22cb470b0e5cc1e9b356}{maxBounds}} > 1) \{
+376         \textcolor{keywordtype}{int} index = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->index;
+377 
+378         \textcolor{keywordflow}{if}(index == a->\mbox{\hyperlink{struct_array_ac416f8022b0d22cb470b0e5cc1e9b356}{maxBounds}}) \{
+379           printf(\textcolor{stringliteral}{"Too many indices for array\(\backslash\)n"});
+380           \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+381         \}
+382 
+383         \textcolor{keywordflow}{if}((index+1) < a->\mbox{\hyperlink{struct_array_ac416f8022b0d22cb470b0e5cc1e9b356}{maxBounds}}) \{
+384           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type;
+385           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->index = index+1;
+386           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}};
+387           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location +
+388             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->value * \mbox{\hyperlink{expr_node_8cpp_afbc4daa1957db3cc274c817f1ab31bdf}{exprNodeGetSize}}(a, index);
+389           \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+390         \}
+391       \}
+392       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = \mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}};
+393       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = loc + \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->value * \mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}}->size;
+394       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}};
+395     \} \textcolor{keywordflow}{else} \{
+396       \mbox{\hyperlink{struct_type}{Type}} *\mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}} = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->pointer;
+397       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} loc = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location;
+398       \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->locType == \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da78f690fdda043de78067d4ec6f25bf39}{LOCATION\_register}})
+399         loc = \mbox{\hyperlink{_g_b_a_8h_ae29faba89509024ffd1a292badcedf2d}{reg}}[loc].\mbox{\hyperlink{unionreg__pair_a9f6a42d56c07829d7013571eda998252}{I}};
+400       \textcolor{keywordflow}{else}
+401         loc = \mbox{\hyperlink{expr_node_8cpp_aa1c49d7b52185d5256b1f848e7802a5e}{debuggerReadMemory}}(loc);
+402       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = \mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}};
+403       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = loc + \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->value * \mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}}->size;
+404       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}};
+405     \}
+406     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+407   \}
+408   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+409 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{expr_node_8cpp_a54d27c21c671c5aeb6041e07e164fff9_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{expr_node_8cpp_a54d27c21c671c5aeb6041e07e164fff9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a2dc9b0661cbb258e1151849b07e08d2f}\label{expr_node_8cpp_a2dc9b0661cbb258e1151849b07e08d2f}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Arrow@{expr\+Node\+Arrow}}
+\index{expr\+Node\+Arrow@{expr\+Node\+Arrow}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Arrow()}{exprNodeArrow()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ expr\+Node\+Arrow (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{exp,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{ident }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 205 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+206 \{
+207   \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = (\mbox{\hyperlink{struct_node}{Node}} *)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));
+208   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+209   
+210   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression = exp;
+211   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name = ident->\mbox{\hyperlink{struct_node_a059a0ea6f86dce9fd919c08a707b360b}{name}};
+212   
+213   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->print = \mbox{\hyperlink{expr_node_8cpp_a4c6e5752a677ae36c5c97920e1419cee}{exprNodeArrowPrint}};
+214   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->resolve = \mbox{\hyperlink{expr_node_8cpp_a0a84e5a2e4a2a76505c6dfe9746879fa}{exprNodeArrowResolve}};
+215   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+216 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp_a2dc9b0661cbb258e1151849b07e08d2f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a4c6e5752a677ae36c5c97920e1419cee}\label{expr_node_8cpp_a4c6e5752a677ae36c5c97920e1419cee}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Arrow\+Print@{expr\+Node\+Arrow\+Print}}
+\index{expr\+Node\+Arrow\+Print@{expr\+Node\+Arrow\+Print}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Arrow\+Print()}{exprNodeArrowPrint()}}
+{\footnotesize\ttfamily void expr\+Node\+Arrow\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 261 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+262 \{
+263   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->print(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression);
+264   printf(\textcolor{stringliteral}{"->%s"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name);
+265 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{expr_node_8cpp_a4c6e5752a677ae36c5c97920e1419cee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a0a84e5a2e4a2a76505c6dfe9746879fa}\label{expr_node_8cpp_a0a84e5a2e4a2a76505c6dfe9746879fa}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Arrow\+Resolve@{expr\+Node\+Arrow\+Resolve}}
+\index{expr\+Node\+Arrow\+Resolve@{expr\+Node\+Arrow\+Resolve}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Arrow\+Resolve()}{exprNodeArrowResolve()}}
+{\footnotesize\ttfamily bool expr\+Node\+Arrow\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 218 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+219 \{
+220   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->resolve(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression, f, u)) \{
+221     \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70}{TypeEnum}} tt = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->type;
+222     \textcolor{keywordflow}{if}(tt != \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a38041b485628711420e122067d651090}{TYPE\_pointer}}) \{
+223       printf(\textcolor{stringliteral}{"Object not of pointer type\(\backslash\)n"});
+224       \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+225     \}
+226     tt = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->pointer->type;
+227     
+228     \textcolor{keywordflow}{if}(tt == \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70ad27ab306f779133c8682a3537c43b471}{TYPE\_struct}} ||
+229        tt == \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a662fec25af2a430b991c709bb52cc2b2}{TYPE\_union}}) \{
+230       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} loc = \mbox{\hyperlink{expr_node_8cpp_aa1c49d7b52185d5256b1f848e7802a5e}{debuggerReadMemory}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location);
+231       \mbox{\hyperlink{struct_type}{Type}} *\mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}} = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->pointer;
+232       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = \mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}}->structure->memberCount;
+233       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0;
+234       \textcolor{keywordflow}{while}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}) \{
+235         \mbox{\hyperlink{struct_member}{Member}} *m = &\mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}}->structure->members[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+236         \textcolor{keywordflow}{if}(strcmp(m->\mbox{\hyperlink{struct_member_ac8be1720085e46e70c678c5885837ccb}{name}}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name) == 0) \{
+237           \textcolor{comment}{// found member}
+238           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = m->\mbox{\hyperlink{struct_member_a7161459617d2ec472eb3830235c18d32}{type}};
+239           \textcolor{keywordflow}{if}(tt == \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70ad27ab306f779133c8682a3537c43b471}{TYPE\_struct}}) \{
+240             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{elf_8cpp_afba3a87c27017a62777b14b46a2f2e42}{elfDecodeLocation}}(f, m->\mbox{\hyperlink{struct_member_adceaf807e8862e3464a63dacfd1d7fb3}{location}}, &
+      \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType,
+241                                             loc);
+242             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->objLocation = loc;
+243           \} \textcolor{keywordflow}{else} \{
+244             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = loc;
+245             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->objLocation = loc;
+246           \}
+247           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}};
+248           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->member = m;
+249           \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+250         \}
+251         \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++;
+252       \}
+253       printf(\textcolor{stringliteral}{"Member %s not found\(\backslash\)n"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name);
+254     \} \textcolor{keywordflow}{else} \{
+255       printf(\textcolor{stringliteral}{"Object is not of structure type\(\backslash\)n"});
+256     \}
+257   \}
+258   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+259 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp_a0a84e5a2e4a2a76505c6dfe9746879fa_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{expr_node_8cpp_a0a84e5a2e4a2a76505c6dfe9746879fa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}\label{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Clean@{expr\+Node\+Clean}}
+\index{expr\+Node\+Clean@{expr\+Node\+Clean}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Clean()}{exprNodeClean()}}
+{\footnotesize\ttfamily void expr\+Node\+Clean (\begin{DoxyParamCaption}\item[{void $\ast$}]{m }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 41 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+42 \{
+43   \mbox{\hyperlink{expr_node_8cpp_a87f0ce2594c8cc615d3e4f89a4ea9799}{exprNodeCleanUpList}}[\mbox{\hyperlink{expr_node_8cpp_a9619bc3b639ce3cde8ba12877465bdf0}{exprNodeCleanUpCount}}++] = m;
+44 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=293pt]{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a1298228dcd1cf3da21647c00908f09f5}\label{expr_node_8cpp_a1298228dcd1cf3da21647c00908f09f5}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Clean\+Up@{expr\+Node\+Clean\+Up}}
+\index{expr\+Node\+Clean\+Up@{expr\+Node\+Clean\+Up}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Clean\+Up()}{exprNodeCleanUp()}}
+{\footnotesize\ttfamily void expr\+Node\+Clean\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+47 \{
+48   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_node_8cpp_a9619bc3b639ce3cde8ba12877465bdf0}{exprNodeCleanUpCount}}; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+49     free(\mbox{\hyperlink{expr_node_8cpp_a87f0ce2594c8cc615d3e4f89a4ea9799}{exprNodeCleanUpList}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}]);
+50   \}
+51   \mbox{\hyperlink{expr_node_8cpp_a9619bc3b639ce3cde8ba12877465bdf0}{exprNodeCleanUpCount}} = 0;
+52 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{expr_node_8cpp_af7ba6fde8111ec596c68254ef68be953}\label{expr_node_8cpp_af7ba6fde8111ec596c68254ef68be953}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Dot@{expr\+Node\+Dot}}
+\index{expr\+Node\+Dot@{expr\+Node\+Dot}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Dot()}{exprNodeDot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ expr\+Node\+Dot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{exp,  }\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{ident }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 148 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+149 \{
+150   \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = (\mbox{\hyperlink{struct_node}{Node}} *)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));
+151   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+152   
+153   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression = exp;
+154   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name = ident->\mbox{\hyperlink{struct_node_a059a0ea6f86dce9fd919c08a707b360b}{name}};
+155   
+156   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->print = \mbox{\hyperlink{expr_node_8cpp_a941f389e431bd1df5924367acd13ac25}{exprNodeDotPrint}};
+157   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->resolve = \mbox{\hyperlink{expr_node_8cpp_a317391b36e4ccc1f990ad57296784eba}{exprNodeDotResolve}};
+158   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+159 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp_af7ba6fde8111ec596c68254ef68be953_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a941f389e431bd1df5924367acd13ac25}\label{expr_node_8cpp_a941f389e431bd1df5924367acd13ac25}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Dot\+Print@{expr\+Node\+Dot\+Print}}
+\index{expr\+Node\+Dot\+Print@{expr\+Node\+Dot\+Print}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Dot\+Print()}{exprNodeDotPrint()}}
+{\footnotesize\ttfamily void expr\+Node\+Dot\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 199 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+200 \{
+201   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->print(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression);
+202   printf(\textcolor{stringliteral}{".%s"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name);
+203 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{expr_node_8cpp_a941f389e431bd1df5924367acd13ac25_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a317391b36e4ccc1f990ad57296784eba}\label{expr_node_8cpp_a317391b36e4ccc1f990ad57296784eba}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Dot\+Resolve@{expr\+Node\+Dot\+Resolve}}
+\index{expr\+Node\+Dot\+Resolve@{expr\+Node\+Dot\+Resolve}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Dot\+Resolve()}{exprNodeDotResolve()}}
+{\footnotesize\ttfamily bool expr\+Node\+Dot\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 161 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+162 \{
+163   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->resolve(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression, f, u)) \{
+164     \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70}{TypeEnum}} tt = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->type;
+165     
+166     \textcolor{keywordflow}{if}(tt == \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70ad27ab306f779133c8682a3537c43b471}{TYPE\_struct}} ||
+167        tt == \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a662fec25af2a430b991c709bb52cc2b2}{TYPE\_union}}) \{
+168       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} loc = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location;
+169       \mbox{\hyperlink{struct_type}{Type}} *\mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}} = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type;
+170       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = \mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}}->structure->memberCount;
+171       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0;
+172       \textcolor{keywordflow}{while}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}) \{
+173         \mbox{\hyperlink{struct_member}{Member}} *m = &\mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}}->structure->members[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+174         \textcolor{keywordflow}{if}(strcmp(m->\mbox{\hyperlink{struct_member_ac8be1720085e46e70c678c5885837ccb}{name}}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name) == 0) \{
+175           \textcolor{comment}{// found member}
+176           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = m->\mbox{\hyperlink{struct_member_a7161459617d2ec472eb3830235c18d32}{type}};
+177           \textcolor{keywordflow}{if}(tt == \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70ad27ab306f779133c8682a3537c43b471}{TYPE\_struct}}) \{
+178             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{elf_8cpp_afba3a87c27017a62777b14b46a2f2e42}{elfDecodeLocation}}(f, m->\mbox{\hyperlink{struct_member_adceaf807e8862e3464a63dacfd1d7fb3}{location}}, &
+      \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType,
+179                                             loc);
+180             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->objLocation = loc;
+181           \} \textcolor{keywordflow}{else} \{
+182             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = loc;
+183             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->locType;
+184             \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->objLocation = loc;
+185           \}
+186           \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->member = m;
+187           \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+188         \}
+189         \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++;
+190       \}
+191       printf(\textcolor{stringliteral}{"Member %s not found\(\backslash\)n"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name);
+192     \} \textcolor{keywordflow}{else} \{
+193       printf(\textcolor{stringliteral}{"Object is not of structure type\(\backslash\)n"});
+194     \}
+195   \}
+196   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+197 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp_a317391b36e4ccc1f990ad57296784eba_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=296pt]{expr_node_8cpp_a317391b36e4ccc1f990ad57296784eba_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_afbc4daa1957db3cc274c817f1ab31bdf}\label{expr_node_8cpp_afbc4daa1957db3cc274c817f1ab31bdf}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Get\+Size@{expr\+Node\+Get\+Size}}
+\index{expr\+Node\+Get\+Size@{expr\+Node\+Get\+Size}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Get\+Size()}{exprNodeGetSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} expr\+Node\+Get\+Size (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_array}{Array}} $\ast$}]{a,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{index }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 345 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+346 \{
+347   index++;
+348   \textcolor{keywordflow}{if}(index == a->\mbox{\hyperlink{struct_array_ac416f8022b0d22cb470b0e5cc1e9b356}{maxBounds}}) \{
+349     \textcolor{keywordflow}{return} a->\mbox{\hyperlink{struct_array_aebd7ba43475f7f6461e4343a7ffce0a7}{type}}->\mbox{\hyperlink{struct_type_a871302dc63ac1a37c0b6a225cf82048d}{size}};
+350   \} \textcolor{keywordflow}{else} \{
+351     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = a->\mbox{\hyperlink{struct_array_a2d2cd201a0203a12d6f5e7b8a34ab1ad}{bounds}}[a->\mbox{\hyperlink{struct_array_ac416f8022b0d22cb470b0e5cc1e9b356}{maxBounds}}-1] * a->\mbox{\hyperlink{struct_array_aebd7ba43475f7f6461e4343a7ffce0a7}{type}}->\mbox{\hyperlink{struct_type_a871302dc63ac1a37c0b6a225cf82048d}{size}};
+352     
+353     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = index; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < a->\mbox{\hyperlink{struct_array_ac416f8022b0d22cb470b0e5cc1e9b356}{maxBounds}}-1; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++) \{
+354       \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} *= a->\mbox{\hyperlink{struct_array_a2d2cd201a0203a12d6f5e7b8a34ab1ad}{bounds}}[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}];
+355     \}
+356     \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}};
+357   \}
+358 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp_afbc4daa1957db3cc274c817f1ab31bdf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_ad7a00e4f854419340539bc9b915c9f63}\label{expr_node_8cpp_ad7a00e4f854419340539bc9b915c9f63}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Identifier@{expr\+Node\+Identifier}}
+\index{expr\+Node\+Identifier@{expr\+Node\+Identifier}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Identifier()}{exprNodeIdentifier()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ expr\+Node\+Identifier (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 54 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+55 \{
+56   \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = (\mbox{\hyperlink{struct_node}{Node}} *)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));
+57   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name = \mbox{\hyperlink{expr_node_8cpp_a9254b089d435892385cf14d0ab4a7a2d}{strdup}}(\mbox{\hyperlink{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}{yytext}});
+58 
+59   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name);  
+60   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+61   
+62   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->print = \mbox{\hyperlink{expr_node_8cpp_a63999c3eadd3740219c9b5c8419d179d}{exprNodeIdentifierPrint}};
+63   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->resolve = \mbox{\hyperlink{expr_node_8cpp_a57082aef25eccfdb6868d1238189dbfa}{exprNodeIdentifierResolve}};
+64   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+65 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp_ad7a00e4f854419340539bc9b915c9f63_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a63999c3eadd3740219c9b5c8419d179d}\label{expr_node_8cpp_a63999c3eadd3740219c9b5c8419d179d}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Identifier\+Print@{expr\+Node\+Identifier\+Print}}
+\index{expr\+Node\+Identifier\+Print@{expr\+Node\+Identifier\+Print}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Identifier\+Print()}{exprNodeIdentifierPrint()}}
+{\footnotesize\ttfamily void expr\+Node\+Identifier\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 80 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+81 \{
+82   printf(\textcolor{stringliteral}{"%s"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name);
+83 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=324pt]{expr_node_8cpp_a63999c3eadd3740219c9b5c8419d179d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a57082aef25eccfdb6868d1238189dbfa}\label{expr_node_8cpp_a57082aef25eccfdb6868d1238189dbfa}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Identifier\+Resolve@{expr\+Node\+Identifier\+Resolve}}
+\index{expr\+Node\+Identifier\+Resolve@{expr\+Node\+Identifier\+Resolve}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Identifier\+Resolve()}{exprNodeIdentifierResolve()}}
+{\footnotesize\ttfamily bool expr\+Node\+Identifier\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 67 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+68 \{
+69   \mbox{\hyperlink{struct_object}{Object}} *o;
+70   \textcolor{keywordflow}{if}(\mbox{\hyperlink{elf_8cpp_a40b01898edfb237e8f86b835ad27e94d}{elfGetObject}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name, f, u, &o)) \{
+71     \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = o->\mbox{\hyperlink{struct_object_ae0e4e287e6fcefa00b8ae4e4c127ffa9}{type}};
+72     \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{elf_8cpp_afba3a87c27017a62777b14b46a2f2e42}{elfDecodeLocation}}(f, o->\mbox{\hyperlink{struct_object_ad1adf7cf51dfe7a95d2802696f93bd0f}{location}}, &\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType);
+73     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+74   \} \textcolor{keywordflow}{else} \{
+75     printf(\textcolor{stringliteral}{"Object %s not found\(\backslash\)n"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->name);
+76   \}
+77   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+78 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_node_8cpp_a57082aef25eccfdb6868d1238189dbfa_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{expr_node_8cpp_a57082aef25eccfdb6868d1238189dbfa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a4c3a5088d5f8a76193446258f409174a}\label{expr_node_8cpp_a4c3a5088d5f8a76193446258f409174a}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Number@{expr\+Node\+Number}}
+\index{expr\+Node\+Number@{expr\+Node\+Number}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Number()}{exprNodeNumber()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ expr\+Node\+Number (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 85 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+86 \{
+87   \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = (\mbox{\hyperlink{struct_node}{Node}} *)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));
+88 
+89   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+90   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = atoi(\mbox{\hyperlink{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}{yytext}});
+91   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = &\mbox{\hyperlink{expr_node_8cpp_aa10a65a6175049151b0e338ff74eb389}{exprNodeType}};
+92   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da2c98b9d1b72f1159175953e2f08a87f8}{LOCATION\_value}};  
+93   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->print = \mbox{\hyperlink{expr_node_8cpp_ae9a88d0ec961b875a27da142aff6213d}{exprNodeNumberPrint}};
+94   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->resolve = \mbox{\hyperlink{expr_node_8cpp_a5e93ea941362f8aead323ff0a1476eae}{exprNodeNumberResolve}};
+95   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+96 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{expr_node_8cpp_a4c3a5088d5f8a76193446258f409174a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_ae9a88d0ec961b875a27da142aff6213d}\label{expr_node_8cpp_ae9a88d0ec961b875a27da142aff6213d}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Number\+Print@{expr\+Node\+Number\+Print}}
+\index{expr\+Node\+Number\+Print@{expr\+Node\+Number\+Print}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Number\+Print()}{exprNodeNumberPrint()}}
+{\footnotesize\ttfamily void expr\+Node\+Number\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 103 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+104 \{
+105   printf(\textcolor{stringliteral}{"%d"}, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location);
+106 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{expr_node_8cpp_ae9a88d0ec961b875a27da142aff6213d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a5e93ea941362f8aead323ff0a1476eae}\label{expr_node_8cpp_a5e93ea941362f8aead323ff0a1476eae}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Number\+Resolve@{expr\+Node\+Number\+Resolve}}
+\index{expr\+Node\+Number\+Resolve@{expr\+Node\+Number\+Resolve}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Number\+Resolve()}{exprNodeNumberResolve()}}
+{\footnotesize\ttfamily bool expr\+Node\+Number\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 98 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+99 \{
+100   \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+101 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{expr_node_8cpp_a5e93ea941362f8aead323ff0a1476eae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_ab5572fe7096923bbd710708463787f7a}\label{expr_node_8cpp_ab5572fe7096923bbd710708463787f7a}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Sizeof@{expr\+Node\+Sizeof}}
+\index{expr\+Node\+Sizeof@{expr\+Node\+Sizeof}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Sizeof()}{exprNodeSizeof()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ expr\+Node\+Sizeof (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{exp }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 302 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+303 \{
+304   \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = (\mbox{\hyperlink{struct_node}{Node}} *)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));
+305   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+306   
+307   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression = exp;
+308   
+309   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->print = \mbox{\hyperlink{expr_node_8cpp_a6fa0914d76bb222855175af58cdf6b87}{exprNodeSizeofPrint}};
+310   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->resolve = \mbox{\hyperlink{expr_node_8cpp_ad65ba06977a9b569cda9a71fa73d3821}{exprNodeSizeofResolve}};
+311   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+312 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{expr_node_8cpp_ab5572fe7096923bbd710708463787f7a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a6fa0914d76bb222855175af58cdf6b87}\label{expr_node_8cpp_a6fa0914d76bb222855175af58cdf6b87}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Sizeof\+Print@{expr\+Node\+Sizeof\+Print}}
+\index{expr\+Node\+Sizeof\+Print@{expr\+Node\+Sizeof\+Print}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Sizeof\+Print()}{exprNodeSizeofPrint()}}
+{\footnotesize\ttfamily void expr\+Node\+Sizeof\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 325 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+326 \{
+327   printf(\textcolor{stringliteral}{"sizeof("});
+328   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->print(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression);
+329   printf(\textcolor{stringliteral}{")"});
+330 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{expr_node_8cpp_a6fa0914d76bb222855175af58cdf6b87_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_ad65ba06977a9b569cda9a71fa73d3821}\label{expr_node_8cpp_ad65ba06977a9b569cda9a71fa73d3821}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Sizeof\+Resolve@{expr\+Node\+Sizeof\+Resolve}}
+\index{expr\+Node\+Sizeof\+Resolve@{expr\+Node\+Sizeof\+Resolve}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Sizeof\+Resolve()}{exprNodeSizeofResolve()}}
+{\footnotesize\ttfamily bool expr\+Node\+Sizeof\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 314 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+315 \{
+316   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->resolve(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression, f, u)) \{
+317     \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->size;
+318     \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da2c98b9d1b72f1159175953e2f08a87f8}{LOCATION\_value}};
+319     \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = &\mbox{\hyperlink{expr_node_8cpp_aa10a65a6175049151b0e338ff74eb389}{exprNodeType}};
+320     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+321   \}
+322   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+323 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{expr_node_8cpp_ad65ba06977a9b569cda9a71fa73d3821_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a3dcb5d0d4b7bf0e46b34a14d37a63b91}\label{expr_node_8cpp_a3dcb5d0d4b7bf0e46b34a14d37a63b91}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Star@{expr\+Node\+Star}}
+\index{expr\+Node\+Star@{expr\+Node\+Star}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Star()}{exprNodeStar()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ expr\+Node\+Star (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{exp }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 108 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+109 \{
+110   \mbox{\hyperlink{struct_node}{Node}} *\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}} = (\mbox{\hyperlink{struct_node}{Node}} *)calloc(1, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_node}{Node}}));
+111   \mbox{\hyperlink{expr_node_8cpp_a401825d26a2adc961777889fda3da7ad}{exprNodeClean}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}});
+112   
+113   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression = exp;
+114   
+115   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->print = \mbox{\hyperlink{expr_node_8cpp_adebb38a7cc6f9ff4dcac33f6e7f29af6}{exprNodeStarPrint}};
+116   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->resolve = \mbox{\hyperlink{expr_node_8cpp_a36819552f014f7d4f1f81fa5d3a7e8a7}{exprNodeStarResolve}};
+117   \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}};
+118 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{expr_node_8cpp_a3dcb5d0d4b7bf0e46b34a14d37a63b91_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_adebb38a7cc6f9ff4dcac33f6e7f29af6}\label{expr_node_8cpp_adebb38a7cc6f9ff4dcac33f6e7f29af6}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Star\+Print@{expr\+Node\+Star\+Print}}
+\index{expr\+Node\+Star\+Print@{expr\+Node\+Star\+Print}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Star\+Print()}{exprNodeStarPrint()}}
+{\footnotesize\ttfamily void expr\+Node\+Star\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 142 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+143 \{
+144   printf(\textcolor{stringliteral}{"*"});
+145   \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->print(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression);
+146 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{expr_node_8cpp_adebb38a7cc6f9ff4dcac33f6e7f29af6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_node_8cpp_a36819552f014f7d4f1f81fa5d3a7e8a7}\label{expr_node_8cpp_a36819552f014f7d4f1f81fa5d3a7e8a7}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Star\+Resolve@{expr\+Node\+Star\+Resolve}}
+\index{expr\+Node\+Star\+Resolve@{expr\+Node\+Star\+Resolve}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Star\+Resolve()}{exprNodeStarResolve()}}
+{\footnotesize\ttfamily bool expr\+Node\+Star\+Resolve (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} $\ast$}]{n,  }\item[{\mbox{\hyperlink{struct_function}{Function}} $\ast$}]{f,  }\item[{\mbox{\hyperlink{struct_compile_unit}{Compile\+Unit}} $\ast$}]{u }\end{DoxyParamCaption})}
+
+
+
+expr\+Node.\+cpp 파일의 120 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+121 \{
+122   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->resolve(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression, f, u)) \{
+123     \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->type == \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a38041b485628711420e122067d651090}{TYPE\_pointer}}) \{
+124       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location;
+125       \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->locType == \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}}) \{
+126         \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{expr_node_8cpp_aa1c49d7b52185d5256b1f848e7802a5e}{debuggerReadMemory}}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location);
+127       \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->locType == \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630da78f690fdda043de78067d4ec6f25bf39}{LOCATION\_register}}) \{
+128         \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{_g_b_a_8h_ae29faba89509024ffd1a292badcedf2d}{reg}}[\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location].\mbox{\hyperlink{unionreg__pair_a9f6a42d56c07829d7013571eda998252}{I}};
+129       \} \textcolor{keywordflow}{else} \{
+130         \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->location = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->location;
+131       \}
+132       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->type = \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->expression->type->pointer;
+133       \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}->locType = \mbox{\hyperlink{elf_8h_af2e75a10adf1443b5204c7856bbf630dab63d76dcdfb6dcca2e58a2b2042261c7}{LOCATION\_memory}};
+134       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+135     \} \textcolor{keywordflow}{else} \{
+136       printf(\textcolor{stringliteral}{"Object is not of pointer type\(\backslash\)n"});
+137     \}
+138   \}
+139   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+140 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{expr_node_8cpp_a36819552f014f7d4f1f81fa5d3a7e8a7_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{expr_node_8cpp_a9619bc3b639ce3cde8ba12877465bdf0}\label{expr_node_8cpp_a9619bc3b639ce3cde8ba12877465bdf0}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Clean\+Up\+Count@{expr\+Node\+Clean\+Up\+Count}}
+\index{expr\+Node\+Clean\+Up\+Count@{expr\+Node\+Clean\+Up\+Count}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Clean\+Up\+Count}{exprNodeCleanUpCount}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} expr\+Node\+Clean\+Up\+Count = 0}
+
+
+
+expr\+Node.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_node_8cpp_a87f0ce2594c8cc615d3e4f89a4ea9799}\label{expr_node_8cpp_a87f0ce2594c8cc615d3e4f89a4ea9799}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Clean\+Up\+List@{expr\+Node\+Clean\+Up\+List}}
+\index{expr\+Node\+Clean\+Up\+List@{expr\+Node\+Clean\+Up\+List}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Clean\+Up\+List}{exprNodeCleanUpList}}
+{\footnotesize\ttfamily void$\ast$ expr\+Node\+Clean\+Up\+List\mbox{[}100\mbox{]}}
+
+
+
+expr\+Node.\+cpp 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_node_8cpp_aa10a65a6175049151b0e338ff74eb389}\label{expr_node_8cpp_aa10a65a6175049151b0e338ff74eb389}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!expr\+Node\+Type@{expr\+Node\+Type}}
+\index{expr\+Node\+Type@{expr\+Node\+Type}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{expr\+Node\+Type}{exprNodeType}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_type}{Type}} expr\+Node\+Type = \{ 0, \mbox{\hyperlink{elf_8h_a600075cb26e64fe549c214f4c5b16b70a6c675feb4de749ba8aae449fee018515}{T\+Y\+P\+E\+\_\+base}}, \char`\"{}int\char`\"{}, D\+W\+\_\+\+A\+T\+E\+\_\+signed, 4, 0, \{0\}, 0 \}}
+
+
+
+expr\+Node.\+cpp 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}\label{expr_node_8cpp_ad9264b77d56b6971f29739e2bda77f51}} 
+\index{expr\+Node.\+cpp@{expr\+Node.\+cpp}!yytext@{yytext}}
+\index{yytext@{yytext}!expr\+Node.\+cpp@{expr\+Node.\+cpp}}
+\subsubsection{\texorpdfstring{yytext}{yytext}}
+{\footnotesize\ttfamily char$\ast$ yytext}
+

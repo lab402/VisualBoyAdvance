@@ -1,0 +1,9 @@
+<map id="memgzopen" name="memgzopen">
+<area shape="rect" id="node2" href="$memgzio_8c.html#a372853e45fc83777b428200cdcc816cf" title="gz_open" alt="" coords="147,56,217,83"/>
+<area shape="rect" id="node3" href="$memgzio_8c.html#a36e2f236693ef941a3bcd8e4cb6bc0e7" title="destroy" alt="" coords="274,5,339,32"/>
+<area shape="rect" id="node6" href="$memgzio_8c.html#a15d81d7981e2b633cd92650b7620ecfc" title="memOpen" alt="" coords="265,56,348,83"/>
+<area shape="rect" id="node7" href="$memgzio_8c.html#aafe8c3e74955de5641833affee004142" title="memPrintf" alt="" coords="266,107,347,133"/>
+<area shape="rect" id="node4" href="$memgzio_8c.html#a8334e22cc510313665b4930c00d97cae" title="memClose" alt="" coords="396,5,480,32"/>
+<area shape="rect" id="node5" href="$memgzio_8c.html#a9e7eccde306d563673b6da9561a3d3bb" title="memTell" alt="" coords="528,5,599,32"/>
+<area shape="rect" id="node8" href="$memgzio_8c.html#a4f5b925f19d47679ebf054169c2dd280" title="memWrite" alt="" coords="397,107,479,133"/>
+</map>

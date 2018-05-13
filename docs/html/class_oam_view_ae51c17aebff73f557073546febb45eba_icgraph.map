@@ -1,0 +1,5 @@
+<map id="OamView::updateScrollInfo" name="OamView::updateScrollInfo">
+<area shape="rect" id="node2" href="$class_oam_view.html#a925c72977181efd7be81b302af7ed071" title="OamView::OnInitDialog" alt="" coords="245,5,401,32"/>
+<area shape="rect" id="node3" href="$class_oam_view.html#abe95dd5fc8a624b1ae5b3e4f4deb304a" title="OamView::OnChangeSprite" alt="" coords="232,56,413,83"/>
+<area shape="rect" id="node4" href="$class_oam_view.html#abe18288bced0938ce18be385de441bd4" title="OamView::OnHScroll" alt="" coords="250,107,395,133"/>
+</map>

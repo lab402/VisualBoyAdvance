@@ -1,0 +1,7 @@
+<map id="soundSetQuality" name="soundSetQuality">
+<area shape="rect" id="node2" href="$system_8cpp.html#a98f45c601382b0dee2729693bc8720c7" title="systemCanChangeSoundQuality" alt="" coords="172,5,383,32"/>
+<area shape="rect" id="node3" href="$_sound_8cpp.html#a2f94fcc352d566069ad4cee1e9a62a39" title="soundShutdown" alt="" coords="220,56,335,83"/>
+<area shape="rect" id="node5" href="$_sound_8cpp.html#a48aac7ccc2439587be697d3f15fcd2e7" title="soundInit" alt="" coords="240,107,315,133"/>
+<area shape="rect" id="node4" href="$system_8cpp.html#ada306cd4177ec7d296668534b0c377d0" title="systemSoundShutdown" alt="" coords="431,56,589,83"/>
+<area shape="rect" id="node6" href="$system_8cpp.html#a46a394ba020dc0fc499bb8481c21325b" title="systemSoundInit" alt="" coords="451,107,569,133"/>
+</map>

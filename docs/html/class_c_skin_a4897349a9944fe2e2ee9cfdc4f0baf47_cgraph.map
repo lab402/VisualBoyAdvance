@@ -1,0 +1,6 @@
+<map id="CSkin::Hook" name="CSkin::Hook">
+<area shape="rect" id="node2" href="$class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9" title="CSkin::Hooked" alt="" coords="367,6,476,32"/>
+<area shape="rect" id="node3" href="$class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3" title="CSkin::UnHook" alt="" coords="178,31,289,58"/>
+<area shape="rect" id="node4" href="$class_skin_button.html#aef7f1ced23d060545eabd5b57175143a" title="SkinButton::GetRect" alt="" coords="162,82,305,108"/>
+<area shape="rect" id="node5" href="$class_skin_button.html#ad70dc6ed236a2274028c32744e3690bb" title="SkinButton::CreateButton" alt="" coords="148,132,319,159"/>
+</map>

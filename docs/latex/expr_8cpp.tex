@@ -1,0 +1,1228 @@
+\hypertarget{expr_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr.cpp 파일 참조}
+\label{expr_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/expr.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}System.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}elf.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}expr\+Node.\+h\char`\"{}}\newline
+expr.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{expr_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{네임스페이스}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a9f092f5b1dca6a6249fb2c7c8065b031}{Y\+Y\+B\+I\+S\+ON}}~1  /$\ast$ Identify Bison output.  $\ast$/
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a008e051bec0c25081d2800989f86bce7}{T\+O\+K\+E\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}~257
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_aa5a331da77f5956fbc4e825deed94687}{T\+O\+K\+E\+N\+\_\+\+D\+OT}}~258
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_ad4a36807aa7985c539b62086b4607b22}{T\+O\+K\+E\+N\+\_\+\+S\+T\+AR}}~259
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_af6b51f1bfc2736f77d7ad045926f470d}{T\+O\+K\+E\+N\+\_\+\+A\+R\+R\+OW}}~260
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_ada8e4ac2a5428d01fdccddc2b7bf21b3}{T\+O\+K\+E\+N\+\_\+\+A\+D\+DR}}~261
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a6e19bb26b1cf6e33e3021ad463c1abb2}{T\+O\+K\+E\+N\+\_\+\+S\+I\+Z\+E\+OF}}~262
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_afab46303ed22655c1acbdad1c6f78df3}{T\+O\+K\+E\+N\+\_\+\+N\+U\+M\+B\+ER}}~263
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a2c212835823e3c54a8ab6d95c652660e}{const}}
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a6419f3fd69ecb6b7e063410fd4e73b2f}{Y\+Y\+F\+I\+N\+AL}}~26
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_aba73408054d994b60e92732a07381e97}{Y\+Y\+F\+L\+AG}}~-\/32768
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a1aa545586536b973e968b278df8354c7}{Y\+Y\+N\+T\+B\+A\+SE}}~14
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a5741dba92373732d80cfc35b8c1ca8d8}{Y\+Y\+T\+R\+A\+N\+S\+L\+A\+TE}}(x)~((unsigned)(x) $<$= 263 ? yytranslate\mbox{[}x\mbox{]} \+: 19)
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_ae67923760a28e3b7ed3aa2cfaef7f9a2}{Y\+Y\+L\+A\+ST}}~27
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_af45042ce56e04d634420d76caeb2ee73}{Y\+Y\+S\+T\+A\+C\+K\+\_\+\+A\+L\+L\+OC}}~malloc
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a20bf055e53dc4fd5afddfd752a4d1adb}{yyerrok}}~(yyerrstatus = 0)
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a5035d59933b3f5388c44f596145db047}{yyclearin}}~(\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} = \mbox{\hyperlink{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}{Y\+Y\+E\+M\+P\+TY}})
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}{Y\+Y\+E\+M\+P\+TY}}~-\/2
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a3b1e3628411fabac03abe0a337322016}{Y\+Y\+E\+OF}}~0
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_aa6c7a65b580c214b2ea832fd7bdd472e}{Y\+Y\+A\+C\+C\+E\+PT}}~goto yyacceptlab
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a3bcde0b05b9aa4ec5169092d9d211dbd}{Y\+Y\+A\+B\+O\+RT}}~goto yyabortlab
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_af1eef6197be78122699013d0784acc80}{Y\+Y\+E\+R\+R\+OR}}~goto yyerrlab1
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a383d9671b1abd97e4c6f3708d1ca32f3}{Y\+Y\+F\+A\+IL}}~goto yyerrlab
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_ad860e18ca4b79fc589895b531bdb7948}{Y\+Y\+R\+E\+C\+O\+V\+E\+R\+I\+NG}}()~(!!yyerrstatus)
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a96512738393cb8890c9644ca43da79bb}{Y\+Y\+B\+A\+C\+K\+UP}}(token,  value)
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_ad2b58b1851184ddb3b60fede50bc7946}{Y\+Y\+T\+E\+R\+R\+OR}}~1
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a552f295255821fa7dea11b0237e1d61a}{Y\+Y\+E\+R\+R\+C\+O\+DE}}~256
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a0ea34e09602d1ede033f16ba669ef24b}{Y\+Y\+L\+EX}}~\mbox{\hyperlink{expr_8cpp_aa40b27ae32d6d1ae7160bd6256e08eb8}{yylex}}()
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_aeb1508a3a38ec5d64c27e8eca25330b5}{Y\+Y\+I\+N\+I\+T\+D\+E\+P\+TH}}~200
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a14ba2b263c446ffed1c888c4b42ae40c}{Y\+Y\+M\+A\+X\+D\+E\+P\+TH}}~10000
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_af361cce3410c904d52ef257e5bab4bb5}{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG}}
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_a1a96d1056ae0a71a626d06141a3cfe56}{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+D\+E\+CL}}
+\item 
+\#define \mbox{\hyperlink{expr_8cpp_ae46d1441467efb7ec2e8d80a03f942b4}{Y\+Y\+P\+O\+P\+S\+T\+A\+CK}}~(yyvsp-\/-\/, yyssp-\/-\/)
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_a773aa2e81b4feec63f60f490265169a5}{yyerror}} (char $\ast$)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_aa40b27ae32d6d1ae7160bd6256e08eb8}{yylex}} ()
+\item 
+\mbox{\hyperlink{expr_8cpp_ac54716a2e63213a0ca13c29b5f87d0ec}{while}} (\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}-\/-\/ $>$ 0) $\ast$\mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}}++
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_a85eced105c36a233d46ee012feb4604c}{yyparse}} (\mbox{\hyperlink{expr_8cpp_af361cce3410c904d52ef257e5bab4bb5}{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG}}) \mbox{\hyperlink{expr_8cpp_a1a96d1056ae0a71a626d06141a3cfe56}{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+D\+E\+CL}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{expr_8cpp_ad9264b77d56b6971f29739e2bda77f51}{yytext}}
+\item 
+\mbox{\hyperlink{struct_node}{Node}} $\ast$ \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}} = \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}}
+\item 
+\mbox{\hyperlink{expr_node_8h_a2ceb5b985e149f18e018b142cfdd7264}{Y\+Y\+S\+T\+Y\+PE}} \mbox{\hyperlink{expr_8cpp_a539b86ee4bb46824a194f22eb69903d9}{yylval}}
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_a0ea9e3b522e448ac462274fe70e1be82}{yynerrs}}
+\item 
+char $\ast$ \mbox{\hyperlink{expr_8cpp_a765533dfc643627999c751f7e1514664}{from}}
+\item 
+unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}
+\item 
+register char $\ast$ \mbox{\hyperlink{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}{t}} = to
+\item 
+register \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}} = \mbox{\hyperlink{_g_b_a_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}
+\item 
+F\+I\+LE $\ast$ \mbox{\hyperlink{expr_8cpp_a46af646807e0797e72b6e8945e7ea88b}{yyin}}
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{expr_8cpp_a2c212835823e3c54a8ab6d95c652660e}\label{expr_8cpp_a2c212835823e3c54a8ab6d95c652660e}} 
+\index{expr.\+cpp@{expr.\+cpp}!const@{const}}
+\index{const@{const}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{const}{const}}
+{\footnotesize\ttfamily \#define const}
+
+
+
+expr.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_ada8e4ac2a5428d01fdccddc2b7bf21b3}\label{expr_8cpp_ada8e4ac2a5428d01fdccddc2b7bf21b3}} 
+\index{expr.\+cpp@{expr.\+cpp}!T\+O\+K\+E\+N\+\_\+\+A\+D\+DR@{T\+O\+K\+E\+N\+\_\+\+A\+D\+DR}}
+\index{T\+O\+K\+E\+N\+\_\+\+A\+D\+DR@{T\+O\+K\+E\+N\+\_\+\+A\+D\+DR}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+A\+D\+DR}{TOKEN\_ADDR}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+A\+D\+DR~261}
+
+
+
+expr.\+cpp 파일의 11 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_af6b51f1bfc2736f77d7ad045926f470d}\label{expr_8cpp_af6b51f1bfc2736f77d7ad045926f470d}} 
+\index{expr.\+cpp@{expr.\+cpp}!T\+O\+K\+E\+N\+\_\+\+A\+R\+R\+OW@{T\+O\+K\+E\+N\+\_\+\+A\+R\+R\+OW}}
+\index{T\+O\+K\+E\+N\+\_\+\+A\+R\+R\+OW@{T\+O\+K\+E\+N\+\_\+\+A\+R\+R\+OW}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+A\+R\+R\+OW}{TOKEN\_ARROW}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+A\+R\+R\+OW~260}
+
+
+
+expr.\+cpp 파일의 10 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_aa5a331da77f5956fbc4e825deed94687}\label{expr_8cpp_aa5a331da77f5956fbc4e825deed94687}} 
+\index{expr.\+cpp@{expr.\+cpp}!T\+O\+K\+E\+N\+\_\+\+D\+OT@{T\+O\+K\+E\+N\+\_\+\+D\+OT}}
+\index{T\+O\+K\+E\+N\+\_\+\+D\+OT@{T\+O\+K\+E\+N\+\_\+\+D\+OT}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+D\+OT}{TOKEN\_DOT}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+D\+OT~258}
+
+
+
+expr.\+cpp 파일의 8 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a008e051bec0c25081d2800989f86bce7}\label{expr_8cpp_a008e051bec0c25081d2800989f86bce7}} 
+\index{expr.\+cpp@{expr.\+cpp}!T\+O\+K\+E\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{T\+O\+K\+E\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}}
+\index{T\+O\+K\+E\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER@{T\+O\+K\+E\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER}{TOKEN\_IDENTIFIER}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+I\+D\+E\+N\+T\+I\+F\+I\+ER~257}
+
+
+
+expr.\+cpp 파일의 7 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_afab46303ed22655c1acbdad1c6f78df3}\label{expr_8cpp_afab46303ed22655c1acbdad1c6f78df3}} 
+\index{expr.\+cpp@{expr.\+cpp}!T\+O\+K\+E\+N\+\_\+\+N\+U\+M\+B\+ER@{T\+O\+K\+E\+N\+\_\+\+N\+U\+M\+B\+ER}}
+\index{T\+O\+K\+E\+N\+\_\+\+N\+U\+M\+B\+ER@{T\+O\+K\+E\+N\+\_\+\+N\+U\+M\+B\+ER}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+N\+U\+M\+B\+ER}{TOKEN\_NUMBER}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+N\+U\+M\+B\+ER~263}
+
+
+
+expr.\+cpp 파일의 13 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a6e19bb26b1cf6e33e3021ad463c1abb2}\label{expr_8cpp_a6e19bb26b1cf6e33e3021ad463c1abb2}} 
+\index{expr.\+cpp@{expr.\+cpp}!T\+O\+K\+E\+N\+\_\+\+S\+I\+Z\+E\+OF@{T\+O\+K\+E\+N\+\_\+\+S\+I\+Z\+E\+OF}}
+\index{T\+O\+K\+E\+N\+\_\+\+S\+I\+Z\+E\+OF@{T\+O\+K\+E\+N\+\_\+\+S\+I\+Z\+E\+OF}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+S\+I\+Z\+E\+OF}{TOKEN\_SIZEOF}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+S\+I\+Z\+E\+OF~262}
+
+
+
+expr.\+cpp 파일의 12 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_ad4a36807aa7985c539b62086b4607b22}\label{expr_8cpp_ad4a36807aa7985c539b62086b4607b22}} 
+\index{expr.\+cpp@{expr.\+cpp}!T\+O\+K\+E\+N\+\_\+\+S\+T\+AR@{T\+O\+K\+E\+N\+\_\+\+S\+T\+AR}}
+\index{T\+O\+K\+E\+N\+\_\+\+S\+T\+AR@{T\+O\+K\+E\+N\+\_\+\+S\+T\+AR}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{T\+O\+K\+E\+N\+\_\+\+S\+T\+AR}{TOKEN\_STAR}}
+{\footnotesize\ttfamily \#define T\+O\+K\+E\+N\+\_\+\+S\+T\+AR~259}
+
+
+
+expr.\+cpp 파일의 9 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a3bcde0b05b9aa4ec5169092d9d211dbd}\label{expr_8cpp_a3bcde0b05b9aa4ec5169092d9d211dbd}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+A\+B\+O\+RT@{Y\+Y\+A\+B\+O\+RT}}
+\index{Y\+Y\+A\+B\+O\+RT@{Y\+Y\+A\+B\+O\+RT}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+A\+B\+O\+RT}{YYABORT}}
+{\footnotesize\ttfamily \#define Y\+Y\+A\+B\+O\+RT~goto yyabortlab}
+
+
+
+expr.\+cpp 파일의 253 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_aa6c7a65b580c214b2ea832fd7bdd472e}\label{expr_8cpp_aa6c7a65b580c214b2ea832fd7bdd472e}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+A\+C\+C\+E\+PT@{Y\+Y\+A\+C\+C\+E\+PT}}
+\index{Y\+Y\+A\+C\+C\+E\+PT@{Y\+Y\+A\+C\+C\+E\+PT}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+A\+C\+C\+E\+PT}{YYACCEPT}}
+{\footnotesize\ttfamily \#define Y\+Y\+A\+C\+C\+E\+PT~goto yyacceptlab}
+
+
+
+expr.\+cpp 파일의 252 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a96512738393cb8890c9644ca43da79bb}\label{expr_8cpp_a96512738393cb8890c9644ca43da79bb}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+B\+A\+C\+K\+UP@{Y\+Y\+B\+A\+C\+K\+UP}}
+\index{Y\+Y\+B\+A\+C\+K\+UP@{Y\+Y\+B\+A\+C\+K\+UP}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+B\+A\+C\+K\+UP}{YYBACKUP}}
+{\footnotesize\ttfamily \#define Y\+Y\+B\+A\+C\+K\+UP(\begin{DoxyParamCaption}\item[{}]{token,  }\item[{}]{value }\end{DoxyParamCaption})}
+
+{\bfseries 값\+:}
+\begin{DoxyCode}
+\mbox{\hyperlink{arm-new_8h_a93120066fd6daa54150af823953378d1}{do                                                              \(\backslash\)}}
+\mbox{\hyperlink{arm-new_8h_a93120066fd6daa54150af823953378d1}{  if}} (\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} == \mbox{\hyperlink{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}{YYEMPTY}} && yylen == 1)                          \(\backslash\)
+    \{ \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} = (token), \mbox{\hyperlink{expr_8cpp_a539b86ee4bb46824a194f22eb69903d9}{yylval}} = (value);                       \(\backslash\)
+      yychar1 = \mbox{\hyperlink{expr_8cpp_a5741dba92373732d80cfc35b8c1ca8d8}{YYTRANSLATE}} (\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}});                           \(\backslash\)
+      YYPOPSTACK;                                               \(\backslash\)
+      goto yybackup;                                            \(\backslash\)
+    \}                                                           \(\backslash\)
+  else                                                          \(\backslash\)
+    \{ \mbox{\hyperlink{expr_8cpp_a773aa2e81b4feec63f60f490265169a5}{yyerror}} (\textcolor{stringliteral}{"syntax error: cannot back up"}); \mbox{\hyperlink{expr_8cpp_af1eef6197be78122699013d0784acc80}{YYERROR}}; \}      \(\backslash\)
+while (0)
+\end{DoxyCode}
+
+
+expr.\+cpp 파일의 261 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a9f092f5b1dca6a6249fb2c7c8065b031}\label{expr_8cpp_a9f092f5b1dca6a6249fb2c7c8065b031}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+B\+I\+S\+ON@{Y\+Y\+B\+I\+S\+ON}}
+\index{Y\+Y\+B\+I\+S\+ON@{Y\+Y\+B\+I\+S\+ON}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+B\+I\+S\+ON}{YYBISON}}
+{\footnotesize\ttfamily \#define Y\+Y\+B\+I\+S\+ON~1  /$\ast$ Identify Bison output.  $\ast$/}
+
+
+
+expr.\+cpp 파일의 5 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a5035d59933b3f5388c44f596145db047}\label{expr_8cpp_a5035d59933b3f5388c44f596145db047}} 
+\index{expr.\+cpp@{expr.\+cpp}!yyclearin@{yyclearin}}
+\index{yyclearin@{yyclearin}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yyclearin}{yyclearin}}
+{\footnotesize\ttfamily \#define yyclearin~(\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} = \mbox{\hyperlink{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}{Y\+Y\+E\+M\+P\+TY}})}
+
+
+
+expr.\+cpp 파일의 249 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}\label{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+E\+M\+P\+TY@{Y\+Y\+E\+M\+P\+TY}}
+\index{Y\+Y\+E\+M\+P\+TY@{Y\+Y\+E\+M\+P\+TY}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+E\+M\+P\+TY}{YYEMPTY}}
+{\footnotesize\ttfamily \#define Y\+Y\+E\+M\+P\+TY~-\/2}
+
+
+
+expr.\+cpp 파일의 250 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a3b1e3628411fabac03abe0a337322016}\label{expr_8cpp_a3b1e3628411fabac03abe0a337322016}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+E\+OF@{Y\+Y\+E\+OF}}
+\index{Y\+Y\+E\+OF@{Y\+Y\+E\+OF}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+E\+OF}{YYEOF}}
+{\footnotesize\ttfamily \#define Y\+Y\+E\+OF~0}
+
+
+
+expr.\+cpp 파일의 251 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a552f295255821fa7dea11b0237e1d61a}\label{expr_8cpp_a552f295255821fa7dea11b0237e1d61a}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+E\+R\+R\+C\+O\+DE@{Y\+Y\+E\+R\+R\+C\+O\+DE}}
+\index{Y\+Y\+E\+R\+R\+C\+O\+DE@{Y\+Y\+E\+R\+R\+C\+O\+DE}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+E\+R\+R\+C\+O\+DE}{YYERRCODE}}
+{\footnotesize\ttfamily \#define Y\+Y\+E\+R\+R\+C\+O\+DE~256}
+
+
+
+expr.\+cpp 파일의 274 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a20bf055e53dc4fd5afddfd752a4d1adb}\label{expr_8cpp_a20bf055e53dc4fd5afddfd752a4d1adb}} 
+\index{expr.\+cpp@{expr.\+cpp}!yyerrok@{yyerrok}}
+\index{yyerrok@{yyerrok}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yyerrok}{yyerrok}}
+{\footnotesize\ttfamily \#define yyerrok~(yyerrstatus = 0)}
+
+
+
+expr.\+cpp 파일의 248 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_af1eef6197be78122699013d0784acc80}\label{expr_8cpp_af1eef6197be78122699013d0784acc80}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+E\+R\+R\+OR@{Y\+Y\+E\+R\+R\+OR}}
+\index{Y\+Y\+E\+R\+R\+OR@{Y\+Y\+E\+R\+R\+OR}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+E\+R\+R\+OR}{YYERROR}}
+{\footnotesize\ttfamily \#define Y\+Y\+E\+R\+R\+OR~goto yyerrlab1}
+
+
+
+expr.\+cpp 파일의 254 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a383d9671b1abd97e4c6f3708d1ca32f3}\label{expr_8cpp_a383d9671b1abd97e4c6f3708d1ca32f3}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+F\+A\+IL@{Y\+Y\+F\+A\+IL}}
+\index{Y\+Y\+F\+A\+IL@{Y\+Y\+F\+A\+IL}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+F\+A\+IL}{YYFAIL}}
+{\footnotesize\ttfamily \#define Y\+Y\+F\+A\+IL~goto yyerrlab}
+
+
+
+expr.\+cpp 파일의 259 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a6419f3fd69ecb6b7e063410fd4e73b2f}\label{expr_8cpp_a6419f3fd69ecb6b7e063410fd4e73b2f}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+F\+I\+N\+AL@{Y\+Y\+F\+I\+N\+AL}}
+\index{Y\+Y\+F\+I\+N\+AL@{Y\+Y\+F\+I\+N\+AL}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+F\+I\+N\+AL}{YYFINAL}}
+{\footnotesize\ttfamily \#define Y\+Y\+F\+I\+N\+AL~26}
+
+
+
+expr.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_aba73408054d994b60e92732a07381e97}\label{expr_8cpp_aba73408054d994b60e92732a07381e97}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+F\+L\+AG@{Y\+Y\+F\+L\+AG}}
+\index{Y\+Y\+F\+L\+AG@{Y\+Y\+F\+L\+AG}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+F\+L\+AG}{YYFLAG}}
+{\footnotesize\ttfamily \#define Y\+Y\+F\+L\+AG~-\/32768}
+
+
+
+expr.\+cpp 파일의 53 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_aeb1508a3a38ec5d64c27e8eca25330b5}\label{expr_8cpp_aeb1508a3a38ec5d64c27e8eca25330b5}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+I\+N\+I\+T\+D\+E\+P\+TH@{Y\+Y\+I\+N\+I\+T\+D\+E\+P\+TH}}
+\index{Y\+Y\+I\+N\+I\+T\+D\+E\+P\+TH@{Y\+Y\+I\+N\+I\+T\+D\+E\+P\+TH}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+I\+N\+I\+T\+D\+E\+P\+TH}{YYINITDEPTH}}
+{\footnotesize\ttfamily \#define Y\+Y\+I\+N\+I\+T\+D\+E\+P\+TH~200}
+
+
+
+expr.\+cpp 파일의 321 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_ae67923760a28e3b7ed3aa2cfaef7f9a2}\label{expr_8cpp_ae67923760a28e3b7ed3aa2cfaef7f9a2}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+L\+A\+ST@{Y\+Y\+L\+A\+ST}}
+\index{Y\+Y\+L\+A\+ST@{Y\+Y\+L\+A\+ST}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+L\+A\+ST}{YYLAST}}
+{\footnotesize\ttfamily \#define Y\+Y\+L\+A\+ST~27}
+
+
+
+expr.\+cpp 파일의 150 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a0ea34e09602d1ede033f16ba669ef24b}\label{expr_8cpp_a0ea34e09602d1ede033f16ba669ef24b}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+L\+EX@{Y\+Y\+L\+EX}}
+\index{Y\+Y\+L\+EX@{Y\+Y\+L\+EX}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+L\+EX}{YYLEX}}
+{\footnotesize\ttfamily \#define Y\+Y\+L\+EX~\mbox{\hyperlink{expr_8cpp_aa40b27ae32d6d1ae7160bd6256e08eb8}{yylex}}()}
+
+
+
+expr.\+cpp 파일의 277 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a14ba2b263c446ffed1c888c4b42ae40c}\label{expr_8cpp_a14ba2b263c446ffed1c888c4b42ae40c}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+M\+A\+X\+D\+E\+P\+TH@{Y\+Y\+M\+A\+X\+D\+E\+P\+TH}}
+\index{Y\+Y\+M\+A\+X\+D\+E\+P\+TH@{Y\+Y\+M\+A\+X\+D\+E\+P\+TH}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+M\+A\+X\+D\+E\+P\+TH}{YYMAXDEPTH}}
+{\footnotesize\ttfamily \#define Y\+Y\+M\+A\+X\+D\+E\+P\+TH~10000}
+
+
+
+expr.\+cpp 파일의 332 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a1aa545586536b973e968b278df8354c7}\label{expr_8cpp_a1aa545586536b973e968b278df8354c7}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+N\+T\+B\+A\+SE@{Y\+Y\+N\+T\+B\+A\+SE}}
+\index{Y\+Y\+N\+T\+B\+A\+SE@{Y\+Y\+N\+T\+B\+A\+SE}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+N\+T\+B\+A\+SE}{YYNTBASE}}
+{\footnotesize\ttfamily \#define Y\+Y\+N\+T\+B\+A\+SE~14}
+
+
+
+expr.\+cpp 파일의 54 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_af361cce3410c904d52ef257e5bab4bb5}\label{expr_8cpp_af361cce3410c904d52ef257e5bab4bb5}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG@{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG}}
+\index{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG@{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG}{YYPARSE\_PARAM\_ARG}}
+{\footnotesize\ttfamily \#define Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG}
+
+
+
+expr.\+cpp 파일의 396 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a1a96d1056ae0a71a626d06141a3cfe56}\label{expr_8cpp_a1a96d1056ae0a71a626d06141a3cfe56}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+D\+E\+CL@{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+D\+E\+CL}}
+\index{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+D\+E\+CL@{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+D\+E\+CL}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+D\+E\+CL}{YYPARSE\_PARAM\_DECL}}
+{\footnotesize\ttfamily \#define Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+D\+E\+CL}
+
+
+
+expr.\+cpp 파일의 397 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_ae46d1441467efb7ec2e8d80a03f942b4}\label{expr_8cpp_ae46d1441467efb7ec2e8d80a03f942b4}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+P\+O\+P\+S\+T\+A\+CK@{Y\+Y\+P\+O\+P\+S\+T\+A\+CK}}
+\index{Y\+Y\+P\+O\+P\+S\+T\+A\+CK@{Y\+Y\+P\+O\+P\+S\+T\+A\+CK}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+P\+O\+P\+S\+T\+A\+CK}{YYPOPSTACK}}
+{\footnotesize\ttfamily \#define Y\+Y\+P\+O\+P\+S\+T\+A\+CK~(yyvsp-\/-\/, yyssp-\/-\/)}
+
+\mbox{\Hypertarget{expr_8cpp_ad860e18ca4b79fc589895b531bdb7948}\label{expr_8cpp_ad860e18ca4b79fc589895b531bdb7948}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+R\+E\+C\+O\+V\+E\+R\+I\+NG@{Y\+Y\+R\+E\+C\+O\+V\+E\+R\+I\+NG}}
+\index{Y\+Y\+R\+E\+C\+O\+V\+E\+R\+I\+NG@{Y\+Y\+R\+E\+C\+O\+V\+E\+R\+I\+NG}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+R\+E\+C\+O\+V\+E\+R\+I\+NG}{YYRECOVERING}}
+{\footnotesize\ttfamily \#define Y\+Y\+R\+E\+C\+O\+V\+E\+R\+I\+NG(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(!!yyerrstatus)}
+
+
+
+expr.\+cpp 파일의 260 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_af45042ce56e04d634420d76caeb2ee73}\label{expr_8cpp_af45042ce56e04d634420d76caeb2ee73}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+S\+T\+A\+C\+K\+\_\+\+A\+L\+L\+OC@{Y\+Y\+S\+T\+A\+C\+K\+\_\+\+A\+L\+L\+OC}}
+\index{Y\+Y\+S\+T\+A\+C\+K\+\_\+\+A\+L\+L\+OC@{Y\+Y\+S\+T\+A\+C\+K\+\_\+\+A\+L\+L\+OC}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+S\+T\+A\+C\+K\+\_\+\+A\+L\+L\+OC}{YYSTACK\_ALLOC}}
+{\footnotesize\ttfamily \#define Y\+Y\+S\+T\+A\+C\+K\+\_\+\+A\+L\+L\+OC~malloc}
+
+
+
+expr.\+cpp 파일의 241 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_ad2b58b1851184ddb3b60fede50bc7946}\label{expr_8cpp_ad2b58b1851184ddb3b60fede50bc7946}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+T\+E\+R\+R\+OR@{Y\+Y\+T\+E\+R\+R\+OR}}
+\index{Y\+Y\+T\+E\+R\+R\+OR@{Y\+Y\+T\+E\+R\+R\+OR}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+T\+E\+R\+R\+OR}{YYTERROR}}
+{\footnotesize\ttfamily \#define Y\+Y\+T\+E\+R\+R\+OR~1}
+
+
+
+expr.\+cpp 파일의 273 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a5741dba92373732d80cfc35b8c1ca8d8}\label{expr_8cpp_a5741dba92373732d80cfc35b8c1ca8d8}} 
+\index{expr.\+cpp@{expr.\+cpp}!Y\+Y\+T\+R\+A\+N\+S\+L\+A\+TE@{Y\+Y\+T\+R\+A\+N\+S\+L\+A\+TE}}
+\index{Y\+Y\+T\+R\+A\+N\+S\+L\+A\+TE@{Y\+Y\+T\+R\+A\+N\+S\+L\+A\+TE}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{Y\+Y\+T\+R\+A\+N\+S\+L\+A\+TE}{YYTRANSLATE}}
+{\footnotesize\ttfamily \#define Y\+Y\+T\+R\+A\+N\+S\+L\+A\+TE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})~((unsigned)(x) $<$= 263 ? yytranslate\mbox{[}x\mbox{]} \+: 19)}
+
+
+
+expr.\+cpp 파일의 56 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{expr_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{expr_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{expr.\+cpp@{expr.\+cpp}!main@{main}}
+\index{main@{main}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} main (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+expr.\+cpp 파일의 987 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+988 \{
+989   \textcolor{comment}{//  yydebug = 1;}
+990   ++argv, --argc;
+991   \textcolor{keywordflow}{if}(argc > 0)
+992     \mbox{\hyperlink{expr_8cpp_a46af646807e0797e72b6e8945e7ea88b}{yyin}} = fopen(argv[0], \textcolor{stringliteral}{"r"});
+993   \textcolor{keywordflow}{else}
+994     \mbox{\hyperlink{expr_8cpp_a46af646807e0797e72b6e8945e7ea88b}{yyin}} = stdin;
+995   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{expr_8cpp_a85eced105c36a233d46ee012feb4604c}{yyparse}}())
+996     \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}}->\mbox{\hyperlink{struct_node_a8023bbc1d73f9273930ef05ef20f7404}{print}}();
+997 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{expr_8cpp_a3c04138a5bfe5d72780bb7e82a18e627_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_8cpp_ac54716a2e63213a0ca13c29b5f87d0ec}\label{expr_8cpp_ac54716a2e63213a0ca13c29b5f87d0ec}} 
+\index{expr.\+cpp@{expr.\+cpp}!while@{while}}
+\index{while@{while}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{while()}{while()}}
+{\footnotesize\ttfamily while (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}-\/-\/}]{,  }\item[{0}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr_8cpp_a773aa2e81b4feec63f60f490265169a5}\label{expr_8cpp_a773aa2e81b4feec63f60f490265169a5}} 
+\index{expr.\+cpp@{expr.\+cpp}!yyerror@{yyerror}}
+\index{yyerror@{yyerror}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yyerror()}{yyerror()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} yyerror (\begin{DoxyParamCaption}\item[{char $\ast$}]{s }\end{DoxyParamCaption})}
+
+
+
+expr.\+cpp 파일의 980 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+981 \{
+982   \textcolor{keywordflow}{return} 0;
+983 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{expr_8cpp_a773aa2e81b4feec63f60f490265169a5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{expr_8cpp_aa40b27ae32d6d1ae7160bd6256e08eb8}\label{expr_8cpp_aa40b27ae32d6d1ae7160bd6256e08eb8}} 
+\index{expr.\+cpp@{expr.\+cpp}!yylex@{yylex}}
+\index{yylex@{yylex}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yylex()}{yylex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} yylex (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{expr_8cpp_a85eced105c36a233d46ee012feb4604c}\label{expr_8cpp_a85eced105c36a233d46ee012feb4604c}} 
+\index{expr.\+cpp@{expr.\+cpp}!yyparse@{yyparse}}
+\index{yyparse@{yyparse}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yyparse()}{yyparse()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} yyparse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{expr_8cpp_af361cce3410c904d52ef257e5bab4bb5}{Y\+Y\+P\+A\+R\+S\+E\+\_\+\+P\+A\+R\+A\+M\+\_\+\+A\+RG}}}]{ }\end{DoxyParamCaption})}
+
+
+
+expr.\+cpp 파일의 410 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+412 \{
+413   \textcolor{keyword}{register} \textcolor{keywordtype}{int} yystate;
+414   \textcolor{keyword}{register} \textcolor{keywordtype}{int} yyn;
+415   \textcolor{keyword}{register} \textcolor{keywordtype}{short} *yyssp;
+416   \textcolor{keyword}{register} \mbox{\hyperlink{expr_8cpp_8h_a2ceb5b985e149f18e018b142cfdd7264}{YYSTYPE}} *yyvsp;
+417   \textcolor{keywordtype}{int} yyerrstatus;      \textcolor{comment}{/*  number of tokens to shift before error messages enabled */}
+418   \textcolor{keywordtype}{int} yychar1 = 0;              \textcolor{comment}{/*  lookahead token as an internal (translated) token number */}
+419 
+420   \textcolor{keywordtype}{short} yyssa[\mbox{\hyperlink{expr_8cpp_aeb1508a3a38ec5d64c27e8eca25330b5}{YYINITDEPTH}}];     \textcolor{comment}{/*  the state stack                     */}
+421   \mbox{\hyperlink{expr_8cpp_8h_a2ceb5b985e149f18e018b142cfdd7264}{YYSTYPE}} yyvsa[\mbox{\hyperlink{expr_8cpp_aeb1508a3a38ec5d64c27e8eca25330b5}{YYINITDEPTH}}];   \textcolor{comment}{/*  the semantic value stack            */}
+422 
+423   \textcolor{keywordtype}{short} *yyss = yyssa;          \textcolor{comment}{/*  refer to the stacks thru separate pointers */}
+424   \mbox{\hyperlink{expr_8cpp_8h_a2ceb5b985e149f18e018b142cfdd7264}{YYSTYPE}} *yyvs = yyvsa;        \textcolor{comment}{/*  to allow yyoverflow to reallocate them elsewhere */}
+425 
+426 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+427   YYLTYPE yylsa[\mbox{\hyperlink{expr_8cpp_aeb1508a3a38ec5d64c27e8eca25330b5}{YYINITDEPTH}}];   \textcolor{comment}{/*  the location stack                  */}
+428   YYLTYPE *yyls = yylsa;
+429   YYLTYPE *yylsp;
+430 
+431 \textcolor{preprocessor}{#define YYPOPSTACK   (yyvsp--, yyssp--, yylsp--)}
+432 \textcolor{preprocessor}{#else}
+433 \textcolor{preprocessor}{#define YYPOPSTACK   (yyvsp--, yyssp--)}
+434 \textcolor{preprocessor}{#endif}
+435 
+436   \textcolor{keywordtype}{int} yystacksize = \mbox{\hyperlink{expr_8cpp_aeb1508a3a38ec5d64c27e8eca25330b5}{YYINITDEPTH}};
+437   \textcolor{keywordtype}{int} yyfree\_stacks = 0;
+438 
+439 \textcolor{preprocessor}{#ifdef YYPURE}
+440   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}};
+441   \mbox{\hyperlink{expr_8cpp_8h_a2ceb5b985e149f18e018b142cfdd7264}{YYSTYPE}} \mbox{\hyperlink{expr_8cpp_a539b86ee4bb46824a194f22eb69903d9}{yylval}};
+442   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a0ea9e3b522e448ac462274fe70e1be82}{yynerrs}};
+443 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+444   YYLTYPE yylloc;
+445 \textcolor{preprocessor}{#endif}
+446 \textcolor{preprocessor}{#endif}
+447 
+448   \mbox{\hyperlink{expr_8cpp_8h_a2ceb5b985e149f18e018b142cfdd7264}{YYSTYPE}} yyval;                \textcolor{comment}{/*  the variable used to return         */}
+449                                 \textcolor{comment}{/*  semantic values from the action     */}
+450                                 \textcolor{comment}{/*  routines                            */}
+451 
+452   \textcolor{keywordtype}{int} yylen;
+453 
+454 \textcolor{preprocessor}{#if YYDEBUG != 0}
+455   \textcolor{keywordflow}{if} (yydebug)
+456     fprintf(stderr, \textcolor{stringliteral}{"Starting parse\(\backslash\)n"});
+457 \textcolor{preprocessor}{#endif}
+458 
+459   yystate = 0;
+460   yyerrstatus = 0;
+461   \mbox{\hyperlink{expr_8cpp_a0ea9e3b522e448ac462274fe70e1be82}{yynerrs}} = 0;
+462   \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} = \mbox{\hyperlink{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}{YYEMPTY}};             \textcolor{comment}{/* Cause a token to be read.  */}
+463 
+464   \textcolor{comment}{/* Initialize stack pointers.}
+465 \textcolor{comment}{     Waste one element of value and location stack}
+466 \textcolor{comment}{     so that they stay on the same level as the state stack.}
+467 \textcolor{comment}{     The wasted elements are never initialized.  */}
+468 
+469   yyssp = yyss - 1;
+470   yyvsp = yyvs;
+471 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+472   yylsp = yyls;
+473 \textcolor{preprocessor}{#endif}
+474 
+475 \textcolor{comment}{/* Push a new state, which is found in  yystate  .  */}
+476 \textcolor{comment}{/* In all cases, when you get here, the value and location stacks}
+477 \textcolor{comment}{   have just been pushed. so pushing a state here evens the stacks.  */}
+478 yynewstate:
+479 
+480   *++yyssp = yystate;
+481 
+482   \textcolor{keywordflow}{if} (yyssp >= yyss + yystacksize - 1)
+483     \{
+484       \textcolor{comment}{/* Give user a chance to reallocate the stack */}
+485       \textcolor{comment}{/* Use copies of these so that the &'s don't force the real ones into memory. */}
+486       \mbox{\hyperlink{expr_8cpp_8h_a2ceb5b985e149f18e018b142cfdd7264}{YYSTYPE}} *yyvs1 = yyvs;
+487       \textcolor{keywordtype}{short} *yyss1 = yyss;
+488 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+489       YYLTYPE *yyls1 = yyls;
+490 \textcolor{preprocessor}{#endif}
+491 
+492       \textcolor{comment}{/* Get the current used size of the three stacks, in elements.  */}
+493       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = yyssp - yyss + 1;
+494 
+495 \textcolor{preprocessor}{#ifdef yyoverflow}
+496       \textcolor{comment}{/* Each stack pointer address is followed by the size of}
+497 \textcolor{comment}{         the data in use in that stack, in bytes.  */}
+498 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+499       \textcolor{comment}{/* This used to be a conditional around just the two extra args,}
+500 \textcolor{comment}{         but that might be undefined if yyoverflow is a macro.  */}
+501       yyoverflow(\textcolor{stringliteral}{"parser stack overflow"},
+502                  &yyss1, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} * \textcolor{keyword}{sizeof} (*yyssp),
+503                  &yyvs1, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} * \textcolor{keyword}{sizeof} (*yyvsp),
+504                  &yyls1, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} * \textcolor{keyword}{sizeof} (*yylsp),
+505                  &yystacksize);
+506 \textcolor{preprocessor}{#else}
+507       yyoverflow(\textcolor{stringliteral}{"parser stack overflow"},
+508                  &yyss1, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} * \textcolor{keyword}{sizeof} (*yyssp),
+509                  &yyvs1, \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} * \textcolor{keyword}{sizeof} (*yyvsp),
+510                  &yystacksize);
+511 \textcolor{preprocessor}{#endif}
+512 
+513       yyss = yyss1; yyvs = yyvs1;
+514 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+515       yyls = yyls1;
+516 \textcolor{preprocessor}{#endif}
+517 \textcolor{preprocessor}{#else }\textcolor{comment}{/* no yyoverflow */}\textcolor{preprocessor}{}
+518       \textcolor{comment}{/* Extend the stack our own way.  */}
+519       \textcolor{keywordflow}{if} (yystacksize >= \mbox{\hyperlink{expr_8cpp_a14ba2b263c446ffed1c888c4b42ae40c}{YYMAXDEPTH}})
+520         \{
+521           \mbox{\hyperlink{expr_8cpp_a773aa2e81b4feec63f60f490265169a5}{yyerror}}(\textcolor{stringliteral}{"parser stack overflow"});
+522           \textcolor{keywordflow}{if} (yyfree\_stacks)
+523             \{
+524               free (yyss);
+525               free (yyvs);
+526 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+527               free (yyls);
+528 \textcolor{preprocessor}{#endif}
+529             \}
+530           \textcolor{keywordflow}{return} 2;
+531         \}
+532       yystacksize *= 2;
+533       \textcolor{keywordflow}{if} (yystacksize > \mbox{\hyperlink{expr_8cpp_a14ba2b263c446ffed1c888c4b42ae40c}{YYMAXDEPTH}})
+534         yystacksize = \mbox{\hyperlink{expr_8cpp_a14ba2b263c446ffed1c888c4b42ae40c}{YYMAXDEPTH}};
+535 \textcolor{preprocessor}{#ifndef YYSTACK\_USE\_ALLOCA}
+536       yyfree\_stacks = 1;
+537 \textcolor{preprocessor}{#endif}
+538       yyss = (\textcolor{keywordtype}{short} *) \mbox{\hyperlink{expr_8cpp_af45042ce56e04d634420d76caeb2ee73}{YYSTACK\_ALLOC}} (yystacksize * \textcolor{keyword}{sizeof} (*yyssp));
+539       \_\_yy\_memcpy ((\textcolor{keywordtype}{char} *)yyss, (\textcolor{keywordtype}{char} *)yyss1,
+540                    \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} * (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) \textcolor{keyword}{sizeof} (*yyssp));
+541       yyvs = (\mbox{\hyperlink{expr_8cpp_8h_a2ceb5b985e149f18e018b142cfdd7264}{YYSTYPE}} *) \mbox{\hyperlink{expr_8cpp_af45042ce56e04d634420d76caeb2ee73}{YYSTACK\_ALLOC}} (yystacksize * \textcolor{keyword}{sizeof} (*yyvsp));
+542       \_\_yy\_memcpy ((\textcolor{keywordtype}{char} *)yyvs, (\textcolor{keywordtype}{char} *)yyvs1,
+543                    \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} * (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) \textcolor{keyword}{sizeof} (*yyvsp));
+544 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+545       yyls = (YYLTYPE *) \mbox{\hyperlink{expr_8cpp_af45042ce56e04d634420d76caeb2ee73}{YYSTACK\_ALLOC}} (yystacksize * \textcolor{keyword}{sizeof} (*yylsp));
+546       \_\_yy\_memcpy ((\textcolor{keywordtype}{char} *)yyls, (\textcolor{keywordtype}{char} *)yyls1,
+547                    \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} * (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) \textcolor{keyword}{sizeof} (*yylsp));
+548 \textcolor{preprocessor}{#endif}
+549 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* no yyoverflow */}\textcolor{preprocessor}{}
+550 
+551       yyssp = yyss + \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} - 1;
+552       yyvsp = yyvs + \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} - 1;
+553 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+554       yylsp = yyls + \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} - 1;
+555 \textcolor{preprocessor}{#endif}
+556 
+557 \textcolor{preprocessor}{#if YYDEBUG != 0}
+558       \textcolor{keywordflow}{if} (yydebug)
+559         fprintf(stderr, \textcolor{stringliteral}{"Stack size increased to %d\(\backslash\)n"}, yystacksize);
+560 \textcolor{preprocessor}{#endif}
+561 
+562       \textcolor{keywordflow}{if} (yyssp >= yyss + yystacksize - 1)
+563         \mbox{\hyperlink{expr_8cpp_a3bcde0b05b9aa4ec5169092d9d211dbd}{YYABORT}};
+564     \}
+565 
+566 \textcolor{preprocessor}{#if YYDEBUG != 0}
+567   \textcolor{keywordflow}{if} (yydebug)
+568     fprintf(stderr, \textcolor{stringliteral}{"Entering state %d\(\backslash\)n"}, yystate);
+569 \textcolor{preprocessor}{#endif}
+570 
+571   \textcolor{keywordflow}{goto} yybackup;
+572  yybackup:
+573 
+574 \textcolor{comment}{/* Do appropriate processing given the current state.  */}
+575 \textcolor{comment}{/* Read a lookahead token if we need one and don't already have one.  */}
+576 \textcolor{comment}{/* yyresume: */}
+577 
+578   \textcolor{comment}{/* First try to decide what to do without reference to lookahead token.  */}
+579 
+580   yyn = yypact[yystate];
+581   \textcolor{keywordflow}{if} (yyn == \mbox{\hyperlink{expr_8cpp_aba73408054d994b60e92732a07381e97}{YYFLAG}})
+582     \textcolor{keywordflow}{goto} yydefault;
+583 
+584   \textcolor{comment}{/* Not known => get a lookahead token if don't already have one.  */}
+585 
+586   \textcolor{comment}{/* yychar is either YYEMPTY or YYEOF}
+587 \textcolor{comment}{     or a valid token in external form.  */}
+588 
+589   \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} == \mbox{\hyperlink{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}{YYEMPTY}})
+590     \{
+591 \textcolor{preprocessor}{#if YYDEBUG != 0}
+592       \textcolor{keywordflow}{if} (yydebug)
+593         fprintf(stderr, \textcolor{stringliteral}{"Reading a token: "});
+594 \textcolor{preprocessor}{#endif}
+595       \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} = \mbox{\hyperlink{expr_8cpp_a0ea34e09602d1ede033f16ba669ef24b}{YYLEX}};
+596     \}
+597 
+598   \textcolor{comment}{/* Convert token to internal form (in yychar1) for indexing tables with */}
+599 
+600   \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} <= 0)              \textcolor{comment}{/* This means end of input. */}
+601     \{
+602       yychar1 = 0;
+603       \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} = \mbox{\hyperlink{expr_8cpp_a3b1e3628411fabac03abe0a337322016}{YYEOF}};           \textcolor{comment}{/* Don't call YYLEX any more */}
+604 
+605 \textcolor{preprocessor}{#if YYDEBUG != 0}
+606       \textcolor{keywordflow}{if} (yydebug)
+607         fprintf(stderr, \textcolor{stringliteral}{"Now at end of input.\(\backslash\)n"});
+608 \textcolor{preprocessor}{#endif}
+609     \}
+610   \textcolor{keywordflow}{else}
+611     \{
+612       yychar1 = \mbox{\hyperlink{expr_8cpp_a5741dba92373732d80cfc35b8c1ca8d8}{YYTRANSLATE}}(\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}});
+613 
+614 \textcolor{preprocessor}{#if YYDEBUG != 0}
+615       \textcolor{keywordflow}{if} (yydebug)
+616         \{
+617           fprintf (stderr, \textcolor{stringliteral}{"Next token is %d (%s"}, \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}}, yytname[yychar1]);
+618           \textcolor{comment}{/* Give the individual parser a way to print the precise meaning}
+619 \textcolor{comment}{             of a token, for further debugging info.  */}
+620 \textcolor{preprocessor}{#ifdef YYPRINT}
+621           YYPRINT (stderr, \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}}, \mbox{\hyperlink{expr_8cpp_a539b86ee4bb46824a194f22eb69903d9}{yylval}});
+622 \textcolor{preprocessor}{#endif}
+623           fprintf (stderr, \textcolor{stringliteral}{")\(\backslash\)n"});
+624         \}
+625 \textcolor{preprocessor}{#endif}
+626     \}
+627 
+628   yyn += yychar1;
+629   \textcolor{keywordflow}{if} (yyn < 0 || yyn > \mbox{\hyperlink{expr_8cpp_ae67923760a28e3b7ed3aa2cfaef7f9a2}{YYLAST}} || yycheck[yyn] != yychar1)
+630     \textcolor{keywordflow}{goto} yydefault;
+631 
+632   yyn = yytable[yyn];
+633 
+634   \textcolor{comment}{/* yyn is what to do for this token type in this state.}
+635 \textcolor{comment}{     Negative => reduce, -yyn is rule number.}
+636 \textcolor{comment}{     Positive => shift, yyn is new state.}
+637 \textcolor{comment}{       New state is final state => don't bother to shift,}
+638 \textcolor{comment}{       just return success.}
+639 \textcolor{comment}{     0, or most negative number => error.  */}
+640 
+641   \textcolor{keywordflow}{if} (yyn < 0)
+642     \{
+643       \textcolor{keywordflow}{if} (yyn == \mbox{\hyperlink{expr_8cpp_aba73408054d994b60e92732a07381e97}{YYFLAG}})
+644         \textcolor{keywordflow}{goto} yyerrlab;
+645       yyn = -yyn;
+646       \textcolor{keywordflow}{goto} yyreduce;
+647     \}
+648   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (yyn == 0)
+649     \textcolor{keywordflow}{goto} yyerrlab;
+650 
+651   \textcolor{keywordflow}{if} (yyn == \mbox{\hyperlink{expr_8cpp_a6419f3fd69ecb6b7e063410fd4e73b2f}{YYFINAL}})
+652     \mbox{\hyperlink{expr_8cpp_aa6c7a65b580c214b2ea832fd7bdd472e}{YYACCEPT}};
+653 
+654   \textcolor{comment}{/* Shift the lookahead token.  */}
+655 
+656 \textcolor{preprocessor}{#if YYDEBUG != 0}
+657   \textcolor{keywordflow}{if} (yydebug)
+658     fprintf(stderr, \textcolor{stringliteral}{"Shifting token %d (%s), "}, \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}}, yytname[yychar1]);
+659 \textcolor{preprocessor}{#endif}
+660 
+661   \textcolor{comment}{/* Discard the token being shifted unless it is eof.  */}
+662   \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} != \mbox{\hyperlink{expr_8cpp_a3b1e3628411fabac03abe0a337322016}{YYEOF}})
+663     \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} = \mbox{\hyperlink{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}{YYEMPTY}};
+664 
+665   *++yyvsp = \mbox{\hyperlink{expr_8cpp_a539b86ee4bb46824a194f22eb69903d9}{yylval}};
+666 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+667   *++yylsp = yylloc;
+668 \textcolor{preprocessor}{#endif}
+669 
+670   \textcolor{comment}{/* count tokens shifted since error; after three, turn off error status.  */}
+671   \textcolor{keywordflow}{if} (yyerrstatus) yyerrstatus--;
+672 
+673   yystate = yyn;
+674   \textcolor{keywordflow}{goto} yynewstate;
+675 
+676 \textcolor{comment}{/* Do the default action for the current state.  */}
+677 yydefault:
+678 
+679   yyn = yydefact[yystate];
+680   \textcolor{keywordflow}{if} (yyn == 0)
+681     \textcolor{keywordflow}{goto} yyerrlab;
+682 
+683 \textcolor{comment}{/* Do a reduction.  yyn is the number of a rule to reduce with.  */}
+684 yyreduce:
+685   yylen = yyr2[yyn];
+686   \textcolor{keywordflow}{if} (yylen > 0)
+687     yyval = yyvsp[1-yylen]; \textcolor{comment}{/* implement default value of the action */}
+688 
+689 \textcolor{preprocessor}{#if YYDEBUG != 0}
+690   \textcolor{keywordflow}{if} (yydebug)
+691     \{
+692       \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}};
+693 
+694       fprintf (stderr, \textcolor{stringliteral}{"Reducing via rule %d (line %d), "},
+695                yyn, yyrline[yyn]);
+696 
+697       \textcolor{comment}{/* Print the symbols being reduced, and their result.  */}
+698       \textcolor{keywordflow}{for} (\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}} = yyprhs[yyn]; yyrhs[\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}] > 0; \mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}++)
+699         fprintf (stderr, \textcolor{stringliteral}{"%s "}, yytname[yyrhs[\mbox{\hyperlink{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}{i}}]]);
+700       fprintf (stderr, \textcolor{stringliteral}{" -> %s\(\backslash\)n"}, yytname[yyr1[yyn]]);
+701     \}
+702 \textcolor{preprocessor}{#endif}
+703 
+704 
+705   \textcolor{keywordflow}{switch} (yyn) \{
+706 
+707 \textcolor{keywordflow}{case} 1:
+708 \textcolor{preprocessor}{#line 32 "expr.y"}
+709 \{ \mbox{\hyperlink{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}{result}} = yyvsp[0]; ;
+710     \textcolor{keywordflow}{break};\}
+711 \textcolor{keywordflow}{case} 2:
+712 \textcolor{preprocessor}{#line 36 "expr.y"}
+713 \{ yyval = yyvsp[0]; ;
+714     \textcolor{keywordflow}{break};\}
+715 \textcolor{keywordflow}{case} 3:
+716 \textcolor{preprocessor}{#line 37 "expr.y"}
+717 \{ yyval = yyvsp[-1]; ;
+718     \textcolor{keywordflow}{break};\}
+719 \textcolor{keywordflow}{case} 4:
+720 \textcolor{preprocessor}{#line 38 "expr.y"}
+721 \{ yyval = \mbox{\hyperlink{expr_node_8cpp_af7ba6fde8111ec596c68254ef68be953}{exprNodeDot}}(yyvsp[-2], yyvsp[0]); ;
+722     \textcolor{keywordflow}{break};\}
+723 \textcolor{keywordflow}{case} 5:
+724 \textcolor{preprocessor}{#line 39 "expr.y"}
+725 \{ yyval = \mbox{\hyperlink{expr_node_8cpp_a2dc9b0661cbb258e1151849b07e08d2f}{exprNodeArrow}}(yyvsp[-2], yyvsp[0]); ;
+726     \textcolor{keywordflow}{break};\}
+727 \textcolor{keywordflow}{case} 6:
+728 \textcolor{preprocessor}{#line 40 "expr.y"}
+729 \{ yyval = \mbox{\hyperlink{expr_node_8cpp_a6de9efbd317d8d2a1ec9b0fca47b6bb9}{exprNodeArray}}(yyvsp[-3], yyvsp[-1]); ;
+730     \textcolor{keywordflow}{break};\}
+731 \textcolor{keywordflow}{case} 7:
+732 \textcolor{preprocessor}{#line 43 "expr.y"}
+733 \{ yyval = yyvsp[0]; ;
+734     \textcolor{keywordflow}{break};\}
+735 \textcolor{keywordflow}{case} 8:
+736 \textcolor{preprocessor}{#line 44 "expr.y"}
+737 \{ yyval = \mbox{\hyperlink{expr_node_8cpp_a3dcb5d0d4b7bf0e46b34a14d37a63b91}{exprNodeStar}}(yyvsp[0]); ;
+738     \textcolor{keywordflow}{break};\}
+739 \textcolor{keywordflow}{case} 9:
+740 \textcolor{preprocessor}{#line 45 "expr.y"}
+741 \{ yyval = \mbox{\hyperlink{expr_node_8cpp_adad03237d5fd81686b62d26ae3db718c}{exprNodeAddr}}(yyvsp[0]); ;
+742     \textcolor{keywordflow}{break};\}
+743 \textcolor{keywordflow}{case} 10:
+744 \textcolor{preprocessor}{#line 46 "expr.y"}
+745 \{ yyval = \mbox{\hyperlink{expr_node_8cpp_ab5572fe7096923bbd710708463787f7a}{exprNodeSizeof}}(yyvsp[-1]); ;
+746     \textcolor{keywordflow}{break};\}
+747 \textcolor{keywordflow}{case} 11:
+748 \textcolor{preprocessor}{#line 50 "expr.y"}
+749 \{ yyval = \mbox{\hyperlink{expr_node_8cpp_a4c3a5088d5f8a76193446258f409174a}{exprNodeNumber}}(); ;
+750     \textcolor{keywordflow}{break};\}
+751 \textcolor{keywordflow}{case} 12:
+752 \textcolor{preprocessor}{#line 54 "expr.y"}
+753 \{yyval = \mbox{\hyperlink{expr_node_8cpp_ad7a00e4f854419340539bc9b915c9f63}{exprNodeIdentifier}}(); ;
+754     \textcolor{keywordflow}{break};\}
+755 \}
+756    \textcolor{comment}{/* the action file gets copied in in place of this dollarsign */}
+757 \textcolor{preprocessor}{#line 543 "/usr/lib/bison.simple"}
+758 
+759   yyvsp -= yylen;
+760   yyssp -= yylen;
+761 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+762   yylsp -= yylen;
+763 \textcolor{preprocessor}{#endif}
+764 
+765 \textcolor{preprocessor}{#if YYDEBUG != 0}
+766   \textcolor{keywordflow}{if} (yydebug)
+767     \{
+768       \textcolor{keywordtype}{short} *ssp1 = yyss - 1;
+769       fprintf (stderr, \textcolor{stringliteral}{"state stack now"});
+770       \textcolor{keywordflow}{while} (ssp1 != yyssp)
+771         fprintf (stderr, \textcolor{stringliteral}{" %d"}, *++ssp1);
+772       fprintf (stderr, \textcolor{stringliteral}{"\(\backslash\)n"});
+773     \}
+774 \textcolor{preprocessor}{#endif}
+775 
+776   *++yyvsp = yyval;
+777 
+778 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+779   yylsp++;
+780   \textcolor{keywordflow}{if} (yylen == 0)
+781     \{
+782       yylsp->first\_line = yylloc.first\_line;
+783       yylsp->first\_column = yylloc.first\_column;
+784       yylsp->last\_line = (yylsp-1)->last\_line;
+785       yylsp->last\_column = (yylsp-1)->last\_column;
+786       yylsp->text = 0;
+787     \}
+788   \textcolor{keywordflow}{else}
+789     \{
+790       yylsp->last\_line = (yylsp+yylen-1)->last\_line;
+791       yylsp->last\_column = (yylsp+yylen-1)->last\_column;
+792     \}
+793 \textcolor{preprocessor}{#endif}
+794 
+795   \textcolor{comment}{/* Now "shift" the result of the reduction.}
+796 \textcolor{comment}{     Determine what state that goes to,}
+797 \textcolor{comment}{     based on the state we popped back to}
+798 \textcolor{comment}{     and the rule number reduced by.  */}
+799 
+800   yyn = yyr1[yyn];
+801 
+802   yystate = yypgoto[yyn - \mbox{\hyperlink{expr_8cpp_a1aa545586536b973e968b278df8354c7}{YYNTBASE}}] + *yyssp;
+803   \textcolor{keywordflow}{if} (yystate >= 0 && yystate <= \mbox{\hyperlink{expr_8cpp_ae67923760a28e3b7ed3aa2cfaef7f9a2}{YYLAST}} && yycheck[yystate] == *yyssp)
+804     yystate = yytable[yystate];
+805   \textcolor{keywordflow}{else}
+806     yystate = yydefgoto[yyn - \mbox{\hyperlink{expr_8cpp_a1aa545586536b973e968b278df8354c7}{YYNTBASE}}];
+807 
+808   \textcolor{keywordflow}{goto} yynewstate;
+809 
+810 yyerrlab:   \textcolor{comment}{/* here on detecting error */}
+811 
+812   \textcolor{keywordflow}{if} (! yyerrstatus)
+813     \textcolor{comment}{/* If not already recovering from an error, report this error.  */}
+814     \{
+815       ++\mbox{\hyperlink{expr_8cpp_a0ea9e3b522e448ac462274fe70e1be82}{yynerrs}};
+816 
+817 \textcolor{preprocessor}{#ifdef YYERROR\_VERBOSE}
+818       yyn = yypact[yystate];
+819 
+820       \textcolor{keywordflow}{if} (yyn > \mbox{\hyperlink{expr_8cpp_aba73408054d994b60e92732a07381e97}{YYFLAG}} && yyn < \mbox{\hyperlink{expr_8cpp_ae67923760a28e3b7ed3aa2cfaef7f9a2}{YYLAST}})
+821         \{
+822           \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} = 0;
+823           \textcolor{keywordtype}{char} *msg;
+824           \textcolor{keywordtype}{int} x, \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+825 
+826           \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = 0;
+827           \textcolor{comment}{/* Start X at -yyn if nec to avoid negative indexes in yycheck.  */}
+828           \textcolor{keywordflow}{for} (x = (yyn < 0 ? -yyn : 0);
+829                x < (\textcolor{keyword}{sizeof}(yytname) / \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char} *)); x++)
+830             \textcolor{keywordflow}{if} (yycheck[x + yyn] == x)
+831               \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} += strlen(yytname[x]) + 15, \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}++;
+832           msg = (\textcolor{keywordtype}{char} *) malloc(\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}} + 15);
+833           \textcolor{keywordflow}{if} (msg != 0)
+834             \{
+835               strcpy(msg, \textcolor{stringliteral}{"parse error"});
+836 
+837               \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} < 5)
+838                 \{
+839                   \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = 0;
+840                   \textcolor{keywordflow}{for} (x = (yyn < 0 ? -yyn : 0);
+841                        x < (\textcolor{keyword}{sizeof}(yytname) / \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char} *)); x++)
+842                     \textcolor{keywordflow}{if} (yycheck[x + yyn] == x)
+843                       \{
+844                         strcat(msg, \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} == 0 ? \textcolor{stringliteral}{", expecting `"} : \textcolor{stringliteral}{" or `"});
+845                         strcat(msg, yytname[x]);
+846                         strcat(msg, \textcolor{stringliteral}{"'"});
+847                         \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}++;
+848                       \}
+849                 \}
+850               \mbox{\hyperlink{expr_8cpp_a773aa2e81b4feec63f60f490265169a5}{yyerror}}(msg);
+851               free(msg);
+852             \}
+853           \textcolor{keywordflow}{else}
+854             \mbox{\hyperlink{expr_8cpp_a773aa2e81b4feec63f60f490265169a5}{yyerror}} (\textcolor{stringliteral}{"parse error; also virtual memory exceeded"});
+855         \}
+856       \textcolor{keywordflow}{else}
+857 \textcolor{preprocessor}{#endif }\textcolor{comment}{/* YYERROR\_VERBOSE */}\textcolor{preprocessor}{}
+858         \mbox{\hyperlink{expr_8cpp_a773aa2e81b4feec63f60f490265169a5}{yyerror}}(\textcolor{stringliteral}{"parse error"});
+859     \}
+860 
+861   \textcolor{keywordflow}{goto} yyerrlab1;
+862 yyerrlab1:   \textcolor{comment}{/* here on error raised explicitly by an action */}
+863 
+864   \textcolor{keywordflow}{if} (yyerrstatus == 3)
+865     \{
+866       \textcolor{comment}{/* if just tried and failed to reuse lookahead token after an error, discard it.  */}
+867 
+868       \textcolor{comment}{/* return failure if at end of input */}
+869       \textcolor{keywordflow}{if} (\mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} == \mbox{\hyperlink{expr_8cpp_a3b1e3628411fabac03abe0a337322016}{YYEOF}})
+870         \mbox{\hyperlink{expr_8cpp_a3bcde0b05b9aa4ec5169092d9d211dbd}{YYABORT}};
+871 
+872 \textcolor{preprocessor}{#if YYDEBUG != 0}
+873       \textcolor{keywordflow}{if} (yydebug)
+874         fprintf(stderr, \textcolor{stringliteral}{"Discarding token %d (%s).\(\backslash\)n"}, \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}}, yytname[yychar1]);
+875 \textcolor{preprocessor}{#endif}
+876 
+877       \mbox{\hyperlink{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}{yychar}} = \mbox{\hyperlink{expr_8cpp_ae59196b3765411a06cf234cf9bcae2e7}{YYEMPTY}};
+878     \}
+879 
+880   \textcolor{comment}{/* Else will try to reuse lookahead token}
+881 \textcolor{comment}{     after shifting the error token.  */}
+882 
+883   yyerrstatus = 3;              \textcolor{comment}{/* Each real token shifted decrements this */}
+884 
+885   \textcolor{keywordflow}{goto} yyerrhandle;
+886 
+887 yyerrdefault:  \textcolor{comment}{/* current state does not do anything special for the error token. */}
+888 
+889 \textcolor{preprocessor}{#if 0}
+890   \textcolor{comment}{/* This is wrong; only states that explicitly want error tokens}
+891 \textcolor{comment}{     should shift them.  */}
+892   yyn = yydefact[yystate];  \textcolor{comment}{/* If its default is to accept any token, ok.  Otherwise pop it.*/}
+893   \textcolor{keywordflow}{if} (yyn) \textcolor{keywordflow}{goto} yydefault;
+894 \textcolor{preprocessor}{#endif}
+895 
+896 yyerrpop:   \textcolor{comment}{/* pop the current state because it cannot handle the error token */}
+897 
+898   \textcolor{keywordflow}{if} (yyssp == yyss) \mbox{\hyperlink{expr_8cpp_a3bcde0b05b9aa4ec5169092d9d211dbd}{YYABORT}};
+899   yyvsp--;
+900   yystate = *--yyssp;
+901 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+902   yylsp--;
+903 \textcolor{preprocessor}{#endif}
+904 
+905 \textcolor{preprocessor}{#if YYDEBUG != 0}
+906   \textcolor{keywordflow}{if} (yydebug)
+907     \{
+908       \textcolor{keywordtype}{short} *ssp1 = yyss - 1;
+909       fprintf (stderr, \textcolor{stringliteral}{"Error: state stack now"});
+910       \textcolor{keywordflow}{while} (ssp1 != yyssp)
+911         fprintf (stderr, \textcolor{stringliteral}{" %d"}, *++ssp1);
+912       fprintf (stderr, \textcolor{stringliteral}{"\(\backslash\)n"});
+913     \}
+914 \textcolor{preprocessor}{#endif}
+915 
+916 yyerrhandle:
+917 
+918   yyn = yypact[yystate];
+919   \textcolor{keywordflow}{if} (yyn == \mbox{\hyperlink{expr_8cpp_aba73408054d994b60e92732a07381e97}{YYFLAG}})
+920     \textcolor{keywordflow}{goto} yyerrdefault;
+921 
+922   yyn += \mbox{\hyperlink{expr_8cpp_ad2b58b1851184ddb3b60fede50bc7946}{YYTERROR}};
+923   \textcolor{keywordflow}{if} (yyn < 0 || yyn > \mbox{\hyperlink{expr_8cpp_ae67923760a28e3b7ed3aa2cfaef7f9a2}{YYLAST}} || yycheck[yyn] != \mbox{\hyperlink{expr_8cpp_ad2b58b1851184ddb3b60fede50bc7946}{YYTERROR}})
+924     \textcolor{keywordflow}{goto} yyerrdefault;
+925 
+926   yyn = yytable[yyn];
+927   \textcolor{keywordflow}{if} (yyn < 0)
+928     \{
+929       \textcolor{keywordflow}{if} (yyn == \mbox{\hyperlink{expr_8cpp_aba73408054d994b60e92732a07381e97}{YYFLAG}})
+930         \textcolor{keywordflow}{goto} yyerrpop;
+931       yyn = -yyn;
+932       \textcolor{keywordflow}{goto} yyreduce;
+933     \}
+934   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (yyn == 0)
+935     \textcolor{keywordflow}{goto} yyerrpop;
+936 
+937   \textcolor{keywordflow}{if} (yyn == \mbox{\hyperlink{expr_8cpp_a6419f3fd69ecb6b7e063410fd4e73b2f}{YYFINAL}})
+938     \mbox{\hyperlink{expr_8cpp_aa6c7a65b580c214b2ea832fd7bdd472e}{YYACCEPT}};
+939 
+940 \textcolor{preprocessor}{#if YYDEBUG != 0}
+941   \textcolor{keywordflow}{if} (yydebug)
+942     fprintf(stderr, \textcolor{stringliteral}{"Shifting error token, "});
+943 \textcolor{preprocessor}{#endif}
+944 
+945   *++yyvsp = \mbox{\hyperlink{expr_8cpp_a539b86ee4bb46824a194f22eb69903d9}{yylval}};
+946 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+947   *++yylsp = yylloc;
+948 \textcolor{preprocessor}{#endif}
+949 
+950   yystate = yyn;
+951   \textcolor{keywordflow}{goto} yynewstate;
+952 
+953  yyacceptlab:
+954   \textcolor{comment}{/* YYACCEPT comes here.  */}
+955   \textcolor{keywordflow}{if} (yyfree\_stacks)
+956     \{
+957       free (yyss);
+958       free (yyvs);
+959 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+960       free (yyls);
+961 \textcolor{preprocessor}{#endif}
+962     \}
+963   \textcolor{keywordflow}{return} 0;
+964 
+965  yyabortlab:
+966   \textcolor{comment}{/* YYABORT comes here.  */}
+967   \textcolor{keywordflow}{if} (yyfree\_stacks)
+968     \{
+969       free (yyss);
+970       free (yyvs);
+971 \textcolor{preprocessor}{#ifdef YYLSP\_NEEDED}
+972       free (yyls);
+973 \textcolor{preprocessor}{#endif}
+974     \}
+975   \textcolor{keywordflow}{return} 1;
+976 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{expr_8cpp_a85eced105c36a233d46ee012feb4604c_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{expr_8cpp_a85eced105c36a233d46ee012feb4604c_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}\label{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}} 
+\index{expr.\+cpp@{expr.\+cpp}!count@{count}}
+\index{count@{count}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} count}
+
+
+
+expr.\+cpp 파일의 351 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a765533dfc643627999c751f7e1514664}\label{expr_8cpp_a765533dfc643627999c751f7e1514664}} 
+\index{expr.\+cpp@{expr.\+cpp}!from@{from}}
+\index{from@{from}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{from}{from}}
+{\footnotesize\ttfamily char$\ast$ from}
+
+
+
+expr.\+cpp 파일의 350 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}\label{expr_8cpp_aa42a9a9cb6e2b93d7f825c395af871bf}} 
+\index{expr.\+cpp@{expr.\+cpp}!i@{i}}
+\index{i@{i}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily register \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} i = \mbox{\hyperlink{_g_b_a_8cpp_ad43c3812e6d13e0518d9f8b8f463ffcf}{count}}}
+
+
+
+expr.\+cpp 파일의 355 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}\label{expr_8cpp_a8ad9a782076057c9c0a54c3a233468d4}} 
+\index{expr.\+cpp@{expr.\+cpp}!result@{result}}
+\index{result@{result}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{result}{result}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_node}{Node}}$\ast$ result = \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}}
+
+
+
+expr.\+cpp 파일의 38 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}\label{expr_8cpp_aded116371789db1fd63c90ef00c95a3d}} 
+\index{expr.\+cpp@{expr.\+cpp}!t@{t}}
+\index{t@{t}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{t}{t}}
+{\footnotesize\ttfamily register char$\ast$ t = to}
+
+
+
+expr.\+cpp 파일의 354 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}\label{expr_8cpp_a9e2c7c7373b818c86b2df7106a92327c}} 
+\index{expr.\+cpp@{expr.\+cpp}!yychar@{yychar}}
+\index{yychar@{yychar}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yychar}{yychar}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} yychar}
+
+
+
+expr.\+cpp 파일의 300 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a46af646807e0797e72b6e8945e7ea88b}\label{expr_8cpp_a46af646807e0797e72b6e8945e7ea88b}} 
+\index{expr.\+cpp@{expr.\+cpp}!yyin@{yyin}}
+\index{yyin@{yyin}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yyin}{yyin}}
+{\footnotesize\ttfamily F\+I\+LE$\ast$ yyin}
+
+\mbox{\Hypertarget{expr_8cpp_a539b86ee4bb46824a194f22eb69903d9}\label{expr_8cpp_a539b86ee4bb46824a194f22eb69903d9}} 
+\index{expr.\+cpp@{expr.\+cpp}!yylval@{yylval}}
+\index{yylval@{yylval}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yylval}{yylval}}
+{\footnotesize\ttfamily \mbox{\hyperlink{expr_node_8h_a2ceb5b985e149f18e018b142cfdd7264}{Y\+Y\+S\+T\+Y\+PE}} yylval}
+
+
+
+expr.\+cpp 파일의 301 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_a0ea9e3b522e448ac462274fe70e1be82}\label{expr_8cpp_a0ea9e3b522e448ac462274fe70e1be82}} 
+\index{expr.\+cpp@{expr.\+cpp}!yynerrs@{yynerrs}}
+\index{yynerrs@{yynerrs}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yynerrs}{yynerrs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} yynerrs}
+
+
+
+expr.\+cpp 파일의 309 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{expr_8cpp_ad9264b77d56b6971f29739e2bda77f51}\label{expr_8cpp_ad9264b77d56b6971f29739e2bda77f51}} 
+\index{expr.\+cpp@{expr.\+cpp}!yytext@{yytext}}
+\index{yytext@{yytext}!expr.\+cpp@{expr.\+cpp}}
+\subsubsection{\texorpdfstring{yytext}{yytext}}
+{\footnotesize\ttfamily char$\ast$ yytext}
+

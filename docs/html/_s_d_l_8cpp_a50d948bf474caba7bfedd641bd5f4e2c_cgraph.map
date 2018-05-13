@@ -1,0 +1,18 @@
+<map id="sdlWriteState" name="sdlWriteState">
+<area shape="rect" id="node2" href="$_s_d_l_8cpp.html#ac2c51fa63fa3752ed9d5784214ff1a7a" title="sdlGetFilename" alt="" coords="177,44,291,71"/>
+<area shape="rect" id="node3" href="$_s_d_l_8cpp.html#adbab5ef99d17d7629390e8ed201952c3" title="systemScreenMessage" alt="" coords="155,95,313,121"/>
+<area shape="rect" id="node5" href="$_s_d_l_8cpp.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="167,171,301,197"/>
+<area shape="rect" id="node4" href="$_s_d_l_8cpp.html#a49fda3252b87be83c1bc235b1c217f35" title="systemGetClock" alt="" coords="371,81,490,108"/>
+<area shape="rect" id="node6" href="$_s_d_l_8cpp.html#a4c7a89666b2346791cd66a5a254c4bcc" title="Draw_Overlay" alt="" coords="380,132,481,159"/>
+<area shape="rect" id="node15" href="$_g_b_8h.html#af317983dce6743159185981f1f84e782" title="gbSgbRenderBorder" alt="" coords="361,183,500,209"/>
+<area shape="rect" id="node16" href="$_text_8cpp.html#ad1345a6f1db95575b5857ee2654eca47" title="drawText" alt="" coords="393,233,468,260"/>
+<area shape="rect" id="node17" href="$_text_8cpp.html#a1d0e441a05598dc1c83d0487e5a0fead" title="drawTextTransp" alt="" coords="374,284,487,311"/>
+<area shape="rect" id="node7" href="$_s_d_l_8cpp.html#a2ed419fdd59b1938a86ee79b3a8f65a3" title="Convert32bit" alt="" coords="548,132,641,159"/>
+<area shape="rect" id="node8" href="$_s_d_l_8cpp.html#a1d2adf1881ed16296196552e756bd1c1" title="ConvertRGBtoYV12" alt="" coords="691,5,827,32"/>
+<area shape="rect" id="node10" href="$_s_d_l_8cpp.html#a81f67d6da7c9b7513c0e516f037aab9b" title="ConvertRGBtoUYVY" alt="" coords="689,56,829,83"/>
+<area shape="rect" id="node11" href="$_s_d_l_8cpp.html#ab9424eaf013df4d9036d8b638d65b008" title="ConvertRGBtoYVYU" alt="" coords="689,107,829,133"/>
+<area shape="rect" id="node12" href="$_s_d_l_8cpp.html#ada23d53326400455b09276ec843bed19" title="ConvertRGBtoYUY2" alt="" coords="690,157,829,184"/>
+<area shape="rect" id="node13" href="$_s_d_l_8cpp.html#a876364f5ba50fbd3778377f4142e6065" title="ConvertRGBtoIYUV" alt="" coords="692,208,827,235"/>
+<area shape="rect" id="node14" href="$expr-lex_8cpp.html#a6d2c3c030982c7aa276480da4522ae0f" title="exit" alt="" coords="738,259,781,285"/>
+<area shape="rect" id="node9" href="$_s_d_l_8cpp.html#ac65e3af24776637ec9ad79981431ad04" title="RGBtoYUV" alt="" coords="877,107,965,133"/>
+</map>

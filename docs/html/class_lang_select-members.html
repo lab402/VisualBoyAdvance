@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_lang_select.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">LangSelect 멤버 목록</div>  </div>
@@ -68,20 +92,23 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_lang_select.html">LangSelect</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_lang_select.html">LangSelect</a>)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_lang_select.html">LangSelect</a>)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>LangSelect</b>(CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_lang_select.html">LangSelect</a>)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_langName</b> (다음에서 정의됨 : <a class="el" href="class_lang_select.html">LangSelect</a>)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_langString</b> (다음에서 정의됨 : <a class="el" href="class_lang_select.html">LangSelect</a>)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnCancel</b>() (다음에서 정의됨 : <a class="el" href="class_lang_select.html">LangSelect</a>)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_lang_select.html">LangSelect</a>)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnOk</b>() (다음에서 정의됨 : <a class="el" href="class_lang_select.html">LangSelect</a>)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_lang_select.html#aed6d5a0a1a5ffc02ac08f06cade9169a">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_lang_select.html#af4e6d80a5f0f0e069d0e56b265244d4da5bc96450a48a899892ede71c87113aa3">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_lang_select.html#a87e6124e69b3969d3f1494751c08af6e">LangSelect</a>(CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_lang_select.html#ab18b546f12c8230292959ce2258ef240">m_langName</a></td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_lang_select.html#af75ddf60623799cb4c761692a8057b46">m_langString</a></td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_lang_select.html#af77cabdf85041273c5b6da89cb92508c">OnCancel</a>()</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_lang_select.html#ab98f0d9a2302d971a9430c921fc52f8b">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_lang_select.html#ad10c9461cc371d496c41ede46c64c35e">OnOk</a>()</td><td class="entry"><a class="el" href="class_lang_select.html">LangSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_video_mode.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,61 +95,281 @@ $(function() {
 <div class="title">VideoMode 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_video_mode_8h_source.html">VideoMode.h</a>&gt;</code></p>
 <div class="dynheader">
 VideoMode에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_video_mode.png" usemap="#VideoMode_map" alt=""/>
-  <map id="VideoMode_map" name="VideoMode_map">
-</map>
- </div></div>
+<div class="center"><img src="class_video_mode__inherit__graph.png" border="0" usemap="#_video_mode_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+VideoMode에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_video_mode__coll__graph.png" border="0" usemap="#_video_mode_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:a5888f5e68b768e91695a058cace7e5a4"><td class="memItemLeft" align="right" valign="top"><a id="a5888f5e68b768e91695a058cace7e5a4"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_MODES
+<tr class="memitem:a5888f5e68b768e91695a058cace7e5a4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_video_mode.html#a5888f5e68b768e91695a058cace7e5a4a7012b5b58902e093e7c2a0547ef63dd5">IDD</a> = IDD_MODES
  }</td></tr>
 <tr class="separator:a5888f5e68b768e91695a058cace7e5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a1546b8240c6190c4c3f951ffcb74411c"><td class="memItemLeft" align="right" valign="top"><a id="a1546b8240c6190c4c3f951ffcb74411c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>VideoMode</b> (LPDIRECTDRAW7 pDraw, CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:a1546b8240c6190c4c3f951ffcb74411c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_mode.html#a1546b8240c6190c4c3f951ffcb74411c">VideoMode</a> (LPDIRECTDRAW7 pDraw, CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:a1546b8240c6190c4c3f951ffcb74411c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a89d4dd07ee169f0f6f4f845582fa3695"><td class="memItemLeft" align="right" valign="top"><a id="a89d4dd07ee169f0f6f4f845582fa3695"></a>
-CListBox&#160;</td><td class="memItemRight" valign="bottom"><b>m_modes</b></td></tr>
+<tr class="memitem:a89d4dd07ee169f0f6f4f845582fa3695"><td class="memItemLeft" align="right" valign="top">CListBox&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">m_modes</a></td></tr>
 <tr class="separator:a89d4dd07ee169f0f6f4f845582fa3695"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a1ba1890dc2533e494de5f16ce05e59c5"><td class="memItemLeft" align="right" valign="top"><a id="a1ba1890dc2533e494de5f16ce05e59c5"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a1ba1890dc2533e494de5f16ce05e59c5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_mode.html#a1ba1890dc2533e494de5f16ce05e59c5">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a1ba1890dc2533e494de5f16ce05e59c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f9eece36c71ae9f171d53bf0cce9c68"><td class="memItemLeft" align="right" valign="top"><a id="a8f9eece36c71ae9f171d53bf0cce9c68"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSelchangeModes</b> ()</td></tr>
+<tr class="memitem:a8f9eece36c71ae9f171d53bf0cce9c68"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_mode.html#a8f9eece36c71ae9f171d53bf0cce9c68">OnSelchangeModes</a> ()</td></tr>
 <tr class="separator:a8f9eece36c71ae9f171d53bf0cce9c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad50575dec1b43e682cdf94a998a5bc1a"><td class="memItemLeft" align="right" valign="top"><a id="ad50575dec1b43e682cdf94a998a5bc1a"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCancel</b> ()</td></tr>
+<tr class="memitem:ad50575dec1b43e682cdf94a998a5bc1a"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_mode.html#ad50575dec1b43e682cdf94a998a5bc1a">OnCancel</a> ()</td></tr>
 <tr class="separator:ad50575dec1b43e682cdf94a998a5bc1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af9bcacc26657ea8610ae926f14fc648e"><td class="memItemLeft" align="right" valign="top"><a id="af9bcacc26657ea8610ae926f14fc648e"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOk</b> ()</td></tr>
+<tr class="memitem:af9bcacc26657ea8610ae926f14fc648e"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_mode.html#af9bcacc26657ea8610ae926f14fc648e">OnOk</a> ()</td></tr>
 <tr class="separator:af9bcacc26657ea8610ae926f14fc648e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acb6a1c86e30e641be5e8d7f904547deb"><td class="memItemLeft" align="right" valign="top"><a id="acb6a1c86e30e641be5e8d7f904547deb"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:acb6a1c86e30e641be5e8d7f904547deb"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_video_mode.html#acb6a1c86e30e641be5e8d7f904547deb">OnInitDialog</a> ()</td></tr>
 <tr class="separator:acb6a1c86e30e641be5e8d7f904547deb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_video_mode_8h_source.html">VideoMode.h</a> 파일의 <a class="el" href="_video_mode_8h_source.html#l00032">32</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="a5888f5e68b768e91695a058cace7e5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5888f5e68b768e91695a058cace7e5a4">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="a5888f5e68b768e91695a058cace7e5a4a7012b5b58902e093e7c2a0547ef63dd5"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_video_mode_8h_source.html">VideoMode.h</a> 파일의 <a class="el" href="_video_mode_8h_source.html#l00040">40</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{ <a class="code" href="class_video_mode.html#a5888f5e68b768e91695a058cace7e5a4a7012b5b58902e093e7c2a0547ef63dd5">IDD</a> = <a class="code" href="resource_8h.html#ac61a9df5a096bacfac51de9efeac0a15">IDD_MODES</a> };</div><div class="ttc" id="class_video_mode_html_a5888f5e68b768e91695a058cace7e5a4a7012b5b58902e093e7c2a0547ef63dd5"><div class="ttname"><a href="class_video_mode.html#a5888f5e68b768e91695a058cace7e5a4a7012b5b58902e093e7c2a0547ef63dd5">VideoMode::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_video_mode_8h_source.html#l00040">VideoMode.h:40</a></div></div>
+<div class="ttc" id="resource_8h_html_ac61a9df5a096bacfac51de9efeac0a15"><div class="ttname"><a href="resource_8h.html#ac61a9df5a096bacfac51de9efeac0a15">IDD_MODES</a></div><div class="ttdeci">#define IDD_MODES</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00085">resource.h:85</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a1546b8240c6190c4c3f951ffcb74411c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1546b8240c6190c4c3f951ffcb74411c">&#9670;&nbsp;</a></span>VideoMode()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">VideoMode::VideoMode </td>
+          <td>(</td>
+          <td class="paramtype">LPDIRECTDRAW7&#160;</td>
+          <td class="paramname"><em>pDraw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_video_mode_8cpp_source.html">VideoMode.cpp</a> 파일의 <a class="el" href="_video_mode_8cpp_source.html#l00264">264</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;  : CDialog(<a class="code" href="class_video_mode.html#a5888f5e68b768e91695a058cace7e5a4a7012b5b58902e093e7c2a0547ef63dd5">VideoMode::IDD</a>, pParent)</div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(VideoMode)</span></div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;  <span class="comment">// NOTE: the ClassWizard will add member initialization here</span></div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;  pDirectDraw = pDraw;</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div><div class="ttc" id="class_video_mode_html_a5888f5e68b768e91695a058cace7e5a4a7012b5b58902e093e7c2a0547ef63dd5"><div class="ttname"><a href="class_video_mode.html#a5888f5e68b768e91695a058cace7e5a4a7012b5b58902e093e7c2a0547ef63dd5">VideoMode::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_video_mode_8h_source.html#l00040">VideoMode.h:40</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a1ba1890dc2533e494de5f16ce05e59c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ba1890dc2533e494de5f16ce05e59c5">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VideoMode::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_video_mode_8cpp_source.html">VideoMode.cpp</a> 파일의 <a class="el" href="_video_mode_8cpp_source.html#l00274">274</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;{</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(VideoMode)</span></div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#add13ac2c5f40c015e5e04ad669b425a4">IDC_MODES</a>, <a class="code" href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">m_modes</a>);</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}</div><div class="ttc" id="resource_8h_html_add13ac2c5f40c015e5e04ad669b425a4"><div class="ttname"><a href="resource_8h.html#add13ac2c5f40c015e5e04ad669b425a4">IDC_MODES</a></div><div class="ttdeci">#define IDC_MODES</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00476">resource.h:476</a></div></div>
+<div class="ttc" id="class_video_mode_html_a89d4dd07ee169f0f6f4f845582fa3695"><div class="ttname"><a href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">VideoMode::m_modes</a></div><div class="ttdeci">CListBox m_modes</div><div class="ttdef"><b>Definition:</b> <a href="_video_mode_8h_source.html#l00041">VideoMode.h:41</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ad50575dec1b43e682cdf94a998a5bc1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad50575dec1b43e682cdf94a998a5bc1a">&#9670;&nbsp;</a></span>OnCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VideoMode::OnCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_video_mode_8cpp_source.html">VideoMode.cpp</a> 파일의 <a class="el" href="_video_mode_8cpp_source.html#l00301">301</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;{</div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  EndDialog(-1);</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="acb6a1c86e30e641be5e8d7f904547deb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb6a1c86e30e641be5e8d7f904547deb">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL VideoMode::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_video_mode_8cpp_source.html">VideoMode.cpp</a> 파일의 <a class="el" href="_video_mode_8cpp_source.html#l00316">316</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;{</div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;  </div><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;  <span class="comment">// check for available fullscreen modes</span></div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;  pDirectDraw-&gt;EnumDisplayModes(</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      DDEDM_STANDARDVGAMODES,</div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <a class="code" href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">m_modes</a>.m_hWnd,</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      addVideoMode);</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;  </div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#a4cf7b8af561e85b223c39c4c2b22ef18">ID_OK</a>)-&gt;EnableWindow(FALSE);      </div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;  CenterWindow();</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="resource_8h_html_a4cf7b8af561e85b223c39c4c2b22ef18"><div class="ttname"><a href="resource_8h.html#a4cf7b8af561e85b223c39c4c2b22ef18">ID_OK</a></div><div class="ttdeci">#define ID_OK</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00116">resource.h:116</a></div></div>
+<div class="ttc" id="class_video_mode_html_a89d4dd07ee169f0f6f4f845582fa3695"><div class="ttname"><a href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">VideoMode::m_modes</a></div><div class="ttdeci">CListBox m_modes</div><div class="ttdef"><b>Definition:</b> <a href="_video_mode_8h_source.html#l00041">VideoMode.h:41</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af9bcacc26657ea8610ae926f14fc648e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9bcacc26657ea8610ae926f14fc648e">&#9670;&nbsp;</a></span>OnOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VideoMode::OnOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_video_mode_8cpp_source.html">VideoMode.cpp</a> 파일의 <a class="el" href="_video_mode_8cpp_source.html#l00306">306</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;{</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  DWORD_PTR cur = <a class="code" href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">m_modes</a>.GetCurSel();</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;</div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;  <span class="keywordflow">if</span>(cur != -1) {</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    cur = <a class="code" href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">m_modes</a>.GetItemData((<span class="keywordtype">int</span>)cur);</div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  }</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  EndDialog((<span class="keywordtype">int</span>)cur);</div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;}</div><div class="ttc" id="class_video_mode_html_a89d4dd07ee169f0f6f4f845582fa3695"><div class="ttname"><a href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">VideoMode::m_modes</a></div><div class="ttdeci">CListBox m_modes</div><div class="ttdef"><b>Definition:</b> <a href="_video_mode_8h_source.html#l00041">VideoMode.h:41</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8f9eece36c71ae9f171d53bf0cce9c68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f9eece36c71ae9f171d53bf0cce9c68">&#9670;&nbsp;</a></span>OnSelchangeModes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void VideoMode::OnSelchangeModes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_video_mode_8cpp_source.html">VideoMode.cpp</a> 파일의 <a class="el" href="_video_mode_8cpp_source.html#l00294">294</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;{</div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordtype">int</span> item = <a class="code" href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">m_modes</a>.GetCurSel();</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#a4cf7b8af561e85b223c39c4c2b22ef18">ID_OK</a>)-&gt;EnableWindow(item != -1);</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}</div><div class="ttc" id="resource_8h_html_a4cf7b8af561e85b223c39c4c2b22ef18"><div class="ttname"><a href="resource_8h.html#a4cf7b8af561e85b223c39c4c2b22ef18">ID_OK</a></div><div class="ttdeci">#define ID_OK</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00116">resource.h:116</a></div></div>
+<div class="ttc" id="class_video_mode_html_a89d4dd07ee169f0f6f4f845582fa3695"><div class="ttname"><a href="class_video_mode.html#a89d4dd07ee169f0f6f4f845582fa3695">VideoMode::m_modes</a></div><div class="ttdeci">CListBox m_modes</div><div class="ttdef"><b>Definition:</b> <a href="_video_mode_8h_source.html#l00041">VideoMode.h:41</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a89d4dd07ee169f0f6f4f845582fa3695"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89d4dd07ee169f0f6f4f845582fa3695">&#9670;&nbsp;</a></span>m_modes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CListBox VideoMode::m_modes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_video_mode_8h_source.html">VideoMode.h</a> 파일의 <a class="el" href="_video_mode_8h_source.html#l00041">41</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_video_mode_8h_source.html">VideoMode.h</a></li>
-<li>src/win32/VideoMode.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_video_mode_8h_source.html">VideoMode.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_video_mode_8cpp_source.html">VideoMode.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_video_mode.html">VideoMode</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

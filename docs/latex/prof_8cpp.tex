@@ -1,0 +1,580 @@
+\hypertarget{prof_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/prof/prof.cpp 파일 참조}
+\label{prof_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/prof/prof.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/prof/prof.\+cpp}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$memory.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}gmon.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gmon\+\_\+out.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+N\+L\+S.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}prof.\+h\char`\"{}}\newline
+prof.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{prof_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{prof_8cpp_a38bf464589f908b00b6a25e20b79c333}{S\+C\+A\+L\+E\+\_\+1\+\_\+\+T\+O\+\_\+1}}~0x10000L
+\item 
+\#define \mbox{\hyperlink{prof_8cpp_a0c719c414608ef14852670b063876c07}{M\+SG}}~\mbox{\hyperlink{gb_codes_c_b_8h_a8e943d02be2c0498e3fdfcdf82d08613}{N\+\_\+}}(\char`\"{}No space \mbox{\hyperlink{expr-lex_8cpp_a2732ab74fa0237854c2ba0f75f88a624}{for}} profiling \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}(s)\textbackslash{}\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}\char`\"{})
+\item 
+\#define \mbox{\hyperlink{prof_8cpp_aa0486d831eb45bdfff457a82005b5ab1}{T\+O\+L\+I\+M\+IT}}~\char`\"{}mcount\+: tos \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{overflow\textbackslash{}n}}\char`\"{}
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{prof_8cpp_ad2fbd2647a8ec58f0c11cfca5af072b8}{prof\+Put32}} (char $\ast$\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} v)
+\item 
+void \mbox{\hyperlink{prof_8cpp_a5adffe03483301dba2d6ca7a32a93c0e}{prof\+Put16}} (char $\ast$\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}, \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} v)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{prof_8cpp_abee2bf452f8b2071e2c0a9e9f1e5047f}{prof\+Write8}} (F\+I\+LE $\ast$f, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}})
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}{prof\+Write32}} (F\+I\+LE $\ast$f, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} v)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{prof_8cpp_a4e558948e2c7c81a6f3814d308edbd6c}{prof\+Write}} (F\+I\+LE $\ast$f, char $\ast$\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+\item 
+void \mbox{\hyperlink{prof_8cpp_a3f1b22a90faa17931b199c3e8ac74379}{prof\+Control}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} mode)
+\item 
+void \mbox{\hyperlink{prof_8cpp_a9531b8c274a573fe11af4fa0a4fd59c7}{prof\+Startup}} (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} lowpc, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} highpc)
+\item 
+void \mbox{\hyperlink{prof_8cpp_af4a8d1d5b524e48ed48c2ef8fc57fac7}{prof\+Cleanup}} ()
+\item 
+void \mbox{\hyperlink{prof_8cpp_aa42c8feebb4e60902b483f7b8243c76f}{prof\+Count}} ()
+\item 
+void \mbox{\hyperlink{prof_8cpp_ac8b59f922be22a671018eab4c8b773d7}{prof\+Set\+Hertz}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} h)
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{prof_8cpp_a0c719c414608ef14852670b063876c07}\label{prof_8cpp_a0c719c414608ef14852670b063876c07}} 
+\index{prof.\+cpp@{prof.\+cpp}!M\+SG@{M\+SG}}
+\index{M\+SG@{M\+SG}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{M\+SG}{MSG}}
+{\footnotesize\ttfamily \#define M\+SG~\mbox{\hyperlink{gb_codes_c_b_8h_a8e943d02be2c0498e3fdfcdf82d08613}{N\+\_\+}}(\char`\"{}No space \mbox{\hyperlink{expr-lex_8cpp_a2732ab74fa0237854c2ba0f75f88a624}{for}} profiling \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}(s)\textbackslash{}\mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}\char`\"{})}
+
+
+
+prof.\+cpp 파일의 137 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{prof_8cpp_a38bf464589f908b00b6a25e20b79c333}\label{prof_8cpp_a38bf464589f908b00b6a25e20b79c333}} 
+\index{prof.\+cpp@{prof.\+cpp}!S\+C\+A\+L\+E\+\_\+1\+\_\+\+T\+O\+\_\+1@{S\+C\+A\+L\+E\+\_\+1\+\_\+\+T\+O\+\_\+1}}
+\index{S\+C\+A\+L\+E\+\_\+1\+\_\+\+T\+O\+\_\+1@{S\+C\+A\+L\+E\+\_\+1\+\_\+\+T\+O\+\_\+1}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{S\+C\+A\+L\+E\+\_\+1\+\_\+\+T\+O\+\_\+1}{SCALE\_1\_TO\_1}}
+{\footnotesize\ttfamily \#define S\+C\+A\+L\+E\+\_\+1\+\_\+\+T\+O\+\_\+1~0x10000L}
+
+
+
+prof.\+cpp 파일의 75 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{prof_8cpp_aa0486d831eb45bdfff457a82005b5ab1}\label{prof_8cpp_aa0486d831eb45bdfff457a82005b5ab1}} 
+\index{prof.\+cpp@{prof.\+cpp}!T\+O\+L\+I\+M\+IT@{T\+O\+L\+I\+M\+IT}}
+\index{T\+O\+L\+I\+M\+IT@{T\+O\+L\+I\+M\+IT}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{T\+O\+L\+I\+M\+IT}{TOLIMIT}}
+{\footnotesize\ttfamily \#define T\+O\+L\+I\+M\+IT~\char`\"{}mcount\+: tos \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{overflow\textbackslash{}n}}\char`\"{}}
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{prof_8cpp_af4a8d1d5b524e48ed48c2ef8fc57fac7}\label{prof_8cpp_af4a8d1d5b524e48ed48c2ef8fc57fac7}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Cleanup@{prof\+Cleanup}}
+\index{prof\+Cleanup@{prof\+Cleanup}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Cleanup()}{profCleanup()}}
+{\footnotesize\ttfamily void prof\+Cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 206 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+207 \{
+208   FILE *fd;
+209   \textcolor{keywordtype}{int} fromindex;
+210   \textcolor{keywordtype}{int} endfrom;
+211   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} frompc;
+212   \textcolor{keywordtype}{int} toindex;
+213   \textcolor{keyword}{struct }\mbox{\hyperlink{structgmon__hdr}{gmon\_hdr}} ghdr;
+214   \mbox{\hyperlink{structprofile__segment}{profile\_segment}} *seg = first\_segment;
+215   
+216   \mbox{\hyperlink{prof_8cpp_a3f1b22a90faa17931b199c3e8ac74379}{profControl}}(0);
+217   fd = fopen( \textcolor{stringliteral}{"gmon.out"} , \textcolor{stringliteral}{"wb"} );
+218   \textcolor{keywordflow}{if} ( fd == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} ) \{
+219     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}( 0, \textcolor{stringliteral}{"mcount: gmon.out"} );
+220     \textcolor{keywordflow}{return};
+221   \}
+222 
+223   memcpy(&ghdr.cookie[0], \mbox{\hyperlink{gmon__out_8h_a4b4fb41a0af142c579afd890c89eb682}{GMON\_MAGIC}}, 4);
+224   \mbox{\hyperlink{prof_8cpp_ad2fbd2647a8ec58f0c11cfca5af072b8}{profPut32}}((\textcolor{keywordtype}{char} *)ghdr.version, \mbox{\hyperlink{gmon__out_8h_a33dbd8b7d4039412e5455d9b67760ec7}{GMON\_VERSION}});
+225 
+226   \textcolor{keywordflow}{if}(fwrite(&ghdr, \textcolor{keyword}{sizeof}(ghdr), 1, fd) != 1) \{
+227     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \textcolor{stringliteral}{"mcount: gmon.out header"});
+228     fclose(fd);
+229     \textcolor{keywordflow}{return};
+230   \}
+231 
+232   \textcolor{keywordflow}{if}(hz == 0)
+233     hz = 100;
+234 
+235   \textcolor{keywordflow}{while}(seg) \{
+236 
+237     hist\_num\_bins = seg->ssiz;
+238   
+239   \textcolor{keywordflow}{if}(\mbox{\hyperlink{prof_8cpp_abee2bf452f8b2071e2c0a9e9f1e5047f}{profWrite8}}(fd, \mbox{\hyperlink{gmon__out_8h_a3f224d8a15457eef0adfa04c6cdbda1da269b6ddb34c28f1e3bf78013e2b5c70e}{GMON\_TAG\_TIME\_HIST}}) ||
+240        \mbox{\hyperlink{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}{profWrite32}}(fd, (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})seg->s\_lowpc) ||
+241        \mbox{\hyperlink{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}{profWrite32}}(fd, (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})seg->s\_highpc) ||
+242      \mbox{\hyperlink{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}{profWrite32}}(fd, hist\_num\_bins) ||
+243      \mbox{\hyperlink{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}{profWrite32}}(fd, hz) ||
+244      \mbox{\hyperlink{prof_8cpp_a4e558948e2c7c81a6f3814d308edbd6c}{profWrite}}(fd, hist\_dimension, 15) ||
+245      \mbox{\hyperlink{prof_8cpp_a4e558948e2c7c81a6f3814d308edbd6c}{profWrite}}(fd, &hist\_dimension\_abbrev, 1)) \{
+246     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \textcolor{stringliteral}{"mcount: gmon.out hist"});
+247     fclose(fd);
+248     \textcolor{keywordflow}{return};
+249   \}
+250     \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *hist\_sample = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)seg->sbuf;
+251 
+252   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+253   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};
+254   
+255   \textcolor{keywordflow}{for}(\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} = 0; \mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}} < hist\_num\_bins; ++\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}) \{
+256     \mbox{\hyperlink{prof_8cpp_a5adffe03483301dba2d6ca7a32a93c0e}{profPut16}}((\textcolor{keywordtype}{char} *)&\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}, hist\_sample[\mbox{\hyperlink{expr-lex_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}]);
+257 
+258     \textcolor{keywordflow}{if}(fwrite(&\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}), 1, fd) != 1) \{
+259       \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \textcolor{stringliteral}{"mcount: gmon.out sample"});
+260       fclose(fd);
+261       \textcolor{keywordflow}{return};
+262     \}
+263   \}
+264   
+265     endfrom = seg->s\_textsize / (\mbox{\hyperlink{gmon_8h_adc53480f1c1b1c02e1e63241a5f3588b}{HASHFRACTION}} * \textcolor{keyword}{sizeof}(*seg->froms));
+266   \textcolor{keywordflow}{for} ( fromindex = 0 ; fromindex < endfrom ; fromindex++ ) \{
+267       \textcolor{keywordflow}{if} ( seg->froms[fromindex] == 0 ) \{
+268       \textcolor{keywordflow}{continue};
+269     \}
+270       frompc = seg->s\_lowpc + (fromindex * \mbox{\hyperlink{gmon_8h_adc53480f1c1b1c02e1e63241a5f3588b}{HASHFRACTION}} * \textcolor{keyword}{sizeof}(*seg->froms));
+271       \textcolor{keywordflow}{for} (toindex=seg->froms[fromindex]; toindex!=0; toindex=seg->tos[toindex].link) \{
+272       \textcolor{keywordflow}{if}(\mbox{\hyperlink{prof_8cpp_abee2bf452f8b2071e2c0a9e9f1e5047f}{profWrite8}}(fd, \mbox{\hyperlink{gmon__out_8h_a3f224d8a15457eef0adfa04c6cdbda1daadf3110a93b21d406cdbfeef1b3ad0be}{GMON\_TAG\_CG\_ARC}}) ||
+273          \mbox{\hyperlink{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}{profWrite32}}(fd, (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})frompc) ||
+274        \mbox{\hyperlink{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}{profWrite32}}(fd, (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})seg->tos[toindex].selfpc) ||
+275        \mbox{\hyperlink{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}{profWrite32}}(fd, seg->tos[toindex].count)) \{
+276         \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \textcolor{stringliteral}{"mcount: arc"});
+277         fclose(fd);
+278         \textcolor{keywordflow}{return};
+279       \}
+280     \}
+281   \}
+282     seg = seg->next;
+283   \}
+284   fclose(fd);
+285 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{prof_8cpp_af4a8d1d5b524e48ed48c2ef8fc57fac7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{prof_8cpp_a3f1b22a90faa17931b199c3e8ac74379}\label{prof_8cpp_a3f1b22a90faa17931b199c3e8ac74379}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Control@{prof\+Control}}
+\index{prof\+Control@{prof\+Control}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Control()}{profControl()}}
+{\footnotesize\ttfamily void prof\+Control (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 119 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+120 \{
+121   \textcolor{keywordflow}{if} (mode) \{
+122     \textcolor{comment}{/* start */}
+123 \textcolor{preprocessor}{#ifdef PROFILING}
+124     cpuProfil(first\_segment);
+125 \textcolor{preprocessor}{#endif}
+126     profiling = 0;
+127   \} \textcolor{keywordflow}{else} \{
+128     \textcolor{comment}{/* stop */}
+129 \textcolor{preprocessor}{#ifdef PROFILING}
+130     cpuProfil(\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+131 \textcolor{preprocessor}{#endif}
+132     profiling = 3;
+133   \}
+134 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{prof_8cpp_a3f1b22a90faa17931b199c3e8ac74379_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{prof_8cpp_aa42c8feebb4e60902b483f7b8243c76f}\label{prof_8cpp_aa42c8feebb4e60902b483f7b8243c76f}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Count@{prof\+Count}}
+\index{prof\+Count@{prof\+Count}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Count()}{profCount()}}
+{\footnotesize\ttfamily void prof\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 287 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+288 \{
+289   \textcolor{keyword}{register} \textcolor{keywordtype}{char} *selfpc;
+290   \textcolor{keyword}{register} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *frompcindex;
+291   \textcolor{keyword}{register} \textcolor{keyword}{struct }\mbox{\hyperlink{structtostruct}{tostruct}} *top;
+292   \textcolor{keyword}{register} \textcolor{keyword}{struct }\mbox{\hyperlink{structtostruct}{tostruct}} *prevtop;
+293   \textcolor{keyword}{register} \textcolor{keywordtype}{long} toindex;
+294   \mbox{\hyperlink{structprofile__segment}{profile\_segment}} *seg = first\_segment;
+295 
+296   \textcolor{comment}{/*}
+297 \textcolor{comment}{   * find the return address for mcount,}
+298 \textcolor{comment}{   * and the return address for mcount's caller.}
+299 \textcolor{comment}{   */}
+300   
+301   \textcolor{comment}{/* selfpc = pc pushed by mcount call.}
+302 \textcolor{comment}{     This identifies the function that was just entered.  */}
+303   \mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}} = (\textcolor{keywordtype}{char} *) \mbox{\hyperlink{_g_b_a_8h_ae29faba89509024ffd1a292badcedf2d}{reg}}[14].\mbox{\hyperlink{arm-new_8h_a782b7c7c9a56a2031f6270eac7f000d6}{I}};
+304   \textcolor{comment}{/* frompcindex = pc in preceding frame.}
+305 \textcolor{comment}{     This identifies the caller of the function just entered.  */}
+306   frompcindex = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *) \mbox{\hyperlink{_g_b_a_8h_ae29faba89509024ffd1a292badcedf2d}{reg}}[12].\mbox{\hyperlink{arm-new_8h_a782b7c7c9a56a2031f6270eac7f000d6}{I}};
+307   \textcolor{comment}{/*}
+308 \textcolor{comment}{   * check that we are profiling}
+309 \textcolor{comment}{   * and that we aren't recursively invoked.}
+310 \textcolor{comment}{   */}
+311   \textcolor{keywordflow}{if} (profiling) \{
+312     \textcolor{keywordflow}{goto} \mbox{\hyperlink{_g_b_a_8cpp_a1277960b5f2b37137fe9b0b5a1ea0beb}{out}};
+313   \}
+314   profiling++;
+315   \textcolor{comment}{/*}
+316 \textcolor{comment}{   * check that frompcindex is a reasonable pc value.}
+317 \textcolor{comment}{   * for example: signal catchers get called from the stack,}
+318 \textcolor{comment}{   *   not from text space.  too bad.}
+319 \textcolor{comment}{   */}
+320   \textcolor{keywordflow}{while}(seg) \{
+321     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} index = (long)frompcindex - (\textcolor{keywordtype}{long})seg->\mbox{\hyperlink{structprofile__segment_aa8ee9d63ea20e39b677163d2de599c0a}{s\_lowpc}};
+322     \textcolor{keywordflow}{if} (index <= seg->s\_textsize) \{
+323       frompcindex = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *) index;
+324       \textcolor{keywordflow}{break};
+325     \}
+326     seg = seg->\mbox{\hyperlink{structprofile__segment_a105e1835554471470a91583c6da7860e}{next}};
+327   \}
+328   \textcolor{keywordflow}{if} ((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{long}) frompcindex > seg->\mbox{\hyperlink{structprofile__segment_abdd1f062a546f1deae937249beff75e0}{s\_textsize}}) \{
+329     \textcolor{keywordflow}{goto} done;
+330   \}
+331   frompcindex =
+332     &(seg->\mbox{\hyperlink{structprofile__segment_a95f5dd8cfc985546636f224205f13d63}{froms}}[((long) frompcindex) / (\mbox{\hyperlink{gmon_8h_adc53480f1c1b1c02e1e63241a5f3588b}{HASHFRACTION}} * \textcolor{keyword}{sizeof}(*seg->
+      \mbox{\hyperlink{structprofile__segment_a95f5dd8cfc985546636f224205f13d63}{froms}}))]);
+333   toindex = *frompcindex;
+334   \textcolor{keywordflow}{if} (toindex == 0) \{
+335     \textcolor{comment}{/*}
+336 \textcolor{comment}{     * first time traversing this arc}
+337 \textcolor{comment}{     */}
+338     toindex = ++seg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}}[0].\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}};
+339     \textcolor{keywordflow}{if} (toindex >= seg->\mbox{\hyperlink{structprofile__segment_ae05a2e4cec6f5e9b4d09617b1dd14154}{tolimit}}) \{
+340       \textcolor{keywordflow}{goto} overflow;
+341     \}
+342     *frompcindex = (\textcolor{keywordtype}{unsigned} short)toindex;
+343     top = &seg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}}[toindex];
+344     top->\mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}} = \mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}};
+345     top->\mbox{\hyperlink{structtostruct_adeb5d86711902c1a49e2de64dc1704b7}{count}} = 1;
+346     top->\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}} = 0;
+347     \textcolor{keywordflow}{goto} done;
+348   \}
+349   top = &seg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}}[toindex];
+350   \textcolor{keywordflow}{if} (top->\mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}} == \mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}}) \{
+351     \textcolor{comment}{/*}
+352 \textcolor{comment}{     * arc at front of chain; usual case.}
+353 \textcolor{comment}{     */}
+354     top->\mbox{\hyperlink{structtostruct_adeb5d86711902c1a49e2de64dc1704b7}{count}}++;
+355     \textcolor{keywordflow}{goto} done;
+356   \}
+357   \textcolor{comment}{/*}
+358 \textcolor{comment}{   * have to go looking down chain for it.}
+359 \textcolor{comment}{   * top points to what we are looking at,}
+360 \textcolor{comment}{   * prevtop points to previous top.}
+361 \textcolor{comment}{   * we know it is not at the head of the chain.}
+362 \textcolor{comment}{   */}
+363   \textcolor{keywordflow}{for} (; \textcolor{comment}{/* goto done */}; ) \{
+364     \textcolor{keywordflow}{if} (top->\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}} == 0) \{
+365       \textcolor{comment}{/*}
+366 \textcolor{comment}{       * top is end of the chain and none of the chain}
+367 \textcolor{comment}{       * had top->selfpc == selfpc.}
+368 \textcolor{comment}{       * so we allocate a new tostruct}
+369 \textcolor{comment}{       * and link it to the head of the chain.}
+370 \textcolor{comment}{       */}
+371       toindex = ++seg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}}[0].\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}};
+372       \textcolor{keywordflow}{if} (toindex >= seg->\mbox{\hyperlink{structprofile__segment_ae05a2e4cec6f5e9b4d09617b1dd14154}{tolimit}}) \{
+373         \textcolor{keywordflow}{goto} overflow;
+374       \}
+375       top = &seg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}}[toindex];
+376       top->\mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}} = \mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}};
+377       top->\mbox{\hyperlink{structtostruct_adeb5d86711902c1a49e2de64dc1704b7}{count}} = 1;
+378       top->\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}} = *frompcindex;
+379       *frompcindex = (\textcolor{keywordtype}{unsigned} short)toindex;
+380       \textcolor{keywordflow}{goto} done;
+381     \}
+382     \textcolor{comment}{/*}
+383 \textcolor{comment}{     * otherwise, check the next arc on the chain.}
+384 \textcolor{comment}{     */}
+385     prevtop = top;
+386     top = &seg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}}[top->\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}}];
+387     \textcolor{keywordflow}{if} (top->\mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}} == \mbox{\hyperlink{structtostruct_a0d2bae308211046a2b1c36b85f611044}{selfpc}}) \{
+388       \textcolor{comment}{/*}
+389 \textcolor{comment}{       * there it is.}
+390 \textcolor{comment}{       * increment its count}
+391 \textcolor{comment}{       * move it to the head of the chain.}
+392 \textcolor{comment}{       */}
+393       top->\mbox{\hyperlink{structtostruct_adeb5d86711902c1a49e2de64dc1704b7}{count}}++;
+394       toindex = prevtop->\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}};
+395       prevtop->\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}} = top->\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}};
+396       top->\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}} = *frompcindex;
+397       *frompcindex = (\textcolor{keywordtype}{unsigned} short)toindex;
+398       \textcolor{keywordflow}{goto} done;
+399     \}
+400     
+401   \}
+402  done:
+403   profiling--;
+404   \textcolor{comment}{/* and fall through */}
+405  \mbox{\hyperlink{_g_b_a_8cpp_a1277960b5f2b37137fe9b0b5a1ea0beb}{out}}:
+406   \textcolor{keywordflow}{return};  \textcolor{comment}{/* normal return restores saved registers */}
+407   
+408  overflow:
+409   profiling++; \textcolor{comment}{/* halt further profiling */}
+410 \textcolor{preprocessor}{#define TOLIMIT "mcount: tos overflow\(\backslash\)n"}
+411   \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \mbox{\hyperlink{prof_8cpp_aa0486d831eb45bdfff457a82005b5ab1}{TOLIMIT}});
+412   \textcolor{keywordflow}{goto} \mbox{\hyperlink{_g_b_a_8cpp_a1277960b5f2b37137fe9b0b5a1ea0beb}{out}};
+413 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{prof_8cpp_aa42c8feebb4e60902b483f7b8243c76f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{prof_8cpp_a5adffe03483301dba2d6ca7a32a93c0e}\label{prof_8cpp_a5adffe03483301dba2d6ca7a32a93c0e}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Put16@{prof\+Put16}}
+\index{prof\+Put16@{prof\+Put16}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Put16()}{profPut16()}}
+{\footnotesize\ttfamily void prof\+Put16 (\begin{DoxyParamCaption}\item[{char $\ast$}]{b,  }\item[{\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{v }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 85 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+86 \{
+87   \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}[0] = v & 255;
+88   \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}[1] = (v >> 8) & 255;
+89 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{prof_8cpp_ad2fbd2647a8ec58f0c11cfca5af072b8}\label{prof_8cpp_ad2fbd2647a8ec58f0c11cfca5af072b8}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Put32@{prof\+Put32}}
+\index{prof\+Put32@{prof\+Put32}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Put32()}{profPut32()}}
+{\footnotesize\ttfamily void prof\+Put32 (\begin{DoxyParamCaption}\item[{char $\ast$}]{b,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{v }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 77 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+78 \{
+79   \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}[0] = v & 255;
+80   \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}[1] = (v >> 8) & 255;
+81   \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}[2] = (v >> 16) & 255;
+82   \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}[3] = (v >> 24) & 255;
+83 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{prof_8cpp_ad2fbd2647a8ec58f0c11cfca5af072b8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{prof_8cpp_ac8b59f922be22a671018eab4c8b773d7}\label{prof_8cpp_ac8b59f922be22a671018eab4c8b773d7}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Set\+Hertz@{prof\+Set\+Hertz}}
+\index{prof\+Set\+Hertz@{prof\+Set\+Hertz}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Set\+Hertz()}{profSetHertz()}}
+{\footnotesize\ttfamily void prof\+Set\+Hertz (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{h }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 415 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+416 \{
+417   hz = h;
+418 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{prof_8cpp_a9531b8c274a573fe11af4fa0a4fd59c7}\label{prof_8cpp_a9531b8c274a573fe11af4fa0a4fd59c7}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Startup@{prof\+Startup}}
+\index{prof\+Startup@{prof\+Startup}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Startup()}{profStartup()}}
+{\footnotesize\ttfamily void prof\+Startup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{lowpc,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{highpc }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 139 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+140 \{
+141   \textcolor{keywordtype}{int} monsize;
+142   \textcolor{keywordtype}{char} *\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+143   \textcolor{keywordtype}{int} o;
+144   \mbox{\hyperlink{structprofile__segment}{profile\_segment}} *newseg = (\mbox{\hyperlink{structprofile__segment}{profile\_segment}}*)calloc(1,\textcolor{keyword}{sizeof}(
+      \mbox{\hyperlink{structprofile__segment}{profile\_segment}}));
+145   
+146   \textcolor{keywordflow}{if} (newseg) \{
+147     newseg->\mbox{\hyperlink{structprofile__segment_a105e1835554471470a91583c6da7860e}{next}} = first\_segment;
+148     first\_segment = newseg;
+149   \} \textcolor{keywordflow}{else} \{
+150     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \mbox{\hyperlink{prof_8cpp_a0c719c414608ef14852670b063876c07}{MSG}});
+151     \textcolor{keywordflow}{return};
+152   \}
+153   \textcolor{comment}{/*}
+154 \textcolor{comment}{   * round lowpc and highpc to multiples of the density we're using}
+155 \textcolor{comment}{   * so the rest of the scaling (here and in gprof) stays in ints.}
+156 \textcolor{comment}{   */}
+157   lowpc = \mbox{\hyperlink{gmon_8h_a596856aaf6a08539bfa47ad9539d39a5}{ROUNDDOWN}}(lowpc, \mbox{\hyperlink{gmon_8h_abf0e0d56183b53cc1791ba911847eaaa}{HISTFRACTION}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{gmon_8h_aad3751b16a1c6895f50504d73a9f7974}{HISTCOUNTER}}));
+158   newseg->\mbox{\hyperlink{structprofile__segment_aa8ee9d63ea20e39b677163d2de599c0a}{s\_lowpc}} = lowpc;
+159   highpc = \mbox{\hyperlink{gmon_8h_a20c604ddc8550203707ee1ef509ba365}{ROUNDUP}}(highpc, \mbox{\hyperlink{gmon_8h_abf0e0d56183b53cc1791ba911847eaaa}{HISTFRACTION}}*\textcolor{keyword}{sizeof}(\mbox{\hyperlink{gmon_8h_aad3751b16a1c6895f50504d73a9f7974}{HISTCOUNTER}}));
+160   newseg->\mbox{\hyperlink{structprofile__segment_a7f09373641edd894f53bc8eb0133698e}{s\_highpc}} = highpc;
+161   newseg->\mbox{\hyperlink{structprofile__segment_abdd1f062a546f1deae937249beff75e0}{s\_textsize}} = highpc - lowpc;
+162   monsize = (newseg->\mbox{\hyperlink{structprofile__segment_abdd1f062a546f1deae937249beff75e0}{s\_textsize}} / \mbox{\hyperlink{gmon_8h_abf0e0d56183b53cc1791ba911847eaaa}{HISTFRACTION}});
+163   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}} = (\textcolor{keywordtype}{char} *)calloc(1, 2*monsize );
+164   \textcolor{keywordflow}{if} ( \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}} == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} ) \{
+165     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \mbox{\hyperlink{prof_8cpp_a0c719c414608ef14852670b063876c07}{MSG}});
+166     \textcolor{keywordflow}{return};
+167   \}
+168   newseg->\mbox{\hyperlink{structprofile__segment_a95f5dd8cfc985546636f224205f13d63}{froms}} = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} *) calloc(1, 4*newseg->\mbox{\hyperlink{structprofile__segment_abdd1f062a546f1deae937249beff75e0}{s\_textsize}} / 
+      \mbox{\hyperlink{gmon_8h_adc53480f1c1b1c02e1e63241a5f3588b}{HASHFRACTION}} );
+169   \textcolor{keywordflow}{if} ( newseg->\mbox{\hyperlink{structprofile__segment_a95f5dd8cfc985546636f224205f13d63}{froms}} == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} ) \{
+170     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \mbox{\hyperlink{prof_8cpp_a0c719c414608ef14852670b063876c07}{MSG}});
+171     free(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+172     \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+173     \textcolor{keywordflow}{return};
+174   \}
+175   newseg->\mbox{\hyperlink{structprofile__segment_ae05a2e4cec6f5e9b4d09617b1dd14154}{tolimit}} = newseg->\mbox{\hyperlink{structprofile__segment_abdd1f062a546f1deae937249beff75e0}{s\_textsize}} * \mbox{\hyperlink{gmon_8h_a44b2778d390f1699c072eeac25a459f1}{ARCDENSITY}} / 100;
+176   \textcolor{keywordflow}{if} ( newseg->\mbox{\hyperlink{structprofile__segment_ae05a2e4cec6f5e9b4d09617b1dd14154}{tolimit}} < \mbox{\hyperlink{gmon_8h_acf269b6446a9411678c06fb00808b7ec}{MINARCS}} ) \{
+177     newseg->\mbox{\hyperlink{structprofile__segment_ae05a2e4cec6f5e9b4d09617b1dd14154}{tolimit}} = \mbox{\hyperlink{gmon_8h_acf269b6446a9411678c06fb00808b7ec}{MINARCS}};
+178   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( newseg->\mbox{\hyperlink{structprofile__segment_ae05a2e4cec6f5e9b4d09617b1dd14154}{tolimit}} > 65534 ) \{
+179     newseg->\mbox{\hyperlink{structprofile__segment_ae05a2e4cec6f5e9b4d09617b1dd14154}{tolimit}} = 65534;
+180   \}
+181   newseg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}} = (\textcolor{keyword}{struct }\mbox{\hyperlink{structtostruct}{tostruct}} *) calloc(1, newseg->\mbox{\hyperlink{structprofile__segment_ae05a2e4cec6f5e9b4d09617b1dd14154}{tolimit}} * \textcolor{keyword}{sizeof}( \textcolor{keyword}{struct} 
+      \mbox{\hyperlink{structtostruct}{tostruct}} ) );
+182   \textcolor{keywordflow}{if} ( newseg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}} == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}} ) \{
+183     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \mbox{\hyperlink{prof_8cpp_a0c719c414608ef14852670b063876c07}{MSG}});
+184     
+185     free(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+186     \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+187     
+188     free(newseg->\mbox{\hyperlink{structprofile__segment_a95f5dd8cfc985546636f224205f13d63}{froms}});
+189     newseg->\mbox{\hyperlink{structprofile__segment_a95f5dd8cfc985546636f224205f13d63}{froms}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+190     
+191     \textcolor{keywordflow}{return};
+192   \}
+193   newseg->\mbox{\hyperlink{structprofile__segment_abef295486183253034168e0b10ab0145}{tos}}[0].\mbox{\hyperlink{structtostruct_a69307956aeadd440e3bc426e1ca7ce9c}{link}} = 0;
+194   newseg->\mbox{\hyperlink{structprofile__segment_a62d09b5209cad3577bfdd8b5b664c429}{sbuf}} = \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+195   newseg->\mbox{\hyperlink{structprofile__segment_abb1125e53b4e5c215e7a9d3fccbd0a37}{ssiz}} = monsize;
+196   \textcolor{keywordflow}{if} ( monsize <= 0 )
+197     \textcolor{keywordflow}{return};
+198   o = highpc - lowpc;
+199   \textcolor{keywordflow}{if}( monsize < o )
+200     newseg->\mbox{\hyperlink{structprofile__segment_a4fafbba78188d70492831e298d7d42fc}{s\_scale}} = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})(( (\textcolor{keywordtype}{float}) monsize / o ) * \mbox{\hyperlink{prof_8cpp_a38bf464589f908b00b6a25e20b79c333}{SCALE\_1\_TO\_1}});
+201   \textcolor{keywordflow}{else}
+202     newseg->\mbox{\hyperlink{structprofile__segment_a4fafbba78188d70492831e298d7d42fc}{s\_scale}} = \mbox{\hyperlink{prof_8cpp_a38bf464589f908b00b6a25e20b79c333}{SCALE\_1\_TO\_1}};
+203   \mbox{\hyperlink{prof_8cpp_a3f1b22a90faa17931b199c3e8ac74379}{profControl}}(1);
+204 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{prof_8cpp_a9531b8c274a573fe11af4fa0a4fd59c7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{prof_8cpp_a4e558948e2c7c81a6f3814d308edbd6c}\label{prof_8cpp_a4e558948e2c7c81a6f3814d308edbd6c}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Write@{prof\+Write}}
+\index{prof\+Write@{prof\+Write}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Write()}{profWrite()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} prof\+Write (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{char $\ast$}]{buf,  }\item[{unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{n }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 108 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+109 \{
+110   \textcolor{keywordflow}{if}(fwrite(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, 1, \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}}, f) != \mbox{\hyperlink{expr-lex_8cpp_aeab71244afb687f16d8c4f5ee9d6ef0e}{n}})
+111     \textcolor{keywordflow}{return} 1;
+112   \textcolor{keywordflow}{return} 0;
+113 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}\label{prof_8cpp_a9b32552ca587b160948a7537551b6c0d}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Write32@{prof\+Write32}}
+\index{prof\+Write32@{prof\+Write32}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Write32()}{profWrite32()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} prof\+Write32 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{v }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 98 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+99 \{
+100   \textcolor{keywordtype}{char} \mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}[4];
+101 
+102   \mbox{\hyperlink{prof_8cpp_ad2fbd2647a8ec58f0c11cfca5af072b8}{profPut32}}(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, v);
+103   \textcolor{keywordflow}{if}(fwrite(\mbox{\hyperlink{expr-lex_8cpp_aaaf5379ca5750ed4ef26a247cca0103c}{buf}}, 1, 4, f) != 4)
+104     \textcolor{keywordflow}{return} 1;
+105   \textcolor{keywordflow}{return} 0;
+106 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{prof_8cpp_a9b32552ca587b160948a7537551b6c0d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{prof_8cpp_abee2bf452f8b2071e2c0a9e9f1e5047f}\label{prof_8cpp_abee2bf452f8b2071e2c0a9e9f1e5047f}} 
+\index{prof.\+cpp@{prof.\+cpp}!prof\+Write8@{prof\+Write8}}
+\index{prof\+Write8@{prof\+Write8}!prof.\+cpp@{prof.\+cpp}}
+\subsubsection{\texorpdfstring{prof\+Write8()}{profWrite8()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} prof\+Write8 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}}]{b }\end{DoxyParamCaption})}
+
+
+
+prof.\+cpp 파일의 91 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+92 \{
+93   \textcolor{keywordflow}{if}(fwrite(&\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}, 1, 1, f) != 1)
+94     \textcolor{keywordflow}{return} 1;
+95   \textcolor{keywordflow}{return} 0;
+96 \}
+\end{DoxyCode}

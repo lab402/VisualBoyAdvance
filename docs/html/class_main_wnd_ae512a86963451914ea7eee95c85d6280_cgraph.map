@@ -1,0 +1,11 @@
+<map id="MainWnd::OnToolsRecordStartavirecording" name="MainWnd::OnToolsRecordStartavirecording">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="324,5,497,32"/>
+<area shape="rect" id="node4" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="339,56,482,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="325,107,496,133"/>
+<area shape="rect" id="node6" href="$class_v_b_a.html#a228edf26b0dc4129658c174ee5a3c27c" title="VBA::winLoadFilter" alt="" coords="344,157,477,184"/>
+<area shape="rect" id="node7" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="569,183,695,209"/>
+<area shape="rect" id="node8" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="350,259,471,285"/>
+<area shape="rect" id="node9" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="335,309,487,336"/>
+<area shape="rect" id="node10" href="$_reg_8cpp.html#a37fa244e34332f058ba14f206dc7e0ea" title="regSetStringValue" alt="" coords="347,360,474,387"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="545,5,719,32"/>
+</map>

@@ -1,0 +1,25 @@
+<map id="MainWnd::isDriveRoot" name="MainWnd::isDriveRoot">
+<area shape="rect" id="node2" href="$class_main_wnd.html#afd3b77fc621f2b464369c472262689ab" title="MainWnd::winSaveCheatList\lDefault" alt="" coords="507,8,693,49"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#a9d0fc611b92ef43d6a56c9f785051bee" title="MainWnd::winLoadCheatList\lDefault" alt="" coords="507,254,693,296"/>
+<area shape="rect" id="node11" href="$class_main_wnd.html#a653d11c15657ad15c35073eaf892519c" title="MainWnd::writeBatteryFile" alt="" coords="513,74,687,100"/>
+<area shape="rect" id="node12" href="$class_main_wnd.html#a6f37e1bbcd8c635131b84ded2786578b" title="MainWnd::readBatteryFile" alt="" coords="513,186,687,212"/>
+<area shape="rect" id="node13" href="$class_main_wnd.html#aea243ed57e88a9efec1196d510d6b235" title="MainWnd::screenCapture" alt="" coords="231,315,401,342"/>
+<area shape="rect" id="node14" href="$class_main_wnd.html#a576e72b77e11a1e9f92b00279023b755" title="MainWnd::OnCheatsLoadcheatlist" alt="" coords="206,366,426,392"/>
+<area shape="rect" id="node15" href="$class_main_wnd.html#a460ab90b938c269df34be6d15777eb14" title="MainWnd::OnCheatsSavecheatlist" alt="" coords="206,416,426,443"/>
+<area shape="rect" id="node16" href="$class_main_wnd.html#a50801b3ffe4aa323fdd654dc56e71d32" title="MainWnd::OnFileLoad" alt="" coords="241,467,391,494"/>
+<area shape="rect" id="node17" href="$class_main_wnd.html#a84c4154350bd26b393fcd82948d342e1" title="MainWnd::OnFileLoadSlot" alt="" coords="229,163,403,190"/>
+<area shape="rect" id="node18" href="$class_main_wnd.html#aafa7776c35ba50c4244cb22650f15337" title="MainWnd::OnFileLoadgameMostrecent" alt="" coords="476,127,724,154"/>
+<area shape="rect" id="node19" href="$class_main_wnd.html#a962abbb99f5b6bba3f05ba043358584e" title="MainWnd::OnFileSave" alt="" coords="241,518,391,544"/>
+<area shape="rect" id="node20" href="$class_main_wnd.html#aa10e0e321035d0cd1e1e953529df5f19" title="MainWnd::OnFileSaveSlot" alt="" coords="229,619,403,646"/>
+<area shape="rect" id="node21" href="$class_main_wnd.html#a946615293a97e8d381bb34bee4d7ff24" title="MainWnd::OnFileSavegameOldestslot" alt="" coords="479,594,721,620"/>
+<area shape="rect" id="node22" href="$class_main_wnd.html#a869b47c3aae70c534109b9a8310e1faf" title="MainWnd::OnFileScreencapture" alt="" coords="213,670,419,696"/>
+<area shape="rect" id="node23" href="$class_main_wnd.html#ac037eba8953facb1e191ad0b4bb6ff39" title="MainWnd::OnUpdateFileSavegame\lOldestslot" alt="" coords="204,721,428,762"/>
+<area shape="rect" id="node24" href="$class_main_wnd.html#ae97e51d61f89103a934b4f55ed09c4d9" title="MainWnd::OnUpdateFileLoadgame\lMostrecent" alt="" coords="204,786,428,828"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="785,127,915,154"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#abf162c1763ea3246bdac171847fb2d9d" title="MainWnd::OnFileClose" alt="" coords="772,26,928,52"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1019,178,1176,204"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1020,228,1175,255"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1005,76,1190,103"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="994,127,1201,154"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="976,26,1219,52"/>
+</map>

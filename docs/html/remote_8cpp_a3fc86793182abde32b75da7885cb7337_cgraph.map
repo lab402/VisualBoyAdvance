@@ -1,0 +1,16 @@
+<map id="remoteStubMain" name="remoteStubMain">
+<area shape="rect" id="node2" href="$remote_8cpp.html#a10da286ad7e1f3a23321ecb350790632" title="remoteSendStatus" alt="" coords="379,119,509,145"/>
+<area shape="rect" id="node4" href="$remote_8cpp.html#a81762106aecfb89930ba4e1167fa707b" title="remotePutPacket" alt="" coords="567,321,690,348"/>
+<area shape="rect" id="node5" href="$system_8cpp.html#a1070cb2c9d3d47b8d468cd78d3433468" title="debuggerMain" alt="" coords="195,68,298,95"/>
+<area shape="rect" id="node6" href="$system_8cpp.html#a03f1aa69b417ab50a498a95738d2eeb5" title="debuggerSignal" alt="" coords="191,119,302,145"/>
+<area shape="rect" id="node7" href="$remote_8cpp.html#a24235adffe0138858ef6522c74936db5" title="remoteSendSignal" alt="" coords="380,423,508,449"/>
+<area shape="rect" id="node8" href="$remote_8cpp.html#a2a3582d89ee0431494a63172d29b92b7" title="remoteStepOverRange" alt="" coords="171,271,323,297"/>
+<area shape="rect" id="node9" href="$_g_b_a_8cpp.html#a4b7cf35cc5b9d6e9a65dad93a9a0d918" title="CPULoop" alt="" coords="405,321,483,348"/>
+<area shape="rect" id="node10" href="$remote_8cpp.html#a05e72d5a52d6e6ea14536f17042cbf13" title="remoteReadRegisters" alt="" coords="371,68,517,95"/>
+<area shape="rect" id="node11" href="$remote_8cpp.html#ab82be9d3951d0d33bb3d86a302fcfda7" title="remoteWriteRegister" alt="" coords="373,524,515,551"/>
+<area shape="rect" id="node12" href="$remote_8cpp.html#a26ac0e70fdeb38e5edf448380676b158" title="remoteMemoryWrite" alt="" coords="374,575,514,601"/>
+<area shape="rect" id="node13" href="$remote_8cpp.html#acfadaff4b66fe22811b9364c889bca53" title="remoteMemoryRead" alt="" coords="177,169,316,196"/>
+<area shape="rect" id="node14" href="$remote_8cpp.html#a972db5062e0f189ab38c26977a056c21" title="remoteBinaryWrite" alt="" coords="181,372,312,399"/>
+<area shape="rect" id="node15" href="$remote_8cpp.html#aede3a4f42394a87ac92207e75e393a2f" title="remoteWriteWatch" alt="" coords="181,473,312,500"/>
+<area shape="rect" id="node3" href="$remote_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="565,93,692,120"/>
+</map>

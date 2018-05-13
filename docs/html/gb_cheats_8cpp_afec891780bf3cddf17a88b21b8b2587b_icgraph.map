@@ -1,0 +1,23 @@
+<map id="gbCheatUpdateMap" name="gbCheatUpdateMap">
+<area shape="rect" id="node2" href="$gb_cheats_8h.html#aaf0e545768836b242130504ed454236f" title="gbCheatsReadGame" alt="" coords="198,29,341,56"/>
+<area shape="rect" id="node3" href="$gb_cheats_8h.html#a4f713628e1d322685c13419de68f50bb" title="gbCheatsLoadCheatList" alt="" coords="189,80,349,107"/>
+<area shape="rect" id="node13" href="$gb_cheats_8h.html#aaacc96d52b3c3cfe0c59b1bb239d878e" title="gbCheatRemove" alt="" coords="211,131,327,157"/>
+<area shape="rect" id="node15" href="$gb_cheats_8h.html#aac0eadde26bcba9cbe5ff2f0fa71ee23" title="gbCheatRemoveAll" alt="" coords="204,296,335,323"/>
+<area shape="rect" id="node19" href="$gb_cheats_8h.html#a391f9fe74b23195c987dab30a3bea0d6" title="gbCheatEnable" alt="" coords="214,181,325,208"/>
+<area shape="rect" id="node22" href="$gb_cheats_8h.html#a1510f7778abde6a0c2e8af953368ea6e" title="gbCheatDisable" alt="" coords="213,236,326,263"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#adfe445d042cd87dfa30b07fdcfa7eeff" title="MainWnd::winLoadCheatList" alt="" coords="401,77,588,104"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a9d0fc611b92ef43d6a56c9f785051bee" title="MainWnd::winLoadCheatList\lDefault" alt="" coords="682,99,869,141"/>
+<area shape="rect" id="node12" href="$class_main_wnd.html#a576e72b77e11a1e9f92b00279023b755" title="MainWnd::OnCheatsLoadcheatlist" alt="" coords="665,48,885,75"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="959,107,1088,133"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1179,5,1336,32"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1180,56,1335,83"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1165,107,1350,133"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1154,157,1361,184"/>
+<area shape="rect" id="node11" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1136,208,1379,235"/>
+<area shape="rect" id="node14" href="$class_g_b_cheat_list.html#ae8c2c668dbb6ab9989c50efc60448a54" title="GBCheatList::OnRemove" alt="" coords="411,128,578,155"/>
+<area shape="rect" id="node16" href="$gb_cheats_8h.html#a5fe6a356ce452b784ba838d3ae32bce2" title="gbCheatReadGSCodeFile" alt="" coords="409,296,580,323"/>
+<area shape="rect" id="node18" href="$class_g_b_cheat_list.html#a572e8d726efb4dcaed99de7b7f1a815d" title="GBCheatList::OnRemoveAll" alt="" coords="403,347,586,373"/>
+<area shape="rect" id="node17" href="$class_main_wnd.html#a3e7abf73687cb0dbf61c3707de5e10f4" title="MainWnd::OnFileImportGamesharkcodefile" alt="" coords="640,296,911,323"/>
+<area shape="rect" id="node20" href="$class_g_b_cheat_list.html#a3a9af133cd9547881b6f71404ab9171f" title="GBCheatList::OnEnable" alt="" coords="414,179,575,205"/>
+<area shape="rect" id="node21" href="$class_g_b_cheat_list.html#a35c4625f3b1696bf7647d23831ae310b" title="GBCheatList::OnItemchanged\lCheatList" alt="" coords="397,230,592,271"/>
+</map>

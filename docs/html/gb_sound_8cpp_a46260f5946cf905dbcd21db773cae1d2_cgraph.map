@@ -1,0 +1,9 @@
+<map id="gbSoundReadGame" name="gbSoundReadGame">
+<area shape="rect" id="node2" href="$_util_8cpp.html#a641f77504944dcb0185b646ff1627699" title="utilReadData" alt="" coords="211,5,307,32"/>
+<area shape="rect" id="node3" href="$_util_8cpp.html#a7c3497694953dfa7b0170b41e4b6ce93" title="utilGzRead" alt="" coords="437,56,523,83"/>
+<area shape="rect" id="node4" href="$_util_8cpp.html#a91f3a5d5ee73824d2d64f329b7a7e6a2" title="utilReadInt" alt="" coords="218,107,301,133"/>
+<area shape="rect" id="node5" href="$gb_sound_8cpp.html#a5986a1c43ffb10501e24e608172ad39f" title="gbSoundSetQuality" alt="" coords="192,157,327,184"/>
+<area shape="rect" id="node6" href="$system_8cpp.html#a98f45c601382b0dee2729693bc8720c7" title="systemCanChangeSoundQuality" alt="" coords="375,107,585,133"/>
+<area shape="rect" id="node7" href="$gb_sound_8cpp.html#a2f94fcc352d566069ad4cee1e9a62a39" title="soundShutdown" alt="" coords="423,157,537,184"/>
+<area shape="rect" id="node8" href="$gb_sound_8cpp.html#a48aac7ccc2439587be697d3f15fcd2e7" title="soundInit" alt="" coords="443,208,517,235"/>
+</map>

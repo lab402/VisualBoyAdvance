@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_about_dialog.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,52 +95,182 @@ $(function() {
 <div class="title">AboutDialog 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_about_dialog_8h_source.html">AboutDialog.h</a>&gt;</code></p>
 <div class="dynheader">
 AboutDialog에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_about_dialog.png" usemap="#AboutDialog_map" alt=""/>
-  <map id="AboutDialog_map" name="AboutDialog_map">
-</map>
- </div></div>
+<div class="center"><img src="class_about_dialog__inherit__graph.png" border="0" usemap="#_about_dialog_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+AboutDialog에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_about_dialog__coll__graph.png" border="0" usemap="#_about_dialog_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:ad39ef53347d21ec0cb70ff40df557e61"><td class="memItemLeft" align="right" valign="top"><a id="ad39ef53347d21ec0cb70ff40df557e61"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_ABOUT
+<tr class="memitem:ad39ef53347d21ec0cb70ff40df557e61"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_about_dialog.html#ad39ef53347d21ec0cb70ff40df557e61a5abcac78e55566777388160cfcf0112c">IDD</a> = IDD_ABOUT
  }</td></tr>
 <tr class="separator:ad39ef53347d21ec0cb70ff40df557e61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a4a8056094af91d12bca94d4fcba1aeae"><td class="memItemLeft" align="right" valign="top"><a id="a4a8056094af91d12bca94d4fcba1aeae"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AboutDialog</b> (CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:a4a8056094af91d12bca94d4fcba1aeae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_about_dialog.html#a4a8056094af91d12bca94d4fcba1aeae">AboutDialog</a> (CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:a4a8056094af91d12bca94d4fcba1aeae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a78e658a0c2d03632ce86a675b89d8492"><td class="memItemLeft" align="right" valign="top"><a id="a78e658a0c2d03632ce86a675b89d8492"></a>
-CString&#160;</td><td class="memItemRight" valign="bottom"><b>m_version</b></td></tr>
+<tr class="memitem:a78e658a0c2d03632ce86a675b89d8492"><td class="memItemLeft" align="right" valign="top">CString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_about_dialog.html#a78e658a0c2d03632ce86a675b89d8492">m_version</a></td></tr>
 <tr class="separator:a78e658a0c2d03632ce86a675b89d8492"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a098f0327b766a8c3fff0fef3076dc9eb"><td class="memItemLeft" align="right" valign="top"><a id="a098f0327b766a8c3fff0fef3076dc9eb"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a098f0327b766a8c3fff0fef3076dc9eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_about_dialog.html#a098f0327b766a8c3fff0fef3076dc9eb">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a098f0327b766a8c3fff0fef3076dc9eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab42eeca93160e48d480b004aaf33c353"><td class="memItemLeft" align="right" valign="top"><a id="ab42eeca93160e48d480b004aaf33c353"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:ab42eeca93160e48d480b004aaf33c353"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_about_dialog.html#ab42eeca93160e48d480b004aaf33c353">OnInitDialog</a> ()</td></tr>
 <tr class="separator:ab42eeca93160e48d480b004aaf33c353"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_about_dialog_8h_source.html">AboutDialog.h</a> 파일의 <a class="el" href="_about_dialog_8h_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="ad39ef53347d21ec0cb70ff40df557e61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad39ef53347d21ec0cb70ff40df557e61">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ad39ef53347d21ec0cb70ff40df557e61a5abcac78e55566777388160cfcf0112c"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_about_dialog_8h_source.html">AboutDialog.h</a> 파일의 <a class="el" href="_about_dialog_8h_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{ <a class="code" href="class_about_dialog.html#ad39ef53347d21ec0cb70ff40df557e61a5abcac78e55566777388160cfcf0112c">IDD</a> = <a class="code" href="resource_8h.html#a74dbd3f210d99eb11318cd83e1475abb">IDD_ABOUT</a> };</div><div class="ttc" id="resource_8h_html_a74dbd3f210d99eb11318cd83e1475abb"><div class="ttname"><a href="resource_8h.html#a74dbd3f210d99eb11318cd83e1475abb">IDD_ABOUT</a></div><div class="ttdeci">#define IDD_ABOUT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00052">resource.h:52</a></div></div>
+<div class="ttc" id="class_about_dialog_html_ad39ef53347d21ec0cb70ff40df557e61a5abcac78e55566777388160cfcf0112c"><div class="ttname"><a href="class_about_dialog.html#ad39ef53347d21ec0cb70ff40df557e61a5abcac78e55566777388160cfcf0112c">AboutDialog::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_about_dialog_8h_source.html#l00045">AboutDialog.h:45</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a4a8056094af91d12bca94d4fcba1aeae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a8056094af91d12bca94d4fcba1aeae">&#9670;&nbsp;</a></span>AboutDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AboutDialog::AboutDialog </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_about_dialog_8cpp_source.html">AboutDialog.cpp</a> 파일의 <a class="el" href="_about_dialog_8cpp_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  : CDialog(<a class="code" href="class_about_dialog.html#ad39ef53347d21ec0cb70ff40df557e61a5abcac78e55566777388160cfcf0112c">AboutDialog::IDD</a>, pParent)</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(AboutDialog)</span></div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="class_about_dialog.html#a78e658a0c2d03632ce86a675b89d8492">m_version</a> = _T(<a class="code" href="_auto_build_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a>);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="ttc" id="class_about_dialog_html_a78e658a0c2d03632ce86a675b89d8492"><div class="ttname"><a href="class_about_dialog.html#a78e658a0c2d03632ce86a675b89d8492">AboutDialog::m_version</a></div><div class="ttdeci">CString m_version</div><div class="ttdef"><b>Definition:</b> <a href="_about_dialog_8h_source.html#l00046">AboutDialog.h:46</a></div></div>
+<div class="ttc" id="class_about_dialog_html_ad39ef53347d21ec0cb70ff40df557e61a5abcac78e55566777388160cfcf0112c"><div class="ttname"><a href="class_about_dialog.html#ad39ef53347d21ec0cb70ff40df557e61a5abcac78e55566777388160cfcf0112c">AboutDialog::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_about_dialog_8h_source.html#l00045">AboutDialog.h:45</a></div></div>
+<div class="ttc" id="_auto_build_8h_html_a1c6d5de492ac61ad29aec7aa9a436bbf"><div class="ttname"><a href="_auto_build_8h.html#a1c6d5de492ac61ad29aec7aa9a436bbf">VERSION</a></div><div class="ttdeci">#define VERSION</div><div class="ttdef"><b>Definition:</b> <a href="_auto_build_8h_source.html#l00023">AutoBuild.h:23</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a098f0327b766a8c3fff0fef3076dc9eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a098f0327b766a8c3fff0fef3076dc9eb">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AboutDialog::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_about_dialog_8cpp_source.html">AboutDialog.cpp</a> 파일의 <a class="el" href="_about_dialog_8cpp_source.html#l00045">45</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;{</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(AboutDialog)</span></div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  DDX_Text(pDX, <a class="code" href="resource_8h.html#a57b3cae2964c6fe360b5d2189140fb3b">IDC_VERSION</a>, <a class="code" href="class_about_dialog.html#a78e658a0c2d03632ce86a675b89d8492">m_version</a>);</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a05a0c29c2d7ff2aef0dfe56ca2e85115">IDC_URL</a>, m_link);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;}</div><div class="ttc" id="resource_8h_html_a05a0c29c2d7ff2aef0dfe56ca2e85115"><div class="ttname"><a href="resource_8h.html#a05a0c29c2d7ff2aef0dfe56ca2e85115">IDC_URL</a></div><div class="ttdeci">#define IDC_URL</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00425">resource.h:425</a></div></div>
+<div class="ttc" id="resource_8h_html_a57b3cae2964c6fe360b5d2189140fb3b"><div class="ttname"><a href="resource_8h.html#a57b3cae2964c6fe360b5d2189140fb3b">IDC_VERSION</a></div><div class="ttdeci">#define IDC_VERSION</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00455">resource.h:455</a></div></div>
+<div class="ttc" id="class_about_dialog_html_a78e658a0c2d03632ce86a675b89d8492"><div class="ttname"><a href="class_about_dialog.html#a78e658a0c2d03632ce86a675b89d8492">AboutDialog::m_version</a></div><div class="ttdeci">CString m_version</div><div class="ttdef"><b>Definition:</b> <a href="_about_dialog_8h_source.html#l00046">AboutDialog.h:46</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab42eeca93160e48d480b004aaf33c353"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab42eeca93160e48d480b004aaf33c353">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL AboutDialog::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_about_dialog_8cpp_source.html">AboutDialog.cpp</a> 파일의 <a class="el" href="_about_dialog_8cpp_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  </div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  CWnd *p = GetDlgItem(<a class="code" href="resource_8h.html#a5b3a02ffc3f0b3215cd7b04e16df69b1">IDC_TRANSLATOR_URL</a>);</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="keywordflow">if</span>(p) {</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    m_translator.SubclassDlgItem(<a class="code" href="resource_8h.html#a5b3a02ffc3f0b3215cd7b04e16df69b1">IDC_TRANSLATOR_URL</a>, <span class="keyword">this</span>);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  m_link.SetWindowText(<span class="stringliteral">&quot;http://vba.ngemu.com&quot;</span>);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div><div class="ttc" id="resource_8h_html_a5b3a02ffc3f0b3215cd7b04e16df69b1"><div class="ttname"><a href="resource_8h.html#a5b3a02ffc3f0b3215cd7b04e16df69b1">IDC_TRANSLATOR_URL</a></div><div class="ttdeci">#define IDC_TRANSLATOR_URL</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00433">resource.h:433</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a78e658a0c2d03632ce86a675b89d8492"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78e658a0c2d03632ce86a675b89d8492">&#9670;&nbsp;</a></span>m_version</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CString AboutDialog::m_version</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_about_dialog_8h_source.html">AboutDialog.h</a> 파일의 <a class="el" href="_about_dialog_8h_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_about_dialog_8h_source.html">AboutDialog.h</a></li>
-<li>src/win32/AboutDialog.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_about_dialog_8h_source.html">AboutDialog.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_about_dialog_8cpp_source.html">AboutDialog.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_about_dialog.html">AboutDialog</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

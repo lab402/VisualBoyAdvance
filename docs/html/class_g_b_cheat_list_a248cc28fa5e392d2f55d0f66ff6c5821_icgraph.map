@@ -1,0 +1,7 @@
+<map id="GBCheatList::refresh" name="GBCheatList::refresh">
+<area shape="rect" id="node2" href="$class_g_b_cheat_list.html#a3a9af133cd9547881b6f71404ab9171f" title="GBCheatList::OnEnable" alt="" coords="213,5,374,32"/>
+<area shape="rect" id="node3" href="$class_g_b_cheat_list.html#ae8c2c668dbb6ab9989c50efc60448a54" title="GBCheatList::OnRemove" alt="" coords="210,56,377,83"/>
+<area shape="rect" id="node4" href="$class_g_b_cheat_list.html#a572e8d726efb4dcaed99de7b7f1a815d" title="GBCheatList::OnRemoveAll" alt="" coords="202,107,385,133"/>
+<area shape="rect" id="node5" href="$class_g_b_cheat_list.html#a35c4625f3b1696bf7647d23831ae310b" title="GBCheatList::OnItemchanged\lCheatList" alt="" coords="196,158,391,199"/>
+<area shape="rect" id="node6" href="$class_g_b_cheat_list.html#a3adbb125356d48a379d2e60609fb775f" title="GBCheatList::OnInitDialog" alt="" coords="206,224,381,251"/>
+</map>

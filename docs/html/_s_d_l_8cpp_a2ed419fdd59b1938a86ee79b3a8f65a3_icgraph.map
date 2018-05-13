@@ -1,0 +1,6 @@
+<map id="Convert32bit" name="Convert32bit">
+<area shape="rect" id="node2" href="$_s_d_l_8cpp.html#a4c7a89666b2346791cd66a5a254c4bcc" title="Draw_Overlay" alt="" coords="147,31,248,57"/>
+<area shape="rect" id="node3" href="$_s_d_l_8cpp.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="296,31,431,57"/>
+<area shape="rect" id="node4" href="$_s_d_l_8cpp.html#a50d948bf474caba7bfedd641bd5f4e2c" title="sdlWriteState" alt="" coords="479,5,580,32"/>
+<area shape="rect" id="node5" href="$_s_d_l_8cpp.html#a915c860581a6f2a7fa3f0d3ae784e21c" title="sdlReadState" alt="" coords="479,56,579,83"/>
+</map>

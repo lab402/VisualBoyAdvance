@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_g_s_a_code_select.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">GSACodeSelect 멤버 목록</div>  </div>
@@ -68,21 +92,24 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>GSACodeSelect</b>(FILE *file, CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_file</b> (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_games</b> (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnCancel</b>() (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnOk</b>() (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnSelchangeGameList</b>() (다음에서 정의됨 : <a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a>)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_s_a_code_select.html#adae15096d0425900fee08d7bf710ac21">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_s_a_code_select.html#abe2d23afcbf2fe70e2aaf6ced96c9b1c">GSACodeSelect</a>(FILE *file, CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_s_a_code_select.html#a248fc16f816d8ee4cc8e8e16f71a0167acbcc533e23047c863f6466b3b84f499a">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_s_a_code_select.html#a96b171e4976a250bdcac447654cdef12">m_file</a></td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_s_a_code_select.html#a732e7dca958e45d23a1d00234c23c838">m_games</a></td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_s_a_code_select.html#ab959eeacc114c26cdb5933e4e501164b">OnCancel</a>()</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_s_a_code_select.html#a8614bcbc03f8fc22303296416f66025f">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_s_a_code_select.html#a8d35a28174f3e4a5b42b7906741c4a63">OnOk</a>()</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_s_a_code_select.html#a14529b62932e8eed3bc92f1a4d902b48">OnSelchangeGameList</a>()</td><td class="entry"><a class="el" href="class_g_s_a_code_select.html">GSACodeSelect</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

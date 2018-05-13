@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_g_b_a_palette_view_control.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">GBAPaletteViewControl 멤버 목록</div>  </div>
@@ -68,29 +92,32 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_g_b_a_palette_view_control.html">GBAPaletteViewControl</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>init</b>(int c, int w, int h) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnEraseBkgnd</b>(CDC *pDC) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnLButtonDown</b>(UINT nFlags, CPoint point) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnPaint</b>() (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>palette</b> (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>paletteAddress</b> (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PaletteViewControl</b>() (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>refresh</b>() (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>registerClass</b>() (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>render</b>(u16 color, int x, int y) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>saveAdobe</b>(const char *name) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>saveJASCPAL</b>(const char *name) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>saveMSPAL</b>(const char *name) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setPaletteAddress</b>(int address) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setSelected</b>(int s) (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>updatePalette</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_a_palette_view_control.html">GBAPaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_g_b_a_palette_view_control.html">GBAPaletteViewControl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~PaletteViewControl</b>() (다음에서 정의됨 : <a class="el" href="class_palette_view_control.html">PaletteViewControl</a>)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#abc7a9dd832f6b5fc8ca81c8b08bd2ee8">init</a>(int c, int w, int h)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_palette_view_control.html#ac2086b2ba7161f3adb5ac76484f77cc9">OnEraseBkgnd</a>(CDC *pDC)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#a766a44e9b018fc6c87f81f3c0fdd6c6e">OnLButtonDown</a>(UINT nFlags, CPoint point)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_palette_view_control.html#ab68c1927e30e1b35b207d6884ef9822d">OnPaint</a>()</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#a1a5ce1812cf6c8d26889f4eb03d1d4ec">palette</a></td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_palette_view_control.html#a53b2efd4174e06a68e545608e458947b">paletteAddress</a></td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#ae7bc315eab0f7925e3c45b063244098b">PaletteViewControl</a>()</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_palette_view_control.html#aace3ab97afe8216b3873159ee852779f">refresh</a>()</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#add54d86e21f3acfcdc129dd656109c83">registerClass</a>()</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_palette_view_control.html#adbcdd372f28027690355099e14b669d1">render</a>(u16 color, int x, int y)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#a14d553a87d89463719adcaa63f42a72b">saveAdobe</a>(const char *name)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_palette_view_control.html#a9efcff77eaf476013ac5f3ebd2d53779">saveJASCPAL</a>(const char *name)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#a0e2249bb157bf7fb36b128a83bf108b5">saveMSPAL</a>(const char *name)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_palette_view_control.html#af552330a1e761f659936d3dd628f9a81">setPaletteAddress</a>(int address)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#afe3570f3d0bf905f25977346a50dec7f">setSelected</a>(int s)</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_palette_view_control.html#a020d7db2f3efb69b4e08d1b5fb351850">updatePalette</a>()</td><td class="entry"><a class="el" href="class_g_b_a_palette_view_control.html">GBAPaletteViewControl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_palette_view_control.html#ab09935586912db770ff77aa433be4d84">~PaletteViewControl</a>()</td><td class="entry"><a class="el" href="class_palette_view_control.html">PaletteViewControl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

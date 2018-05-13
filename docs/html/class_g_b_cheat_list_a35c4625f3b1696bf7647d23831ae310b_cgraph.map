@@ -1,0 +1,6 @@
+<map id="GBCheatList::OnItemchangedCheatList" name="GBCheatList::OnItemchangedCheatList">
+<area shape="rect" id="node2" href="$gb_cheats_8cpp.html#aed1bdafc2cfd18d6345102077dcdca76" title="gbCheatEnable" alt="" coords="264,5,375,32"/>
+<area shape="rect" id="node4" href="$gb_cheats_8cpp.html#a5860b5a75e2297e4d2f2f69dde0ad689" title="gbCheatDisable" alt="" coords="263,56,376,83"/>
+<area shape="rect" id="node5" href="$class_g_b_cheat_list.html#a248cc28fa5e392d2f55d0f66ff6c5821" title="GBCheatList::refresh" alt="" coords="248,107,391,133"/>
+<area shape="rect" id="node3" href="$gb_cheats_8cpp.html#afec891780bf3cddf17a88b21b8b2587b" title="gbCheatUpdateMap" alt="" coords="439,31,575,57"/>
+</map>

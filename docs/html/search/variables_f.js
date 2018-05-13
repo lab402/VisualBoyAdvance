@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['oam',['oam',['../_globals_8cpp.html#ad09c638952cf2ac6103cfda7992422a7',1,'oam():&#160;Globals.cpp'],['../_globals_8h.html#ad09c638952cf2ac6103cfda7992422a7',1,'oam():&#160;Globals.cpp']]],
+  ['objlocation',['objLocation',['../struct_node.html#ab16254ec466168164ba6e5790396c3cc',1,'Node']]],
+  ['objtilesaddress',['objTilesAddress',['../_g_b_a_8cpp.html#ac0dc9f957deeb21de1ed70c896eee11e',1,'GBA.cpp']]],
+  ['offset',['offset',['../struct_cheat_search_block.html#a33001049203a8b1b625ccdd29bf57d8f',1,'CheatSearchBlock::offset()'],['../struct_e_l_fcie.html#ad77ede21a2619e2a994435f11df3cf53',1,'ELFcie::offset()'],['../struct_e_l_f_frame_state_register.html#a6ef710a9432cda4aace7c893717d1a16',1,'ELFFrameStateRegister::offset()'],['../struct_e_l_f_program_header.html#ad5321e73c13a67e6b8ff192718c49ef8',1,'ELFProgramHeader::offset()'],['../struct_e_l_f_section_header.html#af1fc22111db70b6b813f0da79e9cca04',1,'ELFSectionHeader::offset()'],['../struct_type.html#a1da9bf1a40d9e23c0c03b291b00e7521',1,'Type::offset()'],['../struct_a_ranges.html#ac9a8655acb6be1e8f52053fc49c34efa',1,'ARanges::offset()'],['../struct_compile_unit.html#a25babc3939d9beaf5f9fb713b06d7ff0',1,'CompileUnit::offset()'],['../structdevice_info.html#a224f64e679eb41aa2c894856d693d57d',1,'deviceInfo::offset()'],['../struct_i_o_data.html#a233a9f32b3427e87b64dc90fe22f9b02',1,'IOData::offset()']]],
+  ['offset_5fcentral_5fdir',['offset_central_dir',['../structunz__s.html#ac6c37ef70549769fa59bca623565d78f',1,'unz_s']]],
+  ['offset_5fcurfile',['offset_curfile',['../structunz__file__info__internal__s.html#a23d3a1c3584888bdf066d7bfed95f62e',1,'unz_file_info_internal_s']]],
+  ['offset_5flocal_5fextrafield',['offset_local_extrafield',['../structfile__in__zip__read__info__s.html#a8e3a240c367e7d6d199859b1b311128c',1,'file_in_zip_read_info_s']]],
+  ['oldarmnextpc',['oldArmNextPC',['../arm-new_8h.html#a50507170b2babce522bce8ba5d867fd8',1,'oldArmNextPC():&#160;arm-new.h'],['../thumb_8h.html#a23b73115a1920a4cf7b102c761c1b046',1,'oldArmNextPC():&#160;thumb.h']]],
+  ['oldregister_5fwy',['oldRegister_WY',['../_g_b_8cpp.html#ae85aa77fbabadb9981575f14fc251b50',1,'oldRegister_WY():&#160;GB.cpp'],['../gb_globals_8h.html#ae85aa77fbabadb9981575f14fc251b50',1,'oldRegister_WY():&#160;GB.cpp']]],
+  ['oldvalue',['oldValue',['../struct_cheats_data.html#ae53ec4ba23eb94b339cc05b807a944d5',1,'CheatsData::oldValue()'],['../struct_win_cheats_data.html#a62b624b83f4613d5753d49b4c9fcf0f1',1,'WinCheatsData::oldValue()'],['../struct_win_gb_cheats_data.html#abe8e108df6ab1b40209bdc2e3e490c8a',1,'WinGbCheatsData::oldValue()']]],
+  ['opcode',['opcode',['../arm-new_8h.html#a4fc220098f4b9d0e039a28274d05c198',1,'opcode():&#160;arm-new.h'],['../thumb_8h.html#a4fc220098f4b9d0e039a28274d05c198',1,'opcode():&#160;thumb.h']]],
+  ['optarg',['optarg',['../getopt_8c.html#adb50a0eab9fed92fc3bfc7dfa4f2c410',1,'optarg():&#160;getopt.c'],['../getopt_8h.html#adb50a0eab9fed92fc3bfc7dfa4f2c410',1,'optarg():&#160;getopt.c']]],
+  ['opterr',['opterr',['../getopt_8c.html#ae30f05ee1e2e5652f174a35c7875d25e',1,'opterr():&#160;getopt.c'],['../getopt_8h.html#ae30f05ee1e2e5652f174a35c7875d25e',1,'opterr():&#160;getopt.c']]],
+  ['optind',['optind',['../getopt_8c.html#ad5e1c16213bbee2d5e8cc363309f418c',1,'optind():&#160;getopt.c'],['../getopt_8h.html#ad5e1c16213bbee2d5e8cc363309f418c',1,'optind():&#160;getopt.c']]],
+  ['optopt',['optopt',['../getopt_8c.html#a475b8db98445da73e5f62a1ef6324b95',1,'optopt():&#160;getopt.c'],['../getopt_8h.html#a475b8db98445da73e5f62a1ef6324b95',1,'optopt():&#160;getopt.c']]],
+  ['other',['other',['../struct_e_l_f_symbol.html#a2ef76e3d315db14d758abd8e30235f8a',1,'ELFSymbol']]],
+  ['out',['out',['../_g_b_a_8cpp.html#a1277960b5f2b37137fe9b0b5a1ea0beb',1,'GBA.cpp']]],
+  ['outbuf',['outbuf',['../structmem__stream.html#a3c4eae5484fee4862306c274407f3d13',1,'mem_stream']]],
+  ['overlay',['overlay',['../_s_d_l_8cpp.html#aab45edcecb39a3f99e41ee23b8e8d077',1,'SDL.cpp']]],
+  ['overlay_5frect',['overlay_rect',['../_s_d_l_8cpp.html#af9acfdffa8efbf9a142a152e7ab48573',1,'SDL.cpp']]]
+];

@@ -1,0 +1,6 @@
+<map id="VBA::Window::vOnSoundChannelToggled" name="VBA::Window::vOnSoundChannelToggled">
+<area shape="rect" id="node2" href="$_sound_8cpp.html#a3d1f6129176583804274bb162c3428a8" title="soundGetEnable" alt="" coords="284,5,403,32"/>
+<area shape="rect" id="node3" href="$_sound_8cpp.html#aa3562ee185ac50bb560c6a034475bd18" title="soundEnable" alt="" coords="295,56,392,83"/>
+<area shape="rect" id="node4" href="$_sound_8cpp.html#ac659f56970310e671066599c629618b5" title="soundDisable" alt="" coords="293,107,393,133"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_config_1_1_section.html#a57e1b95cbea40db71c093381beff4b0e" title="VBA::Config::Section\l::vSetKey" alt="" coords="271,158,416,199"/>
+</map>

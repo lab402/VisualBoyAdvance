@@ -1,0 +1,9 @@
+<map id="memOpen" name="memOpen">
+<area shape="rect" id="node2" href="$memgzio_8c.html#a372853e45fc83777b428200cdcc816cf" title="gz_open" alt="" coords="136,81,207,108"/>
+<area shape="rect" id="node3" href="$memgzio_8h.html#af2b4a60c8ef3a751ba47c7f4e345b634" title="memgzopen" alt="" coords="255,81,348,108"/>
+<area shape="rect" id="node4" href="$_util_8h.html#a02e6a64e4965d9911ebe6cf6b43fd192" title="utilMemGzOpen" alt="" coords="396,81,512,108"/>
+<area shape="rect" id="node5" href="$_g_b_8h.html#abf83eaea4927776c4d4e4e70720515eb" title="gbWriteMemSaveState" alt="" coords="560,5,715,32"/>
+<area shape="rect" id="node6" href="$_g_b_8h.html#a0da167f7d0a43c90028ac9e39527c6f0" title="gbReadMemSaveState" alt="" coords="560,56,715,83"/>
+<area shape="rect" id="node7" href="$_g_b_a_8h.html#a628cef443f29863442488c47d2b97cef" title="CPUWriteMemState" alt="" coords="567,107,707,133"/>
+<area shape="rect" id="node8" href="$_g_b_a_8h.html#a2ca5fcf7a3c5f4fa8c4b4c185fdda98c" title="CPUReadMemState" alt="" coords="568,157,707,184"/>
+</map>

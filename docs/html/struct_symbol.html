@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_symbol.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,37 +92,142 @@ $(function() {
 <div class="title">Symbol 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="elf_8h_source.html">elf.h</a>&gt;</code></p>
+<div class="dynheader">
+Symbol에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_symbol__coll__graph.png" border="0" usemap="#_symbol_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:aa9ba617cd9de17ed73148893a6c14606"><td class="memItemLeft" align="right" valign="top"><a id="aa9ba617cd9de17ed73148893a6c14606"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:aa9ba617cd9de17ed73148893a6c14606"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_symbol.html#aa9ba617cd9de17ed73148893a6c14606">name</a></td></tr>
 <tr class="separator:aa9ba617cd9de17ed73148893a6c14606"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a8a7698da2e96f2fd77296b5191ce6f"><td class="memItemLeft" align="right" valign="top"><a id="a3a8a7698da2e96f2fd77296b5191ce6f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>type</b></td></tr>
+<tr class="memitem:a3a8a7698da2e96f2fd77296b5191ce6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_symbol.html#a3a8a7698da2e96f2fd77296b5191ce6f">type</a></td></tr>
 <tr class="separator:a3a8a7698da2e96f2fd77296b5191ce6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7b846956436c2911e3b316bf06b080fd"><td class="memItemLeft" align="right" valign="top"><a id="a7b846956436c2911e3b316bf06b080fd"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>binding</b></td></tr>
+<tr class="memitem:a7b846956436c2911e3b316bf06b080fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_symbol.html#a7b846956436c2911e3b316bf06b080fd">binding</a></td></tr>
 <tr class="separator:a7b846956436c2911e3b316bf06b080fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a410b524fa23be6c41b1de68c9b620226"><td class="memItemLeft" align="right" valign="top"><a id="a410b524fa23be6c41b1de68c9b620226"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>address</b></td></tr>
+<tr class="memitem:a410b524fa23be6c41b1de68c9b620226"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_symbol.html#a410b524fa23be6c41b1de68c9b620226">address</a></td></tr>
 <tr class="separator:a410b524fa23be6c41b1de68c9b620226"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefbe563b4964a3cc4ee85c3efaccb7d2"><td class="memItemLeft" align="right" valign="top"><a id="aefbe563b4964a3cc4ee85c3efaccb7d2"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>value</b></td></tr>
+<tr class="memitem:aefbe563b4964a3cc4ee85c3efaccb7d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_symbol.html#aefbe563b4964a3cc4ee85c3efaccb7d2">value</a></td></tr>
 <tr class="separator:aefbe563b4964a3cc4ee85c3efaccb7d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ce0cce2939edefe73195657c6371f56"><td class="memItemLeft" align="right" valign="top"><a id="a1ce0cce2939edefe73195657c6371f56"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>size</b></td></tr>
+<tr class="memitem:a1ce0cce2939edefe73195657c6371f56"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_symbol.html#a1ce0cce2939edefe73195657c6371f56">size</a></td></tr>
 <tr class="separator:a1ce0cce2939edefe73195657c6371f56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00260">260</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a410b524fa23be6c41b1de68c9b620226"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a410b524fa23be6c41b1de68c9b620226">&#9670;&nbsp;</a></span>address</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> Symbol::address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00264">264</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a7b846956436c2911e3b316bf06b080fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b846956436c2911e3b316bf06b080fd">&#9670;&nbsp;</a></span>binding</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> Symbol::binding</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00263">263</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa9ba617cd9de17ed73148893a6c14606"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9ba617cd9de17ed73148893a6c14606">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* Symbol::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00261">261</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a1ce0cce2939edefe73195657c6371f56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ce0cce2939edefe73195657c6371f56">&#9670;&nbsp;</a></span>size</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> Symbol::size</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00266">266</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3a8a7698da2e96f2fd77296b5191ce6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a8a7698da2e96f2fd77296b5191ce6f">&#9670;&nbsp;</a></span>type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> Symbol::type</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00262">262</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aefbe563b4964a3cc4ee85c3efaccb7d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefbe563b4964a3cc4ee85c3efaccb7d2">&#9670;&nbsp;</a></span>value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> Symbol::value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00265">265</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/<a class="el" href="elf_8h_source.html">elf.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="elf_8h_source.html">elf.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_symbol.html">Symbol</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

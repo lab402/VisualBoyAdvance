@@ -1,0 +1,8 @@
+<map id="ZoomControl::setColors" name="ZoomControl::setColors">
+<area shape="rect" id="node2" href="$class_g_b_map_view.html#afcc3ed555a52330d768b2cfb0f726dfc" title="GBMapView::OnMapInfo" alt="" coords="213,5,377,32"/>
+<area shape="rect" id="node3" href="$class_g_b_oam_view.html#af5f1f2fd340a83cbf218ef8be53f4089" title="GBOamView::OnMapInfo" alt="" coords="212,56,379,83"/>
+<area shape="rect" id="node4" href="$class_g_b_tile_view.html#a865e1fe72caf57cc6d55700bfdac0a84" title="GBTileView::OnMapInfo" alt="" coords="216,107,375,133"/>
+<area shape="rect" id="node5" href="$class_map_view.html#a9d5b068db40e4d9641bfeca9f81bb53a" title="MapView::OnMapInfo" alt="" coords="223,157,368,184"/>
+<area shape="rect" id="node6" href="$class_oam_view.html#a139d46b95c3f0a9198e7d4fc134f88c2" title="OamView::OnMapInfo" alt="" coords="221,208,369,235"/>
+<area shape="rect" id="node7" href="$class_tile_view.html#ae4ba4c47c672fb6e856fbe3921e3667e" title="TileView::OnMapInfo" alt="" coords="225,259,365,285"/>
+</map>

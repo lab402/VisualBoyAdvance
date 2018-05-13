@@ -1,0 +1,8 @@
+<map id="GBOamView::OnHScroll" name="GBOamView::OnHScroll">
+<area shape="rect" id="node2" href="$class_g_b_oam_view.html#a20ce1c6ed837362872920c23e281e523" title="GBOamView::updateScrollInfo" alt="" coords="217,5,415,32"/>
+<area shape="rect" id="node3" href="$class_g_b_oam_view.html#a8ed062f5cac9239a17b0f5942a5d9e5b" title="GBOamView::paint" alt="" coords="249,56,383,83"/>
+<area shape="rect" id="node4" href="$class_g_b_oam_view.html#a6862114f9b3873d08f7ae8bd465c2eda" title="GBOamView::render" alt="" coords="470,5,611,32"/>
+<area shape="rect" id="node6" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="463,56,619,83"/>
+<area shape="rect" id="node7" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="465,107,616,133"/>
+<area shape="rect" id="node5" href="$class_g_b_oam_view.html#a16e71e6ba20139f7ede42b3c884597d7" title="GBOamView::setAttributes" alt="" coords="667,5,845,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="systemScreenMessage" name="systemScreenMessage">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a0f0d982604ac77d23e7fd474c4ebbe2c" title="VBA::movieReadNext" alt="" coords="212,31,359,57"/>
+<area shape="rect" id="node3" href="$class_direct_input.html#af7d74c03d302905eaa06e88ab37b7dac" title="DirectInput::readDevice" alt="" coords="460,5,615,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a96ea89975374d5b7a434070d58e9c260" title="MainWnd::OnToolsPlayStartmovieplaying" alt="" coords="407,56,668,83"/>
+</map>

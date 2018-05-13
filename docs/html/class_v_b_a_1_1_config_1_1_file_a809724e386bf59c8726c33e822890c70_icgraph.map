@@ -1,0 +1,9 @@
+<map id="VBA::Config::File::end" name="VBA::Config::File::end">
+<area shape="rect" id="node2" href="$class_v_b_a_1_1_config_1_1_file.html#a1c449716812ae76ece9dd315a89da8ff" title="VBA::Config::File::\lbSectionExists" alt="" coords="221,5,351,47"/>
+<area shape="rect" id="node3" href="$class_v_b_a_1_1_config_1_1_file.html#a8a785523724a50c1d40a50ea6ada6a4c" title="VBA::Config::File::\lpoAddSection" alt="" coords="221,71,351,112"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_config_1_1_file.html#a0de8f36155786c73b91a22e62df27958" title="VBA::Config::File::\lpoGetSection" alt="" coords="221,136,351,177"/>
+<area shape="rect" id="node6" href="$class_v_b_a_1_1_config_1_1_file.html#a4b9de49a799dc1e4de38710669127710" title="VBA::Config::File::\lvRemoveSection" alt="" coords="221,201,351,243"/>
+<area shape="rect" id="node7" href="$class_v_b_a_1_1_config_1_1_file.html#a95ce8b60e20b58e730d9987843cba5a4" title="VBA::Config::File::\lvSave" alt="" coords="221,267,351,308"/>
+<area shape="rect" id="node8" href="$namespace_v_b_a_1_1_config.html#ae8f486bb30184451079a550ba9de3d7e" title="VBA::Config::operator\&lt;\&lt;" alt="" coords="204,333,368,359"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_config_1_1_file.html#ac70f83e5efe3c2d7a66de7227099803b" title="VBA::Config::File::\lvLoad" alt="" coords="416,104,547,145"/>
+</map>

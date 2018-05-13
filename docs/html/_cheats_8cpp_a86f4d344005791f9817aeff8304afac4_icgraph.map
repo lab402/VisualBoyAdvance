@@ -1,0 +1,8 @@
+<map id="cheatsGSAChangeEncryption" name="cheatsGSAChangeEncryption">
+<area shape="rect" id="node2" href="$_cheats_8h.html#a47aded7deffcbfa36ed55944eafb72ab" title="cheatsAddGSACode" alt="" coords="248,56,391,83"/>
+<area shape="rect" id="node3" href="$_cheats_8h.html#a218a7f0474640f74d7b7134a784d333c" title="cheatsImportGSACodeFile" alt="" coords="439,5,615,32"/>
+<area shape="rect" id="node6" href="$class_add_g_s_a_code.html#a857608ad314694d15ee6e811fb528d0b" title="AddGSACode::OnOk" alt="" coords="454,56,599,83"/>
+<area shape="rect" id="node7" href="$class_add_c_b_a_code.html#a63c5cc95366a1a0aad123432054f977a" title="AddCBACode::OnOk" alt="" coords="455,107,599,133"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#af376f9dd20c49c2b0543102e321ea79c" title="MainWnd::fileImportGSACodeFile" alt="" coords="663,5,879,32"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a3e7abf73687cb0dbf61c3707de5e10f4" title="MainWnd::OnFileImportGamesharkcodefile" alt="" coords="927,5,1197,32"/>
+</map>

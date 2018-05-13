@@ -1,0 +1,4 @@
+<map id="PaletteViewControl::refresh" name="PaletteViewControl::refresh">
+<area shape="rect" id="node2" href="$class_palette_view_control.html#a12772d59f8e890a920cb200d2f6a4b7a" title="PaletteViewControl\l::updatePalette" alt="" coords="185,5,317,47"/>
+<area shape="rect" id="node3" href="$class_palette_view_control.html#adbcdd372f28027690355099e14b669d1" title="PaletteViewControl\l::render" alt="" coords="185,71,317,112"/>
+</map>

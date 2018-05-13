@@ -1,0 +1,342 @@
+\hypertarget{_video_mode_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Video\+Mode.cpp 파일 참조}
+\label{_video_mode_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Video\+Mode.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Video\+Mode.\+cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}V\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ddraw.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Video\+Mode.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+System.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}resource.\+h\char`\"{}}\newline
+Video\+Mode.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_video_mode_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_video_mode_8cpp_a971b8802665cb306d314576166603b34}{D\+I\+R\+E\+C\+T\+D\+R\+A\+W\+\_\+\+V\+E\+R\+S\+I\+ON}}~0x0700
+\item 
+\#define \mbox{\hyperlink{_video_mode_8cpp_ac2ee6026a11a2d8472c29fed769c7e9f}{M\+A\+X\+\_\+\+D\+R\+I\+V\+E\+RS}}~32
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+B\+O\+OL W\+I\+N\+A\+PI \mbox{\hyperlink{_video_mode_8cpp_aaf1208a565f6de7cd978a61c8f5566e9}{D\+D\+Enum\+Callback\+Ex}} (G\+U\+ID $\ast$\mbox{\hyperlink{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}{p\+G\+U\+ID}}, L\+P\+S\+TR p\+Description, L\+P\+S\+TR p\+Name, L\+P\+V\+O\+ID p\+Context, H\+M\+O\+N\+I\+T\+OR \mbox{\hyperlink{_video_mode_8cpp_a6e99c2db2bdabde143c495a120362aef}{hm}})
+\item 
+B\+O\+OL W\+I\+N\+A\+PI \mbox{\hyperlink{_video_mode_8cpp_ad912b8e7ffceb4a00afaab527c25025a}{D\+D\+Enum\+Callback}} (G\+U\+ID $\ast$\mbox{\hyperlink{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}{p\+G\+U\+ID}}, L\+P\+S\+TR p\+Description, L\+P\+S\+TR p\+Name, L\+P\+V\+O\+ID context)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_video_mode_8cpp_ab5789e9858fe6313e3353c2848351d97}{win\+Video\+Mode\+Select}} (C\+Wnd $\ast$p\+Wnd, G\+U\+ID $\ast$$\ast$guid)
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>char \mbox{\hyperlink{_video_mode_8cpp_ac013d3a1126cbee383518915afb6c706}{szDescription}} \mbox{[}128\mbox{]}\\
+\>char \mbox{\hyperlink{_video_mode_8cpp_a31460adeb558a1a1cfb87c5f52dfa360}{szName}} \mbox{[}128\mbox{]}\\
+\>GUID $\ast$ \mbox{\hyperlink{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}{pGUID}}\\
+\>GUID \mbox{\hyperlink{_video_mode_8cpp_ac2a9de3278c83ab0f4597d3ba1a545da}{GUIDcopy}}\\
+\>HMONITOR \mbox{\hyperlink{_video_mode_8cpp_a6e99c2db2bdabde143c495a120362aef}{hm}}\\
+\} \mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}} \mbox{[}\mbox{\hyperlink{_video_mode_8cpp_ac2ee6026a11a2d8472c29fed769c7e9f}{MAX\_DRIVERS}}\mbox{]}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{_video_mode_8cpp_a971b8802665cb306d314576166603b34}\label{_video_mode_8cpp_a971b8802665cb306d314576166603b34}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!D\+I\+R\+E\+C\+T\+D\+R\+A\+W\+\_\+\+V\+E\+R\+S\+I\+ON@{D\+I\+R\+E\+C\+T\+D\+R\+A\+W\+\_\+\+V\+E\+R\+S\+I\+ON}}
+\index{D\+I\+R\+E\+C\+T\+D\+R\+A\+W\+\_\+\+V\+E\+R\+S\+I\+ON@{D\+I\+R\+E\+C\+T\+D\+R\+A\+W\+\_\+\+V\+E\+R\+S\+I\+ON}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{D\+I\+R\+E\+C\+T\+D\+R\+A\+W\+\_\+\+V\+E\+R\+S\+I\+ON}{DIRECTDRAW\_VERSION}}
+{\footnotesize\ttfamily \#define D\+I\+R\+E\+C\+T\+D\+R\+A\+W\+\_\+\+V\+E\+R\+S\+I\+ON~0x0700}
+
+
+
+Video\+Mode.\+cpp 파일의 25 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_video_mode_8cpp_ac2ee6026a11a2d8472c29fed769c7e9f}\label{_video_mode_8cpp_ac2ee6026a11a2d8472c29fed769c7e9f}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!M\+A\+X\+\_\+\+D\+R\+I\+V\+E\+RS@{M\+A\+X\+\_\+\+D\+R\+I\+V\+E\+RS}}
+\index{M\+A\+X\+\_\+\+D\+R\+I\+V\+E\+RS@{M\+A\+X\+\_\+\+D\+R\+I\+V\+E\+RS}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{M\+A\+X\+\_\+\+D\+R\+I\+V\+E\+RS}{MAX\_DRIVERS}}
+{\footnotesize\ttfamily \#define M\+A\+X\+\_\+\+D\+R\+I\+V\+E\+RS~32}
+
+
+
+Video\+Mode.\+cpp 파일의 40 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{_video_mode_8cpp_ad912b8e7ffceb4a00afaab527c25025a}\label{_video_mode_8cpp_ad912b8e7ffceb4a00afaab527c25025a}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!D\+D\+Enum\+Callback@{D\+D\+Enum\+Callback}}
+\index{D\+D\+Enum\+Callback@{D\+D\+Enum\+Callback}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{D\+D\+Enum\+Callback()}{DDEnumCallback()}}
+{\footnotesize\ttfamily B\+O\+OL W\+I\+N\+A\+PI D\+D\+Enum\+Callback (\begin{DoxyParamCaption}\item[{G\+U\+ID $\ast$}]{p\+G\+U\+ID,  }\item[{L\+P\+S\+TR}]{p\+Description,  }\item[{L\+P\+S\+TR}]{p\+Name,  }\item[{L\+P\+V\+O\+ID}]{context }\end{DoxyParamCaption})}
+
+
+
+Video\+Mode.\+cpp 파일의 96 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+97 \{
+98   \textcolor{keywordflow}{return} (\mbox{\hyperlink{_video_mode_8cpp_aaf1208a565f6de7cd978a61c8f5566e9}{DDEnumCallbackEx}}(\mbox{\hyperlink{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}{pGUID}}, pDescription, pName, context, 
+      \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}));
+99 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{_video_mode_8cpp_ad912b8e7ffceb4a00afaab527c25025a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_video_mode_8cpp_aaf1208a565f6de7cd978a61c8f5566e9}\label{_video_mode_8cpp_aaf1208a565f6de7cd978a61c8f5566e9}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!D\+D\+Enum\+Callback\+Ex@{D\+D\+Enum\+Callback\+Ex}}
+\index{D\+D\+Enum\+Callback\+Ex@{D\+D\+Enum\+Callback\+Ex}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{D\+D\+Enum\+Callback\+Ex()}{DDEnumCallbackEx()}}
+{\footnotesize\ttfamily B\+O\+OL W\+I\+N\+A\+PI D\+D\+Enum\+Callback\+Ex (\begin{DoxyParamCaption}\item[{G\+U\+ID $\ast$}]{p\+G\+U\+ID,  }\item[{L\+P\+S\+TR}]{p\+Description,  }\item[{L\+P\+S\+TR}]{p\+Name,  }\item[{L\+P\+V\+O\+ID}]{p\+Context,  }\item[{H\+M\+O\+N\+I\+T\+OR}]{hm }\end{DoxyParamCaption})}
+
+
+
+Video\+Mode.\+cpp 파일의 67 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+68 \{
+69   \textcolor{keywordflow}{if} (\mbox{\hyperlink{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}{pGUID}})
+70     \{
+71       \mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].GUIDcopy = *\mbox{\hyperlink{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}{pGUID}};
+72       \mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].pGUID = &\mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].GUIDcopy;
+73     \}
+74   \textcolor{keywordflow}{else}
+75     \mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].pGUID = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+76   \mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].szDescription[127] = \textcolor{charliteral}{'\(\backslash\)0'};
+77   \mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].szName[127] = \textcolor{charliteral}{'\(\backslash\)0'};
+78   strncpy(\mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].\mbox{\hyperlink{_video_mode_8cpp_ac013d3a1126cbee383518915afb6c706}{szDescription}},pDescription,127);
+79   strncpy(\mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].\mbox{\hyperlink{_video_mode_8cpp_a31460adeb558a1a1cfb87c5f52dfa360}{szName}},pName,127);
+80   \mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[gDriverCnt].hm = \mbox{\hyperlink{_video_mode_8cpp_a6e99c2db2bdabde143c495a120362aef}{hm}};
+81   \textcolor{keywordflow}{if} (gDriverCnt < \mbox{\hyperlink{_video_mode_8cpp_ac2ee6026a11a2d8472c29fed769c7e9f}{MAX\_DRIVERS}})
+82     gDriverCnt++;
+83   \textcolor{keywordflow}{else}
+84     \textcolor{keywordflow}{return} DDENUMRET\_CANCEL;
+85   \textcolor{keywordflow}{return} DDENUMRET\_OK;
+86 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{_video_mode_8cpp_aaf1208a565f6de7cd978a61c8f5566e9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_video_mode_8cpp_ab5789e9858fe6313e3353c2848351d97}\label{_video_mode_8cpp_ab5789e9858fe6313e3353c2848351d97}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!win\+Video\+Mode\+Select@{win\+Video\+Mode\+Select}}
+\index{win\+Video\+Mode\+Select@{win\+Video\+Mode\+Select}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{win\+Video\+Mode\+Select()}{winVideoModeSelect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} win\+Video\+Mode\+Select (\begin{DoxyParamCaption}\item[{C\+Wnd $\ast$}]{p\+Wnd,  }\item[{G\+U\+ID $\ast$$\ast$}]{guid }\end{DoxyParamCaption})}
+
+
+
+Video\+Mode.\+cpp 파일의 133 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+134 \{
+135 \textcolor{preprocessor}{#ifdef \_AFXDLL}
+136   HINSTANCE h = AfxLoadLibrary(\textcolor{stringliteral}{"ddraw.dll"});
+137 \textcolor{preprocessor}{#else}
+138   HMODULE h = LoadLibrary( \_T(\textcolor{stringliteral}{"ddraw.dll"}) );
+139 \textcolor{preprocessor}{#endif}
+140  
+141   \textcolor{comment}{// If ddraw.dll doesn't exist in the search path,}
+142   \textcolor{comment}{// then DirectX probably isn't installed, so fail.}
+143   \textcolor{keywordflow}{if} (!h)
+144     \textcolor{keywordflow}{return} -1;
+145   
+146   gDriverCnt = 0;
+147   
+148   \textcolor{comment}{// Note that you must know which version of the}
+149   \textcolor{comment}{// function to retrieve (see the following text).}
+150   \textcolor{comment}{// For this example, we use the ANSI version.}
+151   LPDIRECTDRAWENUMERATEEX lpDDEnumEx;
+152   lpDDEnumEx = (LPDIRECTDRAWENUMERATEEX)
+153     GetProcAddress(h,\textcolor{stringliteral}{"DirectDrawEnumerateExA"});
+154  
+155   \textcolor{comment}{// If the function is there, call it to enumerate all display }
+156   \textcolor{comment}{// devices attached to the desktop, and any non-display DirectDraw}
+157   \textcolor{comment}{// devices.}
+158   \textcolor{keywordflow}{if} (lpDDEnumEx)
+159     lpDDEnumEx(\mbox{\hyperlink{_video_mode_8cpp_aaf1208a565f6de7cd978a61c8f5566e9}{DDEnumCallbackEx}}, \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, 
+160                DDENUM\_ATTACHEDSECONDARYDEVICES |
+161                DDENUM\_NONDISPLAYDEVICES 
+162                );
+163   \textcolor{keywordflow}{else} \{
+164     \textcolor{comment}{/*}
+165 \textcolor{comment}{     * We must be running on an old version of DirectDraw.}
+166 \textcolor{comment}{     * Therefore MultiMon isn't supported. Fall back on}
+167 \textcolor{comment}{     * DirectDrawEnumerate to enumerate standard devices on a }
+168 \textcolor{comment}{     * single-monitor system.}
+169 \textcolor{comment}{     */}
+170     BOOL (WINAPI *lpDDEnum)(LPDDENUMCALLBACK, LPVOID);
+171     
+172     lpDDEnum = (BOOL (WINAPI *)(LPDDENUMCALLBACK, LPVOID))
+173       GetProcAddress(h, \textcolor{stringliteral}{"DirectDrawEnumerateA"});
+174     \textcolor{keywordflow}{if}(lpDDEnum)
+175       lpDDEnum(\mbox{\hyperlink{_video_mode_8cpp_ad912b8e7ffceb4a00afaab527c25025a}{DDEnumCallback}},\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+176     
+177     \textcolor{comment}{/* Note that it could be handy to let the OldCallback function}
+178 \textcolor{comment}{     * be a wrapper for a DDEnumCallbackEx. }
+179 \textcolor{comment}{     * }
+180 \textcolor{comment}{     * Such a function would look like:}
+181 \textcolor{comment}{     *    BOOL FAR PASCAL OldCallback(GUID FAR *lpGUID,}
+182 \textcolor{comment}{     *                                LPSTR pDesc,}
+183 \textcolor{comment}{     *                                LPSTR pName,}
+184 \textcolor{comment}{     *                                LPVOID pContext)}
+185 \textcolor{comment}{     *    \{}
+186 \textcolor{comment}{     *         return Callback(lpGUID,pDesc,pName,pContext,NULL);}
+187 \textcolor{comment}{     *    \}}
+188 \textcolor{comment}{     */}
+189   \}
+190 
+191   \textcolor{keywordtype}{int} selected = 0;
+192 
+193   \textcolor{keywordflow}{if}(gDriverCnt > 1) \{
+194     \mbox{\hyperlink{class_video_driver_select}{VideoDriverSelect}} d(pWnd);
+195 
+196     INT\_PTR selected = d.DoModal();
+197 
+198     \textcolor{keywordflow}{if}(selected == -1) \{
+199 \textcolor{preprocessor}{#ifdef \_AFXDLL}
+200       AfxFreeLibrary( h );
+201 \textcolor{preprocessor}{#else}
+202       FreeLibrary( h );
+203 \textcolor{preprocessor}{#endif}
+204       
+205       \textcolor{keywordflow}{return} -1;
+206     \}
+207   \}
+208 
+209   HRESULT (WINAPI *DDrawCreateEx)(GUID *,LPVOID *,REFIID,IUnknown *);  
+210   DDrawCreateEx = (HRESULT (WINAPI *)(GUID *,LPVOID *,REFIID,IUnknown *))
+211     GetProcAddress(h, \textcolor{stringliteral}{"DirectDrawCreateEx"});
+212 
+213   LPDIRECTDRAW7 ddraw = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+214   \textcolor{keywordflow}{if}(DDrawCreateEx) \{
+215     HRESULT hret = DDrawCreateEx(\mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[selected].\mbox{\hyperlink{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}{pGUID}},
+216                                  (\textcolor{keywordtype}{void} **)&ddraw,
+217                                  IID\_IDirectDraw7,
+218                                  \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+219     \textcolor{keywordflow}{if}(hret != DD\_OK) \{
+220       \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \textcolor{stringliteral}{"Error during DirectDrawCreateEx: %08x"}, hret);
+221 \textcolor{preprocessor}{#ifdef \_AFXDLL}
+222       AfxFreeLibrary( h );
+223 \textcolor{preprocessor}{#else}
+224       FreeLibrary( h );
+225 \textcolor{preprocessor}{#endif}
+226       \textcolor{keywordflow}{return} -1;
+227     \}
+228   \} \textcolor{keywordflow}{else} \{
+229     \textcolor{comment}{// should not happen....}
+230     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(0, \textcolor{stringliteral}{"Error getting DirectDrawCreateEx"});
+231 \textcolor{preprocessor}{#ifdef \_AFXDLL}
+232     AfxFreeLibrary( h );
+233 \textcolor{preprocessor}{#else}
+234     FreeLibrary( h );
+235 \textcolor{preprocessor}{#endif}
+236     \textcolor{keywordflow}{return} -1;
+237   \}  
+238   
+239   \mbox{\hyperlink{class_video_mode}{VideoMode}} dlg(ddraw, pWnd);
+240 
+241   INT\_PTR res = dlg.DoModal();
+242 
+243   \textcolor{keywordflow}{if}(res != -1) \{
+244     *guid = \mbox{\hyperlink{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}{Drivers}}[selected].pGUID;
+245   \}
+246   ddraw->Release();
+247   ddraw = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+248 
+249   \textcolor{comment}{// If the library was loaded by calling LoadLibrary(),}
+250   \textcolor{comment}{// then you must use FreeLibrary() to let go of it.}
+251 \textcolor{preprocessor}{#ifdef \_AFXDLL}
+252   AfxFreeLibrary( h );
+253 \textcolor{preprocessor}{#else}
+254   FreeLibrary( h );
+255 \textcolor{preprocessor}{#endif}
+256 
+257   \textcolor{keywordflow}{return} (\textcolor{keywordtype}{int})res;
+258 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{_video_mode_8cpp_ab5789e9858fe6313e3353c2848351d97_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}\label{_video_mode_8cpp_aff7bc69820fcbd39d1537778da4f5d3e}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!Drivers@{Drivers}}
+\index{Drivers@{Drivers}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{Drivers}{Drivers}}
+{\footnotesize\ttfamily struct \{ ... \}   Drivers\mbox{[}\mbox{\hyperlink{_video_mode_8cpp_ac2ee6026a11a2d8472c29fed769c7e9f}{M\+A\+X\+\_\+\+D\+R\+I\+V\+E\+RS}}\mbox{]}}
+
+\mbox{\Hypertarget{_video_mode_8cpp_ac2a9de3278c83ab0f4597d3ba1a545da}\label{_video_mode_8cpp_ac2a9de3278c83ab0f4597d3ba1a545da}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!G\+U\+I\+Dcopy@{G\+U\+I\+Dcopy}}
+\index{G\+U\+I\+Dcopy@{G\+U\+I\+Dcopy}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{G\+U\+I\+Dcopy}{GUIDcopy}}
+{\footnotesize\ttfamily G\+U\+ID G\+U\+I\+Dcopy}
+
+
+
+Video\+Mode.\+cpp 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_video_mode_8cpp_a6e99c2db2bdabde143c495a120362aef}\label{_video_mode_8cpp_a6e99c2db2bdabde143c495a120362aef}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!hm@{hm}}
+\index{hm@{hm}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{hm}{hm}}
+{\footnotesize\ttfamily H\+M\+O\+N\+I\+T\+OR hm}
+
+
+
+Video\+Mode.\+cpp 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}\label{_video_mode_8cpp_a53702c538e287c41ffc68a11699623ce}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!p\+G\+U\+ID@{p\+G\+U\+ID}}
+\index{p\+G\+U\+ID@{p\+G\+U\+ID}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{p\+G\+U\+ID}{pGUID}}
+{\footnotesize\ttfamily G\+U\+ID$\ast$ p\+G\+U\+ID}
+
+
+
+Video\+Mode.\+cpp 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_video_mode_8cpp_ac013d3a1126cbee383518915afb6c706}\label{_video_mode_8cpp_ac013d3a1126cbee383518915afb6c706}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!sz\+Description@{sz\+Description}}
+\index{sz\+Description@{sz\+Description}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{sz\+Description}{szDescription}}
+{\footnotesize\ttfamily char sz\+Description\mbox{[}128\mbox{]}}
+
+
+
+Video\+Mode.\+cpp 파일의 48 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{_video_mode_8cpp_a31460adeb558a1a1cfb87c5f52dfa360}\label{_video_mode_8cpp_a31460adeb558a1a1cfb87c5f52dfa360}} 
+\index{Video\+Mode.\+cpp@{Video\+Mode.\+cpp}!sz\+Name@{sz\+Name}}
+\index{sz\+Name@{sz\+Name}!Video\+Mode.\+cpp@{Video\+Mode.\+cpp}}
+\subsubsection{\texorpdfstring{sz\+Name}{szName}}
+{\footnotesize\ttfamily char sz\+Name\mbox{[}128\mbox{]}}
+
+
+
+Video\+Mode.\+cpp 파일의 49 번째 라인에서 정의되었습니다.
+

@@ -1,0 +1,8 @@
+<map id="MainWnd::OnUpdateFileSavegameOldestslot" name="MainWnd::OnUpdateFileSavegameOldestslot">
+<area shape="rect" id="node2" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="291,5,434,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="277,56,448,83"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="287,107,438,133"/>
+<area shape="rect" id="node5" href="$class_c_accelerator_manager.html#ac7411d20f413ea0ec3bd65705b564adf" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="289,158,436,199"/>
+<area shape="rect" id="node6" href="$class_c_accelerator_manager.html#ac854ec5263a7bab961bf63aec3938984" title="CAcceleratorManager\l::UpdateMenu" alt="" coords="498,129,645,170"/>
+<area shape="rect" id="node7" href="$class_c_accels_ob.html#afaf7510fa1e0707863f6bd469f190de6" title="CAccelsOb::GetString" alt="" coords="496,195,647,221"/>
+</map>

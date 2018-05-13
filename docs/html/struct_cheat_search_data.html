@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_cheat_search_data.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,25 +92,73 @@ $(function() {
 <div class="title">CheatSearchData 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_cheat_search_8h_source.html">CheatSearch.h</a>&gt;</code></p>
+<div class="dynheader">
+CheatSearchData에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_cheat_search_data__coll__graph.png" border="0" usemap="#_cheat_search_data_coll__map" alt="Collaboration graph"/></div>
+<map name="_cheat_search_data_coll__map" id="_cheat_search_data_coll__map">
+<area shape="rect" id="node2" href="struct_cheat_search_block.html" title="{CheatSearchBlock\n|+ size\l+ offset\l+ bits\l+ data\l+ saved\l|}" alt="" coords="5,5,136,141"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a4c4d3092ddaff068d820c28067b15774"><td class="memItemLeft" align="right" valign="top"><a id="a4c4d3092ddaff068d820c28067b15774"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>count</b></td></tr>
+<tr class="memitem:a4c4d3092ddaff068d820c28067b15774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_cheat_search_data.html#a4c4d3092ddaff068d820c28067b15774">count</a></td></tr>
 <tr class="separator:a4c4d3092ddaff068d820c28067b15774"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0235bdc2000cc25b8c072442ce33c2c"><td class="memItemLeft" align="right" valign="top"><a id="ae0235bdc2000cc25b8c072442ce33c2c"></a>
-<a class="el" href="struct_cheat_search_block.html">CheatSearchBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>blocks</b></td></tr>
+<tr class="memitem:ae0235bdc2000cc25b8c072442ce33c2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_cheat_search_block.html">CheatSearchBlock</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_cheat_search_data.html#ae0235bdc2000cc25b8c072442ce33c2c">blocks</a></td></tr>
 <tr class="separator:ae0235bdc2000cc25b8c072442ce33c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_cheat_search_8h_source.html">CheatSearch.h</a> 파일의 <a class="el" href="_cheat_search_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="ae0235bdc2000cc25b8c072442ce33c2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0235bdc2000cc25b8c072442ce33c2c">&#9670;&nbsp;</a></span>blocks</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_cheat_search_block.html">CheatSearchBlock</a>* CheatSearchData::blocks</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_cheat_search_8h_source.html">CheatSearch.h</a> 파일의 <a class="el" href="_cheat_search_8h_source.html#l00035">35</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a4c4d3092ddaff068d820c28067b15774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c4d3092ddaff068d820c28067b15774">&#9670;&nbsp;</a></span>count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> CheatSearchData::count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_cheat_search_8h_source.html">CheatSearch.h</a> 파일의 <a class="el" href="_cheat_search_8h_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/<a class="el" href="_cheat_search_8h_source.html">CheatSearch.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="_cheat_search_8h_source.html">CheatSearch.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_cheat_search_data.html">CheatSearchData</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

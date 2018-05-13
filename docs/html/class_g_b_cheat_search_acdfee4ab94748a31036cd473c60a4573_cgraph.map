@@ -1,0 +1,12 @@
+<map id="GBCheatSearch::OnSearch" name="GBCheatSearch::OnSearch">
+<area shape="rect" id="node2" href="$_cheat_search_8cpp.html#aa96e226cba5a501fe958decea1c46e29" title="cheatSearch" alt="" coords="287,5,381,32"/>
+<area shape="rect" id="node3" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="515,56,634,83"/>
+<area shape="rect" id="node4" href="$_cheat_search_8cpp.html#ac4f98ea28d7eff38c83216918248837b" title="cheatSearchValue" alt="" coords="270,107,398,133"/>
+<area shape="rect" id="node5" href="$class_g_b_cheat_search.html#a10b0314fc3b27cda2e217539c9c1e052" title="GBCheatSearch::addChanges" alt="" coords="236,157,432,184"/>
+<area shape="rect" id="node11" href="$_cheat_search_8cpp.html#a61ea1e5e35fc93f6e4be8db3a8c4288d" title="cheatSearchUpdateValues" alt="" coords="246,208,422,235"/>
+<area shape="rect" id="node6" href="$_cheat_search_8cpp.html#af625b1b7d83cb7c6cd5f9e649646e2a9" title="cheatSearchGetCount" alt="" coords="499,107,650,133"/>
+<area shape="rect" id="node7" href="$class_g_b_cheat_search.html#a1765135b0200e93b3d8fd13c8c9c2ea0" title="GBCheatSearch::addChange" alt="" coords="480,157,669,184"/>
+<area shape="rect" id="node8" href="$class_g_b_cheat_search.html#aa5ca7951ce9dcc691eff7abb51cde184" title="GBCheatSearch::getBank" alt="" coords="489,208,661,235"/>
+<area shape="rect" id="node9" href="$_cheat_search_8cpp.html#a80939ca99dea9754211e198281020394" title="cheatSearchSignedRead" alt="" coords="492,259,657,285"/>
+<area shape="rect" id="node10" href="$_cheat_search_8cpp.html#a6896adc9224dadcd1351abbd6a6fc93a" title="cheatSearchRead" alt="" coords="512,309,637,336"/>
+</map>

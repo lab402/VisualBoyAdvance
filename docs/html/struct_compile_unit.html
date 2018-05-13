@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_compile_unit.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,70 +92,358 @@ $(function() {
 <div class="title">CompileUnit 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="elf_8h_source.html">elf.h</a>&gt;</code></p>
+<div class="dynheader">
+CompileUnit에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_compile_unit__coll__graph.png" border="0" usemap="#_compile_unit_coll__map" alt="Collaboration graph"/></div>
+<map name="_compile_unit_coll__map" id="_compile_unit_coll__map">
+<area shape="rect" id="node2" href="struct_line_info.html" title="{LineInfo\n|+ fileCount\l+ files\l+ number\l|}" alt="" coords="10,793,94,899"/>
+<area shape="rect" id="node3" href="struct_line_info_item.html" title="{LineInfoItem\n|+ address\l+ file\l+ line\l|}" alt="" coords="5,557,96,664"/>
+<area shape="rect" id="node4" href="struct_type.html" title="{Type\n|+ offset\l+ type\l+ name\l+ encoding\l+ size\l+ bitSize\l+ @5\l|}" alt="" coords="945,300,1031,465"/>
+<area shape="rect" id="node6" href="struct_member.html" title="{Member\n|+ name\l+ bitSize\l+ bitOffset\l+ byteSize\l|}" alt="" coords="967,550,1052,671"/>
+<area shape="rect" id="node8" href="struct_array.html" title="{Array\n|+ maxBounds\l+ bounds\l|}" alt="" coords="1077,565,1179,657"/>
+<area shape="rect" id="node9" href="struct_function_type.html" title="{FunctionType\n||}" alt="" coords="714,807,814,885"/>
+<area shape="rect" id="node10" href="struct_object.html" title="{Object\n|+ name\l+ file\l+ line\l+ external\l+ startScope\l+ endScope\l|}" alt="" coords="557,535,654,686"/>
+<area shape="rect" id="node13" href="struct_function.html" title="{Function\n|+ name\l+ lowPC\l+ highPC\l+ file\l+ line\l+ external\l|}" alt="" coords="413,771,493,921"/>
+<area shape="rect" id="node5" href="struct_struct.html" title="{Struct\n|+ memberCount\l|}" alt="" coords="1061,807,1176,885"/>
+<area shape="rect" id="node7" href="struct_e_l_f_block.html" title="{ELFBlock\n|+ length\l+ data\l|}" alt="" coords="319,337,398,429"/>
+<area shape="rect" id="node17" href="struct_e_l_f_attr.html" title="{ELFAttr\n|+ name\l+ form\l+ value\l+ string\l+ data\l+ flag\l+ @3\l|}" alt="" coords="120,528,187,693"/>
+<area shape="rect" id="node11" href="struct_enum.html" title="{Enum\n|+ count\l|}" alt="" coords="955,160,1021,237"/>
+<area shape="rect" id="node12" href="struct_enum_member.html" title="{EnumMember\n|+ name\l+ value\l|}" alt="" coords="937,5,1039,97"/>
+<area shape="rect" id="node14" href="struct_a_ranges.html" title="{ARanges\n|+ offset\l+ count\l|}" alt="" coords="313,800,388,892"/>
+<area shape="rect" id="node15" href="struct_a_range.html" title="{ARange\n|+ lowPC\l+ highPC\l|}" alt="" coords="211,565,287,657"/>
+<area shape="rect" id="node16" href="struct_e_l_f_abbrev.html" title="{ELFAbbrev\n|+ number\l+ tag\l+ hasChildren\l+ numAttrs\l|}" alt="" coords="122,785,225,907"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:acad6384874d710baa10548c0bf9a391a"><td class="memItemLeft" align="right" valign="top"><a id="acad6384874d710baa10548c0bf9a391a"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>length</b></td></tr>
+<tr class="memitem:acad6384874d710baa10548c0bf9a391a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#acad6384874d710baa10548c0bf9a391a">length</a></td></tr>
 <tr class="separator:acad6384874d710baa10548c0bf9a391a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace3ba5846b6ef2bce6fb6ecf08cad32f"><td class="memItemLeft" align="right" valign="top"><a id="ace3ba5846b6ef2bce6fb6ecf08cad32f"></a>
-u8 *&#160;</td><td class="memItemRight" valign="bottom"><b>top</b></td></tr>
+<tr class="memitem:ace3ba5846b6ef2bce6fb6ecf08cad32f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#ace3ba5846b6ef2bce6fb6ecf08cad32f">top</a></td></tr>
 <tr class="separator:ace3ba5846b6ef2bce6fb6ecf08cad32f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25babc3939d9beaf5f9fb713b06d7ff0"><td class="memItemLeft" align="right" valign="top"><a id="a25babc3939d9beaf5f9fb713b06d7ff0"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>offset</b></td></tr>
+<tr class="memitem:a25babc3939d9beaf5f9fb713b06d7ff0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a25babc3939d9beaf5f9fb713b06d7ff0">offset</a></td></tr>
 <tr class="separator:a25babc3939d9beaf5f9fb713b06d7ff0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e5f3d3a9863efd87c6bc56de6a8ede"><td class="memItemLeft" align="right" valign="top"><a id="a53e5f3d3a9863efd87c6bc56de6a8ede"></a>
-<a class="el" href="struct_e_l_f_abbrev.html">ELFAbbrev</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>abbrevs</b></td></tr>
+<tr class="memitem:a53e5f3d3a9863efd87c6bc56de6a8ede"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_e_l_f_abbrev.html">ELFAbbrev</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a53e5f3d3a9863efd87c6bc56de6a8ede">abbrevs</a></td></tr>
 <tr class="separator:a53e5f3d3a9863efd87c6bc56de6a8ede"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35a7813d5c734076df26479b66448158"><td class="memItemLeft" align="right" valign="top"><a id="a35a7813d5c734076df26479b66448158"></a>
-<a class="el" href="struct_a_ranges.html">ARanges</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>ranges</b></td></tr>
+<tr class="memitem:a35a7813d5c734076df26479b66448158"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_a_ranges.html">ARanges</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a35a7813d5c734076df26479b66448158">ranges</a></td></tr>
 <tr class="separator:a35a7813d5c734076df26479b66448158"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56da363bb4b326b104c5d3e87a81ed6d"><td class="memItemLeft" align="right" valign="top"><a id="a56da363bb4b326b104c5d3e87a81ed6d"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+<tr class="memitem:a56da363bb4b326b104c5d3e87a81ed6d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a56da363bb4b326b104c5d3e87a81ed6d">name</a></td></tr>
 <tr class="separator:a56da363bb4b326b104c5d3e87a81ed6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9841cfa5f9c0facd787471fcbc433c79"><td class="memItemLeft" align="right" valign="top"><a id="a9841cfa5f9c0facd787471fcbc433c79"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>compdir</b></td></tr>
+<tr class="memitem:a9841cfa5f9c0facd787471fcbc433c79"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a9841cfa5f9c0facd787471fcbc433c79">compdir</a></td></tr>
 <tr class="separator:a9841cfa5f9c0facd787471fcbc433c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd16e32e4b2af3a0ebca497e6bfb79aa"><td class="memItemLeft" align="right" valign="top"><a id="acd16e32e4b2af3a0ebca497e6bfb79aa"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>lowPC</b></td></tr>
+<tr class="memitem:acd16e32e4b2af3a0ebca497e6bfb79aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#acd16e32e4b2af3a0ebca497e6bfb79aa">lowPC</a></td></tr>
 <tr class="separator:acd16e32e4b2af3a0ebca497e6bfb79aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2adc2fbfd2e9f68c720b6bcff3f7d4bb"><td class="memItemLeft" align="right" valign="top"><a id="a2adc2fbfd2e9f68c720b6bcff3f7d4bb"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>highPC</b></td></tr>
+<tr class="memitem:a2adc2fbfd2e9f68c720b6bcff3f7d4bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a2adc2fbfd2e9f68c720b6bcff3f7d4bb">highPC</a></td></tr>
 <tr class="separator:a2adc2fbfd2e9f68c720b6bcff3f7d4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a378d867eb23538702956763f72e000f3"><td class="memItemLeft" align="right" valign="top"><a id="a378d867eb23538702956763f72e000f3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>hasLineInfo</b></td></tr>
+<tr class="memitem:a378d867eb23538702956763f72e000f3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a378d867eb23538702956763f72e000f3">hasLineInfo</a></td></tr>
 <tr class="separator:a378d867eb23538702956763f72e000f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bfc05acd5b93dec7be2a486346723db"><td class="memItemLeft" align="right" valign="top"><a id="a9bfc05acd5b93dec7be2a486346723db"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>lineInfo</b></td></tr>
+<tr class="memitem:a9bfc05acd5b93dec7be2a486346723db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a9bfc05acd5b93dec7be2a486346723db">lineInfo</a></td></tr>
 <tr class="separator:a9bfc05acd5b93dec7be2a486346723db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96d38056c5c5e5e723b16980d6c34641"><td class="memItemLeft" align="right" valign="top"><a id="a96d38056c5c5e5e723b16980d6c34641"></a>
-<a class="el" href="struct_line_info.html">LineInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lineInfoTable</b></td></tr>
+<tr class="memitem:a96d38056c5c5e5e723b16980d6c34641"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_line_info.html">LineInfo</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a96d38056c5c5e5e723b16980d6c34641">lineInfoTable</a></td></tr>
 <tr class="separator:a96d38056c5c5e5e723b16980d6c34641"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac105dc0b8c92a401f8dd14f7a537e533"><td class="memItemLeft" align="right" valign="top"><a id="ac105dc0b8c92a401f8dd14f7a537e533"></a>
-<a class="el" href="struct_function.html">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>functions</b></td></tr>
+<tr class="memitem:ac105dc0b8c92a401f8dd14f7a537e533"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_function.html">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#ac105dc0b8c92a401f8dd14f7a537e533">functions</a></td></tr>
 <tr class="separator:ac105dc0b8c92a401f8dd14f7a537e533"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a39cac93f270f6ca1329b0fe1533b28d2"><td class="memItemLeft" align="right" valign="top"><a id="a39cac93f270f6ca1329b0fe1533b28d2"></a>
-<a class="el" href="struct_function.html">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>lastFunction</b></td></tr>
+<tr class="memitem:a39cac93f270f6ca1329b0fe1533b28d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_function.html">Function</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a39cac93f270f6ca1329b0fe1533b28d2">lastFunction</a></td></tr>
 <tr class="separator:a39cac93f270f6ca1329b0fe1533b28d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a88643bd86eef23198ee9e03070ed26cb"><td class="memItemLeft" align="right" valign="top"><a id="a88643bd86eef23198ee9e03070ed26cb"></a>
-<a class="el" href="struct_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>variables</b></td></tr>
+<tr class="memitem:a88643bd86eef23198ee9e03070ed26cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#a88643bd86eef23198ee9e03070ed26cb">variables</a></td></tr>
 <tr class="separator:a88643bd86eef23198ee9e03070ed26cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac17b554bb4d11740bf0cd06231d5454c"><td class="memItemLeft" align="right" valign="top"><a id="ac17b554bb4d11740bf0cd06231d5454c"></a>
-<a class="el" href="struct_type.html">Type</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>types</b></td></tr>
+<tr class="memitem:ac17b554bb4d11740bf0cd06231d5454c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_type.html">Type</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#ac17b554bb4d11740bf0cd06231d5454c">types</a></td></tr>
 <tr class="separator:ac17b554bb4d11740bf0cd06231d5454c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ada8fe7f00de2bd5b1808782e1baecf5f"><td class="memItemLeft" align="right" valign="top"><a id="ada8fe7f00de2bd5b1808782e1baecf5f"></a>
-<a class="el" href="struct_compile_unit.html">CompileUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>next</b></td></tr>
+<tr class="memitem:ada8fe7f00de2bd5b1808782e1baecf5f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_compile_unit.html">CompileUnit</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_compile_unit.html#ada8fe7f00de2bd5b1808782e1baecf5f">next</a></td></tr>
 <tr class="separator:ada8fe7f00de2bd5b1808782e1baecf5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00231">231</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a53e5f3d3a9863efd87c6bc56de6a8ede"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53e5f3d3a9863efd87c6bc56de6a8ede">&#9670;&nbsp;</a></span>abbrevs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_e_l_f_abbrev.html">ELFAbbrev</a>** CompileUnit::abbrevs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00235">235</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9841cfa5f9c0facd787471fcbc433c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9841cfa5f9c0facd787471fcbc433c79">&#9670;&nbsp;</a></span>compdir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* CompileUnit::compdir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00238">238</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac105dc0b8c92a401f8dd14f7a537e533"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac105dc0b8c92a401f8dd14f7a537e533">&#9670;&nbsp;</a></span>functions</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_function.html">Function</a>* CompileUnit::functions</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00244">244</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a378d867eb23538702956763f72e000f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a378d867eb23538702956763f72e000f3">&#9670;&nbsp;</a></span>hasLineInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CompileUnit::hasLineInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00241">241</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a2adc2fbfd2e9f68c720b6bcff3f7d4bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2adc2fbfd2e9f68c720b6bcff3f7d4bb">&#9670;&nbsp;</a></span>highPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> CompileUnit::highPC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00240">240</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a39cac93f270f6ca1329b0fe1533b28d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39cac93f270f6ca1329b0fe1533b28d2">&#9670;&nbsp;</a></span>lastFunction</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_function.html">Function</a>* CompileUnit::lastFunction</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00245">245</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="acad6384874d710baa10548c0bf9a391a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad6384874d710baa10548c0bf9a391a">&#9670;&nbsp;</a></span>length</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> CompileUnit::length</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00232">232</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a9bfc05acd5b93dec7be2a486346723db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bfc05acd5b93dec7be2a486346723db">&#9670;&nbsp;</a></span>lineInfo</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> CompileUnit::lineInfo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00242">242</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a96d38056c5c5e5e723b16980d6c34641"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96d38056c5c5e5e723b16980d6c34641">&#9670;&nbsp;</a></span>lineInfoTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_line_info.html">LineInfo</a>* CompileUnit::lineInfoTable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00243">243</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="acd16e32e4b2af3a0ebca497e6bfb79aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd16e32e4b2af3a0ebca497e6bfb79aa">&#9670;&nbsp;</a></span>lowPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> CompileUnit::lowPC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00239">239</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a56da363bb4b326b104c5d3e87a81ed6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56da363bb4b326b104c5d3e87a81ed6d">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* CompileUnit::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00237">237</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ada8fe7f00de2bd5b1808782e1baecf5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada8fe7f00de2bd5b1808782e1baecf5f">&#9670;&nbsp;</a></span>next</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_compile_unit.html">CompileUnit</a>* CompileUnit::next</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00248">248</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a25babc3939d9beaf5f9fb713b06d7ff0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25babc3939d9beaf5f9fb713b06d7ff0">&#9670;&nbsp;</a></span>offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> CompileUnit::offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00234">234</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a35a7813d5c734076df26479b66448158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35a7813d5c734076df26479b66448158">&#9670;&nbsp;</a></span>ranges</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_a_ranges.html">ARanges</a>* CompileUnit::ranges</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00236">236</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ace3ba5846b6ef2bce6fb6ecf08cad32f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace3ba5846b6ef2bce6fb6ecf08cad32f">&#9670;&nbsp;</a></span>top</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>* CompileUnit::top</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00233">233</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac17b554bb4d11740bf0cd06231d5454c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17b554bb4d11740bf0cd06231d5454c">&#9670;&nbsp;</a></span>types</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_type.html">Type</a>* CompileUnit::types</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00247">247</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a88643bd86eef23198ee9e03070ed26cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88643bd86eef23198ee9e03070ed26cb">&#9670;&nbsp;</a></span>variables</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_object.html">Object</a>* CompileUnit::variables</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8h_source.html">elf.h</a> 파일의 <a class="el" href="elf_8h_source.html#l00246">246</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/<a class="el" href="elf_8h_source.html">elf.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="elf_8h_source.html">elf.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_compile_unit.html">CompileUnit</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

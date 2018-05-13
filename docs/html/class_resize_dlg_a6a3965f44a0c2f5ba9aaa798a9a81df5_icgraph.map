@@ -1,0 +1,12 @@
+<map id="ResizeDlg::SetData" name="ResizeDlg::SetData">
+<area shape="rect" id="node2" href="$class_disassemble.html#a23e74e8f32758c5b6ff63914633e2ab5" title="Disassemble::OnInitDialog" alt="" coords="199,5,374,32"/>
+<area shape="rect" id="node3" href="$class_g_b_disassemble.html#a62b06166477944c21edeeda699fcdba5" title="GBDisassemble::OnInitDialog" alt="" coords="189,56,384,83"/>
+<area shape="rect" id="node4" href="$class_g_b_map_view.html#a3bcd4b5e76fbe0ae04809770fce64765" title="GBMapView::OnInitDialog" alt="" coords="201,107,373,133"/>
+<area shape="rect" id="node5" href="$class_g_b_oam_view.html#a633fdb700275a8a8ce96978472c643b5" title="GBOamView::OnInitDialog" alt="" coords="199,157,374,184"/>
+<area shape="rect" id="node6" href="$class_g_b_tile_view.html#a4d97fe7dcfd863756d993834548d2ca6" title="GBTileView::OnInitDialog" alt="" coords="203,208,370,235"/>
+<area shape="rect" id="node7" href="$class_i_o_viewer.html#a4d36007016944a2ed21ee72323204f00" title="IOViewer::OnInitDialog" alt="" coords="211,259,363,285"/>
+<area shape="rect" id="node8" href="$class_logging.html#a5a0a6200a3d55702597a73f7fe8794f5" title="Logging::OnInitDialog" alt="" coords="214,309,359,336"/>
+<area shape="rect" id="node9" href="$class_map_view.html#a10c4f05b5c4289dfc08c6501de3cf40c" title="MapView::OnInitDialog" alt="" coords="210,360,363,387"/>
+<area shape="rect" id="node10" href="$class_oam_view.html#a925c72977181efd7be81b302af7ed071" title="OamView::OnInitDialog" alt="" coords="209,411,365,437"/>
+<area shape="rect" id="node11" href="$class_tile_view.html#a597e32fa09187fe6ea909cca947bfbc1" title="TileView::OnInitDialog" alt="" coords="213,461,361,488"/>
+</map>

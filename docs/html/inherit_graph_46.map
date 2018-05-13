@@ -1,0 +1,7 @@
+<map id="그래픽컬한 클래스 계통도" name="그래픽컬한 클래스 계통도">
+<area shape="rect" id="node1" href="$class_i_display.html" title="IDisplay" alt="" coords="5,81,73,108"/>
+<area shape="rect" id="node2" href="$class_direct3_d_display.html" title="Direct3DDisplay" alt="" coords="128,5,243,32"/>
+<area shape="rect" id="node3" href="$class_direct_draw_display.html" title="DirectDrawDisplay" alt="" coords="121,56,249,83"/>
+<area shape="rect" id="node4" href="$class_g_d_i_display.html" title="GDIDisplay" alt="" coords="142,107,229,133"/>
+<area shape="rect" id="node5" href="$class_open_g_l_display.html" title="OpenGLDisplay" alt="" coords="129,157,242,184"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_i_sound.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -68,43 +92,257 @@ $(function() {
 <div class="title">ISound 클래스 참조<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="win32_2_sound_8h_source.html">Sound.h</a>&gt;</code></p>
 <div class="dynheader">
 ISound에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_i_sound.png" usemap="#ISound_map" alt=""/>
-  <map id="ISound_map" name="ISound_map">
-<area href="class_direct_sound.html" alt="DirectSound" shape="rect" coords="0,56,82,80"/>
+<div class="center"><img src="class_i_sound__inherit__graph.png" border="0" usemap="#_i_sound_inherit__map" alt="Inheritance graph"/></div>
+<map name="_i_sound_inherit__map" id="_i_sound_inherit__map">
+<area shape="rect" id="node2" href="class_direct_sound.html" title="{DirectSound\n||+ DirectSound()\l+ ~DirectSound()\l+ init()\l+ pause()\l+ reset()\l+ resume()\l+ write()\l}" alt="" coords="5,204,127,369"/>
 </map>
- </div></div>
+</div>
+<div class="dynheader">
+ISound에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_sound__coll__graph.png" border="0" usemap="#_i_sound_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:ac14f05f2d5050cfefa4133099d9f656e"><td class="memItemLeft" align="right" valign="top"><a id="ac14f05f2d5050cfefa4133099d9f656e"></a>
-virtual bool&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> ()=0</td></tr>
+<tr class="memitem:ad968d59f5fdb16f050b3c74108c693b5"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sound.html#ad968d59f5fdb16f050b3c74108c693b5">~ISound</a> ()</td></tr>
+<tr class="separator:ad968d59f5fdb16f050b3c74108c693b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14f05f2d5050cfefa4133099d9f656e"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sound.html#ac14f05f2d5050cfefa4133099d9f656e">init</a> ()=0</td></tr>
 <tr class="separator:ac14f05f2d5050cfefa4133099d9f656e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9fb848e0e31ab8bcd5384b0422855c3d"><td class="memItemLeft" align="right" valign="top"><a id="a9fb848e0e31ab8bcd5384b0422855c3d"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>pause</b> ()=0</td></tr>
+<tr class="memitem:a9fb848e0e31ab8bcd5384b0422855c3d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sound.html#a9fb848e0e31ab8bcd5384b0422855c3d">pause</a> ()=0</td></tr>
 <tr class="separator:a9fb848e0e31ab8bcd5384b0422855c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ca59c529f3abce2dd4ed8d8da243c5e"><td class="memItemLeft" align="right" valign="top"><a id="a7ca59c529f3abce2dd4ed8d8da243c5e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()=0</td></tr>
+<tr class="memitem:a7ca59c529f3abce2dd4ed8d8da243c5e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sound.html#a7ca59c529f3abce2dd4ed8d8da243c5e">reset</a> ()=0</td></tr>
 <tr class="separator:a7ca59c529f3abce2dd4ed8d8da243c5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e0adea68f52a7f0392a3988a558aaf0"><td class="memItemLeft" align="right" valign="top"><a id="a8e0adea68f52a7f0392a3988a558aaf0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>resume</b> ()=0</td></tr>
+<tr class="memitem:a8e0adea68f52a7f0392a3988a558aaf0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sound.html#a8e0adea68f52a7f0392a3988a558aaf0">resume</a> ()=0</td></tr>
 <tr class="separator:a8e0adea68f52a7f0392a3988a558aaf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad7913f5fa003c06e8e1a930f760d20e2"><td class="memItemLeft" align="right" valign="top"><a id="ad7913f5fa003c06e8e1a930f760d20e2"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>write</b> ()=0</td></tr>
+<tr class="memitem:ad7913f5fa003c06e8e1a930f760d20e2"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_i_sound.html#ad7913f5fa003c06e8e1a930f760d20e2">write</a> ()=0</td></tr>
 <tr class="separator:ad7913f5fa003c06e8e1a930f760d20e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="win32_2_sound_8h_source.html">Sound.h</a> 파일의 <a class="el" href="win32_2_sound_8h_source.html#l00023">23</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="ad968d59f5fdb16f050b3c74108c693b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad968d59f5fdb16f050b3c74108c693b5">&#9670;&nbsp;</a></span>~ISound()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ISound::~ISound </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="win32_2_sound_8h_source.html">Sound.h</a> 파일의 <a class="el" href="win32_2_sound_8h_source.html#l00026">26</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{};</div></div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="ac14f05f2d5050cfefa4133099d9f656e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14f05f2d5050cfefa4133099d9f656e">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool ISound::init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_sound.html#a006583b3b3c1b16ca4c54bf9a6141fb9">DirectSound</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_sound_ac14f05f2d5050cfefa4133099d9f656e_icgraph.png" border="0" usemap="#class_i_sound_ac14f05f2d5050cfefa4133099d9f656e_icgraph" alt=""/></div>
+<map name="class_i_sound_ac14f05f2d5050cfefa4133099d9f656e_icgraph" id="class_i_sound_ac14f05f2d5050cfefa4133099d9f656e_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#a46a394ba020dc0fc499bb8481c21325b" title="systemSoundInit" alt="" coords="140,5,259,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9fb848e0e31ab8bcd5384b0422855c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fb848e0e31ab8bcd5384b0422855c3d">&#9670;&nbsp;</a></span>pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ISound::pause </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_sound.html#a33ee46c99ddf8f06bd6605ec14798f4b">DirectSound</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_sound_a9fb848e0e31ab8bcd5384b0422855c3d_icgraph.png" border="0" usemap="#class_i_sound_a9fb848e0e31ab8bcd5384b0422855c3d_icgraph" alt=""/></div>
+<map name="class_i_sound_a9fb848e0e31ab8bcd5384b0422855c3d_icgraph" id="class_i_sound_a9fb848e0e31ab8bcd5384b0422855c3d_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#a247faeeb98d9b2a720aa9ceec44712ee" title="systemSoundPause" alt="" coords="159,5,297,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a7ca59c529f3abce2dd4ed8d8da243c5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ca59c529f3abce2dd4ed8d8da243c5e">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ISound::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_sound.html#aa947e57a1a67df3a609cd403b8c97bb8">DirectSound</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_sound_a7ca59c529f3abce2dd4ed8d8da243c5e_icgraph.png" border="0" usemap="#class_i_sound_a7ca59c529f3abce2dd4ed8d8da243c5e_icgraph" alt=""/></div>
+<map name="class_i_sound_a7ca59c529f3abce2dd4ed8d8da243c5e_icgraph" id="class_i_sound_a7ca59c529f3abce2dd4ed8d8da243c5e_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#ae02e1ebe20b79b3e86e97ec475905fef" title="systemSoundReset" alt="" coords="152,5,288,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8e0adea68f52a7f0392a3988a558aaf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e0adea68f52a7f0392a3988a558aaf0">&#9670;&nbsp;</a></span>resume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ISound::resume </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_sound.html#a529b060d31bb252968bc9a387a7dc9ad">DirectSound</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_sound_a8e0adea68f52a7f0392a3988a558aaf0_icgraph.png" border="0" usemap="#class_i_sound_a8e0adea68f52a7f0392a3988a558aaf0_icgraph" alt=""/></div>
+<map name="class_i_sound_a8e0adea68f52a7f0392a3988a558aaf0_icgraph" id="class_i_sound_a8e0adea68f52a7f0392a3988a558aaf0_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#acca67094c690baad0ce9832028d0660e" title="systemSoundResume" alt="" coords="167,5,317,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad7913f5fa003c06e8e1a930f760d20e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7913f5fa003c06e8e1a930f760d20e2">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void ISound::write </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_direct_sound.html#a2e2a78f3a6719920fb2a9dfc48e4b1db">DirectSound</a>에서 구현되었습니다.</p>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_i_sound_ad7913f5fa003c06e8e1a930f760d20e2_icgraph.png" border="0" usemap="#class_i_sound_ad7913f5fa003c06e8e1a930f760d20e2_icgraph" alt=""/></div>
+<map name="class_i_sound_ad7913f5fa003c06e8e1a930f760d20e2_icgraph" id="class_i_sound_ad7913f5fa003c06e8e1a930f760d20e2_icgraph">
+<area shape="rect" id="node2" href="_v_b_a_8cpp.html#a7ab73f7c29f519cb0ff00210bb140eb1" title="systemWriteDataToSoundBuffer" alt="" coords="151,5,357,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="win32_2_sound_8h_source.html">Sound.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="win32_2_sound_8h_source.html">Sound.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_i_sound.html">ISound</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

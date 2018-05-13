@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structmem__stream.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,52 +92,233 @@ $(function() {
 <div class="title">mem_stream 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+mem_stream에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="structmem__stream__coll__graph.png" border="0" usemap="#mem__stream_coll__map" alt="Collaboration graph"/></div>
+<map name="mem__stream_coll__map" id="mem__stream_coll__map">
+<area shape="rect" id="node2" href="struct___mem_file.html" title="{_MemFile\n|+ memory\l+ next\l+ available\l+ error\l+ mode\l|}" alt="" coords="13,5,96,141"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a8e95715455ffbde3f8bf840180eabd37"><td class="memItemLeft" align="right" valign="top"><a id="a8e95715455ffbde3f8bf840180eabd37"></a>
-z_stream&#160;</td><td class="memItemRight" valign="bottom"><b>stream</b></td></tr>
+<tr class="memitem:a8e95715455ffbde3f8bf840180eabd37"><td class="memItemLeft" align="right" valign="top">z_stream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#a8e95715455ffbde3f8bf840180eabd37">stream</a></td></tr>
 <tr class="separator:a8e95715455ffbde3f8bf840180eabd37"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0049d60995cda5d1638ebce2a4eb3155"><td class="memItemLeft" align="right" valign="top"><a id="a0049d60995cda5d1638ebce2a4eb3155"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>z_err</b></td></tr>
+<tr class="memitem:a0049d60995cda5d1638ebce2a4eb3155"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#a0049d60995cda5d1638ebce2a4eb3155">z_err</a></td></tr>
 <tr class="separator:a0049d60995cda5d1638ebce2a4eb3155"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac41bfcdbcada66bebb9709e8638f6b80"><td class="memItemLeft" align="right" valign="top"><a id="ac41bfcdbcada66bebb9709e8638f6b80"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>z_eof</b></td></tr>
+<tr class="memitem:ac41bfcdbcada66bebb9709e8638f6b80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#ac41bfcdbcada66bebb9709e8638f6b80">z_eof</a></td></tr>
 <tr class="separator:ac41bfcdbcada66bebb9709e8638f6b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3bba5271c2ba53db444ce0b70d1c6fe1"><td class="memItemLeft" align="right" valign="top"><a id="a3bba5271c2ba53db444ce0b70d1c6fe1"></a>
-<a class="el" href="struct___mem_file.html">MEMFILE</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>file</b></td></tr>
+<tr class="memitem:a3bba5271c2ba53db444ce0b70d1c6fe1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="memgzio_8c.html#aebbc1e519147882ded18ad14979fe817">MEMFILE</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#a3bba5271c2ba53db444ce0b70d1c6fe1">file</a></td></tr>
 <tr class="separator:a3bba5271c2ba53db444ce0b70d1c6fe1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad151b26e8ac236612276193c515b6e67"><td class="memItemLeft" align="right" valign="top"><a id="ad151b26e8ac236612276193c515b6e67"></a>
-Byte *&#160;</td><td class="memItemRight" valign="bottom"><b>inbuf</b></td></tr>
+<tr class="memitem:ad151b26e8ac236612276193c515b6e67"><td class="memItemLeft" align="right" valign="top">Byte *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#ad151b26e8ac236612276193c515b6e67">inbuf</a></td></tr>
 <tr class="separator:ad151b26e8ac236612276193c515b6e67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3c4eae5484fee4862306c274407f3d13"><td class="memItemLeft" align="right" valign="top"><a id="a3c4eae5484fee4862306c274407f3d13"></a>
-Byte *&#160;</td><td class="memItemRight" valign="bottom"><b>outbuf</b></td></tr>
+<tr class="memitem:a3c4eae5484fee4862306c274407f3d13"><td class="memItemLeft" align="right" valign="top">Byte *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#a3c4eae5484fee4862306c274407f3d13">outbuf</a></td></tr>
 <tr class="separator:a3c4eae5484fee4862306c274407f3d13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51276ceb0be94f2201a059c8697dc853"><td class="memItemLeft" align="right" valign="top"><a id="a51276ceb0be94f2201a059c8697dc853"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>crc</b></td></tr>
+<tr class="memitem:a51276ceb0be94f2201a059c8697dc853"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#a51276ceb0be94f2201a059c8697dc853">crc</a></td></tr>
 <tr class="separator:a51276ceb0be94f2201a059c8697dc853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8b64f897dff31431aaf6608e32996e26"><td class="memItemLeft" align="right" valign="top"><a id="a8b64f897dff31431aaf6608e32996e26"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>msg</b></td></tr>
+<tr class="memitem:a8b64f897dff31431aaf6608e32996e26"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#a8b64f897dff31431aaf6608e32996e26">msg</a></td></tr>
 <tr class="separator:a8b64f897dff31431aaf6608e32996e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad970d09fe4cbcc6595b2d08b39d50db1"><td class="memItemLeft" align="right" valign="top"><a id="ad970d09fe4cbcc6595b2d08b39d50db1"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>transparent</b></td></tr>
+<tr class="memitem:ad970d09fe4cbcc6595b2d08b39d50db1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#ad970d09fe4cbcc6595b2d08b39d50db1">transparent</a></td></tr>
 <tr class="separator:ad970d09fe4cbcc6595b2d08b39d50db1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30a6ad1cea6962847c45dd540d702f6f"><td class="memItemLeft" align="right" valign="top"><a id="a30a6ad1cea6962847c45dd540d702f6f"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b></td></tr>
+<tr class="memitem:a30a6ad1cea6962847c45dd540d702f6f"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#a30a6ad1cea6962847c45dd540d702f6f">mode</a></td></tr>
 <tr class="separator:a30a6ad1cea6962847c45dd540d702f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a50cada517a32582e93025846359ddec7"><td class="memItemLeft" align="right" valign="top"><a id="a50cada517a32582e93025846359ddec7"></a>
-long&#160;</td><td class="memItemRight" valign="bottom"><b>startpos</b></td></tr>
+<tr class="memitem:a50cada517a32582e93025846359ddec7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmem__stream.html#a50cada517a32582e93025846359ddec7">startpos</a></td></tr>
 <tr class="separator:a50cada517a32582e93025846359ddec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a51276ceb0be94f2201a059c8697dc853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51276ceb0be94f2201a059c8697dc853">&#9670;&nbsp;</a></span>crc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong mem_stream::crc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00061">61</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3bba5271c2ba53db444ce0b70d1c6fe1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bba5271c2ba53db444ce0b70d1c6fe1">&#9670;&nbsp;</a></span>file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="memgzio_8c.html#aebbc1e519147882ded18ad14979fe817">MEMFILE</a>* mem_stream::file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00058">58</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad151b26e8ac236612276193c515b6e67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad151b26e8ac236612276193c515b6e67">&#9670;&nbsp;</a></span>inbuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Byte* mem_stream::inbuf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a30a6ad1cea6962847c45dd540d702f6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30a6ad1cea6962847c45dd540d702f6f">&#9670;&nbsp;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char mem_stream::mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8b64f897dff31431aaf6608e32996e26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b64f897dff31431aaf6608e32996e26">&#9670;&nbsp;</a></span>msg</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* mem_stream::msg</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00062">62</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3c4eae5484fee4862306c274407f3d13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c4eae5484fee4862306c274407f3d13">&#9670;&nbsp;</a></span>outbuf</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Byte* mem_stream::outbuf</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00060">60</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a50cada517a32582e93025846359ddec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50cada517a32582e93025846359ddec7">&#9670;&nbsp;</a></span>startpos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">long mem_stream::startpos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00065">65</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8e95715455ffbde3f8bf840180eabd37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e95715455ffbde3f8bf840180eabd37">&#9670;&nbsp;</a></span>stream</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">z_stream mem_stream::stream</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad970d09fe4cbcc6595b2d08b39d50db1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad970d09fe4cbcc6595b2d08b39d50db1">&#9670;&nbsp;</a></span>transparent</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mem_stream::transparent</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac41bfcdbcada66bebb9709e8638f6b80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac41bfcdbcada66bebb9709e8638f6b80">&#9670;&nbsp;</a></span>z_eof</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mem_stream::z_eof</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0049d60995cda5d1638ebce2a4eb3155"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0049d60995cda5d1638ebce2a4eb3155">&#9670;&nbsp;</a></span>z_err</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mem_stream::z_err</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="memgzio_8c_source.html">memgzio.c</a> 파일의 <a class="el" href="memgzio_8c_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/memgzio.c</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="memgzio_8c_source.html">memgzio.c</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structmem__stream.html">mem_stream</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

@@ -1,0 +1,8 @@
+<map id="MemoryViewer::setSize" name="MemoryViewer::setSize">
+<area shape="rect" id="node2" href="$class_g_b_memory_viewer_dlg.html#a3e6f7abe8cf8dbc567d662eb33cf569b" title="GBMemoryViewerDlg::\lOn8Bit" alt="" coords="227,5,382,47"/>
+<area shape="rect" id="node3" href="$class_g_b_memory_viewer_dlg.html#a52b3f9fedab4314bd634becf88c756a2" title="GBMemoryViewerDlg::\lOn16Bit" alt="" coords="227,71,382,112"/>
+<area shape="rect" id="node4" href="$class_g_b_memory_viewer_dlg.html#a4e97f32250cfe77d1381fb21eed6daa4" title="GBMemoryViewerDlg::\lOn32Bit" alt="" coords="227,136,382,177"/>
+<area shape="rect" id="node5" href="$class_memory_viewer_dlg.html#ad408c6c194db416a0cf23480184ef610" title="MemoryViewerDlg::On8Bit" alt="" coords="217,202,392,229"/>
+<area shape="rect" id="node6" href="$class_memory_viewer_dlg.html#a61f6aec84a4bcf908dc32f9e85c871d0" title="MemoryViewerDlg::On16Bit" alt="" coords="213,253,396,279"/>
+<area shape="rect" id="node7" href="$class_memory_viewer_dlg.html#afb8178dcad55d86c9217f89e0ed4814f" title="MemoryViewerDlg::On32Bit" alt="" coords="213,303,396,330"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="utilWriteInt" name="utilWriteInt">
+<area shape="rect" id="node2" href="$_cheats_8h.html#a1277f24866d1fad5446dab55d248726b" title="cheatsSaveGame" alt="" coords="145,5,269,32"/>
+<area shape="rect" id="node3" href="$_e_eprom_8h.html#ae1a9cd954c2f43107489dfa77230db8d" title="eepromSaveGame" alt="" coords="143,56,271,83"/>
+<area shape="rect" id="node4" href="$gb_cheats_8h.html#acb8a0c6999c8755601066d698cdf61f9" title="gbCheatsSaveGame" alt="" coords="137,107,277,133"/>
+<area shape="rect" id="node5" href="$gb_sound_8h.html#a29eba8ccb5623503ee3f48eca2e8b6a9" title="gbSoundSaveGame" alt="" coords="139,157,275,184"/>
+</map>

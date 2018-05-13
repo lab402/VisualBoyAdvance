@@ -1,46 +1,269 @@
 \hypertarget{class_input}{}\section{Input 클래스 참조}
 \label{class_input}\index{Input@{Input}}
-Input에 대한 상속 다이어그램 \+: \begin{figure}[H]
+
+
+{\ttfamily \#include $<$Input.\+h$>$}
+
+
+
+Input에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_input}
+\includegraphics[width=190pt]{class_input__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Input에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_input__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_input_affd45f0c278a6ff71b7ae1a567a3dc1c}\label{class_input_affd45f0c278a6ff71b7ae1a567a3dc1c}} 
-virtual bool {\bfseries initialize} ()=0
+\mbox{\hyperlink{class_input_abae3f379d3f157cf42dc857309832dba}{Input}} ()
 \item 
-\mbox{\Hypertarget{class_input_a422dbf7bc783378d47eddec93d1f565a}\label{class_input_a422dbf7bc783378d47eddec93d1f565a}} 
-virtual bool {\bfseries read\+Devices} ()=0
+virtual \mbox{\hyperlink{class_input_a230646fa6e6433b4d9ac3535b7d52087}{$\sim$\+Input}} ()
 \item 
-\mbox{\Hypertarget{class_input_a57a47977bda8fcf6de237401b4c2e0dd}\label{class_input_a57a47977bda8fcf6de237401b4c2e0dd}} 
-virtual u32 {\bfseries read\+Device} (int which)=0
+virtual bool \mbox{\hyperlink{class_input_affd45f0c278a6ff71b7ae1a567a3dc1c}{initialize}} ()=0
 \item 
-\mbox{\Hypertarget{class_input_a2c4ec8a744b040657e220480987cd8bf}\label{class_input_a2c4ec8a744b040657e220480987cd8bf}} 
-virtual C\+String {\bfseries get\+Key\+Name} (L\+O\+N\+G\+\_\+\+P\+TR key)=0
+virtual bool \mbox{\hyperlink{class_input_a422dbf7bc783378d47eddec93d1f565a}{read\+Devices}} ()=0
 \item 
-\mbox{\Hypertarget{class_input_a91418a5762e6e50aa4f59e4ce92d2dfa}\label{class_input_a91418a5762e6e50aa4f59e4ce92d2dfa}} 
-virtual void {\bfseries check\+Keys} ()=0
+virtual \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{class_input_a57a47977bda8fcf6de237401b4c2e0dd}{read\+Device}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} which)=0
 \item 
-\mbox{\Hypertarget{class_input_aac8f25a1a6a7e0bd54e5d50b9b774844}\label{class_input_aac8f25a1a6a7e0bd54e5d50b9b774844}} 
-virtual void {\bfseries check\+Motion\+Keys} ()=0
+virtual C\+String \mbox{\hyperlink{class_input_a2c4ec8a744b040657e220480987cd8bf}{get\+Key\+Name}} (L\+O\+N\+G\+\_\+\+P\+TR key)=0
 \item 
-\mbox{\Hypertarget{class_input_a7a6ef57ff2638f545380618b2d3fdf9d}\label{class_input_a7a6ef57ff2638f545380618b2d3fdf9d}} 
-virtual void {\bfseries check\+Devices} ()=0
+virtual void \mbox{\hyperlink{class_input_a91418a5762e6e50aa4f59e4ce92d2dfa}{check\+Keys}} ()=0
 \item 
-\mbox{\Hypertarget{class_input_a5917709c5d9cf1270d430667982895d1}\label{class_input_a5917709c5d9cf1270d430667982895d1}} 
-virtual void {\bfseries activate} ()=0
+virtual void \mbox{\hyperlink{class_input_aac8f25a1a6a7e0bd54e5d50b9b774844}{check\+Motion\+Keys}} ()=0
 \item 
-\mbox{\Hypertarget{class_input_a098708c062b906c84ab036c04d447a29}\label{class_input_a098708c062b906c84ab036c04d447a29}} 
-virtual void {\bfseries load\+Settings} ()=0
+virtual void \mbox{\hyperlink{class_input_a7a6ef57ff2638f545380618b2d3fdf9d}{check\+Devices}} ()=0
 \item 
-\mbox{\Hypertarget{class_input_a90c42a9d91bf671aaee3d5f611199eec}\label{class_input_a90c42a9d91bf671aaee3d5f611199eec}} 
-virtual void {\bfseries save\+Settings} ()=0
+virtual void \mbox{\hyperlink{class_input_a5917709c5d9cf1270d430667982895d1}{activate}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_input_a098708c062b906c84ab036c04d447a29}{load\+Settings}} ()=0
+\item 
+virtual void \mbox{\hyperlink{class_input_a90c42a9d91bf671aaee3d5f611199eec}{save\+Settings}} ()=0
 \end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Input.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_input_abae3f379d3f157cf42dc857309832dba}\label{class_input_abae3f379d3f157cf42dc857309832dba}} 
+\index{Input@{Input}!Input@{Input}}
+\index{Input@{Input}!Input@{Input}}
+\subsubsection{\texorpdfstring{Input()}{Input()}}
+{\footnotesize\ttfamily Input\+::\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Input.\+h 파일의 39 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+39 \{\};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_input_a230646fa6e6433b4d9ac3535b7d52087}\label{class_input_a230646fa6e6433b4d9ac3535b7d52087}} 
+\index{Input@{Input}!````~Input@{$\sim$\+Input}}
+\index{````~Input@{$\sim$\+Input}!Input@{Input}}
+\subsubsection{\texorpdfstring{$\sim$\+Input()}{~Input()}}
+{\footnotesize\ttfamily virtual Input\+::$\sim$\+Input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Input.\+h 파일의 40 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+40 \{\};
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_input_a5917709c5d9cf1270d430667982895d1}\label{class_input_a5917709c5d9cf1270d430667982895d1}} 
+\index{Input@{Input}!activate@{activate}}
+\index{activate@{activate}!Input@{Input}}
+\subsubsection{\texorpdfstring{activate()}{activate()}}
+{\footnotesize\ttfamily virtual void Input\+::activate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_a4d81c1ee99e76949dac0acac4bad0937}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_input_a5917709c5d9cf1270d430667982895d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_a7a6ef57ff2638f545380618b2d3fdf9d}\label{class_input_a7a6ef57ff2638f545380618b2d3fdf9d}} 
+\index{Input@{Input}!check\+Devices@{check\+Devices}}
+\index{check\+Devices@{check\+Devices}!Input@{Input}}
+\subsubsection{\texorpdfstring{check\+Devices()}{checkDevices()}}
+{\footnotesize\ttfamily virtual void Input\+::check\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_a59a88d57b359bd26c800579edeb19419}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{class_input_a7a6ef57ff2638f545380618b2d3fdf9d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_a91418a5762e6e50aa4f59e4ce92d2dfa}\label{class_input_a91418a5762e6e50aa4f59e4ce92d2dfa}} 
+\index{Input@{Input}!check\+Keys@{check\+Keys}}
+\index{check\+Keys@{check\+Keys}!Input@{Input}}
+\subsubsection{\texorpdfstring{check\+Keys()}{checkKeys()}}
+{\footnotesize\ttfamily virtual void Input\+::check\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_acecffb99132b93e827373a3683ce342b}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_a91418a5762e6e50aa4f59e4ce92d2dfa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_aac8f25a1a6a7e0bd54e5d50b9b774844}\label{class_input_aac8f25a1a6a7e0bd54e5d50b9b774844}} 
+\index{Input@{Input}!check\+Motion\+Keys@{check\+Motion\+Keys}}
+\index{check\+Motion\+Keys@{check\+Motion\+Keys}!Input@{Input}}
+\subsubsection{\texorpdfstring{check\+Motion\+Keys()}{checkMotionKeys()}}
+{\footnotesize\ttfamily virtual void Input\+::check\+Motion\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_a6e54dc09ff20e12dfe98a24607172c34}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_aac8f25a1a6a7e0bd54e5d50b9b774844_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_a2c4ec8a744b040657e220480987cd8bf}\label{class_input_a2c4ec8a744b040657e220480987cd8bf}} 
+\index{Input@{Input}!get\+Key\+Name@{get\+Key\+Name}}
+\index{get\+Key\+Name@{get\+Key\+Name}!Input@{Input}}
+\subsubsection{\texorpdfstring{get\+Key\+Name()}{getKeyName()}}
+{\footnotesize\ttfamily virtual C\+String Input\+::get\+Key\+Name (\begin{DoxyParamCaption}\item[{L\+O\+N\+G\+\_\+\+P\+TR}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_a8ea2797da0b1e806227628804591f63d}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_input_a2c4ec8a744b040657e220480987cd8bf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_affd45f0c278a6ff71b7ae1a567a3dc1c}\label{class_input_affd45f0c278a6ff71b7ae1a567a3dc1c}} 
+\index{Input@{Input}!initialize@{initialize}}
+\index{initialize@{initialize}!Input@{Input}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual bool Input\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_a56c3e7924e9d115a2b20b31ee415d544}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_affd45f0c278a6ff71b7ae1a567a3dc1c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_a098708c062b906c84ab036c04d447a29}\label{class_input_a098708c062b906c84ab036c04d447a29}} 
+\index{Input@{Input}!load\+Settings@{load\+Settings}}
+\index{load\+Settings@{load\+Settings}!Input@{Input}}
+\subsubsection{\texorpdfstring{load\+Settings()}{loadSettings()}}
+{\footnotesize\ttfamily virtual void Input\+::load\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_a4b63243a3581158956baf495a0dee51e}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_input_a098708c062b906c84ab036c04d447a29_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_a57a47977bda8fcf6de237401b4c2e0dd}\label{class_input_a57a47977bda8fcf6de237401b4c2e0dd}} 
+\index{Input@{Input}!read\+Device@{read\+Device}}
+\index{read\+Device@{read\+Device}!Input@{Input}}
+\subsubsection{\texorpdfstring{read\+Device()}{readDevice()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} Input\+::read\+Device (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{which }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_af7d74c03d302905eaa06e88ab37b7dac}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_input_a57a47977bda8fcf6de237401b4c2e0dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_a422dbf7bc783378d47eddec93d1f565a}\label{class_input_a422dbf7bc783378d47eddec93d1f565a}} 
+\index{Input@{Input}!read\+Devices@{read\+Devices}}
+\index{read\+Devices@{read\+Devices}!Input@{Input}}
+\subsubsection{\texorpdfstring{read\+Devices()}{readDevices()}}
+{\footnotesize\ttfamily virtual bool Input\+::read\+Devices (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_a53a2984e75989b381fdae4c8c33f5c32}{Direct\+Input}}에서 구현되었습니다.
+
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_input_a422dbf7bc783378d47eddec93d1f565a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_input_a90c42a9d91bf671aaee3d5f611199eec}\label{class_input_a90c42a9d91bf671aaee3d5f611199eec}} 
+\index{Input@{Input}!save\+Settings@{save\+Settings}}
+\index{save\+Settings@{save\+Settings}!Input@{Input}}
+\subsubsection{\texorpdfstring{save\+Settings()}{saveSettings()}}
+{\footnotesize\ttfamily virtual void Input\+::save\+Settings (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\mbox{\hyperlink{class_direct_input_aaf3473a97962c8dad1ef6715b5164c9d}{Direct\+Input}}에서 구현되었습니다.
+
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/win32/Input.\+h\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{win32_2input_8h}{Input.\+h}}\end{DoxyCompactItemize}

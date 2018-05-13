@@ -1,0 +1,9 @@
+<map id="MainWnd::OnUpdateOptionsGameboyPrinter" name="MainWnd::OnUpdateOptionsGameboyPrinter">
+<area shape="rect" id="node2" href="$gb_printer_8cpp.html#ad92e246f72a463f50f3c0856418e087e" title="gbPrinterSend" alt="" coords="241,56,345,83"/>
+<area shape="rect" id="node3" href="$gb_printer_8cpp.html#a9c0689dd92376e8e417970449071dd91" title="gbPrinterReset" alt="" coords="409,5,517,32"/>
+<area shape="rect" id="node4" href="$gb_printer_8cpp.html#acb4674ec30c8e2063e48d5e50f5e8310" title="gbPrinterCheckCRC" alt="" coords="393,56,532,83"/>
+<area shape="rect" id="node5" href="$gb_printer_8cpp.html#acb19ed22c056fded1dab564831804a2c" title="gbPrinterCommand" alt="" coords="396,107,529,133"/>
+<area shape="rect" id="node6" href="$gb_printer_8cpp.html#a8dd92155e15bc774868bb536a3b7ada3" title="gbPrinterShowData" alt="" coords="587,81,720,108"/>
+<area shape="rect" id="node8" href="$gb_printer_8cpp.html#acc7286a5db6e65d217524716542cbc15" title="gbPrinterReceiveData" alt="" coords="580,132,727,159"/>
+<area shape="rect" id="node7" href="$system_8cpp.html#a36b528a29e75e09aa9109e51d6ce4dac" title="systemGbPrint" alt="" coords="775,81,884,108"/>
+</map>

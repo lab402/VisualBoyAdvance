@@ -1,0 +1,19 @@
+<map id="MainWnd::OnFileExportBatteryfile" name="MainWnd::OnFileExportBatteryfile">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="272,5,445,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a7adc4aa2a10246fa13637e9d0870843d" title="MainWnd::winLoadFilter" alt="" coords="278,56,439,83"/>
+<area shape="rect" id="node5" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="517,56,643,83"/>
+<area shape="rect" id="node6" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="287,157,430,184"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="273,208,444,235"/>
+<area shape="rect" id="node8" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="298,259,419,285"/>
+<area shape="rect" id="node9" href="$_g_b_8cpp.html#a25cad6c0d1059ad4bf219d93d86aa2dd" title="gbWriteBatteryFile" alt="" coords="293,309,424,336"/>
+<area shape="rect" id="node11" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="715,284,833,311"/>
+<area shape="rect" id="node18" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="283,512,435,539"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="493,5,667,32"/>
+<area shape="rect" id="node10" href="$_g_b_8cpp.html#aea9834252fc8ce2518078fcba98c185b" title="gbWriteSaveMBC1" alt="" coords="515,107,645,133"/>
+<area shape="rect" id="node12" href="$_g_b_8cpp.html#a0dd1813f39ff6b94a0b3c9fa69054a68" title="gbWriteSaveMBC2" alt="" coords="515,157,645,184"/>
+<area shape="rect" id="node13" href="$_g_b_8cpp.html#aa8dccd6e9714a0aea7738c39792cd0e2" title="gbWriteSaveMMM01" alt="" coords="509,208,651,235"/>
+<area shape="rect" id="node14" href="$_g_b_8cpp.html#a253c3848a19fc885120bdb34e92ebae6" title="gbWriteSaveMBC3" alt="" coords="515,259,645,285"/>
+<area shape="rect" id="node15" href="$_g_b_8cpp.html#abf4ec8c57024ccf887cf9eb91846b151" title="gbWriteSaveMBC5" alt="" coords="515,309,645,336"/>
+<area shape="rect" id="node16" href="$_g_b_8cpp.html#ad2237c5d509ab172b012a56e9dc1e39d" title="gbWriteSaveMBC7" alt="" coords="515,360,645,387"/>
+<area shape="rect" id="node17" href="$_g_b_8cpp.html#ac1b06ebcb3fd13e8b527a902d7fa4645" title="gbWriteSaveTAMA5" alt="" coords="511,411,649,437"/>
+</map>

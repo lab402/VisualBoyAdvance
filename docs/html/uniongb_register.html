@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('uniongb_register.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,32 +92,105 @@ $(function() {
 <div class="title">gbRegister 공용체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_g_b_8h_source.html">GB.h</a>&gt;</code></p>
+<div class="dynheader">
+gbRegister에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="uniongb_register__coll__graph.png" border="0" usemap="#gb_register_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a038dba01c9bc9f3d72a2d49094319cb5"><td class="memItemLeft" ><a id="a038dba01c9bc9f3d72a2d49094319cb5"></a>
-struct {</td></tr>
-<tr class="memitem:a0acfccf0e85091782d5de69fea99239f"><td class="memItemLeft" >
-&#160;&#160;&#160;u8&#160;&#160;&#160;<b>B0</b></td></tr>
+<tr class="memitem:a038dba01c9bc9f3d72a2d49094319cb5"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a0acfccf0e85091782d5de69fea99239f"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;&#160;&#160;<a class="el" href="uniongb_register.html#a33d5b51c075ca4181cc1e72211f3a131">B0</a></td></tr>
 <tr class="separator:a0acfccf0e85091782d5de69fea99239f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab4aec15679d17cc053ebc3c34da7a42c"><td class="memItemLeft" >
-&#160;&#160;&#160;u8&#160;&#160;&#160;<b>B1</b></td></tr>
+<tr class="memitem:ab4aec15679d17cc053ebc3c34da7a42c"><td class="memItemLeft" >&#160;&#160;&#160;<a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a>&#160;&#160;&#160;<a class="el" href="uniongb_register.html#afcb77cfe78f40d8fd1eccfa75f679867">B1</a></td></tr>
 <tr class="separator:ab4aec15679d17cc053ebc3c34da7a42c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a038dba01c9bc9f3d72a2d49094319cb5"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>B</b></td></tr>
+<tr class="memitem:a038dba01c9bc9f3d72a2d49094319cb5"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniongb_register.html#a038dba01c9bc9f3d72a2d49094319cb5">B</a></td></tr>
 <tr class="separator:a038dba01c9bc9f3d72a2d49094319cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3d596e48605bc14793ff0292e6ed814"><td class="memItemLeft" align="right" valign="top"><a id="ab3d596e48605bc14793ff0292e6ed814"></a>
-u16&#160;</td><td class="memItemRight" valign="bottom"><b>W</b></td></tr>
+<tr class="memitem:ab3d596e48605bc14793ff0292e6ed814"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uniongb_register.html#ab3d596e48605bc14793ff0292e6ed814">W</a></td></tr>
 <tr class="separator:ab3d596e48605bc14793ff0292e6ed814"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_g_b_8h_source.html">GB.h</a> 파일의 <a class="el" href="_g_b_8h_source.html#l00028">28</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a038dba01c9bc9f3d72a2d49094319cb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a038dba01c9bc9f3d72a2d49094319cb5">&#9670;&nbsp;</a></span>B</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   gbRegister::B</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a33d5b51c075ca4181cc1e72211f3a131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33d5b51c075ca4181cc1e72211f3a131">&#9670;&nbsp;</a></span>B0</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> gbRegister::B0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_8h_source.html">GB.h</a> 파일의 <a class="el" href="_g_b_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="afcb77cfe78f40d8fd1eccfa75f679867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb77cfe78f40d8fd1eccfa75f679867">&#9670;&nbsp;</a></span>B1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#aed742c436da53c1080638ce6ef7d13de">u8</a> gbRegister::B1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_8h_source.html">GB.h</a> 파일의 <a class="el" href="_g_b_8h_source.html#l00033">33</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab3d596e48605bc14793ff0292e6ed814"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3d596e48605bc14793ff0292e6ed814">&#9670;&nbsp;</a></span>W</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> gbRegister::W</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_8h_source.html">GB.h</a> 파일의 <a class="el" href="_g_b_8h_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 공용체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/gb/<a class="el" href="_g_b_8h_source.html">GB.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gb/<a class="el" href="_g_b_8h_source.html">GB.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="uniongb_register.html">gbRegister</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

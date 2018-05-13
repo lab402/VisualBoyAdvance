@@ -1,0 +1,3 @@
+<map id="GBAMemoryViewer" name="GBAMemoryViewer">
+<area shape="rect" id="node2" href="$class_memory_viewer.html" title="{MemoryViewer\n||+ MemoryViewer()\l+ readData()\l+ editData()\l+ getSize()\l+ getCurrentAddress()\l+ setAddressSize()\l+ registerClass()\l+ beep()\l+ OnEditInput()\l+ moveAddress()\l그리고 8개 더...\l# OnEraseBkgnd()\l# OnPaint()\l# OnVScroll()\l# OnGetDlgCode()\l# OnLButtonDown()\l# OnSetFocus()\l# OnKillFocus()\l# OnKeyDown()\l# OnWMChar()\l}" alt="" coords="8,131,159,487"/>
+</map>

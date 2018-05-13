@@ -1,0 +1,230 @@
+\hypertarget{agbprint_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/agbprint.cpp 파일 참조}
+\label{agbprint_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/agbprint.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/agbprint.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Globals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Port.\+h\char`\"{}}\newline
+agbprint.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{agbprint_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{매크로}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{agbprint_8cpp_a6b501425ef6fce9991300120cad5cd05}{debugger\+Write\+Half\+Word}}(addr,  value)~\mbox{\hyperlink{_port_8h_a5e56b49582414acf2f482a5626fc0a6b}{W\+R\+I\+T\+E16\+LE}}((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}$\ast$)\&\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}, (value))
+\item 
+\#define \mbox{\hyperlink{agbprint_8cpp_a281a97839aa95f0adff14c15435f6f0a}{debugger\+Read\+Half\+Word}}(addr)~\mbox{\hyperlink{_port_8h_aab2636d96a4fed5ce311260a2f48ca73}{R\+E\+A\+D16\+LE}}(((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}$\ast$)\&\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}))
+\end{DoxyCompactItemize}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{agbprint_8cpp_a4cb1dd551784015b29935a6c3562b379}{agb\+Print\+Write}} (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} address, \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} value)
+\item 
+void \mbox{\hyperlink{agbprint_8cpp_a98f38726b41f07801ef266307d43cd03}{agb\+Print\+Reset}} ()
+\item 
+void \mbox{\hyperlink{agbprint_8cpp_a2c1eb14a0b2362011cc1aac05a1e5902}{agb\+Print\+Enable}} (bool enable)
+\item 
+bool \mbox{\hyperlink{agbprint_8cpp_ab6b9c9b8eb5e971359941e3b4923ced9}{agb\+Print\+Is\+Enabled}} ()
+\item 
+void \mbox{\hyperlink{agbprint_8cpp_a30bc95a1d3af8ec0ca1827f1596e11d1}{agb\+Print\+Flush}} ()
+\end{DoxyCompactItemize}
+\subsection*{변수}
+\begin{DoxyCompactItemize}
+\item 
+void($\ast$ \mbox{\hyperlink{agbprint_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}{dbg\+Output}} )(char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})
+\end{DoxyCompactItemize}
+
+
+\subsection{매크로 문서화}
+\mbox{\Hypertarget{agbprint_8cpp_a281a97839aa95f0adff14c15435f6f0a}\label{agbprint_8cpp_a281a97839aa95f0adff14c15435f6f0a}} 
+\index{agbprint.\+cpp@{agbprint.\+cpp}!debugger\+Read\+Half\+Word@{debugger\+Read\+Half\+Word}}
+\index{debugger\+Read\+Half\+Word@{debugger\+Read\+Half\+Word}!agbprint.\+cpp@{agbprint.\+cpp}}
+\subsubsection{\texorpdfstring{debugger\+Read\+Half\+Word}{debuggerReadHalfWord}}
+{\footnotesize\ttfamily \#define debugger\+Read\+Half\+Word(\begin{DoxyParamCaption}\item[{}]{addr }\end{DoxyParamCaption})~\mbox{\hyperlink{_port_8h_aab2636d96a4fed5ce311260a2f48ca73}{R\+E\+A\+D16\+LE}}(((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}$\ast$)\&\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}))}
+
+
+
+agbprint.\+cpp 파일의 29 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{agbprint_8cpp_a6b501425ef6fce9991300120cad5cd05}\label{agbprint_8cpp_a6b501425ef6fce9991300120cad5cd05}} 
+\index{agbprint.\+cpp@{agbprint.\+cpp}!debugger\+Write\+Half\+Word@{debugger\+Write\+Half\+Word}}
+\index{debugger\+Write\+Half\+Word@{debugger\+Write\+Half\+Word}!agbprint.\+cpp@{agbprint.\+cpp}}
+\subsubsection{\texorpdfstring{debugger\+Write\+Half\+Word}{debuggerWriteHalfWord}}
+{\footnotesize\ttfamily \#define debugger\+Write\+Half\+Word(\begin{DoxyParamCaption}\item[{}]{addr,  }\item[{}]{value }\end{DoxyParamCaption})~\mbox{\hyperlink{_port_8h_a5e56b49582414acf2f482a5626fc0a6b}{W\+R\+I\+T\+E16\+LE}}((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}$\ast$)\&\mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.address\mbox{[}(addr) \& \mbox{\hyperlink{_globals_8cpp_a8f045afda0522976790238b6118e4efe}{map}}\mbox{[}(addr)$>$$>$24\mbox{]}.mask\mbox{]}, (value))}
+
+
+
+agbprint.\+cpp 파일의 26 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{agbprint_8cpp_a2c1eb14a0b2362011cc1aac05a1e5902}\label{agbprint_8cpp_a2c1eb14a0b2362011cc1aac05a1e5902}} 
+\index{agbprint.\+cpp@{agbprint.\+cpp}!agb\+Print\+Enable@{agb\+Print\+Enable}}
+\index{agb\+Print\+Enable@{agb\+Print\+Enable}!agbprint.\+cpp@{agbprint.\+cpp}}
+\subsubsection{\texorpdfstring{agb\+Print\+Enable()}{agbPrintEnable()}}
+{\footnotesize\ttfamily void agb\+Print\+Enable (\begin{DoxyParamCaption}\item[{bool}]{enable }\end{DoxyParamCaption})}
+
+
+
+agbprint.\+cpp 파일의 60 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+61 \{
+62   agbPrintEnabled = enable;
+63 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{agbprint_8cpp_a2c1eb14a0b2362011cc1aac05a1e5902_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{agbprint_8cpp_a30bc95a1d3af8ec0ca1827f1596e11d1}\label{agbprint_8cpp_a30bc95a1d3af8ec0ca1827f1596e11d1}} 
+\index{agbprint.\+cpp@{agbprint.\+cpp}!agb\+Print\+Flush@{agb\+Print\+Flush}}
+\index{agb\+Print\+Flush@{agb\+Print\+Flush}!agbprint.\+cpp@{agbprint.\+cpp}}
+\subsubsection{\texorpdfstring{agb\+Print\+Flush()}{agbPrintFlush()}}
+{\footnotesize\ttfamily void agb\+Print\+Flush (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+agbprint.\+cpp 파일의 72 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+73 \{
+74   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \textcolor{keyword}{get} = \mbox{\hyperlink{agbprint_8cpp_a281a97839aa95f0adff14c15435f6f0a}{debuggerReadHalfWord}}(0x9fe20fc);
+75   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} put = \mbox{\hyperlink{agbprint_8cpp_a281a97839aa95f0adff14c15435f6f0a}{debuggerReadHalfWord}}(0x9fe20fe);
+76 
+77   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} address = (\mbox{\hyperlink{agbprint_8cpp_a281a97839aa95f0adff14c15435f6f0a}{debuggerReadHalfWord}}(0x9fe20fa) << 16);
+78   \textcolor{keywordflow}{if}(address != 0xfd0000 && address != 0x1fd0000) \{
+79     \mbox{\hyperlink{agbprint_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}{dbgOutput}}(\textcolor{stringliteral}{"Did you forget to call AGBPrintInit?\(\backslash\)n"}, 0);
+80     \textcolor{comment}{// get rid of the text otherwise we will continue to be called}
+81     \mbox{\hyperlink{agbprint_8cpp_a6b501425ef6fce9991300120cad5cd05}{debuggerWriteHalfWord}}(0x9fe20fc, put);    
+82     \textcolor{keywordflow}{return};
+83   \}
+84 
+85   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *data = &\mbox{\hyperlink{_globals_8cpp_adafc6ed627110c42f3893c9783f55320}{rom}}[address];
+86 
+87   \textcolor{keywordflow}{while}(\textcolor{keyword}{get} != put) \{
+88     \textcolor{keywordtype}{char} c = data[\textcolor{keyword}{get}++];
+89     \textcolor{keywordtype}{char} s[2];
+90     s[0] = c;
+91     s[1] = 0;
+92 
+93     \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_a67739df6b2271a8b807f01c50a610478}{systemVerbose}} & \mbox{\hyperlink{_globals_8h_a51aa710f5c08ced760cf3b3024a0604c}{VERBOSE\_AGBPRINT}})
+94       \mbox{\hyperlink{agbprint_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}{dbgOutput}}(s, 0);
+95     \textcolor{keywordflow}{if}(c == \textcolor{charliteral}{'\(\backslash\)n'})
+96       \textcolor{keywordflow}{break};
+97   \}
+98   \mbox{\hyperlink{agbprint_8cpp_a6b501425ef6fce9991300120cad5cd05}{debuggerWriteHalfWord}}(0x9fe20fc, \textcolor{keyword}{get});
+99 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=303pt]{agbprint_8cpp_a30bc95a1d3af8ec0ca1827f1596e11d1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{agbprint_8cpp_ab6b9c9b8eb5e971359941e3b4923ced9}\label{agbprint_8cpp_ab6b9c9b8eb5e971359941e3b4923ced9}} 
+\index{agbprint.\+cpp@{agbprint.\+cpp}!agb\+Print\+Is\+Enabled@{agb\+Print\+Is\+Enabled}}
+\index{agb\+Print\+Is\+Enabled@{agb\+Print\+Is\+Enabled}!agbprint.\+cpp@{agbprint.\+cpp}}
+\subsubsection{\texorpdfstring{agb\+Print\+Is\+Enabled()}{agbPrintIsEnabled()}}
+{\footnotesize\ttfamily bool agb\+Print\+Is\+Enabled (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+agbprint.\+cpp 파일의 65 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+66 \{
+67   \textcolor{keywordflow}{return} agbPrintEnabled;
+68 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{agbprint_8cpp_ab6b9c9b8eb5e971359941e3b4923ced9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{agbprint_8cpp_a98f38726b41f07801ef266307d43cd03}\label{agbprint_8cpp_a98f38726b41f07801ef266307d43cd03}} 
+\index{agbprint.\+cpp@{agbprint.\+cpp}!agb\+Print\+Reset@{agb\+Print\+Reset}}
+\index{agb\+Print\+Reset@{agb\+Print\+Reset}!agbprint.\+cpp@{agbprint.\+cpp}}
+\subsubsection{\texorpdfstring{agb\+Print\+Reset()}{agbPrintReset()}}
+{\footnotesize\ttfamily void agb\+Print\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+agbprint.\+cpp 파일의 55 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+56 \{
+57   agbPrintProtect = \textcolor{keyword}{false};
+58 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{agbprint_8cpp_a4cb1dd551784015b29935a6c3562b379}\label{agbprint_8cpp_a4cb1dd551784015b29935a6c3562b379}} 
+\index{agbprint.\+cpp@{agbprint.\+cpp}!agb\+Print\+Write@{agb\+Print\+Write}}
+\index{agb\+Print\+Write@{agb\+Print\+Write}!agbprint.\+cpp@{agbprint.\+cpp}}
+\subsubsection{\texorpdfstring{agb\+Print\+Write()}{agbPrintWrite()}}
+{\footnotesize\ttfamily bool agb\+Print\+Write (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{address,  }\item[{\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{value }\end{DoxyParamCaption})}
+
+
+
+agbprint.\+cpp 파일의 35 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+36 \{
+37   \textcolor{keywordflow}{if}(agbPrintEnabled) \{
+38     \textcolor{keywordflow}{if}(address == 0x9fe2ffe) \{ \textcolor{comment}{// protect}
+39       agbPrintProtect = (value != 0);
+40       \mbox{\hyperlink{agbprint_8cpp_a6b501425ef6fce9991300120cad5cd05}{debuggerWriteHalfWord}}(address, value);
+41       \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+42     \} \textcolor{keywordflow}{else} \{
+43       \textcolor{keywordflow}{if}(agbPrintProtect &&
+44          ((address >= 0x9fe20f8 && address <= 0x9fe20ff) \textcolor{comment}{// control structure}
+45           || (address >= 0x8fd0000 && address <= 0x8fdffff)
+46           || (address >= 0x9fd0000 && address <= 0x9fdffff))) \{
+47         \mbox{\hyperlink{agbprint_8cpp_a6b501425ef6fce9991300120cad5cd05}{debuggerWriteHalfWord}}(address, value);
+48         \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+49       \}
+50     \}
+51   \}
+52   \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+53 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{agbprint_8cpp_a4cb1dd551784015b29935a6c3562b379_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{변수 문서화}
+\mbox{\Hypertarget{agbprint_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}\label{agbprint_8cpp_ae5aca87b107fd7cb9c29c6489cf438ac}} 
+\index{agbprint.\+cpp@{agbprint.\+cpp}!dbg\+Output@{dbg\+Output}}
+\index{dbg\+Output@{dbg\+Output}!agbprint.\+cpp@{agbprint.\+cpp}}
+\subsubsection{\texorpdfstring{dbg\+Output}{dbgOutput}}
+{\footnotesize\ttfamily void($\ast$ dbg\+Output) (char $\ast$, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}})}
+
+
+
+system.\+cpp 파일의 347 번째 라인에서 정의되었습니다.
+

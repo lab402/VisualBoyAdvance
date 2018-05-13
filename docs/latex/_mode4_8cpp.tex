@@ -1,0 +1,466 @@
+\hypertarget{_mode4_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Mode4.cpp 파일 참조}
+\label{_mode4_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Mode4.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\+Mode4.\+cpp}}
+{\ttfamily \#include \char`\"{}G\+B\+A.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Gfx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Globals.\+h\char`\"{}}\newline
+Mode4.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mode4_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_mode4_8cpp_a1ea47c5a57b719b44508e59291c45290}{mode4\+Render\+Line}} ()
+\item 
+void \mbox{\hyperlink{_mode4_8cpp_a1d79555aaf25d6617c94be669f409799}{mode4\+Render\+Line\+No\+Window}} ()
+\item 
+void \mbox{\hyperlink{_mode4_8cpp_a04aa19b9c173d420b2f00072b4204249}{mode4\+Render\+Line\+All}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{_mode4_8cpp_a1ea47c5a57b719b44508e59291c45290}\label{_mode4_8cpp_a1ea47c5a57b719b44508e59291c45290}} 
+\index{Mode4.\+cpp@{Mode4.\+cpp}!mode4\+Render\+Line@{mode4\+Render\+Line}}
+\index{mode4\+Render\+Line@{mode4\+Render\+Line}!Mode4.\+cpp@{Mode4.\+cpp}}
+\subsubsection{\texorpdfstring{mode4\+Render\+Line()}{mode4RenderLine()}}
+{\footnotesize\ttfamily void mode4\+Render\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mode4.\+cpp 파일의 23 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+24 \{
+25   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *palette = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)\mbox{\hyperlink{_globals_8cpp_aea0283719ad27328f3cf5f883f58813e}{paletteRAM}};
+26 
+27   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a843ca20ea4281609edb7d32392e31de8}{DISPCNT}} & 0x0080) \{
+28     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 240; x++) \{
+29       \mbox{\hyperlink{_gfx_8cpp_a9c62070b0fb6224a1fa9bf94b9599710}{lineMix}}[x] = 0x7fff;
+30     \}
+31     \mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} = \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}};    
+32     \textcolor{keywordflow}{return};
+33   \}
+34 
+35   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_ae500546b58e29b2979143341072dfe7b}{layerEnable}} & 0x400) \{
+36     \textcolor{keywordtype}{int} changed = \mbox{\hyperlink{_gfx_8cpp_acd4ebedfc225fc59f14f04bfcfd88b2f}{gfxBG2Changed}};
+37 
+38     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} > \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}})
+39       changed = 3;
+40     
+41     gfxDrawRotScreen256(\mbox{\hyperlink{_globals_8cpp_ad0659703e38445ba2d4959ffe4eb6e5b}{BG2CNT}}, \mbox{\hyperlink{_globals_8cpp_a3430b08164c50d5bebb9bad4d9c850e4}{BG2X\_L}}, \mbox{\hyperlink{_globals_8cpp_a499b313af1e4390f0f42b3626daceee3}{BG2X\_H}}, \mbox{\hyperlink{_globals_8cpp_ae9213b72a93fab65593511949f01563f}{BG2Y\_L}}, 
+      \mbox{\hyperlink{_globals_8cpp_aef22925b8185832dab00fdb2d0042666}{BG2Y\_H}},
+42                         \mbox{\hyperlink{_globals_8cpp_ad343c450edf62293e1a72dcaf41cbf19}{BG2PA}}, \mbox{\hyperlink{_globals_8cpp_a58dace3625d7cabdb10904dd1845a7fe}{BG2PB}}, \mbox{\hyperlink{_globals_8cpp_ae3364b120544a071a18c85858b947d41}{BG2PC}}, \mbox{\hyperlink{_globals_8cpp_a24cbc13303cf88bda87a2b97d3c24a2c}{BG2PD}},
+43                         \mbox{\hyperlink{_gfx_8cpp_aff4bb9b41b0123fc18bb198df3985784}{gfxBG2X}}, \mbox{\hyperlink{_gfx_8cpp_ae5e109078eed074f79492b0c04e138dd}{gfxBG2Y}}, changed,
+44                         \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}});
+45   \}
+46 
+47   gfxDrawSprites(\mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}});
+48 
+49   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} backdrop = (\mbox{\hyperlink{_port_8h_aab2636d96a4fed5ce311260a2f48ca73}{READ16LE}}(&palette[0]) | 0x30000000);
+50   
+51   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 240; x++) \{
+52     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} color = backdrop;
+53     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top = 0x20;
+54 
+55     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < color) \{
+56       color = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+57       top = 0x04;
+58     \}
+59 
+60     \textcolor{keywordflow}{if}((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(\mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x]>>24) < (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(color >> 24)) \{
+61       color = \mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x];
+62       top = 0x10;
+63     \}
+64 
+65     \textcolor{keywordflow}{if}((top & 0x10) && (color & 0x00010000)) \{
+66       \textcolor{comment}{// semi-transparent OBJ}
+67       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} back = backdrop;
+68       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top2 = 0x20;
+69       
+70       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < back) \{
+71         back = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+72         top2 = 0x04;
+73       \}
+74       
+75       \textcolor{keywordflow}{if}(top2 & (\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}}>>8))
+76         color = gfxAlphaBlend(color, back,
+77                               \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} & 0x1F],
+78                               \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[(\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} >> 8) & 0x1F]);
+79       \textcolor{keywordflow}{else} \{
+80         \textcolor{keywordflow}{switch}((\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} >> 6) & 3) \{
+81         \textcolor{keywordflow}{case} 2:
+82           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+83             color = gfxIncreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+84           \textcolor{keywordflow}{break};
+85         \textcolor{keywordflow}{case} 3:
+86           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+87             color = gfxDecreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+88           \textcolor{keywordflow}{break};
+89         \}         
+90       \}      
+91     \}
+92     
+93     \mbox{\hyperlink{_gfx_8cpp_a9c62070b0fb6224a1fa9bf94b9599710}{lineMix}}[x] = color;
+94   \}
+95   \mbox{\hyperlink{_gfx_8cpp_acd4ebedfc225fc59f14f04bfcfd88b2f}{gfxBG2Changed}} = 0;
+96   \mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} = \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}};  
+97 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mode4_8cpp_a1ea47c5a57b719b44508e59291c45290_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_mode4_8cpp_a04aa19b9c173d420b2f00072b4204249}\label{_mode4_8cpp_a04aa19b9c173d420b2f00072b4204249}} 
+\index{Mode4.\+cpp@{Mode4.\+cpp}!mode4\+Render\+Line\+All@{mode4\+Render\+Line\+All}}
+\index{mode4\+Render\+Line\+All@{mode4\+Render\+Line\+All}!Mode4.\+cpp@{Mode4.\+cpp}}
+\subsubsection{\texorpdfstring{mode4\+Render\+Line\+All()}{mode4RenderLineAll()}}
+{\footnotesize\ttfamily void mode4\+Render\+Line\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mode4.\+cpp 파일의 216 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+217 \{
+218   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *palette = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)\mbox{\hyperlink{_globals_8cpp_aea0283719ad27328f3cf5f883f58813e}{paletteRAM}};
+219 
+220   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a843ca20ea4281609edb7d32392e31de8}{DISPCNT}} & 0x0080) \{
+221     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 240; x++) \{
+222       \mbox{\hyperlink{_gfx_8cpp_a9c62070b0fb6224a1fa9bf94b9599710}{lineMix}}[x] = 0x7fff;
+223     \}
+224     \mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} = \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}};        
+225     \textcolor{keywordflow}{return};
+226   \}
+227 
+228   \textcolor{keywordtype}{bool} inWindow0 = \textcolor{keyword}{false};
+229   \textcolor{keywordtype}{bool} inWindow1 = \textcolor{keyword}{false};
+230 
+231   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_ae500546b58e29b2979143341072dfe7b}{layerEnable}} & 0x2000) \{
+232     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} v0 = \mbox{\hyperlink{_globals_8cpp_a811537eb7281cf2c0f27324d746c0125}{WIN0V}} >> 8;
+233     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} v1 = \mbox{\hyperlink{_globals_8cpp_a811537eb7281cf2c0f27324d746c0125}{WIN0V}} & 255;
+234     inWindow0 = ((v0 == v1) && (v0 >= 0xe8));
+235     \textcolor{keywordflow}{if}(v1 >= v0)
+236       inWindow0 |= (\mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}} >= v0 && \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}} < v1);
+237     \textcolor{keywordflow}{else}
+238       inWindow0 |= (\mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}} >= v0 || \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}} < v1);
+239   \}
+240   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_ae500546b58e29b2979143341072dfe7b}{layerEnable}} & 0x4000) \{
+241     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} v0 = \mbox{\hyperlink{_globals_8cpp_a496963fc77b9bdf4e16bd7d61cd487d3}{WIN1V}} >> 8;
+242     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} v1 = \mbox{\hyperlink{_globals_8cpp_a496963fc77b9bdf4e16bd7d61cd487d3}{WIN1V}} & 255;
+243     inWindow1 = ((v0 == v1) && (v0 >= 0xe8));    
+244     \textcolor{keywordflow}{if}(v1 >= v0)
+245       inWindow1 |= (\mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}} >= v0 && \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}} < v1);
+246     \textcolor{keywordflow}{else}
+247       inWindow1 |= (\mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}} >= v0 || \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}} < v1);
+248   \}
+249   
+250   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_ae500546b58e29b2979143341072dfe7b}{layerEnable}} & 0x400) \{
+251     \textcolor{keywordtype}{int} changed = \mbox{\hyperlink{_gfx_8cpp_acd4ebedfc225fc59f14f04bfcfd88b2f}{gfxBG2Changed}};
+252 
+253     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} > \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}})
+254       changed = 3;
+255     
+256     gfxDrawRotScreen256(\mbox{\hyperlink{_globals_8cpp_ad0659703e38445ba2d4959ffe4eb6e5b}{BG2CNT}}, \mbox{\hyperlink{_globals_8cpp_a3430b08164c50d5bebb9bad4d9c850e4}{BG2X\_L}}, \mbox{\hyperlink{_globals_8cpp_a499b313af1e4390f0f42b3626daceee3}{BG2X\_H}}, \mbox{\hyperlink{_globals_8cpp_ae9213b72a93fab65593511949f01563f}{BG2Y\_L}}, 
+      \mbox{\hyperlink{_globals_8cpp_aef22925b8185832dab00fdb2d0042666}{BG2Y\_H}},
+257                         \mbox{\hyperlink{_globals_8cpp_ad343c450edf62293e1a72dcaf41cbf19}{BG2PA}}, \mbox{\hyperlink{_globals_8cpp_a58dace3625d7cabdb10904dd1845a7fe}{BG2PB}}, \mbox{\hyperlink{_globals_8cpp_ae3364b120544a071a18c85858b947d41}{BG2PC}}, \mbox{\hyperlink{_globals_8cpp_a24cbc13303cf88bda87a2b97d3c24a2c}{BG2PD}},
+258                         \mbox{\hyperlink{_gfx_8cpp_aff4bb9b41b0123fc18bb198df3985784}{gfxBG2X}}, \mbox{\hyperlink{_gfx_8cpp_ae5e109078eed074f79492b0c04e138dd}{gfxBG2Y}}, changed,
+259                         \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}});
+260   \}
+261 
+262   gfxDrawSprites(\mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}});
+263   gfxDrawOBJWin(\mbox{\hyperlink{_gfx_8cpp_a5d0bce77dd98cfe3fb1e970838f239c8}{lineOBJWin}});  
+264 
+265   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} backdrop = (\mbox{\hyperlink{_port_8h_aab2636d96a4fed5ce311260a2f48ca73}{READ16LE}}(&palette[0]) | 0x30000000);
+266 
+267   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} inWin0Mask = \mbox{\hyperlink{_globals_8cpp_a067d4e40ceb64522f7f0be03bffd95f5}{WININ}} & 0xFF;
+268   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} inWin1Mask = \mbox{\hyperlink{_globals_8cpp_a067d4e40ceb64522f7f0be03bffd95f5}{WININ}} >> 8;
+269   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} outMask = \mbox{\hyperlink{_globals_8cpp_a5a20769b9a8a702996574ea72d856c4c}{WINOUT}} & 0xFF;
+270   
+271   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 240; x++) \{
+272     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} color = backdrop;
+273     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top = 0x20;
+274     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} mask = outMask;    
+275 
+276     \textcolor{keywordflow}{if}(!(\mbox{\hyperlink{_gfx_8cpp_a5d0bce77dd98cfe3fb1e970838f239c8}{lineOBJWin}}[x] & 0x80000000)) \{
+277       mask = \mbox{\hyperlink{_globals_8cpp_a5a20769b9a8a702996574ea72d856c4c}{WINOUT}} >> 8;
+278     \}
+279 
+280     \textcolor{keywordflow}{if}(inWindow1) \{
+281       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_gfx_8cpp_a1f12ad682615d06093160342a023f68d}{gfxInWin1}}[x])
+282         mask = inWin1Mask;
+283     \}
+284 
+285     \textcolor{keywordflow}{if}(inWindow0) \{
+286       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_gfx_8cpp_a9774eaf959a3173d8fd9751dbf7f34de}{gfxInWin0}}[x]) \{
+287         mask = inWin0Mask;
+288       \}
+289     \}
+290     
+291     \textcolor{keywordflow}{if}((mask & 4) && (\mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < color)) \{
+292       color = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+293       top = 0x04;
+294     \}
+295 
+296     \textcolor{keywordflow}{if}((mask & 16) && ((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(\mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x]>>24) < (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(color >>24))) \{
+297       color = \mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x];
+298       top = 0x10;
+299     \}
+300 
+301     \textcolor{keywordflow}{if}(mask & 32) \{
+302       \textcolor{keywordflow}{if}(!(color & 0x00010000)) \{
+303         \textcolor{keywordflow}{switch}((\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} >> 6) & 3) \{
+304         \textcolor{keywordflow}{case} 0:
+305           \textcolor{keywordflow}{break};
+306         \textcolor{keywordflow}{case} 1:
+307           \{
+308             \textcolor{keywordflow}{if}(top & \mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}}) \{
+309               \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} back = backdrop;
+310               \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top2 = 0x20;
+311               
+312               \textcolor{keywordflow}{if}((mask & 4) && \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < back) \{
+313                 \textcolor{keywordflow}{if}(top != 0x04) \{
+314                   back = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+315                   top2 = 0x04;
+316                 \}
+317               \}
+318               
+319               \textcolor{keywordflow}{if}((mask & 16) && (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(\mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x]>>24) < (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(back >> 24)) \{
+320                 \textcolor{keywordflow}{if}(top != 0x10) \{
+321                   back = \mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x];
+322                   top2 = 0x10;
+323                 \}
+324               \}
+325               
+326               \textcolor{keywordflow}{if}(top2 & (\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}}>>8))
+327                 color = gfxAlphaBlend(color, back,
+328                                       \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} & 0x1F],
+329                                       \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[(\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} >> 8) & 0x1F]);
+330               
+331             \}
+332           \}
+333           \textcolor{keywordflow}{break};
+334         \textcolor{keywordflow}{case} 2:
+335           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+336             color = gfxIncreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+337           \textcolor{keywordflow}{break};
+338         \textcolor{keywordflow}{case} 3:
+339           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+340             color = gfxDecreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+341           \textcolor{keywordflow}{break};
+342         \}
+343       \} \textcolor{keywordflow}{else} \{
+344         \textcolor{comment}{// semi-transparent OBJ}
+345         \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} back = backdrop;
+346         \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top2 = 0x20;
+347         
+348         \textcolor{keywordflow}{if}((mask & 4) && \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < back) \{
+349           back = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+350           top2 = 0x04;
+351         \}
+352         
+353         \textcolor{keywordflow}{if}(top2 & (\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}}>>8))
+354           color = gfxAlphaBlend(color, back,
+355                                 \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} & 0x1F],
+356                                 \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[(\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} >> 8) & 0x1F]);
+357         \textcolor{keywordflow}{else} \{
+358           \textcolor{keywordflow}{switch}((\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} >> 6) & 3) \{
+359           \textcolor{keywordflow}{case} 2:
+360             \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+361               color = gfxIncreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+362             \textcolor{keywordflow}{break};
+363           \textcolor{keywordflow}{case} 3:
+364             \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+365               color = gfxDecreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+366             \textcolor{keywordflow}{break};
+367           \}       
+368         \}       
+369       \}
+370     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(color & 0x00010000) \{
+371       \textcolor{comment}{// semi-transparent OBJ}
+372       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} back = backdrop;
+373       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top2 = 0x20;
+374       
+375       \textcolor{keywordflow}{if}((mask & 4) && \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < back) \{
+376         back = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+377         top2 = 0x04;
+378       \}
+379       
+380       \textcolor{keywordflow}{if}(top2 & (\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}}>>8))
+381         color = gfxAlphaBlend(color, back,
+382                               \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} & 0x1F],
+383                               \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[(\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} >> 8) & 0x1F]);
+384       \textcolor{keywordflow}{else} \{
+385         \textcolor{keywordflow}{switch}((\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} >> 6) & 3) \{
+386         \textcolor{keywordflow}{case} 2:
+387           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+388             color = gfxIncreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+389           \textcolor{keywordflow}{break};
+390         \textcolor{keywordflow}{case} 3:
+391           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+392             color = gfxDecreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+393           \textcolor{keywordflow}{break};
+394         \}         
+395       \} 
+396     \}
+397     
+398     \mbox{\hyperlink{_gfx_8cpp_a9c62070b0fb6224a1fa9bf94b9599710}{lineMix}}[x] = color;
+399   \}
+400   \mbox{\hyperlink{_gfx_8cpp_acd4ebedfc225fc59f14f04bfcfd88b2f}{gfxBG2Changed}} = 0;
+401   \mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} = \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}};  
+402 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mode4_8cpp_a04aa19b9c173d420b2f00072b4204249_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_mode4_8cpp_a1d79555aaf25d6617c94be669f409799}\label{_mode4_8cpp_a1d79555aaf25d6617c94be669f409799}} 
+\index{Mode4.\+cpp@{Mode4.\+cpp}!mode4\+Render\+Line\+No\+Window@{mode4\+Render\+Line\+No\+Window}}
+\index{mode4\+Render\+Line\+No\+Window@{mode4\+Render\+Line\+No\+Window}!Mode4.\+cpp@{Mode4.\+cpp}}
+\subsubsection{\texorpdfstring{mode4\+Render\+Line\+No\+Window()}{mode4RenderLineNoWindow()}}
+{\footnotesize\ttfamily void mode4\+Render\+Line\+No\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mode4.\+cpp 파일의 99 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+100 \{
+101   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *palette = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)\mbox{\hyperlink{_globals_8cpp_aea0283719ad27328f3cf5f883f58813e}{paletteRAM}};
+102 
+103   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a843ca20ea4281609edb7d32392e31de8}{DISPCNT}} & 0x0080) \{
+104     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 240; x++) \{
+105       \mbox{\hyperlink{_gfx_8cpp_a9c62070b0fb6224a1fa9bf94b9599710}{lineMix}}[x] = 0x7fff;
+106     \}
+107     \mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} = \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}};        
+108     \textcolor{keywordflow}{return};
+109   \}
+110 
+111   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_ae500546b58e29b2979143341072dfe7b}{layerEnable}} & 0x400) \{
+112     \textcolor{keywordtype}{int} changed = \mbox{\hyperlink{_gfx_8cpp_acd4ebedfc225fc59f14f04bfcfd88b2f}{gfxBG2Changed}};
+113 
+114     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} > \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}})
+115       changed = 3;
+116     
+117     gfxDrawRotScreen256(\mbox{\hyperlink{_globals_8cpp_ad0659703e38445ba2d4959ffe4eb6e5b}{BG2CNT}}, \mbox{\hyperlink{_globals_8cpp_a3430b08164c50d5bebb9bad4d9c850e4}{BG2X\_L}}, \mbox{\hyperlink{_globals_8cpp_a499b313af1e4390f0f42b3626daceee3}{BG2X\_H}}, \mbox{\hyperlink{_globals_8cpp_ae9213b72a93fab65593511949f01563f}{BG2Y\_L}}, 
+      \mbox{\hyperlink{_globals_8cpp_aef22925b8185832dab00fdb2d0042666}{BG2Y\_H}},
+118                         \mbox{\hyperlink{_globals_8cpp_ad343c450edf62293e1a72dcaf41cbf19}{BG2PA}}, \mbox{\hyperlink{_globals_8cpp_a58dace3625d7cabdb10904dd1845a7fe}{BG2PB}}, \mbox{\hyperlink{_globals_8cpp_ae3364b120544a071a18c85858b947d41}{BG2PC}}, \mbox{\hyperlink{_globals_8cpp_a24cbc13303cf88bda87a2b97d3c24a2c}{BG2PD}},
+119                         \mbox{\hyperlink{_gfx_8cpp_aff4bb9b41b0123fc18bb198df3985784}{gfxBG2X}}, \mbox{\hyperlink{_gfx_8cpp_ae5e109078eed074f79492b0c04e138dd}{gfxBG2Y}}, changed,
+120                         \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}});
+121   \}
+122 
+123   gfxDrawSprites(\mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}});
+124 
+125   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} backdrop = (\mbox{\hyperlink{_port_8h_aab2636d96a4fed5ce311260a2f48ca73}{READ16LE}}(&palette[0]) | 0x30000000);
+126   
+127   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 240; x++) \{
+128     \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} color = backdrop;
+129     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top = 0x20;
+130 
+131     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < color) \{
+132       color = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+133       top = 0x04;
+134     \}
+135 
+136     \textcolor{keywordflow}{if}((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(\mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x]>>24) < (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(color >> 24)) \{
+137       color = \mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x];
+138       top = 0x10;
+139     \}
+140 
+141     \textcolor{keywordflow}{if}(!(color & 0x00010000)) \{
+142       \textcolor{keywordflow}{switch}((\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} >> 6) & 3) \{
+143       \textcolor{keywordflow}{case} 0:
+144         \textcolor{keywordflow}{break};
+145       \textcolor{keywordflow}{case} 1:
+146         \{
+147           \textcolor{keywordflow}{if}(top & \mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}}) \{
+148             \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} back = backdrop;
+149             \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top2 = 0x20;
+150             
+151             \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < back) \{
+152               \textcolor{keywordflow}{if}(top != 0x04) \{
+153                 back = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+154                 top2 = 0x04;
+155               \}
+156             \}
+157             
+158             \textcolor{keywordflow}{if}((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(\mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x]>>24) < (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}})(back >> 24)) \{
+159               \textcolor{keywordflow}{if}(top != 0x10) \{
+160                 back = \mbox{\hyperlink{_gfx_8cpp_ad61abf95cf6ca3ac01e9c1ed5d1ce9c6}{lineOBJ}}[x];
+161                 top2 = 0x10;
+162               \}
+163             \}
+164             
+165             \textcolor{keywordflow}{if}(top2 & (\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}}>>8))
+166               color = gfxAlphaBlend(color, back,
+167                                     \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} & 0x1F],
+168                                     \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[(\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} >> 8) & 0x1F]);
+169             
+170           \}
+171         \}
+172         \textcolor{keywordflow}{break};
+173       \textcolor{keywordflow}{case} 2:
+174         \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+175           color = gfxIncreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+176         \textcolor{keywordflow}{break};
+177       \textcolor{keywordflow}{case} 3:
+178         \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+179           color = gfxDecreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+180         \textcolor{keywordflow}{break};
+181       \}
+182     \} \textcolor{keywordflow}{else} \{
+183       \textcolor{comment}{// semi-transparent OBJ}
+184       \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} back = backdrop;
+185       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} top2 = 0x20;
+186       
+187       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x] < back) \{
+188         back = \mbox{\hyperlink{_g_b_a_8cpp_a046a0f8f07d8cb733584b4c777cfc441}{line2}}[x];
+189         top2 = 0x04;
+190       \}
+191 
+192       \textcolor{keywordflow}{if}(top2 & (\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}}>>8))
+193         color = gfxAlphaBlend(color, back,
+194                               \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} & 0x1F],
+195                               \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[(\mbox{\hyperlink{_globals_8cpp_a25c25a51dca1ffae5ed13f71a8cb5a48}{COLEV}} >> 8) & 0x1F]);
+196       \textcolor{keywordflow}{else} \{
+197         \textcolor{keywordflow}{switch}((\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} >> 6) & 3) \{
+198         \textcolor{keywordflow}{case} 2:
+199           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+200             color = gfxIncreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+201           \textcolor{keywordflow}{break};
+202         \textcolor{keywordflow}{case} 3:
+203           \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a63cf7e5e18e292af2b13717905094cab}{BLDMOD}} & top)
+204             color = gfxDecreaseBrightness(color, \mbox{\hyperlink{_gfx_8cpp_ad73573cf73499a28db092acb084a0632}{coeff}}[\mbox{\hyperlink{_globals_8cpp_a3e6f05abbaa1609a46c9b87bf77b67b3}{COLY}} & 0x1F]);
+205           \textcolor{keywordflow}{break};
+206         \}         
+207       \}
+208     \}
+209     
+210     \mbox{\hyperlink{_gfx_8cpp_a9c62070b0fb6224a1fa9bf94b9599710}{lineMix}}[x] = color;
+211   \}
+212   \mbox{\hyperlink{_gfx_8cpp_acd4ebedfc225fc59f14f04bfcfd88b2f}{gfxBG2Changed}} = 0;
+213   \mbox{\hyperlink{_gfx_8cpp_acf998f793cce146d2d46e22aa08892af}{gfxLastVCOUNT}} = \mbox{\hyperlink{_globals_8cpp_a615fafd40925e6ffafb0bd4319b109bf}{VCOUNT}};  
+214 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_mode4_8cpp_a1d79555aaf25d6617c94be669f409799_icgraph}
+\end{center}
+\end{figure}

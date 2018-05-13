@@ -1,0 +1,4 @@
+<map id="PaletteView::save" name="PaletteView::save">
+<area shape="rect" id="node2" href="$class_palette_view.html#a4e11f19e5535efcd1b34d38899f18482" title="PaletteView::OnSaveBg" alt="" coords="181,5,341,32"/>
+<area shape="rect" id="node3" href="$class_palette_view.html#a1a09199a2ab1045bbbcef736d05296c1" title="PaletteView::OnSaveObj" alt="" coords="179,56,343,83"/>
+</map>

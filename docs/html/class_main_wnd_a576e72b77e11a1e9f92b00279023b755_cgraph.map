@@ -1,0 +1,22 @@
+<map id="MainWnd::OnCheatsLoadcheatlist" name="MainWnd::OnCheatsLoadcheatlist">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="280,5,453,32"/>
+<area shape="rect" id="node4" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="295,56,438,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="281,107,452,133"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a3ee1d2026d24932c2ca0985c04fc8dd5" title="MainWnd::isDriveRoot" alt="" coords="291,157,442,184"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a7adc4aa2a10246fa13637e9d0870843d" title="MainWnd::winLoadFilter" alt="" coords="286,208,447,235"/>
+<area shape="rect" id="node8" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="531,259,658,285"/>
+<area shape="rect" id="node9" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="306,309,427,336"/>
+<area shape="rect" id="node10" href="$class_main_wnd.html#adfe445d042cd87dfa30b07fdcfa7eeff" title="MainWnd::winLoadCheatList" alt="" coords="273,360,460,387"/>
+<area shape="rect" id="node21" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="291,411,443,437"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="508,5,681,32"/>
+<area shape="rect" id="node11" href="$_cheats_8cpp.html#adb19e11317546121ea38ac7f33a2af6f" title="cheatsLoadCheatList" alt="" coords="523,309,667,336"/>
+<area shape="rect" id="node18" href="$gb_cheats_8cpp.html#aa08d2a2e0e2149ffa048dd38c317da3f" title="gbCheatsLoadCheatList" alt="" coords="515,360,675,387"/>
+<area shape="rect" id="node20" href="$system_8cpp.html#a0412545bfaba2004bf7a42d779ea5659" title="systemScreenMessage" alt="" coords="515,411,674,437"/>
+<area shape="rect" id="node12" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="767,360,886,387"/>
+<area shape="rect" id="node13" href="$_cheats_8cpp.html#a8cc39e91aef27c5411605a69eeca9202" title="cheatsCBAParseSeedCode" alt="" coords="735,259,918,285"/>
+<area shape="rect" id="node14" href="$_cheats_8cpp.html#a9126c33a1bfb389b609d1524def3401d" title="cheatsCBAChangeEncryption" alt="" coords="729,309,924,336"/>
+<area shape="rect" id="node15" href="$_cheats_8cpp.html#a44f8cc742892f19c418fd7b22bbba6b9" title="cheatsCBAUpdateSeedBuffer" alt="" coords="972,284,1164,311"/>
+<area shape="rect" id="node17" href="$_cheats_8cpp.html#adf0b2dab664bf4352a56aeaaa5b366f9" title="cheatsCBAEncWorker" alt="" coords="1212,335,1365,361"/>
+<area shape="rect" id="node16" href="$_cheats_8cpp.html#a9aa1810592636fca21b8f860bc3bf694" title="cheatsCBACalcIndex" alt="" coords="1216,284,1361,311"/>
+<area shape="rect" id="node19" href="$gb_cheats_8cpp.html#afec891780bf3cddf17a88b21b8b2587b" title="gbCheatUpdateMap" alt="" coords="759,411,895,437"/>
+</map>

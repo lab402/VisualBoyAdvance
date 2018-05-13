@@ -1,0 +1,9 @@
+<map id="VBA::updateVideoSize" name="VBA::updateVideoSize">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="229,56,427,83"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="208,107,448,133"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="238,157,418,184"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="496,5,785,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="496,56,785,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="496,107,785,133"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="551,157,730,184"/>
+</map>

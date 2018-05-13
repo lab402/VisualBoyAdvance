@@ -1,0 +1,7 @@
+<map id="VBA::Window::vOnJoypadConfigure" name="VBA::Window::vOnJoypadConfigure">
+<area shape="rect" id="node2" href="$class_v_b_a_1_1_joypad_config_dialog.html#a287e47a32aec963efaa309b8f031268b" title="VBA::JoypadConfigDialog\l::vSetConfig" alt="" coords="281,5,452,47"/>
+<area shape="rect" id="node3" href="$class_v_b_a_1_1_joypad_config_dialog.html#a8b45cad0f50bcd7ec3b422d2e535f645" title="VBA::JoypadConfigDialog\l::stGetConfig" alt="" coords="281,71,452,112"/>
+<area shape="rect" id="node4" href="$class_v_b_a_1_1_config_1_1_section.html#ab169d7aae4e9dde91418ba1668e3ad39" title="VBA::Config::Section\l::oGetKey" alt="" coords="294,136,439,177"/>
+<area shape="rect" id="node5" href="$class_v_b_a_1_1_config_1_1_section.html#ac345183b43a45fd3eeaa646eac631390" title="VBA::Config::Section\l::begin" alt="" coords="515,107,660,148"/>
+<area shape="rect" id="node6" href="$class_v_b_a_1_1_config_1_1_section.html#a15ff15ecb9f7f3aa0bb1c218d47f8829" title="VBA::Config::Section::end" alt="" coords="500,173,675,199"/>
+</map>

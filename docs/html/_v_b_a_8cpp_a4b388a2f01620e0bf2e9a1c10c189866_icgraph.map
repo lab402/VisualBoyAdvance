@@ -1,0 +1,6 @@
+<map id="MotionBlurIB" name="MotionBlurIB">
+<area shape="rect" id="node2" href="$class_v_b_a.html#ab1caa25635cd40fc3b49b5d325cc65ef" title="VBA::updateIFB" alt="" coords="149,56,265,83"/>
+<area shape="rect" id="node3" href="$class_direct3_d_display.html#a8b8dfd84005816382396677e23d38879" title="Direct3DDisplay::initialize" alt="" coords="326,5,497,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#ac08824702182bf311a093c5aa39936ef" title="MainWnd::OnOptionsFilterIFB" alt="" coords="313,56,509,83"/>
+<area shape="rect" id="node5" href="$class_open_g_l_display.html#af0db619c7083f43e9bc61f1705843b53" title="OpenGLDisplay::initialize" alt="" coords="327,107,495,133"/>
+</map>

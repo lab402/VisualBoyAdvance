@@ -1,0 +1,4 @@
+<map id="MainWnd::OnOptionsJoypadConfigure4" name="MainWnd::OnOptionsJoypadConfigure4">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="241,13,415,39"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="463,13,636,39"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="MainWnd::OnFileImportBatteryfile" name="MainWnd::OnFileImportBatteryfile">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="271,5,444,32"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a7adc4aa2a10246fa13637e9d0870843d" title="MainWnd::winLoadFilter" alt="" coords="277,56,438,83"/>
+<area shape="rect" id="node5" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="515,81,642,108"/>
+<area shape="rect" id="node6" href="$_reg_8cpp.html#a618826d274df0d9c19fab2ff28bd9008" title="regQueryStringValue" alt="" coords="286,157,429,184"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#a55c4858ec2c3f621790c9c7aec67011e" title="MainWnd::getDirFromFile" alt="" coords="272,208,443,235"/>
+<area shape="rect" id="node8" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="297,259,418,285"/>
+<area shape="rect" id="node9" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="281,309,433,336"/>
+<area shape="rect" id="node10" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="298,360,417,387"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="492,5,665,32"/>
+</map>

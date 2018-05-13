@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structunz__s.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,55 +92,255 @@ $(function() {
 <div class="title">unz_s 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+unz_s에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="structunz__s__coll__graph.png" border="0" usemap="#unz__s_coll__map" alt="Collaboration graph"/></div>
+<map name="unz__s_coll__map" id="unz__s_coll__map">
+<area shape="rect" id="node2" href="structfile__in__zip__read__info__s.html" title="{file_in_zip_read_info_s\n|+ read_buffer\l+ stream\l+ pos_in_zipfile\l+ stream_initialised\l+ offset_local_extrafield\l+ size_local_extrafield\l+ pos_local_extrafield\l+ crc32\l+ crc32_wait\l+ rest_read_compressed\l+ rest_read_uncompressed\l+ file\l+ compression_method\l+ byte_before_the_zipfile\l|}" alt="" coords="5,219,185,487"/>
+<area shape="rect" id="node3" href="structunz__file__info__internal__s.html" title="{unz_file_info_internal_s\n|+ offset_curfile\l|}" alt="" coords="209,314,365,391"/>
+<area shape="rect" id="node4" href="structunz__global__info__s.html" title="{unz_global_info_s\n|+ number_entry\l+ size_comment\l|}" alt="" coords="390,307,515,399"/>
+<area shape="rect" id="node5" href="structunz__file__info__s.html" title="{unz_file_info_s\n|+ version\l+ version_needed\l+ flag\l+ compression_method\l+ dosDate\l+ crc\l+ compressed_size\l+ uncompressed_size\l+ size_filename\l+ size_file_extra\l+ size_file_comment\l+ disk_num_start\l+ internal_fa\l+ external_fa\l|}" alt="" coords="540,219,699,487"/>
+<area shape="rect" id="node6" href="structtm__unz__s.html" title="{tm_unz_s\n|+ tm_sec\l+ tm_min\l+ tm_hour\l+ tm_mday\l+ tm_mon\l+ tm_year\l|}" alt="" coords="575,5,663,156"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:ae3672e9d6fcd9741941ed1ba376f86c7"><td class="memItemLeft" align="right" valign="top"><a id="ae3672e9d6fcd9741941ed1ba376f86c7"></a>
-FILE *&#160;</td><td class="memItemRight" valign="bottom"><b>file</b></td></tr>
+<tr class="memitem:ae3672e9d6fcd9741941ed1ba376f86c7"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#ae3672e9d6fcd9741941ed1ba376f86c7">file</a></td></tr>
 <tr class="separator:ae3672e9d6fcd9741941ed1ba376f86c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a131303f89af11a26b53e99a58d6517cf"><td class="memItemLeft" align="right" valign="top"><a id="a131303f89af11a26b53e99a58d6517cf"></a>
-<a class="el" href="structunz__global__info__s.html">unz_global_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>gi</b></td></tr>
+<tr class="memitem:a131303f89af11a26b53e99a58d6517cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unzip_8h.html#a18c3b238618ea86ef503ecbd4092dbce">unz_global_info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#a131303f89af11a26b53e99a58d6517cf">gi</a></td></tr>
 <tr class="separator:a131303f89af11a26b53e99a58d6517cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a788688a8021cbbba6a2ac1765edd362e"><td class="memItemLeft" align="right" valign="top"><a id="a788688a8021cbbba6a2ac1765edd362e"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>byte_before_the_zipfile</b></td></tr>
+<tr class="memitem:a788688a8021cbbba6a2ac1765edd362e"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#a788688a8021cbbba6a2ac1765edd362e">byte_before_the_zipfile</a></td></tr>
 <tr class="separator:a788688a8021cbbba6a2ac1765edd362e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a737337b347bd5cc52bfabdcfbc11b853"><td class="memItemLeft" align="right" valign="top"><a id="a737337b347bd5cc52bfabdcfbc11b853"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>num_file</b></td></tr>
+<tr class="memitem:a737337b347bd5cc52bfabdcfbc11b853"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#a737337b347bd5cc52bfabdcfbc11b853">num_file</a></td></tr>
 <tr class="separator:a737337b347bd5cc52bfabdcfbc11b853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70f2901a7ba85573aa280bad826baf4a"><td class="memItemLeft" align="right" valign="top"><a id="a70f2901a7ba85573aa280bad826baf4a"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>pos_in_central_dir</b></td></tr>
+<tr class="memitem:a70f2901a7ba85573aa280bad826baf4a"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#a70f2901a7ba85573aa280bad826baf4a">pos_in_central_dir</a></td></tr>
 <tr class="separator:a70f2901a7ba85573aa280bad826baf4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe2244ba62db8b3251634e26183f1c9a"><td class="memItemLeft" align="right" valign="top"><a id="abe2244ba62db8b3251634e26183f1c9a"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>current_file_ok</b></td></tr>
+<tr class="memitem:abe2244ba62db8b3251634e26183f1c9a"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#abe2244ba62db8b3251634e26183f1c9a">current_file_ok</a></td></tr>
 <tr class="separator:abe2244ba62db8b3251634e26183f1c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2d8ae4c0975d2057e30b13c3148c27eb"><td class="memItemLeft" align="right" valign="top"><a id="a2d8ae4c0975d2057e30b13c3148c27eb"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>central_pos</b></td></tr>
+<tr class="memitem:a2d8ae4c0975d2057e30b13c3148c27eb"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#a2d8ae4c0975d2057e30b13c3148c27eb">central_pos</a></td></tr>
 <tr class="separator:a2d8ae4c0975d2057e30b13c3148c27eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60b803a02e17ae46755cb94026ae973a"><td class="memItemLeft" align="right" valign="top"><a id="a60b803a02e17ae46755cb94026ae973a"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>size_central_dir</b></td></tr>
+<tr class="memitem:a60b803a02e17ae46755cb94026ae973a"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#a60b803a02e17ae46755cb94026ae973a">size_central_dir</a></td></tr>
 <tr class="separator:a60b803a02e17ae46755cb94026ae973a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6c37ef70549769fa59bca623565d78f"><td class="memItemLeft" align="right" valign="top"><a id="ac6c37ef70549769fa59bca623565d78f"></a>
-uLong&#160;</td><td class="memItemRight" valign="bottom"><b>offset_central_dir</b></td></tr>
+<tr class="memitem:ac6c37ef70549769fa59bca623565d78f"><td class="memItemLeft" align="right" valign="top">uLong&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#ac6c37ef70549769fa59bca623565d78f">offset_central_dir</a></td></tr>
 <tr class="separator:ac6c37ef70549769fa59bca623565d78f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab1963897ac959ca0f9b4208c573c2795"><td class="memItemLeft" align="right" valign="top"><a id="ab1963897ac959ca0f9b4208c573c2795"></a>
-<a class="el" href="structunz__file__info__s.html">unz_file_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cur_file_info</b></td></tr>
+<tr class="memitem:ab1963897ac959ca0f9b4208c573c2795"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unzip_8h.html#a03b3ec1a8745daa96699ac49f193b177">unz_file_info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#ab1963897ac959ca0f9b4208c573c2795">cur_file_info</a></td></tr>
 <tr class="separator:ab1963897ac959ca0f9b4208c573c2795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36625697385b9a675f02a446fa5ba583"><td class="memItemLeft" align="right" valign="top"><a id="a36625697385b9a675f02a446fa5ba583"></a>
-<a class="el" href="structunz__file__info__internal__s.html">unz_file_info_internal</a>&#160;</td><td class="memItemRight" valign="bottom"><b>cur_file_info_internal</b></td></tr>
+<tr class="memitem:a36625697385b9a675f02a446fa5ba583"><td class="memItemLeft" align="right" valign="top"><a class="el" href="unzip_8cpp.html#a8f7400cb2fdf408412d6f75accea8305">unz_file_info_internal</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#a36625697385b9a675f02a446fa5ba583">cur_file_info_internal</a></td></tr>
 <tr class="separator:a36625697385b9a675f02a446fa5ba583"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a5f0568475ad9a36ee2c1f3972406f0"><td class="memItemLeft" align="right" valign="top"><a id="a7a5f0568475ad9a36ee2c1f3972406f0"></a>
-<a class="el" href="structfile__in__zip__read__info__s.html">file_in_zip_read_info_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>pfile_in_zip_read</b></td></tr>
+<tr class="memitem:a7a5f0568475ad9a36ee2c1f3972406f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfile__in__zip__read__info__s.html">file_in_zip_read_info_s</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structunz__s.html#a7a5f0568475ad9a36ee2c1f3972406f0">pfile_in_zip_read</a></td></tr>
 <tr class="separator:a7a5f0568475ad9a36ee2c1f3972406f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00126">126</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a788688a8021cbbba6a2ac1765edd362e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a788688a8021cbbba6a2ac1765edd362e">&#9670;&nbsp;</a></span>byte_before_the_zipfile</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_s::byte_before_the_zipfile</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00130">130</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a2d8ae4c0975d2057e30b13c3148c27eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d8ae4c0975d2057e30b13c3148c27eb">&#9670;&nbsp;</a></span>central_pos</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_s::central_pos</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00134">134</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab1963897ac959ca0f9b4208c573c2795"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1963897ac959ca0f9b4208c573c2795">&#9670;&nbsp;</a></span>cur_file_info</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unzip_8h.html#a03b3ec1a8745daa96699ac49f193b177">unz_file_info</a> unz_s::cur_file_info</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00140">140</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a36625697385b9a675f02a446fa5ba583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36625697385b9a675f02a446fa5ba583">&#9670;&nbsp;</a></span>cur_file_info_internal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unzip_8cpp.html#a8f7400cb2fdf408412d6f75accea8305">unz_file_info_internal</a> unz_s::cur_file_info_internal</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00141">141</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="abe2244ba62db8b3251634e26183f1c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe2244ba62db8b3251634e26183f1c9a">&#9670;&nbsp;</a></span>current_file_ok</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_s::current_file_ok</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00133">133</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae3672e9d6fcd9741941ed1ba376f86c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3672e9d6fcd9741941ed1ba376f86c7">&#9670;&nbsp;</a></span>file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE* unz_s::file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00128">128</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a131303f89af11a26b53e99a58d6517cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a131303f89af11a26b53e99a58d6517cf">&#9670;&nbsp;</a></span>gi</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="unzip_8h.html#a18c3b238618ea86ef503ecbd4092dbce">unz_global_info</a> unz_s::gi</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00129">129</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a737337b347bd5cc52bfabdcfbc11b853"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a737337b347bd5cc52bfabdcfbc11b853">&#9670;&nbsp;</a></span>num_file</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_s::num_file</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00131">131</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac6c37ef70549769fa59bca623565d78f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c37ef70549769fa59bca623565d78f">&#9670;&nbsp;</a></span>offset_central_dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_s::offset_central_dir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00137">137</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a7a5f0568475ad9a36ee2c1f3972406f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a5f0568475ad9a36ee2c1f3972406f0">&#9670;&nbsp;</a></span>pfile_in_zip_read</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfile__in__zip__read__info__s.html">file_in_zip_read_info_s</a>* unz_s::pfile_in_zip_read</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00142">142</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a70f2901a7ba85573aa280bad826baf4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70f2901a7ba85573aa280bad826baf4a">&#9670;&nbsp;</a></span>pos_in_central_dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_s::pos_in_central_dir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00132">132</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a60b803a02e17ae46755cb94026ae973a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60b803a02e17ae46755cb94026ae973a">&#9670;&nbsp;</a></span>size_central_dir</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uLong unz_s::size_central_dir</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="unzip_8cpp_source.html">unzip.cpp</a> 파일의 <a class="el" href="unzip_8cpp_source.html#l00136">136</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/unzip.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="unzip_8cpp_source.html">unzip.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structunz__s.html">unz_s</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

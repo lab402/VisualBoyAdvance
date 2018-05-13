@@ -1,0 +1,12 @@
+<map id="utilGzWrite" name="utilGzWrite">
+<area shape="rect" id="node2" href="$_cheats_8h.html#a1277f24866d1fad5446dab55d248726b" title="cheatsSaveGame" alt="" coords="296,5,420,32"/>
+<area shape="rect" id="node3" href="$_e_eprom_8h.html#ae1a9cd954c2f43107489dfa77230db8d" title="eepromSaveGame" alt="" coords="294,144,422,171"/>
+<area shape="rect" id="node4" href="$gb_cheats_8h.html#acb8a0c6999c8755601066d698cdf61f9" title="gbCheatsSaveGame" alt="" coords="288,81,428,108"/>
+<area shape="rect" id="node5" href="$gb_s_g_b_8h.html#a34673f3a4366c96d30755e16212350f4" title="gbSgbSaveGame" alt="" coords="297,347,419,373"/>
+<area shape="rect" id="node6" href="$gb_sound_8h.html#a29eba8ccb5623503ee3f48eca2e8b6a9" title="gbSoundSaveGame" alt="" coords="290,195,426,221"/>
+<area shape="rect" id="node7" href="$_r_t_c_8h.html#ad783e9ca6d3653f44f6cff21c7eec47e" title="rtcSaveGame" alt="" coords="140,245,240,272"/>
+<area shape="rect" id="node8" href="$_sound_8h.html#aa3914cb52519d298a96ccfde9d124a5d" title="soundSaveGame" alt="" coords="298,397,418,424"/>
+<area shape="rect" id="node9" href="$_util_8h.html#ad7383f3cbe45a6e4848e55cd7ac3c9af" title="utilWriteInt" alt="" coords="148,93,232,120"/>
+<area shape="rect" id="node10" href="$_util_8h.html#a0c9f222455d76a6b24a371922106934e" title="utilWriteData" alt="" coords="141,296,239,323"/>
+<area shape="rect" id="node11" href="$_flash_8h.html#afb269843175d3b676471eac113e11913" title="flashSaveGame" alt="" coords="302,296,414,323"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_g_b_a_cheat_search.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">GBACheatSearch 멤버 목록</div>  </div>
@@ -68,36 +92,39 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>addChange</b>(int index, u32 address, u32 oldValue, u32 newValue) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>DoDataExchange</b>(CDataExchange *pDX) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>GBACheatSearch</b>(CWnd *pParent=NULL) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>IDD</b> 열거형 값 (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>m_list</b> (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>m_value</b> (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>numberType</b> (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnAddCheat</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnGetdispinfoCheatList</b>(NMHDR *pNMHDR, LRESULT *pResult) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnInitDialog</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnItemchangedCheatList</b>(NMHDR *pNMHDR, LRESULT *pResult) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnNumberType</b>(UINT id) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnOk</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnSearch</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnSearchType</b>(UINT id) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnSizeType</b>(UINT id) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnStart</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnUpdate</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnValueType</b>(UINT id) (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>searchType</b> (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>sizeType</b> (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>updateValues</b> (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>valueType</b> (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>~GBACheatSearch</b>() (다음에서 정의됨 : <a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a>)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#afefabf8fcfe952b062d260152c595415">addChange</a>(int index, u32 address, u32 oldValue, u32 newValue)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#aa72724b88600ea8391dba6f6cf085282">DoDataExchange</a>(CDataExchange *pDX)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#aa59bfbdaba09776ce59a01770bb4e756">GBACheatSearch</a>(CWnd *pParent=NULL)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#aad94fa4948a9a182e3d5a15c5d0bf02fa210cc376f2b661862a7031b55a0e5ceb">IDD</a> 열거형 값</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#aab4be5c0e3c3436c738a43f466be0902">m_list</a></td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#aaff3a33037e3561aadfdfe905c66148f">m_value</a></td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a5f4137be5a232d58a5cf4e03c72b008c">numberType</a></td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#ae1797b0166163a717a3f3dfa873c13e6">OnAddCheat</a>()</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a6ad35822df234eb7d2db23435381577e">OnGetdispinfoCheatList</a>(NMHDR *pNMHDR, LRESULT *pResult)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a29ff71ddc116276ad183d91e93d69426">OnInitDialog</a>()</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#aa46092b07e72e992913262bc29546b2a">OnItemchangedCheatList</a>(NMHDR *pNMHDR, LRESULT *pResult)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#ad75552e2edb79b66761e42965221268c">OnNumberType</a>(UINT id)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a6e17bbbf43d2a744853abfb00fa791ec">OnOk</a>()</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a2b933c2b548983257f7e92da9bbb1695">OnSearch</a>()</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a58e09cf82509ff9b68f35d3e3e780c0a">OnSearchType</a>(UINT id)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a3a8aab04dae339242636eaa50b5c3bff">OnSizeType</a>(UINT id)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a7c1882cbc31a995d42b02017af188353">OnStart</a>()</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#ac38fa782e7bb20f90f40e6605808f9fe">OnUpdate</a>()</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a6cafcf45420b6af926e47a70f0f9da02">OnValueType</a>(UINT id)</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a708b5bbf00916b2ff173eb07273b1db5">searchType</a></td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a9fc543b94f045d8c778cf921c06cc2c3">sizeType</a></td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a1b8eec1d7b81c1e297b71c4de071550f">updateValues</a></td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a633f5b523a814d3f1e4cb06b1799b798">valueType</a></td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html#a3c856e36f9d3fae6e11d53705132e177">~GBACheatSearch</a>()</td><td class="entry"><a class="el" href="class_g_b_a_cheat_search.html">GBACheatSearch</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

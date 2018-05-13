@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_bitmap_control.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">BitmapControl 멤버 목록</div>  </div>
@@ -68,27 +92,30 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="class_bitmap_control.html">BitmapControl</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>BitmapControl</b>() (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>getStretch</b>() (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>isRegistered</b> (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnDraw</b>(CDC *pDC) (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnEraseBkgnd</b>(CDC *pDC) (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnInitialUpdate</b>() (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>OnLButtonDown</b>(UINT nFlags, CPoint point) (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>OnSize</b>(UINT nType, int cx, int cy) (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>PostNcDestroy</b>() (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>refresh</b>() (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setBmpInfo</b>(BITMAPINFO *info) (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setData</b>(u8 *d) (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>setSize</b>(int w1, int h1) (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setStretch</b>(bool b) (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~BitmapControl</b>() (다음에서 정의됨 : <a class="el" href="class_bitmap_control.html">BitmapControl</a>)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bitmap_control.html#aec3c1d06a6cfc809eabfbd4217d90a8b">BitmapControl</a>()</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c">getStretch</a>()</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bitmap_control.html#acd16ac02d48f1201fc90470b6e29c7fe">isRegistered</a></td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_bitmap_control.html#a76ead24c70d33421148716a39cf3a17f">OnDraw</a>(CDC *pDC)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bitmap_control.html#aea73d6e790bb4828eb230c3cd66e5e0b">OnEraseBkgnd</a>(CDC *pDC)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_bitmap_control.html#a532fd9e0bd31674589a224737960bfc0">OnInitialUpdate</a>()</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bitmap_control.html#a2958d0209f702d4207d10797c8aa86bd">OnLButtonDown</a>(UINT nFlags, CPoint point)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_bitmap_control.html#ac0e60f98809d78a38d5d35942c1bfb2c">OnSize</a>(UINT nType, int cx, int cy)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bitmap_control.html#aed7e031df3fd65a4325ea9bf7da5bdc3">PostNcDestroy</a>()</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">protected</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2">refresh</a>()</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bitmap_control.html#a301c52fc62de4368fccdcdc93cefad0b">setBmpInfo</a>(BITMAPINFO *info)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_bitmap_control.html#aa6206183896caf192a37709fa5d7b8d2">setData</a>(u8 *d)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f">setSize</a>(int w1, int h1)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812">setStretch</a>(bool b)</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_bitmap_control.html#ae76af69d5ae1085e93213530ca913283">~BitmapControl</a>()</td><td class="entry"><a class="el" href="class_bitmap_control.html">BitmapControl</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

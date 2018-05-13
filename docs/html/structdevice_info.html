@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structdevice_info.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,66 +92,300 @@ $(function() {
 <div class="title">deviceInfo 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+deviceInfo에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="structdevice_info__coll__graph.png" border="0" usemap="#device_info_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a4e2b017b67b850eb267097f95776273f"><td class="memItemLeft" align="right" valign="top"><a id="a4e2b017b67b850eb267097f95776273f"></a>
-LPDIRECTINPUTDEVICE8&#160;</td><td class="memItemRight" valign="bottom"><b>device</b></td></tr>
+<tr class="memitem:a4e2b017b67b850eb267097f95776273f"><td class="memItemLeft" align="right" valign="top">LPDIRECTINPUTDEVICE8&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevice_info.html#a4e2b017b67b850eb267097f95776273f">device</a></td></tr>
 <tr class="separator:a4e2b017b67b850eb267097f95776273f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a405fccb036e90884fb822c59433c2490"><td class="memItemLeft" align="right" valign="top"><a id="a405fccb036e90884fb822c59433c2490"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>isPolled</b></td></tr>
+<tr class="memitem:a405fccb036e90884fb822c59433c2490"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevice_info.html#a405fccb036e90884fb822c59433c2490">isPolled</a></td></tr>
 <tr class="separator:a405fccb036e90884fb822c59433c2490"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad88fd10c7065c35ea68687b9871ebed0"><td class="memItemLeft" align="right" valign="top"><a id="ad88fd10c7065c35ea68687b9871ebed0"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nButtons</b></td></tr>
+<tr class="memitem:ad88fd10c7065c35ea68687b9871ebed0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevice_info.html#ad88fd10c7065c35ea68687b9871ebed0">nButtons</a></td></tr>
 <tr class="separator:ad88fd10c7065c35ea68687b9871ebed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ceef6ccdfa5c12661b77e036ba91682"><td class="memItemLeft" align="right" valign="top"><a id="a5ceef6ccdfa5c12661b77e036ba91682"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nAxes</b></td></tr>
+<tr class="memitem:a5ceef6ccdfa5c12661b77e036ba91682"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevice_info.html#a5ceef6ccdfa5c12661b77e036ba91682">nAxes</a></td></tr>
 <tr class="separator:a5ceef6ccdfa5c12661b77e036ba91682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5554d019728b7dace75256a64411417c"><td class="memItemLeft" align="right" valign="top"><a id="a5554d019728b7dace75256a64411417c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nPovs</b></td></tr>
+<tr class="memitem:a5554d019728b7dace75256a64411417c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevice_info.html#a5554d019728b7dace75256a64411417c">nPovs</a></td></tr>
 <tr class="separator:a5554d019728b7dace75256a64411417c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0bc40134953f30c68ccf0d2d69e67f17"><td class="memItemLeft" align="right" valign="top"><a id="a0bc40134953f30c68ccf0d2d69e67f17"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>first</b></td></tr>
+<tr class="memitem:a0bc40134953f30c68ccf0d2d69e67f17"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevice_info.html#a0bc40134953f30c68ccf0d2d69e67f17">first</a></td></tr>
 <tr class="separator:a0bc40134953f30c68ccf0d2d69e67f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3139c27b267c0ec8b6f4d96629ee0e2"><td class="memItemLeft" ><a id="aa3139c27b267c0ec8b6f4d96629ee0e2"></a>
-struct {</td></tr>
-<tr class="memitem:a2392110fbeeb8f1858075730edfda5c2"><td class="memItemLeft" >
-&#160;&#160;&#160;DWORD&#160;&#160;&#160;<b>offset</b></td></tr>
+<tr class="memitem:aa3139c27b267c0ec8b6f4d96629ee0e2"><td class="memItemLeft" >struct {</td></tr>
+<tr class="memitem:a2392110fbeeb8f1858075730edfda5c2"><td class="memItemLeft" >&#160;&#160;&#160;DWORD&#160;&#160;&#160;<a class="el" href="structdevice_info.html#a224f64e679eb41aa2c894856d693d57d">offset</a></td></tr>
 <tr class="separator:a2392110fbeeb8f1858075730edfda5c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a7327479ec8cf3fd6e3cffdf287dcec"><td class="memItemLeft" >
-&#160;&#160;&#160;LONG&#160;&#160;&#160;<b>center</b></td></tr>
+<tr class="memitem:a1a7327479ec8cf3fd6e3cffdf287dcec"><td class="memItemLeft" >&#160;&#160;&#160;LONG&#160;&#160;&#160;<a class="el" href="structdevice_info.html#a06a2e7b32ae7d9ca107f65b56920da72">center</a></td></tr>
 <tr class="separator:a1a7327479ec8cf3fd6e3cffdf287dcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c31eec82887d60cc611ca84a5581216"><td class="memItemLeft" >
-&#160;&#160;&#160;LONG&#160;&#160;&#160;<b>negative</b></td></tr>
+<tr class="memitem:a1c31eec82887d60cc611ca84a5581216"><td class="memItemLeft" >&#160;&#160;&#160;LONG&#160;&#160;&#160;<a class="el" href="structdevice_info.html#a8131c05a7b3332b266af2aa8f2e6528a">negative</a></td></tr>
 <tr class="separator:a1c31eec82887d60cc611ca84a5581216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d8d1c26b03fad0e1c026bf042b186b9"><td class="memItemLeft" >
-&#160;&#160;&#160;LONG&#160;&#160;&#160;<b>positive</b></td></tr>
+<tr class="memitem:a8d8d1c26b03fad0e1c026bf042b186b9"><td class="memItemLeft" >&#160;&#160;&#160;LONG&#160;&#160;&#160;<a class="el" href="structdevice_info.html#ae4cfa5b3fb76573fdf1e3936373ae47a">positive</a></td></tr>
 <tr class="separator:a8d8d1c26b03fad0e1c026bf042b186b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3139c27b267c0ec8b6f4d96629ee0e2"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><b>axis</b> [8]</td></tr>
+<tr class="memitem:aa3139c27b267c0ec8b6f4d96629ee0e2"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevice_info.html#aa3139c27b267c0ec8b6f4d96629ee0e2">axis</a> [8]</td></tr>
 <tr class="separator:aa3139c27b267c0ec8b6f4d96629ee0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3e85cef35fcad73f9f5fcd75a627ec80"><td class="memItemLeft" align="right" valign="top"><a id="a3e85cef35fcad73f9f5fcd75a627ec80"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>needed</b></td></tr>
+<tr class="memitem:a3e85cef35fcad73f9f5fcd75a627ec80"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdevice_info.html#a3e85cef35fcad73f9f5fcd75a627ec80">needed</a></td></tr>
 <tr class="separator:a3e85cef35fcad73f9f5fcd75a627ec80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a44f2f54c2a9ac5917b0bb1dce46b15aa"><td class="memItemLeft" ><a id="a44f2f54c2a9ac5917b0bb1dce46b15aa"></a>
-union {</td></tr>
-<tr class="memitem:a8bd6b8877e57097e8f92d278ccd84847"><td class="memItemLeft" >
-&#160;&#160;&#160;UCHAR&#160;&#160;&#160;<b>data</b> [256]</td></tr>
+<tr class="memitem:a44f2f54c2a9ac5917b0bb1dce46b15aa"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a8bd6b8877e57097e8f92d278ccd84847"><td class="memItemLeft" >&#160;&#160;&#160;UCHAR&#160;&#160;&#160;<a class="el" href="structdevice_info.html#a24db93457c0c8b0c0461e3db1c55ad48">data</a> [256]</td></tr>
 <tr class="separator:a8bd6b8877e57097e8f92d278ccd84847"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3b28df046632a8d8ae856dc5392795e"><td class="memItemLeft" >
-&#160;&#160;&#160;DIJOYSTATE&#160;&#160;&#160;<b>state</b></td></tr>
+<tr class="memitem:ad3b28df046632a8d8ae856dc5392795e"><td class="memItemLeft" >&#160;&#160;&#160;DIJOYSTATE&#160;&#160;&#160;<a class="el" href="structdevice_info.html#a32e5855cac9794767be03c67be242c01">state</a></td></tr>
 <tr class="separator:ad3b28df046632a8d8ae856dc5392795e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a44f2f54c2a9ac5917b0bb1dce46b15aa"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
 <tr class="separator:a44f2f54c2a9ac5917b0bb1dce46b15aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00066">66</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a44f2f54c2a9ac5917b0bb1dce46b15aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44f2f54c2a9ac5917b0bb1dce46b15aa">&#9670;&nbsp;</a></span>@19</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3139c27b267c0ec8b6f4d96629ee0e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3139c27b267c0ec8b6f4d96629ee0e2">&#9670;&nbsp;</a></span>axis</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct { ... }   deviceInfo::axis[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a06a2e7b32ae7d9ca107f65b56920da72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06a2e7b32ae7d9ca107f65b56920da72">&#9670;&nbsp;</a></span>center</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LONG deviceInfo::center</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a24db93457c0c8b0c0461e3db1c55ad48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24db93457c0c8b0c0461e3db1c55ad48">&#9670;&nbsp;</a></span>data</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">UCHAR deviceInfo::data[256]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00081">81</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a4e2b017b67b850eb267097f95776273f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2b017b67b850eb267097f95776273f">&#9670;&nbsp;</a></span>device</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPDIRECTINPUTDEVICE8 deviceInfo::device</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00067">67</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a0bc40134953f30c68ccf0d2d69e67f17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bc40134953f30c68ccf0d2d69e67f17">&#9670;&nbsp;</a></span>first</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL deviceInfo::first</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00072">72</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a405fccb036e90884fb822c59433c2490"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405fccb036e90884fb822c59433c2490">&#9670;&nbsp;</a></span>isPolled</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL deviceInfo::isPolled</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5ceef6ccdfa5c12661b77e036ba91682"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ceef6ccdfa5c12661b77e036ba91682">&#9670;&nbsp;</a></span>nAxes</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> deviceInfo::nAxes</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00070">70</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad88fd10c7065c35ea68687b9871ebed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad88fd10c7065c35ea68687b9871ebed0">&#9670;&nbsp;</a></span>nButtons</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> deviceInfo::nButtons</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00069">69</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3e85cef35fcad73f9f5fcd75a627ec80"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e85cef35fcad73f9f5fcd75a627ec80">&#9670;&nbsp;</a></span>needed</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> deviceInfo::needed</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00079">79</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a8131c05a7b3332b266af2aa8f2e6528a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8131c05a7b3332b266af2aa8f2e6528a">&#9670;&nbsp;</a></span>negative</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LONG deviceInfo::negative</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00076">76</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a5554d019728b7dace75256a64411417c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5554d019728b7dace75256a64411417c">&#9670;&nbsp;</a></span>nPovs</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> deviceInfo::nPovs</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00071">71</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a224f64e679eb41aa2c894856d693d57d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a224f64e679eb41aa2c894856d693d57d">&#9670;&nbsp;</a></span>offset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DWORD deviceInfo::offset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae4cfa5b3fb76573fdf1e3936373ae47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4cfa5b3fb76573fdf1e3936373ae47a">&#9670;&nbsp;</a></span>positive</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LONG deviceInfo::positive</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00077">77</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a32e5855cac9794767be03c67be242c01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32e5855cac9794767be03c67be242c01">&#9670;&nbsp;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">DIJOYSTATE deviceInfo::state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a> 파일의 <a class="el" href="_direct_input_8cpp_source.html#l00082">82</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/DirectInput.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_direct_input_8cpp_source.html">DirectInput.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structdevice_info.html">deviceInfo</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

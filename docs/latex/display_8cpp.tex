@@ -1,0 +1,142 @@
+\hypertarget{display_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/display.cpp 파일 참조}
+\label{display_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/display.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/display.\+cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Display.\+h\char`\"{}}\newline
+display.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{display_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{display_8cpp_af067251fbfac32e8e783daa9587befd8}{copy\+Image}} (void $\ast$source, void $\ast$destination, unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} width, unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} height, unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} destination\+Pitch, unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} color\+Depth)
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{display_8cpp_af067251fbfac32e8e783daa9587befd8}\label{display_8cpp_af067251fbfac32e8e783daa9587befd8}} 
+\index{display.\+cpp@{display.\+cpp}!copy\+Image@{copy\+Image}}
+\index{copy\+Image@{copy\+Image}!display.\+cpp@{display.\+cpp}}
+\subsubsection{\texorpdfstring{copy\+Image()}{copyImage()}}
+{\footnotesize\ttfamily void copy\+Image (\begin{DoxyParamCaption}\item[{void $\ast$}]{source,  }\item[{void $\ast$}]{destination,  }\item[{unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{width,  }\item[{unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{height,  }\item[{unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{destination\+Pitch,  }\item[{unsigned \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{color\+Depth }\end{DoxyParamCaption})}
+
+
+
+display.\+cpp 파일의 22 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+23 \{
+24 \textcolor{preprocessor}{#ifdef ASM}
+25 
+26     \textcolor{comment}{// Copy the image at [source] to the locked Direct3D texture}
+27     \_\_asm
+28     \{
+29         mov eax, width            ; Initialize
+30         mov ebx, height           ;
+31         mov edi, destination      ;
+32         mov edx, destinationPitch ;
+33 
+34         cmp colorDepth, 16       ; Check colorDepth==16bit
+35         jnz gbaOtherColor        ;
+36         sub edx, eax             ;
+37         sub edx, eax             ;
+38         mov esi, source          ;
+39         lea esi,[esi+2*eax+4]    ;
+40         shr eax, 1               ;
+41 gbaLoop16bit:
+42         mov ecx, eax     ;
+43         rep movsd        ;
+44         add esi, 4       ;
+45         add edi, edx     ;
+46         dec ebx          ;
+47         jnz gbaLoop16bit ;
+48         jmp gbaLoopEnd   ;
+49 gbaOtherColor:
+50         cmp colorDepth, 32     ; Check colorDepth==32bit
+51         jnz gbaOtherColor2     ;
+52 
+53         lea esi, [eax*4]       ;
+54         sub edx, esi           ;
+55         mov esi, source        ;
+56         lea esi, [esi+4*eax+4] ;
+57 gbaLoop32bit:
+58         mov ecx, eax     ;
+59         rep movsd        ; ECX times: Move DWORD at [ESI] to [EDI] | ESI++ EDI++
+60         add esi, 4       ;
+61         add edi, edx     ;
+62         dec ebx          ;
+63         jnz gbaLoop32bit ;
+64         jmp gbaLoopEnd   ;
+65 gbaOtherColor2:
+66         lea eax, [eax+2*eax] ; Works like colorDepth==24bit
+67         sub edx, eax         ;
+68 gbaLoop24bit:
+69         mov ecx, eax     ;
+70         shr ecx, 2       ;
+71         rep movsd        ;
+72         add edi, edx     ;
+73         dec ebx          ;
+74         jnz gbaLoop24bit ;
+75 gbaLoopEnd:
+76     \}
+77 
+78 \textcolor{preprocessor}{#else // #ifdef ASM}
+79 
+80     \textcolor{comment}{// optimized C version}
+81     \textcolor{keyword}{register} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} lineSize;
+82     \textcolor{keyword}{register} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *src, *dst;
+83     \textcolor{keywordflow}{switch}(colorDepth)
+84     \{
+85     \textcolor{keywordflow}{case} 16:
+86         lineSize = width<<1;
+87         src = ((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)source) + lineSize + 4;
+88         dst = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)destination;
+89         \textcolor{keywordflow}{do} \{
+90             MoveMemory( dst, src, lineSize );
+91                 src+=lineSize;
+92                 dst+=lineSize;
+93             src += 2;
+94             dst += (destinationPitch - lineSize);
+95         \} \textcolor{keywordflow}{while} ( --height);
+96         \textcolor{keywordflow}{break};
+97     \textcolor{keywordflow}{case} 32:
+98         lineSize = width<<2;
+99         src = ((\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)source) + lineSize + 4;
+100         dst = (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char}*)destination;
+101         \textcolor{keywordflow}{do} \{
+102             MoveMemory( dst, src, lineSize );
+103                 src+=lineSize;
+104                 dst+=lineSize;
+105             src += 4;
+106             dst += (destinationPitch - lineSize);
+107         \} \textcolor{keywordflow}{while} ( --height);
+108         \textcolor{keywordflow}{break};
+109     \}
+110 
+111     \textcolor{comment}{// very compatible but slow C version}
+112     \textcolor{comment}{//unsigned int nBytesPerPixel = colorDepth>>3;}
+113     \textcolor{comment}{//unsigned int i, x, y, srcPitch = (width+1) * nBytesPerPixel;}
+114     \textcolor{comment}{//unsigned char * src = ((unsigned char*)source)+srcPitch;}
+115     \textcolor{comment}{//unsigned char * dst = (unsigned char*)destination;}
+116     \textcolor{comment}{//for (y=0;y<height;y++) //Width}
+117         \textcolor{comment}{//for (x=0;x<width;x++) //Height}
+118             \textcolor{comment}{//for (i=0;i<nBytesPerPixel;i++) //Byte# Of Pixel}
+119                 \textcolor{comment}{//*(dst+i+(x*nBytesPerPixel)+(y*destinationPitch)) =
+       *(src+i+(x*nBytesPerPixel)+(y*srcPitch));}
+120 
+121 \textcolor{preprocessor}{#endif}
+122 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{display_8cpp_af067251fbfac32e8e783daa9587befd8_icgraph}
+\end{center}
+\end{figure}

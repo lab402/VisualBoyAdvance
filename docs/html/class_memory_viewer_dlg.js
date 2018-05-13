@@ -1,0 +1,25 @@
+var class_memory_viewer_dlg =
+[
+    [ "IDD", "class_memory_viewer_dlg.html#aca9567bd4cf2ec1aa5ac0473ce2d1fa2a7d71336246f22396669425fa2bea86cd", null ],
+    [ "MemoryViewerDlg", "class_memory_viewer_dlg.html#aed16c2ef99beec1b0ffa2c9b22cd0e5c", null ],
+    [ "DoDataExchange", "class_memory_viewer_dlg.html#aeee7f9087554df8563689ab22facbbd6", null ],
+    [ "On16Bit", "class_memory_viewer_dlg.html#a61f6aec84a4bcf908dc32f9e85c871d0", null ],
+    [ "On32Bit", "class_memory_viewer_dlg.html#afb8178dcad55d86c9217f89e0ed4814f", null ],
+    [ "On8Bit", "class_memory_viewer_dlg.html#ad408c6c194db416a0cf23480184ef610", null ],
+    [ "OnAutoUpdate", "class_memory_viewer_dlg.html#abd1a90d5974c83a3b388043d6162f118", null ],
+    [ "OnClose", "class_memory_viewer_dlg.html#a49522f159a0ccbca8c511e5c248b9b93", null ],
+    [ "OnGo", "class_memory_viewer_dlg.html#aa21f28b3490b179e79e3a3687fef0c45", null ],
+    [ "OnInitDialog", "class_memory_viewer_dlg.html#a2061415e67d04b0c157ba2bd50a8c56c", null ],
+    [ "OnLoad", "class_memory_viewer_dlg.html#adfc256215ade1d48a24a3eb72b3ecfed", null ],
+    [ "OnRefresh", "class_memory_viewer_dlg.html#a2c10fa49648424e4994c8c5a71f4effc", null ],
+    [ "OnSave", "class_memory_viewer_dlg.html#aaa3651f618355f6d1d3bf3158cb9c812", null ],
+    [ "OnSelchangeAddresses", "class_memory_viewer_dlg.html#ab7624247967998f1973da99a035a28e3", null ],
+    [ "PostNcDestroy", "class_memory_viewer_dlg.html#a3dd16d8770e7b5d3e174c9630ca4ecb8", null ],
+    [ "setCurrentAddress", "class_memory_viewer_dlg.html#ac027e2a8dc226a7053068680050abd1f", null ],
+    [ "update", "class_memory_viewer_dlg.html#a0222a6beddfef071bc19b8849dc4ee15", null ],
+    [ "autoUpdate", "class_memory_viewer_dlg.html#a3ec3d36d4676977f8f37f55ec7f7fb39", null ],
+    [ "m_address", "class_memory_viewer_dlg.html#aef3a67a90aa1b49c204d9d6a3910f13c", null ],
+    [ "m_addresses", "class_memory_viewer_dlg.html#ac61656d575927b23941090002e5ce996", null ],
+    [ "m_current", "class_memory_viewer_dlg.html#a857486db87e66ac05d46733b0794aec7", null ],
+    [ "m_size", "class_memory_viewer_dlg.html#aa24e55d166ddeecb94fea8ab7ad4d836", null ]
+];

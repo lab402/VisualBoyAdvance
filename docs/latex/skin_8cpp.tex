@@ -1,0 +1,100 @@
+\hypertarget{skin_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/skin.cpp 파일 참조}
+\label{skin_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/skin.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/skin.\+cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}skin.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}x\+Image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+System.\+h\char`\"{}}\newline
+skin.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{skin_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK \mbox{\hyperlink{skin_8cpp_ac58ecd226acd172d4941912f99e2cb12}{Skin\+Wnd\+Proc}} (H\+W\+ND h\+Wnd, U\+I\+NT u\+Message, W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{skin_8cpp_ac58ecd226acd172d4941912f99e2cb12}\label{skin_8cpp_ac58ecd226acd172d4941912f99e2cb12}} 
+\index{skin.\+cpp@{skin.\+cpp}!Skin\+Wnd\+Proc@{Skin\+Wnd\+Proc}}
+\index{Skin\+Wnd\+Proc@{Skin\+Wnd\+Proc}!skin.\+cpp@{skin.\+cpp}}
+\subsubsection{\texorpdfstring{Skin\+Wnd\+Proc()}{SkinWndProc()}}
+{\footnotesize\ttfamily L\+R\+E\+S\+U\+LT C\+A\+L\+L\+B\+A\+CK Skin\+Wnd\+Proc (\begin{DoxyParamCaption}\item[{H\+W\+ND}]{h\+Wnd,  }\item[{U\+I\+NT}]{u\+Message,  }\item[{W\+P\+A\+R\+AM}]{w\+Param,  }\item[{L\+P\+A\+R\+AM}]{l\+Param }\end{DoxyParamCaption})}
+
+
+
+skin.\+cpp 파일의 532 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+533 \{
+534   \textcolor{comment}{// we will need a pointer to the associated class instance}
+535   \textcolor{comment}{// (it was stored in the window before, remember?)}
+536   \mbox{\hyperlink{class_c_skin}{CSkin}} *pSkin = (\mbox{\hyperlink{class_c_skin}{CSkin}}*)GetProp(hWnd, \_T(\textcolor{stringliteral}{"skin"}));
+537 
+538   \textcolor{comment}{// to handle WM\_PAINT}
+539   PAINTSTRUCT ps;
+540 
+541   \textcolor{comment}{// if we fail to get our class instance, we can't handle anything.}
+542   \textcolor{keywordflow}{if} (!pSkin) \textcolor{keywordflow}{return} DefWindowProc(hWnd,uMessage,wParam,lParam);
+543 
+544   \textcolor{keywordflow}{switch}(uMessage)
+545     \{
+546     \textcolor{keywordflow}{case} WM\_WINDOWPOSCHANGING:
+547       \{
+548         LPWINDOWPOS pos = (LPWINDOWPOS)lParam;
+549         pos->cx = pSkin->\mbox{\hyperlink{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}{Width}}();
+550         pos->cy = pSkin->\mbox{\hyperlink{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}{Height}}();
+551         \textcolor{keywordflow}{return} 0L;
+552       \}
+553       \textcolor{keywordflow}{break};
+554 
+555     \textcolor{keywordflow}{case} WM\_PAINT:
+556       \{
+557         \textcolor{comment}{// ---------------------------------------------------------}
+558         \textcolor{comment}{// here we just need to blit our skin}
+559         \textcolor{comment}{// directly to the device context}
+560         \textcolor{comment}{// passed by the painting message.}
+561         \textcolor{comment}{// ---------------------------------------------------------}
+562         BeginPaint(hWnd,&ps);
+563 
+564         \textcolor{comment}{// blit the skin}
+565         BitBlt(ps.hdc,0,0,pSkin->\mbox{\hyperlink{class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94}{Width}}(),pSkin->\mbox{\hyperlink{class_c_skin_a26de0d121ce1811feea27cc30f4c2f70}{Height}}(),pSkin->\mbox{\hyperlink{class_c_skin_a4112f4df38d9917d38c5db2622777c1f}{HDC}}(),0,0,SRCCOPY);
+566 
+567         EndPaint(hWnd,&ps);
+568         \textcolor{keywordflow}{break};
+569       \}
+570 
+571     \textcolor{keywordflow}{case} WM\_LBUTTONDOWN:
+572       \{
+573         \textcolor{comment}{// ---------------------------------------------------------}
+574         \textcolor{comment}{// this is a common trick for easy dragging of the window.}
+575         \textcolor{comment}{// this message fools windows telling that the user is}
+576         \textcolor{comment}{// actually dragging the application caption bar.}
+577         \textcolor{comment}{// ---------------------------------------------------------}
+578         SendMessage(hWnd, WM\_NCLBUTTONDOWN, HTCAPTION,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+579         \textcolor{keywordflow}{break};
+580       \}
+581 
+582     \}
+583 
+584   \textcolor{comment}{// ---------------------------------------------------------}
+585   \textcolor{comment}{// call the default window procedure to keep things going.}
+586   \textcolor{comment}{// ---------------------------------------------------------}
+587   \textcolor{keywordflow}{return} CallWindowProc(pSkin->m\_OldWndProc, hWnd, uMessage, wParam, lParam);
+588 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{skin_8cpp_ac58ecd226acd172d4941912f99e2cb12_cgraph}
+\end{center}
+\end{figure}

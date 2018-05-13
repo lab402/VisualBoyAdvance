@@ -1,0 +1,10 @@
+<map id="GBOamView::OnStretch" name="GBOamView::OnStretch">
+<area shape="rect" id="node2" href="$class_bitmap_control.html#ab545e15ea3edda9f0d80c0b8b0b7c812" title="BitmapControl::setStretch" alt="" coords="217,5,389,32"/>
+<area shape="rect" id="node3" href="$class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="217,56,389,83"/>
+<area shape="rect" id="node4" href="$class_g_b_oam_view.html#a8ed062f5cac9239a17b0f5942a5d9e5b" title="GBOamView::paint" alt="" coords="237,107,370,133"/>
+<area shape="rect" id="node9" href="$_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e" title="regSetDwordValue" alt="" coords="239,157,368,184"/>
+<area shape="rect" id="node5" href="$class_g_b_oam_view.html#a6862114f9b3873d08f7ae8bd465c2eda" title="GBOamView::render" alt="" coords="445,56,586,83"/>
+<area shape="rect" id="node7" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="437,107,593,133"/>
+<area shape="rect" id="node8" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="440,157,591,184"/>
+<area shape="rect" id="node6" href="$class_g_b_oam_view.html#a16e71e6ba20139f7ede42b3c884597d7" title="GBOamView::setAttributes" alt="" coords="641,56,820,83"/>
+</map>

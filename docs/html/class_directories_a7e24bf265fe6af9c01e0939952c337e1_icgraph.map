@@ -1,0 +1,7 @@
+<map id="Directories::browseForDir" name="Directories::browseForDir">
+<area shape="rect" id="node2" href="$class_directories.html#a31c9021298d9f3a3ea1beabe73ab7685" title="Directories::OnBatteryDir" alt="" coords="223,5,390,32"/>
+<area shape="rect" id="node3" href="$class_directories.html#a01d34b2ff1d1c0a2a3e638e0cfdd7db7" title="Directories::OnCaptureDir" alt="" coords="221,56,392,83"/>
+<area shape="rect" id="node4" href="$class_directories.html#acb13ecb0add4c5e10ed47d40d6a8605c" title="Directories::OnGbromDir" alt="" coords="225,107,389,133"/>
+<area shape="rect" id="node5" href="$class_directories.html#a0ed6f361bde84a4a6a37c41582a929ec" title="Directories::OnRomDir" alt="" coords="231,157,383,184"/>
+<area shape="rect" id="node6" href="$class_directories.html#a0951489dd35ed7af5fb7ea27c95fbe8e" title="Directories::OnSaveDir" alt="" coords="230,208,383,235"/>
+</map>

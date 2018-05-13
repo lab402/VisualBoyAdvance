@@ -1,0 +1,5 @@
+<map id="gbSgbDrawBorderTile" name="gbSgbDrawBorderTile">
+<area shape="rect" id="node2" href="$gb_s_g_b_8cpp.html#ac6d5b63346d3bf8cabc8821a7748f93c" title="gbSgbDraw16Bit" alt="" coords="200,5,319,32"/>
+<area shape="rect" id="node3" href="$gb_s_g_b_8cpp.html#a1aea036b2948a760a356a9f3073cfeee" title="gbSgbDraw24Bit" alt="" coords="200,56,319,83"/>
+<area shape="rect" id="node4" href="$gb_s_g_b_8cpp.html#a392dff285bf3fecb8e2bbd0f64fdf0de" title="gbSgbDraw32Bit" alt="" coords="200,107,319,133"/>
+</map>

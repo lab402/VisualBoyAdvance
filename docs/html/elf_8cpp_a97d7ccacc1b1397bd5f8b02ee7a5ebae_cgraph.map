@@ -1,0 +1,12 @@
+<map id="elfGetObjectAttributes" name="elfGetObjectAttributes">
+<area shape="rect" id="node2" href="$elf_8cpp.html#a077048bafa33fbb0e59622ac73a94cd4" title="elfReadLEB128" alt="" coords="397,107,508,133"/>
+<area shape="rect" id="node3" href="$elf_8cpp.html#a36c4f27091700f64c84b8581856c104d" title="elfGetAbbrev" alt="" coords="405,5,500,32"/>
+<area shape="rect" id="node4" href="$elf_8cpp.html#a3bba79b400ce1115c4c8c7b961fdb101" title="elfReadAttribute" alt="" coords="204,208,319,235"/>
+<area shape="rect" id="node10" href="$elf_8cpp.html#acc450efe0f184a23df06327631cad6c9" title="elfParseType" alt="" coords="213,56,310,83"/>
+<area shape="rect" id="node5" href="$elf_8cpp.html#a395fe2be4e79a03b5c3cf5c6fd687f57" title="elfRead4Bytes" alt="" coords="399,309,506,336"/>
+<area shape="rect" id="node6" href="$elf_8cpp.html#a014a0877cd8698680117bace5792dc2b" title="elfRead2Bytes" alt="" coords="399,360,506,387"/>
+<area shape="rect" id="node7" href="$elf_8cpp.html#ac8c5826c204074fc3e24982fa9bdbae9" title="elfReadSignedLEB128" alt="" coords="377,157,528,184"/>
+<area shape="rect" id="node8" href="$elf_8cpp.html#a01d365faa9744064e832d40a7ddc3bc1" title="elfGetCompileUnitForData" alt="" coords="367,208,539,235"/>
+<area shape="rect" id="node9" href="$expr-lex_8cpp.html#a6d2c3c030982c7aa276480da4522ae0f" title="exit" alt="" coords="587,233,629,260"/>
+<area shape="rect" id="node11" href="$elf_8cpp.html#aca32b49b109ec3487bdf1a42fc030c26" title="elfAddType" alt="" coords="409,56,496,83"/>
+</map>

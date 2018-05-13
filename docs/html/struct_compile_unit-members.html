@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_compile_unit.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">CompileUnit 멤버 목록</div>  </div>
@@ -68,29 +92,32 @@ $(function() {
 
 <p>다음에 대한 모든 멤버의 목록입니다 : <a class="el" href="struct_compile_unit.html">CompileUnit</a> (모든 상속된 멤버들도 포함합니다.)</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>abbrevs</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>compdir</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>functions</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>hasLineInfo</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>highPC</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>lastFunction</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>length</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>lineInfo</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>lineInfoTable</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>lowPC</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>name</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>next</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>offset</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>ranges</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>top</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>types</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>variables</b> (다음에서 정의됨 : <a class="el" href="struct_compile_unit.html">CompileUnit</a>)</td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#a53e5f3d3a9863efd87c6bc56de6a8ede">abbrevs</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_compile_unit.html#a9841cfa5f9c0facd787471fcbc433c79">compdir</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#ac105dc0b8c92a401f8dd14f7a537e533">functions</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_compile_unit.html#a378d867eb23538702956763f72e000f3">hasLineInfo</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#a2adc2fbfd2e9f68c720b6bcff3f7d4bb">highPC</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_compile_unit.html#a39cac93f270f6ca1329b0fe1533b28d2">lastFunction</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#acad6384874d710baa10548c0bf9a391a">length</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_compile_unit.html#a9bfc05acd5b93dec7be2a486346723db">lineInfo</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#a96d38056c5c5e5e723b16980d6c34641">lineInfoTable</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_compile_unit.html#acd16e32e4b2af3a0ebca497e6bfb79aa">lowPC</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#a56da363bb4b326b104c5d3e87a81ed6d">name</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_compile_unit.html#ada8fe7f00de2bd5b1808782e1baecf5f">next</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#a25babc3939d9beaf5f9fb713b06d7ff0">offset</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_compile_unit.html#a35a7813d5c734076df26479b66448158">ranges</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#ace3ba5846b6ef2bce6fb6ecf08cad32f">top</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="struct_compile_unit.html#ac17b554bb4d11740bf0cd06231d5454c">types</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="struct_compile_unit.html#a88643bd86eef23198ee9e03070ed26cb">variables</a></td><td class="entry"><a class="el" href="struct_compile_unit.html">CompileUnit</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

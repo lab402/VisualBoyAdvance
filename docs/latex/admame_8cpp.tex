@@ -1,0 +1,167 @@
+\hypertarget{admame_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/admame.cpp 파일 참조}
+\label{admame_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/admame.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/admame.\+cpp}}
+{\ttfamily \#include \char`\"{}System.\+h\char`\"{}}\newline
+admame.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{admame_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{admame_8cpp_a6c37fb4e5d98c045d10eec2664adcedd}{Ad\+Mame2x}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$src\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{src\+Pitch}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$dst\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} dst\+Pitch, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} width, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} height)
+\item 
+void \mbox{\hyperlink{admame_8cpp_a33d5d888a4016c529291698427cd81b9}{Ad\+Mame2x32}} (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$src\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{src\+Pitch}}, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$, \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$dst\+Ptr, \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} dst\+Pitch, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} width, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} height)
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{admame_8cpp_a6c37fb4e5d98c045d10eec2664adcedd}\label{admame_8cpp_a6c37fb4e5d98c045d10eec2664adcedd}} 
+\index{admame.\+cpp@{admame.\+cpp}!Ad\+Mame2x@{Ad\+Mame2x}}
+\index{Ad\+Mame2x@{Ad\+Mame2x}!admame.\+cpp@{admame.\+cpp}}
+\subsubsection{\texorpdfstring{Ad\+Mame2x()}{AdMame2x()}}
+{\footnotesize\ttfamily void Ad\+Mame2x (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{src\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{src\+Pitch,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{dst\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{dst\+Pitch,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{width,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{height }\end{DoxyParamCaption})}
+
+
+
+admame.\+cpp 파일의 902 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+904 \{
+905   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *dst0 = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)dstPtr;
+906   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *dst1 = dst0 + (dstPitch >> 1);
+907   
+908   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *src0 = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)srcPtr;
+909   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *src1 = src0 + (\mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}} >> 1);
+910   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *src2 = src1 + (\mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}} >> 1);
+911 \textcolor{preprocessor}{#ifdef MMX}
+912   \textcolor{keywordflow}{if}(cpu\_mmx) \{
+913     internal\_scale2x\_16\_mmx(dst0, dst1, src0, src0, src1, width);
+914   
+915     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = height;
+916 
+917     \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} -= 2;
+918     \textcolor{keywordflow}{while}(\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}) \{
+919       dst0 += dstPitch;
+920       dst1 += dstPitch;
+921       internal\_scale2x\_16\_mmx(dst0, dst1, src0, src1, src2, width);
+922       src0 = src1;
+923       src1 = src2;
+924       src2 += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}} >> 1;
+925       --\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+926     \}
+927     dst0 += dstPitch;
+928     dst1 += dstPitch;
+929     internal\_scale2x\_16\_mmx(dst0, dst1, src0, src1, src1, width);
+930   \} \textcolor{keywordflow}{else} \{
+931 \textcolor{preprocessor}{#endif}
+932     internal\_scale2x\_16\_def(dst0, src0, src0, src1, width);
+933     internal\_scale2x\_16\_def(dst1, src1, src0, src0, width);
+934   
+935     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = height;
+936 
+937     \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} -= 2;
+938     \textcolor{keywordflow}{while}(\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}) \{
+939       dst0 += dstPitch;
+940       dst1 += dstPitch;
+941       internal\_scale2x\_16\_def(dst0, src0, src1, src2, width);
+942       internal\_scale2x\_16\_def(dst1, src2, src1, src0, width);
+943       src0 = src1;
+944       src1 = src2;
+945       src2 += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}} >> 1;
+946       --\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+947     \}
+948     dst0 += dstPitch;
+949     dst1 += dstPitch;
+950     internal\_scale2x\_16\_def(dst0, src0, src1, src1, width);
+951     internal\_scale2x\_16\_def(dst1, src1, src1, src0, width);
+952 \textcolor{preprocessor}{#ifdef MMX}
+953   \}
+954 \textcolor{preprocessor}{#endif}
+955 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admame_8cpp_a6c37fb4e5d98c045d10eec2664adcedd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{admame_8cpp_a33d5d888a4016c529291698427cd81b9}\label{admame_8cpp_a33d5d888a4016c529291698427cd81b9}} 
+\index{admame.\+cpp@{admame.\+cpp}!Ad\+Mame2x32@{Ad\+Mame2x32}}
+\index{Ad\+Mame2x32@{Ad\+Mame2x32}!admame.\+cpp@{admame.\+cpp}}
+\subsubsection{\texorpdfstring{Ad\+Mame2x32()}{AdMame2x32()}}
+{\footnotesize\ttfamily void Ad\+Mame2x32 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{src\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{src\+Pitch,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{,  }\item[{\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} $\ast$}]{dst\+Ptr,  }\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{dst\+Pitch,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{width,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{height }\end{DoxyParamCaption})}
+
+
+
+admame.\+cpp 파일의 957 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+959 \{
+960   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *dst0 = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *)dstPtr;
+961   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *dst1 = dst0 + (dstPitch >> 2);
+962   
+963   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *src0 = (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *)srcPtr;
+964   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *src1 = src0 + (\mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}} >> 2);
+965   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} *src2 = src1 + (\mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}} >> 2);
+966 \textcolor{preprocessor}{#ifdef MMX}
+967   \textcolor{keywordflow}{if}(cpu\_mmx) \{
+968     internal\_scale2x\_32\_mmx(dst0, dst1, src0, src0, src1, width);
+969   
+970     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = height;
+971 
+972     \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} -= 2;
+973     \textcolor{keywordflow}{while}(\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}) \{
+974       dst0 += dstPitch >> 1;
+975       dst1 += dstPitch >> 1;
+976       internal\_scale2x\_32\_mmx(dst0, dst1, src0, src1, src2, width);
+977       src0 = src1;
+978       src1 = src2;
+979       src2 += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}} >> 2;
+980       --\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+981     \}
+982     dst0 += dstPitch >> 1;
+983     dst1 += dstPitch >> 1;
+984     internal\_scale2x\_32\_mmx(dst0, dst1, src0, src1, src1, width);
+985   \} \textcolor{keywordflow}{else} \{
+986 \textcolor{preprocessor}{#endif}
+987     internal\_scale2x\_32\_def(dst0, src0, src0, src1, width);
+988     internal\_scale2x\_32\_def(dst1, src1, src0, src0, width);
+989   
+990     \textcolor{keywordtype}{int} \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} = height;
+991 
+992     \mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}} -= 2;
+993     \textcolor{keywordflow}{while}(\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}}) \{
+994       dst0 += dstPitch >> 1;
+995       dst1 += dstPitch >> 1;
+996       internal\_scale2x\_32\_def(dst0, src0, src1, src2, width);
+997       internal\_scale2x\_32\_def(dst1, src2, src1, src0, width);
+998       src0 = src1;
+999       src1 = src2;
+1000       src2 += \mbox{\hyperlink{_s_d_l_8cpp_aa6d3fee54d3033b4d748f94cdbfc2fe3}{srcPitch}} >> 2;
+1001       --\mbox{\hyperlink{expr_8cpp_a16ff2d8e15ade4948398b0aeb80124a8}{count}};
+1002     \}
+1003     dst0 += dstPitch >> 1;
+1004     dst1 += dstPitch >> 1;
+1005     internal\_scale2x\_32\_def(dst0, src0, src1, src1, width);
+1006     internal\_scale2x\_32\_def(dst1, src1, src1, src0, width);
+1007 \textcolor{preprocessor}{#ifdef MMX}
+1008   \}
+1009 \textcolor{preprocessor}{#endif}
+1010 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{admame_8cpp_a33d5d888a4016c529291698427cd81b9_icgraph}
+\end{center}
+\end{figure}

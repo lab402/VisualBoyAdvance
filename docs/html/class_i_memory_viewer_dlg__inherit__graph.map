@@ -1,0 +1,4 @@
+<map id="IMemoryViewerDlg" name="IMemoryViewerDlg">
+<area shape="rect" id="node2" href="$class_g_b_memory_viewer_dlg.html" title="{GBMemoryViewerDlg\n|+ m_current\l+ m_address\l+ m_addresses\l+ m_size\l|+ setCurrentAddress()\l+ GBMemoryViewerDlg()\l+ update()\l# DoDataExchange()\l# PostNcDestroy()\l# OnInitDialog()\l# OnClose()\l# OnRefresh()\l# On8Bit()\l# On16Bit()\l# On32Bit()\l# OnAutoUpdate()\l# OnGo()\l# OnSelchangeAddresses()\l# OnSave()\l# OnLoad()\l}" alt="" coords="5,138,187,479"/>
+<area shape="rect" id="node3" href="$class_memory_viewer_dlg.html" title="{MemoryViewerDlg\n|+ autoUpdate\l+ m_current\l+ m_address\l+ m_addresses\l+ m_size\l|+ setCurrentAddress()\l+ update()\l+ MemoryViewerDlg()\l# DoDataExchange()\l# PostNcDestroy()\l# OnInitDialog()\l# OnClose()\l# OnRefresh()\l# On8Bit()\l# On16Bit()\l# On32Bit()\l# OnAutoUpdate()\l# OnGo()\l# OnSelchangeAddresses()\l# OnSave()\l# OnLoad()\l}" alt="" coords="211,131,392,487"/>
+</map>

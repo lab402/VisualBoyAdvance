@@ -1,0 +1,6 @@
+<map id="GBOamView::paint" name="GBOamView::paint">
+<area shape="rect" id="node2" href="$class_g_b_oam_view.html#a6862114f9b3873d08f7ae8bd465c2eda" title="GBOamView::render" alt="" coords="194,5,335,32"/>
+<area shape="rect" id="node4" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="187,56,343,83"/>
+<area shape="rect" id="node5" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="189,107,340,133"/>
+<area shape="rect" id="node3" href="$class_g_b_oam_view.html#a16e71e6ba20139f7ede42b3c884597d7" title="GBOamView::setAttributes" alt="" coords="391,5,569,32"/>
+</map>

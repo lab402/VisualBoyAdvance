@@ -1,64 +1,249 @@
 \hypertarget{struct_e_l_f_header}{}\section{E\+L\+F\+Header 구조체 참조}
 \label{struct_e_l_f_header}\index{E\+L\+F\+Header@{E\+L\+F\+Header}}
+
+
+{\ttfamily \#include $<$elf.\+h$>$}
+
+
+
+E\+L\+F\+Header에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=173pt]{struct_e_l_f_header__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a5b65dfa66d5f45063e099e1bd8f7d39a}\label{struct_e_l_f_header_a5b65dfa66d5f45063e099e1bd8f7d39a}} 
-u32 {\bfseries magic}
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{struct_e_l_f_header_a5b65dfa66d5f45063e099e1bd8f7d39a}{magic}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a0fc22a0f7de5c991bf26ed09f4090b0a}\label{struct_e_l_f_header_a0fc22a0f7de5c991bf26ed09f4090b0a}} 
-u8 {\bfseries clazz}
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{struct_e_l_f_header_a0fc22a0f7de5c991bf26ed09f4090b0a}{clazz}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a0ebb6f21956e220cfc13e3d709fb29e7}\label{struct_e_l_f_header_a0ebb6f21956e220cfc13e3d709fb29e7}} 
-u8 {\bfseries data}
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{struct_e_l_f_header_a0ebb6f21956e220cfc13e3d709fb29e7}{data}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_aadac9bc05322252d95cff920e133ca15}\label{struct_e_l_f_header_aadac9bc05322252d95cff920e133ca15}} 
-u8 {\bfseries version}
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{struct_e_l_f_header_aadac9bc05322252d95cff920e133ca15}{version}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a031107283881d74df8f63a4bccd7cce1}\label{struct_e_l_f_header_a031107283881d74df8f63a4bccd7cce1}} 
-u8 {\bfseries pad} \mbox{[}9\mbox{]}
+\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} \mbox{\hyperlink{struct_e_l_f_header_a031107283881d74df8f63a4bccd7cce1}{pad}} \mbox{[}9\mbox{]}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_afe37d30bff98bf36cb852b938fbc7c40}\label{struct_e_l_f_header_afe37d30bff98bf36cb852b938fbc7c40}} 
-u16 {\bfseries e\+\_\+type}
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{struct_e_l_f_header_afe37d30bff98bf36cb852b938fbc7c40}{e\+\_\+type}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a15a148d4a49f9e5993698c2096e8c9bd}\label{struct_e_l_f_header_a15a148d4a49f9e5993698c2096e8c9bd}} 
-u16 {\bfseries e\+\_\+machine}
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{struct_e_l_f_header_a15a148d4a49f9e5993698c2096e8c9bd}{e\+\_\+machine}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a60e61e8eaa05924bef446c706d47b492}\label{struct_e_l_f_header_a60e61e8eaa05924bef446c706d47b492}} 
-u32 {\bfseries e\+\_\+version}
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{struct_e_l_f_header_a60e61e8eaa05924bef446c706d47b492}{e\+\_\+version}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a1970539a110b9474ca7e802385e63eff}\label{struct_e_l_f_header_a1970539a110b9474ca7e802385e63eff}} 
-u32 {\bfseries e\+\_\+entry}
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{struct_e_l_f_header_a1970539a110b9474ca7e802385e63eff}{e\+\_\+entry}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_aca3de0226873cd41864a32e600bef156}\label{struct_e_l_f_header_aca3de0226873cd41864a32e600bef156}} 
-u32 {\bfseries e\+\_\+phoff}
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{struct_e_l_f_header_aca3de0226873cd41864a32e600bef156}{e\+\_\+phoff}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_ac70240758bf6424ca5c806c65d39a63d}\label{struct_e_l_f_header_ac70240758bf6424ca5c806c65d39a63d}} 
-u32 {\bfseries e\+\_\+shoff}
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{struct_e_l_f_header_ac70240758bf6424ca5c806c65d39a63d}{e\+\_\+shoff}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_abf8410fa68218cd420022ee70222e242}\label{struct_e_l_f_header_abf8410fa68218cd420022ee70222e242}} 
-u32 {\bfseries e\+\_\+flags}
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{struct_e_l_f_header_abf8410fa68218cd420022ee70222e242}{e\+\_\+flags}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a5b0c2118b948227b82c61477348f5ce6}\label{struct_e_l_f_header_a5b0c2118b948227b82c61477348f5ce6}} 
-u16 {\bfseries e\+\_\+ehsize}
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{struct_e_l_f_header_a5b0c2118b948227b82c61477348f5ce6}{e\+\_\+ehsize}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a54f6348c72b743df1298f14d9727ee63}\label{struct_e_l_f_header_a54f6348c72b743df1298f14d9727ee63}} 
-u16 {\bfseries e\+\_\+phentsize}
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{struct_e_l_f_header_a54f6348c72b743df1298f14d9727ee63}{e\+\_\+phentsize}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a40ea098754df174746d084dd4ac1322d}\label{struct_e_l_f_header_a40ea098754df174746d084dd4ac1322d}} 
-u16 {\bfseries e\+\_\+phnum}
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{struct_e_l_f_header_a40ea098754df174746d084dd4ac1322d}{e\+\_\+phnum}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a6fea1910b959192096e6391950e55e12}\label{struct_e_l_f_header_a6fea1910b959192096e6391950e55e12}} 
-u16 {\bfseries e\+\_\+shentsize}
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{struct_e_l_f_header_a6fea1910b959192096e6391950e55e12}{e\+\_\+shentsize}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a269f1c30e9f4a79074b4914243f83497}\label{struct_e_l_f_header_a269f1c30e9f4a79074b4914243f83497}} 
-u16 {\bfseries e\+\_\+shnum}
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{struct_e_l_f_header_a269f1c30e9f4a79074b4914243f83497}{e\+\_\+shnum}}
 \item 
-\mbox{\Hypertarget{struct_e_l_f_header_a06d7be4a0c5eb3ffcf9e6adade39949c}\label{struct_e_l_f_header_a06d7be4a0c5eb3ffcf9e6adade39949c}} 
-u16 {\bfseries e\+\_\+shstrndx}
+\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} \mbox{\hyperlink{struct_e_l_f_header_a06d7be4a0c5eb3ffcf9e6adade39949c}{e\+\_\+shstrndx}}
 \end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+elf.\+h 파일의 34 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{struct_e_l_f_header_a0fc22a0f7de5c991bf26ed09f4090b0a}\label{struct_e_l_f_header_a0fc22a0f7de5c991bf26ed09f4090b0a}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!clazz@{clazz}}
+\index{clazz@{clazz}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{clazz}{clazz}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} E\+L\+F\+Header\+::clazz}
+
+
+
+elf.\+h 파일의 36 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a0ebb6f21956e220cfc13e3d709fb29e7}\label{struct_e_l_f_header_a0ebb6f21956e220cfc13e3d709fb29e7}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!data@{data}}
+\index{data@{data}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} E\+L\+F\+Header\+::data}
+
+
+
+elf.\+h 파일의 37 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a5b0c2118b948227b82c61477348f5ce6}\label{struct_e_l_f_header_a5b0c2118b948227b82c61477348f5ce6}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+ehsize@{e\+\_\+ehsize}}
+\index{e\+\_\+ehsize@{e\+\_\+ehsize}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+ehsize}{e\_ehsize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} E\+L\+F\+Header\+::e\+\_\+ehsize}
+
+
+
+elf.\+h 파일의 47 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a1970539a110b9474ca7e802385e63eff}\label{struct_e_l_f_header_a1970539a110b9474ca7e802385e63eff}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+entry@{e\+\_\+entry}}
+\index{e\+\_\+entry@{e\+\_\+entry}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+entry}{e\_entry}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} E\+L\+F\+Header\+::e\+\_\+entry}
+
+
+
+elf.\+h 파일의 43 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_abf8410fa68218cd420022ee70222e242}\label{struct_e_l_f_header_abf8410fa68218cd420022ee70222e242}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+flags@{e\+\_\+flags}}
+\index{e\+\_\+flags@{e\+\_\+flags}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+flags}{e\_flags}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} E\+L\+F\+Header\+::e\+\_\+flags}
+
+
+
+elf.\+h 파일의 46 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a15a148d4a49f9e5993698c2096e8c9bd}\label{struct_e_l_f_header_a15a148d4a49f9e5993698c2096e8c9bd}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+machine@{e\+\_\+machine}}
+\index{e\+\_\+machine@{e\+\_\+machine}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+machine}{e\_machine}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} E\+L\+F\+Header\+::e\+\_\+machine}
+
+
+
+elf.\+h 파일의 41 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a54f6348c72b743df1298f14d9727ee63}\label{struct_e_l_f_header_a54f6348c72b743df1298f14d9727ee63}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+phentsize@{e\+\_\+phentsize}}
+\index{e\+\_\+phentsize@{e\+\_\+phentsize}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+phentsize}{e\_phentsize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} E\+L\+F\+Header\+::e\+\_\+phentsize}
+
+
+
+elf.\+h 파일의 48 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a40ea098754df174746d084dd4ac1322d}\label{struct_e_l_f_header_a40ea098754df174746d084dd4ac1322d}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+phnum@{e\+\_\+phnum}}
+\index{e\+\_\+phnum@{e\+\_\+phnum}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+phnum}{e\_phnum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} E\+L\+F\+Header\+::e\+\_\+phnum}
+
+
+
+elf.\+h 파일의 49 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_aca3de0226873cd41864a32e600bef156}\label{struct_e_l_f_header_aca3de0226873cd41864a32e600bef156}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+phoff@{e\+\_\+phoff}}
+\index{e\+\_\+phoff@{e\+\_\+phoff}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+phoff}{e\_phoff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} E\+L\+F\+Header\+::e\+\_\+phoff}
+
+
+
+elf.\+h 파일의 44 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a6fea1910b959192096e6391950e55e12}\label{struct_e_l_f_header_a6fea1910b959192096e6391950e55e12}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+shentsize@{e\+\_\+shentsize}}
+\index{e\+\_\+shentsize@{e\+\_\+shentsize}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+shentsize}{e\_shentsize}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} E\+L\+F\+Header\+::e\+\_\+shentsize}
+
+
+
+elf.\+h 파일의 50 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a269f1c30e9f4a79074b4914243f83497}\label{struct_e_l_f_header_a269f1c30e9f4a79074b4914243f83497}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+shnum@{e\+\_\+shnum}}
+\index{e\+\_\+shnum@{e\+\_\+shnum}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+shnum}{e\_shnum}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} E\+L\+F\+Header\+::e\+\_\+shnum}
+
+
+
+elf.\+h 파일의 51 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_ac70240758bf6424ca5c806c65d39a63d}\label{struct_e_l_f_header_ac70240758bf6424ca5c806c65d39a63d}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+shoff@{e\+\_\+shoff}}
+\index{e\+\_\+shoff@{e\+\_\+shoff}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+shoff}{e\_shoff}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} E\+L\+F\+Header\+::e\+\_\+shoff}
+
+
+
+elf.\+h 파일의 45 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a06d7be4a0c5eb3ffcf9e6adade39949c}\label{struct_e_l_f_header_a06d7be4a0c5eb3ffcf9e6adade39949c}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+shstrndx@{e\+\_\+shstrndx}}
+\index{e\+\_\+shstrndx@{e\+\_\+shstrndx}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+shstrndx}{e\_shstrndx}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} E\+L\+F\+Header\+::e\+\_\+shstrndx}
+
+
+
+elf.\+h 파일의 52 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_afe37d30bff98bf36cb852b938fbc7c40}\label{struct_e_l_f_header_afe37d30bff98bf36cb852b938fbc7c40}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+type@{e\+\_\+type}}
+\index{e\+\_\+type@{e\+\_\+type}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+type}{e\_type}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} E\+L\+F\+Header\+::e\+\_\+type}
+
+
+
+elf.\+h 파일의 40 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a60e61e8eaa05924bef446c706d47b492}\label{struct_e_l_f_header_a60e61e8eaa05924bef446c706d47b492}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!e\+\_\+version@{e\+\_\+version}}
+\index{e\+\_\+version@{e\+\_\+version}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{e\+\_\+version}{e\_version}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} E\+L\+F\+Header\+::e\+\_\+version}
+
+
+
+elf.\+h 파일의 42 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a5b65dfa66d5f45063e099e1bd8f7d39a}\label{struct_e_l_f_header_a5b65dfa66d5f45063e099e1bd8f7d39a}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!magic@{magic}}
+\index{magic@{magic}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{magic}{magic}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} E\+L\+F\+Header\+::magic}
+
+
+
+elf.\+h 파일의 35 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_a031107283881d74df8f63a4bccd7cce1}\label{struct_e_l_f_header_a031107283881d74df8f63a4bccd7cce1}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!pad@{pad}}
+\index{pad@{pad}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{pad}{pad}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} E\+L\+F\+Header\+::pad\mbox{[}9\mbox{]}}
+
+
+
+elf.\+h 파일의 39 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{struct_e_l_f_header_aadac9bc05322252d95cff920e133ca15}\label{struct_e_l_f_header_aadac9bc05322252d95cff920e133ca15}} 
+\index{E\+L\+F\+Header@{E\+L\+F\+Header}!version@{version}}
+\index{version@{version}!E\+L\+F\+Header@{E\+L\+F\+Header}}
+\subsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} E\+L\+F\+Header\+::version}
+
+
+
+elf.\+h 파일의 38 번째 라인에서 정의되었습니다.
+
 
 
 이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/elf.\+h\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/\mbox{\hyperlink{elf_8h}{elf.\+h}}\end{DoxyCompactItemize}

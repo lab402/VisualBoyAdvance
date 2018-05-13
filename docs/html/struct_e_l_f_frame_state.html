@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_e_l_f_frame_state.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,43 +92,180 @@ $(function() {
 <div class="title">ELFFrameState 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+ELFFrameState에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_e_l_f_frame_state__coll__graph.png" border="0" usemap="#_e_l_f_frame_state_coll__map" alt="Collaboration graph"/></div>
+<map name="_e_l_f_frame_state_coll__map" id="_e_l_f_frame_state_coll__map">
+<area shape="rect" id="node2" href="struct_e_l_f_frame_state_registers.html" title="{ELFFrameStateRegisters\n||}" alt="" coords="5,175,175,252"/>
+<area shape="rect" id="node3" href="struct_e_l_f_frame_state_register.html" title="{ELFFrameStateRegister\n|+ mode\l+ reg\l+ offset\l|}" alt="" coords="9,5,171,112"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a581c2ecc500b258e244b75057eade6d2"><td class="memItemLeft" align="right" valign="top"><a id="a581c2ecc500b258e244b75057eade6d2"></a>
-<a class="el" href="struct_e_l_f_frame_state_registers.html">ELFFrameStateRegisters</a>&#160;</td><td class="memItemRight" valign="bottom"><b>registers</b></td></tr>
+<tr class="memitem:a581c2ecc500b258e244b75057eade6d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_e_l_f_frame_state_registers.html">ELFFrameStateRegisters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_frame_state.html#a581c2ecc500b258e244b75057eade6d2">registers</a></td></tr>
 <tr class="separator:a581c2ecc500b258e244b75057eade6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4884a1a012a3593b5e9911775d53e1bc"><td class="memItemLeft" align="right" valign="top"><a id="a4884a1a012a3593b5e9911775d53e1bc"></a>
-ELFCfaMode&#160;</td><td class="memItemRight" valign="bottom"><b>cfaMode</b></td></tr>
+<tr class="memitem:a4884a1a012a3593b5e9911775d53e1bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="elf_8cpp.html#a59b5196163516898039d7f4d41a3f393">ELFCfaMode</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_frame_state.html#a4884a1a012a3593b5e9911775d53e1bc">cfaMode</a></td></tr>
 <tr class="separator:a4884a1a012a3593b5e9911775d53e1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab70d9959aa4b747f95b792ce0823979c"><td class="memItemLeft" align="right" valign="top"><a id="ab70d9959aa4b747f95b792ce0823979c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>cfaRegister</b></td></tr>
+<tr class="memitem:ab70d9959aa4b747f95b792ce0823979c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_frame_state.html#ab70d9959aa4b747f95b792ce0823979c">cfaRegister</a></td></tr>
 <tr class="separator:ab70d9959aa4b747f95b792ce0823979c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a944cba546e5de720d2c88bf80c3e1691"><td class="memItemLeft" align="right" valign="top"><a id="a944cba546e5de720d2c88bf80c3e1691"></a>
-s32&#160;</td><td class="memItemRight" valign="bottom"><b>cfaOffset</b></td></tr>
+<tr class="memitem:a944cba546e5de720d2c88bf80c3e1691"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a0ce6887c26c1c49ad3be5710dd42bfd6">s32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_frame_state.html#a944cba546e5de720d2c88bf80c3e1691">cfaOffset</a></td></tr>
 <tr class="separator:a944cba546e5de720d2c88bf80c3e1691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc2236d70ad34a4e4755c842b302bff1"><td class="memItemLeft" align="right" valign="top"><a id="abc2236d70ad34a4e4755c842b302bff1"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>pc</b></td></tr>
+<tr class="memitem:abc2236d70ad34a4e4755c842b302bff1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_frame_state.html#abc2236d70ad34a4e4755c842b302bff1">pc</a></td></tr>
 <tr class="separator:abc2236d70ad34a4e4755c842b302bff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add20f26010b7c129b0473ca59c6feb84"><td class="memItemLeft" align="right" valign="top"><a id="add20f26010b7c129b0473ca59c6feb84"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>dataAlign</b></td></tr>
+<tr class="memitem:add20f26010b7c129b0473ca59c6feb84"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_frame_state.html#add20f26010b7c129b0473ca59c6feb84">dataAlign</a></td></tr>
 <tr class="separator:add20f26010b7c129b0473ca59c6feb84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5a26df4f99f4d5bdcfaea413e40b932"><td class="memItemLeft" align="right" valign="top"><a id="ad5a26df4f99f4d5bdcfaea413e40b932"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>codeAlign</b></td></tr>
+<tr class="memitem:ad5a26df4f99f4d5bdcfaea413e40b932"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_frame_state.html#ad5a26df4f99f4d5bdcfaea413e40b932">codeAlign</a></td></tr>
 <tr class="separator:ad5a26df4f99f4d5bdcfaea413e40b932"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b450cc1d351b131706b7f99a606c2f4"><td class="memItemLeft" align="right" valign="top"><a id="a3b450cc1d351b131706b7f99a606c2f4"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>returnAddress</b></td></tr>
+<tr class="memitem:a3b450cc1d351b131706b7f99a606c2f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_e_l_f_frame_state.html#a3b450cc1d351b131706b7f99a606c2f4">returnAddress</a></td></tr>
 <tr class="separator:a3b450cc1d351b131706b7f99a606c2f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00223">223</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a4884a1a012a3593b5e9911775d53e1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4884a1a012a3593b5e9911775d53e1bc">&#9670;&nbsp;</a></span>cfaMode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="elf_8cpp.html#a59b5196163516898039d7f4d41a3f393">ELFCfaMode</a> ELFFrameState::cfaMode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00226">226</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a944cba546e5de720d2c88bf80c3e1691"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a944cba546e5de720d2c88bf80c3e1691">&#9670;&nbsp;</a></span>cfaOffset</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a0ce6887c26c1c49ad3be5710dd42bfd6">s32</a> ELFFrameState::cfaOffset</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00228">228</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab70d9959aa4b747f95b792ce0823979c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab70d9959aa4b747f95b792ce0823979c">&#9670;&nbsp;</a></span>cfaRegister</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> ELFFrameState::cfaRegister</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00227">227</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad5a26df4f99f4d5bdcfaea413e40b932"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a26df4f99f4d5bdcfaea413e40b932">&#9670;&nbsp;</a></span>codeAlign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> ELFFrameState::codeAlign</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00233">233</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="add20f26010b7c129b0473ca59c6feb84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add20f26010b7c129b0473ca59c6feb84">&#9670;&nbsp;</a></span>dataAlign</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> ELFFrameState::dataAlign</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00232">232</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="abc2236d70ad34a4e4755c842b302bff1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc2236d70ad34a4e4755c842b302bff1">&#9670;&nbsp;</a></span>pc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> ELFFrameState::pc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00230">230</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a581c2ecc500b258e244b75057eade6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a581c2ecc500b258e244b75057eade6d2">&#9670;&nbsp;</a></span>registers</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_e_l_f_frame_state_registers.html">ELFFrameStateRegisters</a> ELFFrameState::registers</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00224">224</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3b450cc1d351b131706b7f99a606c2f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b450cc1d351b131706b7f99a606c2f4">&#9670;&nbsp;</a></span>returnAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> ELFFrameState::returnAddress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="elf_8cpp_source.html">elf.cpp</a> 파일의 <a class="el" href="elf_8cpp_source.html#l00234">234</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/elf.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/<a class="el" href="elf_8cpp_source.html">elf.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_e_l_f_frame_state.html">ELFFrameState</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

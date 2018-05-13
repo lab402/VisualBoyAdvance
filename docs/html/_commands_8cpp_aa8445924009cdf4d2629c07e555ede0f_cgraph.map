@@ -1,0 +1,6 @@
+<map id="winAccelAddCommands" name="winAccelAddCommands">
+<area shape="rect" id="node2" href="$class_c_accelerator_manager.html#a05227e733c2c5d4a4d8074bf28a4f333" title="CAcceleratorManager\l::AddCommandAccel" alt="" coords="216,5,363,47"/>
+<area shape="rect" id="node5" href="$class_c_accelerator_manager.html#ab534c2d8c0d7d7e30c5e907677bfad68" title="CAcceleratorManager\l::CreateEntry" alt="" coords="216,71,363,112"/>
+<area shape="rect" id="node3" href="$class_c_accelerator_manager.html#ac9e0e988625c9687666a9f582f9b3536" title="CAcceleratorManager\l::AddAccel" alt="" coords="411,5,557,47"/>
+<area shape="rect" id="node4" href="$class_c_cmd_accel_ob.html#a519f8c7ac935b0d06531589e5427b656" title="CCmdAccelOb::Add" alt="" coords="605,13,744,39"/>
+</map>

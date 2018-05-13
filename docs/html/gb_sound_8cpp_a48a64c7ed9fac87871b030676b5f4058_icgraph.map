@@ -1,0 +1,5 @@
+<map id="gbSoundChannel1" name="gbSoundChannel1">
+<area shape="rect" id="node2" href="$gb_sound_8h.html#af8c5bd90aa6277b85ed407eae7998c4a" title="gbSoundTick" alt="" coords="180,5,277,32"/>
+<area shape="rect" id="node3" href="$_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="325,5,409,32"/>
+<area shape="rect" id="node4" href="$class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="457,5,625,32"/>
+</map>

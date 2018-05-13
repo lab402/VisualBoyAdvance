@@ -1,0 +1,7 @@
+<map id="regDeleteValue" name="regDeleteValue">
+<area shape="rect" id="node2" href="$class_directories.html#a9479f79772b934344110acfccd64a064" title="Directories::OnBatteryDir\lReset" alt="" coords="180,5,347,47"/>
+<area shape="rect" id="node3" href="$class_directories.html#a2e98e0696392fcd819f48ac56012c35d" title="Directories::OnCaptureDir\lReset" alt="" coords="178,71,349,112"/>
+<area shape="rect" id="node4" href="$class_directories.html#aa323eb09c0caba8b8e5ff7984fd8e2e6" title="Directories::OnGbromDirReset" alt="" coords="164,137,363,163"/>
+<area shape="rect" id="node5" href="$class_directories.html#a944a8a843ab8f0cdec54bf8aaba7d8a5" title="Directories::OnRomDirReset" alt="" coords="170,187,357,214"/>
+<area shape="rect" id="node6" href="$class_directories.html#aeb85866cbd498c057e9bf66b58a78959" title="Directories::OnSaveDirReset" alt="" coords="170,238,357,265"/>
+</map>

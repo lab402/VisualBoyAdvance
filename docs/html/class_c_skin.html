@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_c_skin.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -69,59 +93,729 @@ $(function() {
 <div class="title">CSkin 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="skin_8h_source.html">skin.h</a>&gt;</code></p>
+<div class="dynheader">
+CSkin에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin__coll__graph.png" border="0" usemap="#_c_skin_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:ac9b8048b8c4a853574cc4c0f8b29827d"><td class="memItemLeft" align="right" valign="top"><a id="ac9b8048b8c4a853574cc4c0f8b29827d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Initialize</b> (const char *)</td></tr>
+<tr class="memitem:a2126d21d5cb401180163298c61533b87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#a2126d21d5cb401180163298c61533b87">CSkin</a> ()</td></tr>
+<tr class="separator:a2126d21d5cb401180163298c61533b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a206a4d1b135da1869bdf786aba217c2b"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#a206a4d1b135da1869bdf786aba217c2b">~CSkin</a> ()</td></tr>
+<tr class="separator:a206a4d1b135da1869bdf786aba217c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9b8048b8c4a853574cc4c0f8b29827d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#ac9b8048b8c4a853574cc4c0f8b29827d">Initialize</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *)</td></tr>
 <tr class="separator:ac9b8048b8c4a853574cc4c0f8b29827d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13edf7704211f61440871e17eda1d216"><td class="memItemLeft" align="right" valign="top"><a id="a13edf7704211f61440871e17eda1d216"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Destroy</b> ()</td></tr>
+<tr class="memitem:a13edf7704211f61440871e17eda1d216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#a13edf7704211f61440871e17eda1d216">Destroy</a> ()</td></tr>
 <tr class="separator:a13edf7704211f61440871e17eda1d216"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4897349a9944fe2e2ee9cfdc4f0baf47"><td class="memItemLeft" align="right" valign="top"><a id="a4897349a9944fe2e2ee9cfdc4f0baf47"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Hook</b> (CWnd *pWnd)</td></tr>
+<tr class="memitem:a4897349a9944fe2e2ee9cfdc4f0baf47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#a4897349a9944fe2e2ee9cfdc4f0baf47">Hook</a> (CWnd *pWnd)</td></tr>
 <tr class="separator:a4897349a9944fe2e2ee9cfdc4f0baf47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8237ed204df8eb4632ef3bc921783a3"><td class="memItemLeft" align="right" valign="top"><a id="ab8237ed204df8eb4632ef3bc921783a3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>UnHook</b> ()</td></tr>
+<tr class="memitem:ab8237ed204df8eb4632ef3bc921783a3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3">UnHook</a> ()</td></tr>
 <tr class="separator:ab8237ed204df8eb4632ef3bc921783a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99b438d858bbafa83569f19e707ba3c9"><td class="memItemLeft" align="right" valign="top"><a id="a99b438d858bbafa83569f19e707ba3c9"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Hooked</b> ()</td></tr>
+<tr class="memitem:a99b438d858bbafa83569f19e707ba3c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9">Hooked</a> ()</td></tr>
 <tr class="separator:a99b438d858bbafa83569f19e707ba3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6adaa12dbedc193c907d4a1b2c2445b"><td class="memItemLeft" align="right" valign="top"><a id="ad6adaa12dbedc193c907d4a1b2c2445b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Enable</b> (bool bEnable)</td></tr>
+<tr class="memitem:ad6adaa12dbedc193c907d4a1b2c2445b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#ad6adaa12dbedc193c907d4a1b2c2445b">Enable</a> (bool bEnable)</td></tr>
 <tr class="separator:ad6adaa12dbedc193c907d4a1b2c2445b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb8775c6c421ab3551b51e803bcf20d3"><td class="memItemLeft" align="right" valign="top"><a id="adb8775c6c421ab3551b51e803bcf20d3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Enabled</b> ()</td></tr>
+<tr class="memitem:adb8775c6c421ab3551b51e803bcf20d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#adb8775c6c421ab3551b51e803bcf20d3">Enabled</a> ()</td></tr>
 <tr class="separator:adb8775c6c421ab3551b51e803bcf20d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae819e05e0e07c194d24bc8cdf5daeb94"><td class="memItemLeft" align="right" valign="top"><a id="ae819e05e0e07c194d24bc8cdf5daeb94"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Width</b> ()</td></tr>
+<tr class="memitem:ae819e05e0e07c194d24bc8cdf5daeb94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#ae819e05e0e07c194d24bc8cdf5daeb94">Width</a> ()</td></tr>
 <tr class="separator:ae819e05e0e07c194d24bc8cdf5daeb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26de0d121ce1811feea27cc30f4c2f70"><td class="memItemLeft" align="right" valign="top"><a id="a26de0d121ce1811feea27cc30f4c2f70"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>Height</b> ()</td></tr>
+<tr class="memitem:a26de0d121ce1811feea27cc30f4c2f70"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#a26de0d121ce1811feea27cc30f4c2f70">Height</a> ()</td></tr>
 <tr class="separator:a26de0d121ce1811feea27cc30f4c2f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fe20ca67965deec6e5e29a2bf467933"><td class="memItemLeft" align="right" valign="top"><a id="a8fe20ca67965deec6e5e29a2bf467933"></a>
-RECT &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>GetBlitRect</b> ()</td></tr>
+<tr class="memitem:a8fe20ca67965deec6e5e29a2bf467933"><td class="memItemLeft" align="right" valign="top">RECT &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#a8fe20ca67965deec6e5e29a2bf467933">GetBlitRect</a> ()</td></tr>
 <tr class="separator:a8fe20ca67965deec6e5e29a2bf467933"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4112f4df38d9917d38c5db2622777c1f"><td class="memItemLeft" align="right" valign="top"><a id="a4112f4df38d9917d38c5db2622777c1f"></a>
-HDC&#160;</td><td class="memItemRight" valign="bottom"><b>HDC</b> ()</td></tr>
+<tr class="memitem:a4112f4df38d9917d38c5db2622777c1f"><td class="memItemLeft" align="right" valign="top">HDC&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#a4112f4df38d9917d38c5db2622777c1f">HDC</a> ()</td></tr>
 <tr class="separator:a4112f4df38d9917d38c5db2622777c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:ac58ecd226acd172d4941912f99e2cb12"><td class="memItemLeft" align="right" valign="top"><a id="ac58ecd226acd172d4941912f99e2cb12"></a>
-LRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><b>SkinWndProc</b> (HWND hWnd, UINT uMessage, WPARAM wParam, LPARAM lParam)</td></tr>
+<tr class="memitem:ac58ecd226acd172d4941912f99e2cb12"><td class="memItemLeft" align="right" valign="top">LRESULT CALLBACK&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_skin.html#ac58ecd226acd172d4941912f99e2cb12">SkinWndProc</a> (HWND hWnd, UINT uMessage, WPARAM wParam, LPARAM lParam)</td></tr>
 <tr class="separator:ac58ecd226acd172d4941912f99e2cb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="skin_8h_source.html">skin.h</a> 파일의 <a class="el" href="skin_8h_source.html#l00030">30</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a2126d21d5cb401180163298c61533b87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2126d21d5cb401180163298c61533b87">&#9670;&nbsp;</a></span>CSkin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSkin::CSkin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// default starting values</span></div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  m_bHooked = <span class="keyword">false</span>;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  m_OldWndProc = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  m_rect.top = 0;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  m_rect.bottom = 0;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  m_rect.right = 0;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  m_rect.left = 0;</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  m_dOldStyle = 0;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  m_oldRect = m_rect;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  m_nButtons = 0;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  m_buttons = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a206a4d1b135da1869bdf786aba217c2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a206a4d1b135da1869bdf786aba217c2b">&#9670;&nbsp;</a></span>~CSkin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CSkin::~CSkin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;{</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="class_c_skin.html#a13edf7704211f61440871e17eda1d216">Destroy</a>();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div><div class="ttc" id="class_c_skin_html_a13edf7704211f61440871e17eda1d216"><div class="ttname"><a href="class_c_skin.html#a13edf7704211f61440871e17eda1d216">CSkin::Destroy</a></div><div class="ttdeci">void Destroy()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00086">skin.cpp:86</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a206a4d1b135da1869bdf786aba217c2b_cgraph.png" border="0" usemap="#class_c_skin_a206a4d1b135da1869bdf786aba217c2b_cgraph" alt=""/></div>
+<map name="class_c_skin_a206a4d1b135da1869bdf786aba217c2b_cgraph" id="class_c_skin_a206a4d1b135da1869bdf786aba217c2b_cgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#a13edf7704211f61440871e17eda1d216" title="CSkin::Destroy" alt="" coords="161,5,272,32"/>
+<area shape="rect" id="node3" href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3" title="CSkin::UnHook" alt="" coords="320,5,431,32"/>
+<area shape="rect" id="node4" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9" title="CSkin::Hooked" alt="" coords="479,5,588,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a13edf7704211f61440871e17eda1d216"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13edf7704211f61440871e17eda1d216">&#9670;&nbsp;</a></span>Destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CSkin::Destroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00086">86</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;{</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  <span class="keywordflow">if</span> (m_buttons) {</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">delete</span>[] m_buttons;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    m_buttons = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;  }</div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="comment">// unhook the window</span></div><div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3">UnHook</a>();</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="comment">// free bitmaps and device context</span></div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <span class="keywordflow">if</span> (m_dcSkin) { SelectObject(m_dcSkin, m_hOldBmp); DeleteDC(m_dcSkin); m_dcSkin = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordflow">if</span> (m_hBmp) { DeleteObject(m_hBmp); m_hBmp = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;  <span class="comment">// free skin region</span></div><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordflow">if</span> (m_rgnSkin) { DeleteObject(m_rgnSkin); m_rgnSkin = <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>; }</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  </div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_c_skin_html_ab8237ed204df8eb4632ef3bc921783a3"><div class="ttname"><a href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3">CSkin::UnHook</a></div><div class="ttdeci">bool UnHook()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00203">skin.cpp:203</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a13edf7704211f61440871e17eda1d216_cgraph.png" border="0" usemap="#class_c_skin_a13edf7704211f61440871e17eda1d216_cgraph" alt=""/></div>
+<map name="class_c_skin_a13edf7704211f61440871e17eda1d216_cgraph" id="class_c_skin_a13edf7704211f61440871e17eda1d216_cgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3" title="CSkin::UnHook" alt="" coords="164,5,275,32"/>
+<area shape="rect" id="node3" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9" title="CSkin::Hooked" alt="" coords="323,5,432,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a13edf7704211f61440871e17eda1d216_icgraph.png" border="0" usemap="#class_c_skin_a13edf7704211f61440871e17eda1d216_icgraph" alt=""/></div>
+<map name="class_c_skin_a13edf7704211f61440871e17eda1d216_icgraph" id="class_c_skin_a13edf7704211f61440871e17eda1d216_icgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#a206a4d1b135da1869bdf786aba217c2b" title="CSkin::~CSkin" alt="" coords="164,5,272,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad6adaa12dbedc193c907d4a1b2c2445b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6adaa12dbedc193c907d4a1b2c2445b">&#9670;&nbsp;</a></span>Enable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSkin::Enable </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00110">110</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;{</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="comment">// refuse to enable if there is no window subclassed yet.</span></div><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9">Hooked</a>()) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <span class="comment">// toggle</span></div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  m_bEnabled = bEnable;</div><div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">// force window repainting</span></div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  InvalidateRect(m_hWnd, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, TRUE);</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_c_skin_html_a99b438d858bbafa83569f19e707ba3c9"><div class="ttname"><a href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9">CSkin::Hooked</a></div><div class="ttdeci">bool Hooked()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00251">skin.cpp:251</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_cgraph.png" border="0" usemap="#class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_cgraph" alt=""/></div>
+<map name="class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_cgraph" id="class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_cgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9" title="CSkin::Hooked" alt="" coords="159,5,268,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_icgraph.png" border="0" usemap="#class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_icgraph" alt=""/></div>
+<map name="class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_icgraph" id="class_c_skin_ad6adaa12dbedc193c907d4a1b2c2445b_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#a4648998e25679df69b15afdccb428b8f" title="VBA::winUpdateSkin" alt="" coords="159,245,301,272"/>
+<area shape="rect" id="node3" href="class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="349,209,612,250"/>
+<area shape="rect" id="node4" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="387,275,574,301"/>
+<area shape="rect" id="node5" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="660,195,840,221"/>
+<area shape="rect" id="node6" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="891,5,1175,32"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="901,57,1165,98"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="901,122,1165,163"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="901,187,1165,229"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="888,253,1177,280"/>
+<area shape="rect" id="node11" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="974,304,1091,331"/>
+<area shape="rect" id="node12" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1248,304,1371,331"/>
+<area shape="rect" id="node13" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="1225,355,1393,381"/>
+<area shape="rect" id="node14" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1527,212,1657,239"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1441,263,1743,289"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1491,314,1693,355"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1491,379,1693,421"/>
+<area shape="rect" id="node23" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1523,445,1661,472"/>
+<area shape="rect" id="node24" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1515,496,1669,523"/>
+<area shape="rect" id="node15" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1833,111,1991,137"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1835,161,1989,188"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1819,212,2005,239"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1809,263,2015,289"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1791,313,2033,340"/>
+<area shape="rect" id="node25" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="1813,445,2011,472"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="1792,496,2032,523"/>
+<area shape="rect" id="node30" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="1822,547,2002,573"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="2081,395,2371,421"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="2081,445,2371,472"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="2081,496,2371,523"/>
+<area shape="rect" id="node31" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="2137,547,2315,573"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adb8775c6c421ab3551b51e803bcf20d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb8775c6c421ab3551b51e803bcf20d3">&#9670;&nbsp;</a></span>Enabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSkin::Enabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00129">129</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div><div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordflow">return</span> m_bEnabled;</div><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a8fe20ca67965deec6e5e29a2bf467933"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe20ca67965deec6e5e29a2bf467933">&#9670;&nbsp;</a></span>GetBlitRect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">RECT&amp; CSkin::GetBlitRect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8h_source.html">skin.h</a> 파일의 <a class="el" href="skin_8h_source.html#l00147">147</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;{ <span class="keywordflow">return</span> m_rect; }</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a8fe20ca67965deec6e5e29a2bf467933_icgraph.png" border="0" usemap="#class_c_skin_a8fe20ca67965deec6e5e29a2bf467933_icgraph" alt=""/></div>
+<map name="class_c_skin_a8fe20ca67965deec6e5e29a2bf467933_icgraph" id="class_c_skin_a8fe20ca67965deec6e5e29a2bf467933_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#acb822065cba8b15810c5a61fd05ca831" title="VBA::adjustDestRect" alt="" coords="185,199,332,225"/>
+<area shape="rect" id="node3" href="class_direct3_d_display.html#a8b8dfd84005816382396677e23d38879" title="Direct3DDisplay::initialize" alt="" coords="380,5,551,32"/>
+<area shape="rect" id="node4" href="class_direct_draw_display.html#a310109ff2530aaa109ed048ede6e1564" title="DirectDrawDisplay::\linitialize" alt="" coords="397,57,533,98"/>
+<area shape="rect" id="node5" href="class_g_d_i_display.html#a7d3e0b3443b68302d759d7cdecd718ef" title="GDIDisplay::initialize" alt="" coords="394,123,537,149"/>
+<area shape="rect" id="node6" href="class_main_wnd.html#ab6523035512af1482f5a9656ea556661" title="MainWnd::OnMove" alt="" coords="399,173,531,200"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#a8aae2e29b1e1426dbfce42deade38485" title="MainWnd::OnSize" alt="" coords="401,224,529,251"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#ad376d27bd5299961827dda9d8700a375" title="MainWnd::OnFileTogglemenu" alt="" coords="909,265,1103,292"/>
+<area shape="rect" id="node15" href="class_open_g_l_display.html#af0db619c7083f43e9bc61f1705843b53" title="OpenGLDisplay::initialize" alt="" coords="381,325,549,352"/>
+<area shape="rect" id="node16" href="class_v_b_a.html#a4648998e25679df69b15afdccb428b8f" title="VBA::winUpdateSkin" alt="" coords="394,416,537,443"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1790,360,1919,387"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="2096,259,2253,285"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="2097,309,2252,336"/>
+<area shape="rect" id="node12" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="2082,360,2267,387"/>
+<area shape="rect" id="node13" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="2071,411,2278,437"/>
+<area shape="rect" id="node14" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="2053,461,2296,488"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="599,409,861,450"/>
+<area shape="rect" id="node18" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="637,495,823,521"/>
+<area shape="rect" id="node19" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="916,495,1096,521"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="1153,311,1437,337"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="1163,362,1427,403"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="1163,427,1427,469"/>
+<area shape="rect" id="node23" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="1163,493,1427,534"/>
+<area shape="rect" id="node24" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="1151,559,1440,585"/>
+<area shape="rect" id="node25" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="1237,609,1354,636"/>
+<area shape="rect" id="node26" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1511,584,1633,611"/>
+<area shape="rect" id="node27" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="1488,635,1656,661"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1704,511,2005,537"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1753,562,1956,603"/>
+<area shape="rect" id="node30" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1753,627,1956,669"/>
+<area shape="rect" id="node31" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1786,693,1923,720"/>
+<area shape="rect" id="node32" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1777,744,1932,771"/>
+<area shape="rect" id="node33" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="2075,693,2274,720"/>
+<area shape="rect" id="node37" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="2055,744,2295,771"/>
+<area shape="rect" id="node38" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="2085,795,2265,821"/>
+<area shape="rect" id="node34" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="2344,643,2633,669"/>
+<area shape="rect" id="node35" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="2344,693,2633,720"/>
+<area shape="rect" id="node36" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="2344,744,2633,771"/>
+<area shape="rect" id="node39" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="2399,795,2578,821"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4112f4df38d9917d38c5db2622777c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4112f4df38d9917d38c5db2622777c1f">&#9670;&nbsp;</a></span>HDC()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HDC CSkin::HDC </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00281">281</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;{</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  <span class="keywordflow">return</span> m_dcSkin;</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a4112f4df38d9917d38c5db2622777c1f_icgraph.png" border="0" usemap="#class_c_skin_a4112f4df38d9917d38c5db2622777c1f_icgraph" alt=""/></div>
+<map name="class_c_skin_a4112f4df38d9917d38c5db2622777c1f_icgraph" id="class_c_skin_a4112f4df38d9917d38c5db2622777c1f_icgraph">
+<area shape="rect" id="node2" href="skin_8cpp.html#ac58ecd226acd172d4941912f99e2cb12" title="SkinWndProc" alt="" coords="145,5,248,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a26de0d121ce1811feea27cc30f4c2f70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26de0d121ce1811feea27cc30f4c2f70">&#9670;&nbsp;</a></span>Height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> CSkin::Height </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00271">271</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;  <span class="keywordflow">return</span> m_iHeight;</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a26de0d121ce1811feea27cc30f4c2f70_icgraph.png" border="0" usemap="#class_c_skin_a26de0d121ce1811feea27cc30f4c2f70_icgraph" alt=""/></div>
+<map name="class_c_skin_a26de0d121ce1811feea27cc30f4c2f70_icgraph" id="class_c_skin_a26de0d121ce1811feea27cc30f4c2f70_icgraph">
+<area shape="rect" id="node2" href="skin_8cpp.html#ac58ecd226acd172d4941912f99e2cb12" title="SkinWndProc" alt="" coords="156,5,259,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4897349a9944fe2e2ee9cfdc4f0baf47"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4897349a9944fe2e2ee9cfdc4f0baf47">&#9670;&nbsp;</a></span>Hook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSkin::Hook </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pWnd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00139">139</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;{</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <span class="comment">// unsubclass any other window</span></div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9">Hooked</a>()) <a class="code" href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3">UnHook</a>();</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="comment">// this will be our new subclassed window</span></div><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;  m_hWnd = (HWND)*pWnd;</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  <span class="comment">// --------------------------------------------------</span></div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="comment">// change window style (get rid of the caption bar)</span></div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;  <span class="comment">// --------------------------------------------------</span></div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  LONG_PTR dwStyle = GetWindowLongPtr(m_hWnd, GWL_STYLE);</div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;  m_dOldStyle = dwStyle;</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;  dwStyle &amp;= ~(WS_CAPTION|WS_SIZEBOX);</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  SetWindowLongPtr(m_hWnd, GWL_STYLE, dwStyle);</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;  RECT r;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  pWnd-&gt;GetWindowRect(&amp;r);</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;  m_oldRect = r;</div><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;  pWnd-&gt;MoveWindow(r.left,</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                   r.top,</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                   m_iWidth,</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                   m_iHeight,</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                   FALSE);</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;  </div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  pWnd-&gt;SetMenu(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;  </div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;  <span class="keywordflow">if</span>(m_rgnSkin != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">// set the skin region to the window</span></div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    pWnd-&gt;SetWindowRgn(m_rgnSkin, <span class="keyword">true</span>);    </div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;  <span class="comment">// subclass the window procedure</span></div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;  m_OldWndProc = (WNDPROC)SetWindowLongPtr( m_hWnd, GWLP_WNDPROC, (LONG_PTR)<a class="code" href="class_c_skin.html#ac58ecd226acd172d4941912f99e2cb12">SkinWndProc</a> );</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;  <span class="comment">// store a pointer to our class instance inside the window procedure.</span></div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  <span class="keywordflow">if</span> (!SetProp(m_hWnd, <span class="stringliteral">&quot;skin&quot;</span>, (<span class="keywordtype">void</span>*)<span class="keyword">this</span>))</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    {</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      <span class="comment">// if we fail to do so, we just can&#39;t activate the skin.</span></div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;      <a class="code" href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3">UnHook</a>();</div><div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    }</div><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  </div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;  <span class="comment">// update flag</span></div><div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;  m_bHooked = ( m_OldWndProc ? true : false );</div><div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;</div><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;  <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; m_nButtons; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>++) {</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    RECT r;</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    m_buttons[<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>].<a class="code" href="class_skin_button.html#aef7f1ced23d060545eabd5b57175143a">GetRect</a>(r);</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    m_buttons[<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>].<a class="code" href="class_skin_button.html#ad70dc6ed236a2274028c32744e3690bb">CreateButton</a>(<span class="stringliteral">&quot;&quot;</span>, WS_VISIBLE, r, pWnd, 0);</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;  }</div><div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;  </div><div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;  <span class="comment">// force window repainting</span></div><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;  RedrawWindow(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,RDW_INVALIDATE|RDW_ERASE|RDW_ALLCHILDREN);  </div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  <span class="comment">// successful return if we&#39;re hooked.</span></div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <span class="keywordflow">return</span> m_bHooked;</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}</div><div class="ttc" id="class_skin_button_html_aef7f1ced23d060545eabd5b57175143a"><div class="ttname"><a href="class_skin_button.html#aef7f1ced23d060545eabd5b57175143a">SkinButton::GetRect</a></div><div class="ttdeci">void GetRect(RECT &amp;r)</div><div class="ttdef"><b>Definition:</b> <a href="skin_button_8cpp_source.html#l00316">skinButton.cpp:316</a></div></div>
+<div class="ttc" id="class_c_skin_html_ac58ecd226acd172d4941912f99e2cb12"><div class="ttname"><a href="class_c_skin.html#ac58ecd226acd172d4941912f99e2cb12">CSkin::SkinWndProc</a></div><div class="ttdeci">friend LRESULT CALLBACK SkinWndProc(HWND hWnd, UINT uMessage, WPARAM wParam, LPARAM lParam)</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00532">skin.cpp:532</a></div></div>
+<div class="ttc" id="class_skin_button_html_ad70dc6ed236a2274028c32744e3690bb"><div class="ttname"><a href="class_skin_button.html#ad70dc6ed236a2274028c32744e3690bb">SkinButton::CreateButton</a></div><div class="ttdeci">BOOL CreateButton(const char *, DWORD, const RECT &amp;, CWnd *, UINT)</div><div class="ttdef"><b>Definition:</b> <a href="skin_button_8cpp_source.html#l00321">skinButton.cpp:321</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_c_skin_html_a99b438d858bbafa83569f19e707ba3c9"><div class="ttname"><a href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9">CSkin::Hooked</a></div><div class="ttdeci">bool Hooked()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00251">skin.cpp:251</a></div></div>
+<div class="ttc" id="class_c_skin_html_ab8237ed204df8eb4632ef3bc921783a3"><div class="ttname"><a href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3">CSkin::UnHook</a></div><div class="ttdeci">bool UnHook()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00203">skin.cpp:203</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01392">expr-lex.cpp:1392</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_cgraph.png" border="0" usemap="#class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_cgraph" alt=""/></div>
+<map name="class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_cgraph" id="class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_cgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9" title="CSkin::Hooked" alt="" coords="367,6,476,32"/>
+<area shape="rect" id="node3" href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3" title="CSkin::UnHook" alt="" coords="178,31,289,58"/>
+<area shape="rect" id="node4" href="class_skin_button.html#aef7f1ced23d060545eabd5b57175143a" title="SkinButton::GetRect" alt="" coords="162,82,305,108"/>
+<area shape="rect" id="node5" href="class_skin_button.html#ad70dc6ed236a2274028c32744e3690bb" title="SkinButton::CreateButton" alt="" coords="148,132,319,159"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_icgraph.png" border="0" usemap="#class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_icgraph" alt=""/></div>
+<map name="class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_icgraph" id="class_c_skin_a4897349a9944fe2e2ee9cfdc4f0baf47_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#a4648998e25679df69b15afdccb428b8f" title="VBA::winUpdateSkin" alt="" coords="148,245,291,272"/>
+<area shape="rect" id="node3" href="class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="339,209,601,250"/>
+<area shape="rect" id="node4" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="377,275,563,301"/>
+<area shape="rect" id="node5" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="649,195,829,221"/>
+<area shape="rect" id="node6" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="880,5,1164,32"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="890,57,1154,98"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="890,122,1154,163"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="890,187,1154,229"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="877,253,1167,280"/>
+<area shape="rect" id="node11" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="963,304,1081,331"/>
+<area shape="rect" id="node12" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1237,304,1360,331"/>
+<area shape="rect" id="node13" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="1215,355,1383,381"/>
+<area shape="rect" id="node14" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1517,212,1646,239"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1431,263,1732,289"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1480,314,1683,355"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1480,379,1683,421"/>
+<area shape="rect" id="node23" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1513,445,1650,472"/>
+<area shape="rect" id="node24" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1504,496,1659,523"/>
+<area shape="rect" id="node15" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1823,111,1980,137"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1824,161,1979,188"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1809,212,1994,239"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1798,263,2005,289"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1780,313,2023,340"/>
+<area shape="rect" id="node25" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="1802,445,2001,472"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="1781,496,2021,523"/>
+<area shape="rect" id="node30" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="1811,547,1991,573"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="2071,395,2360,421"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="2071,445,2360,472"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="2071,496,2360,523"/>
+<area shape="rect" id="node31" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="2126,547,2305,573"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a99b438d858bbafa83569f19e707ba3c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99b438d858bbafa83569f19e707ba3c9">&#9670;&nbsp;</a></span>Hooked()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSkin::Hooked </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00251">251</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;{</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;  <span class="keywordflow">return</span> m_bHooked;</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_a99b438d858bbafa83569f19e707ba3c9_icgraph.png" border="0" usemap="#class_c_skin_a99b438d858bbafa83569f19e707ba3c9_icgraph" alt=""/></div>
+<map name="class_c_skin_a99b438d858bbafa83569f19e707ba3c9_icgraph" id="class_c_skin_a99b438d858bbafa83569f19e707ba3c9_icgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#ad6adaa12dbedc193c907d4a1b2c2445b" title="CSkin::Enable" alt="" coords="165,220,271,247"/>
+<area shape="rect" id="node33" href="class_c_skin.html#a4897349a9944fe2e2ee9cfdc4f0baf47" title="CSkin::Hook" alt="" coords="329,271,424,297"/>
+<area shape="rect" id="node34" href="class_c_skin.html#ab8237ed204df8eb4632ef3bc921783a3" title="CSkin::UnHook" alt="" coords="163,321,273,348"/>
+<area shape="rect" id="node3" href="class_v_b_a.html#a4648998e25679df69b15afdccb428b8f" title="VBA::winUpdateSkin" alt="" coords="480,245,623,272"/>
+<area shape="rect" id="node4" href="class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="671,209,933,250"/>
+<area shape="rect" id="node5" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="709,275,895,301"/>
+<area shape="rect" id="node6" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="981,195,1161,221"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="1212,5,1496,32"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="1222,57,1486,98"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="1222,122,1486,163"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="1222,187,1486,229"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="1209,253,1499,280"/>
+<area shape="rect" id="node12" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="1295,304,1413,331"/>
+<area shape="rect" id="node13" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1569,304,1692,331"/>
+<area shape="rect" id="node14" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="1547,355,1715,381"/>
+<area shape="rect" id="node15" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1849,212,1978,239"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1763,263,2064,289"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1812,314,2015,355"/>
+<area shape="rect" id="node23" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1812,379,2015,421"/>
+<area shape="rect" id="node24" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1845,445,1982,472"/>
+<area shape="rect" id="node25" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1836,496,1991,523"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="2155,111,2312,137"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="2156,161,2311,188"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="2141,212,2326,239"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="2130,263,2337,289"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="2112,313,2355,340"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="2134,445,2333,472"/>
+<area shape="rect" id="node30" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="2113,496,2353,523"/>
+<area shape="rect" id="node31" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="2143,547,2323,573"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="2403,395,2692,421"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="2403,445,2692,472"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="2403,496,2692,523"/>
+<area shape="rect" id="node32" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="2458,547,2637,573"/>
+<area shape="rect" id="node35" href="class_c_skin.html#a13edf7704211f61440871e17eda1d216" title="CSkin::Destroy" alt="" coords="321,321,432,348"/>
+<area shape="rect" id="node36" href="class_c_skin.html#a206a4d1b135da1869bdf786aba217c2b" title="CSkin::~CSkin" alt="" coords="497,321,605,348"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac9b8048b8c4a853574cc4c0f8b29827d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9b8048b8c4a853574cc4c0f8b29827d">&#9670;&nbsp;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSkin::Initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *&#160;</td>
+          <td class="paramname"><em>skinFile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00074">74</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;{</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="comment">// try to retrieve the skin data from resource.</span></div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">bool</span> res = GetSkinData(skinFile);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keywordflow">if</span>(!res) </div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(0, m_error);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordflow">return</span> res;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}  </div><div class="ttc" id="system_8cpp_html_a747a9cb8e015a3d45cca636b5bd0fc69"><div class="ttname"><a href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a></div><div class="ttdeci">void systemMessage(int _iId, const char *_csFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00073">system.cpp:73</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_cgraph.png" border="0" usemap="#class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_cgraph" alt=""/></div>
+<map name="class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_cgraph" id="class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_cgraph">
+<area shape="rect" id="node2" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="165,5,284,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_icgraph.png" border="0" usemap="#class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_icgraph" alt=""/></div>
+<map name="class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_icgraph" id="class_c_skin_ac9b8048b8c4a853574cc4c0f8b29827d_icgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#a4648998e25679df69b15afdccb428b8f" title="VBA::winUpdateSkin" alt="" coords="165,245,308,272"/>
+<area shape="rect" id="node3" href="class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="356,209,619,250"/>
+<area shape="rect" id="node4" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="394,275,581,301"/>
+<area shape="rect" id="node5" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="667,195,847,221"/>
+<area shape="rect" id="node6" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="897,5,1181,32"/>
+<area shape="rect" id="node7" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="907,57,1171,98"/>
+<area shape="rect" id="node8" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="907,122,1171,163"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="907,187,1171,229"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="895,253,1184,280"/>
+<area shape="rect" id="node11" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="981,304,1098,331"/>
+<area shape="rect" id="node12" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1255,304,1377,331"/>
+<area shape="rect" id="node13" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="1232,355,1400,381"/>
+<area shape="rect" id="node14" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1534,212,1663,239"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1448,263,1749,289"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1497,314,1700,355"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1497,379,1700,421"/>
+<area shape="rect" id="node23" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1530,445,1667,472"/>
+<area shape="rect" id="node24" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1521,496,1676,523"/>
+<area shape="rect" id="node15" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1840,111,1997,137"/>
+<area shape="rect" id="node16" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1841,161,1996,188"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1826,212,2011,239"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1815,263,2022,289"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1797,313,2040,340"/>
+<area shape="rect" id="node25" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="1819,445,2018,472"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="1799,496,2039,523"/>
+<area shape="rect" id="node30" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="1829,547,2009,573"/>
+<area shape="rect" id="node26" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="2088,395,2377,421"/>
+<area shape="rect" id="node27" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="2088,445,2377,472"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="2088,496,2377,523"/>
+<area shape="rect" id="node31" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="2143,547,2322,573"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab8237ed204df8eb4632ef3bc921783a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8237ed204df8eb4632ef3bc921783a3">&#9670;&nbsp;</a></span>UnHook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CSkin::UnHook </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00203">203</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;{</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;  <span class="comment">// just to be safe we&#39;ll check this</span></div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;  WNDPROC OurWnd;</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;  <span class="comment">// cannot unsubclass if there is no window subclassed</span></div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;  <span class="comment">// returns true anyways.</span></div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  <span class="keywordflow">if</span> (!<a class="code" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9">Hooked</a>()) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  </div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  <span class="keywordflow">if</span>(m_rgnSkin != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="comment">// remove the skin region from the window</span></div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    SetWindowRgn(m_hWnd, <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>, <span class="keyword">true</span>);</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  <span class="comment">// unsubclass the window procedure</span></div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  OurWnd = (WNDPROC)SetWindowLongPtr( m_hWnd, GWLP_WNDPROC, (LONG_PTR)m_OldWndProc );</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  <span class="comment">// remove the pointer to our class instance, but if we fail we don&#39;t care.</span></div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  RemoveProp(m_hWnd, <span class="stringliteral">&quot;skin&quot;</span>);</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;</div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <span class="comment">// update flag - if we can&#39;t get our window procedure address again,</span></div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <span class="comment">// we failed to unhook the window.</span></div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  m_bHooked = ( OurWnd ? false : true );</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  SetWindowLongPtr(m_hWnd, GWL_STYLE, m_dOldStyle);</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;  RECT r;</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  GetWindowRect(m_hWnd, &amp;r);</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  </div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  MoveWindow(m_hWnd,</div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;             r.left,</div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;             r.top,</div><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;             m_oldRect.right - m_oldRect.left,</div><div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;             m_oldRect.bottom - m_oldRect.top,</div><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;             FALSE);</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  </div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="comment">// force window repainting</span></div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  RedrawWindow(<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>,RDW_INVALIDATE|RDW_ERASE|RDW_ALLCHILDREN);  </div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;  <span class="comment">// successful return if we&#39;re unhooked.</span></div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;  <span class="keywordflow">return</span> !m_bHooked;</div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}</div><div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_c_skin_html_a99b438d858bbafa83569f19e707ba3c9"><div class="ttname"><a href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9">CSkin::Hooked</a></div><div class="ttdeci">bool Hooked()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00251">skin.cpp:251</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_cgraph.png" border="0" usemap="#class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_cgraph" alt=""/></div>
+<map name="class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_cgraph" id="class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_cgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#a99b438d858bbafa83569f19e707ba3c9" title="CSkin::Hooked" alt="" coords="164,5,273,32"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_icgraph.png" border="0" usemap="#class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_icgraph" alt=""/></div>
+<map name="class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_icgraph" id="class_c_skin_ab8237ed204df8eb4632ef3bc921783a3_icgraph">
+<area shape="rect" id="node2" href="class_c_skin.html#a13edf7704211f61440871e17eda1d216" title="CSkin::Destroy" alt="" coords="164,195,275,221"/>
+<area shape="rect" id="node4" href="class_c_skin.html#a4897349a9944fe2e2ee9cfdc4f0baf47" title="CSkin::Hook" alt="" coords="172,245,267,272"/>
+<area shape="rect" id="node3" href="class_c_skin.html#a206a4d1b135da1869bdf786aba217c2b" title="CSkin::~CSkin" alt="" coords="340,195,448,221"/>
+<area shape="rect" id="node5" href="class_v_b_a.html#a4648998e25679df69b15afdccb428b8f" title="VBA::winUpdateSkin" alt="" coords="323,245,465,272"/>
+<area shape="rect" id="node6" href="class_main_wnd.html#a38b0a1dbd8af4407e43866565ffb9bad" title="MainWnd::OnOptionsVideoRenderoptions\lSelectskin" alt="" coords="513,209,776,250"/>
+<area shape="rect" id="node7" href="class_v_b_a.html#a0db47ba257f450e098e7079199385b70" title="VBA::updateRenderMethod0" alt="" coords="551,275,738,301"/>
+<area shape="rect" id="node8" href="class_v_b_a.html#a1d5b9c4597d5c565ce4d8ba1e594a89f" title="VBA::updateRenderMethod" alt="" coords="824,195,1004,221"/>
+<area shape="rect" id="node9" href="class_main_wnd.html#a0418a1b43cf05159e2e0679bc538e669" title="MainWnd::OnOptionsVideoRendermethodGdi" alt="" coords="1055,5,1339,32"/>
+<area shape="rect" id="node10" href="class_main_wnd.html#a09d758ad2d47abea0fbed2f778501958" title="MainWnd::OnOptionsVideoRendermethod\lDirectdraw" alt="" coords="1065,57,1329,98"/>
+<area shape="rect" id="node11" href="class_main_wnd.html#aa90dfd9dfe90390a030a60e484af0958" title="MainWnd::OnOptionsVideoRendermethod\lDirect3d" alt="" coords="1065,122,1329,163"/>
+<area shape="rect" id="node12" href="class_main_wnd.html#ad8709590f7d9289c19ec3a216490d742" title="MainWnd::OnOptionsVideoRendermethod\lOpengl" alt="" coords="1065,187,1329,229"/>
+<area shape="rect" id="node13" href="class_main_wnd.html#a5f44893bd6c5452bbd514c034ee15fbd" title="MainWnd::OnOptionsVideoRenderoptionsSkin" alt="" coords="1052,253,1341,280"/>
+<area shape="rect" id="node14" href="class_v_b_a.html#a641fd39cdf7ab5f8eff2f85f3ecf3260" title="VBA::initDisplay" alt="" coords="1138,304,1255,331"/>
+<area shape="rect" id="node15" href="class_v_b_a.html#a35c73ff552824e3eba6e90393a4692d4" title="VBA::InitInstance" alt="" coords="1412,304,1535,331"/>
+<area shape="rect" id="node16" href="class_v_b_a.html#ac278ece4958310ce2ef8751afbad08f3" title="VBA::updateWindowSize" alt="" coords="1389,355,1557,381"/>
+<area shape="rect" id="node17" href="class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="1691,212,1821,239"/>
+<area shape="rect" id="node23" href="class_main_wnd.html#a261e810d4a9386c968d30a3449389f54" title="MainWnd::OnOptionsVideoFullscreenstretchtofit" alt="" coords="1605,263,1907,289"/>
+<area shape="rect" id="node24" href="class_main_wnd.html#a8fce3257c75cb141371c422adbcb5fd1" title="MainWnd::OnOptionsGameboy\lBorder" alt="" coords="1655,314,1857,355"/>
+<area shape="rect" id="node25" href="class_main_wnd.html#a3a618010f19c5aa69a036380631eaea7" title="MainWnd::OnOptionsGameboy\lBorderAutomatic" alt="" coords="1655,379,1857,421"/>
+<area shape="rect" id="node26" href="_v_b_a_8cpp.html#acbe11d528f9aa5dca34dbcaa5866173c" title="systemGbBorderOn" alt="" coords="1687,445,1825,472"/>
+<area shape="rect" id="node27" href="class_v_b_a.html#afe121e9ee080eca73146eb339408a148" title="VBA::updateVideoSize" alt="" coords="1679,496,1833,523"/>
+<area shape="rect" id="node18" href="class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="1997,111,2155,137"/>
+<area shape="rect" id="node19" href="class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="1999,161,2153,188"/>
+<area shape="rect" id="node20" href="class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="1983,212,2169,239"/>
+<area shape="rect" id="node21" href="class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="1973,263,2179,289"/>
+<area shape="rect" id="node22" href="class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="1955,313,2197,340"/>
+<area shape="rect" id="node28" href="class_main_wnd.html#a3db1b6ad5af63ac2c3476868c015f6aa" title="MainWnd::OnOptionVideoSize" alt="" coords="1977,445,2175,472"/>
+<area shape="rect" id="node32" href="class_main_wnd.html#af40af1ba864ff1718ef3fe96279656d2" title="MainWnd::OnOptionsVideoFullscreen" alt="" coords="1956,496,2196,523"/>
+<area shape="rect" id="node33" href="class_main_wnd.html#ac2dd4c52f72943279a8d8338edc06343" title="MainWnd::winConfirmMode" alt="" coords="1986,547,2166,573"/>
+<area shape="rect" id="node29" href="class_main_wnd.html#a6cdf116ca046f531f38d3d4ecb506f93" title="MainWnd::OnOptionsVideoFullscreen320x240" alt="" coords="2245,395,2535,421"/>
+<area shape="rect" id="node30" href="class_main_wnd.html#ae205b52e438eb0305310ca81436967db" title="MainWnd::OnOptionsVideoFullscreen640x480" alt="" coords="2245,445,2535,472"/>
+<area shape="rect" id="node31" href="class_main_wnd.html#a2b287efa1b6df3057aedd5e5e6a85d6e" title="MainWnd::OnOptionsVideoFullscreen800x600" alt="" coords="2245,496,2535,523"/>
+<area shape="rect" id="node34" href="class_main_wnd.html#a6e5d37a503b080743b30005e2d51e28d" title="MainWnd::OnConfirmMode" alt="" coords="2301,547,2479,573"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ae819e05e0e07c194d24bc8cdf5daeb94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae819e05e0e07c194d24bc8cdf5daeb94">&#9670;&nbsp;</a></span>Width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> CSkin::Width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00261">261</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;{</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;  <span class="keywordflow">return</span> m_iWidth;</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;}</div></div><!-- fragment --><div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94_icgraph.png" border="0" usemap="#class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94_icgraph" alt=""/></div>
+<map name="class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94_icgraph" id="class_c_skin_ae819e05e0e07c194d24bc8cdf5daeb94_icgraph">
+<area shape="rect" id="node2" href="skin_8cpp.html#ac58ecd226acd172d4941912f99e2cb12" title="SkinWndProc" alt="" coords="152,5,255,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Friend, 그리고 관련된 함수 문서화</h2>
+<a id="ac58ecd226acd172d4941912f99e2cb12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac58ecd226acd172d4941912f99e2cb12">&#9670;&nbsp;</a></span>SkinWndProc</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LRESULT CALLBACK SkinWndProc </td>
+          <td>(</td>
+          <td class="paramtype">HWND&#160;</td>
+          <td class="paramname"><em>hWnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>uMessage</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">WPARAM&#160;</td>
+          <td class="paramname"><em>wParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPARAM&#160;</td>
+          <td class="paramname"><em>lParam</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="skin_8cpp_source.html">skin.cpp</a> 파일의 <a class="el" href="skin_8cpp_source.html#l00532">532</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;{</div><div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;  <span class="comment">// we will need a pointer to the associated class instance</span></div><div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;  <span class="comment">// (it was stored in the window before, remember?)</span></div><div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;  <a class="code" href="class_c_skin.html">CSkin</a> *pSkin = (<a class="code" href="class_c_skin.html">CSkin</a>*)GetProp(hWnd, _T(<span class="stringliteral">&quot;skin&quot;</span>));</div><div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;</div><div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;  <span class="comment">// to handle WM_PAINT</span></div><div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;  PAINTSTRUCT ps;</div><div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;</div><div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;  <span class="comment">// if we fail to get our class instance, we can&#39;t handle anything.</span></div><div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;  <span class="keywordflow">if</span> (!pSkin) <span class="keywordflow">return</span> DefWindowProc(hWnd,uMessage,wParam,lParam);</div><div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;</div><div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;  <span class="keywordflow">switch</span>(uMessage)</div><div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;    {</div><div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keywordflow">case</span> WM_WINDOWPOSCHANGING:</div><div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;      {</div><div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        LPWINDOWPOS pos = (LPWINDOWPOS)lParam;</div><div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        pos-&gt;cx = pSkin-&gt;<a class="code" href="class_c_skin.html#ae819e05e0e07c194d24bc8cdf5daeb94">Width</a>();</div><div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        pos-&gt;cy = pSkin-&gt;<a class="code" href="class_c_skin.html#a26de0d121ce1811feea27cc30f4c2f70">Height</a>();</div><div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        <span class="keywordflow">return</span> 0L;</div><div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;      }</div><div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;      <span class="keywordflow">break</span>;</div><div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;</div><div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    <span class="keywordflow">case</span> WM_PAINT:</div><div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160;      {</div><div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;        <span class="comment">// ---------------------------------------------------------</span></div><div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        <span class="comment">// here we just need to blit our skin</span></div><div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        <span class="comment">// directly to the device context</span></div><div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="comment">// passed by the painting message.</span></div><div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        <span class="comment">// ---------------------------------------------------------</span></div><div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        BeginPaint(hWnd,&amp;ps);</div><div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;</div><div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        <span class="comment">// blit the skin</span></div><div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        BitBlt(ps.hdc,0,0,pSkin-&gt;<a class="code" href="class_c_skin.html#ae819e05e0e07c194d24bc8cdf5daeb94">Width</a>(),pSkin-&gt;<a class="code" href="class_c_skin.html#a26de0d121ce1811feea27cc30f4c2f70">Height</a>(),pSkin-&gt;<a class="code" href="class_c_skin.html#a4112f4df38d9917d38c5db2622777c1f">HDC</a>(),0,0,SRCCOPY);</div><div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;</div><div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        EndPaint(hWnd,&amp;ps);</div><div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;      }</div><div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;</div><div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;    <span class="keywordflow">case</span> WM_LBUTTONDOWN:</div><div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;      {</div><div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        <span class="comment">// ---------------------------------------------------------</span></div><div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        <span class="comment">// this is a common trick for easy dragging of the window.</span></div><div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        <span class="comment">// this message fools windows telling that the user is</span></div><div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        <span class="comment">// actually dragging the application caption bar.</span></div><div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        <span class="comment">// ---------------------------------------------------------</span></div><div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        SendMessage(hWnd, WM_NCLBUTTONDOWN, HTCAPTION,<a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        <span class="keywordflow">break</span>;</div><div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;      }</div><div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;</div><div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;    }</div><div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;</div><div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;  <span class="comment">// ---------------------------------------------------------</span></div><div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  <span class="comment">// call the default window procedure to keep things going.</span></div><div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;  <span class="comment">// ---------------------------------------------------------</span></div><div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;  <span class="keywordflow">return</span> CallWindowProc(pSkin-&gt;m_OldWndProc, hWnd, uMessage, wParam, lParam);</div><div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;}</div><div class="ttc" id="class_c_skin_html_a4112f4df38d9917d38c5db2622777c1f"><div class="ttname"><a href="class_c_skin.html#a4112f4df38d9917d38c5db2622777c1f">CSkin::HDC</a></div><div class="ttdeci">HDC HDC()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00281">skin.cpp:281</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_c_skin_html_a26de0d121ce1811feea27cc30f4c2f70"><div class="ttname"><a href="class_c_skin.html#a26de0d121ce1811feea27cc30f4c2f70">CSkin::Height</a></div><div class="ttdeci">int Height()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00271">skin.cpp:271</a></div></div>
+<div class="ttc" id="class_c_skin_html_ae819e05e0e07c194d24bc8cdf5daeb94"><div class="ttname"><a href="class_c_skin.html#ae819e05e0e07c194d24bc8cdf5daeb94">CSkin::Width</a></div><div class="ttdeci">int Width()</div><div class="ttdef"><b>Definition:</b> <a href="skin_8cpp_source.html#l00261">skin.cpp:261</a></div></div>
+<div class="ttc" id="class_c_skin_html"><div class="ttname"><a href="class_c_skin.html">CSkin</a></div><div class="ttdef"><b>Definition:</b> <a href="skin_8h_source.html#l00030">skin.h:30</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="skin_8h_source.html">skin.h</a></li>
-<li>src/win32/skin.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="skin_8h_source.html">skin.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="skin_8cpp_source.html">skin.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_c_skin.html">CSkin</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

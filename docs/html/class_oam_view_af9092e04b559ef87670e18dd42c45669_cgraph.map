@@ -1,0 +1,6 @@
+<map id="OamView::paint" name="OamView::paint">
+<area shape="rect" id="node2" href="$class_oam_view.html#a391d8ee2931b2927e936c7100e676451" title="OamView::render" alt="" coords="185,5,307,32"/>
+<area shape="rect" id="node4" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="168,56,324,83"/>
+<area shape="rect" id="node5" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="171,107,321,133"/>
+<area shape="rect" id="node3" href="$class_oam_view.html#aafceb25b05d3ff2eacffa1a53308ee1d" title="OamView::setAttributes" alt="" coords="372,5,532,32"/>
+</map>

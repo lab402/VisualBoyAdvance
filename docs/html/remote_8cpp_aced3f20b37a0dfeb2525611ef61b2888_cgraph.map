@@ -1,0 +1,5 @@
+<map id="remoteStubSignal" name="remoteStubSignal">
+<area shape="rect" id="node2" href="$remote_8cpp.html#a10da286ad7e1f3a23321ecb350790632" title="remoteSendStatus" alt="" coords="179,31,309,57"/>
+<area shape="rect" id="node3" href="$remote_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="357,5,484,32"/>
+<area shape="rect" id="node4" href="$remote_8cpp.html#a81762106aecfb89930ba4e1167fa707b" title="remotePutPacket" alt="" coords="359,56,482,83"/>
+</map>

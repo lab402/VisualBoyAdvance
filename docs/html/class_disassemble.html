@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_disassemble.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -71,145 +95,1142 @@ $(function() {
 <div class="title">Disassemble 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_disassemble_8h_source.html">Disassemble.h</a>&gt;</code></p>
 <div class="dynheader">
 Disassemble에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_disassemble.png" usemap="#Disassemble_map" alt=""/>
-  <map id="Disassemble_map" name="Disassemble_map">
-<area href="class_resize_dlg.html" alt="ResizeDlg" shape="rect" coords="0,56,99,80"/>
-<area href="class_i_update_listener.html" alt="IUpdateListener" shape="rect" coords="109,56,208,80"/>
+<div class="center"><img src="class_disassemble__inherit__graph.png" border="0" usemap="#_disassemble_inherit__map" alt="Inheritance graph"/></div>
+<map name="_disassemble_inherit__map" id="_disassemble_inherit__map">
+<area shape="rect" id="node2" href="class_resize_dlg.html" title="{ResizeDlg\n||+ ResizeDlg()\l+ AddDialogData()\l+ SetData()\l+ UpdateWindowSize()\l+ OnWndMsg()\l}" alt="" coords="5,131,160,267"/>
+<area shape="rect" id="node4" href="class_i_update_listener.html" title="{IUpdateListener\n||+ update()\l}" alt="" coords="184,160,296,237"/>
 </map>
- </div></div>
+</div>
+<div class="dynheader">
+Disassemble에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble__coll__graph.png" border="0" usemap="#_disassemble_coll__map" alt="Collaboration graph"/></div>
+<map name="_disassemble_coll__map" id="_disassemble_coll__map">
+<area shape="rect" id="node2" href="class_resize_dlg.html" title="{ResizeDlg\n||+ ResizeDlg()\l+ AddDialogData()\l+ SetData()\l+ UpdateWindowSize()\l+ OnWndMsg()\l}" alt="" coords="5,131,160,267"/>
+<area shape="rect" id="node4" href="class_i_update_listener.html" title="{IUpdateListener\n||+ update()\l}" alt="" coords="184,160,296,237"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:ad63913a23ece149e6d04f14419966822"><td class="memItemLeft" align="right" valign="top"><a id="ad63913a23ece149e6d04f14419966822"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_DISASSEMBLE
+<tr class="memitem:ad63913a23ece149e6d04f14419966822"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_disassemble.html#ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d">IDD</a> = IDD_DISASSEMBLE
  }</td></tr>
 <tr class="separator:ad63913a23ece149e6d04f14419966822"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a30fc26e4204bd886f7cd8eb0c6c22e88"><td class="memItemLeft" align="right" valign="top"><a id="a30fc26e4204bd886f7cd8eb0c6c22e88"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update</b> ()</td></tr>
+<tr class="memitem:a30fc26e4204bd886f7cd8eb0c6c22e88"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a30fc26e4204bd886f7cd8eb0c6c22e88">update</a> ()</td></tr>
 <tr class="separator:a30fc26e4204bd886f7cd8eb0c6c22e88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cdf11d53ce0f170ad7dd8fc66961805"><td class="memItemLeft" align="right" valign="top"><a id="a7cdf11d53ce0f170ad7dd8fc66961805"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></tr>
+<tr class="memitem:a7cdf11d53ce0f170ad7dd8fc66961805"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a> ()</td></tr>
 <tr class="separator:a7cdf11d53ce0f170ad7dd8fc66961805"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3db9bf735a8a836c5250bf1d5886fce"><td class="memItemLeft" align="right" valign="top"><a id="ac3db9bf735a8a836c5250bf1d5886fce"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Disassemble</b> (CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:ac3db9bf735a8a836c5250bf1d5886fce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#ac3db9bf735a8a836c5250bf1d5886fce">Disassemble</a> (CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:ac3db9bf735a8a836c5250bf1d5886fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_resize_dlg"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_resize_dlg')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_resize_dlg.html">ResizeDlg</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:a87bab778e9312f274ebe750d4c3a67ee inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="a87bab778e9312f274ebe750d4c3a67ee"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>ResizeDlg</b> (UINT id, CWnd *parent=NULL)</td></tr>
+<tr class="memitem:a87bab778e9312f274ebe750d4c3a67ee inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg</a> (UINT <a class="el" href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a>, CWnd *parent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:a87bab778e9312f274ebe750d4c3a67ee inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5657ce3f83f261aceaf138cd1c69f0fc inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="a5657ce3f83f261aceaf138cd1c69f0fc"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><b>AddDialogData</b> ()</td></tr>
+<tr class="memitem:a5657ce3f83f261aceaf138cd1c69f0fc inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc">AddDialogData</a> ()</td></tr>
 <tr class="separator:a5657ce3f83f261aceaf138cd1c69f0fc inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a3965f44a0c2f5ba9aaa798a9a81df5 inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="a6a3965f44a0c2f5ba9aaa798a9a81df5"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>SetData</b> (const <a class="el" href="struct_dialog_sizer_sizing_item.html">DialogSizerSizingItem</a> *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</td></tr>
+<tr class="memitem:a6a3965f44a0c2f5ba9aaa798a9a81df5 inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">SetData</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="struct_dialog_sizer_sizing_item.html">DialogSizerSizingItem</a> *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</td></tr>
 <tr class="separator:a6a3965f44a0c2f5ba9aaa798a9a81df5 inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2d0d2b44dd32f668c6d9091b14bfc00 inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="ae2d0d2b44dd32f668c6d9091b14bfc00"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateWindowSize</b> (const int cx, const int cy, HWND)</td></tr>
+<tr class="memitem:ae2d0d2b44dd32f668c6d9091b14bfc00 inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#ae2d0d2b44dd32f668c6d9091b14bfc00">UpdateWindowSize</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cx, <a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> cy, HWND)</td></tr>
 <tr class="separator:ae2d0d2b44dd32f668c6d9091b14bfc00 inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d3f421da2488db11224b0508be654fd inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top"><a id="a9d3f421da2488db11224b0508be654fd"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnWndMsg</b> (UINT, WPARAM, LPARAM, LRESULT *)</td></tr>
+<tr class="memitem:a9d3f421da2488db11224b0508be654fd inherit pub_methods_class_resize_dlg"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_resize_dlg.html#a9d3f421da2488db11224b0508be654fd">OnWndMsg</a> (UINT, WPARAM, LPARAM, LRESULT *)</td></tr>
 <tr class="separator:a9d3f421da2488db11224b0508be654fd inherit pub_methods_class_resize_dlg"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a06c362364d2e01bac10fbcfb7ab28f50"><td class="memItemLeft" align="right" valign="top"><a id="a06c362364d2e01bac10fbcfb7ab28f50"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>count</b></td></tr>
+<tr class="memitem:a06c362364d2e01bac10fbcfb7ab28f50"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a></td></tr>
 <tr class="separator:a06c362364d2e01bac10fbcfb7ab28f50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a347234b8c8fa03c0bc21e39c03efc36d"><td class="memItemLeft" align="right" valign="top"><a id="a347234b8c8fa03c0bc21e39c03efc36d"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>autoUpdate</b></td></tr>
+<tr class="memitem:a347234b8c8fa03c0bc21e39c03efc36d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a347234b8c8fa03c0bc21e39c03efc36d">autoUpdate</a></td></tr>
 <tr class="separator:a347234b8c8fa03c0bc21e39c03efc36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a960ac8317ada7182e59132a3ee4afb48"><td class="memItemLeft" align="right" valign="top"><a id="a960ac8317ada7182e59132a3ee4afb48"></a>
-u32&#160;</td><td class="memItemRight" valign="bottom"><b>address</b></td></tr>
+<tr class="memitem:a960ac8317ada7182e59132a3ee4afb48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a></td></tr>
 <tr class="separator:a960ac8317ada7182e59132a3ee4afb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a74582f94dacc9f2eac347fd59b2a906b"><td class="memItemLeft" align="right" valign="top"><a id="a74582f94dacc9f2eac347fd59b2a906b"></a>
-CEdit&#160;</td><td class="memItemRight" valign="bottom"><b>m_address</b></td></tr>
+<tr class="memitem:a74582f94dacc9f2eac347fd59b2a906b"><td class="memItemLeft" align="right" valign="top">CEdit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a74582f94dacc9f2eac347fd59b2a906b">m_address</a></td></tr>
 <tr class="separator:a74582f94dacc9f2eac347fd59b2a906b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99205259bac8d57ff61ca23458f76634"><td class="memItemLeft" align="right" valign="top"><a id="a99205259bac8d57ff61ca23458f76634"></a>
-CListBox&#160;</td><td class="memItemRight" valign="bottom"><b>m_list</b></td></tr>
+<tr class="memitem:a99205259bac8d57ff61ca23458f76634"><td class="memItemLeft" align="right" valign="top">CListBox&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a></td></tr>
 <tr class="separator:a99205259bac8d57ff61ca23458f76634"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa38e1a7ec55e3fbe47d067e3a46df422"><td class="memItemLeft" align="right" valign="top"><a id="aa38e1a7ec55e3fbe47d067e3a46df422"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_c</b></td></tr>
+<tr class="memitem:aa38e1a7ec55e3fbe47d067e3a46df422"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#aa38e1a7ec55e3fbe47d067e3a46df422">m_c</a></td></tr>
 <tr class="separator:aa38e1a7ec55e3fbe47d067e3a46df422"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca528eed73b34340d601b725dd688b07"><td class="memItemLeft" align="right" valign="top"><a id="aca528eed73b34340d601b725dd688b07"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_f</b></td></tr>
+<tr class="memitem:aca528eed73b34340d601b725dd688b07"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#aca528eed73b34340d601b725dd688b07">m_f</a></td></tr>
 <tr class="separator:aca528eed73b34340d601b725dd688b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b51f716f8d8513da506a1d7875ca500"><td class="memItemLeft" align="right" valign="top"><a id="a6b51f716f8d8513da506a1d7875ca500"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_i</b></td></tr>
+<tr class="memitem:a6b51f716f8d8513da506a1d7875ca500"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a6b51f716f8d8513da506a1d7875ca500">m_i</a></td></tr>
 <tr class="separator:a6b51f716f8d8513da506a1d7875ca500"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae8c58060e32c1b456fea8c047052a746"><td class="memItemLeft" align="right" valign="top"><a id="ae8c58060e32c1b456fea8c047052a746"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_n</b></td></tr>
+<tr class="memitem:ae8c58060e32c1b456fea8c047052a746"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#ae8c58060e32c1b456fea8c047052a746">m_n</a></td></tr>
 <tr class="separator:ae8c58060e32c1b456fea8c047052a746"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a477510b19843360a883717917f387412"><td class="memItemLeft" align="right" valign="top"><a id="a477510b19843360a883717917f387412"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_t</b></td></tr>
+<tr class="memitem:a477510b19843360a883717917f387412"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a477510b19843360a883717917f387412">m_t</a></td></tr>
 <tr class="separator:a477510b19843360a883717917f387412"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8fad0495b1da26907516e83c876ec08"><td class="memItemLeft" align="right" valign="top"><a id="ac8fad0495b1da26907516e83c876ec08"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_v</b></td></tr>
+<tr class="memitem:ac8fad0495b1da26907516e83c876ec08"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#ac8fad0495b1da26907516e83c876ec08">m_v</a></td></tr>
 <tr class="separator:ac8fad0495b1da26907516e83c876ec08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4b4e68b91013731333b3019bbc16f1d"><td class="memItemLeft" align="right" valign="top"><a id="ac4b4e68b91013731333b3019bbc16f1d"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_z</b></td></tr>
+<tr class="memitem:ac4b4e68b91013731333b3019bbc16f1d"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#ac4b4e68b91013731333b3019bbc16f1d">m_z</a></td></tr>
 <tr class="separator:ac4b4e68b91013731333b3019bbc16f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b707e1da3b01abda044e78929404cc"><td class="memItemLeft" align="right" valign="top"><a id="a30b707e1da3b01abda044e78929404cc"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mode</b></td></tr>
+<tr class="memitem:a30b707e1da3b01abda044e78929404cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a></td></tr>
 <tr class="separator:a30b707e1da3b01abda044e78929404cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:a41d0930174f47e08037b1ea675d03ba0"><td class="memItemLeft" align="right" valign="top"><a id="a41d0930174f47e08037b1ea675d03ba0"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:a41d0930174f47e08037b1ea675d03ba0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a41d0930174f47e08037b1ea675d03ba0">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:a41d0930174f47e08037b1ea675d03ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ff6c6b502de3f37aaff6c2f188157a8"><td class="memItemLeft" align="right" valign="top"><a id="a2ff6c6b502de3f37aaff6c2f188157a8"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>PostNcDestroy</b> ()</td></tr>
+<tr class="memitem:a2ff6c6b502de3f37aaff6c2f188157a8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a2ff6c6b502de3f37aaff6c2f188157a8">PostNcDestroy</a> ()</td></tr>
 <tr class="separator:a2ff6c6b502de3f37aaff6c2f188157a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5423cb1c85c1e4bb05b3d4018c804826"><td class="memItemLeft" align="right" valign="top"><a id="a5423cb1c85c1e4bb05b3d4018c804826"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAutoUpdate</b> ()</td></tr>
+<tr class="memitem:a5423cb1c85c1e4bb05b3d4018c804826"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a5423cb1c85c1e4bb05b3d4018c804826">OnAutoUpdate</a> ()</td></tr>
 <tr class="separator:a5423cb1c85c1e4bb05b3d4018c804826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a713e75749b5c7c79927075b57431a298"><td class="memItemLeft" align="right" valign="top"><a id="a713e75749b5c7c79927075b57431a298"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnAutomatic</b> ()</td></tr>
+<tr class="memitem:a713e75749b5c7c79927075b57431a298"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a713e75749b5c7c79927075b57431a298">OnAutomatic</a> ()</td></tr>
 <tr class="separator:a713e75749b5c7c79927075b57431a298"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11695fe0ce9003a5cfcd58e86ad6047e"><td class="memItemLeft" align="right" valign="top"><a id="a11695fe0ce9003a5cfcd58e86ad6047e"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnArm</b> ()</td></tr>
+<tr class="memitem:a11695fe0ce9003a5cfcd58e86ad6047e"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a11695fe0ce9003a5cfcd58e86ad6047e">OnArm</a> ()</td></tr>
 <tr class="separator:a11695fe0ce9003a5cfcd58e86ad6047e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f239c5117018f44ee0847b530a9eee1"><td class="memItemLeft" align="right" valign="top"><a id="a8f239c5117018f44ee0847b530a9eee1"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnClose</b> ()</td></tr>
+<tr class="memitem:a8f239c5117018f44ee0847b530a9eee1"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a8f239c5117018f44ee0847b530a9eee1">OnClose</a> ()</td></tr>
 <tr class="separator:a8f239c5117018f44ee0847b530a9eee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add1cb356f3605cc46f9c83f29473db24"><td class="memItemLeft" align="right" valign="top"><a id="add1cb356f3605cc46f9c83f29473db24"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnGo</b> ()</td></tr>
+<tr class="memitem:add1cb356f3605cc46f9c83f29473db24"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#add1cb356f3605cc46f9c83f29473db24">OnGo</a> ()</td></tr>
 <tr class="separator:add1cb356f3605cc46f9c83f29473db24"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad757b7defc104599f1a20730cf7f3d63"><td class="memItemLeft" align="right" valign="top"><a id="ad757b7defc104599f1a20730cf7f3d63"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnGopc</b> ()</td></tr>
+<tr class="memitem:ad757b7defc104599f1a20730cf7f3d63"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63">OnGopc</a> ()</td></tr>
 <tr class="separator:ad757b7defc104599f1a20730cf7f3d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d25720f4d6c7a31281301b93b0ae02a"><td class="memItemLeft" align="right" valign="top"><a id="a9d25720f4d6c7a31281301b93b0ae02a"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnNext</b> ()</td></tr>
+<tr class="memitem:a9d25720f4d6c7a31281301b93b0ae02a"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a9d25720f4d6c7a31281301b93b0ae02a">OnNext</a> ()</td></tr>
 <tr class="separator:a9d25720f4d6c7a31281301b93b0ae02a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b66d72bb746fe9df6bbcb4831dbf8ad"><td class="memItemLeft" align="right" valign="top"><a id="a9b66d72bb746fe9df6bbcb4831dbf8ad"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnRefresh</b> ()</td></tr>
+<tr class="memitem:a9b66d72bb746fe9df6bbcb4831dbf8ad"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a9b66d72bb746fe9df6bbcb4831dbf8ad">OnRefresh</a> ()</td></tr>
 <tr class="separator:a9b66d72bb746fe9df6bbcb4831dbf8ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a480844a650f1a7ab4a396ff1ffdd5655"><td class="memItemLeft" align="right" valign="top"><a id="a480844a650f1a7ab4a396ff1ffdd5655"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnThumb</b> ()</td></tr>
+<tr class="memitem:a480844a650f1a7ab4a396ff1ffdd5655"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a480844a650f1a7ab4a396ff1ffdd5655">OnThumb</a> ()</td></tr>
 <tr class="separator:a480844a650f1a7ab4a396ff1ffdd5655"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23e74e8f32758c5b6ff63914633e2ab5"><td class="memItemLeft" align="right" valign="top"><a id="a23e74e8f32758c5b6ff63914633e2ab5"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:a23e74e8f32758c5b6ff63914633e2ab5"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a23e74e8f32758c5b6ff63914633e2ab5">OnInitDialog</a> ()</td></tr>
 <tr class="separator:a23e74e8f32758c5b6ff63914633e2ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96149abe6cfe456c0d799dfe59b19826"><td class="memItemLeft" align="right" valign="top"><a id="a96149abe6cfe456c0d799dfe59b19826"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnVScroll</b> (UINT nSBCode, UINT nPos, CScrollBar *pScrollBar)</td></tr>
+<tr class="memitem:a96149abe6cfe456c0d799dfe59b19826"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_disassemble.html#a96149abe6cfe456c0d799dfe59b19826">OnVScroll</a> (UINT nSBCode, UINT nPos, CScrollBar *pScrollBar)</td></tr>
 <tr class="separator:a96149abe6cfe456c0d799dfe59b19826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00036">36</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="ad63913a23ece149e6d04f14419966822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad63913a23ece149e6d04f14419966822">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;{ <a class="code" href="class_disassemble.html#ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d">IDD</a> = <a class="code" href="resource_8h.html#ab61c113ce3315c790b521edf74501d0a">IDD_DISASSEMBLE</a> };</div><div class="ttc" id="class_disassemble_html_ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d"><div class="ttname"><a href="class_disassemble.html#ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d">Disassemble::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00049">Disassemble.h:49</a></div></div>
+<div class="ttc" id="resource_8h_html_ab61c113ce3315c790b521edf74501d0a"><div class="ttname"><a href="resource_8h.html#ab61c113ce3315c790b521edf74501d0a">IDD_DISASSEMBLE</a></div><div class="ttdeci">#define IDD_DISASSEMBLE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00079">resource.h:79</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="ac3db9bf735a8a836c5250bf1d5886fce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3db9bf735a8a836c5250bf1d5886fce">&#9670;&nbsp;</a></span>Disassemble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Disassemble::Disassemble </td>
+          <td>(</td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  : <a class="code" href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg</a>(<a class="code" href="class_disassemble.html#ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d">Disassemble::IDD</a>, pParent)</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(Disassemble)</span></div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="class_disassemble.html#aa38e1a7ec55e3fbe47d067e3a46df422">m_c</a> = FALSE;</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="class_disassemble.html#aca528eed73b34340d601b725dd688b07">m_f</a> = FALSE;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="class_disassemble.html#a6b51f716f8d8513da506a1d7875ca500">m_i</a> = FALSE;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <a class="code" href="class_disassemble.html#ae8c58060e32c1b456fea8c047052a746">m_n</a> = FALSE;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="class_disassemble.html#a477510b19843360a883717917f387412">m_t</a> = FALSE;</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <a class="code" href="class_disassemble.html#ac8fad0495b1da26907516e83c876ec08">m_v</a> = FALSE;</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <a class="code" href="class_disassemble.html#ac4b4e68b91013731333b3019bbc16f1d">m_z</a> = FALSE;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> = -1;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> = 0;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> = 0;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <a class="code" href="class_disassemble.html#a347234b8c8fa03c0bc21e39c03efc36d">autoUpdate</a> = <span class="keyword">false</span>;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a> = 1;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div><div class="ttc" id="class_disassemble_html_aa38e1a7ec55e3fbe47d067e3a46df422"><div class="ttname"><a href="class_disassemble.html#aa38e1a7ec55e3fbe47d067e3a46df422">Disassemble::m_c</a></div><div class="ttdeci">BOOL m_c</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00052">Disassemble.h:52</a></div></div>
+<div class="ttc" id="class_disassemble_html_ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d"><div class="ttname"><a href="class_disassemble.html#ad63913a23ece149e6d04f14419966822a45935fbccc51ff059b05e4200a30d08d">Disassemble::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00049">Disassemble.h:49</a></div></div>
+<div class="ttc" id="class_disassemble_html_ac8fad0495b1da26907516e83c876ec08"><div class="ttname"><a href="class_disassemble.html#ac8fad0495b1da26907516e83c876ec08">Disassemble::m_v</a></div><div class="ttdeci">BOOL m_v</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00057">Disassemble.h:57</a></div></div>
+<div class="ttc" id="class_resize_dlg_html_a87bab778e9312f274ebe750d4c3a67ee"><div class="ttname"><a href="class_resize_dlg.html#a87bab778e9312f274ebe750d4c3a67ee">ResizeDlg::ResizeDlg</a></div><div class="ttdeci">ResizeDlg(UINT id, CWnd *parent=NULL)</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8cpp_source.html#l00311">ResizeDlg.cpp:311</a></div></div>
+<div class="ttc" id="class_disassemble_html_a30b707e1da3b01abda044e78929404cc"><div class="ttname"><a href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">Disassemble::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00059">Disassemble.h:59</a></div></div>
+<div class="ttc" id="class_disassemble_html_a477510b19843360a883717917f387412"><div class="ttname"><a href="class_disassemble.html#a477510b19843360a883717917f387412">Disassemble::m_t</a></div><div class="ttdeci">BOOL m_t</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00056">Disassemble.h:56</a></div></div>
+<div class="ttc" id="class_disassemble_html_aca528eed73b34340d601b725dd688b07"><div class="ttname"><a href="class_disassemble.html#aca528eed73b34340d601b725dd688b07">Disassemble::m_f</a></div><div class="ttdeci">BOOL m_f</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00053">Disassemble.h:53</a></div></div>
+<div class="ttc" id="class_disassemble_html_ac4b4e68b91013731333b3019bbc16f1d"><div class="ttname"><a href="class_disassemble.html#ac4b4e68b91013731333b3019bbc16f1d">Disassemble::m_z</a></div><div class="ttdeci">BOOL m_z</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00058">Disassemble.h:58</a></div></div>
+<div class="ttc" id="class_disassemble_html_a960ac8317ada7182e59132a3ee4afb48"><div class="ttname"><a href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">Disassemble::address</a></div><div class="ttdeci">u32 address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00044">Disassemble.h:44</a></div></div>
+<div class="ttc" id="class_disassemble_html_a6b51f716f8d8513da506a1d7875ca500"><div class="ttname"><a href="class_disassemble.html#a6b51f716f8d8513da506a1d7875ca500">Disassemble::m_i</a></div><div class="ttdeci">BOOL m_i</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00054">Disassemble.h:54</a></div></div>
+<div class="ttc" id="class_disassemble_html_ae8c58060e32c1b456fea8c047052a746"><div class="ttname"><a href="class_disassemble.html#ae8c58060e32c1b456fea8c047052a746">Disassemble::m_n</a></div><div class="ttdeci">BOOL m_n</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00055">Disassemble.h:55</a></div></div>
+<div class="ttc" id="class_disassemble_html_a347234b8c8fa03c0bc21e39c03efc36d"><div class="ttname"><a href="class_disassemble.html#a347234b8c8fa03c0bc21e39c03efc36d">Disassemble::autoUpdate</a></div><div class="ttdeci">bool autoUpdate</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00043">Disassemble.h:43</a></div></div>
+<div class="ttc" id="class_disassemble_html_a06c362364d2e01bac10fbcfb7ab28f50"><div class="ttname"><a href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">Disassemble::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00042">Disassemble.h:42</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a41d0930174f47e08037b1ea675d03ba0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41d0930174f47e08037b1ea675d03ba0">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00066">66</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;{</div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(Disassemble)</span></div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#af0726d27cf7b7070867a81fde283a218">IDC_ADDRESS</a>, <a class="code" href="class_disassemble.html#a74582f94dacc9f2eac347fd59b2a906b">m_address</a>);</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#a1e77bc2c6285101b4f86fb554e60299c">IDC_DISASSEMBLE</a>, <a class="code" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a>);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  DDX_Check(pDX, <a class="code" href="resource_8h.html#a03060b66d7605871c04bec4173831ab7">IDC_C</a>, <a class="code" href="class_disassemble.html#aa38e1a7ec55e3fbe47d067e3a46df422">m_c</a>);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  DDX_Check(pDX, <a class="code" href="resource_8h.html#a4933b03b799290719b440545d60b3bce">IDC_F</a>, <a class="code" href="class_disassemble.html#aca528eed73b34340d601b725dd688b07">m_f</a>);</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  DDX_Check(pDX, <a class="code" href="resource_8h.html#a16321ebeb5a839454048c84aed178048">IDC_I</a>, <a class="code" href="class_disassemble.html#a6b51f716f8d8513da506a1d7875ca500">m_i</a>);</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  DDX_Check(pDX, <a class="code" href="resource_8h.html#a38206af99e79e574c7d61741824783aa">IDC_N</a>, <a class="code" href="class_disassemble.html#ae8c58060e32c1b456fea8c047052a746">m_n</a>);</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  DDX_Check(pDX, <a class="code" href="resource_8h.html#a6c2ccbd7d9b61380a081cff7c69d84d1">IDC_T</a>, <a class="code" href="class_disassemble.html#a477510b19843360a883717917f387412">m_t</a>);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  DDX_Check(pDX, <a class="code" href="resource_8h.html#a9a7fcc5553822abe222f3b64a67b3475">IDC_V</a>, <a class="code" href="class_disassemble.html#ac8fad0495b1da26907516e83c876ec08">m_v</a>);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  DDX_Check(pDX, <a class="code" href="resource_8h.html#a1c7d666c64cc5fe574706f800edacc1e">IDC_Z</a>, <a class="code" href="class_disassemble.html#ac4b4e68b91013731333b3019bbc16f1d">m_z</a>);</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  DDX_Radio(pDX, <a class="code" href="resource_8h.html#afabb7acda2418542f4f020e4e2f75bf6">IDC_AUTOMATIC</a>, <a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a>);</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div><div class="ttc" id="resource_8h_html_a4933b03b799290719b440545d60b3bce"><div class="ttname"><a href="resource_8h.html#a4933b03b799290719b440545d60b3bce">IDC_F</a></div><div class="ttdeci">#define IDC_F</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00450">resource.h:450</a></div></div>
+<div class="ttc" id="class_disassemble_html_aa38e1a7ec55e3fbe47d067e3a46df422"><div class="ttname"><a href="class_disassemble.html#aa38e1a7ec55e3fbe47d067e3a46df422">Disassemble::m_c</a></div><div class="ttdeci">BOOL m_c</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00052">Disassemble.h:52</a></div></div>
+<div class="ttc" id="resource_8h_html_a1e77bc2c6285101b4f86fb554e60299c"><div class="ttname"><a href="resource_8h.html#a1e77bc2c6285101b4f86fb554e60299c">IDC_DISASSEMBLE</a></div><div class="ttdeci">#define IDC_DISASSEMBLE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00441">resource.h:441</a></div></div>
+<div class="ttc" id="class_disassemble_html_ac8fad0495b1da26907516e83c876ec08"><div class="ttname"><a href="class_disassemble.html#ac8fad0495b1da26907516e83c876ec08">Disassemble::m_v</a></div><div class="ttdeci">BOOL m_v</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00057">Disassemble.h:57</a></div></div>
+<div class="ttc" id="class_disassemble_html_a30b707e1da3b01abda044e78929404cc"><div class="ttname"><a href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">Disassemble::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00059">Disassemble.h:59</a></div></div>
+<div class="ttc" id="resource_8h_html_a6c2ccbd7d9b61380a081cff7c69d84d1"><div class="ttname"><a href="resource_8h.html#a6c2ccbd7d9b61380a081cff7c69d84d1">IDC_T</a></div><div class="ttdeci">#define IDC_T</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00452">resource.h:452</a></div></div>
+<div class="ttc" id="class_disassemble_html_a99205259bac8d57ff61ca23458f76634"><div class="ttname"><a href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">Disassemble::m_list</a></div><div class="ttdeci">CListBox m_list</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00051">Disassemble.h:51</a></div></div>
+<div class="ttc" id="resource_8h_html_a9a7fcc5553822abe222f3b64a67b3475"><div class="ttname"><a href="resource_8h.html#a9a7fcc5553822abe222f3b64a67b3475">IDC_V</a></div><div class="ttdeci">#define IDC_V</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00449">resource.h:449</a></div></div>
+<div class="ttc" id="resource_8h_html_afabb7acda2418542f4f020e4e2f75bf6"><div class="ttname"><a href="resource_8h.html#afabb7acda2418542f4f020e4e2f75bf6">IDC_AUTOMATIC</a></div><div class="ttdeci">#define IDC_AUTOMATIC</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00442">resource.h:442</a></div></div>
+<div class="ttc" id="resource_8h_html_af0726d27cf7b7070867a81fde283a218"><div class="ttname"><a href="resource_8h.html#af0726d27cf7b7070867a81fde283a218">IDC_ADDRESS</a></div><div class="ttdeci">#define IDC_ADDRESS</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00200">resource.h:200</a></div></div>
+<div class="ttc" id="class_disassemble_html_a477510b19843360a883717917f387412"><div class="ttname"><a href="class_disassemble.html#a477510b19843360a883717917f387412">Disassemble::m_t</a></div><div class="ttdeci">BOOL m_t</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00056">Disassemble.h:56</a></div></div>
+<div class="ttc" id="class_disassemble_html_aca528eed73b34340d601b725dd688b07"><div class="ttname"><a href="class_disassemble.html#aca528eed73b34340d601b725dd688b07">Disassemble::m_f</a></div><div class="ttdeci">BOOL m_f</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00053">Disassemble.h:53</a></div></div>
+<div class="ttc" id="resource_8h_html_a38206af99e79e574c7d61741824783aa"><div class="ttname"><a href="resource_8h.html#a38206af99e79e574c7d61741824783aa">IDC_N</a></div><div class="ttdeci">#define IDC_N</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00446">resource.h:446</a></div></div>
+<div class="ttc" id="class_disassemble_html_ac4b4e68b91013731333b3019bbc16f1d"><div class="ttname"><a href="class_disassemble.html#ac4b4e68b91013731333b3019bbc16f1d">Disassemble::m_z</a></div><div class="ttdeci">BOOL m_z</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00058">Disassemble.h:58</a></div></div>
+<div class="ttc" id="class_disassemble_html_a74582f94dacc9f2eac347fd59b2a906b"><div class="ttname"><a href="class_disassemble.html#a74582f94dacc9f2eac347fd59b2a906b">Disassemble::m_address</a></div><div class="ttdeci">CEdit m_address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00050">Disassemble.h:50</a></div></div>
+<div class="ttc" id="class_disassemble_html_a6b51f716f8d8513da506a1d7875ca500"><div class="ttname"><a href="class_disassemble.html#a6b51f716f8d8513da506a1d7875ca500">Disassemble::m_i</a></div><div class="ttdeci">BOOL m_i</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00054">Disassemble.h:54</a></div></div>
+<div class="ttc" id="resource_8h_html_a03060b66d7605871c04bec4173831ab7"><div class="ttname"><a href="resource_8h.html#a03060b66d7605871c04bec4173831ab7">IDC_C</a></div><div class="ttdeci">#define IDC_C</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00448">resource.h:448</a></div></div>
+<div class="ttc" id="class_disassemble_html_ae8c58060e32c1b456fea8c047052a746"><div class="ttname"><a href="class_disassemble.html#ae8c58060e32c1b456fea8c047052a746">Disassemble::m_n</a></div><div class="ttdeci">BOOL m_n</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00055">Disassemble.h:55</a></div></div>
+<div class="ttc" id="resource_8h_html_a1c7d666c64cc5fe574706f800edacc1e"><div class="ttname"><a href="resource_8h.html#a1c7d666c64cc5fe574706f800edacc1e">IDC_Z</a></div><div class="ttdeci">#define IDC_Z</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00447">resource.h:447</a></div></div>
+<div class="ttc" id="resource_8h_html_a16321ebeb5a839454048c84aed178048"><div class="ttname"><a href="resource_8h.html#a16321ebeb5a839454048c84aed178048">IDC_I</a></div><div class="ttdeci">#define IDC_I</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00451">resource.h:451</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a11695fe0ce9003a5cfcd58e86ad6047e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11695fe0ce9003a5cfcd58e86ad6047e">&#9670;&nbsp;</a></span>OnArm()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnArm </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00118">118</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> = 1;</div><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a>&amp;=0xfffffffC;</div><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div><div class="ttc" id="class_disassemble_html_a30b707e1da3b01abda044e78929404cc"><div class="ttname"><a href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">Disassemble::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00059">Disassemble.h:59</a></div></div>
+<div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+<div class="ttc" id="class_disassemble_html_a960ac8317ada7182e59132a3ee4afb48"><div class="ttname"><a href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">Disassemble::address</a></div><div class="ttdeci">u32 address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00044">Disassemble.h:44</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a11695fe0ce9003a5cfcd58e86ad6047e_cgraph.png" border="0" usemap="#class_disassemble_a11695fe0ce9003a5cfcd58e86ad6047e_cgraph" alt=""/></div>
+<map name="class_disassemble_a11695fe0ce9003a5cfcd58e86ad6047e_cgraph" id="class_disassemble_a11695fe0ce9003a5cfcd58e86ad6047e_cgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="200,56,344,83"/>
+<area shape="rect" id="node3" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="424,5,487,32"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="416,56,495,83"/>
+<area shape="rect" id="node9" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="392,107,519,133"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="607,56,674,83"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="611,5,671,32"/>
+<area shape="rect" id="node7" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="567,107,715,133"/>
+<area shape="rect" id="node8" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="763,107,889,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a713e75749b5c7c79927075b57431a298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a713e75749b5c7c79927075b57431a298">&#9670;&nbsp;</a></span>OnAutomatic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnAutomatic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00112">112</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div><div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;  <a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> = 0;</div><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;}</div><div class="ttc" id="class_disassemble_html_a30b707e1da3b01abda044e78929404cc"><div class="ttname"><a href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">Disassemble::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00059">Disassemble.h:59</a></div></div>
+<div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a713e75749b5c7c79927075b57431a298_cgraph.png" border="0" usemap="#class_disassemble_a713e75749b5c7c79927075b57431a298_cgraph" alt=""/></div>
+<map name="class_disassemble_a713e75749b5c7c79927075b57431a298_cgraph" id="class_disassemble_a713e75749b5c7c79927075b57431a298_cgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="235,56,379,83"/>
+<area shape="rect" id="node3" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="459,5,521,32"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="451,56,529,83"/>
+<area shape="rect" id="node9" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="427,107,553,133"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="642,56,709,83"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="645,5,705,32"/>
+<area shape="rect" id="node7" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="601,107,749,133"/>
+<area shape="rect" id="node8" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="797,107,924,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a5423cb1c85c1e4bb05b3d4018c804826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5423cb1c85c1e4bb05b3d4018c804826">&#9670;&nbsp;</a></span>OnAutoUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnAutoUpdate </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00102">102</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;{</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <a class="code" href="class_disassemble.html#a347234b8c8fa03c0bc21e39c03efc36d">autoUpdate</a> = !<a class="code" href="class_disassemble.html#a347234b8c8fa03c0bc21e39c03efc36d">autoUpdate</a>;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a347234b8c8fa03c0bc21e39c03efc36d">autoUpdate</a>) {</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#af0712f70a90d023ab8327a366be08174">winAddUpdateListener</a>(<span class="keyword">this</span>);</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3">winRemoveUpdateListener</a>(<span class="keyword">this</span>);    </div><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }  </div><div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_af0712f70a90d023ab8327a366be08174"><div class="ttname"><a href="class_v_b_a.html#af0712f70a90d023ab8327a366be08174">VBA::winAddUpdateListener</a></div><div class="ttdeci">void winAddUpdateListener(IUpdateListener *l)</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l02059">VBA.cpp:2059</a></div></div>
+<div class="ttc" id="class_v_b_a_html_a2d31a0656df2230310aa8dc9e3a735d3"><div class="ttname"><a href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3">VBA::winRemoveUpdateListener</a></div><div class="ttdeci">void winRemoveUpdateListener(IUpdateListener *l)</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l02065">VBA.cpp:2065</a></div></div>
+<div class="ttc" id="class_disassemble_html_a347234b8c8fa03c0bc21e39c03efc36d"><div class="ttname"><a href="class_disassemble.html#a347234b8c8fa03c0bc21e39c03efc36d">Disassemble::autoUpdate</a></div><div class="ttdeci">bool autoUpdate</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00043">Disassemble.h:43</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a5423cb1c85c1e4bb05b3d4018c804826_cgraph.png" border="0" usemap="#class_disassemble_a5423cb1c85c1e4bb05b3d4018c804826_cgraph" alt=""/></div>
+<map name="class_disassemble_a5423cb1c85c1e4bb05b3d4018c804826_cgraph" id="class_disassemble_a5423cb1c85c1e4bb05b3d4018c804826_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#af0712f70a90d023ab8327a366be08174" title="VBA::winAddUpdateListener" alt="" coords="255,5,442,32"/>
+<area shape="rect" id="node3" href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3" title="VBA::winRemoveUpdateListener" alt="" coords="244,56,453,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8f239c5117018f44ee0847b530a9eee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f239c5117018f44ee0847b530a9eee1">&#9670;&nbsp;</a></span>OnClose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnClose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00125">125</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3">winRemoveUpdateListener</a>(<span class="keyword">this</span>);</div><div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;  </div><div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;  DestroyWindow();</div><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div><div class="ttc" id="class_v_b_a_html_a2d31a0656df2230310aa8dc9e3a735d3"><div class="ttname"><a href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3">VBA::winRemoveUpdateListener</a></div><div class="ttdeci">void winRemoveUpdateListener(IUpdateListener *l)</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l02065">VBA.cpp:2065</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a8f239c5117018f44ee0847b530a9eee1_cgraph.png" border="0" usemap="#class_disassemble_a8f239c5117018f44ee0847b530a9eee1_cgraph" alt=""/></div>
+<map name="class_disassemble_a8f239c5117018f44ee0847b530a9eee1_cgraph" id="class_disassemble_a8f239c5117018f44ee0847b530a9eee1_cgraph">
+<area shape="rect" id="node2" href="class_v_b_a.html#a2d31a0656df2230310aa8dc9e3a735d3" title="VBA::winRemoveUpdateListener" alt="" coords="208,5,417,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="add1cb356f3605cc46f9c83f29473db24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add1cb356f3605cc46f9c83f29473db24">&#9670;&nbsp;</a></span>OnGo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnGo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00132">132</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  CString <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>;</div><div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;  <a class="code" href="class_disassemble.html#a74582f94dacc9f2eac347fd59b2a906b">m_address</a>.GetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;  sscanf(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, <span class="stringliteral">&quot;%x&quot;</span>, &amp;<a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a>);</div><div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;  <span class="keywordflow">if</span> (<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a>==1)</div><div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a>&amp;=0xfffffffc;</div><div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;  <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a>==2)</div><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a>&amp;=0xfffffffe;</div><div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}</div><div class="ttc" id="class_disassemble_html_a30b707e1da3b01abda044e78929404cc"><div class="ttname"><a href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">Disassemble::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00059">Disassemble.h:59</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+<div class="ttc" id="class_disassemble_html_a74582f94dacc9f2eac347fd59b2a906b"><div class="ttname"><a href="class_disassemble.html#a74582f94dacc9f2eac347fd59b2a906b">Disassemble::m_address</a></div><div class="ttdeci">CEdit m_address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00050">Disassemble.h:50</a></div></div>
+<div class="ttc" id="class_disassemble_html_a960ac8317ada7182e59132a3ee4afb48"><div class="ttname"><a href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">Disassemble::address</a></div><div class="ttdeci">u32 address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00044">Disassemble.h:44</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_add1cb356f3605cc46f9c83f29473db24_cgraph.png" border="0" usemap="#class_disassemble_add1cb356f3605cc46f9c83f29473db24_cgraph" alt=""/></div>
+<map name="class_disassemble_add1cb356f3605cc46f9c83f29473db24_cgraph" id="class_disassemble_add1cb356f3605cc46f9c83f29473db24_cgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="192,56,336,83"/>
+<area shape="rect" id="node3" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="416,5,479,32"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="408,56,487,83"/>
+<area shape="rect" id="node9" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="384,107,511,133"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="599,56,666,83"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="603,5,663,32"/>
+<area shape="rect" id="node7" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="559,107,707,133"/>
+<area shape="rect" id="node8" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="755,107,881,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad757b7defc104599f1a20730cf7f3d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad757b7defc104599f1a20730cf7f3d63">&#9670;&nbsp;</a></span>OnGopc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnGopc </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00144">144</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;{</div><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a> != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;  {</div><div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a>)</div><div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> = <a class="code" href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a> - 16;</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> = <a class="code" href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a> - 8;</div><div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;</div><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;  }</div><div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div><div class="ttc" id="arm-new_8h_html_a7e8bf67a6667274a53fc092b97961ca4"><div class="ttname"><a href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a></div><div class="ttdeci">armNextPC</div><div class="ttdef"><b>Definition:</b> <a href="arm-new_8h_source.html#l02403">arm-new.h:2403</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_adafc6ed627110c42f3893c9783f55320"><div class="ttname"><a href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a></div><div class="ttdeci">u8 * rom</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00055">Globals.cpp:55</a></div></div>
+<div class="ttc" id="class_disassemble_html_a960ac8317ada7182e59132a3ee4afb48"><div class="ttname"><a href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">Disassemble::address</a></div><div class="ttdeci">u32 address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00044">Disassemble.h:44</a></div></div>
+<div class="ttc" id="_g_b_a_8h_html_adeb5542a7f7ef80090a22d0133606250"><div class="ttname"><a href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a></div><div class="ttdeci">bool armState</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00033">Globals.cpp:33</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_ad757b7defc104599f1a20730cf7f3d63_cgraph.png" border="0" usemap="#class_disassemble_ad757b7defc104599f1a20730cf7f3d63_cgraph" alt=""/></div>
+<map name="class_disassemble_ad757b7defc104599f1a20730cf7f3d63_cgraph" id="class_disassemble_ad757b7defc104599f1a20730cf7f3d63_cgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="207,56,351,83"/>
+<area shape="rect" id="node3" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="431,5,493,32"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="423,56,501,83"/>
+<area shape="rect" id="node9" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="399,107,525,133"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="614,56,681,83"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="617,5,677,32"/>
+<area shape="rect" id="node7" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="573,107,721,133"/>
+<area shape="rect" id="node8" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="769,107,896,133"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_ad757b7defc104599f1a20730cf7f3d63_icgraph.png" border="0" usemap="#class_disassemble_ad757b7defc104599f1a20730cf7f3d63_icgraph" alt=""/></div>
+<map name="class_disassemble_ad757b7defc104599f1a20730cf7f3d63_icgraph" id="class_disassemble_ad757b7defc104599f1a20730cf7f3d63_icgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a9d25720f4d6c7a31281301b93b0ae02a" title="Disassemble::OnNext" alt="" coords="207,5,356,32"/>
+<area shape="rect" id="node3" href="class_disassemble.html#a30fc26e4204bd886f7cd8eb0c6c22e88" title="Disassemble::update" alt="" coords="209,56,353,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a23e74e8f32758c5b6ff63914633e2ab5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23e74e8f32758c5b6ff63914633e2ab5">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Disassemble::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00191">191</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;{</div><div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;  </div><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;  <a class="code" href="_resize_dlg_8h.html#acb9d1d22d9838f6dda8a61cfa132997c">DIALOG_SIZER_START</a>( sz )</div><div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a1e77bc2c6285101b4f86fb554e60299c">IDC_DISASSEMBLE</a>, <a class="code" href="_resize_dlg_8h.html#a783821ba6bb984916d55f46cdf90cb2b">DS_SizeY</a>)</div><div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#ab2f366ad34063a7be9de1e2249dc705a">IDC_REFRESH</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a27e7224faecfa4040c695a69107088f9">IDC_CLOSE</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a0bef3b291371b0573bb0ba8987e8d6fa">IDC_NEXT</a>,  <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#ad369b05206010ebec1c8a69a1dd1f141">IDC_AUTO_UPDATE</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a09f50527734f41cb89a3fbd6bfd9b97c">IDC_GOPC</a>, <a class="code" href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a>)</div><div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <a class="code" href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a>( <a class="code" href="resource_8h.html#a420d68e24dfd23b92f4c35464790687e">IDC_VSCROLL</a>, <a class="code" href="_resize_dlg_8h.html#a783821ba6bb984916d55f46cdf90cb2b">DS_SizeY</a>)</div><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <a class="code" href="_resize_dlg_8h.html#aeac0c1e32f30e0763df5736e4b3ea50a">DIALOG_SIZER_END</a>()</div><div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <a class="code" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">SetData</a>(sz,</div><div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            TRUE,</div><div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            HKEY_CURRENT_USER,</div><div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            &quot;Software\\Emulators\\VisualBoyAdvance\\Viewer\\DisassembleView&quot;,</div><div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;            <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>);</div><div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;  SCROLLINFO si;</div><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;  ZeroMemory(&amp;si, sizeof(si));</div><div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;  si.cbSize = sizeof(si);</div><div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;  si.fMask = SIF_PAGE | SIF_RANGE | SIF_POS;</div><div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;  si.nMin = 0;</div><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;  si.nMax = 100;</div><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;  si.nPos = 50;</div><div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;  si.nPage = 0;</div><div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#a420d68e24dfd23b92f4c35464790687e">IDC_VSCROLL</a>)-&gt;SetScrollInfo(SB_CTL, &amp;si, TRUE);</div><div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;  </div><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;  CFont *font = CFont::FromHandle((HFONT)GetStockObject(SYSTEM_FIXED_FONT));</div><div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;  </div><div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;  <a class="code" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a>.SetFont(font, FALSE);</div><div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  <a class="code" href="expr-lex_8cpp.html#aa656b692c972ef767f6fe691b696c978">for</a>(<span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; 17; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>++)</div><div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    GetDlgItem(<a class="code" href="resource_8h.html#ab22910476aba368f21be1572a58db5ca">IDC_R0</a>+<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>)-&gt;SetFont(font, FALSE);</div><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;</div><div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#a496f68890fb20f445e7456d458757bf2">IDC_MODE</a>)-&gt;SetFont(font, FALSE);</div><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;  </div><div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;</div><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;  <a class="code" href="class_disassemble.html#a74582f94dacc9f2eac347fd59b2a906b">m_address</a>.LimitText(8);</div><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;  </div><div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;  <a class="code" href="gb_codes_8h.html#a9717e7bbecb906637e86cef6da3d83c2">return</a> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;}</div><div class="ttc" id="expr-lex_8cpp_html_aa656b692c972ef767f6fe691b696c978"><div class="ttname"><a href="expr-lex_8cpp.html#aa656b692c972ef767f6fe691b696c978">for</a></div><div class="ttdeci">for(len=0;yy_str[len];++len)</div></div>
+<div class="ttc" id="_resize_dlg_8h_html_aeac0c1e32f30e0763df5736e4b3ea50a"><div class="ttname"><a href="_resize_dlg_8h.html#aeac0c1e32f30e0763df5736e4b3ea50a">DIALOG_SIZER_END</a></div><div class="ttdeci">#define DIALOG_SIZER_END()</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00042">ResizeDlg.h:42</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_a783821ba6bb984916d55f46cdf90cb2b"><div class="ttname"><a href="_resize_dlg_8h.html#a783821ba6bb984916d55f46cdf90cb2b">DS_SizeY</a></div><div class="ttdeci">#define DS_SizeY</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00032">ResizeDlg.h:32</a></div></div>
+<div class="ttc" id="resource_8h_html_a1e77bc2c6285101b4f86fb554e60299c"><div class="ttname"><a href="resource_8h.html#a1e77bc2c6285101b4f86fb554e60299c">IDC_DISASSEMBLE</a></div><div class="ttdeci">#define IDC_DISASSEMBLE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00441">resource.h:441</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="resource_8h_html_a496f68890fb20f445e7456d458757bf2"><div class="ttname"><a href="resource_8h.html#a496f68890fb20f445e7456d458757bf2">IDC_MODE</a></div><div class="ttdeci">#define IDC_MODE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00391">resource.h:391</a></div></div>
+<div class="ttc" id="class_disassemble_html_a99205259bac8d57ff61ca23458f76634"><div class="ttname"><a href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">Disassemble::m_list</a></div><div class="ttdeci">CListBox m_list</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00051">Disassemble.h:51</a></div></div>
+<div class="ttc" id="resource_8h_html_a09f50527734f41cb89a3fbd6bfd9b97c"><div class="ttname"><a href="resource_8h.html#a09f50527734f41cb89a3fbd6bfd9b97c">IDC_GOPC</a></div><div class="ttdeci">#define IDC_GOPC</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00361">resource.h:361</a></div></div>
+<div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+<div class="ttc" id="resource_8h_html_ab22910476aba368f21be1572a58db5ca"><div class="ttname"><a href="resource_8h.html#ab22910476aba368f21be1572a58db5ca">IDC_R0</a></div><div class="ttdeci">#define IDC_R0</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00099">resource.h:99</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_ae5309071be822a4dae5cb33a131f6180"><div class="ttname"><a href="_resize_dlg_8h.html#ae5309071be822a4dae5cb33a131f6180">DS_MoveY</a></div><div class="ttdeci">#define DS_MoveY</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00030">ResizeDlg.h:30</a></div></div>
+<div class="ttc" id="class_disassemble_html_a74582f94dacc9f2eac347fd59b2a906b"><div class="ttname"><a href="class_disassemble.html#a74582f94dacc9f2eac347fd59b2a906b">Disassemble::m_address</a></div><div class="ttdeci">CEdit m_address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00050">Disassemble.h:50</a></div></div>
+<div class="ttc" id="resource_8h_html_ab2f366ad34063a7be9de1e2249dc705a"><div class="ttname"><a href="resource_8h.html#ab2f366ad34063a7be9de1e2249dc705a">IDC_REFRESH</a></div><div class="ttdeci">#define IDC_REFRESH</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00358">resource.h:358</a></div></div>
+<div class="ttc" id="resource_8h_html_a420d68e24dfd23b92f4c35464790687e"><div class="ttname"><a href="resource_8h.html#a420d68e24dfd23b92f4c35464790687e">IDC_VSCROLL</a></div><div class="ttdeci">#define IDC_VSCROLL</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00454">resource.h:454</a></div></div>
+<div class="ttc" id="gb_codes_8h_html_a9717e7bbecb906637e86cef6da3d83c2"><div class="ttname"><a href="gb_codes_8h.html#a9717e7bbecb906637e86cef6da3d83c2">return</a></div><div class="ttdeci">return</div><div class="ttdef"><b>Definition:</b> <a href="gb_codes_8h_source.html#l01460">gbCodes.h:1460</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_acb9d1d22d9838f6dda8a61cfa132997c"><div class="ttname"><a href="_resize_dlg_8h.html#acb9d1d22d9838f6dda8a61cfa132997c">DIALOG_SIZER_START</a></div><div class="ttdeci">#define DIALOG_SIZER_START(name)</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00040">ResizeDlg.h:40</a></div></div>
+<div class="ttc" id="_resize_dlg_8h_html_a0e9ee7a18c54003893895a009f5d79c8"><div class="ttname"><a href="_resize_dlg_8h.html#a0e9ee7a18c54003893895a009f5d79c8">DIALOG_SIZER_ENTRY</a></div><div class="ttdeci">#define DIALOG_SIZER_ENTRY(controlID, flags)</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8h_source.html#l00041">ResizeDlg.h:41</a></div></div>
+<div class="ttc" id="resource_8h_html_a27e7224faecfa4040c695a69107088f9"><div class="ttname"><a href="resource_8h.html#a27e7224faecfa4040c695a69107088f9">IDC_CLOSE</a></div><div class="ttdeci">#define IDC_CLOSE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00368">resource.h:368</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01392">expr-lex.cpp:1392</a></div></div>
+<div class="ttc" id="class_resize_dlg_html_a6a3965f44a0c2f5ba9aaa798a9a81df5"><div class="ttname"><a href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5">ResizeDlg::SetData</a></div><div class="ttdeci">BOOL SetData(const DialogSizerSizingItem *psd, BOOL bShowSizingGrip, HKEY hkRootSave, LPCTSTR pcszName, SIZE *psizeMax)</div><div class="ttdef"><b>Definition:</b> <a href="_resize_dlg_8cpp_source.html#l00344">ResizeDlg.cpp:344</a></div></div>
+<div class="ttc" id="resource_8h_html_ad369b05206010ebec1c8a69a1dd1f141"><div class="ttname"><a href="resource_8h.html#ad369b05206010ebec1c8a69a1dd1f141">IDC_AUTO_UPDATE</a></div><div class="ttdeci">#define IDC_AUTO_UPDATE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00445">resource.h:445</a></div></div>
+<div class="ttc" id="resource_8h_html_a0bef3b291371b0573bb0ba8987e8d6fa"><div class="ttname"><a href="resource_8h.html#a0bef3b291371b0573bb0ba8987e8d6fa">IDC_NEXT</a></div><div class="ttdeci">#define IDC_NEXT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00136">resource.h:136</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a23e74e8f32758c5b6ff63914633e2ab5_cgraph.png" border="0" usemap="#class_disassemble_a23e74e8f32758c5b6ff63914633e2ab5_cgraph" alt=""/></div>
+<map name="class_disassemble_a23e74e8f32758c5b6ff63914633e2ab5_cgraph" id="class_disassemble_a23e74e8f32758c5b6ff63914633e2ab5_cgraph">
+<area shape="rect" id="node2" href="class_resize_dlg.html#a6a3965f44a0c2f5ba9aaa798a9a81df5" title="ResizeDlg::SetData" alt="" coords="232,107,368,133"/>
+<area shape="rect" id="node9" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="228,233,372,260"/>
+<area shape="rect" id="node3" href="class_resize_dlg.html#a5657ce3f83f261aceaf138cd1c69f0fc" title="ResizeDlg::AddDialogData" alt="" coords="425,56,600,83"/>
+<area shape="rect" id="node5" href="_resize_dlg_8cpp.html#a42fd95f9181ab52619b7bd3e5d51475b" title="ResizeDlgGetItemCount" alt="" coords="432,107,593,133"/>
+<area shape="rect" id="node6" href="_resize_dlg_8cpp.html#ad4ba4376f50f357ac88b0fd3bfeb1a19" title="ResizeDlgCopyItems" alt="" coords="441,157,584,184"/>
+<area shape="rect" id="node7" href="_resize_dlg_8cpp.html#a74702acf423eaa66851bd656c737b6ba" title="RegQueryValueExRecursive" alt="" coords="420,5,605,32"/>
+<area shape="rect" id="node4" href="_resize_dlg_8cpp.html#af86ee86600de84824a5d7b8b3aaed6e8" title="ResizeDlgUpdateGripperRect" alt="" coords="653,56,844,83"/>
+<area shape="rect" id="node8" href="_resize_dlg_8cpp.html#a37994396c85bf7d224452b133d9e3d6f" title="regGetINIPath" alt="" coords="697,5,800,32"/>
+<area shape="rect" id="node10" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="481,208,544,235"/>
+<area shape="rect" id="node13" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="473,259,552,285"/>
+<area shape="rect" id="node16" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="449,309,576,336"/>
+<area shape="rect" id="node11" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="715,208,782,235"/>
+<area shape="rect" id="node12" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="719,259,779,285"/>
+<area shape="rect" id="node14" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="675,309,823,336"/>
+<area shape="rect" id="node15" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="892,309,1019,336"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9d25720f4d6c7a31281301b93b0ae02a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d25720f4d6c7a31281301b93b0ae02a">&#9670;&nbsp;</a></span>OnNext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnNext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00157">157</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;{</div><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a> != <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;  {</div><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;  <a class="code" href="_g_b_a_8cpp.html#a4b7cf35cc5b9d6e9a65dad93a9a0d918">CPULoop</a>(1);</div><div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a>) {</div><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> total = <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a>+<a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*4;</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a> &gt;= <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> &amp;&amp; <a class="code" href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a> &lt; total) {</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;      <a class="code" href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63">OnGopc</a>();</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    }</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;  } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;    <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> total = <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a>+<a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*2;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a> &gt;= <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> &amp;&amp; <a class="code" href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a> &lt; total) {</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      <a class="code" href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63">OnGopc</a>();</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;  }</div><div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  }</div><div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;}</div><div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a4b7cf35cc5b9d6e9a65dad93a9a0d918"><div class="ttname"><a href="_g_b_a_8cpp.html#a4b7cf35cc5b9d6e9a65dad93a9a0d918">CPULoop</a></div><div class="ttdeci">void CPULoop(int ticks)</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l03819">GBA.cpp:3819</a></div></div>
+<div class="ttc" id="arm-new_8h_html_a7e8bf67a6667274a53fc092b97961ca4"><div class="ttname"><a href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a></div><div class="ttdeci">armNextPC</div><div class="ttdef"><b>Definition:</b> <a href="arm-new_8h_source.html#l02403">arm-new.h:2403</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+<div class="ttc" id="class_disassemble_html_ad757b7defc104599f1a20730cf7f3d63"><div class="ttname"><a href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63">Disassemble::OnGopc</a></div><div class="ttdeci">afx_msg void OnGopc()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00144">Disassemble.cpp:144</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_adafc6ed627110c42f3893c9783f55320"><div class="ttname"><a href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a></div><div class="ttdeci">u8 * rom</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00055">Globals.cpp:55</a></div></div>
+<div class="ttc" id="class_disassemble_html_a960ac8317ada7182e59132a3ee4afb48"><div class="ttname"><a href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">Disassemble::address</a></div><div class="ttdeci">u32 address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00044">Disassemble.h:44</a></div></div>
+<div class="ttc" id="_g_b_a_8h_html_adeb5542a7f7ef80090a22d0133606250"><div class="ttname"><a href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a></div><div class="ttdeci">bool armState</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00033">Globals.cpp:33</a></div></div>
+<div class="ttc" id="class_disassemble_html_a06c362364d2e01bac10fbcfb7ab28f50"><div class="ttname"><a href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">Disassemble::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00042">Disassemble.h:42</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a9d25720f4d6c7a31281301b93b0ae02a_cgraph.png" border="0" usemap="#class_disassemble_a9d25720f4d6c7a31281301b93b0ae02a_cgraph" alt=""/></div>
+<map name="class_disassemble_a9d25720f4d6c7a31281301b93b0ae02a_cgraph" id="class_disassemble_a9d25720f4d6c7a31281301b93b0ae02a_cgraph">
+<area shape="rect" id="node2" href="_g_b_a_8cpp.html#a4b7cf35cc5b9d6e9a65dad93a9a0d918" title="CPULoop" alt="" coords="241,5,318,32"/>
+<area shape="rect" id="node3" href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63" title="Disassemble::OnGopc" alt="" coords="203,56,356,83"/>
+<area shape="rect" id="node4" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="404,81,548,108"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="628,31,691,57"/>
+<area shape="rect" id="node8" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="620,81,699,108"/>
+<area shape="rect" id="node11" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="596,132,723,159"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="811,81,878,108"/>
+<area shape="rect" id="node7" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="815,31,875,57"/>
+<area shape="rect" id="node9" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="771,132,919,159"/>
+<area shape="rect" id="node10" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="967,132,1093,159"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9b66d72bb746fe9df6bbcb4831dbf8ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b66d72bb746fe9df6bbcb4831dbf8ad">&#9670;&nbsp;</a></span>OnRefresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnRefresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00179">179</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;{</div><div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;}</div><div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a9b66d72bb746fe9df6bbcb4831dbf8ad_cgraph.png" border="0" usemap="#class_disassemble_a9b66d72bb746fe9df6bbcb4831dbf8ad_cgraph" alt=""/></div>
+<map name="class_disassemble_a9b66d72bb746fe9df6bbcb4831dbf8ad_cgraph" id="class_disassemble_a9b66d72bb746fe9df6bbcb4831dbf8ad_cgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="220,56,364,83"/>
+<area shape="rect" id="node3" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="444,5,507,32"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="436,56,515,83"/>
+<area shape="rect" id="node9" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="412,107,539,133"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="627,56,694,83"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="631,5,691,32"/>
+<area shape="rect" id="node7" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="587,107,735,133"/>
+<area shape="rect" id="node8" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="783,107,909,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a480844a650f1a7ab4a396ff1ffdd5655"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a480844a650f1a7ab4a396ff1ffdd5655">&#9670;&nbsp;</a></span>OnThumb()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnThumb </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00184">184</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;{</div><div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;  <a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> = 2;</div><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;  <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a>&amp;=0xfffffffe;</div><div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div><div class="ttc" id="class_disassemble_html_a30b707e1da3b01abda044e78929404cc"><div class="ttname"><a href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">Disassemble::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00059">Disassemble.h:59</a></div></div>
+<div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+<div class="ttc" id="class_disassemble_html_a960ac8317ada7182e59132a3ee4afb48"><div class="ttname"><a href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">Disassemble::address</a></div><div class="ttdeci">u32 address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00044">Disassemble.h:44</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a480844a650f1a7ab4a396ff1ffdd5655_cgraph.png" border="0" usemap="#class_disassemble_a480844a650f1a7ab4a396ff1ffdd5655_cgraph" alt=""/></div>
+<map name="class_disassemble_a480844a650f1a7ab4a396ff1ffdd5655_cgraph" id="class_disassemble_a480844a650f1a7ab4a396ff1ffdd5655_cgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="215,56,359,83"/>
+<area shape="rect" id="node3" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="439,5,501,32"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="431,56,509,83"/>
+<area shape="rect" id="node9" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="407,107,533,133"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="622,56,689,83"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="625,5,685,32"/>
+<area shape="rect" id="node7" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="581,107,729,133"/>
+<area shape="rect" id="node8" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="777,107,904,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a96149abe6cfe456c0d799dfe59b19826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96149abe6cfe456c0d799dfe59b19826">&#9670;&nbsp;</a></span>OnVScroll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::OnVScroll </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nSBCode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>nPos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CScrollBar *&#160;</td>
+          <td class="paramname"><em>pScrollBar</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00236">236</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;{</div><div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keywordflow">switch</span>(nSBCode) {</div><div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;  <span class="keywordflow">case</span> SB_LINEDOWN:</div><div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 0) {</div><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a>)</div><div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> += 4;</div><div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;      <span class="keywordflow">else</span></div><div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> += 2;</div><div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 1)</div><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> += 4;</div><div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> += 2;</div><div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;  <span class="keywordflow">case</span> SB_LINEUP:</div><div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 0) {</div><div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a>)</div><div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> -= 4;</div><div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      <span class="keywordflow">else</span></div><div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> -= 2;</div><div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 1)</div><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> -= 4;</div><div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> -= 2;</div><div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;  <span class="keywordflow">case</span> SB_PAGEDOWN:</div><div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 0) {</div><div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a>)</div><div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> += <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*4;</div><div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      <span class="keywordflow">else</span></div><div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> += <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*2;</div><div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 1)</div><div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> += <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*4;</div><div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> += <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*2;</div><div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;  <span class="keywordflow">case</span> SB_PAGEUP:</div><div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 0) {</div><div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;      <span class="keywordflow">if</span>(<a class="code" href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a>)</div><div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> -= <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*4;</div><div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <span class="keywordflow">else</span></div><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> -= <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*2;</div><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 1)</div><div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> -= <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*4;</div><div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;      <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a> -= <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>*2;</div><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;  }</div><div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;  </div><div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;  CDialog::OnVScroll(nSBCode, nPos, pScrollBar);</div><div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div><div class="ttc" id="class_disassemble_html_a30b707e1da3b01abda044e78929404cc"><div class="ttname"><a href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">Disassemble::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00059">Disassemble.h:59</a></div></div>
+<div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+<div class="ttc" id="class_disassemble_html_a960ac8317ada7182e59132a3ee4afb48"><div class="ttname"><a href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">Disassemble::address</a></div><div class="ttdeci">u32 address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00044">Disassemble.h:44</a></div></div>
+<div class="ttc" id="_g_b_a_8h_html_adeb5542a7f7ef80090a22d0133606250"><div class="ttname"><a href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a></div><div class="ttdeci">bool armState</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00033">Globals.cpp:33</a></div></div>
+<div class="ttc" id="class_disassemble_html_a06c362364d2e01bac10fbcfb7ab28f50"><div class="ttname"><a href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">Disassemble::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00042">Disassemble.h:42</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a96149abe6cfe456c0d799dfe59b19826_cgraph.png" border="0" usemap="#class_disassemble_a96149abe6cfe456c0d799dfe59b19826_cgraph" alt=""/></div>
+<map name="class_disassemble_a96149abe6cfe456c0d799dfe59b19826_cgraph" id="class_disassemble_a96149abe6cfe456c0d799dfe59b19826_cgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="217,56,361,83"/>
+<area shape="rect" id="node3" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="441,5,504,32"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="433,56,512,83"/>
+<area shape="rect" id="node9" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="409,107,536,133"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="625,56,691,83"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="628,5,688,32"/>
+<area shape="rect" id="node7" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="584,107,732,133"/>
+<area shape="rect" id="node8" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="780,107,907,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a2ff6c6b502de3f37aaff6c2f188157a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ff6c6b502de3f37aaff6c2f188157a8">&#9670;&nbsp;</a></span>PostNcDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::PostNcDestroy </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00358">358</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;{</div><div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;  <span class="keyword">delete</span> <span class="keyword">this</span>;</div><div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a7cdf11d53ce0f170ad7dd8fc66961805"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cdf11d53ce0f170ad7dd8fc66961805">&#9670;&nbsp;</a></span>refresh()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::refresh </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00289">289</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;{</div><div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a> == <a class="code" href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</div><div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;  </div><div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;  <span class="keywordtype">bool</span> arm = <a class="code" href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a>;</div><div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;  </div><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> != 0) {</div><div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">mode</a> == 1)</div><div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      arm = <span class="keyword">true</span>;</div><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordflow">else</span></div><div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      arm = <span class="keyword">false</span>;</div><div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;  }</div><div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;  </div><div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;  <span class="keywordtype">int</span> h = <a class="code" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a>.GetItemHeight(0);</div><div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;  RECT r;</div><div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;  <a class="code" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a>.GetClientRect(&amp;r);</div><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;  <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a> = (r.bottom - r.top+1)/h;</div><div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;</div><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;  <a class="code" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a>.ResetContent();</div><div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;  <span class="keywordflow">if</span>(!<a class="code" href="_disassemble_8cpp.html#af9cc36078b1b311753963297ae7f2a74">emulating</a> &amp;&amp; <a class="code" href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a>.<a class="code" href="class_v_b_a.html#af300759fcbc7eeb00ce73f956fc5ddb7">cartridgeType</a> == 0)</div><div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    <span class="keywordflow">return</span>;</div><div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;  </div><div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>[80];</div><div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;  <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> addr = <a class="code" href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">address</a>;</div><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div><div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;  <span class="keywordtype">int</span> sel = -1;</div><div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;  <span class="keywordflow">for</span>(<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; <a class="code" href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">count</a>; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>++) {</div><div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">if</span>(addr == <a class="code" href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a>)</div><div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      sel = <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>;</div><div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;    <span class="keywordflow">if</span>(arm) {</div><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      addr += <a class="code" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8">disArm</a>(addr, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, 3);</div><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    } <span class="keywordflow">else</span> {</div><div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      addr += <a class="code" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011">disThumb</a>(addr, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, 3);</div><div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div><div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <a class="code" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a>.InsertString(-1, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;  }</div><div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div><div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;  <span class="keywordflow">if</span>(sel != -1)</div><div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <a class="code" href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">m_list</a>.SetCurSel(sel);</div><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;</div><div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;  <a class="code" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4">CPUUpdateCPSR</a>();</div><div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;  </div><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;  <span class="keywordflow">for</span>(<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> = 0; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a> &lt; 17; <a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>++) {</div><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    sprintf(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, <span class="stringliteral">&quot;%08x&quot;</span>, <a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>].<a class="code" href="arm-new_8h.html#a782b7c7c9a56a2031f6270eac7f000d6">I</a>);</div><div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    GetDlgItem(<a class="code" href="resource_8h.html#ab22910476aba368f21be1572a58db5ca">IDC_R0</a>+<a class="code" href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a>)-&gt;SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;  }</div><div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;</div><div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;  <a class="code" href="class_disassemble.html#ae8c58060e32c1b456fea8c047052a746">m_n</a> = (<a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[16].<a class="code" href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">I</a> &amp; 0x80000000) != 0;</div><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;  <a class="code" href="class_disassemble.html#ac4b4e68b91013731333b3019bbc16f1d">m_z</a> = (<a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[16].<a class="code" href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">I</a> &amp; 0x40000000) != 0;</div><div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;  <a class="code" href="class_disassemble.html#aa38e1a7ec55e3fbe47d067e3a46df422">m_c</a> = (<a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[16].<a class="code" href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">I</a> &amp; 0x20000000) != 0;</div><div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;  <a class="code" href="class_disassemble.html#ac8fad0495b1da26907516e83c876ec08">m_v</a> = (<a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[16].<a class="code" href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">I</a> &amp; 0x10000000) != 0;</div><div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;  <a class="code" href="class_disassemble.html#a6b51f716f8d8513da506a1d7875ca500">m_i</a> = (<a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[16].<a class="code" href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">I</a> &amp; 0x80) != 0;</div><div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;  <a class="code" href="class_disassemble.html#aca528eed73b34340d601b725dd688b07">m_f</a> = (<a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[16].<a class="code" href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">I</a> &amp; 0x40) != 0;</div><div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;  <a class="code" href="class_disassemble.html#a477510b19843360a883717917f387412">m_t</a> = (<a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[16].<a class="code" href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">I</a> &amp; 0x20) != 0;</div><div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;</div><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;  UpdateData(FALSE);</div><div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div><div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;  <span class="keywordtype">int</span> v = <a class="code" href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a>[16].<a class="code" href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">I</a> &amp; 0x1f;</div><div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;  sprintf(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, <span class="stringliteral">&quot;%02x&quot;</span>, v);</div><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;  GetDlgItem(<a class="code" href="resource_8h.html#a496f68890fb20f445e7456d458757bf2">IDC_MODE</a>)-&gt;SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;}</div><div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="class_disassemble_html_aa38e1a7ec55e3fbe47d067e3a46df422"><div class="ttname"><a href="class_disassemble.html#aa38e1a7ec55e3fbe47d067e3a46df422">Disassemble::m_c</a></div><div class="ttdeci">BOOL m_c</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00052">Disassemble.h:52</a></div></div>
+<div class="ttc" id="armdis_8cpp_html_afe845ff5d0d51e6d26397b5464f45011"><div class="ttname"><a href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011">disThumb</a></div><div class="ttdeci">int disThumb(u32 offset, char *dest, int flags)</div><div class="ttdef"><b>Definition:</b> <a href="armdis_8cpp_source.html#l00547">armdis.cpp:547</a></div></div>
+<div class="ttc" id="arm-new_8h_html_a7e8bf67a6667274a53fc092b97961ca4"><div class="ttname"><a href="arm-new_8h.html#a7e8bf67a6667274a53fc092b97961ca4">armNextPC</a></div><div class="ttdeci">armNextPC</div><div class="ttdef"><b>Definition:</b> <a href="arm-new_8h_source.html#l02403">arm-new.h:2403</a></div></div>
+<div class="ttc" id="armdis_8cpp_html_ad4be2131ddd63e80d00ca6266c48a7a8"><div class="ttname"><a href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8">disArm</a></div><div class="ttdeci">int disArm(u32 offset, char *dest, int flags)</div><div class="ttdef"><b>Definition:</b> <a href="armdis_8cpp_source.html#l00233">armdis.cpp:233</a></div></div>
+<div class="ttc" id="class_disassemble_html_ac8fad0495b1da26907516e83c876ec08"><div class="ttname"><a href="class_disassemble.html#ac8fad0495b1da26907516e83c876ec08">Disassemble::m_v</a></div><div class="ttdeci">BOOL m_v</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00057">Disassemble.h:57</a></div></div>
+<div class="ttc" id="class_disassemble_html_a30b707e1da3b01abda044e78929404cc"><div class="ttname"><a href="class_disassemble.html#a30b707e1da3b01abda044e78929404cc">Disassemble::mode</a></div><div class="ttdeci">int mode</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00059">Disassemble.h:59</a></div></div>
+<div class="ttc" id="_g_b_a_8h_html_ae29faba89509024ffd1a292badcedf2d"><div class="ttname"><a href="_g_b_a_8h.html#ae29faba89509024ffd1a292badcedf2d">reg</a></div><div class="ttdeci">reg_pair reg[45]</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00026">Globals.cpp:26</a></div></div>
+<div class="ttc" id="getopt1_8c_html_a070d2ce7b6bb7e5c05602aa8c308d0c4"><div class="ttname"><a href="getopt1_8c.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></div><div class="ttdeci">#define NULL</div><div class="ttdef"><b>Definition:</b> <a href="getopt1_8c_source.html#l00065">getopt1.c:65</a></div></div>
+<div class="ttc" id="_disassemble_8cpp_html_af9cc36078b1b311753963297ae7f2a74"><div class="ttname"><a href="_disassemble_8cpp.html#af9cc36078b1b311753963297ae7f2a74">emulating</a></div><div class="ttdeci">int emulating</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00050">system.cpp:50</a></div></div>
+<div class="ttc" id="resource_8h_html_a496f68890fb20f445e7456d458757bf2"><div class="ttname"><a href="resource_8h.html#a496f68890fb20f445e7456d458757bf2">IDC_MODE</a></div><div class="ttdeci">#define IDC_MODE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00391">resource.h:391</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="class_disassemble_html_a99205259bac8d57ff61ca23458f76634"><div class="ttname"><a href="class_disassemble.html#a99205259bac8d57ff61ca23458f76634">Disassemble::m_list</a></div><div class="ttdeci">CListBox m_list</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00051">Disassemble.h:51</a></div></div>
+<div class="ttc" id="class_disassemble_html_a477510b19843360a883717917f387412"><div class="ttname"><a href="class_disassemble.html#a477510b19843360a883717917f387412">Disassemble::m_t</a></div><div class="ttdeci">BOOL m_t</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00056">Disassemble.h:56</a></div></div>
+<div class="ttc" id="resource_8h_html_ab22910476aba368f21be1572a58db5ca"><div class="ttname"><a href="resource_8h.html#ab22910476aba368f21be1572a58db5ca">IDC_R0</a></div><div class="ttdeci">#define IDC_R0</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00099">resource.h:99</a></div></div>
+<div class="ttc" id="_globals_8cpp_html_adafc6ed627110c42f3893c9783f55320"><div class="ttname"><a href="_globals_8cpp.html#adafc6ed627110c42f3893c9783f55320">rom</a></div><div class="ttdeci">u8 * rom</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00055">Globals.cpp:55</a></div></div>
+<div class="ttc" id="arm-new_8h_html_a782b7c7c9a56a2031f6270eac7f000d6"><div class="ttname"><a href="arm-new_8h.html#a782b7c7c9a56a2031f6270eac7f000d6">I</a></div><div class="ttdeci">reg [15] I</div><div class="ttdef"><b>Definition:</b> <a href="arm-new_8h_source.html#l02404">arm-new.h:2404</a></div></div>
+<div class="ttc" id="class_disassemble_html_aca528eed73b34340d601b725dd688b07"><div class="ttname"><a href="class_disassemble.html#aca528eed73b34340d601b725dd688b07">Disassemble::m_f</a></div><div class="ttdeci">BOOL m_f</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00053">Disassemble.h:53</a></div></div>
+<div class="ttc" id="class_disassemble_html_ac4b4e68b91013731333b3019bbc16f1d"><div class="ttname"><a href="class_disassemble.html#ac4b4e68b91013731333b3019bbc16f1d">Disassemble::m_z</a></div><div class="ttdeci">BOOL m_z</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00058">Disassemble.h:58</a></div></div>
+<div class="ttc" id="_disassemble_8cpp_html_ac48694e791b50357a1a762322adbbed4"><div class="ttname"><a href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4">CPUUpdateCPSR</a></div><div class="ttdeci">void CPUUpdateCPSR()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l01697">GBA.cpp:1697</a></div></div>
+<div class="ttc" id="class_disassemble_html_a960ac8317ada7182e59132a3ee4afb48"><div class="ttname"><a href="class_disassemble.html#a960ac8317ada7182e59132a3ee4afb48">Disassemble::address</a></div><div class="ttdeci">u32 address</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00044">Disassemble.h:44</a></div></div>
+<div class="ttc" id="_g_b_a_8h_html_adeb5542a7f7ef80090a22d0133606250"><div class="ttname"><a href="_g_b_a_8h.html#adeb5542a7f7ef80090a22d0133606250">armState</a></div><div class="ttdeci">bool armState</div><div class="ttdef"><b>Definition:</b> <a href="_globals_8cpp_source.html#l00033">Globals.cpp:33</a></div></div>
+<div class="ttc" id="class_disassemble_html_a6b51f716f8d8513da506a1d7875ca500"><div class="ttname"><a href="class_disassemble.html#a6b51f716f8d8513da506a1d7875ca500">Disassemble::m_i</a></div><div class="ttdeci">BOOL m_i</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00054">Disassemble.h:54</a></div></div>
+<div class="ttc" id="unionreg__pair_html_a9f6a42d56c07829d7013571eda998252"><div class="ttname"><a href="unionreg__pair.html#a9f6a42d56c07829d7013571eda998252">reg_pair::I</a></div><div class="ttdeci">u32 I</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8h_source.html#l00067">GBA.h:67</a></div></div>
+<div class="ttc" id="class_disassemble_html_ae8c58060e32c1b456fea8c047052a746"><div class="ttname"><a href="class_disassemble.html#ae8c58060e32c1b456fea8c047052a746">Disassemble::m_n</a></div><div class="ttdeci">BOOL m_n</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00055">Disassemble.h:55</a></div></div>
+<div class="ttc" id="expr-lex_8cpp_html_acb559820d9ca11295b4500f179ef6392"><div class="ttname"><a href="expr-lex_8cpp.html#acb559820d9ca11295b4500f179ef6392">i</a></div><div class="ttdeci">int i</div><div class="ttdef"><b>Definition:</b> <a href="expr-lex_8cpp_source.html#l01392">expr-lex.cpp:1392</a></div></div>
+<div class="ttc" id="class_v_b_a_html_af300759fcbc7eeb00ce73f956fc5ddb7"><div class="ttname"><a href="class_v_b_a.html#af300759fcbc7eeb00ce73f956fc5ddb7">VBA::cartridgeType</a></div><div class="ttdeci">IMAGE_TYPE cartridgeType</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8h_source.html#l00102">VBA.h:102</a></div></div>
+<div class="ttc" id="class_disassemble_html_a06c362364d2e01bac10fbcfb7ab28f50"><div class="ttname"><a href="class_disassemble.html#a06c362364d2e01bac10fbcfb7ab28f50">Disassemble::count</a></div><div class="ttdeci">int count</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8h_source.html#l00042">Disassemble.h:42</a></div></div>
+<div class="ttc" id="_v_b_a_8cpp_html_a8095a9d06b37a7efe3723f3218ad8fb3"><div class="ttname"><a href="_v_b_a_8cpp.html#a8095a9d06b37a7efe3723f3218ad8fb3">theApp</a></div><div class="ttdeci">VBA theApp</div><div class="ttdef"><b>Definition:</b> <a href="_v_b_a_8cpp_source.html#l00382">VBA.cpp:382</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a7cdf11d53ce0f170ad7dd8fc66961805_cgraph.png" border="0" usemap="#class_disassemble_a7cdf11d53ce0f170ad7dd8fc66961805_cgraph" alt=""/></div>
+<map name="class_disassemble_a7cdf11d53ce0f170ad7dd8fc66961805_cgraph" id="class_disassemble_a7cdf11d53ce0f170ad7dd8fc66961805_cgraph">
+<area shape="rect" id="node2" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="229,5,292,32"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="221,56,300,83"/>
+<area shape="rect" id="node8" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="197,107,324,133"/>
+<area shape="rect" id="node3" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="413,56,479,83"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="416,5,476,32"/>
+<area shape="rect" id="node6" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="372,107,520,133"/>
+<area shape="rect" id="node7" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="568,107,695,133"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a7cdf11d53ce0f170ad7dd8fc66961805_icgraph.png" border="0" usemap="#class_disassemble_a7cdf11d53ce0f170ad7dd8fc66961805_icgraph" alt=""/></div>
+<map name="class_disassemble_a7cdf11d53ce0f170ad7dd8fc66961805_icgraph" id="class_disassemble_a7cdf11d53ce0f170ad7dd8fc66961805_icgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#a713e75749b5c7c79927075b57431a298" title="Disassemble::OnAutomatic" alt="" coords="197,5,379,32"/>
+<area shape="rect" id="node3" href="class_disassemble.html#a11695fe0ce9003a5cfcd58e86ad6047e" title="Disassemble::OnArm" alt="" coords="215,56,361,83"/>
+<area shape="rect" id="node4" href="class_disassemble.html#add1cb356f3605cc46f9c83f29473db24" title="Disassemble::OnGo" alt="" coords="219,107,357,133"/>
+<area shape="rect" id="node5" href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63" title="Disassemble::OnGopc" alt="" coords="211,208,365,235"/>
+<area shape="rect" id="node6" href="class_disassemble.html#a9d25720f4d6c7a31281301b93b0ae02a" title="Disassemble::OnNext" alt="" coords="427,183,576,209"/>
+<area shape="rect" id="node7" href="class_disassemble.html#a30fc26e4204bd886f7cd8eb0c6c22e88" title="Disassemble::update" alt="" coords="429,245,573,272"/>
+<area shape="rect" id="node8" href="class_disassemble.html#a9b66d72bb746fe9df6bbcb4831dbf8ad" title="Disassemble::OnRefresh" alt="" coords="205,309,371,336"/>
+<area shape="rect" id="node9" href="class_disassemble.html#a480844a650f1a7ab4a396ff1ffdd5655" title="Disassemble::OnThumb" alt="" coords="207,360,369,387"/>
+<area shape="rect" id="node10" href="class_disassemble.html#a23e74e8f32758c5b6ff63914633e2ab5" title="Disassemble::OnInitDialog" alt="" coords="201,411,375,437"/>
+<area shape="rect" id="node11" href="class_disassemble.html#a96149abe6cfe456c0d799dfe59b19826" title="Disassemble::OnVScroll" alt="" coords="206,461,370,488"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a30fc26e4204bd886f7cd8eb0c6c22e88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30fc26e4204bd886f7cd8eb0c6c22e88">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Disassemble::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_i_update_listener.html#ac03b85f52e858d0bbd08a4984b2cb929">IUpdateListener</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a> 파일의 <a class="el" href="_disassemble_8cpp_source.html#l00352">352</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;{</div><div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;  <a class="code" href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63">OnGopc</a>();</div><div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;  <a class="code" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">refresh</a>();</div><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;}</div><div class="ttc" id="class_disassemble_html_a7cdf11d53ce0f170ad7dd8fc66961805"><div class="ttname"><a href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805">Disassemble::refresh</a></div><div class="ttdeci">void refresh()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00289">Disassemble.cpp:289</a></div></div>
+<div class="ttc" id="class_disassemble_html_ad757b7defc104599f1a20730cf7f3d63"><div class="ttname"><a href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63">Disassemble::OnGopc</a></div><div class="ttdeci">afx_msg void OnGopc()</div><div class="ttdef"><b>Definition:</b> <a href="_disassemble_8cpp_source.html#l00144">Disassemble.cpp:144</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_disassemble_a30fc26e4204bd886f7cd8eb0c6c22e88_cgraph.png" border="0" usemap="#class_disassemble_a30fc26e4204bd886f7cd8eb0c6c22e88_cgraph" alt=""/></div>
+<map name="class_disassemble_a30fc26e4204bd886f7cd8eb0c6c22e88_cgraph" id="class_disassemble_a30fc26e4204bd886f7cd8eb0c6c22e88_cgraph">
+<area shape="rect" id="node2" href="class_disassemble.html#ad757b7defc104599f1a20730cf7f3d63" title="Disassemble::OnGopc" alt="" coords="197,81,351,108"/>
+<area shape="rect" id="node3" href="class_disassemble.html#a7cdf11d53ce0f170ad7dd8fc66961805" title="Disassemble::refresh" alt="" coords="399,56,543,83"/>
+<area shape="rect" id="node4" href="armdis_8cpp.html#ad4be2131ddd63e80d00ca6266c48a7a8" title="disArm" alt="" coords="623,5,685,32"/>
+<area shape="rect" id="node7" href="armdis_8cpp.html#afe845ff5d0d51e6d26397b5464f45011" title="disThumb" alt="" coords="615,56,693,83"/>
+<area shape="rect" id="node10" href="_disassemble_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="591,107,717,133"/>
+<area shape="rect" id="node5" href="armdis_8cpp.html#a168f772bb2e40a15f724a4e36a55421c" title="addHex" alt="" coords="806,56,873,83"/>
+<area shape="rect" id="node6" href="armdis_8cpp.html#a71fa21a4ba3c110dc6075f368b24da57" title="addStr" alt="" coords="809,5,869,32"/>
+<area shape="rect" id="node8" href="elf_8cpp.html#a7c69995306ea7597600711bb714ed96e" title="elfGetAddressSymbol" alt="" coords="765,107,913,133"/>
+<area shape="rect" id="node9" href="elf_8cpp.html#a00c4d54af2a13bd9e147f2635c9a43f7" title="elfGetCompileUnit" alt="" coords="961,107,1088,133"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a960ac8317ada7182e59132a3ee4afb48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a960ac8317ada7182e59132a3ee4afb48">&#9670;&nbsp;</a></span>address</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> Disassemble::address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00044">44</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a347234b8c8fa03c0bc21e39c03efc36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a347234b8c8fa03c0bc21e39c03efc36d">&#9670;&nbsp;</a></span>autoUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Disassemble::autoUpdate</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00043">43</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a06c362364d2e01bac10fbcfb7ab28f50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06c362364d2e01bac10fbcfb7ab28f50">&#9670;&nbsp;</a></span>count</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> Disassemble::count</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00042">42</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a74582f94dacc9f2eac347fd59b2a906b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74582f94dacc9f2eac347fd59b2a906b">&#9670;&nbsp;</a></span>m_address</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CEdit Disassemble::m_address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00050">50</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa38e1a7ec55e3fbe47d067e3a46df422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa38e1a7ec55e3fbe47d067e3a46df422">&#9670;&nbsp;</a></span>m_c</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Disassemble::m_c</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00052">52</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aca528eed73b34340d601b725dd688b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca528eed73b34340d601b725dd688b07">&#9670;&nbsp;</a></span>m_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Disassemble::m_f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00053">53</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6b51f716f8d8513da506a1d7875ca500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b51f716f8d8513da506a1d7875ca500">&#9670;&nbsp;</a></span>m_i</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Disassemble::m_i</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a99205259bac8d57ff61ca23458f76634"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99205259bac8d57ff61ca23458f76634">&#9670;&nbsp;</a></span>m_list</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CListBox Disassemble::m_list</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00051">51</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae8c58060e32c1b456fea8c047052a746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8c58060e32c1b456fea8c047052a746">&#9670;&nbsp;</a></span>m_n</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Disassemble::m_n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a477510b19843360a883717917f387412"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a477510b19843360a883717917f387412">&#9670;&nbsp;</a></span>m_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Disassemble::m_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00056">56</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac8fad0495b1da26907516e83c876ec08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8fad0495b1da26907516e83c876ec08">&#9670;&nbsp;</a></span>m_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Disassemble::m_v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00057">57</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac4b4e68b91013731333b3019bbc16f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4b4e68b91013731333b3019bbc16f1d">&#9670;&nbsp;</a></span>m_z</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL Disassemble::m_z</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00058">58</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a30b707e1da3b01abda044e78929404cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30b707e1da3b01abda044e78929404cc">&#9670;&nbsp;</a></span>mode</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> Disassemble::mode</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_disassemble_8h_source.html">Disassemble.h</a> 파일의 <a class="el" href="_disassemble_8h_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_disassemble_8h_source.html">Disassemble.h</a></li>
-<li>src/win32/Disassemble.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_disassemble_8h_source.html">Disassemble.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_disassemble_8cpp_source.html">Disassemble.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_disassemble.html">Disassemble</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

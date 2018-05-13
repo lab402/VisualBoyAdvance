@@ -1,0 +1,10 @@
+<map id="VBA::sCutSuffix" name="VBA::sCutSuffix">
+<area shape="rect" id="node2" href="$class_v_b_a_1_1_window.html#a68341ae65a5ec41c6e6269d6f579aa08" title="VBA::Window::vCaptureScreen" alt="" coords="185,5,388,32"/>
+<area shape="rect" id="node6" href="$class_v_b_a_1_1_window.html#a27bb0ed15cc90758c95eb11fddd14a86" title="VBA::Window::vOnFileSave" alt="" coords="195,56,378,83"/>
+<area shape="rect" id="node8" href="$class_v_b_a_1_1_window.html#a26d233092dd624a0bd3734ec0cdc0d7c" title="VBA::Window::vOnExportBatteryFile" alt="" coords="169,107,404,133"/>
+<area shape="rect" id="node9" href="$class_v_b_a_1_1_window.html#ae96308c56cf84f9c56dc97c196adc49c" title="VBA::Window::vOnFileScreen\lCapture" alt="" coords="189,158,384,199"/>
+<area shape="rect" id="node3" href="$_system_8h.html#a81adef9230693f8bca5eed965e5c9d78" title="systemScreenCapture" alt="" coords="455,5,606,32"/>
+<area shape="rect" id="node4" href="$_g_b_8h.html#ad61e0a4cf5a6e1f6bfda43f9e2a67826" title="gbEmulate" alt="" coords="657,5,741,32"/>
+<area shape="rect" id="node5" href="$class_g_b_disassemble.html#ac818bf955fab0b2433d68ed992033169" title="GBDisassemble::OnNext" alt="" coords="789,5,957,32"/>
+<area shape="rect" id="node7" href="$class_v_b_a_1_1_window.html#a747763400ba237d06f6e01577998f6ab" title="VBA::Window::Window" alt="" coords="452,107,609,133"/>
+</map>

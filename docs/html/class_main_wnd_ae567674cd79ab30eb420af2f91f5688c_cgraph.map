@@ -1,0 +1,9 @@
+<map id="MainWnd::OnFileExportGamesharksnapshot" name="MainWnd::OnFileExportGamesharksnapshot">
+<area shape="rect" id="node2" href="$class_v_b_a.html#a340eaeeb7fcfc242f08ac3442d991a96" title="VBA::winCheckFullscreen" alt="" coords="335,5,508,32"/>
+<area shape="rect" id="node4" href="$system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="362,56,481,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#a7adc4aa2a10246fa13637e9d0870843d" title="MainWnd::winLoadFilter" alt="" coords="341,107,502,133"/>
+<area shape="rect" id="node6" href="$_win_res_util_8cpp.html#a416e85e80ab9b01376e87251c83d1a5a" title="winResLoadString" alt="" coords="579,132,706,159"/>
+<area shape="rect" id="node7" href="$class_file_dlg.html#a45b5a0d6b2d8a9b973864ab2b36e16e0" title="FileDlg::DoModal" alt="" coords="361,208,482,235"/>
+<area shape="rect" id="node8" href="$class_file_dlg.html#a52be84d9ca25a4d4dbb1f5e0ed1404bd" title="FileDlg::GetPathName" alt="" coords="345,259,497,285"/>
+<area shape="rect" id="node3" href="$class_i_display.html#afcb9df4a4949d13491f9a07a2ce24eb0" title="IDisplay::checkFullScreen" alt="" coords="556,5,729,32"/>
+</map>

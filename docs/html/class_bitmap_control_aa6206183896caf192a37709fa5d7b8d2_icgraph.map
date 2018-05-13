@@ -1,0 +1,8 @@
+<map id="BitmapControl::setData" name="BitmapControl::setData">
+<area shape="rect" id="node2" href="$class_g_b_map_view.html#ab0e95e7d8dd6638a2451b7faa6937acb" title="GBMapView::GBMapView" alt="" coords="213,5,388,32"/>
+<area shape="rect" id="node3" href="$class_g_b_oam_view.html#a3e2e1ed3de07569a08af410042e1ba8f" title="GBOamView::GBOamView" alt="" coords="211,56,391,83"/>
+<area shape="rect" id="node4" href="$class_g_b_tile_view.html#a16e732a5dfc802bca970d5cf667386df" title="GBTileView::GBTileView" alt="" coords="219,107,383,133"/>
+<area shape="rect" id="node5" href="$class_map_view.html#ab044e2656406cb180611dd46fa04d9cb" title="MapView::MapView" alt="" coords="233,157,369,184"/>
+<area shape="rect" id="node6" href="$class_oam_view.html#a58028e15d10221a62f25799321516416" title="OamView::OamView" alt="" coords="229,208,372,235"/>
+<area shape="rect" id="node7" href="$class_tile_view.html#a870ab4767d06b82a3537dd5aaf7697c1" title="TileView::TileView" alt="" coords="237,259,364,285"/>
+</map>

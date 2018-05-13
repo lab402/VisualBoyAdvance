@@ -1,0 +1,7 @@
+<map id="GBMemoryViewerDlg::OnSelchangeAddresses" name="GBMemoryViewerDlg::OnSelchangeAddresses">
+<area shape="rect" id="node2" href="$class_memory_viewer.html#abe391051455e116889da0613c19888a2" title="MemoryViewer::setAddress" alt="" coords="216,78,399,105"/>
+<area shape="rect" id="node3" href="$class_memory_viewer.html#abfed49727a6de1b52e5495ed96816759" title="MemoryViewer::setCaretPos" alt="" coords="447,78,635,105"/>
+<area shape="rect" id="node4" href="$class_memory_viewer.html#ab658d89232d31d190ac4e323d61c4b8f" title="MemoryViewer::destroyEdit\lCaret" alt="" coords="691,5,873,47"/>
+<area shape="rect" id="node5" href="$class_i_memory_viewer_dlg.html#a95cad5a86447abbc593b7154c110bb2c" title="IMemoryViewerDlg::setCurrent\lAddress" alt="" coords="683,71,881,112"/>
+<area shape="rect" id="node6" href="$class_memory_viewer.html#a73ddaf427846eedb7073ad6fc69001ac" title="MemoryViewer::createEdit\lCaret" alt="" coords="695,136,869,177"/>
+</map>

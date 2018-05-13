@@ -1,0 +1,200 @@
+\hypertarget{_win_res_util_8cpp}{}\section{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Win\+Res\+Util.cpp 파일 참조}
+\label{_win_res_util_8cpp}\index{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Win\+Res\+Util.\+cpp@{C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\+Win\+Res\+Util.\+cpp}}
+{\ttfamily \#include \char`\"{}stdafx.\+h\char`\"{}}\newline
+Win\+Res\+Util.\+cpp에 대한 include 의존 그래프
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_win_res_util_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{함수}
+\begin{DoxyCompactItemize}
+\item 
+U\+C\+H\+AR $\ast$ \mbox{\hyperlink{_win_res_util_8cpp_aef09e649be3760e91ac176df7a0f4473}{win\+Res\+Get\+Resource}} (L\+P\+C\+T\+S\+TR res\+Type, L\+P\+C\+T\+S\+TR res\+Name)
+\item 
+H\+M\+E\+NU \mbox{\hyperlink{_win_res_util_8cpp_a455bea54e4ebdd67b568795f019b8d30}{win\+Res\+Load\+Menu}} (L\+P\+C\+T\+S\+TR menu\+Name)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_win_res_util_8cpp_a7a1d14548411d596fdb95f3ab30f4269}{win\+Res\+Dialog\+Box}} (L\+P\+C\+T\+S\+TR box\+Name, H\+W\+ND parent, D\+L\+G\+P\+R\+OC dlg\+Proc, L\+P\+A\+R\+AM l\+Param)
+\item 
+\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{_win_res_util_8cpp_a91c1d6230a93da87eb420bd84cf80171}{win\+Res\+Dialog\+Box}} (L\+P\+C\+T\+S\+TR box\+Name, H\+W\+ND parent, D\+L\+G\+P\+R\+OC dlg\+Proc)
+\item 
+C\+String \mbox{\hyperlink{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}{win\+Res\+Load\+String}} (U\+I\+NT \mbox{\hyperlink{_commands_8cpp_a7b7a6396b2c82ad46c6d8b2bf141a8dd}{id}})
+\end{DoxyCompactItemize}
+
+
+\subsection{함수 문서화}
+\mbox{\Hypertarget{_win_res_util_8cpp_a7a1d14548411d596fdb95f3ab30f4269}\label{_win_res_util_8cpp_a7a1d14548411d596fdb95f3ab30f4269}} 
+\index{Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}!win\+Res\+Dialog\+Box@{win\+Res\+Dialog\+Box}}
+\index{win\+Res\+Dialog\+Box@{win\+Res\+Dialog\+Box}!Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}}
+\subsubsection{\texorpdfstring{win\+Res\+Dialog\+Box()}{winResDialogBox()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} win\+Res\+Dialog\+Box (\begin{DoxyParamCaption}\item[{L\+P\+C\+T\+S\+TR}]{box\+Name,  }\item[{H\+W\+ND}]{parent,  }\item[{D\+L\+G\+P\+R\+OC}]{dlg\+Proc,  }\item[{L\+P\+A\+R\+AM}]{l\+Param }\end{DoxyParamCaption})}
+
+
+
+Win\+Res\+Util.\+cpp 파일의 60 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+64 \{
+65   \textcolor{comment}{/*}
+66 \textcolor{comment}{    UCHAR * b = winResGetResource(RT\_DIALOG, boxName);}
+67 \textcolor{comment}{  }
+68 \textcolor{comment}{    if(b != NULL) \{}
+69 \textcolor{comment}{    }
+70 \textcolor{comment}{    return DialogBoxIndirectParam(hInstance,}
+71 \textcolor{comment}{    (LPCDLGTEMPLATE)b,}
+72 \textcolor{comment}{    parent,}
+73 \textcolor{comment}{    dlgProc,}
+74 \textcolor{comment}{    lParam);}
+75 \textcolor{comment}{    \}}
+76 \textcolor{comment}{}
+77 \textcolor{comment}{    return DialogBoxParam(hInstance,}
+78 \textcolor{comment}{    boxName,}
+79 \textcolor{comment}{    parent,}
+80 \textcolor{comment}{    dlgProc,}
+81 \textcolor{comment}{    lParam);}
+82 \textcolor{comment}{  */}
+83   \textcolor{keywordflow}{return} 0;
+84 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{_win_res_util_8cpp_a7a1d14548411d596fdb95f3ab30f4269_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_win_res_util_8cpp_a91c1d6230a93da87eb420bd84cf80171}\label{_win_res_util_8cpp_a91c1d6230a93da87eb420bd84cf80171}} 
+\index{Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}!win\+Res\+Dialog\+Box@{win\+Res\+Dialog\+Box}}
+\index{win\+Res\+Dialog\+Box@{win\+Res\+Dialog\+Box}!Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}}
+\subsubsection{\texorpdfstring{win\+Res\+Dialog\+Box()}{winResDialogBox()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} win\+Res\+Dialog\+Box (\begin{DoxyParamCaption}\item[{L\+P\+C\+T\+S\+TR}]{box\+Name,  }\item[{H\+W\+ND}]{parent,  }\item[{D\+L\+G\+P\+R\+OC}]{dlg\+Proc }\end{DoxyParamCaption})}
+
+
+
+Win\+Res\+Util.\+cpp 파일의 86 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+89 \{
+90   \textcolor{keywordflow}{return} \mbox{\hyperlink{_win_res_util_8cpp_a7a1d14548411d596fdb95f3ab30f4269}{winResDialogBox}}(boxName,
+91                          parent,
+92                          dlgProc,
+93                          0);
+94 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{_win_res_util_8cpp_a91c1d6230a93da87eb420bd84cf80171_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_win_res_util_8cpp_aef09e649be3760e91ac176df7a0f4473}\label{_win_res_util_8cpp_aef09e649be3760e91ac176df7a0f4473}} 
+\index{Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}!win\+Res\+Get\+Resource@{win\+Res\+Get\+Resource}}
+\index{win\+Res\+Get\+Resource@{win\+Res\+Get\+Resource}!Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}}
+\subsubsection{\texorpdfstring{win\+Res\+Get\+Resource()}{winResGetResource()}}
+{\footnotesize\ttfamily U\+C\+H\+AR$\ast$ win\+Res\+Get\+Resource (\begin{DoxyParamCaption}\item[{L\+P\+C\+T\+S\+TR}]{res\+Type,  }\item[{L\+P\+C\+T\+S\+TR}]{res\+Name }\end{DoxyParamCaption})}
+
+
+
+Win\+Res\+Util.\+cpp 파일의 28 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+29 \{
+30   HINSTANCE winResInstance = winResGetInstance(resType, resName);
+31 
+32   HRSRC hRsrc = FindResourceEx(winResInstance, resType, resName, 0);
+33 
+34   \textcolor{keywordflow}{if}(hRsrc != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+35     HGLOBAL hGlobal = LoadResource(winResInstance, hRsrc);
+36 
+37     \textcolor{keywordflow}{if}(hGlobal != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+38       UCHAR * \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = (UCHAR *)LockResource(hGlobal);
+39 
+40       \textcolor{keywordflow}{return} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}};
+41     \}
+42   \}
+43   \textcolor{keywordflow}{return} \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+44 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_win_res_util_8cpp_aef09e649be3760e91ac176df7a0f4473_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_win_res_util_8cpp_a455bea54e4ebdd67b568795f019b8d30}\label{_win_res_util_8cpp_a455bea54e4ebdd67b568795f019b8d30}} 
+\index{Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}!win\+Res\+Load\+Menu@{win\+Res\+Load\+Menu}}
+\index{win\+Res\+Load\+Menu@{win\+Res\+Load\+Menu}!Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}}
+\subsubsection{\texorpdfstring{win\+Res\+Load\+Menu()}{winResLoadMenu()}}
+{\footnotesize\ttfamily H\+M\+E\+NU win\+Res\+Load\+Menu (\begin{DoxyParamCaption}\item[{L\+P\+C\+T\+S\+TR}]{menu\+Name }\end{DoxyParamCaption})}
+
+
+
+Win\+Res\+Util.\+cpp 파일의 46 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+47 \{
+48   UCHAR * \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = \mbox{\hyperlink{_win_res_util_8cpp_aef09e649be3760e91ac176df7a0f4473}{winResGetResource}}(RT\_MENU, menuName);
+49   
+50   \textcolor{keywordflow}{if}(\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}) \{
+51     HMENU menu = LoadMenuIndirect((CONST MENUTEMPLATE *)\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}});
+52     
+53     \textcolor{keywordflow}{if}(menu != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+54       \textcolor{keywordflow}{return} menu;
+55   \}
+56 
+57   \textcolor{keywordflow}{return} LoadMenu(\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, menuName);
+58 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{_win_res_util_8cpp_a455bea54e4ebdd67b568795f019b8d30_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_win_res_util_8cpp_a455bea54e4ebdd67b568795f019b8d30_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}\label{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}} 
+\index{Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}!win\+Res\+Load\+String@{win\+Res\+Load\+String}}
+\index{win\+Res\+Load\+String@{win\+Res\+Load\+String}!Win\+Res\+Util.\+cpp@{Win\+Res\+Util.\+cpp}}
+\subsubsection{\texorpdfstring{win\+Res\+Load\+String()}{winResLoadString()}}
+{\footnotesize\ttfamily C\+String win\+Res\+Load\+String (\begin{DoxyParamCaption}\item[{U\+I\+NT}]{id }\end{DoxyParamCaption})}
+
+
+
+Win\+Res\+Util.\+cpp 파일의 96 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+97 \{
+98   \textcolor{keywordtype}{int} stId = \textcolor{keywordtype}{id} / 16 + 1;
+99   HINSTANCE inst = winResGetInstance(RT\_STRING, MAKEINTRESOURCE(stId));
+100   
+101   CString res;
+102   \textcolor{keywordflow}{if}(res.LoadString(\textcolor{keywordtype}{id}))
+103     \textcolor{keywordflow}{return} res;
+104 
+105   \textcolor{comment}{// TODO: handle case where string is only in the default English}
+106   res = \textcolor{stringliteral}{""};
+107 
+108   \textcolor{keywordflow}{return} res;
+109 \}
+\end{DoxyCode}

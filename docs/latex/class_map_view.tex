@@ -1,150 +1,1871 @@
 \hypertarget{class_map_view}{}\section{Map\+View 클래스 참조}
 \label{class_map_view}\index{Map\+View@{Map\+View}}
-Map\+View에 대한 상속 다이어그램 \+: \begin{figure}[H]
+
+
+{\ttfamily \#include $<$Map\+View.\+h$>$}
+
+
+
+Map\+View에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=3.000000cm]{class_map_view}
+\includegraphics[height=550pt]{class_map_view__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Map\+View에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_map_view__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public 타입}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_map_view_ad398582947c2a9b34e2217a782349299}\label{class_map_view_ad398582947c2a9b34e2217a782349299}} 
-enum \{ {\bfseries I\+DD} = I\+D\+D\+\_\+\+M\+A\+P\+\_\+\+V\+I\+EW
+enum \{ \mbox{\hyperlink{class_map_view_ad398582947c2a9b34e2217a782349299a9bcd3b06eb8616269560902b0a5ca782}{I\+DD}} = I\+D\+D\+\_\+\+M\+A\+P\+\_\+\+V\+I\+EW
  \}
 \end{DoxyCompactItemize}
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_map_view_afadc38148227210fd5d8e12c50e7f22d}\label{class_map_view_afadc38148227210fd5d8e12c50e7f22d}} 
-void {\bfseries save\+P\+NG} (const char $\ast$name)
+void \mbox{\hyperlink{class_map_view_afadc38148227210fd5d8e12c50e7f22d}{save\+P\+NG}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$name)
 \item 
-\mbox{\Hypertarget{class_map_view_a792d85841dc88e63ab7f31ed6de066d7}\label{class_map_view_a792d85841dc88e63ab7f31ed6de066d7}} 
-void {\bfseries save\+B\+MP} (const char $\ast$name)
+void \mbox{\hyperlink{class_map_view_a792d85841dc88e63ab7f31ed6de066d7}{save\+B\+MP}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$name)
 \item 
-\mbox{\Hypertarget{class_map_view_ae6fd15cfd77671946d4ad08f901bde3c}\label{class_map_view_ae6fd15cfd77671946d4ad08f901bde3c}} 
-afx\+\_\+msg L\+R\+E\+S\+U\+LT {\bfseries On\+Col\+Info} (W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+afx\+\_\+msg L\+R\+E\+S\+U\+LT \mbox{\hyperlink{class_map_view_ae6fd15cfd77671946d4ad08f901bde3c}{On\+Col\+Info}} (W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
 \item 
-\mbox{\Hypertarget{class_map_view_a9d5b068db40e4d9641bfeca9f81bb53a}\label{class_map_view_a9d5b068db40e4d9641bfeca9f81bb53a}} 
-afx\+\_\+msg L\+R\+E\+S\+U\+LT {\bfseries On\+Map\+Info} (W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
+afx\+\_\+msg L\+R\+E\+S\+U\+LT \mbox{\hyperlink{class_map_view_a9d5b068db40e4d9641bfeca9f81bb53a}{On\+Map\+Info}} (W\+P\+A\+R\+AM w\+Param, L\+P\+A\+R\+AM l\+Param)
 \item 
-\mbox{\Hypertarget{class_map_view_ad05aa1227f5a62d8e9477eeeec37115c}\label{class_map_view_ad05aa1227f5a62d8e9477eeeec37115c}} 
-u32 {\bfseries Get\+Click\+Address} (int x, int y)
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{class_map_view_ad05aa1227f5a62d8e9477eeeec37115c}{Get\+Click\+Address}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} x, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} y)
 \item 
-\mbox{\Hypertarget{class_map_view_a30bef411235a6b8666f34991c2b90619}\label{class_map_view_a30bef411235a6b8666f34991c2b90619}} 
-u32 {\bfseries Get\+Text\+Click\+Address} (u32 base, int x, int y)
+\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} \mbox{\hyperlink{class_map_view_a30bef411235a6b8666f34991c2b90619}{Get\+Text\+Click\+Address}} (\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} base, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} x, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} y)
 \item 
-\mbox{\Hypertarget{class_map_view_ac41eb53f60bccbfe4f5601f1a997c51e}\label{class_map_view_ac41eb53f60bccbfe4f5601f1a997c51e}} 
-void {\bfseries update} ()
+void \mbox{\hyperlink{class_map_view_ac41eb53f60bccbfe4f5601f1a997c51e}{update}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_aad00c64b13ff280b4279a7f8cd57b083}\label{class_map_view_aad00c64b13ff280b4279a7f8cd57b083}} 
-void {\bfseries enable\+Buttons} (int mode)
+void \mbox{\hyperlink{class_map_view_aad00c64b13ff280b4279a7f8cd57b083}{enable\+Buttons}} (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} mode)
 \item 
-\mbox{\Hypertarget{class_map_view_a89edf3053cffa4a68516178dbd987339}\label{class_map_view_a89edf3053cffa4a68516178dbd987339}} 
-void {\bfseries paint} ()
+void \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1}\label{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1}} 
-void {\bfseries render\+Mode5} ()
+void \mbox{\hyperlink{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1}{render\+Mode5}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a2e10ddf467ef8b43907459790c20016e}\label{class_map_view_a2e10ddf467ef8b43907459790c20016e}} 
-void {\bfseries render\+Mode4} ()
+void \mbox{\hyperlink{class_map_view_a2e10ddf467ef8b43907459790c20016e}{render\+Mode4}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a554841422c2e7d39ed988017561276b1}\label{class_map_view_a554841422c2e7d39ed988017561276b1}} 
-void {\bfseries render\+Mode3} ()
+void \mbox{\hyperlink{class_map_view_a554841422c2e7d39ed988017561276b1}{render\+Mode3}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a4c9cc923e9b7112cfc15887fdec4284d}\label{class_map_view_a4c9cc923e9b7112cfc15887fdec4284d}} 
-void {\bfseries render\+Mode2} ()
+void \mbox{\hyperlink{class_map_view_a4c9cc923e9b7112cfc15887fdec4284d}{render\+Mode2}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_afcc44b85ee5727fc507a34672a3b6ce4}\label{class_map_view_afcc44b85ee5727fc507a34672a3b6ce4}} 
-void {\bfseries render\+Mode1} ()
+void \mbox{\hyperlink{class_map_view_afcc44b85ee5727fc507a34672a3b6ce4}{render\+Mode1}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a03250392fe23753257ed120df86aaea1}\label{class_map_view_a03250392fe23753257ed120df86aaea1}} 
-void {\bfseries render\+Mode0} ()
+void \mbox{\hyperlink{class_map_view_a03250392fe23753257ed120df86aaea1}{render\+Mode0}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a2e462e6466f052427cd894a7c047fa68}\label{class_map_view_a2e462e6466f052427cd894a7c047fa68}} 
-void {\bfseries render\+Rot\+Screen} (u16 control)
+void \mbox{\hyperlink{class_map_view_a2e462e6466f052427cd894a7c047fa68}{render\+Rot\+Screen}} (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} control)
 \item 
-\mbox{\Hypertarget{class_map_view_acff08c9c182f791799a27592ea7aafff}\label{class_map_view_acff08c9c182f791799a27592ea7aafff}} 
-void {\bfseries render\+Text\+Screen} (u16 control)
+void \mbox{\hyperlink{class_map_view_acff08c9c182f791799a27592ea7aafff}{render\+Text\+Screen}} (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} control)
 \item 
-\mbox{\Hypertarget{class_map_view_ab044e2656406cb180611dd46fa04d9cb}\label{class_map_view_ab044e2656406cb180611dd46fa04d9cb}} 
-{\bfseries Map\+View} (C\+Wnd $\ast$p\+Parent=N\+U\+LL)
+\mbox{\hyperlink{class_map_view_ab044e2656406cb180611dd46fa04d9cb}{Map\+View}} (C\+Wnd $\ast$p\+Parent=\mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}})
+\item 
+\mbox{\hyperlink{class_map_view_a6c3788b3c08e116287872347b3b0e9f6}{$\sim$\+Map\+View}} ()
 \end{DoxyCompactItemize}
 \subsection*{Public 속성}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_map_view_a211ea4eb337579e7193702ed2f20279c}\label{class_map_view_a211ea4eb337579e7193702ed2f20279c}} 
-C\+Static {\bfseries m\+\_\+numcolors}
+C\+Static \mbox{\hyperlink{class_map_view_a211ea4eb337579e7193702ed2f20279c}{m\+\_\+numcolors}}
 \item 
-\mbox{\Hypertarget{class_map_view_a9d3a6ede0046bc5a24b3472b59594056}\label{class_map_view_a9d3a6ede0046bc5a24b3472b59594056}} 
-C\+Static {\bfseries m\+\_\+mode}
+C\+Static \mbox{\hyperlink{class_map_view_a9d3a6ede0046bc5a24b3472b59594056}{m\+\_\+mode}}
 \item 
-\mbox{\Hypertarget{class_map_view_a594a0ff999a2dd22853a45b584325543}\label{class_map_view_a594a0ff999a2dd22853a45b584325543}} 
-C\+Static {\bfseries m\+\_\+overflow}
+C\+Static \mbox{\hyperlink{class_map_view_a594a0ff999a2dd22853a45b584325543}{m\+\_\+overflow}}
 \item 
-\mbox{\Hypertarget{class_map_view_a382e8904120801584d23def0e73360f9}\label{class_map_view_a382e8904120801584d23def0e73360f9}} 
-C\+Static {\bfseries m\+\_\+mosaic}
+C\+Static \mbox{\hyperlink{class_map_view_a382e8904120801584d23def0e73360f9}{m\+\_\+mosaic}}
 \item 
-\mbox{\Hypertarget{class_map_view_a3b5211e836b2d9b0124e0bcb71a49c3c}\label{class_map_view_a3b5211e836b2d9b0124e0bcb71a49c3c}} 
-C\+Static {\bfseries m\+\_\+priority}
+C\+Static \mbox{\hyperlink{class_map_view_a3b5211e836b2d9b0124e0bcb71a49c3c}{m\+\_\+priority}}
 \item 
-\mbox{\Hypertarget{class_map_view_a78939f6f277c3e2b39292ecd4b21ca00}\label{class_map_view_a78939f6f277c3e2b39292ecd4b21ca00}} 
-C\+Static {\bfseries m\+\_\+dim}
+C\+Static \mbox{\hyperlink{class_map_view_a78939f6f277c3e2b39292ecd4b21ca00}{m\+\_\+dim}}
 \item 
-\mbox{\Hypertarget{class_map_view_ad1561bbb87fe21907a1df6085855d1b1}\label{class_map_view_ad1561bbb87fe21907a1df6085855d1b1}} 
-C\+Static {\bfseries m\+\_\+charbase}
+C\+Static \mbox{\hyperlink{class_map_view_ad1561bbb87fe21907a1df6085855d1b1}{m\+\_\+charbase}}
 \item 
-\mbox{\Hypertarget{class_map_view_a8f4a820c52aaffadc6132ccd7727aa9d}\label{class_map_view_a8f4a820c52aaffadc6132ccd7727aa9d}} 
-C\+Static {\bfseries m\+\_\+mapbase}
+C\+Static \mbox{\hyperlink{class_map_view_a8f4a820c52aaffadc6132ccd7727aa9d}{m\+\_\+mapbase}}
 \end{DoxyCompactItemize}
 \subsection*{Protected 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_map_view_aee4e07be36ab0fbfe2c268d149c40e98}\label{class_map_view_aee4e07be36ab0fbfe2c268d149c40e98}} 
-virtual void {\bfseries Do\+Data\+Exchange} (C\+Data\+Exchange $\ast$p\+DX)
+virtual void \mbox{\hyperlink{class_map_view_aee4e07be36ab0fbfe2c268d149c40e98}{Do\+Data\+Exchange}} (C\+Data\+Exchange $\ast$p\+DX)
 \item 
-\mbox{\Hypertarget{class_map_view_a50910da172e0cd2a6e13fde5d5799906}\label{class_map_view_a50910da172e0cd2a6e13fde5d5799906}} 
-virtual void {\bfseries Post\+Nc\+Destroy} ()
+virtual void \mbox{\hyperlink{class_map_view_a50910da172e0cd2a6e13fde5d5799906}{Post\+Nc\+Destroy}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_aecebb6b2f85810fad29d3e26e125036f}\label{class_map_view_aecebb6b2f85810fad29d3e26e125036f}} 
-afx\+\_\+msg void {\bfseries On\+Refresh} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_aecebb6b2f85810fad29d3e26e125036f}{On\+Refresh}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a10c4f05b5c4289dfc08c6501de3cf40c}\label{class_map_view_a10c4f05b5c4289dfc08c6501de3cf40c}} 
-virtual B\+O\+OL {\bfseries On\+Init\+Dialog} ()
+virtual B\+O\+OL \mbox{\hyperlink{class_map_view_a10c4f05b5c4289dfc08c6501de3cf40c}{On\+Init\+Dialog}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a40f869c5b6d3c5b93d46a0b0167cdbd8}\label{class_map_view_a40f869c5b6d3c5b93d46a0b0167cdbd8}} 
-afx\+\_\+msg void {\bfseries On\+Frame0} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_a40f869c5b6d3c5b93d46a0b0167cdbd8}{On\+Frame0}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_ad8ca5cae3a97cb68c733a993317ce695}\label{class_map_view_ad8ca5cae3a97cb68c733a993317ce695}} 
-afx\+\_\+msg void {\bfseries On\+Frame1} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_ad8ca5cae3a97cb68c733a993317ce695}{On\+Frame1}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a63d587842197ce259cfcf9cfd29d0771}\label{class_map_view_a63d587842197ce259cfcf9cfd29d0771}} 
-afx\+\_\+msg void {\bfseries On\+Bg0} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_a63d587842197ce259cfcf9cfd29d0771}{On\+Bg0}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a67a49b3a77fa0205f7729a391d45f26c}\label{class_map_view_a67a49b3a77fa0205f7729a391d45f26c}} 
-afx\+\_\+msg void {\bfseries On\+Bg1} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_a67a49b3a77fa0205f7729a391d45f26c}{On\+Bg1}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a886ec2fa23dba5da34cdbc6f004c1bea}\label{class_map_view_a886ec2fa23dba5da34cdbc6f004c1bea}} 
-afx\+\_\+msg void {\bfseries On\+Bg2} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_a886ec2fa23dba5da34cdbc6f004c1bea}{On\+Bg2}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a1d3dab96b11cbe494f45f4d1bc86331f}\label{class_map_view_a1d3dab96b11cbe494f45f4d1bc86331f}} 
-afx\+\_\+msg void {\bfseries On\+Bg3} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_a1d3dab96b11cbe494f45f4d1bc86331f}{On\+Bg3}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a835d1f2f38753ace4840b69e4eaafcaf}\label{class_map_view_a835d1f2f38753ace4840b69e4eaafcaf}} 
-afx\+\_\+msg void {\bfseries On\+Stretch} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_a835d1f2f38753ace4840b69e4eaafcaf}{On\+Stretch}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_ace8d1802d7e8ae5bd92e572b9c0c84df}\label{class_map_view_ace8d1802d7e8ae5bd92e572b9c0c84df}} 
-afx\+\_\+msg void {\bfseries On\+Auto\+Update} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_ace8d1802d7e8ae5bd92e572b9c0c84df}{On\+Auto\+Update}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a4831981d7411a8a37353679421517cf8}\label{class_map_view_a4831981d7411a8a37353679421517cf8}} 
-afx\+\_\+msg void {\bfseries On\+Close} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_a4831981d7411a8a37353679421517cf8}{On\+Close}} ()
 \item 
-\mbox{\Hypertarget{class_map_view_a3fc9d61706da44e2fd3e8762805d9f0b}\label{class_map_view_a3fc9d61706da44e2fd3e8762805d9f0b}} 
-afx\+\_\+msg void {\bfseries On\+Save} ()
+afx\+\_\+msg void \mbox{\hyperlink{class_map_view_a3fc9d61706da44e2fd3e8762805d9f0b}{On\+Save}} ()
 \end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+Map\+View.\+h 파일의 39 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{멤버 열거형 문서화}
+\mbox{\Hypertarget{class_map_view_ad398582947c2a9b34e2217a782349299}\label{class_map_view_ad398582947c2a9b34e2217a782349299}} 
+\subsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{열거형 멤버}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I\+DD@{I\+DD}!Map\+View@{Map\+View}}\index{Map\+View@{Map\+View}!I\+DD@{I\+DD}}}\mbox{\Hypertarget{class_map_view_ad398582947c2a9b34e2217a782349299a9bcd3b06eb8616269560902b0a5ca782}\label{class_map_view_ad398582947c2a9b34e2217a782349299a9bcd3b06eb8616269560902b0a5ca782}} 
+I\+DD&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Map\+View.\+h 파일의 78 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+78 \{ \mbox{\hyperlink{class_map_view_ad398582947c2a9b34e2217a782349299a9bcd3b06eb8616269560902b0a5ca782}{IDD}} = \mbox{\hyperlink{resource_8h_a0fa1df94b09ec9f03fc640608fd995a4}{IDD\_MAP\_VIEW}} \};
+\end{DoxyCode}
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_map_view_ab044e2656406cb180611dd46fa04d9cb}\label{class_map_view_ab044e2656406cb180611dd46fa04d9cb}} 
+\index{Map\+View@{Map\+View}!Map\+View@{Map\+View}}
+\index{Map\+View@{Map\+View}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{Map\+View()}{MapView()}}
+{\footnotesize\ttfamily Map\+View\+::\+Map\+View (\begin{DoxyParamCaption}\item[{C\+Wnd $\ast$}]{p\+Parent = {\ttfamily \mbox{\hyperlink{_system_8h_a070d2ce7b6bb7e5c05602aa8c308d0c4}{N\+U\+LL}}} }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 49 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+50   : \mbox{\hyperlink{class_resize_dlg_a87bab778e9312f274ebe750d4c3a67ee}{ResizeDlg}}(\mbox{\hyperlink{class_map_view_ad398582947c2a9b34e2217a782349299a9bcd3b06eb8616269560902b0a5ca782}{MapView::IDD}}, pParent)
+51 \{
+52   \textcolor{comment}{//\{\{AFX\_DATA\_INIT(MapView)}
+53   \textcolor{comment}{//\}\}AFX\_DATA\_INIT}
+54   autoUpdate = \textcolor{keyword}{false};
+55   
+56   memset(&bmpInfo.bmiHeader, 0, \textcolor{keyword}{sizeof}(bmpInfo.bmiHeader));
+57   
+58   bmpInfo.bmiHeader.biSize = \textcolor{keyword}{sizeof}(bmpInfo.bmiHeader);
+59   bmpInfo.bmiHeader.biWidth = 1024;
+60   bmpInfo.bmiHeader.biHeight = -1024;
+61   bmpInfo.bmiHeader.biPlanes = 1;
+62   bmpInfo.bmiHeader.biBitCount = 24;
+63   bmpInfo.bmiHeader.biCompression = BI\_RGB;
+64   data = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)calloc(1, 3 * 1024 * 1024);
+65 
+66   mapView.\mbox{\hyperlink{class_bitmap_control_aa6206183896caf192a37709fa5d7b8d2}{setData}}(data);
+67   mapView.\mbox{\hyperlink{class_bitmap_control_a301c52fc62de4368fccdcdc93cefad0b}{setBmpInfo}}(&bmpInfo);
+68   
+69   control = \mbox{\hyperlink{_globals_8cpp_a6b479219dfffa1ef8c5f2884384b579e}{BG0CNT}};
+70 
+71   bg = 0;
+72   frame = 0;
+73 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_ab044e2656406cb180611dd46fa04d9cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a6c3788b3c08e116287872347b3b0e9f6}\label{class_map_view_a6c3788b3c08e116287872347b3b0e9f6}} 
+\index{Map\+View@{Map\+View}!````~Map\+View@{$\sim$\+Map\+View}}
+\index{````~Map\+View@{$\sim$\+Map\+View}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{$\sim$\+Map\+View()}{~MapView()}}
+{\footnotesize\ttfamily Map\+View\+::$\sim$\+Map\+View (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 75 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+76 \{
+77   free(data);
+78   data = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+79 \}
+\end{DoxyCode}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_map_view_aee4e07be36ab0fbfe2c268d149c40e98}\label{class_map_view_aee4e07be36ab0fbfe2c268d149c40e98}} 
+\index{Map\+View@{Map\+View}!Do\+Data\+Exchange@{Do\+Data\+Exchange}}
+\index{Do\+Data\+Exchange@{Do\+Data\+Exchange}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{Do\+Data\+Exchange()}{DoDataExchange()}}
+{\footnotesize\ttfamily void Map\+View\+::\+Do\+Data\+Exchange (\begin{DoxyParamCaption}\item[{C\+Data\+Exchange $\ast$}]{p\+DX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Map\+View.\+cpp 파일의 81 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+82 \{
+83   CDialog::DoDataExchange(pDX);
+84   \textcolor{comment}{//\{\{AFX\_DATA\_MAP(MapView)}
+85   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a9e6aad4c0a4a41ed652210b2020b7978}{IDC\_NUMCOLORS}}, \mbox{\hyperlink{class_map_view_a211ea4eb337579e7193702ed2f20279c}{m\_numcolors}});
+86   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a496f68890fb20f445e7456d458757bf2}{IDC\_MODE}}, \mbox{\hyperlink{class_map_view_a9d3a6ede0046bc5a24b3472b59594056}{m\_mode}});
+87   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a87dcba41de19597c66c71e0fb198e73b}{IDC\_OVERFLOW}}, \mbox{\hyperlink{class_map_view_a594a0ff999a2dd22853a45b584325543}{m\_overflow}});
+88   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a1c27ccea83aee8ba8f8e36c29e58b540}{IDC\_MOSAIC}}, \mbox{\hyperlink{class_map_view_a382e8904120801584d23def0e73360f9}{m\_mosaic}});
+89   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a5f9b7ceb0787e6ae1dda7db9edd604d2}{IDC\_PRIORITY}}, \mbox{\hyperlink{class_map_view_a3b5211e836b2d9b0124e0bcb71a49c3c}{m\_priority}});
+90   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a4c2fd4837fd31d9fdb4ef9d3f33d5652}{IDC\_DIM}}, \mbox{\hyperlink{class_map_view_a78939f6f277c3e2b39292ecd4b21ca00}{m\_dim}});
+91   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a92a345ce422442a5a6bd681f6ba5450b}{IDC\_CHARBASE}}, \mbox{\hyperlink{class_map_view_ad1561bbb87fe21907a1df6085855d1b1}{m\_charbase}});
+92   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_abaa4130147e520612bfd912f0ced570f}{IDC\_MAPBASE}}, \mbox{\hyperlink{class_map_view_a8f4a820c52aaffadc6132ccd7727aa9d}{m\_mapbase}});
+93   \textcolor{comment}{//\}\}AFX\_DATA\_MAP}
+94   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a3e6bb424d55ccf9fed6fa557eba35488}{IDC\_MAP\_VIEW}}, mapView);
+95   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a623597a58dcab206815a2c2fc7de0d91}{IDC\_MAP\_VIEW\_ZOOM}}, mapViewZoom);
+96   DDX\_Control(pDX, \mbox{\hyperlink{resource_8h_a611975b03b6d7ce68b2de260b97086d0}{IDC\_COLOR}}, color);
+97 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_map_view_aad00c64b13ff280b4279a7f8cd57b083}\label{class_map_view_aad00c64b13ff280b4279a7f8cd57b083}} 
+\index{Map\+View@{Map\+View}!enable\+Buttons@{enable\+Buttons}}
+\index{enable\+Buttons@{enable\+Buttons}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{enable\+Buttons()}{enableButtons()}}
+{\footnotesize\ttfamily void Map\+View\+::enable\+Buttons (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{mode }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 609 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+610 \{
+611   \textcolor{keywordtype}{bool} enable[6] = \{ \textcolor{keyword}{true}, \textcolor{keyword}{true}, \textcolor{keyword}{true}, \textcolor{keyword}{true}, \textcolor{keyword}{true}, \textcolor{keyword}{true} \};
+612 
+613   \textcolor{keywordflow}{switch}(mode) \{
+614   \textcolor{keywordflow}{case} 0:
+615     enable[4] = \textcolor{keyword}{false};
+616     enable[5] = \textcolor{keyword}{false};
+617     \textcolor{keywordflow}{break};
+618   \textcolor{keywordflow}{case} 1:
+619     enable[3] = \textcolor{keyword}{false};
+620     enable[4] = \textcolor{keyword}{false};
+621     enable[5] = \textcolor{keyword}{false};
+622     \textcolor{keywordflow}{break};
+623   \textcolor{keywordflow}{case} 2:
+624     enable[0] = \textcolor{keyword}{false};
+625     enable[1] = \textcolor{keyword}{false};
+626     enable[4] = \textcolor{keyword}{false};
+627     enable[5] = \textcolor{keyword}{false};
+628     \textcolor{keywordflow}{break};
+629   \textcolor{keywordflow}{case} 3:
+630     enable[0] = \textcolor{keyword}{false};
+631     enable[1] = \textcolor{keyword}{false};
+632     enable[2] = \textcolor{keyword}{false};
+633     enable[3] = \textcolor{keyword}{false};
+634     enable[4] = \textcolor{keyword}{false};
+635     enable[5] = \textcolor{keyword}{false};
+636     \textcolor{keywordflow}{break};
+637   \textcolor{keywordflow}{case} 4:
+638     enable[0] = \textcolor{keyword}{false};
+639     enable[1] = \textcolor{keyword}{false};
+640     enable[2] = \textcolor{keyword}{false};
+641     enable[3] = \textcolor{keyword}{false};
+642     \textcolor{keywordflow}{break};    
+643   \textcolor{keywordflow}{case} 5:
+644     enable[0] = \textcolor{keyword}{false};
+645     enable[1] = \textcolor{keyword}{false};
+646     enable[2] = \textcolor{keyword}{false};
+647     enable[3] = \textcolor{keyword}{false};
+648     \textcolor{keywordflow}{break};    
+649   \}
+650   GetDlgItem(\mbox{\hyperlink{resource_8h_ac10192f91d4434cb8a1a3c00c0e143e3}{IDC\_BG0}})->EnableWindow(enable[0]);
+651   GetDlgItem(\mbox{\hyperlink{resource_8h_a238da5af2b82de3c8d0563394f97f6b2}{IDC\_BG1}})->EnableWindow(enable[1]);
+652   GetDlgItem(\mbox{\hyperlink{resource_8h_a3ebf831ad9e66fd39c265ee6c645506d}{IDC\_BG2}})->EnableWindow(enable[2]);
+653   GetDlgItem(\mbox{\hyperlink{resource_8h_a7bde682dd1cfa236c27f69d59f2382f7}{IDC\_BG3}})->EnableWindow(enable[3]);
+654   GetDlgItem(\mbox{\hyperlink{resource_8h_ab4bccbcf89d4ccb95d624cf128bfb2db}{IDC\_FRAME\_0}})->EnableWindow(enable[4]);
+655   GetDlgItem(\mbox{\hyperlink{resource_8h_aaa3d54ab56340fb1fa8cbf3b218b13ee}{IDC\_FRAME\_1}})->EnableWindow(enable[5]);
+656   \textcolor{keywordtype}{int} \textcolor{keywordtype}{id} = \mbox{\hyperlink{resource_8h_ac10192f91d4434cb8a1a3c00c0e143e3}{IDC\_BG0}};
+657   \textcolor{keywordflow}{switch}(bg) \{
+658   \textcolor{keywordflow}{case} 1:
+659     \textcolor{keywordtype}{id} = \mbox{\hyperlink{resource_8h_a238da5af2b82de3c8d0563394f97f6b2}{IDC\_BG1}};
+660     \textcolor{keywordflow}{break};
+661   \textcolor{keywordflow}{case} 2:
+662     \textcolor{keywordtype}{id} = \mbox{\hyperlink{resource_8h_a3ebf831ad9e66fd39c265ee6c645506d}{IDC\_BG2}};
+663     \textcolor{keywordflow}{break};
+664   \textcolor{keywordflow}{case} 3:
+665     \textcolor{keywordtype}{id} = \mbox{\hyperlink{resource_8h_a7bde682dd1cfa236c27f69d59f2382f7}{IDC\_BG3}};
+666     \textcolor{keywordflow}{break};
+667   \}
+668   CheckRadioButton(\mbox{\hyperlink{resource_8h_ac10192f91d4434cb8a1a3c00c0e143e3}{IDC\_BG0}}, \mbox{\hyperlink{resource_8h_a7bde682dd1cfa236c27f69d59f2382f7}{IDC\_BG3}}, \textcolor{keywordtype}{id});
+669   \textcolor{keywordtype}{id} = \mbox{\hyperlink{resource_8h_ab4bccbcf89d4ccb95d624cf128bfb2db}{IDC\_FRAME\_0}};
+670   \textcolor{keywordflow}{if}(frame != 0)
+671     \textcolor{keywordtype}{id} = \mbox{\hyperlink{resource_8h_aaa3d54ab56340fb1fa8cbf3b218b13ee}{IDC\_FRAME\_1}};
+672   CheckRadioButton(\mbox{\hyperlink{resource_8h_ab4bccbcf89d4ccb95d624cf128bfb2db}{IDC\_FRAME\_0}}, \mbox{\hyperlink{resource_8h_aaa3d54ab56340fb1fa8cbf3b218b13ee}{IDC\_FRAME\_1}}, \textcolor{keywordtype}{id});
+673 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_aad00c64b13ff280b4279a7f8cd57b083_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_ad05aa1227f5a62d8e9477eeeec37115c}\label{class_map_view_ad05aa1227f5a62d8e9477eeeec37115c}} 
+\index{Map\+View@{Map\+View}!Get\+Click\+Address@{Get\+Click\+Address}}
+\index{Get\+Click\+Address@{Get\+Click\+Address}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{Get\+Click\+Address()}{GetClickAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} Map\+View\+::\+Get\+Click\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{x,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{y }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 762 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+763 \{
+764   \textcolor{keywordtype}{int} mode = \mbox{\hyperlink{_globals_8cpp_a843ca20ea4281609edb7d32392e31de8}{DISPCNT}} & 7;
+765 
+766   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} base = ((control >> 8) & 0x1f) * 0x800 + 0x6000000;
+767   
+768   \textcolor{comment}{// all text bgs (16 bits)}
+769   \textcolor{keywordflow}{if}(mode == 0 ||(mode < 3 && bg < 2) || mode == 6 || mode == 7) \{
+770     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_map_view_a30bef411235a6b8666f34991c2b90619}{GetTextClickAddress}}(base, x, y);
+771   \}
+772   \textcolor{comment}{// rot bgs (8 bits)}
+773   \textcolor{keywordflow}{if}(mode < 3) \{
+774     \textcolor{keywordflow}{return} base + (x>>3) + (w>>3)*(y>>3);
+775   \}
+776   \textcolor{comment}{// mode 3/5 (16 bits)}
+777   \textcolor{keywordflow}{if}(mode != 4) \{
+778     \textcolor{keywordflow}{return} 0x6000000 + 0xa000*frame + 2*x + w*y*2;
+779   \}
+780   \textcolor{comment}{// mode 4 (8 bits)}
+781   \textcolor{keywordflow}{return} 0x6000000 + 0xa000*frame + x + w*y;
+782 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_ad05aa1227f5a62d8e9477eeeec37115c_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_ad05aa1227f5a62d8e9477eeeec37115c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a30bef411235a6b8666f34991c2b90619}\label{class_map_view_a30bef411235a6b8666f34991c2b90619}} 
+\index{Map\+View@{Map\+View}!Get\+Text\+Click\+Address@{Get\+Text\+Click\+Address}}
+\index{Get\+Text\+Click\+Address@{Get\+Text\+Click\+Address}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{Get\+Text\+Click\+Address()}{GetTextClickAddress()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} Map\+View\+::\+Get\+Text\+Click\+Address (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}}}]{base,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{x,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{y }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 744 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+745 \{
+746   \textcolor{keywordflow}{if}(y > 255 && h > 256) \{
+747     base += 0x800;
+748     \textcolor{keywordflow}{if}(w > 256)
+749       base += 0x800;
+750   \}
+751   \textcolor{keywordflow}{if}(x >= 256)
+752     base += 0x800;
+753   x &= 255;
+754   y &= 255;
+755   base += (x>>3)*2 + 64*(y>>3);
+756 
+757   \textcolor{keywordflow}{return} base;
+758 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a30bef411235a6b8666f34991c2b90619_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_ace8d1802d7e8ae5bd92e572b9c0c84df}\label{class_map_view_ace8d1802d7e8ae5bd92e572b9c0c84df}} 
+\index{Map\+View@{Map\+View}!On\+Auto\+Update@{On\+Auto\+Update}}
+\index{On\+Auto\+Update@{On\+Auto\+Update}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Auto\+Update()}{OnAutoUpdate()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Auto\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 722 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+723 \{
+724   autoUpdate = !autoUpdate;
+725   \textcolor{keywordflow}{if}(autoUpdate) \{
+726     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_af0712f70a90d023ab8327a366be08174}{winAddUpdateListener}}(\textcolor{keyword}{this});
+727   \} \textcolor{keywordflow}{else} \{
+728     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a2d31a0656df2230310aa8dc9e3a735d3}{winRemoveUpdateListener}}(\textcolor{keyword}{this});    
+729   \}
+730 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_ace8d1802d7e8ae5bd92e572b9c0c84df_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a63d587842197ce259cfcf9cfd29d0771}\label{class_map_view_a63d587842197ce259cfcf9cfd29d0771}} 
+\index{Map\+View@{Map\+View}!On\+Bg0@{On\+Bg0}}
+\index{On\+Bg0@{On\+Bg0}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Bg0()}{OnBg0()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Bg0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 687 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+688 \{
+689   bg = 0;
+690   control = \mbox{\hyperlink{_globals_8cpp_a6b479219dfffa1ef8c5f2884384b579e}{BG0CNT}};
+691   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();
+692 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a63d587842197ce259cfcf9cfd29d0771_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a67a49b3a77fa0205f7729a391d45f26c}\label{class_map_view_a67a49b3a77fa0205f7729a391d45f26c}} 
+\index{Map\+View@{Map\+View}!On\+Bg1@{On\+Bg1}}
+\index{On\+Bg1@{On\+Bg1}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Bg1()}{OnBg1()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Bg1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 694 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+695 \{
+696   bg = 1;
+697   control = \mbox{\hyperlink{_globals_8cpp_af2dab781fc00b14c17ae0357c3c13b84}{BG1CNT}};
+698   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();
+699 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a67a49b3a77fa0205f7729a391d45f26c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a886ec2fa23dba5da34cdbc6f004c1bea}\label{class_map_view_a886ec2fa23dba5da34cdbc6f004c1bea}} 
+\index{Map\+View@{Map\+View}!On\+Bg2@{On\+Bg2}}
+\index{On\+Bg2@{On\+Bg2}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Bg2()}{OnBg2()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Bg2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 701 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+702 \{
+703   bg = 2;
+704   control = \mbox{\hyperlink{_globals_8cpp_ad0659703e38445ba2d4959ffe4eb6e5b}{BG2CNT}};
+705   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();
+706 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a886ec2fa23dba5da34cdbc6f004c1bea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a1d3dab96b11cbe494f45f4d1bc86331f}\label{class_map_view_a1d3dab96b11cbe494f45f4d1bc86331f}} 
+\index{Map\+View@{Map\+View}!On\+Bg3@{On\+Bg3}}
+\index{On\+Bg3@{On\+Bg3}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Bg3()}{OnBg3()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Bg3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 708 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+709 \{
+710   bg = 3;
+711   control = \mbox{\hyperlink{_globals_8cpp_ad80ca049358c18c094d43407ad2f9573}{BG3CNT}};
+712   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();
+713 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a1d3dab96b11cbe494f45f4d1bc86331f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a4831981d7411a8a37353679421517cf8}\label{class_map_view_a4831981d7411a8a37353679421517cf8}} 
+\index{Map\+View@{Map\+View}!On\+Close@{On\+Close}}
+\index{On\+Close@{On\+Close}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Close()}{OnClose()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 737 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+738 \{
+739   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a2d31a0656df2230310aa8dc9e3a735d3}{winRemoveUpdateListener}}(\textcolor{keyword}{this});
+740   
+741   DestroyWindow();
+742 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a4831981d7411a8a37353679421517cf8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_ae6fd15cfd77671946d4ad08f901bde3c}\label{class_map_view_ae6fd15cfd77671946d4ad08f901bde3c}} 
+\index{Map\+View@{Map\+View}!On\+Col\+Info@{On\+Col\+Info}}
+\index{On\+Col\+Info@{On\+Col\+Info}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Col\+Info()}{OnColInfo()}}
+{\footnotesize\ttfamily L\+R\+E\+S\+U\+LT Map\+View\+::\+On\+Col\+Info (\begin{DoxyParamCaption}\item[{W\+P\+A\+R\+AM}]{w\+Param,  }\item[{L\+P\+A\+R\+AM}]{l\+Param }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 833 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+834 \{
+835   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} c = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}})wParam;
+836 
+837   color.\mbox{\hyperlink{class_color_control_ad4f5b637e57ab4e7c4ed718e66e491eb}{setColor}}(c);  
+838 
+839   \textcolor{keywordtype}{int} r = (c & 0x1f);
+840   \textcolor{keywordtype}{int} g = (c & 0x3e0) >> 5;
+841   \textcolor{keywordtype}{int} \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = (c & 0x7c00) >> 10;
+842 
+843   CString \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+844   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"R: %d"}, r);
+845   GetDlgItem(\mbox{\hyperlink{resource_8h_ab801af70383175ec71fd14d356bf9c9d}{IDC\_R}})->SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+846 
+847   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"G: %d"}, g);
+848   GetDlgItem(\mbox{\hyperlink{resource_8h_a35ca279082796c6a98895939aa06826d}{IDC\_G}})->SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+849 
+850   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"B: %d"}, \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}});
+851   GetDlgItem(\mbox{\hyperlink{resource_8h_a96306052e53348b1e760b8dcabf2b0c7}{IDC\_B}})->SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+852 
+853   \textcolor{keywordflow}{return} TRUE;
+854 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{class_map_view_ae6fd15cfd77671946d4ad08f901bde3c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a40f869c5b6d3c5b93d46a0b0167cdbd8}\label{class_map_view_a40f869c5b6d3c5b93d46a0b0167cdbd8}} 
+\index{Map\+View@{Map\+View}!On\+Frame0@{On\+Frame0}}
+\index{On\+Frame0@{On\+Frame0}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Frame0()}{OnFrame0()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Frame0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 675 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+676 \{
+677   frame = 0;
+678   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();  
+679 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a40f869c5b6d3c5b93d46a0b0167cdbd8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_ad8ca5cae3a97cb68c733a993317ce695}\label{class_map_view_ad8ca5cae3a97cb68c733a993317ce695}} 
+\index{Map\+View@{Map\+View}!On\+Frame1@{On\+Frame1}}
+\index{On\+Frame1@{On\+Frame1}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Frame1()}{OnFrame1()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Frame1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 681 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+682 \{
+683   frame = 1;
+684   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();
+685 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_ad8ca5cae3a97cb68c733a993317ce695_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a10c4f05b5c4289dfc08c6501de3cf40c}\label{class_map_view_a10c4f05b5c4289dfc08c6501de3cf40c}} 
+\index{Map\+View@{Map\+View}!On\+Init\+Dialog@{On\+Init\+Dialog}}
+\index{On\+Init\+Dialog@{On\+Init\+Dialog}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Init\+Dialog()}{OnInitDialog()}}
+{\footnotesize\ttfamily B\+O\+OL Map\+View\+::\+On\+Init\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Map\+View.\+cpp 파일의 571 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+572 \{
+573   CDialog::OnInitDialog();
+574   
+575   \mbox{\hyperlink{_resize_dlg_8h_acb9d1d22d9838f6dda8a61cfa132997c}{DIALOG\_SIZER\_START}}( sz )
+576     \mbox{\hyperlink{_resize_dlg_8h_a0e9ee7a18c54003893895a009f5d79c8}{DIALOG\_SIZER\_ENTRY}}( \mbox{\hyperlink{resource_8h_a3e6bb424d55ccf9fed6fa557eba35488}{IDC\_MAP\_VIEW}}, \mbox{\hyperlink{_resize_dlg_8h_a21713fd373c62604a1ee3d5d831101ad}{DS\_SizeX}} | 
+      \mbox{\hyperlink{_resize_dlg_8h_a783821ba6bb984916d55f46cdf90cb2b}{DS\_SizeY}} )
+577     \mbox{\hyperlink{_resize_dlg_8h_a0e9ee7a18c54003893895a009f5d79c8}{DIALOG\_SIZER\_ENTRY}}( \mbox{\hyperlink{resource_8h_ab2f366ad34063a7be9de1e2249dc705a}{IDC\_REFRESH}}, \mbox{\hyperlink{_resize_dlg_8h_ae5309071be822a4dae5cb33a131f6180}{DS\_MoveY}})
+578     \mbox{\hyperlink{_resize_dlg_8h_a0e9ee7a18c54003893895a009f5d79c8}{DIALOG\_SIZER\_ENTRY}}( \mbox{\hyperlink{resource_8h_a27e7224faecfa4040c695a69107088f9}{IDC\_CLOSE}}, \mbox{\hyperlink{_resize_dlg_8h_ae5309071be822a4dae5cb33a131f6180}{DS\_MoveY}})
+579     \mbox{\hyperlink{_resize_dlg_8h_a0e9ee7a18c54003893895a009f5d79c8}{DIALOG\_SIZER\_ENTRY}}( \mbox{\hyperlink{resource_8h_a305f8d6fb810f32b99a97396ac92f9d5}{IDC\_SAVE}},  \mbox{\hyperlink{_resize_dlg_8h_ae5309071be822a4dae5cb33a131f6180}{DS\_MoveY}})
+580     \mbox{\hyperlink{_resize_dlg_8h_a0e9ee7a18c54003893895a009f5d79c8}{DIALOG\_SIZER\_ENTRY}}( \mbox{\hyperlink{resource_8h_a611975b03b6d7ce68b2de260b97086d0}{IDC\_COLOR}}, \mbox{\hyperlink{_resize_dlg_8h_ae5309071be822a4dae5cb33a131f6180}{DS\_MoveY}})
+581     \mbox{\hyperlink{_resize_dlg_8h_a0e9ee7a18c54003893895a009f5d79c8}{DIALOG\_SIZER\_ENTRY}}( \mbox{\hyperlink{resource_8h_ab801af70383175ec71fd14d356bf9c9d}{IDC\_R}}, \mbox{\hyperlink{_resize_dlg_8h_ae5309071be822a4dae5cb33a131f6180}{DS\_MoveY}})
+582     \mbox{\hyperlink{_resize_dlg_8h_a0e9ee7a18c54003893895a009f5d79c8}{DIALOG\_SIZER\_ENTRY}}( \mbox{\hyperlink{resource_8h_a35ca279082796c6a98895939aa06826d}{IDC\_G}}, \mbox{\hyperlink{_resize_dlg_8h_ae5309071be822a4dae5cb33a131f6180}{DS\_MoveY}})
+583     \mbox{\hyperlink{_resize_dlg_8h_a0e9ee7a18c54003893895a009f5d79c8}{DIALOG\_SIZER\_ENTRY}}( \mbox{\hyperlink{resource_8h_a96306052e53348b1e760b8dcabf2b0c7}{IDC\_B}}, \mbox{\hyperlink{_resize_dlg_8h_ae5309071be822a4dae5cb33a131f6180}{DS\_MoveY}})    
+584     \mbox{\hyperlink{_resize_dlg_8h_aeac0c1e32f30e0763df5736e4b3ea50a}{DIALOG\_SIZER\_END}}()
+585     \mbox{\hyperlink{class_resize_dlg_a6a3965f44a0c2f5ba9aaa798a9a81df5}{SetData}}(sz,
+586             TRUE,
+587             HKEY\_CURRENT\_USER,
+588             "Software\(\backslash\)\(\backslash\)Emulators\(\backslash\)\(\backslash\)VisualBoyAdvance\(\backslash\)\(\backslash\)Viewer\(\backslash\)\(\backslash\)\mbox{\hyperlink{class_map_view}{MapView}}",
+589             \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+590   SIZE \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}};
+591   \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}.cx = 1;
+592   \mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}}.cy = 1;
+593   mapView.SetScrollSizes(MM\_TEXT,\mbox{\hyperlink{expr-lex_8cpp_ab7d671599a7b25ca99a487fa341bc33a}{size}});
+594   \textcolor{keywordtype}{int} s = \mbox{\hyperlink{_reg_8cpp_a150640889ffff4851ee26d7b999ec7c3}{regQueryDwordValue}}("mapViewStretch", 0);
+595   \mbox{\hyperlink{arm-new_8h_a93120066fd6daa54150af823953378d1}{if}}(s)
+596     mapView.setStretch(true);
+597   ((CButton *)GetDlgItem(\mbox{\hyperlink{resource_8h_a639d2318d8892c6f42b323500aae50f0}{IDC\_STRETCH}}))->SetCheck(s);
+598   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();
+599   
+600   \mbox{\hyperlink{gb_codes_8h_a9717e7bbecb906637e86cef6da3d83c2}{return}} TRUE;  \textcolor{comment}{// return TRUE unless you set the focus to a control}
+601                 \textcolor{comment}{// EXCEPTION: OCX Property Pages should return FALSE}
+602 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a10c4f05b5c4289dfc08c6501de3cf40c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a9d5b068db40e4d9641bfeca9f81bb53a}\label{class_map_view_a9d5b068db40e4d9641bfeca9f81bb53a}} 
+\index{Map\+View@{Map\+View}!On\+Map\+Info@{On\+Map\+Info}}
+\index{On\+Map\+Info@{On\+Map\+Info}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Map\+Info()}{OnMapInfo()}}
+{\footnotesize\ttfamily L\+R\+E\+S\+U\+LT Map\+View\+::\+On\+Map\+Info (\begin{DoxyParamCaption}\item[{W\+P\+A\+R\+AM}]{w\+Param,  }\item[{L\+P\+A\+R\+AM}]{l\+Param }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 784 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+785 \{
+786   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *colors = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)lParam;
+787   mapViewZoom.\mbox{\hyperlink{class_zoom_control_a97501cc16d3068eefa1b5d9d23e9d0d9}{setColors}}(colors);
+788 
+789   \textcolor{keywordtype}{int} x = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})(wParam & 0xffff);
+790   \textcolor{keywordtype}{int} y = (\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})(wParam >> 16);
+791   
+792   CString \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+793   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"(%d,%d)"}, x, y);
+794   GetDlgItem(\mbox{\hyperlink{resource_8h_a5b3f7b85cc5d8e5338510582cd3225f7}{IDC\_XY}})->SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+795 
+796   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} address = \mbox{\hyperlink{class_map_view_ad05aa1227f5a62d8e9477eeeec37115c}{GetClickAddress}}(x,y);
+797   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"0x%08X"}, address);
+798   GetDlgItem(\mbox{\hyperlink{resource_8h_af0726d27cf7b7070867a81fde283a218}{IDC\_ADDRESS}})->SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+799 
+800   \textcolor{keywordtype}{int} mode = \mbox{\hyperlink{_globals_8cpp_a843ca20ea4281609edb7d32392e31de8}{DISPCNT}} & 7;  
+801   \textcolor{keywordflow}{if}(mode >= 3 && mode <=5) \{
+802     \textcolor{comment}{// bitmap modes}
+803     GetDlgItem(\mbox{\hyperlink{resource_8h_a91b7e470182ad94661b7fbe26c057e38}{IDC\_TILE\_NUM}})->SetWindowText(\textcolor{stringliteral}{"---"});
+804     GetDlgItem(\mbox{\hyperlink{resource_8h_a4924fb586ba7a86820300a1012b54abd}{IDC\_FLIP}})->SetWindowText(\textcolor{stringliteral}{"--"});
+805     GetDlgItem(\mbox{\hyperlink{resource_8h_a86222afaa0343f8ac438c9ac67f98f5c}{IDC\_PALETTE\_NUM}})->SetWindowText(\textcolor{stringliteral}{"---"});
+806   \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(mode == 0 || bg < 2) \{
+807     \textcolor{comment}{// text bgs}
+808     \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} value = *((\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)&\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[address - 0x6000000]);
+809 
+810     \textcolor{keywordtype}{int} tile = value & 1023;
+811     \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"%d"}, tile);
+812     GetDlgItem(\mbox{\hyperlink{resource_8h_a91b7e470182ad94661b7fbe26c057e38}{IDC\_TILE\_NUM}})->SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+813     \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Empty();
+814     \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}} += value & 1024 ? \textcolor{charliteral}{'H'} : \textcolor{charliteral}{'-'};
+815     \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}} += value & 2048 ? \textcolor{charliteral}{'V'} : \textcolor{charliteral}{'-'};
+816     GetDlgItem(\mbox{\hyperlink{resource_8h_a4924fb586ba7a86820300a1012b54abd}{IDC\_FLIP}})->SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+817 
+818     \textcolor{keywordflow}{if}(!(control & 0x80)) \{
+819       \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"%d"}, (value >> 12) & 15);
+820     \} \textcolor{keywordflow}{else}
+821       \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}} = \textcolor{stringliteral}{"---"};
+822     GetDlgItem(\mbox{\hyperlink{resource_8h_a86222afaa0343f8ac438c9ac67f98f5c}{IDC\_PALETTE\_NUM}})->SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+823   \} \textcolor{keywordflow}{else} \{
+824     \textcolor{comment}{// rot bgs}
+825     GetDlgItem(\mbox{\hyperlink{resource_8h_a91b7e470182ad94661b7fbe26c057e38}{IDC\_TILE\_NUM}})->SetWindowText(\textcolor{stringliteral}{"---"});
+826     GetDlgItem(\mbox{\hyperlink{resource_8h_a4924fb586ba7a86820300a1012b54abd}{IDC\_FLIP}})->SetWindowText(\textcolor{stringliteral}{"--"});
+827     GetDlgItem(\mbox{\hyperlink{resource_8h_a86222afaa0343f8ac438c9ac67f98f5c}{IDC\_PALETTE\_NUM}})->SetWindowText(\textcolor{stringliteral}{"---"});
+828   \}
+829   
+830   \textcolor{keywordflow}{return} TRUE;
+831 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a9d5b068db40e4d9641bfeca9f81bb53a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_aecebb6b2f85810fad29d3e26e125036f}\label{class_map_view_aecebb6b2f85810fad29d3e26e125036f}} 
+\index{Map\+View@{Map\+View}!On\+Refresh@{On\+Refresh}}
+\index{On\+Refresh@{On\+Refresh}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Refresh()}{OnRefresh()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 469 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+470 \{
+471   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();  
+472 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_aecebb6b2f85810fad29d3e26e125036f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a3fc9d61706da44e2fd3e8762805d9f0b}\label{class_map_view_a3fc9d61706da44e2fd3e8762805d9f0b}} 
+\index{Map\+View@{Map\+View}!On\+Save@{On\+Save}}
+\index{On\+Save@{On\+Save}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Save()}{OnSave()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 1001 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+1002 \{
+1003   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_adafc6ed627110c42f3893c9783f55320}{rom}} != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+1004   \{
+1005     CString \mbox{\hyperlink{_s_d_l_8cpp_ac33a174c39700095ca0f892624d85a3f}{filename}};
+1006 
+1007     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a103f0b25433c57c4458a208a06799cf8}{captureFormat}} == 0)
+1008       \mbox{\hyperlink{_s_d_l_8cpp_ac33a174c39700095ca0f892624d85a3f}{filename}} = \textcolor{stringliteral}{"map.png"};
+1009     \textcolor{keywordflow}{else}
+1010       \mbox{\hyperlink{_s_d_l_8cpp_ac33a174c39700095ca0f892624d85a3f}{filename}} = \textcolor{stringliteral}{"map.bmp"};
+1011 
+1012     LPCTSTR exts[] = \{\textcolor{stringliteral}{".png"}, \textcolor{stringliteral}{".bmp"} \};
+1013 
+1014     CString \mbox{\hyperlink{_s_d_l_8cpp_af0122ee4312107103b580a98c74a4ea6}{filter}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a228edf26b0dc4129658c174ee5a3c27c}{winLoadFilter}}(
+      \mbox{\hyperlink{resource_8h_a374944c3928d8197bc2bbf9e85207a4d}{IDS\_FILTER\_PNG}});
+1015     CString title = \mbox{\hyperlink{_win_res_util_8cpp_a416e85e80ab9b01376e87251c83d1a5a}{winResLoadString}}(\mbox{\hyperlink{resource_8h_a10c24c77703afe57f6e641e939997cd2}{IDS\_SELECT\_CAPTURE\_NAME}});
+1016 
+1017     \mbox{\hyperlink{class_file_dlg}{FileDlg}} dlg(\textcolor{keyword}{this},
+1018                 \mbox{\hyperlink{_s_d_l_8cpp_ac33a174c39700095ca0f892624d85a3f}{filename}},
+1019                 \mbox{\hyperlink{_s_d_l_8cpp_af0122ee4312107103b580a98c74a4ea6}{filter}},
+1020                 \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a103f0b25433c57c4458a208a06799cf8}{captureFormat}} ? 2 : 1,
+1021                 \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a103f0b25433c57c4458a208a06799cf8}{captureFormat}} ? \textcolor{stringliteral}{"BMP"} : \textcolor{stringliteral}{"PNG"},
+1022                 exts,
+1023                 \textcolor{stringliteral}{""},
+1024                 title,
+1025                 \textcolor{keyword}{true});
+1026 
+1027     \textcolor{keywordflow}{if}(dlg.DoModal() == IDCANCEL) \{
+1028       \textcolor{keywordflow}{return};
+1029     \}
+1030 
+1031     \textcolor{keywordflow}{if}(dlg.getFilterIndex() == 2)
+1032       \mbox{\hyperlink{class_map_view_a792d85841dc88e63ab7f31ed6de066d7}{saveBMP}}(dlg.GetPathName());
+1033     \textcolor{keywordflow}{else}
+1034       \mbox{\hyperlink{class_map_view_afadc38148227210fd5d8e12c50e7f22d}{savePNG}}(dlg.GetPathName());
+1035   \}
+1036 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a3fc9d61706da44e2fd3e8762805d9f0b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a835d1f2f38753ace4840b69e4eaafcaf}\label{class_map_view_a835d1f2f38753ace4840b69e4eaafcaf}} 
+\index{Map\+View@{Map\+View}!On\+Stretch@{On\+Stretch}}
+\index{On\+Stretch@{On\+Stretch}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{On\+Stretch()}{OnStretch()}}
+{\footnotesize\ttfamily void Map\+View\+::\+On\+Stretch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Map\+View.\+cpp 파일의 715 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+716 \{
+717   mapView.\mbox{\hyperlink{class_bitmap_control_ab545e15ea3edda9f0d80c0b8b0b7c812}{setStretch}}(!mapView.\mbox{\hyperlink{class_bitmap_control_a1d3cff9a3b57dd7558d678177dcf4b5c}{getStretch}}());
+718   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();
+719   \mbox{\hyperlink{_reg_8cpp_a758e775489a3fb5c3cc7071fdd5af87e}{regSetDwordValue}}(\textcolor{stringliteral}{"mapViewStretch"}, mapView.\mbox{\hyperlink{class_bitmap_control_a1d3cff9a3b57dd7558d678177dcf4b5c}{getStretch}}());  
+720 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a835d1f2f38753ace4840b69e4eaafcaf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a89edf3053cffa4a68516178dbd987339}\label{class_map_view_a89edf3053cffa4a68516178dbd987339}} 
+\index{Map\+View@{Map\+View}!paint@{paint}}
+\index{paint@{paint}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{paint()}{paint()}}
+{\footnotesize\ttfamily void Map\+View\+::paint (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 474 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+475 \{
+476   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}} == \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})
+477     \textcolor{keywordflow}{return};
+478   \textcolor{keywordtype}{int} mode = \mbox{\hyperlink{_globals_8cpp_a843ca20ea4281609edb7d32392e31de8}{DISPCNT}} & 7;
+479 
+480   \textcolor{keywordflow}{switch}(bg) \{
+481   \textcolor{keywordflow}{default}:
+482   \textcolor{keywordflow}{case} 0:
+483     control = \mbox{\hyperlink{_globals_8cpp_a6b479219dfffa1ef8c5f2884384b579e}{BG0CNT}};
+484     \textcolor{keywordflow}{break};
+485   \textcolor{keywordflow}{case} 1:
+486     control = \mbox{\hyperlink{_globals_8cpp_af2dab781fc00b14c17ae0357c3c13b84}{BG1CNT}};
+487     \textcolor{keywordflow}{break};
+488   \textcolor{keywordflow}{case} 2:
+489     control = \mbox{\hyperlink{_globals_8cpp_ad0659703e38445ba2d4959ffe4eb6e5b}{BG2CNT}};
+490     \textcolor{keywordflow}{break};
+491   \textcolor{keywordflow}{case} 3:
+492     control = \mbox{\hyperlink{_globals_8cpp_ad80ca049358c18c094d43407ad2f9573}{BG3CNT}};
+493     \textcolor{keywordflow}{break};
+494   \}
+495   
+496   \textcolor{keywordflow}{switch}(mode) \{
+497   \textcolor{keywordflow}{case} 0:
+498     \mbox{\hyperlink{class_map_view_a03250392fe23753257ed120df86aaea1}{renderMode0}}();
+499     \textcolor{keywordflow}{break};
+500   \textcolor{keywordflow}{case} 1:
+501     \mbox{\hyperlink{class_map_view_afcc44b85ee5727fc507a34672a3b6ce4}{renderMode1}}();
+502     \textcolor{keywordflow}{break};
+503   \textcolor{keywordflow}{case} 2:
+504     \mbox{\hyperlink{class_map_view_a4c9cc923e9b7112cfc15887fdec4284d}{renderMode2}}();
+505     \textcolor{keywordflow}{break};
+506   \textcolor{keywordflow}{case} 3:
+507     \mbox{\hyperlink{class_map_view_a554841422c2e7d39ed988017561276b1}{renderMode3}}();
+508     \textcolor{keywordflow}{break};
+509   \textcolor{keywordflow}{case} 4:
+510     \mbox{\hyperlink{class_map_view_a2e10ddf467ef8b43907459790c20016e}{renderMode4}}();
+511     \textcolor{keywordflow}{break};
+512   \textcolor{keywordflow}{case} 5:
+513     \mbox{\hyperlink{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1}{renderMode5}}();
+514     \textcolor{keywordflow}{break};
+515   \textcolor{keywordflow}{case} 6:
+516     \mbox{\hyperlink{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1}{renderMode5}}();
+517     \textcolor{keywordflow}{break};
+518   \textcolor{keywordflow}{case} 7:
+519     \mbox{\hyperlink{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1}{renderMode5}}();
+520     \textcolor{keywordflow}{break};
+521   \}
+522   \mbox{\hyperlink{class_map_view_aad00c64b13ff280b4279a7f8cd57b083}{enableButtons}}(mode);
+523   SIZE s;
+524   
+525   \textcolor{keywordflow}{if}(mapView.\mbox{\hyperlink{class_bitmap_control_a1d3cff9a3b57dd7558d678177dcf4b5c}{getStretch}}()) \{
+526     mapView.\mbox{\hyperlink{class_bitmap_control_a421004fe6ba01329dd69259396592d1f}{setSize}}(w, h);
+527     s.cx = s.cy = 1;
+528     mapView.SetScrollSizes(MM\_TEXT, s);
+529   \} \textcolor{keywordflow}{else} \{
+530     mapView.\mbox{\hyperlink{class_bitmap_control_a421004fe6ba01329dd69259396592d1f}{setSize}}(w, h);
+531     s.cx = w;
+532     s.cy = h;
+533     mapView.SetScrollSizes(MM\_TEXT, s);
+534   \}
+535 
+536   mapView.\mbox{\hyperlink{class_bitmap_control_acf061a1e9a4cad90ad2827c14f79caa2}{refresh}}();
+537 
+538   CString \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}};
+539   
+540   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} charBase = ((control >> 2) & 0x03) * 0x4000 + 0x6000000;
+541   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} screenBase = ((control >> 8) & 0x1f) * 0x800 + 0x6000000;  
+542 
+543   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"%d"}, mode);
+544   \mbox{\hyperlink{class_map_view_a9d3a6ede0046bc5a24b3472b59594056}{m\_mode}}.SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+545 
+546   \textcolor{keywordflow}{if}(mode >= 3) \{
+547     \mbox{\hyperlink{class_map_view_a8f4a820c52aaffadc6132ccd7727aa9d}{m\_mapbase}}.SetWindowText(\textcolor{stringliteral}{""});
+548     \mbox{\hyperlink{class_map_view_ad1561bbb87fe21907a1df6085855d1b1}{m\_charbase}}.SetWindowText(\textcolor{stringliteral}{""});
+549   \} \textcolor{keywordflow}{else} \{
+550     \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"0x%08X"}, screenBase);
+551     \mbox{\hyperlink{class_map_view_a8f4a820c52aaffadc6132ccd7727aa9d}{m\_mapbase}}.SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+552     
+553     \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"0x%08X"}, charBase);
+554     \mbox{\hyperlink{class_map_view_ad1561bbb87fe21907a1df6085855d1b1}{m\_charbase}}.SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+555   \}
+556 
+557   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"%dx%d"}, w, h);
+558   \mbox{\hyperlink{class_map_view_a78939f6f277c3e2b39292ecd4b21ca00}{m\_dim}}.SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+559 
+560   \mbox{\hyperlink{class_map_view_a211ea4eb337579e7193702ed2f20279c}{m\_numcolors}}.SetWindowText(control & 0x80 ? \textcolor{stringliteral}{"256"} : \textcolor{stringliteral}{"16"});
+561 
+562   \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}.Format(\textcolor{stringliteral}{"%d"}, control & 3);
+563   \mbox{\hyperlink{class_map_view_a3b5211e836b2d9b0124e0bcb71a49c3c}{m\_priority}}.SetWindowText(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+564 
+565   \mbox{\hyperlink{class_map_view_a382e8904120801584d23def0e73360f9}{m\_mosaic}}.SetWindowText(control & 0x40 ? \textcolor{stringliteral}{"1"} : \textcolor{stringliteral}{"0"});
+566 
+567   \mbox{\hyperlink{class_map_view_a594a0ff999a2dd22853a45b584325543}{m\_overflow}}.SetWindowText(bg <= 1 ? \textcolor{stringliteral}{""} :
+568                            control & 0x2000 ? \textcolor{stringliteral}{"1"} : \textcolor{stringliteral}{"0"});
+569 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a89edf3053cffa4a68516178dbd987339_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{class_map_view_a89edf3053cffa4a68516178dbd987339_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a50910da172e0cd2a6e13fde5d5799906}\label{class_map_view_a50910da172e0cd2a6e13fde5d5799906}} 
+\index{Map\+View@{Map\+View}!Post\+Nc\+Destroy@{Post\+Nc\+Destroy}}
+\index{Post\+Nc\+Destroy@{Post\+Nc\+Destroy}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{Post\+Nc\+Destroy()}{PostNcDestroy()}}
+{\footnotesize\ttfamily void Map\+View\+::\+Post\+Nc\+Destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Map\+View.\+cpp 파일의 604 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+605 \{
+606   \textcolor{keyword}{delete} \textcolor{keyword}{this};
+607 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_map_view_a03250392fe23753257ed120df86aaea1}\label{class_map_view_a03250392fe23753257ed120df86aaea1}} 
+\index{Map\+View@{Map\+View}!render\+Mode0@{render\+Mode0}}
+\index{render\+Mode0@{render\+Mode0}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{render\+Mode0()}{renderMode0()}}
+{\footnotesize\ttfamily void Map\+View\+::render\+Mode0 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 369 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+370 \{
+371   \mbox{\hyperlink{class_map_view_acff08c9c182f791799a27592ea7aafff}{renderTextScreen}}(control);
+372 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a03250392fe23753257ed120df86aaea1_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a03250392fe23753257ed120df86aaea1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_afcc44b85ee5727fc507a34672a3b6ce4}\label{class_map_view_afcc44b85ee5727fc507a34672a3b6ce4}} 
+\index{Map\+View@{Map\+View}!render\+Mode1@{render\+Mode1}}
+\index{render\+Mode1@{render\+Mode1}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{render\+Mode1()}{renderMode1()}}
+{\footnotesize\ttfamily void Map\+View\+::render\+Mode1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 374 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+375 \{
+376   \textcolor{keywordflow}{switch}(bg) \{
+377   \textcolor{keywordflow}{case} 0:
+378   \textcolor{keywordflow}{case} 1:
+379     \mbox{\hyperlink{class_map_view_acff08c9c182f791799a27592ea7aafff}{renderTextScreen}}(control);
+380     \textcolor{keywordflow}{break};
+381   \textcolor{keywordflow}{case} 2:
+382     \mbox{\hyperlink{class_map_view_a2e462e6466f052427cd894a7c047fa68}{renderRotScreen}}(control);
+383     \textcolor{keywordflow}{break};
+384   \textcolor{keywordflow}{default}:
+385     bg = 0;
+386     control = \mbox{\hyperlink{_globals_8cpp_a6b479219dfffa1ef8c5f2884384b579e}{BG0CNT}};
+387     \mbox{\hyperlink{class_map_view_acff08c9c182f791799a27592ea7aafff}{renderTextScreen}}(control);
+388     \textcolor{keywordflow}{break};
+389   \}
+390 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_afcc44b85ee5727fc507a34672a3b6ce4_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_afcc44b85ee5727fc507a34672a3b6ce4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a4c9cc923e9b7112cfc15887fdec4284d}\label{class_map_view_a4c9cc923e9b7112cfc15887fdec4284d}} 
+\index{Map\+View@{Map\+View}!render\+Mode2@{render\+Mode2}}
+\index{render\+Mode2@{render\+Mode2}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{render\+Mode2()}{renderMode2()}}
+{\footnotesize\ttfamily void Map\+View\+::render\+Mode2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 392 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+393 \{
+394   \textcolor{keywordflow}{switch}(bg) \{
+395   \textcolor{keywordflow}{case} 2:
+396   \textcolor{keywordflow}{case} 3:
+397     \mbox{\hyperlink{class_map_view_a2e462e6466f052427cd894a7c047fa68}{renderRotScreen}}(control);
+398     \textcolor{keywordflow}{break};
+399   \textcolor{keywordflow}{default}:
+400     bg = 2;
+401     control = \mbox{\hyperlink{_globals_8cpp_ad0659703e38445ba2d4959ffe4eb6e5b}{BG2CNT}};
+402     \mbox{\hyperlink{class_map_view_a2e462e6466f052427cd894a7c047fa68}{renderRotScreen}}(control);
+403     \textcolor{keywordflow}{break};
+404   \}  
+405 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a4c9cc923e9b7112cfc15887fdec4284d_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a4c9cc923e9b7112cfc15887fdec4284d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a554841422c2e7d39ed988017561276b1}\label{class_map_view_a554841422c2e7d39ed988017561276b1}} 
+\index{Map\+View@{Map\+View}!render\+Mode3@{render\+Mode3}}
+\index{render\+Mode3@{render\+Mode3}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{render\+Mode3()}{renderMode3()}}
+{\footnotesize\ttfamily void Map\+View\+::render\+Mode3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 407 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+408 \{
+409   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bmp = data;
+410   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *src = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)&\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[0];
+411 
+412   w = 240;
+413   h = 160;
+414   
+415   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < 160; y++) \{
+416     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 240; x++) \{
+417       \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} data = *src++;
+418       *bmp++ = ((data >> 10) & 0x1f) << 3;
+419       *bmp++ = ((data >> 5) & 0x1f) << 3;
+420       *bmp++ = (data & 0x1f) << 3;      
+421     \}
+422   \}
+423   bg = 2;
+424 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a554841422c2e7d39ed988017561276b1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a2e10ddf467ef8b43907459790c20016e}\label{class_map_view_a2e10ddf467ef8b43907459790c20016e}} 
+\index{Map\+View@{Map\+View}!render\+Mode4@{render\+Mode4}}
+\index{render\+Mode4@{render\+Mode4}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{render\+Mode4()}{renderMode4()}}
+{\footnotesize\ttfamily void Map\+View\+::render\+Mode4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 427 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+428 \{
+429   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bmp = data;
+430   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *src = frame ? &\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[0xa000] : &\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[0];
+431   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *pal = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)&\mbox{\hyperlink{_globals_8cpp_aea0283719ad27328f3cf5f883f58813e}{paletteRAM}}[0];
+432   
+433   w = 240;
+434   h = 160;
+435   
+436   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < 160; y++) \{
+437     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 240; x++) \{
+438       \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} c = *src++;
+439       \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} data = pal[c];
+440       *bmp++ = ((data >> 10) & 0x1f) << 3;
+441       *bmp++ = ((data >> 5) & 0x1f) << 3;
+442       *bmp++ = (data & 0x1f) << 3;      
+443     \}
+444   \}
+445   bg = 2;
+446 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a2e10ddf467ef8b43907459790c20016e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1}\label{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1}} 
+\index{Map\+View@{Map\+View}!render\+Mode5@{render\+Mode5}}
+\index{render\+Mode5@{render\+Mode5}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{render\+Mode5()}{renderMode5()}}
+{\footnotesize\ttfamily void Map\+View\+::render\+Mode5 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 449 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+450 \{
+451   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bmp = data;
+452   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *src = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)(frame ? &\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[0xa000] : &\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[0]);
+453 
+454   w = 160;
+455   h = 128;
+456   
+457   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < 128; y++) \{
+458     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < 160; x++) \{
+459       \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} data = *src++;
+460       *bmp++ = ((data >> 10) & 0x1f) << 3;
+461       *bmp++ = ((data >> 5) & 0x1f) << 3;
+462       *bmp++ = (data & 0x1f) << 3;      
+463     \}
+464   \}
+465   bg = 2;
+466 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a8f6282ba1ec4a295b2fb33a41e541ba1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a2e462e6466f052427cd894a7c047fa68}\label{class_map_view_a2e462e6466f052427cd894a7c047fa68}} 
+\index{Map\+View@{Map\+View}!render\+Rot\+Screen@{render\+Rot\+Screen}}
+\index{render\+Rot\+Screen@{render\+Rot\+Screen}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{render\+Rot\+Screen()}{renderRotScreen()}}
+{\footnotesize\ttfamily void Map\+View\+::render\+Rot\+Screen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{control }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 277 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+278 \{
+279   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *palette = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)\mbox{\hyperlink{_globals_8cpp_aea0283719ad27328f3cf5f883f58813e}{paletteRAM}};
+280   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *charBase = &\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[((control >> 2) & 0x03) * 0x4000];
+281   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *screenBase = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)&\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[((control >> 8) & 0x1f) * 0x800];
+282   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bmp = data;
+283 
+284   \textcolor{keywordtype}{int} sizeX = 128;
+285   \textcolor{keywordtype}{int} sizeY = 128;
+286   \textcolor{keywordflow}{switch}((control >> 14) & 3) \{
+287   \textcolor{keywordflow}{case} 0:
+288     \textcolor{keywordflow}{break};
+289   \textcolor{keywordflow}{case} 1:
+290     sizeX = sizeY = 256;
+291     \textcolor{keywordflow}{break};
+292   \textcolor{keywordflow}{case} 2:
+293     sizeX = sizeY = 512;
+294     \textcolor{keywordflow}{break};
+295   \textcolor{keywordflow}{case} 3:
+296     sizeX = sizeY = 1024;
+297     \textcolor{keywordflow}{break};
+298   \}
+299 
+300   w = sizeX;
+301   h = sizeY;
+302   
+303   \textcolor{keywordflow}{if}(control & 0x80) \{
+304     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+305       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+306         \textcolor{keywordtype}{int} tile = screenBase[(x>>3) + (y>>3)*(w>>3)];
+307         
+308         \textcolor{keywordtype}{int} tileX = (x & 7);
+309         \textcolor{keywordtype}{int} tileY = y & 7;
+310         
+311         \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} color = charBase[tile * 64 + tileY * 8 + tileX];
+312         \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} color2 = palette[color];
+313 
+314         *bmp++ = ((color2 >> 10) & 0x1f) << 3;
+315         *bmp++ = ((color2 >> 5) & 0x1f) << 3;
+316         *bmp++ = (color2 & 0x1f) << 3;
+317       \}
+318     \}
+319   \} \textcolor{keywordflow}{else} \{
+320     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+321       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+322         \textcolor{keywordtype}{int} tile = screenBase[(x>>3) + (y>>3)*(w>>3)];
+323         
+324         \textcolor{keywordtype}{int} tileX = (x & 7);
+325         \textcolor{keywordtype}{int} tileY = y & 7;
+326         
+327         \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} color = charBase[tile * 64 + tileY * 8 + tileX];
+328         \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} color2 = palette[color];
+329 
+330         *bmp++ = ((color2 >> 10) & 0x1f) << 3;
+331         *bmp++ = ((color2 >> 5) & 0x1f) << 3;
+332         *bmp++ = (color2 & 0x1f) << 3;        
+333       \}
+334     \}    
+335   \}
+336 
+337   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} xx;
+338   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} yy;
+339   
+340   \textcolor{keywordflow}{switch}(bg) \{
+341   \textcolor{keywordflow}{case} 2:
+342     xx = \mbox{\hyperlink{_globals_8cpp_a3430b08164c50d5bebb9bad4d9c850e4}{BG2X\_L}} | \mbox{\hyperlink{_globals_8cpp_a499b313af1e4390f0f42b3626daceee3}{BG2X\_H}} << 16;
+343     yy = \mbox{\hyperlink{_globals_8cpp_ae9213b72a93fab65593511949f01563f}{BG2Y\_L}} | \mbox{\hyperlink{_globals_8cpp_aef22925b8185832dab00fdb2d0042666}{BG2Y\_H}} << 16;
+344 
+345     \textcolor{comment}{/*    }
+346 \textcolor{comment}{          renderView(xx, yy, }
+347 \textcolor{comment}{          BG2PA, BG2PC,}
+348 \textcolor{comment}{          BG2PB, BG2PD,}
+349 \textcolor{comment}{          (sizeX -1) <<8,}
+350 \textcolor{comment}{          (sizeY -1) << 8,}
+351 \textcolor{comment}{          (control & 0x2000) != 0);}
+352 \textcolor{comment}{    */}
+353     \textcolor{keywordflow}{break};
+354   \textcolor{keywordflow}{case} 3:
+355     xx = \mbox{\hyperlink{_globals_8cpp_a96800f981e5aabc792e850211c4d453a}{BG3X\_L}} | \mbox{\hyperlink{_globals_8cpp_a01a2b5362be35995562fb6b436a4460b}{BG3X\_H}} << 16;
+356     yy = \mbox{\hyperlink{_globals_8cpp_a932f56d63c1006e38ac0b2a6517fce3b}{BG3Y\_L}} | \mbox{\hyperlink{_globals_8cpp_aa7e9d49e83abcb500a1f6a28310d6c34}{BG3Y\_H}} << 16;
+357     \textcolor{comment}{/*    }
+358 \textcolor{comment}{          renderView(xx, yy, }
+359 \textcolor{comment}{          BG3PA, BG3PC,}
+360 \textcolor{comment}{          BG3PB, BG3PD,}
+361 \textcolor{comment}{          (sizeX -1) <<8,}
+362 \textcolor{comment}{          (sizeY -1) << 8,}
+363 \textcolor{comment}{          (control & 0x2000) != 0);}
+364 \textcolor{comment}{    */}
+365     \textcolor{keywordflow}{break};
+366   \}
+367 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_a2e462e6466f052427cd894a7c047fa68_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_acff08c9c182f791799a27592ea7aafff}\label{class_map_view_acff08c9c182f791799a27592ea7aafff}} 
+\index{Map\+View@{Map\+View}!render\+Text\+Screen@{render\+Text\+Screen}}
+\index{render\+Text\+Screen@{render\+Text\+Screen}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{render\+Text\+Screen()}{renderTextScreen()}}
+{\footnotesize\ttfamily void Map\+View\+::render\+Text\+Screen (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}}}]{control }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 121 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+122 \{
+123   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *palette = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)\mbox{\hyperlink{_globals_8cpp_aea0283719ad27328f3cf5f883f58813e}{paletteRAM}};
+124   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *charBase = &\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[((control >> 2) & 0x03) * 0x4000];
+125   \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *screenBase = (\mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *)&\mbox{\hyperlink{_globals_8cpp_a983f8cd19ae66ea98e180c2e13bee5b9}{vram}}[((control >> 8) & 0x1f) * 0x800];
+126   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *bmp = data;
+127 
+128   \textcolor{keywordtype}{int} sizeX = 256;
+129   \textcolor{keywordtype}{int} sizeY = 256;
+130   \textcolor{keywordflow}{switch}((control >> 14) & 3) \{
+131   \textcolor{keywordflow}{case} 0:
+132     \textcolor{keywordflow}{break};
+133   \textcolor{keywordflow}{case} 1:
+134     sizeX = 512;
+135     \textcolor{keywordflow}{break};
+136   \textcolor{keywordflow}{case} 2:
+137     sizeY = 512;
+138     \textcolor{keywordflow}{break};
+139   \textcolor{keywordflow}{case} 3:
+140     sizeX = 512;
+141     sizeY = 512;
+142     \textcolor{keywordflow}{break};
+143   \}
+144 
+145   w = sizeX;
+146   h = sizeY;
+147   
+148   \textcolor{keywordflow}{if}(control & 0x80) \{
+149     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+150       \textcolor{keywordtype}{int} yy = y & 255;
+151 
+152       \textcolor{keywordflow}{if}(y == 256 && sizeY > 256) \{
+153         screenBase += 0x400;
+154         \textcolor{keywordflow}{if}(sizeX > 256)
+155           screenBase += 0x400;
+156       \}
+157       \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *screenSource = screenBase + ((yy>>3)*32);
+158 
+159       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+160         \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} data = *screenSource;
+161       
+162         \textcolor{keywordtype}{int} tile = data & 0x3FF;
+163         \textcolor{keywordtype}{int} tileX = (x & 7);
+164         \textcolor{keywordtype}{int} tileY = y & 7;
+165         
+166         \textcolor{keywordflow}{if}(data & 0x0400)
+167           tileX = 7 - tileX;
+168         \textcolor{keywordflow}{if}(data & 0x0800)
+169           tileY = 7 - tileY;
+170 
+171         \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} c = charBase[tile * 64 + tileY * 8 + tileX];
+172         
+173         \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} color = palette[c];
+174         
+175         *bmp++ = ((color >> 10) & 0x1f) << 3;
+176         *bmp++ = ((color >> 5) & 0x1f) << 3;
+177         *bmp++ = (color & 0x1f) << 3;      
+178       
+179         \textcolor{keywordflow}{if}(data & 0x0400) \{
+180           \textcolor{keywordflow}{if}(tileX == 0)
+181             screenSource++;
+182         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tileX == 7)
+183           screenSource++;
+184         \textcolor{keywordflow}{if}(x == 255 && sizeX > 256) \{
+185           screenSource = screenBase + 0x400 + ((yy>>3)*32);
+186         \}
+187       \}
+188     \}
+189   \} \textcolor{keywordflow}{else} \{
+190     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+191       \textcolor{keywordtype}{int} yy = y & 255;
+192 
+193       \textcolor{keywordflow}{if}(y == 256 && sizeY > 256) \{
+194         screenBase += 0x400;
+195         \textcolor{keywordflow}{if}(sizeX > 256)
+196           screenBase += 0x400;
+197       \}
+198       \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} *screenSource = screenBase + ((yy>>3)*32);
+199 
+200       \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+201         \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} data = *screenSource;
+202         
+203         \textcolor{keywordtype}{int} tile = data & 0x3FF;
+204         \textcolor{keywordtype}{int} tileX = (x & 7);
+205         \textcolor{keywordtype}{int} tileY = y & 7;
+206 
+207         \textcolor{keywordflow}{if}(data & 0x0400)
+208           tileX = 7 - tileX;
+209         \textcolor{keywordflow}{if}(data & 0x0800)
+210           tileY = 7 - tileY;
+211         
+212         \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} color = charBase[tile * 32 + tileY * 4 + (tileX>>1)];
+213         
+214         \textcolor{keywordflow}{if}(tileX & 1) \{
+215           color = (color >> 4);
+216         \} \textcolor{keywordflow}{else} \{
+217           color &= 0x0F;
+218         \}
+219 
+220         \textcolor{keywordtype}{int} pal = (*screenSource>>8) & 0xF0;
+221         \mbox{\hyperlink{_system_8h_a9e6c91d77e24643b888dbd1a1a590054}{u16}} color2 = palette[pal + color];
+222 
+223         *bmp++ = ((color2 >> 10) & 0x1f) << 3;
+224         *bmp++ = ((color2 >> 5) & 0x1f) << 3;
+225         *bmp++ = (color2 & 0x1f) << 3;
+226         
+227         \textcolor{keywordflow}{if}(data & 0x0400) \{
+228           \textcolor{keywordflow}{if}(tileX == 0)
+229             screenSource++;
+230         \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(tileX == 7)
+231           screenSource++;
+232 
+233         \textcolor{keywordflow}{if}(x == 255 && sizeX > 256) \{
+234           screenSource = screenBase + 0x400 + ((yy>>3)*32);
+235         \}        
+236       \}
+237     \}
+238   \}
+239   \textcolor{comment}{/*}
+240 \textcolor{comment}{    switch(bg) \{}
+241 \textcolor{comment}{    case 0:}
+242 \textcolor{comment}{    renderView(BG0HOFS<<8, BG0VOFS<<8,}
+243 \textcolor{comment}{    0x100, 0x000,}
+244 \textcolor{comment}{    0x000, 0x100,}
+245 \textcolor{comment}{    (sizeX -1) <<8,}
+246 \textcolor{comment}{    (sizeY -1) << 8,}
+247 \textcolor{comment}{    true);}
+248 \textcolor{comment}{    break;}
+249 \textcolor{comment}{    case 1:}
+250 \textcolor{comment}{    renderView(BG1HOFS<<8, BG1VOFS<<8,}
+251 \textcolor{comment}{    0x100, 0x000,}
+252 \textcolor{comment}{    0x000, 0x100,}
+253 \textcolor{comment}{    (sizeX -1) <<8,}
+254 \textcolor{comment}{    (sizeY -1) << 8,}
+255 \textcolor{comment}{    true);}
+256 \textcolor{comment}{    break;}
+257 \textcolor{comment}{    case 2:}
+258 \textcolor{comment}{    renderView(BG2HOFS<<8, BG2VOFS<<8,}
+259 \textcolor{comment}{    0x100, 0x000,}
+260 \textcolor{comment}{    0x000, 0x100,}
+261 \textcolor{comment}{    (sizeX -1) <<8,}
+262 \textcolor{comment}{    (sizeY -1) << 8,}
+263 \textcolor{comment}{    true);}
+264 \textcolor{comment}{    break;}
+265 \textcolor{comment}{    case 3:}
+266 \textcolor{comment}{    renderView(BG3HOFS<<8, BG3VOFS<<8,}
+267 \textcolor{comment}{    0x100, 0x000,}
+268 \textcolor{comment}{    0x000, 0x100,}
+269 \textcolor{comment}{    (sizeX -1) <<8,}
+270 \textcolor{comment}{    (sizeY -1) << 8,}
+271 \textcolor{comment}{    true);}
+272 \textcolor{comment}{    break;}
+273 \textcolor{comment}{    \}}
+274 \textcolor{comment}{  */}
+275 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_acff08c9c182f791799a27592ea7aafff_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_a792d85841dc88e63ab7f31ed6de066d7}\label{class_map_view_a792d85841dc88e63ab7f31ed6de066d7}} 
+\index{Map\+View@{Map\+View}!save\+B\+MP@{save\+B\+MP}}
+\index{save\+B\+MP@{save\+B\+MP}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{save\+B\+M\+P()}{saveBMP()}}
+{\footnotesize\ttfamily void Map\+View\+::save\+B\+MP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 856 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+857 \{
+858   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} writeBuffer[1024 * 3];
+859   
+860   FILE *fp = fopen(name,\textcolor{stringliteral}{"wb"});
+861 
+862   \textcolor{keywordflow}{if}(!fp) \{
+863     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a165f1f2539e202f0a24e6e9583c63475}{MSG\_ERROR\_CREATING\_FILE}}, \textcolor{stringliteral}{"Error creating file %s"}, 
+      name);
+864     \textcolor{keywordflow}{return};
+865   \}
+866 
+867   \textcolor{keyword}{struct }\{
+868     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} ident[2];
+869     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} filesize[4];
+870     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} reserved[4];
+871     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} dataoffset[4];
+872     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} headersize[4];
+873     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} width[4];
+874     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} height[4];
+875     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} planes[2];
+876     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} bitsperpixel[2];
+877     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} compression[4];
+878     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} datasize[4];
+879     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} hres[4];
+880     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} vres[4];
+881     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} colors[4];
+882     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} importantcolors[4];
+883     \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} pad[2];
+884   \} bmpheader;
+885   memset(&bmpheader, 0, \textcolor{keyword}{sizeof}(bmpheader));
+886 
+887   bmpheader.ident[0] = \textcolor{charliteral}{'B'};
+888   bmpheader.ident[1] = \textcolor{charliteral}{'M'};
+889 
+890   \mbox{\hyperlink{_system_8h_a10e94b422ef0c20dcdec20d31a1f5049}{u32}} fsz = \textcolor{keyword}{sizeof}(bmpheader) + w*h*3;
+891   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.filesize, fsz);
+892   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.dataoffset, 0x38);
+893   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.headersize, 0x28);
+894   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.width, w);
+895   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.height, h);
+896   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.planes, 1);
+897   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.bitsperpixel, 24);
+898   \mbox{\hyperlink{_util_8cpp_a61ef2cbdb9d8b5c50004ebd1557439c7}{utilPutDword}}(bmpheader.datasize, 3*w*h);
+899 
+900   fwrite(&bmpheader, 1, \textcolor{keyword}{sizeof}(bmpheader), fp);
+901 
+902   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+903 
+904   \textcolor{keywordtype}{int} sizeX = w;
+905   \textcolor{keywordtype}{int} sizeY = h;
+906 
+907   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *pixU8 = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)data+3*w*(h-1);
+908   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+909     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+910       *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// B}
+911       *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// G}
+912       *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = *pixU8++; \textcolor{comment}{// R}
+913     \}
+914     pixU8 -= 2*3*w;
+915     fwrite(writeBuffer, 1, 3*w, fp);
+916     
+917     \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+918   \}
+919 
+920   fclose(fp);
+921 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{class_map_view_a792d85841dc88e63ab7f31ed6de066d7_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{class_map_view_a792d85841dc88e63ab7f31ed6de066d7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_afadc38148227210fd5d8e12c50e7f22d}\label{class_map_view_afadc38148227210fd5d8e12c50e7f22d}} 
+\index{Map\+View@{Map\+View}!save\+P\+NG@{save\+P\+NG}}
+\index{save\+P\+NG@{save\+P\+NG}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{save\+P\+N\+G()}{savePNG()}}
+{\footnotesize\ttfamily void Map\+View\+::save\+P\+NG (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{name }\end{DoxyParamCaption})}
+
+
+
+Map\+View.\+cpp 파일의 925 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+926 \{
+927   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} writeBuffer[1024 * 3];
+928   
+929   FILE *fp = fopen(name,\textcolor{stringliteral}{"wb"});
+930 
+931   \textcolor{keywordflow}{if}(!fp) \{
+932     \mbox{\hyperlink{system_8cpp_a747a9cb8e015a3d45cca636b5bd0fc69}{systemMessage}}(\mbox{\hyperlink{_n_l_s_8h_a165f1f2539e202f0a24e6e9583c63475}{MSG\_ERROR\_CREATING\_FILE}}, \textcolor{stringliteral}{"Error creating file %s"}, 
+      name);
+933     \textcolor{keywordflow}{return};
+934   \}
+935   
+936   png\_structp png\_ptr = png\_create\_write\_struct(PNG\_LIBPNG\_VER\_STRING,
+937                                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+938                                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+939                                                 \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+940   \textcolor{keywordflow}{if}(!png\_ptr) \{
+941     fclose(fp);
+942     \textcolor{keywordflow}{return};
+943   \}
+944 
+945   png\_infop info\_ptr = png\_create\_info\_struct(png\_ptr);
+946 
+947   \textcolor{keywordflow}{if}(!info\_ptr) \{
+948     png\_destroy\_write\_struct(&png\_ptr,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+949     fclose(fp);
+950     \textcolor{keywordflow}{return};
+951   \}
+952 
+953   \textcolor{keywordflow}{if}(setjmp(png\_ptr->jmpbuf)) \{
+954     png\_destroy\_write\_struct(&png\_ptr,\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+955     fclose(fp);
+956     \textcolor{keywordflow}{return};
+957   \}
+958 
+959   png\_init\_io(png\_ptr,fp);
+960 
+961   png\_set\_IHDR(png\_ptr,
+962                info\_ptr,
+963                w,
+964                h,
+965                8,
+966                PNG\_COLOR\_TYPE\_RGB,
+967                PNG\_INTERLACE\_NONE,
+968                PNG\_COMPRESSION\_TYPE\_DEFAULT,
+969                PNG\_FILTER\_TYPE\_DEFAULT);
+970 
+971   png\_write\_info(png\_ptr,info\_ptr);
+972 
+973   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+974 
+975   \textcolor{keywordtype}{int} sizeX = w;
+976   \textcolor{keywordtype}{int} sizeY = h;
+977 
+978   \mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *pixU8 = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)data;
+979   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} y = 0; y < sizeY; y++) \{
+980     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} x = 0; x < sizeX; x++) \{
+981       \textcolor{keywordtype}{int} blue = *pixU8++;
+982       \textcolor{keywordtype}{int} green = *pixU8++;
+983       \textcolor{keywordtype}{int} red = *pixU8++;
+984       
+985       *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = red;
+986       *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = green;
+987       *\mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}}++ = blue;
+988     \}
+989     png\_write\_row(png\_ptr,writeBuffer);
+990     
+991     \mbox{\hyperlink{expr-lex_8cpp_a91b64995742fd30063314f12340b4b5a}{b}} = writeBuffer;
+992   \}
+993   
+994   png\_write\_end(png\_ptr, info\_ptr);
+995 
+996   png\_destroy\_write\_struct(&png\_ptr, &info\_ptr);
+997 
+998   fclose(fp);
+999 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_map_view_afadc38148227210fd5d8e12c50e7f22d_cgraph}
+\end{center}
+\end{figure}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_map_view_afadc38148227210fd5d8e12c50e7f22d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_map_view_ac41eb53f60bccbfe4f5601f1a997c51e}\label{class_map_view_ac41eb53f60bccbfe4f5601f1a997c51e}} 
+\index{Map\+View@{Map\+View}!update@{update}}
+\index{update@{update}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Map\+View\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_update_listener_ac03b85f52e858d0bbd08a4984b2cb929}{I\+Update\+Listener}}를 구현.
+
+
+
+Map\+View.\+cpp 파일의 732 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+733 \{
+734   \mbox{\hyperlink{class_map_view_a89edf3053cffa4a68516178dbd987339}{paint}}();
+735 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_map_view_ac41eb53f60bccbfe4f5601f1a997c51e_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 데이터 문서화}
+\mbox{\Hypertarget{class_map_view_ad1561bbb87fe21907a1df6085855d1b1}\label{class_map_view_ad1561bbb87fe21907a1df6085855d1b1}} 
+\index{Map\+View@{Map\+View}!m\+\_\+charbase@{m\+\_\+charbase}}
+\index{m\+\_\+charbase@{m\+\_\+charbase}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{m\+\_\+charbase}{m\_charbase}}
+{\footnotesize\ttfamily C\+Static Map\+View\+::m\+\_\+charbase}
+
+
+
+Map\+View.\+h 파일의 85 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_map_view_a78939f6f277c3e2b39292ecd4b21ca00}\label{class_map_view_a78939f6f277c3e2b39292ecd4b21ca00}} 
+\index{Map\+View@{Map\+View}!m\+\_\+dim@{m\+\_\+dim}}
+\index{m\+\_\+dim@{m\+\_\+dim}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{m\+\_\+dim}{m\_dim}}
+{\footnotesize\ttfamily C\+Static Map\+View\+::m\+\_\+dim}
+
+
+
+Map\+View.\+h 파일의 84 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_map_view_a8f4a820c52aaffadc6132ccd7727aa9d}\label{class_map_view_a8f4a820c52aaffadc6132ccd7727aa9d}} 
+\index{Map\+View@{Map\+View}!m\+\_\+mapbase@{m\+\_\+mapbase}}
+\index{m\+\_\+mapbase@{m\+\_\+mapbase}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{m\+\_\+mapbase}{m\_mapbase}}
+{\footnotesize\ttfamily C\+Static Map\+View\+::m\+\_\+mapbase}
+
+
+
+Map\+View.\+h 파일의 86 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_map_view_a9d3a6ede0046bc5a24b3472b59594056}\label{class_map_view_a9d3a6ede0046bc5a24b3472b59594056}} 
+\index{Map\+View@{Map\+View}!m\+\_\+mode@{m\+\_\+mode}}
+\index{m\+\_\+mode@{m\+\_\+mode}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{m\+\_\+mode}{m\_mode}}
+{\footnotesize\ttfamily C\+Static Map\+View\+::m\+\_\+mode}
+
+
+
+Map\+View.\+h 파일의 80 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_map_view_a382e8904120801584d23def0e73360f9}\label{class_map_view_a382e8904120801584d23def0e73360f9}} 
+\index{Map\+View@{Map\+View}!m\+\_\+mosaic@{m\+\_\+mosaic}}
+\index{m\+\_\+mosaic@{m\+\_\+mosaic}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{m\+\_\+mosaic}{m\_mosaic}}
+{\footnotesize\ttfamily C\+Static Map\+View\+::m\+\_\+mosaic}
+
+
+
+Map\+View.\+h 파일의 82 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_map_view_a211ea4eb337579e7193702ed2f20279c}\label{class_map_view_a211ea4eb337579e7193702ed2f20279c}} 
+\index{Map\+View@{Map\+View}!m\+\_\+numcolors@{m\+\_\+numcolors}}
+\index{m\+\_\+numcolors@{m\+\_\+numcolors}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{m\+\_\+numcolors}{m\_numcolors}}
+{\footnotesize\ttfamily C\+Static Map\+View\+::m\+\_\+numcolors}
+
+
+
+Map\+View.\+h 파일의 79 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_map_view_a594a0ff999a2dd22853a45b584325543}\label{class_map_view_a594a0ff999a2dd22853a45b584325543}} 
+\index{Map\+View@{Map\+View}!m\+\_\+overflow@{m\+\_\+overflow}}
+\index{m\+\_\+overflow@{m\+\_\+overflow}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{m\+\_\+overflow}{m\_overflow}}
+{\footnotesize\ttfamily C\+Static Map\+View\+::m\+\_\+overflow}
+
+
+
+Map\+View.\+h 파일의 81 번째 라인에서 정의되었습니다.
+
+\mbox{\Hypertarget{class_map_view_a3b5211e836b2d9b0124e0bcb71a49c3c}\label{class_map_view_a3b5211e836b2d9b0124e0bcb71a49c3c}} 
+\index{Map\+View@{Map\+View}!m\+\_\+priority@{m\+\_\+priority}}
+\index{m\+\_\+priority@{m\+\_\+priority}!Map\+View@{Map\+View}}
+\subsubsection{\texorpdfstring{m\+\_\+priority}{m\_priority}}
+{\footnotesize\ttfamily C\+Static Map\+View\+::m\+\_\+priority}
+
+
+
+Map\+View.\+h 파일의 83 번째 라인에서 정의되었습니다.
+
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/win32/Map\+View.\+h\item 
-src/win32/Map\+View.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{_map_view_8h}{Map\+View.\+h}}\item 
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{_map_view_8cpp}{Map\+View.\+cpp}}\end{DoxyCompactItemize}

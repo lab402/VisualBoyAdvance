@@ -1,0 +1,13 @@
+<map id="memWrite" name="memWrite">
+<area shape="rect" id="node2" href="$memgzio_8c.html#aafe8c3e74955de5641833affee004142" title="memPrintf" alt="" coords="136,31,217,57"/>
+<area shape="rect" id="node10" href="$memgzio_8h.html#ae8a25837528bdc05b7b765a4b8cce730" title="memgzwrite" alt="" coords="410,81,502,108"/>
+<area shape="rect" id="node11" href="$memgzio_8c.html#afafc4bbc6787281ae67c082cb529787d" title="do_flush" alt="" coords="141,132,212,159"/>
+<area shape="rect" id="node3" href="$memgzio_8c.html#a372853e45fc83777b428200cdcc816cf" title="gz_open" alt="" coords="278,31,349,57"/>
+<area shape="rect" id="node4" href="$memgzio_8h.html#af2b4a60c8ef3a751ba47c7f4e345b634" title="memgzopen" alt="" coords="409,31,503,57"/>
+<area shape="rect" id="node5" href="$_util_8h.html#a02e6a64e4965d9911ebe6cf6b43fd192" title="utilMemGzOpen" alt="" coords="551,81,667,108"/>
+<area shape="rect" id="node6" href="$_g_b_8h.html#abf83eaea4927776c4d4e4e70720515eb" title="gbWriteMemSaveState" alt="" coords="715,5,869,32"/>
+<area shape="rect" id="node7" href="$_g_b_8h.html#a0da167f7d0a43c90028ac9e39527c6f0" title="gbReadMemSaveState" alt="" coords="715,56,869,83"/>
+<area shape="rect" id="node8" href="$_g_b_a_8h.html#a628cef443f29863442488c47d2b97cef" title="CPUWriteMemState" alt="" coords="722,107,862,133"/>
+<area shape="rect" id="node9" href="$_g_b_a_8h.html#a2ca5fcf7a3c5f4fa8c4b4c185fdda98c" title="CPUReadMemState" alt="" coords="723,157,861,184"/>
+<area shape="rect" id="node12" href="$memgzio_8h.html#a77dc212b1739dd439d34094181239b2a" title="memgzclose" alt="" coords="265,132,361,159"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="gbSoundTick" name="gbSoundTick">
+<area shape="rect" id="node2" href="$gb_sound_8cpp.html#a48a64c7ed9fac87871b030676b5f4058" title="gbSoundChannel1" alt="" coords="191,5,317,32"/>
+<area shape="rect" id="node3" href="$gb_sound_8cpp.html#ad24d00592f4024ddc0ee24f5cb6cd2d9" title="gbSoundChannel2" alt="" coords="191,56,317,83"/>
+<area shape="rect" id="node4" href="$gb_sound_8cpp.html#a179640878568e2c9ede5c2d9b96445d0" title="gbSoundChannel3" alt="" coords="191,107,317,133"/>
+<area shape="rect" id="node5" href="$gb_sound_8cpp.html#a142e798944a2d6a3a42fcfdedb72cfac" title="gbSoundChannel4" alt="" coords="191,157,317,184"/>
+<area shape="rect" id="node6" href="$gb_sound_8cpp.html#af5f97858f42642603c5bbd3c255a1b6e" title="gbSoundMix" alt="" coords="207,208,301,235"/>
+<area shape="rect" id="node7" href="$gb_sound_8cpp.html#af13240822604abd91b4e2370062f195e" title="soundResume" alt="" coords="201,259,307,285"/>
+<area shape="rect" id="node8" href="$system_8cpp.html#a7ab73f7c29f519cb0ff00210bb140eb1" title="systemWriteDataToSoundBuffer" alt="" coords="151,309,357,336"/>
+</map>

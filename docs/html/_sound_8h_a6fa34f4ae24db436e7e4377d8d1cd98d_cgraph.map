@@ -1,0 +1,12 @@
+<map id="soundTick" name="soundTick">
+<area shape="rect" id="node2" href="$_sound_8cpp.html#a841bec1a336549a059cd011d92454ba0" title="soundChannel1" alt="" coords="183,5,293,32"/>
+<area shape="rect" id="node3" href="$_sound_8cpp.html#a7bd03bd06d06312eec6e45b41d3bfe4f" title="soundChannel2" alt="" coords="183,56,293,83"/>
+<area shape="rect" id="node4" href="$_sound_8cpp.html#afc717bf717eb6feb6336d0c587969616" title="soundChannel3" alt="" coords="183,107,293,133"/>
+<area shape="rect" id="node5" href="$_sound_8cpp.html#a978856b4c5a15105aa9972717e4e0e68" title="soundChannel4" alt="" coords="183,157,293,184"/>
+<area shape="rect" id="node6" href="$_sound_8cpp.html#a34634159cdc8c9788a8b144ae2f83665" title="soundDirectSoundA" alt="" coords="169,208,307,235"/>
+<area shape="rect" id="node7" href="$_sound_8cpp.html#a4043d3f2a22c2cdb8db6ff10aac80d17" title="soundDirectSoundB" alt="" coords="169,259,307,285"/>
+<area shape="rect" id="node8" href="$_sound_8cpp.html#a652bb74cdd7abf5fb2aeec46250ef189" title="soundMix" alt="" coords="199,309,277,336"/>
+<area shape="rect" id="node9" href="$_sound_8cpp.html#af13240822604abd91b4e2370062f195e" title="soundResume" alt="" coords="185,360,291,387"/>
+<area shape="rect" id="node11" href="$system_8cpp.html#a7ab73f7c29f519cb0ff00210bb140eb1" title="systemWriteDataToSoundBuffer" alt="" coords="135,411,341,437"/>
+<area shape="rect" id="node10" href="$system_8cpp.html#acca67094c690baad0ce9832028d0660e" title="systemSoundResume" alt="" coords="389,360,540,387"/>
+</map>

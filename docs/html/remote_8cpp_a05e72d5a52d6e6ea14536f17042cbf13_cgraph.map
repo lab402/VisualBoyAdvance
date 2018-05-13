@@ -1,0 +1,4 @@
+<map id="remoteReadRegisters" name="remoteReadRegisters">
+<area shape="rect" id="node2" href="$remote_8cpp.html#ac48694e791b50357a1a762322adbbed4" title="CPUUpdateCPSR" alt="" coords="200,5,327,32"/>
+<area shape="rect" id="node3" href="$remote_8cpp.html#a81762106aecfb89930ba4e1167fa707b" title="remotePutPacket" alt="" coords="202,56,325,83"/>
+</map>

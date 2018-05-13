@@ -1,0 +1,7 @@
+<map id="GBMapView::OnRefresh" name="GBMapView::OnRefresh">
+<area shape="rect" id="node2" href="$class_g_b_map_view.html#a42de669273417186b01ca6f8d06eb347" title="GBMapView::paint" alt="" coords="216,81,347,108"/>
+<area shape="rect" id="node3" href="$class_g_b_map_view.html#a48aeac68f689682206749e933513b98e" title="GBMapView::render" alt="" coords="411,5,550,32"/>
+<area shape="rect" id="node4" href="$class_bitmap_control.html#a1d3cff9a3b57dd7558d678177dcf4b5c" title="BitmapControl::getStretch" alt="" coords="395,56,567,83"/>
+<area shape="rect" id="node5" href="$class_bitmap_control.html#a421004fe6ba01329dd69259396592d1f" title="BitmapControl::setSize" alt="" coords="403,107,559,133"/>
+<area shape="rect" id="node6" href="$class_bitmap_control.html#acf061a1e9a4cad90ad2827c14f79caa2" title="BitmapControl::refresh" alt="" coords="405,157,556,184"/>
+</map>

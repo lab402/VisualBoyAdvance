@@ -1,0 +1,6 @@
+<map id="remoteSendStatus" name="remoteSendStatus">
+<area shape="rect" id="node2" href="$remote_8cpp.html#a2a3582d89ee0431494a63172d29b92b7" title="remoteStepOverRange" alt="" coords="184,5,336,32"/>
+<area shape="rect" id="node3" href="$_v_b_a_8cpp.html#a3fc86793182abde32b75da7885cb7337" title="remoteStubMain" alt="" coords="384,31,501,57"/>
+<area shape="rect" id="node5" href="$_v_b_a_8cpp.html#a5309cd8c07c439a8edfa790743175a19" title="remoteStubSignal" alt="" coords="197,107,323,133"/>
+<area shape="rect" id="node4" href="$class_v_b_a.html#a0296d1fa6a340dffd47dbe623b64475c" title="VBA::OnIdle" alt="" coords="549,31,644,57"/>
+</map>

@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_add_g_b_cheat.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-types">Public 타입</a> &#124;
@@ -72,85 +96,513 @@ $(function() {
 <div class="title">AddGBCheat 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a>&gt;</code></p>
 <div class="dynheader">
 AddGBCheat에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_add_g_b_cheat.png" usemap="#AddGBCheat_map" alt=""/>
-  <map id="AddGBCheat_map" name="AddGBCheat_map">
-</map>
- </div></div>
+<div class="center"><img src="class_add_g_b_cheat__inherit__graph.png" border="0" usemap="#_add_g_b_cheat_inherit__map" alt="Inheritance graph"/></div>
+</div>
+<div class="dynheader">
+AddGBCheat에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_add_g_b_cheat__coll__graph.png" border="0" usemap="#_add_g_b_cheat_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public 타입</h2></td></tr>
-<tr class="memitem:ae307c54936e2ef002f6323ab0d1fa05e"><td class="memItemLeft" align="right" valign="top"><a id="ae307c54936e2ef002f6323ab0d1fa05e"></a>enum &#160;</td><td class="memItemRight" valign="bottom">{ <b>IDD</b> = IDD_ADD_CHEAT
+<tr class="memitem:ae307c54936e2ef002f6323ab0d1fa05e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="class_add_g_b_cheat.html#ae307c54936e2ef002f6323ab0d1fa05eaa142321cb7a25da95b16f0c2ea74993f">IDD</a> = IDD_ADD_CHEAT
  }</td></tr>
 <tr class="separator:ae307c54936e2ef002f6323ab0d1fa05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a9bff22f01c72ffbcd6071bb604c2e090"><td class="memItemLeft" align="right" valign="top"><a id="a9bff22f01c72ffbcd6071bb604c2e090"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSizeType</b> (UINT id)</td></tr>
+<tr class="memitem:a9bff22f01c72ffbcd6071bb604c2e090"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#a9bff22f01c72ffbcd6071bb604c2e090">OnSizeType</a> (UINT <a class="el" href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a>)</td></tr>
 <tr class="separator:a9bff22f01c72ffbcd6071bb604c2e090"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bfddb9d66e182dedc95bf889dc9e6d2"><td class="memItemLeft" align="right" valign="top"><a id="a1bfddb9d66e182dedc95bf889dc9e6d2"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnNumberType</b> (UINT id)</td></tr>
+<tr class="memitem:a1bfddb9d66e182dedc95bf889dc9e6d2"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#a1bfddb9d66e182dedc95bf889dc9e6d2">OnNumberType</a> (UINT <a class="el" href="_commands_8cpp.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd">id</a>)</td></tr>
 <tr class="separator:a1bfddb9d66e182dedc95bf889dc9e6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a054ba5040a40f7ef4b3a0ddb5a458592"><td class="memItemLeft" align="right" valign="top"><a id="a054ba5040a40f7ef4b3a0ddb5a458592"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>addCheat</b> ()</td></tr>
+<tr class="memitem:a054ba5040a40f7ef4b3a0ddb5a458592"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#a054ba5040a40f7ef4b3a0ddb5a458592">addCheat</a> ()</td></tr>
 <tr class="separator:a054ba5040a40f7ef4b3a0ddb5a458592"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1794ccc1e4826b5a8b179d20557955b8"><td class="memItemLeft" align="right" valign="top"><a id="a1794ccc1e4826b5a8b179d20557955b8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>AddGBCheat</b> (u32 addr, CWnd *pParent=NULL)</td></tr>
+<tr class="memitem:a1794ccc1e4826b5a8b179d20557955b8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#a1794ccc1e4826b5a8b179d20557955b8">AddGBCheat</a> (<a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> addr, CWnd *pParent=<a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a>)</td></tr>
 <tr class="separator:a1794ccc1e4826b5a8b179d20557955b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:ac5705ad3d8964adb59d62c51dd60a0fc"><td class="memItemLeft" align="right" valign="top"><a id="ac5705ad3d8964adb59d62c51dd60a0fc"></a>
-CEdit&#160;</td><td class="memItemRight" valign="bottom"><b>m_value</b></td></tr>
+<tr class="memitem:ac5705ad3d8964adb59d62c51dd60a0fc"><td class="memItemLeft" align="right" valign="top">CEdit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#ac5705ad3d8964adb59d62c51dd60a0fc">m_value</a></td></tr>
 <tr class="separator:ac5705ad3d8964adb59d62c51dd60a0fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af68f821a3073c6a01f1c8760dab628ee"><td class="memItemLeft" align="right" valign="top"><a id="af68f821a3073c6a01f1c8760dab628ee"></a>
-CEdit&#160;</td><td class="memItemRight" valign="bottom"><b>m_address</b></td></tr>
+<tr class="memitem:af68f821a3073c6a01f1c8760dab628ee"><td class="memItemLeft" align="right" valign="top">CEdit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#af68f821a3073c6a01f1c8760dab628ee">m_address</a></td></tr>
 <tr class="separator:af68f821a3073c6a01f1c8760dab628ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae1711f59505d7d442a6572a346993cd2"><td class="memItemLeft" align="right" valign="top"><a id="ae1711f59505d7d442a6572a346993cd2"></a>
-CEdit&#160;</td><td class="memItemRight" valign="bottom"><b>m_desc</b></td></tr>
+<tr class="memitem:ae1711f59505d7d442a6572a346993cd2"><td class="memItemLeft" align="right" valign="top">CEdit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#ae1711f59505d7d442a6572a346993cd2">m_desc</a></td></tr>
 <tr class="separator:ae1711f59505d7d442a6572a346993cd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae0603ce2570d5b09a64f4bd6c2107962"><td class="memItemLeft" align="right" valign="top"><a id="ae0603ce2570d5b09a64f4bd6c2107962"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>sizeType</b></td></tr>
+<tr class="memitem:ae0603ce2570d5b09a64f4bd6c2107962"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a></td></tr>
 <tr class="separator:ae0603ce2570d5b09a64f4bd6c2107962"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab49fa34156026418e26edf606aa82b1a"><td class="memItemLeft" align="right" valign="top"><a id="ab49fa34156026418e26edf606aa82b1a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>numberType</b></td></tr>
+<tr class="memitem:ab49fa34156026418e26edf606aa82b1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a></td></tr>
 <tr class="separator:ab49fa34156026418e26edf606aa82b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected 멤버 함수</h2></td></tr>
-<tr class="memitem:ab90d0a5d50911d10eec2706250882d6f"><td class="memItemLeft" align="right" valign="top"><a id="ab90d0a5d50911d10eec2706250882d6f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>DoDataExchange</b> (CDataExchange *pDX)</td></tr>
+<tr class="memitem:ab90d0a5d50911d10eec2706250882d6f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#ab90d0a5d50911d10eec2706250882d6f">DoDataExchange</a> (CDataExchange *pDX)</td></tr>
 <tr class="separator:ab90d0a5d50911d10eec2706250882d6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2eb6674e040b6a8af227e6517f857e8"><td class="memItemLeft" align="right" valign="top"><a id="ac2eb6674e040b6a8af227e6517f857e8"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCancel</b> ()</td></tr>
+<tr class="memitem:ac2eb6674e040b6a8af227e6517f857e8"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#ac2eb6674e040b6a8af227e6517f857e8">OnCancel</a> ()</td></tr>
 <tr class="separator:ac2eb6674e040b6a8af227e6517f857e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef6d73f3cdf51e28bbba9f7e14b21941"><td class="memItemLeft" align="right" valign="top"><a id="aef6d73f3cdf51e28bbba9f7e14b21941"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnOk</b> ()</td></tr>
+<tr class="memitem:aef6d73f3cdf51e28bbba9f7e14b21941"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#aef6d73f3cdf51e28bbba9f7e14b21941">OnOk</a> ()</td></tr>
 <tr class="separator:aef6d73f3cdf51e28bbba9f7e14b21941"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97210ad566b117af4994adac5d954e94"><td class="memItemLeft" align="right" valign="top"><a id="a97210ad566b117af4994adac5d954e94"></a>
-virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnInitDialog</b> ()</td></tr>
+<tr class="memitem:a97210ad566b117af4994adac5d954e94"><td class="memItemLeft" align="right" valign="top">virtual BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#a97210ad566b117af4994adac5d954e94">OnInitDialog</a> ()</td></tr>
 <tr class="separator:a97210ad566b117af4994adac5d954e94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected 속성</h2></td></tr>
-<tr class="memitem:adb910488c84e165b4fd33646b932ee2e"><td class="memItemLeft" align="right" valign="top"><a id="adb910488c84e165b4fd33646b932ee2e"></a>
-LONG_PTR&#160;</td><td class="memItemRight" valign="bottom"><b>address</b></td></tr>
+<tr class="memitem:adb910488c84e165b4fd33646b932ee2e"><td class="memItemLeft" align="right" valign="top">LONG_PTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a></td></tr>
 <tr class="separator:adb910488c84e165b4fd33646b932ee2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00095">95</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 열거형 문서화</h2>
+<a id="ae307c54936e2ef002f6323ab0d1fa05e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae307c54936e2ef002f6323ab0d1fa05e">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">열거형 멤버</th></tr><tr><td class="fieldname"><a id="ae307c54936e2ef002f6323ab0d1fa05eaa142321cb7a25da95b16f0c2ea74993f"></a>IDD&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00106">106</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;{ <a class="code" href="class_add_g_b_cheat.html#ae307c54936e2ef002f6323ab0d1fa05eaa142321cb7a25da95b16f0c2ea74993f">IDD</a> = <a class="code" href="resource_8h.html#ad4208f6eab3496843a3a8f652140f45b">IDD_ADD_CHEAT</a> };</div><div class="ttc" id="resource_8h_html_ad4208f6eab3496843a3a8f652140f45b"><div class="ttname"><a href="resource_8h.html#ad4208f6eab3496843a3a8f652140f45b">IDD_ADD_CHEAT</a></div><div class="ttdeci">#define IDD_ADD_CHEAT</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00055">resource.h:55</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae307c54936e2ef002f6323ab0d1fa05eaa142321cb7a25da95b16f0c2ea74993f"><div class="ttname"><a href="class_add_g_b_cheat.html#ae307c54936e2ef002f6323ab0d1fa05eaa142321cb7a25da95b16f0c2ea74993f">AddGBCheat::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00106">GBCheatsDlg.h:106</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">생성자 &amp; 소멸자 문서화</h2>
+<a id="a1794ccc1e4826b5a8b179d20557955b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1794ccc1e4826b5a8b179d20557955b8">&#9670;&nbsp;</a></span>AddGBCheat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AddGBCheat::AddGBCheat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a>&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">CWnd *&#160;</td>
+          <td class="paramname"><em>pParent</em> = <code><a class="el" href="_system_8h.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">NULL</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8cpp_source.html#l00565">565</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;  : CDialog(<a class="code" href="class_add_g_b_cheat.html#ae307c54936e2ef002f6323ab0d1fa05eaa142321cb7a25da95b16f0c2ea74993f">AddGBCheat::IDD</a>, pParent)</div><div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;{</div><div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;  <span class="comment">//{{AFX_DATA_INIT(AddGBCheat)</span></div><div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a> = -1;</div><div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a> = -1;</div><div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;  <span class="comment">//}}AFX_DATA_INIT</span></div><div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a> = addr;</div><div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;}</div><div class="ttc" id="class_add_g_b_cheat_html_adb910488c84e165b4fd33646b932ee2e"><div class="ttname"><a href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">AddGBCheat::address</a></div><div class="ttdeci">LONG_PTR address</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00124">GBCheatsDlg.h:124</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ab49fa34156026418e26edf606aa82b1a"><div class="ttname"><a href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">AddGBCheat::numberType</a></div><div class="ttdeci">int numberType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00111">GBCheatsDlg.h:111</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae0603ce2570d5b09a64f4bd6c2107962"><div class="ttname"><a href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">AddGBCheat::sizeType</a></div><div class="ttdeci">int sizeType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00110">GBCheatsDlg.h:110</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae307c54936e2ef002f6323ab0d1fa05eaa142321cb7a25da95b16f0c2ea74993f"><div class="ttname"><a href="class_add_g_b_cheat.html#ae307c54936e2ef002f6323ab0d1fa05eaa142321cb7a25da95b16f0c2ea74993f">AddGBCheat::IDD</a></div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00106">GBCheatsDlg.h:106</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a054ba5040a40f7ef4b3a0ddb5a458592"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a054ba5040a40f7ef4b3a0ddb5a458592">&#9670;&nbsp;</a></span>addCheat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AddGBCheat::addCheat </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8cpp_source.html#l00614">614</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;{</div><div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;  CString <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>;</div><div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;  CString code;</div><div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;</div><div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;  <a class="code" href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a> value;</div><div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#ac5705ad3d8964adb59d62c51dd60a0fc">m_value</a>.GetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;  </div><div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>.IsEmpty()) {</div><div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;    <a class="code" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a>(<a class="code" href="resource_8h.html#af9868c81584772179e6abbf1b4479348">IDS_VALUE_CANNOT_BE_EMPTY</a>, <span class="stringliteral">&quot;Value cannot be empty&quot;</span>);</div><div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div><div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;  }</div><div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;  </div><div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;  <span class="keywordflow">switch</span>(<a class="code" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a>) {</div><div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;  <span class="keywordflow">case</span> 0:</div><div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    sscanf(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, <span class="stringliteral">&quot;%d&quot;</span>, &amp;value);</div><div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;  <span class="keywordflow">case</span> 1:</div><div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    sscanf(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, <span class="stringliteral">&quot;%u&quot;</span>, &amp;value);</div><div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;  <span class="keywordflow">default</span>:</div><div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;    sscanf(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>, <span class="stringliteral">&quot;%x&quot;</span>, &amp;value);</div><div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;  }</div><div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;</div><div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#ae1711f59505d7d442a6572a346993cd2">m_desc</a>.GetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;</div><div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;  LONG_PTR bank = (<a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a> &gt;&gt; 16);</div><div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a> &amp;= 0xFFFF;</div><div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;</div><div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a> &gt;= 0xd000)</div><div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;    bank += 0x90;</div><div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;  <span class="keywordflow">else</span></div><div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;    bank = 0x01;</div><div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;  </div><div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;  <span class="keywordflow">switch</span>(<a class="code" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a>) {</div><div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;  <span class="keywordflow">case</span> 0:</div><div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;    code.Format(<span class="stringliteral">&quot;%02X%02X%02X%02X&quot;</span>, bank, value, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&amp;0xFF, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&gt;&gt;8);</div><div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <a class="code" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941">gbAddGsCheat</a>(code, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;  <span class="keywordflow">case</span> 1:</div><div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    code.Format(<span class="stringliteral">&quot;%02X%02X%02X%02X&quot;</span>, bank, value&amp;0xFF, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&amp;0xFF,</div><div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;                <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&gt;&gt;8);</div><div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    <a class="code" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941">gbAddGsCheat</a>(code, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>++;</div><div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;    code.Format(<span class="stringliteral">&quot;%02X%02X%02X%02X&quot;</span>, bank, value&gt;&gt;8, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&amp;0xFF,</div><div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;                <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&gt;&gt;8);</div><div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    <a class="code" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941">gbAddGsCheat</a>(code, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);    </div><div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;  <span class="keywordflow">case</span> 2:</div><div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;    code.Format(<span class="stringliteral">&quot;%02X%02X%02X%02X&quot;</span>, bank, value&amp;0xFF, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&amp;0xFF,</div><div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;                <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&gt;&gt;8);</div><div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;    <a class="code" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941">gbAddGsCheat</a>(code, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>++;</div><div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;    code.Format(<span class="stringliteral">&quot;%02X%02X%02X%02X&quot;</span>, bank, (value&gt;&gt;8) &amp; 0xFF, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&amp;0xFF,</div><div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;                <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&gt;&gt;8);</div><div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <a class="code" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941">gbAddGsCheat</a>(code, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>++;</div><div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;    code.Format(<span class="stringliteral">&quot;%02X%02X%02X%02X&quot;</span>, bank, (value&gt;&gt;16)&amp;0xFF, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&amp;0xFF,</div><div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&gt;&gt;8);</div><div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;    <a class="code" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941">gbAddGsCheat</a>(code, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>++;</div><div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;    code.Format(<span class="stringliteral">&quot;%02X%02X%02X%02X&quot;</span>, bank, value&gt;&gt;24, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&amp;0xFF,</div><div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&gt;&gt;8);</div><div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    <a class="code" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941">gbAddGsCheat</a>(code, <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);    </div><div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;  }</div><div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;  </div><div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;  <span class="keywordflow">return</span> <span class="keyword">true</span>;</div><div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;}</div><div class="ttc" id="class_add_g_b_cheat_html_ac5705ad3d8964adb59d62c51dd60a0fc"><div class="ttname"><a href="class_add_g_b_cheat.html#ac5705ad3d8964adb59d62c51dd60a0fc">AddGBCheat::m_value</a></div><div class="ttdeci">CEdit m_value</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00107">GBCheatsDlg.h:107</a></div></div>
+<div class="ttc" id="_system_8h_html_a10e94b422ef0c20dcdec20d31a1f5049"><div class="ttname"><a href="_system_8h.html#a10e94b422ef0c20dcdec20d31a1f5049">u32</a></div><div class="ttdeci">unsigned int u32</div><div class="ttdef"><b>Definition:</b> <a href="_system_8h_source.html#l00031">System.h:31</a></div></div>
+<div class="ttc" id="gb_cheats_8cpp_html_ad058dd136247699557fcd98824d1d941"><div class="ttname"><a href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941">gbAddGsCheat</a></div><div class="ttdeci">void gbAddGsCheat(const char *code, const char *desc)</div><div class="ttdef"><b>Definition:</b> <a href="gb_cheats_8cpp_source.html#l00188">gbCheats.cpp:188</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_adb910488c84e165b4fd33646b932ee2e"><div class="ttname"><a href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">AddGBCheat::address</a></div><div class="ttdeci">LONG_PTR address</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00124">GBCheatsDlg.h:124</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ab49fa34156026418e26edf606aa82b1a"><div class="ttname"><a href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">AddGBCheat::numberType</a></div><div class="ttdeci">int numberType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00111">GBCheatsDlg.h:111</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae1711f59505d7d442a6572a346993cd2"><div class="ttname"><a href="class_add_g_b_cheat.html#ae1711f59505d7d442a6572a346993cd2">AddGBCheat::m_desc</a></div><div class="ttdeci">CEdit m_desc</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00109">GBCheatsDlg.h:109</a></div></div>
+<div class="ttc" id="resource_8h_html_af9868c81584772179e6abbf1b4479348"><div class="ttname"><a href="resource_8h.html#af9868c81584772179e6abbf1b4479348">IDS_VALUE_CANNOT_BE_EMPTY</a></div><div class="ttdeci">#define IDS_VALUE_CANNOT_BE_EMPTY</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00201">resource.h:201</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae0603ce2570d5b09a64f4bd6c2107962"><div class="ttname"><a href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">AddGBCheat::sizeType</a></div><div class="ttdeci">int sizeType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00110">GBCheatsDlg.h:110</a></div></div>
+<div class="ttc" id="system_8cpp_html_a747a9cb8e015a3d45cca636b5bd0fc69"><div class="ttname"><a href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69">systemMessage</a></div><div class="ttdeci">void systemMessage(int _iId, const char *_csFormat,...)</div><div class="ttdef"><b>Definition:</b> <a href="system_8cpp_source.html#l00073">system.cpp:73</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_add_g_b_cheat_a054ba5040a40f7ef4b3a0ddb5a458592_cgraph.png" border="0" usemap="#class_add_g_b_cheat_a054ba5040a40f7ef4b3a0ddb5a458592_cgraph" alt=""/></div>
+<map name="class_add_g_b_cheat_a054ba5040a40f7ef4b3a0ddb5a458592_cgraph" id="class_add_g_b_cheat_a054ba5040a40f7ef4b3a0ddb5a458592_cgraph">
+<area shape="rect" id="node2" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="373,5,492,32"/>
+<area shape="rect" id="node3" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941" title="gbAddGsCheat" alt="" coords="215,56,325,83"/>
+<area shape="rect" id="node4" href="gb_cheats_8cpp.html#a4af07b1b8e7409c8fc47174c046a56e9" title="gbVerifyGsCode" alt="" coords="375,56,491,83"/>
+</map>
+</div>
+<div class="dynheader">
+이 함수를 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_add_g_b_cheat_a054ba5040a40f7ef4b3a0ddb5a458592_icgraph.png" border="0" usemap="#class_add_g_b_cheat_a054ba5040a40f7ef4b3a0ddb5a458592_icgraph" alt=""/></div>
+<map name="class_add_g_b_cheat_a054ba5040a40f7ef4b3a0ddb5a458592_icgraph" id="class_add_g_b_cheat_a054ba5040a40f7ef4b3a0ddb5a458592_icgraph">
+<area shape="rect" id="node2" href="class_add_g_b_cheat.html#aef6d73f3cdf51e28bbba9f7e14b21941" title="AddGBCheat::OnOk" alt="" coords="215,5,355,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab90d0a5d50911d10eec2706250882d6f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab90d0a5d50911d10eec2706250882d6f">&#9670;&nbsp;</a></span>DoDataExchange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddGBCheat::DoDataExchange </td>
+          <td>(</td>
+          <td class="paramtype">CDataExchange *&#160;</td>
+          <td class="paramname"><em>pDX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8cpp_source.html#l00576">576</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;{</div><div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;  CDialog::DoDataExchange(pDX);</div><div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;  <span class="comment">//{{AFX_DATA_MAP(AddGBCheat)</span></div><div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#aa862eefddc803e8e65c3253b8029314f">IDC_VALUE</a>, <a class="code" href="class_add_g_b_cheat.html#ac5705ad3d8964adb59d62c51dd60a0fc">m_value</a>);</div><div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#af0726d27cf7b7070867a81fde283a218">IDC_ADDRESS</a>, <a class="code" href="class_add_g_b_cheat.html#af68f821a3073c6a01f1c8760dab628ee">m_address</a>);</div><div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160;  DDX_Control(pDX, <a class="code" href="resource_8h.html#adb05cf1e74135587a9b3ab93a5152feb">IDC_DESC</a>, <a class="code" href="class_add_g_b_cheat.html#ae1711f59505d7d442a6572a346993cd2">m_desc</a>);</div><div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;  DDX_Radio(pDX, <a class="code" href="resource_8h.html#aabec7e8ec4648288db9ff8c10fdf3bb7">IDC_SIZE_8</a>, <a class="code" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a>);</div><div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;  DDX_Radio(pDX, <a class="code" href="resource_8h.html#ae13e01a62e7c40be0e3a93d98d2cd1d3">IDC_SIGNED</a>, <a class="code" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a>);</div><div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;  <span class="comment">//}}AFX_DATA_MAP</span></div><div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;}</div><div class="ttc" id="class_add_g_b_cheat_html_ac5705ad3d8964adb59d62c51dd60a0fc"><div class="ttname"><a href="class_add_g_b_cheat.html#ac5705ad3d8964adb59d62c51dd60a0fc">AddGBCheat::m_value</a></div><div class="ttdeci">CEdit m_value</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00107">GBCheatsDlg.h:107</a></div></div>
+<div class="ttc" id="resource_8h_html_aa862eefddc803e8e65c3253b8029314f"><div class="ttname"><a href="resource_8h.html#aa862eefddc803e8e65c3253b8029314f">IDC_VALUE</a></div><div class="ttdeci">#define IDC_VALUE</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00198">resource.h:198</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_af68f821a3073c6a01f1c8760dab628ee"><div class="ttname"><a href="class_add_g_b_cheat.html#af68f821a3073c6a01f1c8760dab628ee">AddGBCheat::m_address</a></div><div class="ttdeci">CEdit m_address</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00108">GBCheatsDlg.h:108</a></div></div>
+<div class="ttc" id="resource_8h_html_adb05cf1e74135587a9b3ab93a5152feb"><div class="ttname"><a href="resource_8h.html#adb05cf1e74135587a9b3ab93a5152feb">IDC_DESC</a></div><div class="ttdeci">#define IDC_DESC</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00290">resource.h:290</a></div></div>
+<div class="ttc" id="resource_8h_html_aabec7e8ec4648288db9ff8c10fdf3bb7"><div class="ttname"><a href="resource_8h.html#aabec7e8ec4648288db9ff8c10fdf3bb7">IDC_SIZE_8</a></div><div class="ttdeci">#define IDC_SIZE_8</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00167">resource.h:167</a></div></div>
+<div class="ttc" id="resource_8h_html_af0726d27cf7b7070867a81fde283a218"><div class="ttname"><a href="resource_8h.html#af0726d27cf7b7070867a81fde283a218">IDC_ADDRESS</a></div><div class="ttdeci">#define IDC_ADDRESS</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00200">resource.h:200</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ab49fa34156026418e26edf606aa82b1a"><div class="ttname"><a href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">AddGBCheat::numberType</a></div><div class="ttdeci">int numberType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00111">GBCheatsDlg.h:111</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae1711f59505d7d442a6572a346993cd2"><div class="ttname"><a href="class_add_g_b_cheat.html#ae1711f59505d7d442a6572a346993cd2">AddGBCheat::m_desc</a></div><div class="ttdeci">CEdit m_desc</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00109">GBCheatsDlg.h:109</a></div></div>
+<div class="ttc" id="resource_8h_html_ae13e01a62e7c40be0e3a93d98d2cd1d3"><div class="ttname"><a href="resource_8h.html#ae13e01a62e7c40be0e3a93d98d2cd1d3">IDC_SIGNED</a></div><div class="ttdeci">#define IDC_SIGNED</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00191">resource.h:191</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae0603ce2570d5b09a64f4bd6c2107962"><div class="ttname"><a href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">AddGBCheat::sizeType</a></div><div class="ttdeci">int sizeType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00110">GBCheatsDlg.h:110</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac2eb6674e040b6a8af227e6517f857e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2eb6674e040b6a8af227e6517f857e8">&#9670;&nbsp;</a></span>OnCancel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddGBCheat::OnCancel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8cpp_source.html#l00601">601</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;{</div><div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;  EndDialog(FALSE);</div><div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;}</div></div><!-- fragment -->
+</div>
+</div>
+<a id="a97210ad566b117af4994adac5d954e94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97210ad566b117af4994adac5d954e94">&#9670;&nbsp;</a></span>OnInitDialog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL AddGBCheat::OnInitDialog </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8cpp_source.html#l00684">684</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;{</div><div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;  CDialog::OnInitDialog();</div><div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;  </div><div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;  CString <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>;</div><div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;  <a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>.Format(<span class="stringliteral">&quot;%02x:%08x&quot;</span>, (<a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&gt;&gt;16), <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>&amp;0xFFFF);</div><div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#af68f821a3073c6a01f1c8760dab628ee">m_address</a>.SetWindowText(<a class="code" href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a>);</div><div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#af68f821a3073c6a01f1c8760dab628ee">m_address</a>.EnableWindow(FALSE);</div><div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;  ::SetWindowLongPtr( <a class="code" href="class_add_g_b_cheat.html#af68f821a3073c6a01f1c8760dab628ee">m_address</a>.GetSafeHwnd(), GWLP_USERDATA, <a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a>);</div><div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;  </div><div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a> = <a class="code" href="_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3">regQueryDwordValue</a>(<span class="stringliteral">&quot;gbCheatsNumberType&quot;</span>, 2);</div><div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;  <span class="keywordflow">if</span>(numberType &lt; 0 || numberType &gt; 2)</div><div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a> = 2;</div><div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;  </div><div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a> = <a class="code" href="_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3">regQueryDwordValue</a>(<span class="stringliteral">&quot;gbCheatsSizeType&quot;</span>, 0);</div><div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;  <span class="keywordflow">if</span>(sizeType &lt; 0 || sizeType &gt; 2)</div><div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a> = 0;</div><div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;</div><div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;  UpdateData(FALSE);</div><div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;  </div><div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;  <a class="code" href="class_add_g_b_cheat.html#ae1711f59505d7d442a6572a346993cd2">m_desc</a>.LimitText(32);</div><div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;  </div><div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">address</a> != 0) {</div><div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;    GetDlgItem(<a class="code" href="resource_8h.html#aabec7e8ec4648288db9ff8c10fdf3bb7">IDC_SIZE_8</a>)-&gt;EnableWindow(FALSE);</div><div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    GetDlgItem(<a class="code" href="resource_8h.html#a3b1ce25b145995e8af592b0a80b8e564">IDC_SIZE_16</a>)-&gt;EnableWindow(FALSE);</div><div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    GetDlgItem(<a class="code" href="resource_8h.html#a2d7fa8cb0d3104b26a76be5ab586ff5a">IDC_SIZE_32</a>)-&gt;EnableWindow(FALSE);</div><div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    GetDlgItem(<a class="code" href="resource_8h.html#a41e2d269f242a0163051e37d88a2ee61">IDC_HEXADECIMAL</a>)-&gt;EnableWindow(FALSE);</div><div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    GetDlgItem(<a class="code" href="resource_8h.html#aeedbb412500d742d9253c77868e55102">IDC_UNSIGNED</a>)-&gt;EnableWindow(FALSE);</div><div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    GetDlgItem(<a class="code" href="resource_8h.html#ae13e01a62e7c40be0e3a93d98d2cd1d3">IDC_SIGNED</a>)-&gt;EnableWindow(FALSE);        </div><div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;  }</div><div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  CenterWindow();</div><div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;  </div><div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;  <span class="keywordflow">return</span> TRUE;  <span class="comment">// return TRUE unless you set the focus to a control</span></div><div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;                <span class="comment">// EXCEPTION: OCX Property Pages should return FALSE</span></div><div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;}</div><div class="ttc" id="_reg_8cpp_html_a150640889ffff4851ee26d7b999ec7c3"><div class="ttname"><a href="_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3">regQueryDwordValue</a></div><div class="ttdeci">DWORD regQueryDwordValue(const char *key, DWORD def, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="_reg_8cpp_source.html#l00091">Reg.cpp:91</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_af68f821a3073c6a01f1c8760dab628ee"><div class="ttname"><a href="class_add_g_b_cheat.html#af68f821a3073c6a01f1c8760dab628ee">AddGBCheat::m_address</a></div><div class="ttdeci">CEdit m_address</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00108">GBCheatsDlg.h:108</a></div></div>
+<div class="ttc" id="resource_8h_html_aabec7e8ec4648288db9ff8c10fdf3bb7"><div class="ttname"><a href="resource_8h.html#aabec7e8ec4648288db9ff8c10fdf3bb7">IDC_SIZE_8</a></div><div class="ttdeci">#define IDC_SIZE_8</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00167">resource.h:167</a></div></div>
+<div class="ttc" id="_g_b_a_8cpp_html_a28d4d3d8445e73a696b2d6f7eadabd96"><div class="ttname"><a href="_g_b_a_8cpp.html#a28d4d3d8445e73a696b2d6f7eadabd96">buffer</a></div><div class="ttdeci">char buffer[1024]</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_a_8cpp_source.html#l00154">GBA.cpp:154</a></div></div>
+<div class="ttc" id="resource_8h_html_a3b1ce25b145995e8af592b0a80b8e564"><div class="ttname"><a href="resource_8h.html#a3b1ce25b145995e8af592b0a80b8e564">IDC_SIZE_16</a></div><div class="ttdeci">#define IDC_SIZE_16</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00171">resource.h:171</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_adb910488c84e165b4fd33646b932ee2e"><div class="ttname"><a href="class_add_g_b_cheat.html#adb910488c84e165b4fd33646b932ee2e">AddGBCheat::address</a></div><div class="ttdeci">LONG_PTR address</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00124">GBCheatsDlg.h:124</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ab49fa34156026418e26edf606aa82b1a"><div class="ttname"><a href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">AddGBCheat::numberType</a></div><div class="ttdeci">int numberType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00111">GBCheatsDlg.h:111</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae1711f59505d7d442a6572a346993cd2"><div class="ttname"><a href="class_add_g_b_cheat.html#ae1711f59505d7d442a6572a346993cd2">AddGBCheat::m_desc</a></div><div class="ttdeci">CEdit m_desc</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00109">GBCheatsDlg.h:109</a></div></div>
+<div class="ttc" id="resource_8h_html_ae13e01a62e7c40be0e3a93d98d2cd1d3"><div class="ttname"><a href="resource_8h.html#ae13e01a62e7c40be0e3a93d98d2cd1d3">IDC_SIGNED</a></div><div class="ttdeci">#define IDC_SIGNED</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00191">resource.h:191</a></div></div>
+<div class="ttc" id="resource_8h_html_aeedbb412500d742d9253c77868e55102"><div class="ttname"><a href="resource_8h.html#aeedbb412500d742d9253c77868e55102">IDC_UNSIGNED</a></div><div class="ttdeci">#define IDC_UNSIGNED</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00193">resource.h:193</a></div></div>
+<div class="ttc" id="resource_8h_html_a41e2d269f242a0163051e37d88a2ee61"><div class="ttname"><a href="resource_8h.html#a41e2d269f242a0163051e37d88a2ee61">IDC_HEXADECIMAL</a></div><div class="ttdeci">#define IDC_HEXADECIMAL</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00196">resource.h:196</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae0603ce2570d5b09a64f4bd6c2107962"><div class="ttname"><a href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">AddGBCheat::sizeType</a></div><div class="ttdeci">int sizeType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00110">GBCheatsDlg.h:110</a></div></div>
+<div class="ttc" id="resource_8h_html_a2d7fa8cb0d3104b26a76be5ab586ff5a"><div class="ttname"><a href="resource_8h.html#a2d7fa8cb0d3104b26a76be5ab586ff5a">IDC_SIZE_32</a></div><div class="ttdeci">#define IDC_SIZE_32</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00174">resource.h:174</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_add_g_b_cheat_a97210ad566b117af4994adac5d954e94_cgraph.png" border="0" usemap="#class_add_g_b_cheat_a97210ad566b117af4994adac5d954e94_cgraph" alt=""/></div>
+<map name="class_add_g_b_cheat_a97210ad566b117af4994adac5d954e94_cgraph" id="class_add_g_b_cheat_a97210ad566b117af4994adac5d954e94_cgraph">
+<area shape="rect" id="node2" href="_reg_8cpp.html#a150640889ffff4851ee26d7b999ec7c3" title="regQueryDwordValue" alt="" coords="229,5,373,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1bfddb9d66e182dedc95bf889dc9e6d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bfddb9d66e182dedc95bf889dc9e6d2">&#9670;&nbsp;</a></span>OnNumberType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddGBCheat::OnNumberType </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8cpp_source.html#l00720">720</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;{</div><div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;  <span class="keywordflow">switch</span>(<span class="keywordtype">id</span>) {</div><div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#ae13e01a62e7c40be0e3a93d98d2cd1d3">IDC_SIGNED</a>:</div><div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a> = 0;</div><div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    <a class="code" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a>(<span class="stringliteral">&quot;gbCheatsNumberType&quot;</span>, 0);</div><div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#aeedbb412500d742d9253c77868e55102">IDC_UNSIGNED</a>:</div><div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a> = 1;</div><div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    <a class="code" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a>(<span class="stringliteral">&quot;gbCheatsNumberType&quot;</span>, 1);</div><div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a41e2d269f242a0163051e37d88a2ee61">IDC_HEXADECIMAL</a>:</div><div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">numberType</a> = 2;</div><div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;    <a class="code" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a>(<span class="stringliteral">&quot;gbCheatsNumberType&quot;</span>, 2);</div><div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;  }</div><div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;}</div><div class="ttc" id="_reg_8cpp_html_a758e775489a3fb5c3cc7071fdd5af87e"><div class="ttname"><a href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a></div><div class="ttdeci">void regSetDwordValue(const char *key, DWORD value, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="_reg_8cpp_source.html#l00169">Reg.cpp:169</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ab49fa34156026418e26edf606aa82b1a"><div class="ttname"><a href="class_add_g_b_cheat.html#ab49fa34156026418e26edf606aa82b1a">AddGBCheat::numberType</a></div><div class="ttdeci">int numberType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00111">GBCheatsDlg.h:111</a></div></div>
+<div class="ttc" id="resource_8h_html_ae13e01a62e7c40be0e3a93d98d2cd1d3"><div class="ttname"><a href="resource_8h.html#ae13e01a62e7c40be0e3a93d98d2cd1d3">IDC_SIGNED</a></div><div class="ttdeci">#define IDC_SIGNED</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00191">resource.h:191</a></div></div>
+<div class="ttc" id="resource_8h_html_aeedbb412500d742d9253c77868e55102"><div class="ttname"><a href="resource_8h.html#aeedbb412500d742d9253c77868e55102">IDC_UNSIGNED</a></div><div class="ttdeci">#define IDC_UNSIGNED</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00193">resource.h:193</a></div></div>
+<div class="ttc" id="resource_8h_html_a41e2d269f242a0163051e37d88a2ee61"><div class="ttname"><a href="resource_8h.html#a41e2d269f242a0163051e37d88a2ee61">IDC_HEXADECIMAL</a></div><div class="ttdeci">#define IDC_HEXADECIMAL</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00196">resource.h:196</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_add_g_b_cheat_a1bfddb9d66e182dedc95bf889dc9e6d2_cgraph.png" border="0" usemap="#class_add_g_b_cheat_a1bfddb9d66e182dedc95bf889dc9e6d2_cgraph" alt=""/></div>
+<map name="class_add_g_b_cheat_a1bfddb9d66e182dedc95bf889dc9e6d2_cgraph" id="class_add_g_b_cheat_a1bfddb9d66e182dedc95bf889dc9e6d2_cgraph">
+<area shape="rect" id="node2" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e" title="regSetDwordValue" alt="" coords="249,5,379,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aef6d73f3cdf51e28bbba9f7e14b21941"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef6d73f3cdf51e28bbba9f7e14b21941">&#9670;&nbsp;</a></span>OnOk()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddGBCheat::OnOk </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8cpp_source.html#l00606">606</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;{</div><div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;  <span class="comment">// add cheat</span></div><div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="class_add_g_b_cheat.html#a054ba5040a40f7ef4b3a0ddb5a458592">addCheat</a>()) {</div><div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;    EndDialog(TRUE);</div><div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;  }</div><div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;}</div><div class="ttc" id="class_add_g_b_cheat_html_a054ba5040a40f7ef4b3a0ddb5a458592"><div class="ttname"><a href="class_add_g_b_cheat.html#a054ba5040a40f7ef4b3a0ddb5a458592">AddGBCheat::addCheat</a></div><div class="ttdeci">bool addCheat()</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8cpp_source.html#l00614">GBCheatsDlg.cpp:614</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_add_g_b_cheat_aef6d73f3cdf51e28bbba9f7e14b21941_cgraph.png" border="0" usemap="#class_add_g_b_cheat_aef6d73f3cdf51e28bbba9f7e14b21941_cgraph" alt=""/></div>
+<map name="class_add_g_b_cheat_aef6d73f3cdf51e28bbba9f7e14b21941_cgraph" id="class_add_g_b_cheat_aef6d73f3cdf51e28bbba9f7e14b21941_cgraph">
+<area shape="rect" id="node2" href="class_add_g_b_cheat.html#a054ba5040a40f7ef4b3a0ddb5a458592" title="AddGBCheat::addCheat" alt="" coords="193,31,355,57"/>
+<area shape="rect" id="node3" href="system_8cpp.html#a747a9cb8e015a3d45cca636b5bd0fc69" title="systemMessage" alt="" coords="561,5,680,32"/>
+<area shape="rect" id="node4" href="gb_cheats_8cpp.html#ad058dd136247699557fcd98824d1d941" title="gbAddGsCheat" alt="" coords="403,56,513,83"/>
+<area shape="rect" id="node5" href="gb_cheats_8cpp.html#a4af07b1b8e7409c8fc47174c046a56e9" title="gbVerifyGsCode" alt="" coords="563,56,679,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9bff22f01c72ffbcd6071bb604c2e090"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bff22f01c72ffbcd6071bb604c2e090">&#9670;&nbsp;</a></span>OnSizeType()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AddGBCheat::OnSizeType </td>
+          <td>(</td>
+          <td class="paramtype">UINT&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8cpp_source.html#l00738">738</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;{</div><div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;  <span class="keywordflow">switch</span>(<span class="keywordtype">id</span>) {</div><div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#aabec7e8ec4648288db9ff8c10fdf3bb7">IDC_SIZE_8</a>:</div><div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a> = <a class="code" href="_cheat_search_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af0816abbef0501e93cc698ee906d1fcc">BITS_8</a>;</div><div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <a class="code" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a>(<span class="stringliteral">&quot;gbCheatsSizeType&quot;</span>, 0);</div><div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a3b1ce25b145995e8af592b0a80b8e564">IDC_SIZE_16</a>:</div><div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a> = <a class="code" href="_cheat_search_8h.html#adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb">BITS_16</a>;</div><div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;    <a class="code" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a>(<span class="stringliteral">&quot;gbCheatsSizeType&quot;</span>, 1);</div><div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;  <span class="keywordflow">case</span> <a class="code" href="resource_8h.html#a2d7fa8cb0d3104b26a76be5ab586ff5a">IDC_SIZE_32</a>:</div><div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    <a class="code" href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">sizeType</a> = <a class="code" href="_cheat_search_8h.html#adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a">BITS_32</a>;</div><div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;    <a class="code" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a>(<span class="stringliteral">&quot;gbCheatsSizeType&quot;</span>, 2);</div><div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;    <span class="keywordflow">break</span>;</div><div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;  }</div><div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;}</div><div class="ttc" id="_cheat_search_8h_html_adf764cbdea00d65edcd07bb9953ad2b7af0816abbef0501e93cc698ee906d1fcc"><div class="ttname"><a href="_cheat_search_8h.html#adf764cbdea00d65edcd07bb9953ad2b7af0816abbef0501e93cc698ee906d1fcc">BITS_8</a></div><div class="ttdef"><b>Definition:</b> <a href="_cheat_search_8h_source.html#l00048">CheatSearch.h:48</a></div></div>
+<div class="ttc" id="_reg_8cpp_html_a758e775489a3fb5c3cc7071fdd5af87e"><div class="ttname"><a href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e">regSetDwordValue</a></div><div class="ttdeci">void regSetDwordValue(const char *key, DWORD value, bool force)</div><div class="ttdef"><b>Definition:</b> <a href="_reg_8cpp_source.html#l00169">Reg.cpp:169</a></div></div>
+<div class="ttc" id="resource_8h_html_aabec7e8ec4648288db9ff8c10fdf3bb7"><div class="ttname"><a href="resource_8h.html#aabec7e8ec4648288db9ff8c10fdf3bb7">IDC_SIZE_8</a></div><div class="ttdeci">#define IDC_SIZE_8</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00167">resource.h:167</a></div></div>
+<div class="ttc" id="resource_8h_html_a3b1ce25b145995e8af592b0a80b8e564"><div class="ttname"><a href="resource_8h.html#a3b1ce25b145995e8af592b0a80b8e564">IDC_SIZE_16</a></div><div class="ttdeci">#define IDC_SIZE_16</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00171">resource.h:171</a></div></div>
+<div class="ttc" id="_cheat_search_8h_html_adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a"><div class="ttname"><a href="_cheat_search_8h.html#adf764cbdea00d65edcd07bb9953ad2b7aa9302713d54f2f027fa92a747c80c91a">BITS_32</a></div><div class="ttdef"><b>Definition:</b> <a href="_cheat_search_8h_source.html#l00050">CheatSearch.h:50</a></div></div>
+<div class="ttc" id="class_add_g_b_cheat_html_ae0603ce2570d5b09a64f4bd6c2107962"><div class="ttname"><a href="class_add_g_b_cheat.html#ae0603ce2570d5b09a64f4bd6c2107962">AddGBCheat::sizeType</a></div><div class="ttdeci">int sizeType</div><div class="ttdef"><b>Definition:</b> <a href="_g_b_cheats_dlg_8h_source.html#l00110">GBCheatsDlg.h:110</a></div></div>
+<div class="ttc" id="resource_8h_html_a2d7fa8cb0d3104b26a76be5ab586ff5a"><div class="ttname"><a href="resource_8h.html#a2d7fa8cb0d3104b26a76be5ab586ff5a">IDC_SIZE_32</a></div><div class="ttdeci">#define IDC_SIZE_32</div><div class="ttdef"><b>Definition:</b> <a href="resource_8h_source.html#l00174">resource.h:174</a></div></div>
+<div class="ttc" id="_cheat_search_8h_html_adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb"><div class="ttname"><a href="_cheat_search_8h.html#adf764cbdea00d65edcd07bb9953ad2b7abb0eee326b181eb02d5c284fc424ffeb">BITS_16</a></div><div class="ttdef"><b>Definition:</b> <a href="_cheat_search_8h_source.html#l00049">CheatSearch.h:49</a></div></div>
+</div><!-- fragment --><div class="dynheader">
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_add_g_b_cheat_a9bff22f01c72ffbcd6071bb604c2e090_cgraph.png" border="0" usemap="#class_add_g_b_cheat_a9bff22f01c72ffbcd6071bb604c2e090_cgraph" alt=""/></div>
+<map name="class_add_g_b_cheat_a9bff22f01c72ffbcd6071bb604c2e090_cgraph" id="class_add_g_b_cheat_a9bff22f01c72ffbcd6071bb604c2e090_cgraph">
+<area shape="rect" id="node2" href="_reg_8cpp.html#a758e775489a3fb5c3cc7071fdd5af87e" title="regSetDwordValue" alt="" coords="231,5,360,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="adb910488c84e165b4fd33646b932ee2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb910488c84e165b4fd33646b932ee2e">&#9670;&nbsp;</a></span>address</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LONG_PTR AddGBCheat::address</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00124">124</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af68f821a3073c6a01f1c8760dab628ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af68f821a3073c6a01f1c8760dab628ee">&#9670;&nbsp;</a></span>m_address</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CEdit AddGBCheat::m_address</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00108">108</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae1711f59505d7d442a6572a346993cd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1711f59505d7d442a6572a346993cd2">&#9670;&nbsp;</a></span>m_desc</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CEdit AddGBCheat::m_desc</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00109">109</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ac5705ad3d8964adb59d62c51dd60a0fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5705ad3d8964adb59d62c51dd60a0fc">&#9670;&nbsp;</a></span>m_value</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CEdit AddGBCheat::m_value</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00107">107</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ab49fa34156026418e26edf606aa82b1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab49fa34156026418e26edf606aa82b1a">&#9670;&nbsp;</a></span>numberType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> AddGBCheat::numberType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00111">111</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ae0603ce2570d5b09a64f4bd6c2107962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0603ce2570d5b09a64f4bd6c2107962">&#9670;&nbsp;</a></span>sizeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> AddGBCheat::sizeType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a> 파일의 <a class="el" href="_g_b_cheats_dlg_8h_source.html#l00110">110</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a></li>
-<li>src/win32/GBCheatsDlg.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_b_cheats_dlg_8h_source.html">GBCheatsDlg.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_b_cheats_dlg_8cpp_source.html">GBCheatsDlg.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_add_g_b_cheat.html">AddGBCheat</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

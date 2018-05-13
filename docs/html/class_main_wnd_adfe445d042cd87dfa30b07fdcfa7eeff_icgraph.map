@@ -1,0 +1,10 @@
+<map id="MainWnd::winLoadCheatList" name="MainWnd::winLoadCheatList">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a9d0fc611b92ef43d6a56c9f785051bee" title="MainWnd::winLoadCheatList\lDefault" alt="" coords="257,99,443,141"/>
+<area shape="rect" id="node9" href="$class_main_wnd.html#a576e72b77e11a1e9f92b00279023b755" title="MainWnd::OnCheatsLoadcheatlist" alt="" coords="240,165,460,192"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#a946cd4793215a424eb736af418ccbc3d" title="MainWnd::FileRun" alt="" coords="508,107,637,133"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a360d0179bc8f8ae13dfb4cdf573e2c55" title="MainWnd::OnDropFiles" alt="" coords="728,5,885,32"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#ad60908c1c8c44204ea3c87c1109fa468" title="MainWnd::OnFileOpen" alt="" coords="729,56,884,83"/>
+<area shape="rect" id="node6" href="$class_main_wnd.html#a0d7f7d468e486be90f1b6771bff84846" title="MainWnd::OnFileRecentFile" alt="" coords="714,107,899,133"/>
+<area shape="rect" id="node7" href="$class_main_wnd.html#ad1cfc9f500a8049610e1b7bc4c5ce725" title="MainWnd::OnFileOpengameboy" alt="" coords="703,157,910,184"/>
+<area shape="rect" id="node8" href="$class_main_wnd.html#a9a253419b0bc7b8b246b68fcaefc1668" title="MainWnd::OnToolsDebugLoadandwait" alt="" coords="685,208,928,235"/>
+</map>

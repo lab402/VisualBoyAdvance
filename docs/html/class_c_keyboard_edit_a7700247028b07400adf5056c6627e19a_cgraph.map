@@ -1,0 +1,6 @@
+<map id="CKeyboardEdit::PreTranslateMessage" name="CKeyboardEdit::PreTranslateMessage">
+<area shape="rect" id="node2" href="$class_c_keyboard_edit.html#ad0185cc0cad77250cc32ef1d9ffb8593" title="CKeyboardEdit::ResetKey" alt="" coords="264,5,439,32"/>
+<area shape="rect" id="node3" href="$arm-new_8h.html#a93120066fd6daa54150af823953378d1" title="if" alt="" coords="332,56,371,83"/>
+<area shape="rect" id="node4" href="$class_c_keyboard_edit.html#a432e346d4d5285064b5e92ff4c6a0385" title="CKeyboardEdit::DisplayKeyboard\lString" alt="" coords="244,107,459,149"/>
+<area shape="rect" id="node5" href="$_keyboard_edit_8cpp.html#a114f9fd0dc48511b3d2799f967360087" title="mapVirtKeysStringFromWORD" alt="" coords="507,115,709,141"/>
+</map>

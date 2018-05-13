@@ -1,0 +1,5 @@
+<map id="systemSoundInit" name="systemSoundInit">
+<area shape="rect" id="node2" href="$_s_d_l_8cpp.html#a986fb234db00c523a40022e6463b48a4" title="soundCallback" alt="" coords="177,5,283,32"/>
+<area shape="rect" id="node3" href="$_v_b_a_8cpp.html#a7c74be39dba605daf8dde168706261ee" title="newDirectSound" alt="" coords="172,56,288,83"/>
+<area shape="rect" id="node4" href="$class_i_sound.html#ac14f05f2d5050cfefa4133099d9f656e" title="ISound::init" alt="" coords="187,107,273,133"/>
+</map>

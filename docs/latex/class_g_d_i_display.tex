@@ -1,46 +1,615 @@
 \hypertarget{class_g_d_i_display}{}\section{G\+D\+I\+Display 클래스 참조}
 \label{class_g_d_i_display}\index{G\+D\+I\+Display@{G\+D\+I\+Display}}
-G\+D\+I\+Display에 대한 상속 다이어그램 \+: \begin{figure}[H]
+
+
+G\+D\+I\+Display에 대한 상속 다이어그램 \+: \nopagebreak
+\begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[height=2.000000cm]{class_g_d_i_display}
+\includegraphics[width=208pt]{class_g_d_i_display__inherit__graph}
+\end{center}
+\end{figure}
+
+
+G\+D\+I\+Display에 대한 협력 다이어그램\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{class_g_d_i_display__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public 멤버 함수}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_a7d3e0b3443b68302d759d7cdecd718ef}\label{class_g_d_i_display_a7d3e0b3443b68302d759d7cdecd718ef}} 
-virtual bool {\bfseries initialize} ()
+\mbox{\hyperlink{class_g_d_i_display_a31a11d8bcf225bc71429c054b776793c}{G\+D\+I\+Display}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_ac1bee01ce5982ad75f5d8883133b0ee9}\label{class_g_d_i_display_ac1bee01ce5982ad75f5d8883133b0ee9}} 
-virtual void {\bfseries cleanup} ()
+virtual \mbox{\hyperlink{class_g_d_i_display_afedb6dc098b7138a2dc311f1b9fd67ed}{$\sim$\+G\+D\+I\+Display}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_a7c83b043ba5d2058b8419053615ffabc}\label{class_g_d_i_display_a7c83b043ba5d2058b8419053615ffabc}} 
-virtual void {\bfseries render} ()
+virtual bool \mbox{\hyperlink{class_g_d_i_display_a7d3e0b3443b68302d759d7cdecd718ef}{initialize}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_a515bce84bcfc615fe0bb983f2ce3e20b}\label{class_g_d_i_display_a515bce84bcfc615fe0bb983f2ce3e20b}} 
-virtual void {\bfseries check\+Full\+Screen} ()
+virtual void \mbox{\hyperlink{class_g_d_i_display_ac1bee01ce5982ad75f5d8883133b0ee9}{cleanup}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_a0d38608d640f217ded743d3c88dfe62a}\label{class_g_d_i_display_a0d38608d640f217ded743d3c88dfe62a}} 
-virtual void {\bfseries render\+Menu} ()
+virtual void \mbox{\hyperlink{class_g_d_i_display_a7c83b043ba5d2058b8419053615ffabc}{render}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_a68a4add7ba35706237739a587131f463}\label{class_g_d_i_display_a68a4add7ba35706237739a587131f463}} 
-virtual void {\bfseries clear} ()
+virtual void \mbox{\hyperlink{class_g_d_i_display_a515bce84bcfc615fe0bb983f2ce3e20b}{check\+Full\+Screen}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_a4c7acf65b39361a2a1479c71f6f404a7}\label{class_g_d_i_display_a4c7acf65b39361a2a1479c71f6f404a7}} 
-virtual D\+I\+S\+P\+L\+A\+Y\+\_\+\+T\+Y\+PE {\bfseries get\+Type} ()
+virtual void \mbox{\hyperlink{class_g_d_i_display_a0d38608d640f217ded743d3c88dfe62a}{render\+Menu}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_a4e8f52858b49c9132c77c2f14b13bead}\label{class_g_d_i_display_a4e8f52858b49c9132c77c2f14b13bead}} 
-virtual void {\bfseries set\+Option} (const char $\ast$, int)
+virtual void \mbox{\hyperlink{class_g_d_i_display_a68a4add7ba35706237739a587131f463}{clear}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_aa6c3c9482950413829f81f1aadae9929}\label{class_g_d_i_display_aa6c3c9482950413829f81f1aadae9929}} 
-virtual bool {\bfseries is\+Skin\+Supported} ()
+virtual \mbox{\hyperlink{_display_8h_aa50f63b0688d0250e0be64d8401d09a0}{D\+I\+S\+P\+L\+A\+Y\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{class_g_d_i_display_a4c7acf65b39361a2a1479c71f6f404a7}{get\+Type}} ()
 \item 
-\mbox{\Hypertarget{class_g_d_i_display_ace69c8ae01b3842aebfabb4f008c529d}\label{class_g_d_i_display_ace69c8ae01b3842aebfabb4f008c529d}} 
-virtual int {\bfseries select\+Full\+Screen\+Mode} (G\+U\+ID $\ast$$\ast$)
+virtual void \mbox{\hyperlink{class_g_d_i_display_a4e8f52858b49c9132c77c2f14b13bead}{set\+Option}} (\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$, \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}})
+\item 
+virtual bool \mbox{\hyperlink{class_g_d_i_display_aa6c3c9482950413829f81f1aadae9929}{is\+Skin\+Supported}} ()
+\item 
+virtual \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} \mbox{\hyperlink{class_g_d_i_display_ace69c8ae01b3842aebfabb4f008c529d}{select\+Full\+Screen\+Mode}} (G\+U\+ID $\ast$$\ast$)
 \end{DoxyCompactItemize}
+
+
+\subsection{상세한 설명}
+
+
+G\+D\+I\+Display.\+cpp 파일의 45 번째 라인에서 정의되었습니다.
+
+
+
+\subsection{생성자 \& 소멸자 문서화}
+\mbox{\Hypertarget{class_g_d_i_display_a31a11d8bcf225bc71429c054b776793c}\label{class_g_d_i_display_a31a11d8bcf225bc71429c054b776793c}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{G\+D\+I\+Display()}{GDIDisplay()}}
+{\footnotesize\ttfamily G\+D\+I\+Display\+::\+G\+D\+I\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 78 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+79 \{
+80   filterData = (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}} *)malloc(4*4*256*240);
+81 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_d_i_display_afedb6dc098b7138a2dc311f1b9fd67ed}\label{class_g_d_i_display_afedb6dc098b7138a2dc311f1b9fd67ed}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!````~G\+D\+I\+Display@{$\sim$\+G\+D\+I\+Display}}
+\index{````~G\+D\+I\+Display@{$\sim$\+G\+D\+I\+Display}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{$\sim$\+G\+D\+I\+Display()}{~GDIDisplay()}}
+{\footnotesize\ttfamily G\+D\+I\+Display\+::$\sim$\+G\+D\+I\+Display (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 83 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+84 \{
+85   \mbox{\hyperlink{class_g_d_i_display_ac1bee01ce5982ad75f5d8883133b0ee9}{cleanup}}();
+86 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_g_d_i_display_afedb6dc098b7138a2dc311f1b9fd67ed_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{멤버 함수 문서화}
+\mbox{\Hypertarget{class_g_d_i_display_a515bce84bcfc615fe0bb983f2ce3e20b}\label{class_g_d_i_display_a515bce84bcfc615fe0bb983f2ce3e20b}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!check\+Full\+Screen@{check\+Full\+Screen}}
+\index{check\+Full\+Screen@{check\+Full\+Screen}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{check\+Full\+Screen()}{checkFullScreen()}}
+{\footnotesize\ttfamily void G\+D\+I\+Display\+::check\+Full\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_afcb9df4a4949d13491f9a07a2ce24eb0}{I\+Display}}(으)로부터 재구현되었습니다.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 263 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+264 \{
+265 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_d_i_display_a515bce84bcfc615fe0bb983f2ce3e20b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_d_i_display_ac1bee01ce5982ad75f5d8883133b0ee9}\label{class_g_d_i_display_ac1bee01ce5982ad75f5d8883133b0ee9}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void G\+D\+I\+Display\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_a039e8c6b3f8fbee485fb895ef70e72c0}{I\+Display}}를 구현.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 88 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+89 \{
+90   \textcolor{keywordflow}{if}(filterData) \{
+91     free(filterData);
+92     filterData = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+93   \}
+94 \}
+\end{DoxyCode}
+이 함수를 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_g_d_i_display_ac1bee01ce5982ad75f5d8883133b0ee9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_d_i_display_a68a4add7ba35706237739a587131f463}\label{class_g_d_i_display_a68a4add7ba35706237739a587131f463}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!clear@{clear}}
+\index{clear@{clear}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void G\+D\+I\+Display\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_affb8a8b5651d138058cdbd088ff3968d}{I\+Display}}를 구현.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 253 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+254 \{
+255 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_d_i_display_a4c7acf65b39361a2a1479c71f6f404a7}\label{class_g_d_i_display_a4c7acf65b39361a2a1479c71f6f404a7}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!get\+Type@{get\+Type}}
+\index{get\+Type@{get\+Type}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{get\+Type()}{getType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_display_8h_aa50f63b0688d0250e0be64d8401d09a0}{D\+I\+S\+P\+L\+A\+Y\+\_\+\+T\+Y\+PE}} G\+D\+I\+Display\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_a2c7fd4c6721dd8a6992b78f0c588f6f9}{I\+Display}}를 구현.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 60 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+60 \{ \textcolor{keywordflow}{return} \mbox{\hyperlink{_display_8h_aa50f63b0688d0250e0be64d8401d09a0ac22b78df6634245907697ac0ba4b87af}{GDI}}; \};
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_d_i_display_a7d3e0b3443b68302d759d7cdecd718ef}\label{class_g_d_i_display_a7d3e0b3443b68302d759d7cdecd718ef}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!initialize@{initialize}}
+\index{initialize@{initialize}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool G\+D\+I\+Display\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_aa849b5d829138d08cf9efdbb00364a96}{I\+Display}}를 구현.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 96 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+97 \{
+98   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}{sizeX}} = 240;
+99   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}{sizeY}} = 160;
+100   \textcolor{keywordflow}{switch}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a17dac073149c897f770c00ed7098ad32}{videoOption}}) \{
+101   \textcolor{keywordflow}{case} \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a3730d0de76011ce1f8af8b173ba948b1}{VIDEO\_1X}}:
+102     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}{surfaceSizeX}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}{sizeX}};
+103     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}{surfaceSizeY}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}{sizeY}};
+104     \textcolor{keywordflow}{break};
+105   \textcolor{keywordflow}{case} \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a27e88963372725d01e5bff4aec1acd55}{VIDEO\_2X}}:
+106     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}{surfaceSizeX}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}{sizeX}} * 2;
+107     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}{surfaceSizeY}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}{sizeY}} * 2;
+108     \textcolor{keywordflow}{break};
+109   \textcolor{keywordflow}{case} \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493afa53ae70520cab28e97f53de9bf2eabd}{VIDEO\_3X}}:
+110     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}{surfaceSizeX}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}{sizeX}} * 3;
+111     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}{surfaceSizeY}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}{sizeY}} * 3;
+112     \textcolor{keywordflow}{break};
+113   \textcolor{keywordflow}{case} \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d}{VIDEO\_4X}}:
+114     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}{surfaceSizeX}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}{sizeX}} * 4;
+115     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}{surfaceSizeY}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}{sizeY}} * 4;
+116     \textcolor{keywordflow}{break};
+117   \textcolor{keywordflow}{case} \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a658665cfbdbd908bdb77babe125d0341}{VIDEO\_320x240}}:
+118   \textcolor{keywordflow}{case} \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a7ff44ba2030715f2e2b337033b5ad85e}{VIDEO\_640x480}}:
+119   \textcolor{keywordflow}{case} \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a1849e033b4567855b2eaba899ed43c17}{VIDEO\_800x600}}:
+120   \textcolor{keywordflow}{case} \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493acab4f90135b50a88563541e679dd6cee}{VIDEO\_OTHER}}:
+121     \{
+122       \textcolor{keywordtype}{int} scaleX = (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a92ef1c149914189da4d110d6dada54bb}{fsWidth}} / \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}{sizeX}});
+123       \textcolor{keywordtype}{int} scaleY = (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1e59d9254f1cb6420502c537c35dd5ec}{fsHeight}} / \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}{sizeY}});
+124       \textcolor{keywordtype}{int} min = scaleX < scaleY ? scaleX : scaleY;
+125       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1a4cfe79496ea8a029bc591f33c489d6}{fsMaxScale}})
+126         min = min > \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1a4cfe79496ea8a029bc591f33c489d6}{fsMaxScale}} ? \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1a4cfe79496ea8a029bc591f33c489d6}{fsMaxScale}} : min;
+127       \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}{surfaceSizeX}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}{sizeX}} * min;
+128       \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}{surfaceSizeY}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}{sizeY}} * min;
+129       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a00bd5b85110bd763ad39eb4a9fb403a1}{fullScreenStretch}}) \{
+130         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}{surfaceSizeX}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a92ef1c149914189da4d110d6dada54bb}{fsWidth}};
+131         \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}{surfaceSizeY}} = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1e59d9254f1cb6420502c537c35dd5ec}{fsHeight}};
+132       \}
+133     \}
+134     \textcolor{keywordflow}{break};
+135   \}
+136   
+137   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1303c6cf4f955c31d828de3fe77355f1}{rect}}.left = 0;
+138   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1303c6cf4f955c31d828de3fe77355f1}{rect}}.top = 0;
+139   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1303c6cf4f955c31d828de3fe77355f1}{rect}}.right = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7b711f29fd088fa6611d240277a24e9e}{sizeX}};
+140   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1303c6cf4f955c31d828de3fe77355f1}{rect}}.bottom = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb2e7221985fd0355f105cd1ec42e52e}{sizeY}};
+141 
+142   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.left = 0;
+143   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.top = 0;
+144   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.right = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a14ab3c3ab83f07d70e2a40090e37deea}{surfaceSizeX}};
+145   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.bottom = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a63dc67ff3aa9347f32f583fee92cf609}{surfaceSizeY}};
+146 
+147   DWORD style = WS\_POPUP | WS\_VISIBLE;
+148   DWORD styleEx = 0;
+149   
+150   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a17dac073149c897f770c00ed7098ad32}{videoOption}} <= \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d}{VIDEO\_4X}})
+151     style |= WS\_OVERLAPPEDWINDOW;
+152   \textcolor{keywordflow}{else}
+153     styleEx = 0;
+154 
+155   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a17dac073149c897f770c00ed7098ad32}{videoOption}} <= \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d}{VIDEO\_4X}})
+156     AdjustWindowRectEx(&\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}, style, TRUE, styleEx);
+157   \textcolor{keywordflow}{else}
+158     AdjustWindowRectEx(&\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}, style, FALSE, styleEx);    
+159 
+160   \textcolor{keywordtype}{int} winSizeX = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.right-\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.left;
+161   \textcolor{keywordtype}{int} winSizeY = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.bottom-\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.top;
+162 
+163   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a17dac073149c897f770c00ed7098ad32}{videoOption}} > \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d}{VIDEO\_4X}}) \{
+164     winSizeX = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a92ef1c149914189da4d110d6dada54bb}{fsWidth}};
+165     winSizeY = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1e59d9254f1cb6420502c537c35dd5ec}{fsHeight}};
+166   \}
+167   
+168   \textcolor{keywordtype}{int} x = 0;
+169   \textcolor{keywordtype}{int} y = 0;
+170 
+171   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a17dac073149c897f770c00ed7098ad32}{videoOption}} <= \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d}{VIDEO\_4X}}) \{
+172     x = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a5f9fb2744603deedbe9f8a77a7a2cf91}{windowPositionX}};
+173     y = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a79b40ebb7ccfd4390eb0747168d07cad}{windowPositionY}};
+174   \}
+175   
+176   \textcolor{comment}{// Create a window}
+177   \mbox{\hyperlink{class_main_wnd}{MainWnd}} *pWnd = \textcolor{keyword}{new} \mbox{\hyperlink{class_main_wnd}{MainWnd}};
+178   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.m\_pMainWnd = pWnd;
+179 
+180   pWnd->CreateEx(styleEx,
+181                  \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acd3b584c09c85ec31168b1f7d1d8505e}{wndClass}},
+182                  \textcolor{stringliteral}{"VisualBoyAdvance"},
+183                  style,
+184                  x,y,winSizeX,winSizeY,
+185                  \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}},
+186                  0);
+187   
+188   \textcolor{keywordflow}{if} (!(HWND)*pWnd) \{
+189     \mbox{\hyperlink{_g_d_i_display_8cpp_aceca31284db939464c9dc0fb15c92786}{winlog}}(\textcolor{stringliteral}{"Error creating Window %08x\(\backslash\)n"}, GetLastError());
+190     \textcolor{keywordflow}{return} FALSE;
+191   \}
+192   
+193   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_accf3451bad473b90400193636cd27c96}{updateMenuBar}}();
+194   
+195   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_acb822065cba8b15810c5a61fd05ca831}{adjustDestRect}}();
+196   
+197   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_adcefc742bdb15ddb902bcb2df896d298}{mode320Available}} = \textcolor{keyword}{false};
+198   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_adc44d61208b927bde7ea49c25a2e30bc}{mode640Available}} = \textcolor{keyword}{false};
+199   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a3e2e940c6531daba73473c51a9916574}{mode800Available}} = \textcolor{keyword}{false};
+200   
+201   HDC dc = GetDC(\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}});
+202   HBITMAP hbm = CreateCompatibleBitmap(dc, 1, 1);
+203   BITMAPINFO *bi = (BITMAPINFO *)info;
+204   ZeroMemory(bi, \textcolor{keyword}{sizeof}(info));
+205   bi->bmiHeader.biSize = \textcolor{keyword}{sizeof}(BITMAPINFOHEADER);
+206   GetDIBits(dc, hbm, 0, 1, \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, (LPBITMAPINFO)info, DIB\_RGB\_COLORS);  
+207   GetDIBits(dc, hbm, 0, 1, \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, (LPBITMAPINFO)info, DIB\_RGB\_COLORS);
+208   DeleteObject(hbm);
+209   ReleaseDC(\mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}}, dc);
+210 
+211   \textcolor{keywordflow}{if}(bi->bmiHeader.biCompression == BI\_BITFIELDS) \{
+212     \mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} = bi->bmiHeader.biBitCount;
+213     \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 15)
+214       \mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} = 16;
+215     \mbox{\hyperlink{system_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}} = calculateShift(*((DWORD *)&bi->bmiColors[0]));
+216     \mbox{\hyperlink{system_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}} = calculateShift(*((DWORD *)&bi->bmiColors[1]));
+217     \mbox{\hyperlink{system_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}} = calculateShift(*((DWORD *)&bi->bmiColors[2]));
+218     \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 16) \{
+219       \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}} == 6) \{
+220         \mbox{\hyperlink{_g_d_i_display_8cpp_ab579c0c6efc95a3920d5e26196161306}{Init\_2xSaI}}(565);
+221       \} \textcolor{keywordflow}{else} \{
+222         \mbox{\hyperlink{_g_d_i_display_8cpp_ab579c0c6efc95a3920d5e26196161306}{Init\_2xSaI}}(555);
+223       \}
+224     \} \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 32)
+225       \mbox{\hyperlink{_g_d_i_display_8cpp_ab579c0c6efc95a3920d5e26196161306}{Init\_2xSaI}}(32);
+226   \} \textcolor{keywordflow}{else} \{
+227     \mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} = 32;
+228     \mbox{\hyperlink{system_8cpp_a85b93b8fc1532633063574112af2de18}{systemRedShift}} = 19;
+229     \mbox{\hyperlink{system_8cpp_a6ae69465c0e8ab78f44b7f31b4967f9a}{systemGreenShift}} = 11;
+230     \mbox{\hyperlink{system_8cpp_a3e43ed3bb6f846123ce7da1b003b6679}{systemBlueShift}} = 3;
+231 
+232     \mbox{\hyperlink{_g_d_i_display_8cpp_ab579c0c6efc95a3920d5e26196161306}{Init\_2xSaI}}(32);    
+233   \}
+234   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1baf02b3f4ad129bfd713f1a132e96b9}{fsColorDepth}} = \mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}};
+235   \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 24)
+236     \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a8267ca41247e8d752776b57a3f8af011}{filterFunction}} = \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}};
+237 \textcolor{preprocessor}{#ifdef MMX}
+238   \textcolor{keywordflow}{if}(!\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ac417f46c467d0fcf095731620ca7de71}{disableMMX}})
+239     cpu\_mmx = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.detectMMX();
+240   \textcolor{keywordflow}{else}
+241     cpu\_mmx = 0;
+242 \textcolor{preprocessor}{#endif}
+243   
+244   \mbox{\hyperlink{_util_8cpp_a5d5317ea1bb74f382ceeffba7eeaa797}{utilUpdateSystemColorMaps}}();
+245   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_afbe0e6f9458f25adb848516537a91747}{updateFilter}}();
+246   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ab1caa25635cd40fc3b49b5d325cc65ef}{updateIFB}}();
+247   
+248   pWnd->DragAcceptFiles(TRUE);
+249   
+250   \textcolor{keywordflow}{return} TRUE;  
+251 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_d_i_display_a7d3e0b3443b68302d759d7cdecd718ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_d_i_display_aa6c3c9482950413829f81f1aadae9929}\label{class_g_d_i_display_aa6c3c9482950413829f81f1aadae9929}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!is\+Skin\+Supported@{is\+Skin\+Supported}}
+\index{is\+Skin\+Supported@{is\+Skin\+Supported}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{is\+Skin\+Supported()}{isSkinSupported()}}
+{\footnotesize\ttfamily virtual bool G\+D\+I\+Display\+::is\+Skin\+Supported (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_ad717007b624f0a8e7c830ab803cd8a92}{I\+Display}}(으)로부터 재구현되었습니다.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 62 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+62 \{ \textcolor{keywordflow}{return} \textcolor{keyword}{true}; \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_d_i_display_a7c83b043ba5d2058b8419053615ffabc}\label{class_g_d_i_display_a7c83b043ba5d2058b8419053615ffabc}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!render@{render}}
+\index{render@{render}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily void G\+D\+I\+Display\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_af61c440b97da313a502e86346a729b03}{I\+Display}}를 구현.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 267 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+268 \{ 
+269   BITMAPINFO *bi = (BITMAPINFO *)info;
+270   bi->bmiHeader.biWidth = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}}+1;
+271   bi->bmiHeader.biHeight = -\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}{filterHeight}};
+272 
+273   \textcolor{keywordtype}{int} pitch = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}} * 2 + 4;
+274   \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 24)
+275     pitch = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}} * 3;
+276   \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 32)
+277     pitch = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}} * 4 + 4;
+278   
+279   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a8267ca41247e8d752776b57a3f8af011}{filterFunction}}) \{
+280     bi->bmiHeader.biWidth = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}} * 2;
+281     bi->bmiHeader.biHeight = -\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}{filterHeight}} * 2;
+282     
+283     \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 16)
+284       (*\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a8267ca41247e8d752776b57a3f8af011}{filterFunction}})(\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+pitch,
+285                                pitch,
+286                                (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}*)\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ae53d4a6574bd47657fa6bd76eabd8543}{delta}},
+287                                (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}*)filterData,
+288                                \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}}*2*2,
+289                                \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}},
+290                                \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}{filterHeight}});
+291     \textcolor{keywordflow}{else}
+292       (*\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a8267ca41247e8d752776b57a3f8af011}{filterFunction}})(\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+pitch,
+293                                pitch,
+294                                (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}*)\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ae53d4a6574bd47657fa6bd76eabd8543}{delta}},
+295                                (\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}*)filterData,
+296                                \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}}*4*2,
+297                                \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}},
+298                                \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}{filterHeight}});
+299   \}
+300 
+301   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ad86589d0d03fceef36d35c0b2e928e9e}{showSpeed}} && (\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a17dac073149c897f770c00ed7098ad32}{videoOption}} > 
+      \mbox{\hyperlink{_v_b_a_8h_a531c35e38ede3ea4e5ba5afb24b29493a6468bce6b84e6350d3de126f257eb38d}{VIDEO\_4X}} || \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a2d80d3f19afa58047c05277aa0c18402}{skin}} != \mbox{\hyperlink{getopt1_8c_a070d2ce7b6bb7e5c05602aa8c308d0c4}{NULL}})) \{
+302     \textcolor{keywordtype}{char} \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}[30];
+303     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ad86589d0d03fceef36d35c0b2e928e9e}{showSpeed}} == 1)
+304       sprintf(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \textcolor{stringliteral}{"%3d%%"}, \mbox{\hyperlink{_g_d_i_display_8cpp_a0421cd0a68e3a61f63e546af26cbc786}{systemSpeed}});
+305     \textcolor{keywordflow}{else}
+306       sprintf(\mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}}, \textcolor{stringliteral}{"%3d%%(%d, %d fps)"}, \mbox{\hyperlink{_g_d_i_display_8cpp_a0421cd0a68e3a61f63e546af26cbc786}{systemSpeed}},
+307               \mbox{\hyperlink{system_8cpp_ac88aa402d015fda6917b150c22a28968}{systemFrameSkip}},
+308               \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a2d041dae40bdb47cd6bd28463cc484d9}{showRenderedFrames}});
+309 
+310     \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a8267ca41247e8d752776b57a3f8af011}{filterFunction}}) \{
+311       \textcolor{keywordtype}{int} p = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}} * 4;
+312       \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 24)
+313         p = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}} * 6;
+314       \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\mbox{\hyperlink{system_8cpp_adaf454a4617a00b5cfed14c203ab6efa}{systemColorDepth}} == 32)
+315         p = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1ae8b3a4ed9fd2a3783868ae5d38c3bc}{filterWidth}} * 8;
+316       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a0a2ca5a7091f9c79b39ea0916dd88a05}{showSpeedTransparent}})
+317         \mbox{\hyperlink{_text_8cpp_a1d0e441a05598dc1c83d0487e5a0fead}{drawTextTransp}}((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}*)filterData,
+318                        p,
+319                        10,
+320                        \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}{filterHeight}}*2-10,
+321                        \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+322       \textcolor{keywordflow}{else}
+323         \mbox{\hyperlink{_text_8cpp_ad1345a6f1db95575b5857ee2654eca47}{drawText}}((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}*)filterData,
+324                  p,
+325                  10,
+326                  \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}{filterHeight}}*2-10,
+327                  \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});      
+328     \} \textcolor{keywordflow}{else} \{
+329       \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a0a2ca5a7091f9c79b39ea0916dd88a05}{showSpeedTransparent}})
+330         \mbox{\hyperlink{_text_8cpp_a1d0e441a05598dc1c83d0487e5a0fead}{drawTextTransp}}((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}*)\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}},
+331                        pitch,
+332                        10,
+333                        \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}{filterHeight}}-10,
+334                        \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+335       \textcolor{keywordflow}{else}
+336         \mbox{\hyperlink{_text_8cpp_ad1345a6f1db95575b5857ee2654eca47}{drawText}}((\mbox{\hyperlink{_system_8h_aed742c436da53c1080638ce6ef7d13de}{u8}}*)\mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}},
+337                  pitch,
+338                  10,
+339                  \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1c5e3ef2e69bfe2a6a877606fbb4de9c}{filterHeight}}-10,
+340                  \mbox{\hyperlink{_g_b_a_8cpp_a28d4d3d8445e73a696b2d6f7eadabd96}{buffer}});
+341     \}
+342   \}
+343 
+344   POINT p;
+345   p.x = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.left;
+346   p.y = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.top;
+347   CWnd *pWnd = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.m\_pMainWnd;
+348   pWnd->ScreenToClient(&p);
+349   POINT p2;
+350   p2.x = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.right;
+351   p2.y = \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_aed77fc82f818810cc87c470768c75e05}{dest}}.bottom;
+352   pWnd->ScreenToClient(&p2);
+353   
+354   CDC *dc = pWnd->GetDC();
+355 
+356   StretchDIBits((HDC)*dc,
+357                 p.x,
+358                 p.y,
+359                 p2.x - p.x,
+360                 p2.y - p.y,
+361                 0,
+362                 0,
+363                 \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1303c6cf4f955c31d828de3fe77355f1}{rect}}.right,
+364                 \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a1303c6cf4f955c31d828de3fe77355f1}{rect}}.bottom,
+365                 \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a8267ca41247e8d752776b57a3f8af011}{filterFunction}} ? filterData : \mbox{\hyperlink{_g_b_8cpp_a5ee6554b606dcde59ac92578b33776d0}{pix}}+pitch,
+366                 bi,
+367                 DIB\_RGB\_COLORS,
+368                 SRCCOPY);
+369 
+370   \textcolor{keywordflow}{if}(\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a204d14d33aebd442db9affee1cc4f3a8}{screenMessage}}) \{
+371     \textcolor{keywordflow}{if}(((GetTickCount() - \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a27f8c0f4add5a8242470289874dd601c}{screenMessageTime}}) < 3000) &&
+372        !\mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a7bfea5ab60b19d26053b22ce070e2248}{disableStatusMessage}}) \{
+373       dc->SetTextColor(\mbox{\hyperlink{bilinear_8cpp_a4a118ad3ee36468a3fa616977a64864e}{RGB}}(255,0,0));
+374       dc->SetBkMode(TRANSPARENT);
+375       dc->TextOut(p.x+10, p2.y - 20, \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_ab9551bfe042a30531aeb47a7b2ac2038}{screenMessageBuffer}});
+376     \} \textcolor{keywordflow}{else} \{
+377       \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.\mbox{\hyperlink{class_v_b_a_a204d14d33aebd442db9affee1cc4f3a8}{screenMessage}} = \textcolor{keyword}{false};
+378     \}
+379   \}
+380   
+381   pWnd->ReleaseDC(dc);
+382 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_g_d_i_display_a7c83b043ba5d2058b8419053615ffabc_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_d_i_display_a0d38608d640f217ded743d3c88dfe62a}\label{class_g_d_i_display_a0d38608d640f217ded743d3c88dfe62a}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!render\+Menu@{render\+Menu}}
+\index{render\+Menu@{render\+Menu}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{render\+Menu()}{renderMenu()}}
+{\footnotesize\ttfamily void G\+D\+I\+Display\+::render\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_ad6fc199a615635440ca01485c1283d41}{I\+Display}}(으)로부터 재구현되었습니다.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 257 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+258 \{
+259   \mbox{\hyperlink{class_g_d_i_display_a515bce84bcfc615fe0bb983f2ce3e20b}{checkFullScreen}}();
+260   \mbox{\hyperlink{_v_b_a_8cpp_a8095a9d06b37a7efe3723f3218ad8fb3}{theApp}}.m\_pMainWnd->DrawMenuBar();
+261 \}
+\end{DoxyCode}
+이 함수 내부에서 호출하는 함수들에 대한 그래프입니다.\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_d_i_display_a0d38608d640f217ded743d3c88dfe62a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_d_i_display_ace69c8ae01b3842aebfabb4f008c529d}\label{class_g_d_i_display_ace69c8ae01b3842aebfabb4f008c529d}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!select\+Full\+Screen\+Mode@{select\+Full\+Screen\+Mode}}
+\index{select\+Full\+Screen\+Mode@{select\+Full\+Screen\+Mode}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{select\+Full\+Screen\+Mode()}{selectFullScreenMode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}} G\+D\+I\+Display\+::select\+Full\+Screen\+Mode (\begin{DoxyParamCaption}\item[{G\+U\+ID $\ast$$\ast$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_a2f7a55f63c5e4b24245aa88228afab68}{I\+Display}}를 구현.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 384 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+385 \{
+386   HWND wnd = GetDesktopWindow();
+387   RECT r;
+388   GetWindowRect(wnd, &r);
+389   \textcolor{keywordtype}{int} w = (r.right - r.left) & 4095;
+390   \textcolor{keywordtype}{int} h = (r.bottom - r.top) & 4095;
+391   HDC dc = GetDC(wnd);
+392   \textcolor{keywordtype}{int} c = GetDeviceCaps(dc, BITSPIXEL);
+393   ReleaseDC(wnd, dc);
+394 
+395   \textcolor{keywordflow}{return} (c << 24) | (w << 12) | h;
+396 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_g_d_i_display_a4e8f52858b49c9132c77c2f14b13bead}\label{class_g_d_i_display_a4e8f52858b49c9132c77c2f14b13bead}} 
+\index{G\+D\+I\+Display@{G\+D\+I\+Display}!set\+Option@{set\+Option}}
+\index{set\+Option@{set\+Option}!G\+D\+I\+Display@{G\+D\+I\+Display}}
+\subsubsection{\texorpdfstring{set\+Option()}{setOption()}}
+{\footnotesize\ttfamily virtual void G\+D\+I\+Display\+::set\+Option (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{getopt1_8c_a2c212835823e3c54a8ab6d95c652660e}{const}} char $\ast$}]{,  }\item[{\mbox{\hyperlink{_util_8cpp_a0ef32aa8672df19503a49fab2d0c8071}{int}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+\mbox{\hyperlink{class_i_display_a1766244708c252bb8781892c76c20ba9}{I\+Display}}(으)로부터 재구현되었습니다.
+
+
+
+G\+D\+I\+Display.\+cpp 파일의 61 번째 라인에서 정의되었습니다.
+
+
+\begin{DoxyCode}
+61 \{\}
+\end{DoxyCode}
 
 
 이 클래스에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.\+:\begin{DoxyCompactItemize}
 \item 
-src/win32/G\+D\+I\+Display.\+cpp\end{DoxyCompactItemize}
+C\+:/\+Users/sjh13/sources/\+Visual\+Boy\+Advance/src/win32/\mbox{\hyperlink{_g_d_i_display_8cpp}{G\+D\+I\+Display.\+cpp}}\end{DoxyCompactItemize}

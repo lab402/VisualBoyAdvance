@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('struct_dialog_data.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,52 +92,234 @@ $(function() {
 <div class="title">DialogData 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+DialogData에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="struct_dialog_data__coll__graph.png" border="0" usemap="#_dialog_data_coll__map" alt="Collaboration graph"/></div>
+<map name="_dialog_data_coll__map" id="_dialog_data_coll__map">
+<area shape="rect" id="node2" href="struct_dialog_sizer_sizing_item.html" title="{DialogSizerSizingItem\n|+ uControlID\l+ uSizeInfo\l|}" alt="" coords="5,198,155,290"/>
+<area shape="rect" id="node3" href="class_win_helper_1_1_c_rect.html" title="{WinHelper::CRect\n||+ CRect()\l+ CRect()\l+ CRect()\l+ Width()\l+ Height()\l+ operator LPCRECT()\l+ operator LPRECT()\l+ Size()\l+ TopLeft()\l+ BottomRight()\l그리고 11개 더...\l}" alt="" coords="179,132,331,356"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:a25f688fc8282ac98c0d49658310425ce"><td class="memItemLeft" align="right" valign="top"><a id="a25f688fc8282ac98c0d49658310425ce"></a>
-HKEY&#160;</td><td class="memItemRight" valign="bottom"><b>hkRootSave</b></td></tr>
+<tr class="memitem:a25f688fc8282ac98c0d49658310425ce"><td class="memItemLeft" align="right" valign="top">HKEY&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#a25f688fc8282ac98c0d49658310425ce">hkRootSave</a></td></tr>
 <tr class="separator:a25f688fc8282ac98c0d49658310425ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6ab5be3a7126b6f9b5fcb7131fcf2909"><td class="memItemLeft" align="right" valign="top"><a id="a6ab5be3a7126b6f9b5fcb7131fcf2909"></a>
-LPCTSTR&#160;</td><td class="memItemRight" valign="bottom"><b>pcszName</b></td></tr>
+<tr class="memitem:a6ab5be3a7126b6f9b5fcb7131fcf2909"><td class="memItemLeft" align="right" valign="top">LPCTSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#a6ab5be3a7126b6f9b5fcb7131fcf2909">pcszName</a></td></tr>
 <tr class="separator:a6ab5be3a7126b6f9b5fcb7131fcf2909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd196414db13af6456bbb413f2d1fa7d"><td class="memItemLeft" align="right" valign="top"><a id="acd196414db13af6456bbb413f2d1fa7d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nItemCount</b></td></tr>
+<tr class="memitem:acd196414db13af6456bbb413f2d1fa7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#acd196414db13af6456bbb413f2d1fa7d">nItemCount</a></td></tr>
 <tr class="separator:acd196414db13af6456bbb413f2d1fa7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefb399f16dab34e6a2da67716d6147fc"><td class="memItemLeft" align="right" valign="top"><a id="aefb399f16dab34e6a2da67716d6147fc"></a>
-<a class="el" href="struct_dialog_sizer_sizing_item.html">DialogSizerSizingItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>psd</b></td></tr>
+<tr class="memitem:aefb399f16dab34e6a2da67716d6147fc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_dialog_sizer_sizing_item.html">DialogSizerSizingItem</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#aefb399f16dab34e6a2da67716d6147fc">psd</a></td></tr>
 <tr class="separator:aefb399f16dab34e6a2da67716d6147fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48eb19417544d0c6ddfd1bd9c03cd2e5"><td class="memItemLeft" align="right" valign="top"><a id="a48eb19417544d0c6ddfd1bd9c03cd2e5"></a>
-POINT&#160;</td><td class="memItemRight" valign="bottom"><b>m_ptSmallest</b></td></tr>
+<tr class="memitem:a48eb19417544d0c6ddfd1bd9c03cd2e5"><td class="memItemLeft" align="right" valign="top">POINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#a48eb19417544d0c6ddfd1bd9c03cd2e5">m_ptSmallest</a></td></tr>
 <tr class="separator:a48eb19417544d0c6ddfd1bd9c03cd2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a577bccf59e71fb65969247d1f8275448"><td class="memItemLeft" align="right" valign="top"><a id="a577bccf59e71fb65969247d1f8275448"></a>
-POINT&#160;</td><td class="memItemRight" valign="bottom"><b>m_ptLargest</b></td></tr>
+<tr class="memitem:a577bccf59e71fb65969247d1f8275448"><td class="memItemLeft" align="right" valign="top">POINT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#a577bccf59e71fb65969247d1f8275448">m_ptLargest</a></td></tr>
 <tr class="separator:a577bccf59e71fb65969247d1f8275448"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abffcfeeb5f8f9b1ecd84d9bdf7706b07"><td class="memItemLeft" align="right" valign="top"><a id="abffcfeeb5f8f9b1ecd84d9bdf7706b07"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bLargestSet</b></td></tr>
+<tr class="memitem:abffcfeeb5f8f9b1ecd84d9bdf7706b07"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#abffcfeeb5f8f9b1ecd84d9bdf7706b07">m_bLargestSet</a></td></tr>
 <tr class="separator:abffcfeeb5f8f9b1ecd84d9bdf7706b07"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af63c4c59aa42a272798f9af446fc4484"><td class="memItemLeft" align="right" valign="top"><a id="af63c4c59aa42a272798f9af446fc4484"></a>
-SIZE&#160;</td><td class="memItemRight" valign="bottom"><b>m_sizeClient</b></td></tr>
+<tr class="memitem:af63c4c59aa42a272798f9af446fc4484"><td class="memItemLeft" align="right" valign="top">SIZE&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#af63c4c59aa42a272798f9af446fc4484">m_sizeClient</a></td></tr>
 <tr class="separator:af63c4c59aa42a272798f9af446fc4484"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1a2c0f029c203945fde9ace5c82c625"><td class="memItemLeft" align="right" valign="top"><a id="ad1a2c0f029c203945fde9ace5c82c625"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>m_bMaximised</b></td></tr>
+<tr class="memitem:ad1a2c0f029c203945fde9ace5c82c625"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#ad1a2c0f029c203945fde9ace5c82c625">m_bMaximised</a></td></tr>
 <tr class="separator:ad1a2c0f029c203945fde9ace5c82c625"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba0ab2f5717e72e528e95a8a1c6a651e"><td class="memItemLeft" align="right" valign="top"><a id="aba0ab2f5717e72e528e95a8a1c6a651e"></a>
-BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>m_bShowSizingGrip</b></td></tr>
+<tr class="memitem:aba0ab2f5717e72e528e95a8a1c6a651e"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#aba0ab2f5717e72e528e95a8a1c6a651e">m_bShowSizingGrip</a></td></tr>
 <tr class="separator:aba0ab2f5717e72e528e95a8a1c6a651e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3d543e5db55fefcd025e18f74558de8d"><td class="memItemLeft" align="right" valign="top"><a id="a3d543e5db55fefcd025e18f74558de8d"></a>
-<a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m_rcGrip</b></td></tr>
+<tr class="memitem:a3d543e5db55fefcd025e18f74558de8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_dialog_data.html#a3d543e5db55fefcd025e18f74558de8d">m_rcGrip</a></td></tr>
 <tr class="separator:a3d543e5db55fefcd025e18f74558de8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00046">46</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a25f688fc8282ac98c0d49658310425ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25f688fc8282ac98c0d49658310425ce">&#9670;&nbsp;</a></span>hkRootSave</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">HKEY DialogData::hkRootSave</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00048">48</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="abffcfeeb5f8f9b1ecd84d9bdf7706b07"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abffcfeeb5f8f9b1ecd84d9bdf7706b07">&#9670;&nbsp;</a></span>m_bLargestSet</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DialogData::m_bLargestSet</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00064">64</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad1a2c0f029c203945fde9ace5c82c625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1a2c0f029c203945fde9ace5c82c625">&#9670;&nbsp;</a></span>m_bMaximised</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool DialogData::m_bMaximised</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00072">72</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aba0ab2f5717e72e528e95a8a1c6a651e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba0ab2f5717e72e528e95a8a1c6a651e">&#9670;&nbsp;</a></span>m_bShowSizingGrip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">BOOL DialogData::m_bShowSizingGrip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00073">73</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a577bccf59e71fb65969247d1f8275448"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a577bccf59e71fb65969247d1f8275448">&#9670;&nbsp;</a></span>m_ptLargest</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">POINT DialogData::m_ptLargest</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00063">63</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a48eb19417544d0c6ddfd1bd9c03cd2e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48eb19417544d0c6ddfd1bd9c03cd2e5">&#9670;&nbsp;</a></span>m_ptSmallest</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">POINT DialogData::m_ptSmallest</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00059">59</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3d543e5db55fefcd025e18f74558de8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d543e5db55fefcd025e18f74558de8d">&#9670;&nbsp;</a></span>m_rcGrip</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_win_helper_1_1_c_rect.html">WinHelper::CRect</a> DialogData::m_rcGrip</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00075">75</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="af63c4c59aa42a272798f9af446fc4484"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af63c4c59aa42a272798f9af446fc4484">&#9670;&nbsp;</a></span>m_sizeClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SIZE DialogData::m_sizeClient</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00068">68</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="acd196414db13af6456bbb413f2d1fa7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd196414db13af6456bbb413f2d1fa7d">&#9670;&nbsp;</a></span>nItemCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> DialogData::nItemCount</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00054">54</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a6ab5be3a7126b6f9b5fcb7131fcf2909"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ab5be3a7126b6f9b5fcb7131fcf2909">&#9670;&nbsp;</a></span>pcszName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">LPCTSTR DialogData::pcszName</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00049">49</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aefb399f16dab34e6a2da67716d6147fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefb399f16dab34e6a2da67716d6147fc">&#9670;&nbsp;</a></span>psd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_dialog_sizer_sizing_item.html">DialogSizerSizingItem</a>* DialogData::psd</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a> 파일의 <a class="el" href="_resize_dlg_8cpp_source.html#l00055">55</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/win32/ResizeDlg.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_resize_dlg_8cpp_source.html">ResizeDlg.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="struct_dialog_data.html">DialogData</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

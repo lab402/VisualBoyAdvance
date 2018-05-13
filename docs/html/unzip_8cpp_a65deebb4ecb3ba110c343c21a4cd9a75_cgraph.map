@@ -1,0 +1,7 @@
+<map id="unzOpenCurrentFile" name="unzOpenCurrentFile">
+<area shape="rect" id="node2" href="$unzip_8cpp.html#ac48279e5325cfdabbc67a312b1d32700" title="unzCloseCurrentFile" alt="" coords="210,5,349,32"/>
+<area shape="rect" id="node3" href="$unzip_8cpp.html#ae29f32a517b1bf71b222191636739fa6" title="unzlocal_CheckCurrentFile\lCoherencyHeader" alt="" coords="191,57,368,98"/>
+<area shape="rect" id="node4" href="$unzip_8cpp.html#a396ee9eef44ba468556e5bbbda9d6c9e" title="unzlocal_getLong" alt="" coords="418,39,541,65"/>
+<area shape="rect" id="node6" href="$unzip_8cpp.html#aae00122ac858120e991550221c76214b" title="unzlocal_getShort" alt="" coords="416,89,543,116"/>
+<area shape="rect" id="node5" href="$unzip_8cpp.html#a56a54c33c87152307e98e1abba6c0bf5" title="unzlocal_getByte" alt="" coords="591,64,713,91"/>
+</map>

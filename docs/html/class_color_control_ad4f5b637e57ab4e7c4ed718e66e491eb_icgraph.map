@@ -1,0 +1,10 @@
+<map id="ColorControl::setColor" name="ColorControl::setColor">
+<area shape="rect" id="node2" href="$class_g_b_map_view.html#a6a6842be36789566f8fc918ded572bbe" title="GBMapView::OnColInfo" alt="" coords="211,5,369,32"/>
+<area shape="rect" id="node3" href="$class_g_b_oam_view.html#a3b0623e23cfd8b04d576baed34f4d12d" title="GBOamView::OnColInfo" alt="" coords="209,56,371,83"/>
+<area shape="rect" id="node4" href="$class_g_b_palette_view.html#a01960a28d93aef1873f5d5256fa11c79" title="GBPaletteView::OnPalInfo" alt="" coords="203,107,377,133"/>
+<area shape="rect" id="node5" href="$class_g_b_tile_view.html#a6d47aa6bfc46f3d698272efb7da79dc4" title="GBTileView::OnColInfo" alt="" coords="213,157,367,184"/>
+<area shape="rect" id="node6" href="$class_map_view.html#ae6fd15cfd77671946d4ad08f901bde3c" title="MapView::OnColInfo" alt="" coords="221,208,359,235"/>
+<area shape="rect" id="node7" href="$class_oam_view.html#a5b910cf923020f054165c52c01d0181f" title="OamView::OnColInfo" alt="" coords="219,259,361,285"/>
+<area shape="rect" id="node8" href="$class_palette_view.html#a458786a4c3317411b5cd818c544ea50a" title="PaletteView::OnPalInfo" alt="" coords="213,309,367,336"/>
+<area shape="rect" id="node9" href="$class_tile_view.html#ad01d09783bbe107d9837d6847938e564" title="TileView::OnColInfo" alt="" coords="223,360,357,387"/>
+</map>

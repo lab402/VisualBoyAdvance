@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_g_b_palette_view_control.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public 멤버 함수</a> &#124;
@@ -68,80 +92,119 @@ $(function() {
 <div class="title">GBPaletteViewControl 클래스 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_g_b_palette_view_8h_source.html">GBPaletteView.h</a>&gt;</code></p>
 <div class="dynheader">
 GBPaletteViewControl에 대한 상속 다이어그램 : </div>
 <div class="dyncontent">
- <div class="center">
-  <img src="class_g_b_palette_view_control.png" usemap="#GBPaletteViewControl_map" alt=""/>
-  <map id="GBPaletteViewControl_map" name="GBPaletteViewControl_map">
-<area href="class_palette_view_control.html" alt="PaletteViewControl" shape="rect" coords="0,56,136,80"/>
+<div class="center"><img src="class_g_b_palette_view_control__inherit__graph.png" border="0" usemap="#_g_b_palette_view_control_inherit__map" alt="Inheritance graph"/></div>
+<map name="_g_b_palette_view_control_inherit__map" id="_g_b_palette_view_control_inherit__map">
+<area shape="rect" id="node2" href="class_palette_view_control.html" title="{PaletteViewControl\n|# palette\l# paletteAddress\l|+ PaletteViewControl()\l+ updatePalette()\l+ registerClass()\l+ refresh()\l+ render()\l+ setSelected()\l+ setPaletteAddress()\l+ saveJASCPAL()\l+ saveMSPAL()\l+ saveAdobe()\l+ init()\l+ ~PaletteViewControl()\l# OnLButtonDown()\l# OnEraseBkgnd()\l# OnPaint()\l}" alt="" coords="5,131,165,428"/>
 </map>
- </div></div>
+</div>
+<div class="dynheader">
+GBPaletteViewControl에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_g_b_palette_view_control__coll__graph.png" border="0" usemap="#_g_b_palette_view_control_coll__map" alt="Collaboration graph"/></div>
+<map name="_g_b_palette_view_control_coll__map" id="_g_b_palette_view_control_coll__map">
+<area shape="rect" id="node2" href="class_palette_view_control.html" title="{PaletteViewControl\n|# palette\l# paletteAddress\l|+ PaletteViewControl()\l+ updatePalette()\l+ registerClass()\l+ refresh()\l+ render()\l+ setSelected()\l+ setPaletteAddress()\l+ saveJASCPAL()\l+ saveMSPAL()\l+ saveAdobe()\l+ init()\l+ ~PaletteViewControl()\l# OnLButtonDown()\l# OnEraseBkgnd()\l# OnPaint()\l}" alt="" coords="5,131,165,428"/>
+</map>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public 멤버 함수</h2></td></tr>
-<tr class="memitem:a0fb70c16ea8f4731e7159df59beb3c6e"><td class="memItemLeft" align="right" valign="top"><a id="a0fb70c16ea8f4731e7159df59beb3c6e"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>updatePalette</b> ()</td></tr>
+<tr class="memitem:a0fb70c16ea8f4731e7159df59beb3c6e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_g_b_palette_view_control.html#a0fb70c16ea8f4731e7159df59beb3c6e">updatePalette</a> ()</td></tr>
 <tr class="separator:a0fb70c16ea8f4731e7159df59beb3c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_palette_view_control"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_palette_view_control')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_palette_view_control.html">PaletteViewControl</a>(으)로부터 상속된 Public 멤버 함수</td></tr>
-<tr class="memitem:add54d86e21f3acfcdc129dd656109c83 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="add54d86e21f3acfcdc129dd656109c83"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>registerClass</b> ()</td></tr>
+<tr class="memitem:ae7bc315eab0f7925e3c45b063244098b inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#ae7bc315eab0f7925e3c45b063244098b">PaletteViewControl</a> ()</td></tr>
+<tr class="separator:ae7bc315eab0f7925e3c45b063244098b inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add54d86e21f3acfcdc129dd656109c83 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#add54d86e21f3acfcdc129dd656109c83">registerClass</a> ()</td></tr>
 <tr class="separator:add54d86e21f3acfcdc129dd656109c83 inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aace3ab97afe8216b3873159ee852779f inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="aace3ab97afe8216b3873159ee852779f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>refresh</b> ()</td></tr>
+<tr class="memitem:aace3ab97afe8216b3873159ee852779f inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#aace3ab97afe8216b3873159ee852779f">refresh</a> ()</td></tr>
 <tr class="separator:aace3ab97afe8216b3873159ee852779f inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbcdd372f28027690355099e14b669d1 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="adbcdd372f28027690355099e14b669d1"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>render</b> (u16 color, int x, int y)</td></tr>
+<tr class="memitem:adbcdd372f28027690355099e14b669d1 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#adbcdd372f28027690355099e14b669d1">render</a> (<a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a> color, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> x, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> y)</td></tr>
 <tr class="separator:adbcdd372f28027690355099e14b669d1 inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afe3570f3d0bf905f25977346a50dec7f inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="afe3570f3d0bf905f25977346a50dec7f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setSelected</b> (int s)</td></tr>
+<tr class="memitem:afe3570f3d0bf905f25977346a50dec7f inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#afe3570f3d0bf905f25977346a50dec7f">setSelected</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> s)</td></tr>
 <tr class="separator:afe3570f3d0bf905f25977346a50dec7f inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af552330a1e761f659936d3dd628f9a81 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="af552330a1e761f659936d3dd628f9a81"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setPaletteAddress</b> (int address)</td></tr>
+<tr class="memitem:af552330a1e761f659936d3dd628f9a81 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#af552330a1e761f659936d3dd628f9a81">setPaletteAddress</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> address)</td></tr>
 <tr class="separator:af552330a1e761f659936d3dd628f9a81 inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9efcff77eaf476013ac5f3ebd2d53779 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="a9efcff77eaf476013ac5f3ebd2d53779"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveJASCPAL</b> (const char *name)</td></tr>
+<tr class="memitem:a9efcff77eaf476013ac5f3ebd2d53779 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#a9efcff77eaf476013ac5f3ebd2d53779">saveJASCPAL</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *name)</td></tr>
 <tr class="separator:a9efcff77eaf476013ac5f3ebd2d53779 inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e2249bb157bf7fb36b128a83bf108b5 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="a0e2249bb157bf7fb36b128a83bf108b5"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveMSPAL</b> (const char *name)</td></tr>
+<tr class="memitem:a0e2249bb157bf7fb36b128a83bf108b5 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#a0e2249bb157bf7fb36b128a83bf108b5">saveMSPAL</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *name)</td></tr>
 <tr class="separator:a0e2249bb157bf7fb36b128a83bf108b5 inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a14d553a87d89463719adcaa63f42a72b inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="a14d553a87d89463719adcaa63f42a72b"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveAdobe</b> (const char *name)</td></tr>
+<tr class="memitem:a14d553a87d89463719adcaa63f42a72b inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#a14d553a87d89463719adcaa63f42a72b">saveAdobe</a> (<a class="el" href="getopt1_8c.html#a2c212835823e3c54a8ab6d95c652660e">const</a> char *name)</td></tr>
 <tr class="separator:a14d553a87d89463719adcaa63f42a72b inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc7a9dd832f6b5fc8ca81c8b08bd2ee8 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="abc7a9dd832f6b5fc8ca81c8b08bd2ee8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (int c, int w, int h)</td></tr>
+<tr class="memitem:abc7a9dd832f6b5fc8ca81c8b08bd2ee8 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#abc7a9dd832f6b5fc8ca81c8b08bd2ee8">init</a> (<a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> c, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> w, <a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> h)</td></tr>
 <tr class="separator:abc7a9dd832f6b5fc8ca81c8b08bd2ee8 inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab09935586912db770ff77aa433be4d84 inherit pub_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#ab09935586912db770ff77aa433be4d84">~PaletteViewControl</a> ()</td></tr>
+<tr class="separator:ab09935586912db770ff77aa433be4d84 inherit pub_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 추가로 상속된 멤버들</h2></td></tr>
 <tr class="inherit_header pro_methods_class_palette_view_control"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_palette_view_control')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_palette_view_control.html">PaletteViewControl</a>(으)로부터 상속된 Protected 멤버 함수</td></tr>
-<tr class="memitem:a766a44e9b018fc6c87f81f3c0fdd6c6e inherit pro_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="a766a44e9b018fc6c87f81f3c0fdd6c6e"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnLButtonDown</b> (UINT nFlags, CPoint point)</td></tr>
+<tr class="memitem:a766a44e9b018fc6c87f81f3c0fdd6c6e inherit pro_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#a766a44e9b018fc6c87f81f3c0fdd6c6e">OnLButtonDown</a> (UINT nFlags, CPoint point)</td></tr>
 <tr class="separator:a766a44e9b018fc6c87f81f3c0fdd6c6e inherit pro_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2086b2ba7161f3adb5ac76484f77cc9 inherit pro_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="ac2086b2ba7161f3adb5ac76484f77cc9"></a>
-afx_msg BOOL&#160;</td><td class="memItemRight" valign="bottom"><b>OnEraseBkgnd</b> (CDC *pDC)</td></tr>
+<tr class="memitem:ac2086b2ba7161f3adb5ac76484f77cc9 inherit pro_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">afx_msg BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#ac2086b2ba7161f3adb5ac76484f77cc9">OnEraseBkgnd</a> (CDC *pDC)</td></tr>
 <tr class="separator:ac2086b2ba7161f3adb5ac76484f77cc9 inherit pro_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab68c1927e30e1b35b207d6884ef9822d inherit pro_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="ab68c1927e30e1b35b207d6884ef9822d"></a>
-afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><b>OnPaint</b> ()</td></tr>
+<tr class="memitem:ab68c1927e30e1b35b207d6884ef9822d inherit pro_methods_class_palette_view_control"><td class="memItemLeft" align="right" valign="top">afx_msg void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#ab68c1927e30e1b35b207d6884ef9822d">OnPaint</a> ()</td></tr>
 <tr class="separator:ab68c1927e30e1b35b207d6884ef9822d inherit pro_methods_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_palette_view_control"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_palette_view_control')"><img src="closed.png" alt="-"/>&#160;<a class="el" href="class_palette_view_control.html">PaletteViewControl</a>(으)로부터 상속된 Protected 속성</td></tr>
-<tr class="memitem:a1a5ce1812cf6c8d26889f4eb03d1d4ec inherit pro_attribs_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="a1a5ce1812cf6c8d26889f4eb03d1d4ec"></a>
-u16&#160;</td><td class="memItemRight" valign="bottom"><b>palette</b> [256]</td></tr>
+<tr class="memitem:a1a5ce1812cf6c8d26889f4eb03d1d4ec inherit pro_attribs_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_system_8h.html#a9e6c91d77e24643b888dbd1a1a590054">u16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#a1a5ce1812cf6c8d26889f4eb03d1d4ec">palette</a> [256]</td></tr>
 <tr class="separator:a1a5ce1812cf6c8d26889f4eb03d1d4ec inherit pro_attribs_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53b2efd4174e06a68e545608e458947b inherit pro_attribs_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a id="a53b2efd4174e06a68e545608e458947b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>paletteAddress</b></td></tr>
+<tr class="memitem:a53b2efd4174e06a68e545608e458947b inherit pro_attribs_class_palette_view_control"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_palette_view_control.html#a53b2efd4174e06a68e545608e458947b">paletteAddress</a></td></tr>
 <tr class="separator:a53b2efd4174e06a68e545608e458947b inherit pro_attribs_class_palette_view_control"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="_g_b_palette_view_8h_source.html">GBPaletteView.h</a> 파일의 <a class="el" href="_g_b_palette_view_8h_source.html#l00034">34</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 함수 문서화</h2>
+<a id="a0fb70c16ea8f4731e7159df59beb3c6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fb70c16ea8f4731e7159df59beb3c6e">&#9670;&nbsp;</a></span>updatePalette()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GBPaletteViewControl::updatePalette </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_palette_view_control.html#a12772d59f8e890a920cb200d2f6a4b7a">PaletteViewControl</a>를 구현.</p>
+
+<p class="definition"><a class="el" href="_g_b_palette_view_8cpp_source.html">GBPaletteView.cpp</a> 파일의 <a class="el" href="_g_b_palette_view_8cpp_source.html#l00037">37</a> 번째 라인에서 정의되었습니다.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordflow">if</span>(<a class="code" href="gb_globals_8cpp.html#ae4f6bd8162474dbcfdbc54c36d7f5695">gbRom</a>) {</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    memcpy(<a class="code" href="class_palette_view_control.html#a1a5ce1812cf6c8d26889f4eb03d1d4ec">palette</a>, &amp;<a class="code" href="gb_globals_8cpp.html#a7c46bfb4d71e64d27d5aec543ba85b9a">gbPalette</a>[<a class="code" href="class_palette_view_control.html#a53b2efd4174e06a68e545608e458947b">paletteAddress</a>], 64);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div><div class="ttc" id="gb_globals_8cpp_html_ae4f6bd8162474dbcfdbc54c36d7f5695"><div class="ttname"><a href="gb_globals_8cpp.html#ae4f6bd8162474dbcfdbc54c36d7f5695">gbRom</a></div><div class="ttdeci">u8 * gbRom</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00031">gbGlobals.cpp:31</a></div></div>
+<div class="ttc" id="class_palette_view_control_html_a53b2efd4174e06a68e545608e458947b"><div class="ttname"><a href="class_palette_view_control.html#a53b2efd4174e06a68e545608e458947b">PaletteViewControl::paletteAddress</a></div><div class="ttdeci">int paletteAddress</div><div class="ttdef"><b>Definition:</b> <a href="_palette_view_control_8h_source.html#l00044">PaletteViewControl.h:44</a></div></div>
+<div class="ttc" id="class_palette_view_control_html_a1a5ce1812cf6c8d26889f4eb03d1d4ec"><div class="ttname"><a href="class_palette_view_control.html#a1a5ce1812cf6c8d26889f4eb03d1d4ec">PaletteViewControl::palette</a></div><div class="ttdeci">u16 palette[256]</div><div class="ttdef"><b>Definition:</b> <a href="_palette_view_control_8h_source.html#l00043">PaletteViewControl.h:43</a></div></div>
+<div class="ttc" id="gb_globals_8cpp_html_a7c46bfb4d71e64d27d5aec543ba85b9a"><div class="ttname"><a href="gb_globals_8cpp.html#a7c46bfb4d71e64d27d5aec543ba85b9a">gbPalette</a></div><div class="ttdeci">u16 gbPalette[128]</div><div class="ttdef"><b>Definition:</b> <a href="gb_globals_8cpp_source.html#l00037">gbGlobals.cpp:37</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>이 클래스에 대한 문서화 페이지는 다음의 파일들로부터 생성되었습니다.:<ul>
-<li>src/win32/<a class="el" href="_g_b_palette_view_8h_source.html">GBPaletteView.h</a></li>
-<li>src/win32/GBPaletteView.cpp</li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_b_palette_view_8h_source.html">GBPaletteView.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/win32/<a class="el" href="_g_b_palette_view_8cpp_source.html">GBPaletteView.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_g_b_palette_view_control.html">GBPaletteViewControl</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

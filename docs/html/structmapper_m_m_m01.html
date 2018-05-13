@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -45,6 +53,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('structmapper_m_m_m01.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +84,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-attribs">Public 속성</a> &#124;
@@ -68,40 +92,160 @@ $(function() {
 <div class="title">mapperMMM01 구조체 참조</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="gb_memory_8h_source.html">gbMemory.h</a>&gt;</code></p>
+<div class="dynheader">
+mapperMMM01에 대한 협력 다이어그램:</div>
+<div class="dyncontent">
+<div class="center"><img src="structmapper_m_m_m01__coll__graph.png" border="0" usemap="#mapper_m_m_m01_coll__map" alt="Collaboration graph"/></div>
+</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public 속성</h2></td></tr>
-<tr class="memitem:aa6b5a4c8f0ea53c5e2388f1feb168d4f"><td class="memItemLeft" align="right" valign="top"><a id="aa6b5a4c8f0ea53c5e2388f1feb168d4f"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mapperRAMEnable</b></td></tr>
+<tr class="memitem:aa6b5a4c8f0ea53c5e2388f1feb168d4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmapper_m_m_m01.html#aa6b5a4c8f0ea53c5e2388f1feb168d4f">mapperRAMEnable</a></td></tr>
 <tr class="separator:aa6b5a4c8f0ea53c5e2388f1feb168d4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3910af13771783e82d42fc1c9fe55157"><td class="memItemLeft" align="right" valign="top"><a id="a3910af13771783e82d42fc1c9fe55157"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mapperROMBank</b></td></tr>
+<tr class="memitem:a3910af13771783e82d42fc1c9fe55157"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmapper_m_m_m01.html#a3910af13771783e82d42fc1c9fe55157">mapperROMBank</a></td></tr>
 <tr class="separator:a3910af13771783e82d42fc1c9fe55157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f61701eeaa2c54843c49ea9a20a364c"><td class="memItemLeft" align="right" valign="top"><a id="a2f61701eeaa2c54843c49ea9a20a364c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mapperRAMBank</b></td></tr>
+<tr class="memitem:a2f61701eeaa2c54843c49ea9a20a364c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmapper_m_m_m01.html#a2f61701eeaa2c54843c49ea9a20a364c">mapperRAMBank</a></td></tr>
 <tr class="separator:a2f61701eeaa2c54843c49ea9a20a364c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a007dd4c2ddf664624e8d2fb89c132621"><td class="memItemLeft" align="right" valign="top"><a id="a007dd4c2ddf664624e8d2fb89c132621"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mapperMemoryModel</b></td></tr>
+<tr class="memitem:a007dd4c2ddf664624e8d2fb89c132621"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmapper_m_m_m01.html#a007dd4c2ddf664624e8d2fb89c132621">mapperMemoryModel</a></td></tr>
 <tr class="separator:a007dd4c2ddf664624e8d2fb89c132621"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a934a4728ec31f549910192215c163947"><td class="memItemLeft" align="right" valign="top"><a id="a934a4728ec31f549910192215c163947"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mapperROMHighAddress</b></td></tr>
+<tr class="memitem:a934a4728ec31f549910192215c163947"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmapper_m_m_m01.html#a934a4728ec31f549910192215c163947">mapperROMHighAddress</a></td></tr>
 <tr class="separator:a934a4728ec31f549910192215c163947"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a582eba3e06837207223913c29d8e152d"><td class="memItemLeft" align="right" valign="top"><a id="a582eba3e06837207223913c29d8e152d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mapperRAMAddress</b></td></tr>
+<tr class="memitem:a582eba3e06837207223913c29d8e152d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmapper_m_m_m01.html#a582eba3e06837207223913c29d8e152d">mapperRAMAddress</a></td></tr>
 <tr class="separator:a582eba3e06837207223913c29d8e152d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6ee8a3b9dbf7536cfb40081fad78a95"><td class="memItemLeft" align="right" valign="top"><a id="ad6ee8a3b9dbf7536cfb40081fad78a95"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>mapperRomBank0Remapping</b></td></tr>
+<tr class="memitem:ad6ee8a3b9dbf7536cfb40081fad78a95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structmapper_m_m_m01.html#ad6ee8a3b9dbf7536cfb40081fad78a95">mapperRomBank0Remapping</a></td></tr>
 <tr class="separator:ad6ee8a3b9dbf7536cfb40081fad78a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">상세한 설명</h2>
+<div class="textblock">
+<p class="definition"><a class="el" href="gb_memory_8h_source.html">gbMemory.h</a> 파일의 <a class="el" href="gb_memory_8h_source.html#l00139">139</a> 번째 라인에서 정의되었습니다.</p>
+</div><h2 class="groupheader">멤버 데이터 문서화</h2>
+<a id="a007dd4c2ddf664624e8d2fb89c132621"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a007dd4c2ddf664624e8d2fb89c132621">&#9670;&nbsp;</a></span>mapperMemoryModel</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mapperMMM01::mapperMemoryModel</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="gb_memory_8h_source.html">gbMemory.h</a> 파일의 <a class="el" href="gb_memory_8h_source.html#l00143">143</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a582eba3e06837207223913c29d8e152d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a582eba3e06837207223913c29d8e152d">&#9670;&nbsp;</a></span>mapperRAMAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mapperMMM01::mapperRAMAddress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="gb_memory_8h_source.html">gbMemory.h</a> 파일의 <a class="el" href="gb_memory_8h_source.html#l00145">145</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a2f61701eeaa2c54843c49ea9a20a364c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f61701eeaa2c54843c49ea9a20a364c">&#9670;&nbsp;</a></span>mapperRAMBank</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mapperMMM01::mapperRAMBank</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="gb_memory_8h_source.html">gbMemory.h</a> 파일의 <a class="el" href="gb_memory_8h_source.html#l00142">142</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="aa6b5a4c8f0ea53c5e2388f1feb168d4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6b5a4c8f0ea53c5e2388f1feb168d4f">&#9670;&nbsp;</a></span>mapperRAMEnable</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mapperMMM01::mapperRAMEnable</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="gb_memory_8h_source.html">gbMemory.h</a> 파일의 <a class="el" href="gb_memory_8h_source.html#l00140">140</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a3910af13771783e82d42fc1c9fe55157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3910af13771783e82d42fc1c9fe55157">&#9670;&nbsp;</a></span>mapperROMBank</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mapperMMM01::mapperROMBank</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="gb_memory_8h_source.html">gbMemory.h</a> 파일의 <a class="el" href="gb_memory_8h_source.html#l00141">141</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="ad6ee8a3b9dbf7536cfb40081fad78a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6ee8a3b9dbf7536cfb40081fad78a95">&#9670;&nbsp;</a></span>mapperRomBank0Remapping</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mapperMMM01::mapperRomBank0Remapping</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="gb_memory_8h_source.html">gbMemory.h</a> 파일의 <a class="el" href="gb_memory_8h_source.html#l00146">146</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
+<a id="a934a4728ec31f549910192215c163947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a934a4728ec31f549910192215c163947">&#9670;&nbsp;</a></span>mapperROMHighAddress</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_util_8cpp.html#a0ef32aa8672df19503a49fab2d0c8071">int</a> mapperMMM01::mapperROMHighAddress</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition"><a class="el" href="gb_memory_8h_source.html">gbMemory.h</a> 파일의 <a class="el" href="gb_memory_8h_source.html#l00144">144</a> 번째 라인에서 정의되었습니다.</p>
+
+</div>
+</div>
 <hr/>이 구조체에 대한 문서화 페이지는 다음의 파일로부터 생성되었습니다.:<ul>
-<li>src/gb/<a class="el" href="gb_memory_8h_source.html">gbMemory.h</a></li>
+<li>C:/Users/sjh13/sources/VisualBoyAdvance/src/gb/<a class="el" href="gb_memory_8h_source.html">gbMemory.h</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-다음에 의해 생성됨 :  &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="structmapper_m_m_m01.html">mapperMMM01</a></li>
+    <li class="footer">다음에 의해 생성됨 : 
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>
+  </ul>
+</div>
 </body>
 </html>

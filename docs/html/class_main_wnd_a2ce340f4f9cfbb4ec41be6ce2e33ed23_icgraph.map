@@ -1,0 +1,6 @@
+<map id="MainWnd::writeSaveGame" name="MainWnd::writeSaveGame">
+<area shape="rect" id="node2" href="$class_main_wnd.html#a962abbb99f5b6bba3f05ba043358584e" title="MainWnd::OnFileSave" alt="" coords="297,5,447,32"/>
+<area shape="rect" id="node3" href="$class_main_wnd.html#aa10e0e321035d0cd1e1e953529df5f19" title="MainWnd::OnFileSaveSlot" alt="" coords="285,56,459,83"/>
+<area shape="rect" id="node5" href="$class_main_wnd.html#af473a4d7ccfadb980b92de352ea6a4ae" title="MainWnd::OnToolsRecordStartmovierecording" alt="" coords="228,107,516,133"/>
+<area shape="rect" id="node4" href="$class_main_wnd.html#a946615293a97e8d381bb34bee4d7ff24" title="MainWnd::OnFileSavegameOldestslot" alt="" coords="564,56,807,83"/>
+</map>

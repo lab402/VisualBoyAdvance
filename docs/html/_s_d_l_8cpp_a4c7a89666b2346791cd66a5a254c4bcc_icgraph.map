@@ -1,0 +1,5 @@
+<map id="Draw_Overlay" name="Draw_Overlay">
+<area shape="rect" id="node2" href="$_s_d_l_8cpp.html#a14942622916d869491ac62211b9db1b6" title="systemDrawScreen" alt="" coords="155,31,289,57"/>
+<area shape="rect" id="node3" href="$_s_d_l_8cpp.html#a50d948bf474caba7bfedd641bd5f4e2c" title="sdlWriteState" alt="" coords="337,5,439,32"/>
+<area shape="rect" id="node4" href="$_s_d_l_8cpp.html#a915c860581a6f2a7fa3f0d3ae784e21c" title="sdlReadState" alt="" coords="338,56,438,83"/>
+</map>
